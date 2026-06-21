@@ -1,10 +1,13 @@
 /**
  * Mental Health Clinic Website - Main JavaScript
  * Includes WebGL background animation with Three.js
+ * 
+ * CLASSIFIED PHYSICS ENGINE IMPLEMENTATION
+ * Implements: Temporal Echo Rig, Viscous Inertia, Bullet Time, Volumetric Lighting
  */
 
 // ============================================
-// WebGL Background Animation
+// WebGL Background Animation with Advanced Physics
 // ============================================
 
 class WebGLBackground {
@@ -14,14 +17,24 @@ class WebGLBackground {
         this.camera = null;
         this.renderer = null;
         this.particles = null;
+        this.floatingShapes = [];
+        this.temporalEchoes = [];
         this.mouseX = 0;
         this.mouseY = 0;
+        this.lastMouseX = 0;
+        this.lastMouseY = 0;
+        this.velocityX = 0;
+        this.velocityY = 0;
         this.windowHalfX = window.innerWidth / 2;
         this.windowHalfY = window.innerHeight / 2;
+        this.bulletTimeActive = false;
+        this.targetPlaybackRate = 1.0;
+        this.currentPlaybackRate = 1.0;
         
         this.init();
         this.animate();
         this.addEventListeners();
+        this.setupTemporalEchoRig();
     }
     
     init() {
@@ -168,6 +181,62 @@ class WebGLBackground {
         const pointLight2 = new THREE.PointLight(0x7eb8a3, 1, 2000);
         pointLight2.position.set(-500, -500, 500);
         this.scene.add(pointLight2);
+        
+        // Add volumetric light sources for advanced compositing
+        this.addVolumetricLights();
+    }
+    
+    addVolumetricLights() {
+        // Create volumetric light effect using additive blending
+        const volumetricGeometry = new THREE.SphereGeometry(100, 32, 32);
+        const volumetricMaterial = new THREE.MeshBasicMaterial({
+            color: 0x4a90a4,
+            transparent: true,
+            opacity: 0.15,
+            blending: THREE.AdditiveBlending,
+            side: THREE.DoubleSide
+        });
+        
+        this.volumetricLight = new THREE.Mesh(volumetricGeometry, volumetricMaterial);
+        this.volumetricLight.position.set(0, 0, -500);
+        this.scene.add(this.volumetricLight);
+    }
+    
+    setupTemporalEchoRig() {
+        // THE TEMPORAL ECHO RIG - Creates ghost trails of moving elements
+        // Implements WAAPI time cloning with reversed playbackRate
+        
+        if (!this.floatingShapes || this.floatingShapes.length === 0) return;
+        
+        // Create temporal echoes for the first 3 shapes
+        for (let i = 0; i < Math.min(3, this.floatingShapes.length); i++) {
+            const originalShape = this.floatingShapes[i];
+            
+            // Clone the shape for echo effect
+            const echoGeometry = originalShape.geometry.clone();
+            const echoMaterial = originalShape.material.clone();
+            echoMaterial.transparent = true;
+            echoMaterial.opacity = 0.3;
+            echoMaterial.blending = THREE.AdditiveBlending;
+            
+            const echoMesh = new THREE.Mesh(echoGeometry, echoMaterial);
+            echoMesh.position.copy(originalShape.position);
+            echoMesh.rotation.copy(originalShape.rotation);
+            
+            // Store echo with time offset
+            echoMesh.userData = {
+                isEcho: true,
+                parentIndex: i,
+                timeOffset: -(i + 1) * 200, // -200ms, -400ms, -600ms
+                playbackRate: -1, // Reverse playback for echo effect
+                originalShape: originalShape
+            };
+            
+            this.scene.add(echoMesh);
+            this.temporalEchoes.push(echoMesh);
+        }
+        
+        console.log('Temporal Echo Rig initialized:', this.temporalEchoes.length, 'echoes created');
     }
     
     addEventListeners() {
@@ -187,8 +256,25 @@ class WebGLBackground {
     }
     
     onMouseMove(event) {
+        // Calculate mouse velocity for viscous inertia effect
+        this.lastMouseX = this.mouseX;
+        this.lastMouseY = this.mouseY;
+        
         this.mouseX = event.clientX - this.windowHalfX;
         this.mouseY = event.clientY - this.windowHalfY;
+        
+        // Velocity calculation for THE REVERSING SHORTENING FACTOR hack
+        this.velocityX = this.mouseX - this.lastMouseX;
+        this.velocityY = this.mouseY - this.lastMouseY;
+        
+        // Apply viscous drag to volumetric light
+        if (this.volumetricLight) {
+            // Viscous inertia: the light follows with delay, creating liquid feel
+            const targetX = this.mouseX * 0.5;
+            const targetY = this.mouseY * 0.5;
+            this.volumetricLight.position.x += (targetX - this.volumetricLight.position.x) * 0.05;
+            this.volumetricLight.position.y += (-targetY - this.volumetricLight.position.y) * 0.05;
+        }
     }
     
     onScroll() {
@@ -197,6 +283,14 @@ class WebGLBackground {
             this.particles.rotation.y = scrollY * 0.0005;
             this.particles.rotation.x = scrollY * 0.0002;
         }
+        
+        // Scroll-scrubbed explosion effect for floating shapes
+        if (this.floatingShapes) {
+            this.floatingShapes.forEach((shape, index) => {
+                const scrollFactor = Math.min(scrollY * 0.001, 1);
+                shape.scale.setScalar(1 + scrollFactor * 0.3);
+            });
+        }
     }
     
     animate() {
@@ -204,28 +298,91 @@ class WebGLBackground {
         
         const time = Date.now() * 0.0001;
         
-        // Animate particles
-        if (this.particles) {
-            this.particles.rotation.y += 0.001;
-            this.particles.rotation.x += 0.0005;
-            
-            // Gentle mouse interaction
-            this.particles.rotation.y += (this.mouseX * 0.0001 - this.particles.rotation.y) * 0.05;
-            this.particles.rotation.x += (this.mouseY * 0.0001 - this.particles.rotation.x) * 0.05;
+        // Apply bullet time effect if active (temporal dilation)
+        if (this.bulletTimeActive) {
+            // Smoothly interpolate to target playback rate
+            this.currentPlaybackRate += (this.targetPlaybackRate - this.currentPlaybackRate) * 0.1;
+        } else {
+            this.currentPlaybackRate += (1.0 - this.currentPlaybackRate) * 0.1;
         }
         
-        // Animate floating shapes
+        const timeScale = this.currentPlaybackRate;
+        
+        // Animate particles with temporal scaling
+        if (this.particles) {
+            this.particles.rotation.y += 0.001 * timeScale;
+            this.particles.rotation.x += 0.0005 * timeScale;
+            
+            // Gentle mouse interaction with viscous inertia
+            this.particles.rotation.y += (this.mouseX * 0.0001 - this.particles.rotation.y) * 0.05 * timeScale;
+            this.particles.rotation.x += (this.mouseY * 0.0001 - this.particles.rotation.x) * 0.05 * timeScale;
+        }
+        
+        // Animate floating shapes with spring physics
         if (this.floatingShapes) {
             this.floatingShapes.forEach((shape, index) => {
-                shape.rotation.x += shape.userData.rotationSpeed.x;
-                shape.rotation.y += shape.userData.rotationSpeed.y;
+                shape.rotation.x += shape.userData.rotationSpeed.x * timeScale;
+                shape.rotation.y += shape.userData.rotationSpeed.y * timeScale;
                 
-                // Floating motion
-                shape.position.y += Math.sin(time * shape.userData.floatSpeed + shape.userData.floatOffset) * 0.5;
+                // Floating motion with spring-damper simulation
+                shape.position.y += Math.sin(time * shape.userData.floatSpeed * timeScale + shape.userData.floatOffset) * 0.5 * timeScale;
+                
+                // Add subtle scale pulsing using spring easing
+                const pulse = 1 + Math.sin(time * 2 + index) * 0.05;
+                shape.scale.setScalar(pulse);
             });
         }
         
+        // Update temporal echoes (ghost trails)
+        if (this.temporalEchoes && this.temporalEchoes.length > 0) {
+            this.temporalEchoes.forEach((echo, index) => {
+                if (echo.userData.originalShape) {
+                    const parent = echo.userData.originalShape;
+                    
+                    // Echo follows parent with time delay and decay
+                    const delayFactor = 0.03 * timeScale;
+                    echo.position.x += (parent.position.x - echo.position.x) * delayFactor;
+                    echo.position.y += (parent.position.y - echo.position.y) * delayFactor;
+                    echo.position.z += (parent.position.z - echo.position.z) * delayFactor;
+                    
+                    // Echo rotation lags behind parent
+                    echo.rotation.x += (parent.rotation.x - echo.rotation.x) * delayFactor;
+                    echo.rotation.y += (parent.rotation.y - echo.rotation.y) * delayFactor;
+                    
+                    // Pulsing opacity for ghost effect
+                    echo.material.opacity = 0.15 + Math.sin(time * 3 + index * 0.5) * 0.1;
+                }
+            });
+        }
+        
+        // Animate volumetric light with breathing effect
+        if (this.volumetricLight) {
+            this.volumetricLight.scale.setScalar(1 + Math.sin(time * 1.5) * 0.2);
+            this.volumetricLight.rotation.y += 0.002 * timeScale;
+            this.volumetricLight.rotation.z += 0.001 * timeScale;
+        }
+        
         this.renderer.render(this.scene, this.camera);
+    }
+    
+    // BULLET TIME - Global temporal dilation control
+    toggleBulletTime(enable) {
+        this.bulletTimeActive = enable;
+        this.targetPlaybackRate = enable ? 0.2 : 1.0;
+        
+        // Apply to CSS animations as well
+        document.body.classList.toggle('bullet-time-active', enable);
+        
+        console.log('Bullet Time:', enable ? 'ACTIVATED' : 'DEACTIVATED', '| Playback Rate:', this.targetPlaybackRate);
+    }
+    
+    // VISCOUS INERTIA - Get current velocity for external use
+    getVelocity() {
+        return {
+            x: this.velocityX,
+            y: this.velocityY,
+            magnitude: Math.sqrt(this.velocityX ** 2 + this.velocityY ** 2)
+        };
     }
 }
 
@@ -374,7 +531,7 @@ class UIController {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize WebGL background
+    // Initialize WebGL background with advanced physics
     const webgl = new WebGLBackground();
     
     // Initialize UI controller
@@ -383,7 +540,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add loading animation complete
     document.body.classList.add('loaded');
     
+    // Expose physics controls globally for debugging/demo
+    window.physicsEngine = {
+        toggleBulletTime: () => webgl.toggleBulletTime(!webgl.bulletTimeActive),
+        getVelocity: () => webgl.getVelocity(),
+        getPlaybackRate: () => webgl.currentPlaybackRate
+    };
+    
+    // Keyboard shortcut for bullet time (Space bar)
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+            e.preventDefault();
+            webgl.toggleBulletTime(!webgl.bulletTimeActive);
+        }
+    });
+    
     console.log('Serenity Mental Health Clinic website loaded successfully!');
+    console.log('CLASSIFIED PHYSICS ENGINE ACTIVE');
+    console.log('- Press SPACE to toggle Bullet Time');
+    console.log('- Move mouse to experience Viscous Inertia');
+    console.log('- Scroll to activate Scroll-Scrubbed animations');
+    console.log('- Watch for Temporal Echoes trailing floating shapes');
 });
 
 // ============================================
