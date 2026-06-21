@@ -2,7 +2,7 @@
    Mental Health Clinic - Main Stylesheet
    ======================================== */
 
-/* CSS Variables */
+/* CSS Variables - CLASSIFIED PHYSICS ENGINE PARAMETERS */
 :root {
     --primary-color: #4a90a4;
     --primary-dark: #3a7d8f;
@@ -22,6 +22,16 @@
     --border-radius: 8px;
     --border-radius-lg: 12px;
     --transition: all 0.3s ease;
+    
+    /* Physics Engine Constants - Spring-Damper Arrays for linear() Easing */
+    --spring-gentle: linear(0, 0.0033, 0.0131, 0.0296, 0.0529, 0.0831, 0.1202, 0.1642, 0.2152, 0.2732, 0.3382, 0.4102, 0.4892, 0.5752, 0.6682, 0.7682, 0.8752, 1.0102, 1.1532, 1.2842, 1.3832, 1.4502, 1.4852, 1.5, 1.4852, 1.4502, 1.3832, 1.2842, 1.1532, 1.0102, 0.8752, 0.7682, 0.6682, 0.5752, 0.4892, 0.4102, 0.3382, 0.2732, 0.2152, 0.1642, 0.1202, 0.0831, 0.0529, 0.0296, 0.0131, 0.0033, 0);
+    --spring-bouncy: linear(0, 0.0016, 0.0066, 0.0149, 0.0266, 0.0416, 0.06, 0.0816, 0.1066, 0.1349, 0.1666, 0.2016, 0.24, 0.2816, 0.3266, 0.3749, 0.4266, 0.4816, 0.54, 0.6016, 0.6666, 0.7349, 0.8066, 0.8816, 0.96, 1.0416, 1.1266, 1.2149, 1.3066, 1.4016, 1.5, 1.5816, 1.6466, 1.6949, 1.7266, 1.7416, 1.74, 1.7216, 1.6866, 1.6349, 1.5666, 1.4816, 1.38, 1.2616, 1.1266, 0.9749, 0.8066, 0.6216, 0.42, 0.2016, 0);
+    --viscous-drag: linear(0, 0.02, 0.06, 0.12, 0.2, 0.3, 0.42, 0.56, 0.72, 0.9, 1.1, 1.32, 1.56, 1.82, 2.1, 2.4, 2.72, 3.06, 3.42, 3.8, 4.2, 4.62, 5.06, 5.52, 6, 6.5, 7.02, 7.56, 8.12, 8.7, 9.3, 9.92, 10.56, 11.22, 11.9, 12.6, 13.32, 14.06, 14.82, 15.6, 16.4, 17.22, 18.06, 18.92, 19.8, 20.7, 21.62, 22.56, 23.52, 24.5, 25.5, 26.52, 27.56, 28.62, 29.7, 30.8, 31.92, 33.06, 34.22, 35.4, 36.6, 37.82, 39.06, 40.32, 41.6, 42.9, 44.22, 45.56, 46.92, 48.3, 49.7, 51.12, 52.56, 54.02, 55.5, 57, 58.52, 60.06, 61.62, 63.2, 64.8, 66.42, 68.06, 69.72, 71.4, 73.1, 74.82, 76.56, 78.32, 80.1, 81.9, 83.72, 85.56, 87.42, 89.3, 91.2, 93.12, 95.06, 97.02, 99, 100);
+    
+    /* Temporal Control Variables */
+    --bullet-time-rate: 1;
+    --micro-interaction-duration: 0.3s;
+    --macro-animation-duration: 3s;
 }
 
 /* Reset & Base Styles */
@@ -53,6 +63,238 @@ body {
     z-index: -1;
     opacity: 0.6;
 }
+
+/* ========================================
+   CLASSIFIED CSS PHYSICS ENGINE
+   Advanced Temporal, Relational & Physics Rendering
+   ======================================== */
+
+/* SECTION 1: THE GHOSTS - View Transition Pseudo-Elements for Spatial Flux */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.6s;
+    animation-timing-function: var(--spring-gentle);
+}
+
+::view-transition-group(root) {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* SECTION 2: THE SHARDS - Fragmentation for Text Shattering Effects */
+.shard-container {
+    column-count: 3;
+    column-gap: 20px;
+    transform-style: preserve-3d;
+}
+
+.shard-text {
+    break-inside: avoid-column;
+    transition: transform 0.6s var(--spring-bouncy), opacity 0.4s ease;
+}
+
+.shard-text:hover {
+    transform: translateZ(50px) rotateX(10deg) rotateY(-10deg);
+}
+
+/* Target individual fragments for 3D particle system simulation */
+.service-card:nth-fragment(1) { transform: translate3d(0, 0, 0); }
+.service-card:nth-fragment(2) { transform: translate3d(10px, 5px, 20px); }
+.service-card:nth-fragment(3) { transform: translate3d(-10px, -5px, 30px); }
+
+/* SECTION 3: THE PHANTOMS - Custom Highlight API for Optical Scanning */
+::highlight(scanner-beam) {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(74, 144, 164, 0.3) 45%, 
+        rgba(74, 144, 164, 0.8) 50%, 
+        rgba(74, 144, 164, 0.3) 55%, 
+        transparent 100%);
+    mask-image: linear-gradient(90deg, transparent, black 45%, black 55%, transparent);
+}
+
+::highlight(decryption-field) {
+    background: radial-gradient(ellipse at center, 
+        rgba(126, 184, 163, 0.4) 0%, 
+        transparent 70%);
+    filter: blur(2px);
+}
+
+/* SECTION 4: VOLUMETRIC LIGHTING via Compositing Contexts */
+.volumetric-light-source {
+    isolation: isolate;
+    mix-blend-mode: plus-lighter;
+    background: radial-gradient(circle at center, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(74, 144, 164, 0.4) 30%, 
+        transparent 70%);
+    filter: blur(20px);
+}
+
+.light-beam {
+    isolation: isolate;
+    mix-blend-mode: screen;
+    background: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.6) 0%, 
+        rgba(74, 144, 164, 0.2) 100%);
+    transform-origin: top center;
+}
+
+/* SECTION 5: MATRIX STACKERS - Additive Animation Composition */
+.orbiting-element {
+    animation: 
+        orbit-macro 3s linear infinite,
+        orbit-micro 0.5s var(--spring-gentle) infinite;
+    animation-composition: add;
+    transform-style: preserve-3d;
+}
+
+@keyframes orbit-macro {
+    0% { transform: rotate3d(0, 1, 0, 0deg) translate3d(100px, 0, 0); }
+    100% { transform: rotate3d(0, 1, 0, 360deg) translate3d(100px, 0, 0); }
+}
+
+@keyframes orbit-micro {
+    0%, 100% { transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+    50% { transform: translate3d(5px, 3px, 10px) scale3d(1.05, 1.05, 1.05); }
+}
+
+/* SECTION 6: SPACE-TIME CONVERTERS - Scroll & Pointer Driven Animations */
+.scroll-scrubbed-exploder {
+    animation-timeline: view();
+    animation-name: scroll-explode;
+    animation-range: entry 0% cover 100%;
+    animation-fill-mode: both;
+}
+
+@keyframes scroll-explode {
+    0% { 
+        transform: scale3d(0.8, 0.8, 0.8) translateZ(-200px);
+        opacity: 0;
+    }
+    100% { 
+        transform: scale3d(1, 1, 1) translateZ(0);
+        opacity: 1;
+    }
+}
+
+.pointer-driven-hologram {
+    animation-timeline: pointer(x) pointer(y);
+    animation-name: pointer-tilt;
+    animation-range: 0px 100vw, 0px 100vh;
+}
+
+@keyframes pointer-tilt {
+    0%, 100% { 
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+    50% { 
+        transform: perspective(1000px) rotateX(15deg) rotateY(-15deg);
+    }
+}
+
+/* SECTION 7: DISCRETE STATE MACHINES - Animating Display Property */
+.modal-unfolding {
+    display: none;
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 0.8) translateZ(-100px);
+    transition: 
+        display 0.6s allow-discrete,
+        opacity 0.6s ease,
+        transform 0.6s var(--spring-gentle);
+}
+
+.modal-unfolding.open {
+    display: block;
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translateZ(0);
+}
+
+@starting-style {
+    .modal-unfolding.open {
+        opacity: 0;
+        transform: scale3d(0.8, 0.8, 0.8) translateZ(-100px);
+    }
+}
+
+/* SECTION 8: VISCOUS INERTIA - Reversing Shortening Factor Hack */
+.viscous-cursor {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+/* When constantly interrupted by pointermove, browser calculates natural momentum */
+
+/* SECTION 9: TEMPORAL ECHO RIG - Ghost Trail Effect */
+.temporal-echo-parent {
+    isolation: isolate;
+    transform-style: preserve-3d;
+}
+
+.temporal-echo {
+    mix-blend-mode: screen;
+    opacity: 0.4;
+    animation: echo-fade 2s linear infinite;
+}
+
+.temporal-echo.echo-1 { animation-delay: -0.2s; }
+.temporal-echo.echo-2 { animation-delay: -0.4s; }
+.temporal-echo.echo-3 { animation-delay: -0.6s; }
+
+@keyframes echo-fade {
+    0% { opacity: 0.6; transform: translate3d(0, 0, 0); }
+    100% { opacity: 0; transform: translate3d(-20px, -20px, -50px); }
+}
+
+/* SECTION 10: 3D KINEMATIC RIGGING - Hierarchical Coordinate Systems */
+.kinematic-rig {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.kinematic-parent {
+    transform: rotate3d(0, 1, 0, 45deg);
+    transform-style: preserve-3d;
+}
+
+.kinematic-child {
+    transform: rotate3d(1, 0, 0, 30deg) translate3d(50px, 0, 0);
+    transform-style: preserve-3d;
+}
+
+/* Nested transforms create robotic arm / solar system effects */
+.kinematic-grandchild {
+    transform: rotate3d(0, 0, 1, 60deg) scale3d(0.8, 0.8, 0.8);
+}
+
+/* SECTION 11: TEXT SHATTERING via Fragmentation */
+.shattered-text {
+    columns: 5 100px;
+    column-fill: balance;
+    transform-style: preserve-3d;
+}
+
+.shattered-text span {
+    display: inline-block;
+    break-inside: avoid-column;
+    transition: transform 0.5s var(--spring-bouncy);
+}
+
+.shattered-text span:hover {
+    transform: translate3d(0, -10px, 30px) rotate3d(1, 1, 0, 15deg);
+}
+
+/* SECTION 12: BULLET TIME - Global Temporal Dilation */
+.bullet-time-active {
+    /* Applied via JS: document.timeline.playbackRate = 0.2 */
+    animation-playback-rate: var(--bullet-time-rate);
+}
+
+/* All animations slow down proportionally while maintaining sync */
 
 /* Container */
 .container {
