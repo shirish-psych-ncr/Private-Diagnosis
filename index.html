@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Mental Health Clinic - Compassionate Care for Your Mind</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- WebGL Background Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">Serenity Clinic</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#therapists" class="nav-link">Our Team</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Your Journey to <span class="highlight">Mental Wellness</span> Starts Here</h1>
+            <p class="hero-subtitle">Compassionate, confidential, and personalized mental health care in a safe and supportive environment.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+                <a href="#services" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">Patients Helped</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Expert Therapists</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive mental health services tailored to your unique needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3>Individual Therapy</h3>
+                    <p>One-on-one sessions with licensed therapists to address personal challenges, anxiety, depression, and more.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Counseling</h3>
+                    <p>Strengthen family relationships and improve communication through guided family therapy sessions.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💑</div>
+                    <h3>Couples Therapy</h3>
+                    <p>Work through relationship challenges and build a stronger, healthier partnership together.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧘</div>
+                    <h3>Stress Management</h3>
+                    <p>Learn effective coping strategies and relaxation techniques to manage stress and improve well-being.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💊</div>
+                    <h3>Psychiatric Services</h3>
+                    <p>Comprehensive psychiatric evaluation, medication management, and ongoing support from qualified psychiatrists.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🆘</div>
+                    <h3>Crisis Intervention</h3>
+                    <p>Immediate support and intervention for mental health crises, available 24/7 for those in need.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Therapists Section -->
+    <section id="therapists" class="therapists section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Therapists</h2>
+                <p class="section-subtitle">Experienced professionals dedicated to your mental wellness journey</p>
+            </div>
+            <div class="therapists-grid">
+                <div class="therapist-card">
+                    <div class="therapist-image">
+                        <div class="therapist-placeholder">👩‍⚕️</div>
+                    </div>
+                    <div class="therapist-info">
+                        <h3>Dr. Sarah Mitchell</h3>
+                        <p class="therapist-role">Clinical Psychologist</p>
+                        <p class="therapist-bio">Specializing in anxiety disorders and cognitive behavioral therapy with 12 years of experience.</p>
+                        <div class="therapist-specialties">
+                            <span>Anxiety</span>
+                            <span>Depression</span>
+                            <span>CBT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="therapist-card">
+                    <div class="therapist-image">
+                        <div class="therapist-placeholder">👨‍⚕️</div>
+                    </div>
+                    <div class="therapist-info">
+                        <h3>Dr. James Chen</h3>
+                        <p class="therapist-role">Psychiatrist</p>
+                        <p class="therapist-bio">Board-certified psychiatrist with expertise in medication management and mood disorders.</p>
+                        <div class="therapist-specialties">
+                            <span>Mood Disorders</span>
+                            <span>Medication</span>
+                            <span>PTSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="therapist-card">
+                    <div class="therapist-image">
+                        <div class="therapist-placeholder">👩‍⚕️</div>
+                    </div>
+                    <div class="therapist-info">
+                        <h3>Dr. Emily Rodriguez</h3>
+                        <p class="therapist-role">Family Therapist</p>
+                        <p class="therapist-bio">Dedicated to helping families heal and grow through compassionate family therapy.</p>
+                        <div class="therapist-specialties">
+                            <span>Family Therapy</span>
+                            <span>Relationships</span>
+                            <span>Trauma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="therapist-card">
+                    <div class="therapist-image">
+                        <div class="therapist-placeholder">👨‍⚕️</div>
+                    </div>
+                    <div class="therapist-info">
+                        <h3>Dr. Michael Thompson</h3>
+                        <p class="therapist-role">Counseling Psychologist</p>
+                        <p class="therapist-bio">Focused on stress management, life transitions, and personal growth counseling.</p>
+                        <div class="therapist-specialties">
+                            <span>Stress</span>
+                            <span>Life Transitions</span>
+                            <span>Grief</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Serenity Clinic</h2>
+                    <p class="about-intro">For over 15 years, Serenity Mental Health Clinic has been providing compassionate, evidence-based mental health care to individuals, couples, and families in our community.</p>
+                    <p>Our mission is to create a safe, welcoming environment where everyone feels comfortable seeking the help they deserve. We believe that mental health is just as important as physical health, and everyone deserves access to quality mental health care.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Licensed & Experienced Professionals</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Personalized Treatment Plans</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Confidential & Safe Environment</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Evidence-Based Approaches</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Flexible Scheduling Options</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Insurance Accepted</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <span>🏥</span>
+                        <p>A Welcoming Space for Healing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Take the first step towards better mental health. We're here to help.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Wellness Boulevard<br>Healing City, HC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(555) 123-4567<br>(555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@serenityclinic.com<br>appointments@serenityclinic.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon - Fri: 8:00 AM - 8:00 PM<br>Sat: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="emergency-banner">
+                        <strong>🆘 24/7 Crisis Hotline:</strong> (555) 911-HELP
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" ">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected></option>
+                            <option value="individual">Individual Therapy</option>
+                            <option value="family">Family Counseling</option>
+                            <option value="couples">Couples Therapy</option>
+                            <option value="psychiatric">Psychiatric Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="service">Service Interested In</label>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🌿</span>
+                        <span class="logo-text">Serenity Clinic</span>
+                    </div>
+                    <p>Providing compassionate mental health care for over 15 years. Your wellness is our priority.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#therapists">Our Team</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Individual Therapy</a></li>
+                        <li><a href="#services">Family Counseling</a></li>
+                        <li><a href="#services">Couples Therapy</a></li>
+                        <li><a href="#services">Psychiatric Services</a></li>
+                        <li><a href="#services">Crisis Intervention</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Mental Health Blog</a></li>
+                        <li><a href="#">Self-Help Tools</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Patient Portal</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Serenity Mental Health Clinic. All rights reserved.</p>
+                <p class="disclaimer">If you are experiencing a mental health emergency, please call 911 or your local emergency services immediately.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Main JavaScript -->
+    <script src="src/scripts/main.js"></script>
+</body>
+</html>
