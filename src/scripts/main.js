@@ -13,6 +13,13 @@
 class WebGLBackground {
     constructor() {
         this.canvas = document.getElementById('webgl-canvas');
+
+        // Bail out gracefully if the WebGL canvas is missing or WebGL/Three.js is unavailable
+        if (!this.canvas || typeof THREE === 'undefined') {
+            console.warn('WebGLBackground: canvas or Three.js unavailable, skipping background animation.');
+            return;
+        }
+
         this.scene = null;
         this.camera = null;
         this.renderer = null;
@@ -40,7 +47,7 @@ class WebGLBackground {
     init() {
         // Scene
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color(0xf8f9fa);
+        this.scene.background = null; // Keep transparent so the CSS background shows through
         
         // Camera
         this.camera = new THREE.PerspectiveCamera(
@@ -416,9 +423,11 @@ class UIController {
         }
         
         // Smooth scrolling for nav links
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', (e) => this.handleNavClick(e));
-        });
+        if (this.navLinks) {
+            this.navLinks.forEach(link => {
+                link.addEventListener('click', (e) => this.handleNavClick(e));
+            });
+        }
         
         // Contact form submission
         if (this.contactForm) {
