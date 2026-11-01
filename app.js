@@ -420,8 +420,17 @@
                     if ((v || 0) >= 2 && q.disorders) q.disorders.forEach(d => addFlag(d, domain.instrument || domain.id));
                 });
             }
+            // Resolve the deployed instrument's canonical name from the library
+            // (data.json instruments map), falling back to the domain id.
+            let instrumentName = (domain.instrument || domain.id);
+            if (CLINICAL_DATA.instruments) {
+                const slug = instrumentName.toLowerCase().replace(/[^a-z0-9]/g, '');
+                const matchKey = Object.keys(CLINICAL_DATA.instruments)
+                    .find(k => k.toLowerCase().replace(/[^a-z0-9]/g, '') === slug);
+                if (matchKey) instrumentName = matchKey;
+            }
             instrumentResults.push({
-                name: (domain.instrument || domain.id).toUpperCase(),
+                name: instrumentName,
                 score: sum + '/' + maxPossible,
                 severity,
                 aboveCutoff,

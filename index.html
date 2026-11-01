@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Content Security Policy: scripts only from vetted CDNs or same origin; no inline scripts,
-         no remote data exfiltration (connect-src 'none' blocks all XHR/fetch beacons except same-origin). -->
+    <!-- Content Security Policy: scripts only from same origin or vetted CDNs; no inline scripts,
+         no remote data exfiltration (connect-src 'self' blocks all cross-origin XHR/fetch beacons). -->
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com https://cdnjs.cloudflare.com; font-src https://cdn.jsdelivr.net https://fonts.gstatic.com https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+          content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self'; font-src 'self' data:; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
     <title>EPCSS — Ephemeral Pre-Consultation Clinical Screening</title>
     <meta name="description" content="Zero-backend, zero-persistence pre-consultation clinical screening. All data stays in volatile memory and self-destructs when the tab closes.">
-    <!-- Tailwind CSS (utility layer) via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- jsPDF + AutoTable for client-side clinician PDF generation -->
+    <!-- jsPDF + AutoTable for client-side clinician PDF generation (vetted cdnjs CDN only) -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <link rel="stylesheet" href="styles.css">
