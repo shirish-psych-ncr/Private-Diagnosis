@@ -1766,6 +1766,237 @@
           ]
         },
         {
+          "id": "oppositionalDefiant",
+          "name": {
+            "en": "Part IC: Oppositional Defiant Symptoms",
+            "hi": "भाग I-C: प्रतिरोधी-अवज्ञाकारी लक्षण"
+          },
+          "questions": [
+            {
+              "id": "v19",
+              "text": {
+                "en": "Argues with adults",
+                "hi": "वयस्कों के साथ बहस करता है"
+              }
+            },
+            {
+              "id": "v20",
+              "text": {
+                "en": "Loses temper",
+                "hi": "गुस्सा खो देता है / तुरंत चिड़चिड़ा होता है"
+              }
+            },
+            {
+              "id": "v21",
+              "text": {
+                "en": "Actively defies or refuses to go along with adults' requests or rules",
+                "hi": "वयस्कों की बातों या नियमों का जानबूझकर पालन नहीं करता या इनकार करता है"
+              }
+            },
+            {
+              "id": "v22",
+              "text": {
+                "en": "Deliberately annoys people",
+                "hi": "जानबूझकर लोगों को परेशान करता है"
+              }
+            },
+            {
+              "id": "v23",
+              "text": {
+                "en": "Blames others for his or her mistakes or misbehaviors",
+                "hi": "अपनी गलतियों या दुर्व्यवहारों के लिए दूसरों को दोष देता है"
+              }
+            },
+            {
+              "id": "v24",
+              "text": {
+                "en": "Is touchy or easily annoyed by others",
+                "hi": "चिड़चिड़ा है या दूसरों से आसानी से नाराज हो जाता है"
+              }
+            },
+            {
+              "id": "v25",
+              "text": {
+                "en": "Is angry or resentful",
+                "hi": "गुस्से या कड़वाहट में रहता है"
+              }
+            },
+            {
+              "id": "v26",
+              "text": {
+                "en": "Is spiteful and wants to get even",
+                "hi": "बदले की भावना रखता है और बदला लेना चाहता है"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conduct",
+          "name": {
+            "en": "Part ID: Conduct Disorder Symptoms",
+            "hi": "भाग I-D: कंडक्ट डिसऑर्डर लक्षण"
+          },
+          "questions": [
+            {
+              "id": "v27",
+              "text": {
+                "en": "Bullies, threatens, or intimidates others",
+                "hi": "दूसरों को धमकाता है, डराता है या प्रताड़ित करता है"
+              }
+            },
+            {
+              "id": "v28",
+              "text": {
+                "en": "Starts physical fights",
+                "hi": "शारीरिक लड़ाई शुरू करता है"
+              }
+            },
+            {
+              "id": "v29",
+              "text": {
+                "en": "Lies to get out of trouble or to avoid obligations (i.e., \"cons\" others)",
+                "hi": "मुसीबत से बचने या जिम्मेदारियों टालने के लिए झूठ बोलता है"
+              }
+            },
+            {
+              "id": "v30",
+              "text": {
+                "en": "Is truant from school (skips school) without permission",
+                "hi": "बिना अनुमति स्कूल से गैरहाज़िर रहता है (स्कूल छोड़कर भागता है)"
+              }
+            },
+            {
+              "id": "v31",
+              "text": {
+                "en": "Is physically cruel to people",
+                "hi": "लोगों के प्रति शारीरिक रूप से क्रूर व्यवहार करता है"
+              }
+            },
+            {
+              "id": "v32",
+              "text": {
+                "en": "Has stolen things that have value",
+                "hi": "मूल्यवान चीज़ें चुराई हैं"
+              }
+            },
+            {
+              "id": "v33",
+              "text": {
+                "en": "Is physically cruel to animals",
+                "hi": "जानवरों के प्रति शारीरिक रूप से क्रूर व्यवहार करता है"
+              }
+            },
+            {
+              "id": "v34",
+              "text": {
+                "en": "Deliberately destroys others' property",
+                "hi": "दूसरों की संपत्ति जानबूझकर नष्ट करता है"
+              }
+            },
+            {
+              "id": "v35",
+              "text": {
+                "en": "Has used a weapon that can cause serious harm (bat, knife, brick, gun)",
+                "hi": "गंभीर क्षति कर सकने वाले हथियार का उपयोग किया है (बल्टी, चाकू, ईंट, बंदूक)"
+              }
+            },
+            {
+              "id": "v36",
+              "text": {
+                "en": "Has deliberately set fires to cause damage",
+                "hi": "जानबूझकर नुकसान पहुँचाने के लिए आग लगाई है"
+              }
+            },
+            {
+              "id": "v37",
+              "text": {
+                "en": "Has broken into someone else's home, business, or car",
+                "hi": "किसी और के घर, व्यापार स्थल या वाहन में जबरन घुसा है"
+              }
+            },
+            {
+              "id": "v38",
+              "text": {
+                "en": "Has stayed out at night without permission",
+                "hi": "बिना अनुमति रात भर बाहर रहा है"
+              }
+            },
+            {
+              "id": "v39",
+              "text": {
+                "en": "Has run away from home overnight",
+                "hi": "घर से रात भर के लिए भागा है"
+              }
+            },
+            {
+              "id": "v40",
+              "text": {
+                "en": "Has forced someone into sexual activity",
+                "hi": "किसी को यौन गतिविधि के लिए बाध्य किया है"
+              },
+              "safety": true
+            }
+          ]
+        },
+        {
+          "id": "anxietyDepression",
+          "name": {
+            "en": "Part IE: Anxiety/Depression Symptoms",
+            "hi": "भाग I-E: चिंता/अवसाद लक्षण"
+          },
+          "questions": [
+            {
+              "id": "v41",
+              "text": {
+                "en": "Is fearful, anxious, or worried",
+                "hi": "डरा, व्याकुल या चिंतित रहता है"
+              }
+            },
+            {
+              "id": "v42",
+              "text": {
+                "en": "Is afraid to try new things for fear of making mistakes",
+                "hi": "गलती करने के डर से नई चीज़ें आज़माने से डरता है"
+              }
+            },
+            {
+              "id": "v43",
+              "text": {
+                "en": "Feels worthless or inferior",
+                "hi": "अपने आपको बेकार या हीन महसूस करता है"
+              }
+            },
+            {
+              "id": "v44",
+              "text": {
+                "en": "Blames self for problems, feels guilty",
+                "hi": "समस्याओं के लिए खुद को दोष देता है, अपराधबोध महसूस करता है"
+              }
+            },
+            {
+              "id": "v45",
+              "text": {
+                "en": "Feels lonely, unwanted, or unloved; complains that \"no one loves him or her\"",
+                "hi": "अकेला, अवांछित या निरपेक्ष महसूस करता है; शिकायत करता है कि 'कोई उसे प्यार नहीं करता'"
+              }
+            },
+            {
+              "id": "v46",
+              "text": {
+                "en": "Is sad, unhappy, or depressed",
+                "hi": "उदास, अप्रसन्न या अवसादग्रस्त रहता है"
+              }
+            },
+            {
+              "id": "v47",
+              "text": {
+                "en": "Is self-conscious or easily embarrassed",
+                "hi": "अत्यधिक स्व-चेतना वाला है या आसानी से शर्मा जाता है"
+              }
+            }
+          ]
+        },
+        {
           "id": "performance",
           "name": {
             "en": "Part II: Performance",
@@ -2009,6 +2240,10 @@
         "disordersOnPositive": [
           "adhd"
         ]
+      },
+      "directions": {
+        "en": "Each rating should be considered in the context of what is appropriate for the age of your child. When completing this form, please think about your child's behaviors in the past 6 months.",
+        "hi": "प्रत्येक रेटिंग बच्चे की आयु के अनुसार उपयुक्त होने के संदर्भ में विचार की जानी चाहिए। यह फ़ॉर्म भरते समय कृपया पिछले 6 माह में अपने बच्चे के व्यवहार के बारे में सोचें।"
       }
     }
   },
