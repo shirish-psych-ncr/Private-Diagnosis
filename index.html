@@ -139,3 +139,126 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Pre-Consultation Screening</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- jsPDF and AutoTable for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="header-content">
+                <h1 data-i18n="app.title">Clinical Pre-Consultation Screening</h1>
+                <div class="language-switcher">
+                    <button id="lang-en" class="active" onclick="setLanguage('en')">English</button>
+                    <button id="lang-hi" onclick="setLanguage('hi')">हिंदी</button>
+                </div>
+            </div>
+            <div class="disclaimer" data-i18n="app.disclaimer">
+                This tool does not provide a diagnosis. Results are for clinician review only. All data is cleared when you close this page.
+            </div>
+        </header>
+
+        <main>
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="0"><span class="step-number">1</span><span class="step-label" data-i18n="stage.consent">Consent</span></div>
+                <div class="progress-step" data-step="1"><span class="step-number">2</span><span class="step-label" data-i18n="stage.context">Context</span></div>
+                <div class="progress-step" data-step="2"><span class="step-number">3</span><span class="step-label" data-i18n="stage.domains">Domains</span></div>
+                <div class="progress-step" data-step="3"><span class="step-number">4</span><span class="step-label" data-i18n="stage.scales">Scales</span></div>
+                <div class="progress-step" data-step="4"><span class="step-number">5</span><span class="step-label" data-i18n="stage.results">Results</span></div>
+            </div>
+
+            <div id="stage-container">
+                <!-- Stage 0: Consent -->
+                <section id="stage-0" class="stage active">
+                    <h2 data-i18n="consent.title">Welcome</h2>
+                    <div class="consent-content">
+                        <p data-i18n="consent.purpose">This screening tool helps prepare for your clinical consultation by collecting information about your symptoms.</p>
+                        <p data-i18n="consent.privacy">Your responses are stored only in your browser's temporary memory. Nothing is sent to any server. Data is destroyed when you close this tab.</p>
+                        <div class="consent-checkbox">
+                            <input type="checkbox" id="consent-check" onchange="toggleConsent()">
+                            <label for="consent-check" data-i18n="consent.agree">I understand and agree to proceed</label>
+                        </div>
+                        <button id="consent-btn" class="btn-primary" disabled onclick="nextStage()" data-i18n="consent.continue">Continue</button>
+                    </div>
+                </section>
+
+                <!-- Stage 1: Context -->
+                <section id="stage-1" class="stage">
+                    <h2 data-i18n="context.title">Patient Information</h2>
+                    <form id="context-form" onsubmit="event.preventDefault(); saveContext(); nextStage();">
+                        <div class="form-group">
+                            <label data-i18n="context.age">Age Group</label>
+                            <select id="age-group" required>
+                                <option value="" data-i18n="context.select">Select...</option>
+                                <option value="pediatric" data-i18n="context.age.pediatric">Child (under 12)</option>
+                                <option value="adolescent" data-i18n="context.age.adolescent">Adolescent (12-17)</option>
+                                <option value="adult" data-i18n="context.age.adult">Adult (18-64)</option>
+                                <option value="older" data-i18n="context.age.older">Older Adult (65+)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="context.reason">Reason for Visit</label>
+                            <textarea id="visit-reason" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" data-i18n="context.continue">Continue</button>
+                    </form>
+                </section>
+
+                <!-- Stage 2: Domains -->
+                <section id="stage-2" class="stage">
+                    <h2 data-i18n="domains.title">Symptom Domains</h2>
+                    <p class="subtitle" data-i18n="domains.subtitle">Select the areas you would like to screen.</p>
+                    <div id="domain-list"></div>
+                    <button class="btn-primary" onclick="generateScaleRecommendations()" data-i18n="domains.continue">Continue to Assessments</button>
+                </section>
+
+                <!-- Stage 3: Scales -->
+                <section id="stage-3" class="stage">
+                    <h2 data-i18n="scales.title">Clinical Assessments</h2>
+                    <div id="scale-container"></div>
+                    <button class="btn-primary" onclick="calculateResults(); nextStage();" data-i18n="scales.finish">Finish & View Results</button>
+                </section>
+
+                <!-- Stage 4: Results -->
+                <section id="stage-4" class="stage">
+                    <h2 data-i18n="results.title">Summary Report</h2>
+                    <div id="report-content"></div>
+                    <div class="action-buttons">
+                        <button class="btn-primary" onclick="generatePDF()" data-i18n="results.print">Download PDF Report</button>
+                        <button class="btn-secondary" onclick="location.reload()" data-i18n="results.clear">Clear All Data & Restart</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Safety Modal -->
+            <div id="safety-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2 data-i18n="safety.title">Important Safety Information</h2>
+                    <p data-i18n="safety.message">Based on your responses, we recommend seeking immediate support.</p>
+                    <div class="crisis-resources">
+                        <p><strong data-i18n="safety.emergency">Emergency:</strong> <span data-i18n="safety.emergency_num">Call local emergency services (e.g., 112)</span></p>
+                        <p><strong data-i18n="safety.helpline">Helpline:</strong> <span data-i18n="safety.helpline_num">Kirane (Mental Health): 1800-599-0019</span></p>
+                    </div>
+                    <button class="btn-primary" onclick="document.getElementById('safety-modal').classList.add('hidden')" data-i18n="safety.close">I Understand</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p data-i18n="footer.text">Session-only screening tool. No data is stored or transmitted.</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
