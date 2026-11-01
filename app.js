@@ -640,7 +640,16 @@
             theme: 'grid',
             styles: { fontSize: 8 }
         });
-        y = doc.lastAutoTable.finalY + 10;
+        y = doc.lastAutoTable.finalY + 6;
+
+        // Classification governance note (see WHITEPAPER.md Appendix A: Comparative Nosological Index)
+        doc.setFontSize(8);
+        doc.setTextColor(120);
+        doc.text('Codes are comparative index entries, not a DSM-to-ICD crosswalk. Tier numbers are navigation aids, not prevalence claims.', 14, y); y += 4;
+        doc.text('Record the classification system, version and code independently; do not infer a diagnosis from a code label alone.', 14, y); y += 4;
+        doc.text('ICD-11 sleep-wake disorders are in Chapter 07 and gender incongruence / sexual dysfunctions in Chapter 17; verify release and local coding rules.', 14, y); y += 4;
+        doc.setTextColor(0);
+        y += 6;
 
         if (r.safetyTriggered) {
             doc.setFontSize(11);
