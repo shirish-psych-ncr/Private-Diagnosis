@@ -51,12 +51,20 @@ The system maps symptom clusters to a comparative DSM-5-TR and ICD-11 reference 
 - Tier 4: Low Prevalence, High Severity (e.g., Schizophrenia Spectrum, Neurocognitive Disorders, Gender Incongruence).
 - Tier 5: Rare or Specialized Conditions (e.g., Dissociative Disorders, Paraphilic Disorders, Factitious Disorders).
 
-3.2 Adaptive Instrument Routing
+3.2 Comparative Code Harmonisation with Appendix A
+The disorder database in `data.json` is harmonised against the Comparative DSM-5-TR / ICD-11 Nosological Index in Appendix A, following its rule that similar labels do not establish identical diagnostic requirements and that parent categories may require a more specific final code:
+- Major Depressive Disorder carries "6A70 / 6A71" with a mapping note distinguishing single-episode (6A70) from recurrent (6A71) depressive disorder (§3.2.2).
+- Stimulant Use Disorder carries "6C45 / 6C46" with a note that ICD-11 separates cocaine (6C45) from amphetamine-type stimulants (6C46); the substance-specific family must be selected rather than a generic parent (§14.2.2).
+- Gender Incongruence notes the life-stage codes HA60 (adolescence/adulthood), HA61 (childhood) and HA6Z (unspecified), and that ICD gender incongruence does not require the DSM distress/impairment criterion (§12.2).
+- Neurocognitive entries note that ICD dementia categories 6D80–6D85 are the principal comparison for DSM major neurocognitive disorder, with 6D71 for mild neurocognitive disorder (§15.1.2).
+These mapping notes appear only in the clinician view; the patient view continues to withhold diagnostic labels.
+
+3.3 Adaptive Instrument Routing
 The system does not administer a monolithic battery of tests. Instead, it uses a two-stage triage:
 - Stage A: Symptom Clustering. The patient selects broad domains of concern (e.g., "Low mood," "Difficulty focusing").
 - Stage B: Instrument Deployment. Based on Stage A selections and the patient's declared age group, the system dynamically renders the appropriate validated scales. For example, selecting the neurodevelopmental domain for a pediatric patient triggers the Vanderbilt ADHD Diagnostic Rating Scale (VADRS), while the same selection for an adult triggers the Adult ADHD Self-Report Scale (ASRS-v1.1).
 
-3.3 Validated Instrument Library
+3.4 Validated Instrument Library
 The system supports multiple instruments per condition to allow for differential diagnosis. The shipped library includes:
 - Mood: PHQ-9, Beck Depression Inventory-II (BDI-II), Mood Disorder Questionnaire (MDQ).
 - Anxiety: GAD-7, Beck Anxiety Inventory (BAI), State-Trait Anxiety Inventory (STAI).
@@ -71,11 +79,14 @@ The system supports multiple instruments per condition to allow for differential
 ### 4. USER JOURNEY AND OPERATIONAL WORKFLOW
 The patient experience is designed to be linear, low-friction, and transparent, consisting of five distinct stages.
 
+4.0 Sequential Gating and Scroll Behaviour
+Stage navigation follows a strict "Continue gate" rule: the next state loads only after the current stage's Continue control is activated and its validation passes. No later stage section is revealed beforehand — a single controlled reveal function is the only code path that can display a stage, and it is invoked exclusively from the consent, context, domains, and scales Continue handlers (and at boot, which reveals only Stage 1). Every newly revealed state scrolls the viewport to the top of the page before focus moves to the new stage heading, so users never resume mid-scroll in stale content. If validation fails (missing consent, no age group selected, no domains chosen, or unanswered items), an inline alert with `role="alert"` is shown and focused, and the next state is not loaded.
+
 4.1 Stage 1: Informed Consent
 The landing page presents a prominent, unambiguous disclaimer stating that the tool is an intake aid, not a diagnostic instrument. The patient must actively check a consent box acknowledging that data is ephemeral and will be lost if the tab is closed. The continue control remains disabled until consent is granted.
 
 4.2 Stage 2: Patient Context
-The patient provides minimal, non-identifying demographic context essential for clinical routing: age group, primary reason for visit, optional current medications, and optional prior diagnoses. No names, contact information, or government IDs are collected.
+The patient provides minimal, non-identifying demographic context essential for clinical routing: age group, primary reason for visit, optional current medications, and optional prior diagnoses. Age group is required because it drives adaptive instrument routing; activating Continue without it displays the inline validation message ("Please select an age group to continue.") and keeps the patient on this stage. No names, contact information, or government IDs are collected.
 
 4.3 Stage 3: Symptom Clustering
 The patient is presented with a grid of plain-language symptom domains. They select all domains that resonate with their current experience. This step acts as the routing mechanism for the subsequent assessment phase.

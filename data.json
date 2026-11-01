@@ -1187,7 +1187,8 @@
       },
       "tier": 1,
       "dsm5": "Stimulant Use Disorder",
-      "icd11": "6C45"
+      "icd11": "6C45 / 6C46",
+      "mappingNote": "ICD-11 separates stimulant families: Disorders due to use of cocaine is 6C45; disorders due to use of amphetamines, methamphetamine or methcathinone is 6C46 (Appendix A §14.2.2). DSM Stimulant Use Disorder maps to whichever substance-specific family applies; select the specific code rather than a generic parent."
     },
     "schizoaffective": {
       "name": {
@@ -1299,7 +1300,7 @@
         "hi": "अनुभव किए गए और सौंपे गए लिंग के बीच स्पष्ट असंगति"
       },
       "icd11Chapter": "Chapter 17: Conditions related to sexual health",
-      "mappingNote": "ICD gender incongruence (HA60) is a different construct from DSM gender dysphoria and does not require the same distress/impairment criterion; it sits outside Chapter 06."
+      "mappingNote": "ICD-11 codes by life stage: Gender incongruence of adolescence or adulthood is HA60; gender incongruence of childhood is HA61; unspecified is HA6Z (Appendix A §12.2). ICD gender incongruence is a different construct from DSM gender dysphoria and does not require the same distress/impairment criterion; it sits outside Chapter 06. Gender diversity alone is not a mental disorder."
     },
     "dissociative": {
       "name": {
@@ -2484,6 +2485,7 @@
       "consent.continue": "Continue",
       "context.title": "Patient Information",
       "context.age": "Age Group",
+      "context.age.error": "Please select an age group to continue.",
       "context.select": "Select...",
       "context.age.pediatric": "Child (under 12)",
       "context.age.adolescent": "Adolescent (12-17)",
@@ -2536,6 +2538,7 @@
       "consent.continue": "जारी रखें",
       "context.title": "रोगी जानकारी",
       "context.age": "आयु वर्ग",
+      "context.age.error": "कृपया जारी रखने के लिए आयु समूह चुनें।",
       "context.select": "चुनें...",
       "context.age.pediatric": "बच्चा (12 वर्ष से कम)",
       "context.age.adolescent": "किशोर (12-17)",
