@@ -50,9 +50,31 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 let failures = 0;
 function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name); if (!cond) failures++; }
 
+// jsdom does not implement window.scrollTo; stub it so we can assert calls.
+const scrollCalls = [];
+window.scrollTo = (...args) => scrollCalls.push(args);
+
 (async () => {
   await sleep(300);
   check('stage0 active on load', document.getElementById('stage-0').classList.contains('active'));
+
+  // --- Sequential gating: next states must NOT load before Continue ---
+  check('stage 1 hidden before consent Continue', !document.getElementById('stage-1').classList.contains('active'));
+  check('stage 2 hidden before domains Continue', !document.getElementById('stage-2').classList.contains('active'));
+  check('stage 3 hidden before scales Continue', !document.getElementById('stage-3').classList.contains('active'));
+  check('stage 4 hidden before results Continue', !document.getElementById('stage-4').classList.contains('active'));
+
+  // Note: scroll-to-top is asserted after the first real consent Continue below.
+  // Failed gate: age group missing at stage 1 -> alert shown, stage 2 not revealed.
+  document.getElementById('stage-1').classList.add('active'); // simulate revealed state for gate test
+  const ctxForm = document.getElementById('context-form');
+  document.getElementById('age-group').value = '';
+  ctxForm.dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+  await sleep(50);
+  const ageErr = document.getElementById('context-age-error');
+  check('missing age group shows inline error', ageErr && !ageErr.classList.contains('hidden'));
+  check('failed gate keeps stage 2 hidden', !document.getElementById('stage-2').classList.contains('active'));
+  document.getElementById('stage-1').classList.remove('active'); // restore pre-consent state
 
   const consentBtn = document.getElementById('consent-btn');
   check('consent button disabled initially', consentBtn.disabled === true);
@@ -62,6 +84,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   consentBtn.click();
   await sleep(50);
   check('advanced to stage 1 (context)', document.getElementById('stage-1').classList.contains('active'));
+  check('scroll-to-top fired on consent Continue', scrollCalls.length >= 1 && scrollCalls[scrollCalls.length - 1][0] === 0 && scrollCalls[scrollCalls.length - 1][1] === 0);
 
   document.getElementById('age-group').value = 'adult';
   document.getElementById('visit-reason').value = 'feeling low lately';
