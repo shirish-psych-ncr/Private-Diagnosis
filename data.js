@@ -552,3 +552,113 @@ const CLINICAL_DATA = {
         }
     }
 };
+
+const I18N = {
+    en: {
+        "app.title": "Clinical Pre-Consultation Screening",
+        "app.disclaimer": "This tool does not provide a diagnosis. Results are for clinician review only. All data is cleared when you close this page.",
+        "stage.consent": "Consent", "stage.context": "Context", "stage.domains": "Domains", "stage.scales": "Scales", "stage.results": "Results",
+        "consent.title": "Welcome", "consent.purpose": "This screening tool helps prepare for your clinical consultation by collecting information about your symptoms.",
+        "consent.privacy": "Your responses are stored only in your browser's temporary memory. Nothing is sent to any server. Data is destroyed when you close this tab.",
+        "consent.agree": "I understand and agree to proceed", "consent.continue": "Continue",
+        "context.title": "Patient Information", "context.age": "Age Group", "context.select": "Select...",
+        "context.age.pediatric": "Child (under 12)", "context.age.adolescent": "Adolescent (12-17)", "context.age.adult": "Adult (18-64)", "context.age.older": "Older Adult (65+)",
+        "context.reason": "Reason for Visit", "context.continue": "Continue",
+        "domains.title": "Symptom Domains", "domains.subtitle": "Select the areas you would like to screen.", "domains.continue": "Continue to Assessments",
+        "scales.title": "Clinical Assessments", "scales.finish": "Finish & View Results",
+        "results.title": "Summary Report", "results.print": "Download PDF Report", "results.clear": "Clear All Data & Restart",
+        "safety.title": "Important Safety Information", "safety.message": "Based on your responses, we recommend seeking immediate support.",
+        "safety.emergency": "Emergency:", "safety.emergency_num": "Call local emergency services (e.g., 112)",
+        "safety.helpline": "Helpline:", "safety.helpline_num": "Kirane (Mental Health): 1800-599-0019", "safety.close": "I Understand",
+        "footer.text": "Session-only screening tool. No data is stored or transmitted."
+    },
+    hi: {
+        "app.title": "नैदानिक पूर्व-परामर्श स्क्रीनिंग",
+        "app.disclaimer": "यह उपकरण निदान प्रदान नहीं करता है। परिणाम केवल चिकित्सक समीक्षा के लिए हैं। इस पृष्ठ को बंद करने पर सभी डेटा साफ़ हो जाता है।",
+        "stage.consent": "सहमति", "stage.context": "संदर्भ", "stage.domains": "डोमेन", "stage.scales": "पैमाने", "stage.results": "परिणाम",
+        "consent.title": "स्वागत है", "consent.purpose": "यह स्क्रीनिंग उपकरण आपके लक्षणों के बारे में जानकारी एकत्र करके नैदानिक परामर्श की तैयारी में मदद करता है।",
+        "consent.privacy": "आपकी प्रतिक्रियाएं केवल आपके ब्राउज़र की अस्थायी मेमोरी में संग्रहीत होती हैं। कुछ भी किसी सर्वर पर नहीं भेजा जाता है। इस टैब को बंद करने पर डेटा नष्ट हो जाता है।",
+        "consent.agree": "मैं समझता हूं और आगे बढ़ने के लिए सहमत हूं", "consent.continue": "जारी रखें",
+        "context.title": "रोगी जानकारी", "context.age": "आयु वर्ग", "context.select": "चुनें...",
+        "context.age.pediatric": "बच्चा (12 वर्ष से कम)", "context.age.adolescent": "किशोर (12-17)", "context.age.adult": "वयस्क (18-64)", "context.age.older": "वृद्ध वयस्क (65+)",
+        "context.reason": "आगमन का कारण", "context.continue": "जारी रखें",
+        "domains.title": "लक्षण डोमेन", "domains.subtitle": "उन क्षेत्रों का चयन करें जिनकी आप स्क्रीनिंग करना चाहते हैं।", "domains.continue": "मूल्यांकन पर जाएं",
+        "scales.title": "नैदानिक मूल्यांकन", "scales.finish": "समाप्त करें और परिणाम देखें",
+        "results.title": "सारांश रिपोर्ट", "results.print": "PDF रिपोर्ट डाउनलोड करें", "results.clear": "सभी डेटा साफ़ करें और पुनः आरंभ करें",
+        "safety.title": "महत्वपूर्ण सुरक्षा जानकारी", "safety.message": "आपकी प्रतिक्रियाओं के आधार पर, हम तुरंत सहायता लेने की सलाह देते हैं।",
+        "safety.emergency": "आपातकालीन:", "safety.emergency_num": "स्थानीय आपातकालीन सेवाओं पर कॉल करें (उदा. 112)",
+        "safety.helpline": "हेल्पलाइन:", "safety.helpline_num": "किरणे (मानसिक स्वास्थ्य): 1800-599-0019", "safety.close": "मैं समझता हूं",
+        "footer.text": "केवल सत्र-आधारित स्क्रीनिंग उपकरण। कोई डेटा संग्रहीत या प्रसारित नहीं होता है।"
+    }
+};
+
+const CLINICAL_DATA = {
+    domains: [
+        { id: 'mood', name: { en: 'Mood & Depression', hi: 'मूड और अवसाद' }, tier: 1, scales: ['phq9'] },
+        { id: 'anxiety', name: { en: 'Anxiety', hi: 'चिंता' }, tier: 1, scales: ['gad7'] },
+        { id: 'neurodevelopmental', name: { en: 'Attention & Behavior (Pediatric/Adolescent)', hi: 'ध्यान और व्यवहार (बाल/किशोर)' }, tier: 2, scales: ['vadrs'] }
+    ],
+    scales: {
+        phq9: {
+            id: 'phq9', name: { en: 'Patient Health Questionnaire-9', hi: 'पेशेंट हेल्थ क्वेश्चनnaire-9' },
+            type: 'list', targetAge: ['adult', 'adolescent', 'older'],
+            questions: [
+                { id: 'p1', text: { en: 'Little interest or pleasure in doing things', hi: 'चीजों को करने में थोड़ी रुचि या आनंद' }, options: [{v:0, en:'Not at all', hi:'बिल्कुल नहीं'}, {v:1, en:'Several days', hi:'कई दिन'}, {v:2, en:'More than half the days', hi:'आधे से अधिक दिन'}, {v:3, en:'Nearly every day', hi:'लगभग हर दिन'}] },
+                { id: 'p2', text: { en: 'Feeling down, depressed, or hopeless', hi: 'उदास, अवसादग्रस्त, या निराश महसूस करना' }, options: [{v:0, en:'Not at all', hi:'बिल्कुल नहीं'}, {v:1, en:'Several days', hi:'कई दिन'}, {v:2, en:'More than half the days', hi:'आधे से अधिक दिन'}, {v:3, en:'Nearly every day', hi:'लगभग हर दिन'}] },
+                { id: 'p9', text: { en: 'Thoughts that you would be better off dead, or of hurting yourself', hi: 'विचार कि आप मर जाएं तो बेहतर होगा, या खुद को नुकसान पहुंचाने के' }, options: [{v:0, en:'Not at all', hi:'बिल्कुल नहीं'}, {v:1, en:'Several days', hi:'कई दिन'}, {v:2, en:'More than half the days', hi:'आधे से अधिक दिन'}, {v:3, en:'Nearly every day', hi:'लगभग हर दिन'}], safety: true }
+            ]
+        },
+        gad7: {
+            id: 'gad7', name: { en: 'Generalized Anxiety Disorder-7', hi: 'सामान्यीकृत चिंता विकार-7' },
+            type: 'list', targetAge: ['adult', 'adolescent', 'older'],
+            questions: [
+                { id: 'g1', text: { en: 'Feeling nervous, anxious, or on edge', hi: 'घबराहट, चिंता, या बेचैन महसूस करना' }, options: [{v:0, en:'Not at all', hi:'बिल्कुल नहीं'}, {v:1, en:'Several days', hi:'कई दिन'}, {v:2, en:'More than half the days', hi:'आधे से अधिक दिन'}, {v:3, en:'Nearly every day', hi:'लगभग हर दिन'}] },
+                { id: 'g2', text: { en: 'Not being able to stop or control worrying', hi: 'चिंता को रोकने या नियंत्रित करने में असमर्थ' }, options: [{v:0, en:'Not at all', hi:'बिल्कुल नहीं'}, {v:1, en:'Several days', hi:'कई दिन'}, {v:2, en:'More than half the days', hi:'आधे से अधिक दिन'}, {v:3, en:'Nearly every day', hi:'लगभग हर दिन'}] }
+            ]
+        },
+        vadrs: {
+            id: 'vadrs', name: { en: 'Vanderbilt ADHD Diagnostic Rating Scale (VADRS)', hi: 'वैंडरबिल्ट एडीएचडी डायग्नोस्टिक रेटिंग स्केल' },
+            type: 'matrix', targetAge: ['pediatric', 'adolescent'],
+            parts: [
+                {
+                    id: 'symptoms', name: { en: 'Part 1: Symptoms', hi: 'भाग 1: लक्षण' },
+                    questions: [
+                        // INATTENTION SUBSCALE (Representative subset)
+                        { id: 'v1', text: { en: 'Does not pay attention to details or makes careless mistakes', hi: 'विवरणों पर ध्यान नहीं देता या लापरवाही से गलतियां करता है' } },
+                        { id: 'v2', text: { en: 'Has difficulty keeping attention to what needs to be done', hi: 'जो करने की आवश्यकता है उस पर ध्यान रखने में कठिनाई होती है' } },
+                        { id: 'v3', text: { en: 'Does not seem to listen when spoken to directly', hi: 'सीधे बात करने पर सुनता नहीं प्रतीत होता' } },
+                        { id: 'v4', text: { en: 'Does not follow through on instructions and fails to finish activities', hi: 'निर्देशों का पालन नहीं करता और गतिविधियों को पूरा करने में विफल रहता है' } },
+                        { id: 'v5', text: { en: 'Has difficulty organizing tasks and activities', hi: 'कार्यों और गतिविधियों को व्यवस्थित करने में कठिनाई होती है' } },
+                        { id: 'v6', text: { en: 'Avoids tasks that require ongoing mental effort', hi: 'ऐसे कार्यों से बचता है जिनमें निरंतर मानसिक प्रयास की आवश्यकता होती है' } },
+                        { id: 'v7', text: { en: 'Loses things necessary for tasks or activities', hi: 'कार्यों या गतिविधियों के लिए आवश्यक चीजें खो देता है' } },
+                        { id: 'v8', text: { en: 'Is easily distracted by extraneous stimuli', hi: 'बाहरी उत्तेजनाओं से आसानी से विचलित हो जाता है' } },
+                        { id: 'v9', text: { en: 'Is forgetful in daily activities', hi: 'दैनिक गतिविधियों में भूलक्कड़ है' } },
+                        // PERFORMANCE SUBSCALE (Representative subset)
+                        { id: 'v48', text: { en: 'Overall school performance', hi: 'समग्र स्कूल प्रदर्शन' }, isPerformance: true },
+                        { id: 'v49', text: { en: 'Reading', hi: 'पठन' }, isPerformance: true },
+                        { id: 'v50', text: { en: 'Relationship with parents', hi: 'माता-पिता के साथ संबंध' }, isPerformance: true }
+                        // NOTE: Paste remaining VADRS questions (10-47, 51-55) here following the exact same {id, text} structure.
+                    ]
+                }
+            ],
+            matrixOptions: [
+                { v: 0, en: 'Never', hi: 'कभी नहीं' },
+                { v: 1, en: 'Occasionally', hi: 'कभी-कभी' },
+                { v: 2, en: 'Often', hi: 'अक्सर' },
+                { v: 3, en: 'Very Often', hi: 'बहुत अक्सर' }
+            ],
+            performanceOptions: [
+                { v: 1, en: 'Excellent', hi: 'उत्कृष्ट' },
+                { v: 2, en: 'Above Average', hi: 'औसत से ऊपर' },
+                { v: 3, en: 'Average', hi: 'औसत' },
+                { v: 4, en: 'Somewhat of a Problem', hi: 'थोड़ी समस्या' },
+                { v: 5, en: 'Problematic', hi: 'समस्याग्रस्त' }
+            ]
+        }
+    },
+    disorders: {
+        depression_mdd: { name: { en: 'Major Depressive Disorder', hi: 'प्रमुख अवसादग्रस्तता विकार' }, tier: 1, dsm5: 'Major Depressive Disorder', icd11: '6A70' },
+        anxiety_gad: { name: { en: 'Generalized Anxiety Disorder', hi: 'सामान्यीकृत चिंता विकार' }, tier: 1, dsm5: 'Generalized Anxiety Disorder', icd11: '6B02' },
+        neuro_adhd: { name: { en: 'Attention-Deficit/Hyperactivity Disorder', hi: 'ध्यान-घाटा/अतिसक्रियता विकार' }, tier: 2, dsm5: 'ADHD', icd11: '6A05' }
+    }
+};
