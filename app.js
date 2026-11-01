@@ -214,7 +214,14 @@
             section.appendChild(help);
 
             if (scaleId && CLINICAL_DATA.scales[scaleId]) {
-                renderMatrix(section, CLINICAL_DATA.scales[scaleId]);
+                const scale = CLINICAL_DATA.scales[scaleId];
+                if (scale.directions) {
+                    const dir = document.createElement('p');
+                    dir.className = 'scale-directions';
+                    dir.textContent = L(scale.directions);
+                    section.appendChild(dir);
+                }
+                renderMatrix(section, scale, scaleId);
             } else {
                 renderList(section, domain);
             }
@@ -254,7 +261,8 @@
     }
 
     /** Sticky-column matrix tables mirroring clinical standards (e.g., VADRS). */
-    function renderMatrix(section, scale) {
+    function renderMatrix(section, scale, scaleId) {
+        scaleId = scaleId || scale.id;
         scale.parts.forEach(part => {
             const partTitle = document.createElement('h4');
             partTitle.className = 'matrix-part-title';
@@ -286,18 +294,19 @@
             });
             table.appendChild(thead);
 
-            part.questions.forEach(q => {
+            part.questions.forEach((q, idx) => {
                 const tr = document.createElement('tr');
+                if (q.safety) tr.className = 'safety-item';
                 const rowHead = document.createElement('th');
                 rowHead.scope = 'row';
                 rowHead.className = 'sticky-col row-label';
-                rowHead.textContent = L(q.text);
+                rowHead.textContent = (idx + 1) + '. ' + L(q.text);
                 rowHead.id = 'mrow-' + q.id;
                 tr.appendChild(rowHead);
                 cols.forEach(c => {
                     const td = document.createElement('td');
                     td.className = 'matrix-cell';
-                    const key = 'vadrs:' + q.id;
+                    const key = scaleId + ':' + q.id;
                     const input = document.createElement('input');
                     input.type = 'radio';
                     input.name = key;
@@ -306,7 +315,7 @@
                     input.setAttribute('aria-labelledby', 'mrow-' + q.id);
                     input.setAttribute('aria-label', L(q.text) + ': ' + L(c.label));
                     if (state.responses[key] === c.v) input.checked = true;
-                    input.addEventListener('change', () => onAnswer(key, c.v, { id: q.id, safety: false }, { id: 'vadrs' }));
+                    input.addEventListener('change', () => onAnswer(key, c.v, { id: q.id, safety: !!q.safety }, { id: scaleId }));
                     td.appendChild(input);
                     tr.appendChild(td);
                 });
@@ -384,13 +393,35 @@
                 const vadrs = CLINICAL_DATA.scales.vadrs;
                 const sc = vadrs.scoring;
                 const count = (ids, min) => ids.filter(id => (state.responses['vadrs:' + id] || 0) >= min).length;
+                const sum = (ids) => ids.reduce((t, id) => t + (state.responses['vadrs:' + id] || 0), 0);
                 const inat = count(sc.inattention.ids, sc.inattention.minSymptomValue);
                 const hyp = count(sc.hyperactivity.ids, sc.hyperactivity.minSymptomValue);
+                const odd = count(sc.oppositionalDefiant.ids, sc.oppositionalDefiant.minSymptomValue);
+                const cond = count(sc.conduct.ids, sc.conduct.minSymptomValue);
+                const anxdep = count(sc.anxietyDepression.ids, sc.anxietyDepression.minSymptomValue);
                 const perfImpaired = count(sc.performance.ids, sc.performance.minImpairedValue);
-                const positive = (inat >= sc.inattention.thresholdCount || hyp >= sc.hyperactivity.thresholdCount) && perfImpaired >= sc.performance.requiresImpairedCount;
+                const totalSymptomScore = sum(sc.inattention.ids.concat(sc.hyperactivity.ids));
+                const perfValues = sc.performance.ids.map(id => state.responses['vadrs:' + id]).filter(v => v !== undefined);
+                const avgPerf = perfValues.length ? (perfValues.reduce((a, b) => a + b, 0) / perfValues.length) : null;
+                const impairedGate = perfImpaired >= sc.performance.requiresImpairedCount;
+
+                const positive = (inat >= sc.inattention.thresholdCount || hyp >= sc.hyperactivity.thresholdCount) && impairedGate;
                 if (positive) sc.disordersOnPositive.forEach(d => addFlag(d, 'VADRS'));
+                if (odd >= sc.oppositionalDefiant.thresholdCount && impairedGate)
+                    (sc.oppositionalDefiant.disordersOnPositive || []).forEach(d => addFlag(d, 'VADRS'));
+                if (cond >= sc.conduct.thresholdCount && impairedGate)
+                    (sc.conduct.disordersOnPositive || []).forEach(d => addFlag(d, 'VADRS'));
+
                 instrumentResults.push({
-                    name: 'VADRS', score: 'IA ' + inat + '/9 · HI ' + hyp + '/8 · Perf ' + perfImpaired + '/6',
+                    name: 'VADRS',
+                    score: 'IA ' + inat + '/' + sc.inattention.ids.length +
+                           ' · HI ' + hyp + '/' + sc.hyperactivity.ids.length +
+                           ' · ODD ' + odd + '/' + sc.oppositionalDefiant.ids.length +
+                           ' · CD ' + cond + '/' + sc.conduct.ids.length +
+                           ' · Anx/Dep ' + anxdep + '/' + sc.anxietyDepression.ids.length +
+                           ' · Perf ' + perfImpaired + '/' + sc.performance.ids.length +
+                           ' | Total symptom score 1–18: ' + totalSymptomScore +
+                           (avgPerf !== null ? ' | Avg performance: ' + avgPerf.toFixed(2) : ''),
                     severity: positive ? (state.lang === 'hi' ? 'सकारात्मक स्क्रीन' : 'Positive screen') : (state.lang === 'hi' ? 'ऋणात्मक' : 'Negative'),
                     disorders: positive ? sc.disordersOnPositive : []
                 });
@@ -563,6 +594,40 @@
             styles: { fontSize: 9 }
         });
         y = doc.lastAutoTable.finalY + 10;
+
+        // Vanderbilt "For Office Use Only" totals (mirrors the NICHQ scoring sheet)
+        const vadrsResult = r.instrumentResults.find(x => x.name === 'VADRS');
+        if (vadrsResult) {
+            const sc = CLINICAL_DATA.scales.vadrs.scoring;
+            const cnt = (ids, min) => ids.filter(id => (state.responses['vadrs:' + id] || 0) >= min).length;
+            doc.setFontSize(12);
+            doc.text('VADRS — For Office Use Only', 14, y); y += 2;
+            doc.autoTable({
+                startY: y,
+                head: [['Scoring Field', 'Value']],
+                body: [
+                    ['Total scored 2 or 3 in questions 1-9 (inattention)', String(cnt(sc.inattention.ids, sc.inattention.minSymptomValue))],
+                    ['Total scored 2 or 3 in questions 10-18 (hyperactivity/impulsivity)', String(cnt(sc.hyperactivity.ids, sc.hyperactivity.minSymptomValue))],
+                    ['Total symptom score for questions 1-18', String(sc.inattention.ids.concat(sc.hyperactivity.ids).reduce((t, id) => t + (state.responses['vadrs:' + id] || 0), 0))],
+                    ['Total scored 2 or 3 in questions 19-26 (oppositional-defiant)', String(cnt(sc.oppositionalDefiant.ids, sc.oppositionalDefiant.minSymptomValue))],
+                    ['Total scored 2 or 3 in questions 27-40 (conduct)', String(cnt(sc.conduct.ids, sc.conduct.minSymptomValue))],
+                    ['Total scored 2 or 3 in questions 41-47 (anxiety/depression)', String(cnt(sc.anxietyDepression.ids, sc.anxietyDepression.minSymptomValue))],
+                    ['Total scored 4 or 5 in performance questions 48-55', String(cnt(sc.performance.ids, sc.performance.minImpairedValue))],
+                    ['Average performance score', (() => {
+                        const vals = sc.performance.ids.map(id => state.responses['vadrs:' + id]).filter(v => v !== undefined);
+                        return vals.length ? (vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(2) : '—';
+                    })()]
+                ],
+                theme: 'grid',
+                styles: { fontSize: 8 }
+            });
+            y = doc.lastAutoTable.finalY + 10;
+            doc.setFontSize(8);
+            doc.setTextColor(120);
+            doc.text('Scales should not be used alone to make a diagnosis; DSM criteria require 6+ of 9 core symptoms (parent form items 1-9 or 10-18) plus impairment (score 4 or 5 on any performance item).', 14, y);
+            doc.setTextColor(0);
+            y += 10;
+        }
 
         doc.setFontSize(12);
         doc.text('Differential Considerations (hypothesis-generating only)', 14, y); y += 2;

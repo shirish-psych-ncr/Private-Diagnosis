@@ -488,6 +488,8 @@ footer { background: #f0f4f8; padding: 1.5rem; text-align: center; color: #666; 
 .scale-section{margin-bottom:2.5rem;padding:1.25rem;border-left:4px solid var(--primary-color);background:var(--bg-secondary);border-radius:0 8px 8px 0}
 .scale-heading{font-size:1.2rem;margin-bottom:.25rem}
 .scale-timeframe{color:var(--text-secondary);font-style:italic;font-size:.9rem;margin-bottom:1rem}
+.scale-directions{color:var(--text-secondary);font-size:.9rem;margin-bottom:1rem;line-height:1.5}
+.matrix-table tr.safety-item th.row-label{border-left:3px solid #b91c1c}
 .question-block{border:none;padding:0;margin:0 0 1.25rem}
 .question-block legend{font-weight:500;margin-bottom:.5rem;line-height:1.5;padding:0}
 .radio-row{display:flex;align-items:center;gap:.6rem;padding:.3rem 0}
