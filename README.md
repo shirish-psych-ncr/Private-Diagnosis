@@ -6,6 +6,8 @@ See `WHITEPAPER.md` for the complete technical and clinical specification.
 
 ## Files
 - `index.html` — single-page app shell with strict Content Security Policy (no inline scripts, no third-party trackers)
+- `about.html`, `privacy.html`, `security.html`, `contact.html`, `404.html` — informational pages sharing the same CSP discipline and site chrome
+- `site.css` / `site.js` — styling and progressive enhancements (nav highlight, mobile menu toggle, on-page topic search) for the informational pages only
 - `app.js` — vanilla JS engine: ephemeral state model, adaptive two-stage routing, scoring, safety/crisis override, EN/HI live language switching, client-side PDF generation
 - `data.json` — decoupled clinical logic: 7 symptom domains, 22 validated instruments (PHQ-9, GAD-7, PCL-5, VADRS, ASRS-v1.1, CAARMS...), 31-disorder Tier 1-5 DSM-5-TR / ICD-11 harmonized database, crisis resources, bilingual dictionary
 - `styles.css` — responsive, WCAG 2.1 AA-oriented styling with high-contrast mode

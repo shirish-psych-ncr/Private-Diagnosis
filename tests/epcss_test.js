@@ -1,7 +1,7 @@
 /* Headless integration test for EPCSS using jsdom. Run: node tests/epcss_test.js */
 const fs = require('fs');
 const path = require('path');
-const { JSDOM } = require('/tmp/node_modules/jsdom');
+const { JSDOM } = require('jsdom');
 
 const ROOT = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8')

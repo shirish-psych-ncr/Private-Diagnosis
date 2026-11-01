@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <title>Privacy — EPCSS</title>
+    <meta name="description" content="EPCSS privacy policy: zero-collection, zero-transmission, zero-persistence by architecture.">
+    <link rel="stylesheet" href="site.css">
+    <script defer src="site.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="brand" href="index.html">EPCSS</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Screening</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page">
+        <h1>Privacy Policy</h1>
+        <p class="lede">EPCSS has no personal data to protect because it never collects any. Privacy here is an architectural property, not a promise.</p>
+
+        <label for="page-search">Search topics on this page</label>
+        <input id="page-search" type="search" autocomplete="off">
+
+        <ul class="topic-list">
+            <li data-searchable><strong>Zero collection</strong> We do not ask for your name, contact details, government ID, location, or any identifying information. The screening collects only symptom responses and coarse context (age group, reason for visit).</li>
+            <li data-searchable><strong>Zero transmission</strong> There is no backend, no API, no analytics, and no telemetry. Your browser only ever downloads static files. A strict Content Security Policy (<code>connect-src 'self'</code>) blocks any cross-origin data requests.</li>
+            <li data-searchable><strong>Zero persistence</strong> Responses live in volatile memory only. localStorage, sessionStorage, cookies, IndexedDB, and service workers are not used. Closing the tab destroys all clinical data irreversibly.</li>
+            <li data-searchable><strong>Your exports are yours</strong> The PDF report is generated entirely on your device. Where you save or share it is entirely your choice; we never see it.</li>
+            <li data-searchable><strong>No tracking</strong> No third-party scripts other than the vetted jsPDF CDN libraries used solely for offline-capable PDF generation, which receive no user data.</li>
+            <li data-searchable><strong>Data subject rights</strong> Because nothing is stored anywhere, there is nothing for us to access, correct, disclose, or delete. You can verify this with your browser's network panel.</li>
+            <li data-searchable><strong>Crisis resources</strong> Safety-related information shown by the app is static, localized text; contacting a helpline is done by you, directly, and is invisible to this application.</li>
+            <li data-searchable><strong>Changes</strong> Any change to this architecture would require a visible code change in the public repository, auditable via version control.</li>
+        </ul>
+
+        <div class="callout">
+            If you use a shared or public computer, close the tab after finishing your session to destroy all answers from memory.
+        </div>
+
+        <div class="cta-row">
+            <a class="btn-primary" href="index.html">Start screening</a>
+            <a class="btn-secondary" href="security.html">Security model</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>EPCSS — ephemeral, on-device screening. © <span id="year">2026</span>. Not a medical device.</p>
+    </footer>
+</body>
+</html>

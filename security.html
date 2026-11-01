@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <title>Security — EPCSS</title>
+    <meta name="description" content="How EPCSS's threat model and defenses work: CSP, ephemerality, supply-chain restraint.">
+    <link rel="stylesheet" href="site.css">
+    <script defer src="site.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="brand" href="index.html">EPCSS</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Screening</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page">
+        <h1>Security Model</h1>
+        <p class="lede">The design goal is simple: shrink the attack surface until there is nothing valuable to attack.</p>
+
+        <label for="page-search">Search topics on this page</label>
+        <input id="page-search" type="search" autocomplete="off">
+
+        <ul class="topic-list">
+            <li data-searchable><strong>Content Security Policy</strong> Every page ships a strict CSP meta tag: scripts only from same origin or two vetted cdnjs libraries, no inline scripts, no eval-style injection paths, <code>object-src 'none'</code>, <code>frame-ancestors 'none'</code> to defeat clickjacking.</li>
+            <li data-searchable><strong>No exfiltration channel</strong> <code>connect-src 'self'</code> means the browser refuses any fetch/XHR/WebSocket to other origins. Malicious injected code still cannot phone home.</li>
+            <li data-searchable><strong>Ephemeral state</strong> Clinical answers exist only in a JavaScript object in RAM. There is no at-rest data to steal from disk, and no session tokens or credentials anywhere in the system.</li>
+            <li data-searchable><strong>Minimal supply chain</strong> Runtime dependencies are limited to jsPDF and AutoTable from cdnjs, pinned by URL with integrity-verifiable versioned paths. All other logic is first-party vanilla JS.</li>
+            <li data-searchable><strong>Static hosting</strong> With no server-side code, databases, or admin panels, there is no remote infrastructure to compromise — the deployment surface is a set of read-only files.</li>
+            <li data-searchable><strong>Input handling</strong> All rendered content goes through DOM APIs (textContent), not innerHTML interpolation, so responses typed by users cannot become script.</li>
+            <li data-searchable><strong>Auditable changes</strong> Clinical logic lives in one data file; every modification is a version-controlled commit attributable to a reviewer.</li>
+            <li data-searchable><strong>Residual risks</strong> Trust still depends on your browser, the hosting provider, and TLS certificate issuance. Use up-to-date browsers and verify the site's origin before answering.</li>
+        </ul>
+
+        <div class="callout">
+            Found a vulnerability? See the <a href="contact.html">contact page</a> for responsible disclosure.
+        </div>
+
+        <div class="cta-row">
+            <a class="btn-primary" href="index.html">Start screening</a>
+            <a class="btn-secondary" href="privacy.html">Privacy policy</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>EPCSS — ephemeral, on-device screening. © <span id="year">2026</span>. Not a medical device.</p>
+    </footer>
+</body>
+</html>

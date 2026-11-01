@@ -1,0 +1,192 @@
+/* Shared chrome for the informational pages (about, privacy, security, contact, 404).
+ * Kept separate from styles.css so the clinical app shell stays untouched. */
+.site-header {
+    background: #0f2a43;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+}
+
+.site-header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.brand:hover,
+.brand:focus {
+    text-decoration: underline;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.35rem 0.7rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    color: #d7e3ef;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: #fff;
+}
+
+.site-nav a.active {
+    color: #fff;
+    border-bottom-color: #4da3ff;
+}
+
+.page {
+    max-width: 960px;
+    margin: 2rem auto 3rem;
+    padding: 0 1.5rem;
+    line-height: 1.65;
+    color: #1c2733;
+}
+
+.page h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.page h2 {
+    margin-top: 2rem;
+    font-size: 1.35rem;
+}
+
+.page .lede {
+    font-size: 1.1rem;
+    color: #45566a;
+}
+
+.topic-list {
+    list-style: none;
+    padding: 0;
+}
+
+.topic-list li {
+    padding: 0.85rem 1rem;
+    border: 1px solid #dbe3ec;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+    background: #fbfcfe;
+}
+
+.topic-list li strong {
+    display: block;
+    margin-bottom: 0.15rem;
+}
+
+.search-hidden {
+    display: none;
+}
+
+.callout {
+    border-left: 4px solid #4da3ff;
+    background: #eef5fd;
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.25rem 0;
+}
+
+.cta-row {
+    margin: 2rem 0;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #0f2a43;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #17405f;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #0f2a43;
+    border: 1px solid #0f2a43;
+}
+
+.site-footer {
+    background: #0f2a43;
+    color: #d7e3ef;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: #9cc7ee;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    background: #fff;
+    color: #0f2a43;
+    padding: 0.5rem 1rem;
+    z-index: 10;
+}
+
+@media (max-width: 720px) {
+    .nav-toggle {
+        display: inline-block;
+    }
+
+    .site-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding-top: 0.75rem;
+    }
+
+    .site-nav ul.open {
+        display: flex;
+    }
+}
