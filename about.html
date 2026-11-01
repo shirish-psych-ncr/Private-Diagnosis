@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <title>About — EPCSS</title>
+    <meta name="description" content="What EPCSS is, how it works, and what it deliberately does not do.">
+    <link rel="stylesheet" href="site.css">
+    <script defer src="site.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="brand" href="index.html">EPCSS</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+            <nav id="primary-nav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Screening</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page">
+        <h1>About EPCSS</h1>
+        <p class="lede">EPCSS — Ephemeral Pre-Consultation Clinical Screening — is a zero-backend, zero-persistence intake aid that prepares structured information for a clinician before an appointment.</p>
+
+        <label for="page-search">Search topics on this page</label>
+        <input id="page-search" type="search" autocomplete="off">
+
+        <ul class="topic-list">
+            <li data-searchable><strong>What it is</strong> A static web application that walks you through consent, context, symptom domains, and validated clinical scales (PHQ-9, GAD-7, PCL-5, and others), then produces a summary you can export as a PDF for your clinician.</li>
+            <li data-searchable><strong>What it is not</strong> It is not a diagnostic instrument. It never returns a diagnosis and does not replace clinical judgment.</li>
+            <li data-searchable><strong>Ephemerality</strong> All answers live only in this browser tab's volatile memory. Closing the tab permanently destroys them. There is no server, no database, and no analytics.</li>
+            <li data-searchable><strong>Safety override</strong> If a response indicates possible distress or crisis, the app immediately surfaces localized crisis resources in a modal that cannot be bypassed silently.</li>
+            <li data-searchable><strong>Bilingual by design</strong> The full screening experience is available in English and हिंदी, and the language can be switched at any point without losing answers.</li>
+            <li data-searchable><strong>Open clinical logic</strong> Scoring rules, domains, instruments, and the disorder reference database are maintained in a single human-readable data file subject to version-control audit.</li>
+            <li data-searchable><strong>For clinicians</strong> The exported report includes scores, banding, and differential considerations formatted for professional review, kept behind an explicit toggle.</li>
+            <li data-searchable><strong>Technology</strong> Vanilla HTML, CSS, and JavaScript with strict Content Security Policy. No frameworks, no trackers, no third-party fonts.</li>
+        </ul>
+
+        <div class="callout">
+            Read the full technical and clinical specification in <code>WHITEPAPER.md</code> in the project repository.
+        </div>
+
+        <div class="cta-row">
+            <a class="btn-primary" href="index.html">Start screening</a>
+            <a class="btn-secondary" href="privacy.html">Privacy policy</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>EPCSS — ephemeral, on-device screening. © <span id="year">2026</span>. Not a medical device.</p>
+    </footer>
+</body>
+</html>

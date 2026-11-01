@@ -4,7 +4,7 @@
   "private": true,
   "description": "EPCSS - Ephemeral Pre-Consultation Clinical Screening System (static app + headless tests)",
   "scripts": {
-    "test": "node tests/epcss_test.js"
+    "test": "node tests/epcss_test.js && node tests/pages_test.js"
   },
   "dependencies": {
     "jsdom": "^29.1.1"
