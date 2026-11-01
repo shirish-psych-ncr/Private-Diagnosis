@@ -3,200 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Pre-Consultation Screening</title>
+    <!-- Content Security Policy: scripts only from vetted CDNs or same origin; no inline scripts,
+         no remote data exfiltration (connect-src 'none' blocks all XHR/fetch beacons except same-origin). -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com https://cdnjs.cloudflare.com; font-src https://cdn.jsdelivr.net https://fonts.gstatic.com https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <title>EPCSS — Ephemeral Pre-Consultation Clinical Screening</title>
+    <meta name="description" content="Zero-backend, zero-persistence pre-consultation clinical screening. All data stays in volatile memory and self-destructs when the tab closes.">
+    <!-- Tailwind CSS (utility layer) via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jsPDF + AutoTable for client-side clinician PDF generation -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#stage-container" data-i18n="a11y.skip">Skip to main content</a>
+
     <div id="app">
-        <header>
+        <header role="banner">
             <div class="header-content">
-                <h1 data-i18n="app.title">Clinical Pre-Consultation Screening</h1>
-                <div class="language-switcher">
-                    <button id="lang-en" class="active">English</button>
-                    <button id="lang-hi">हिंदी</button>
+                <div>
+                    <h1 data-i18n="app.title">Ephemeral Pre-Consultation Clinical Screening</h1>
+                    <p class="subtitle" data-i18n="app.subtitle">Zero-trust intake aid. Nothing leaves this device.</p>
+                </div>
+                <div class="header-controls">
+                    <button id="contrast-toggle" class="btn-icon" type="button" aria-pressed="false" data-i18n="app.contrast" title="Toggle high-contrast mode">A±</button>
+                    <div class="language-switcher" role="group" aria-label="Language">
+                        <button id="lang-en" class="active" type="button" aria-pressed="true">English</button>
+                        <button id="lang-hi" type="button" aria-pressed="false">हिंदी</button>
+                    </div>
                 </div>
             </div>
-            <div class="disclaimer" data-i18n="app.disclaimer">
-                This tool does not provide diagnosis. Results should be discussed with your clinician.
+            <div class="disclaimer" role="note">
+                <span data-i18n="app.disclaimer">This tool does not provide a diagnosis. Results are for clinician review only. All data lives only in this browser's memory and is destroyed when you close this tab.</span>
             </div>
         </header>
 
         <main>
-            <div class="progress-bar">
-                <div class="progress-step active" data-step="0">
-                    <span class="step-number">1</span>
-                    <span class="step-label" data-i18n="stage.consent">Consent</span>
-                </div>
-                <div class="progress-step" data-step="1">
-                    <span class="step-number">2</span>
-                    <span class="step-label" data-i18n="stage.context">Context</span>
-                </div>
-                <div class="progress-step" data-step="2">
-                    <span class="step-number">3</span>
-                    <span class="step-label" data-i18n="stage.symptoms">Symptoms</span>
-                </div>
-                <div class="progress-step" data-step="3">
-                    <span class="step-number">4</span>
-                    <span class="step-label" data-i18n="stage.tests">Tests</span>
-                </div>
-                <div class="progress-step" data-step="4">
-                    <span class="step-number">5</span>
-                    <span class="step-label" data-i18n="stage.results">Results</span>
-                </div>
-            </div>
-
-            <div id="stage-container">
-                <section id="stage-0" class="stage active">
-                    <h2 data-i18n="consent.title">Welcome</h2>
-                    <div class="consent-content">
-                        <p data-i18n="consent.purpose">This screening tool helps prepare for your clinical consultation by collecting information about your symptoms and experiences.</p>
-                        <p data-i18n="consent.privacy">Your responses are stored only in your browser session and are not transmitted to any server. All data is cleared when you close this page.</p>
-                        <p data-i18n="consent.limitations">This tool does not provide a diagnosis. The results are intended to guide your conversation with your clinician.</p>
-                        <div class="consent-checkbox">
-                            <input type="checkbox" id="consent-check">
-                            <label for="consent-check" data-i18n="consent.agree">I understand and agree to proceed</label>
-                        </div>
-                        <button id="consent-btn" class="btn-primary" disabled data-i18n="consent.continue">Continue</button>
-                    </div>
-                </section>
-
-                <section id="stage-1" class="stage">
-                    <h2 data-i18n="context.title">Patient Information</h2>
-                    <form id="context-form">
-                        <div class="form-group">
-                            <label data-i18n="context.age">Age Group</label>
-                            <select id="age-group" required>
-                                <option value="" data-i18n="context.select">Select...</option>
-                                <option value="pediatric" data-i18n="context.age.pediatric">Child (under 12)</option>
-                                <option value="adolescent" data-i18n="context.age.adolescent">Adolescent (12-17)</option>
-                                <option value="adult" data-i18n="context.age.adult">Adult (18-64)</option>
-                                <option value="older" data-i18n="context.age.older">Older Adult (65+)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label data-i18n="context.reason">Reason for Visit</label>
-                            <textarea id="visit-reason" rows="3" placeholder="Brief description of your concerns..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label data-i18n="context.medications">Current Medications (optional)</label>
-                            <textarea id="medications" rows="2"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label data-i18n="context.prior">Prior Diagnoses (optional)</label>
-                            <textarea id="prior-diagnoses" rows="2"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-primary" data-i18n="context.continue">Continue</button>
-                    </form>
-                </section>
-
-                <section id="stage-2" class="stage">
-                    <h2 data-i18n="symptoms.title">Symptom Screening</h2>
-                    <div id="symptom-domains"></div>
-                    <button id="symptoms-next" class="btn-primary" data-i18n="symptoms.continue">Continue</button>
-                </section>
-
-                <section id="stage-3" class="stage">
-                    <h2 data-i18n="tests.title">Suggested Assessments</h2>
-                    <div id="test-recommendations"></div>
-                    <button id="tests-next" class="btn-primary" data-i18n="tests.continue">View Results</button>
-                </section>
-
-                <section id="stage-4" class="stage">
-                    <h2 data-i18n="results.title">Summary Report</h2>
-                    <div id="report-content"></div>
-                    <div class="action-buttons">
-                        <button id="print-btn" class="btn-primary" data-i18n="results.print">Print Report</button>
-                        <button id="clear-btn" class="btn-secondary" data-i18n="results.clear">Clear All Data</button>
-                    </div>
-                </section>
-            </div>
-
-            <div id="safety-modal" class="modal hidden">
-                <div class="modal-content">
-                    <h2 data-i18n="safety.title">Important Safety Information</h2>
-                    <p data-i18n="safety.message">Based on your responses, we recommend seeking immediate support. Please contact:</p>
-                    <div class="crisis-resources">
-                        <p><strong>Emergency Services:</strong> Call your local emergency number</p>
-                        <p><strong>Crisis Hotline:</strong> Contact a mental health crisis line in your area</p>
-                    </div>
-                    <button id="safety-close" class="btn-primary" data-i18n="safety.close">I Understand</button>
-                </div>
-            </div>
-        </main>
-
-        <footer>
-            <p data-i18n="footer.text">Session-only screening tool. No data is stored or transmitted.</p>
-        </footer>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="data.js"></script>
-    <script src="i18n.js"></script>
-    <script src="app.js"></script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Pre-Consultation Screening</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- jsPDF and AutoTable for PDF generation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
-</head>
-<body>
-    <div id="app">
-        <header>
-            <div class="header-content">
-                <h1 data-i18n="app.title">Clinical Pre-Consultation Screening</h1>
-                <div class="language-switcher">
-                    <button id="lang-en" class="active" onclick="setLanguage('en')">English</button>
-                    <button id="lang-hi" onclick="setLanguage('hi')">हिंदी</button>
-                </div>
-            </div>
-            <div class="disclaimer" data-i18n="app.disclaimer">
-                This tool does not provide a diagnosis. Results are for clinician review only. All data is cleared when you close this page.
-            </div>
-        </header>
-
-        <main>
-            <div class="progress-bar">
+            <nav class="progress-bar" aria-label="Screening stages">
                 <div class="progress-step active" data-step="0"><span class="step-number">1</span><span class="step-label" data-i18n="stage.consent">Consent</span></div>
                 <div class="progress-step" data-step="1"><span class="step-number">2</span><span class="step-label" data-i18n="stage.context">Context</span></div>
                 <div class="progress-step" data-step="2"><span class="step-number">3</span><span class="step-label" data-i18n="stage.domains">Domains</span></div>
                 <div class="progress-step" data-step="3"><span class="step-number">4</span><span class="step-label" data-i18n="stage.scales">Scales</span></div>
                 <div class="progress-step" data-step="4"><span class="step-number">5</span><span class="step-label" data-i18n="stage.results">Results</span></div>
-            </div>
+            </nav>
 
             <div id="stage-container">
-                <!-- Stage 0: Consent -->
-                <section id="stage-0" class="stage active">
-                    <h2 data-i18n="consent.title">Welcome</h2>
+                <!-- Stage 0: Informed Consent -->
+                <section id="stage-0" class="stage active" aria-labelledby="consent-heading">
+                    <h2 id="consent-heading" data-i18n="consent.title">Welcome</h2>
                     <div class="consent-content">
-                        <p data-i18n="consent.purpose">This screening tool helps prepare for your clinical consultation by collecting information about your symptoms.</p>
-                        <p data-i18n="consent.privacy">Your responses are stored only in your browser's temporary memory. Nothing is sent to any server. Data is destroyed when you close this tab.</p>
+                        <p data-i18n="consent.purpose">This screening tool helps prepare for your clinical consultation by collecting structured information about your symptoms.</p>
+                        <p data-i18n="consent.privacy">Your responses are stored only in this browser's volatile memory. Nothing is ever sent to a server. All data is permanently destroyed when you close this tab.</p>
+                        <p data-i18n="consent.limitations">This is an intake aid, not a diagnostic instrument. It does not replace clinical judgment.</p>
                         <div class="consent-checkbox">
-                            <input type="checkbox" id="consent-check" onchange="toggleConsent()">
-                            <label for="consent-check" data-i18n="consent.agree">I understand and agree to proceed</label>
+                            <input type="checkbox" id="consent-check">
+                            <label for="consent-check" data-i18n="consent.agree">I understand that my data is ephemeral and agree to proceed</label>
                         </div>
-                        <button id="consent-btn" class="btn-primary" disabled onclick="nextStage()" data-i18n="consent.continue">Continue</button>
+                        <button id="consent-btn" class="btn-primary" type="button" disabled data-i18n="consent.continue">Continue</button>
                     </div>
                 </section>
 
-                <!-- Stage 1: Context -->
-                <section id="stage-1" class="stage">
-                    <h2 data-i18n="context.title">Patient Information</h2>
-                    <form id="context-form" onsubmit="event.preventDefault(); saveContext(); nextStage();">
+                <!-- Stage 1: Patient Context -->
+                <section id="stage-1" class="stage" aria-labelledby="context-heading">
+                    <h2 id="context-heading" data-i18n="context.title">Patient Context</h2>
+                    <p class="subtitle" data-i18n="context.note">No names, contact details, or government IDs are collected.</p>
+                    <form id="context-form">
                         <div class="form-group">
-                            <label data-i18n="context.age">Age Group</label>
+                            <label for="age-group" data-i18n="context.age">Age Group</label>
                             <select id="age-group" required>
                                 <option value="" data-i18n="context.select">Select...</option>
                                 <option value="pediatric" data-i18n="context.age.pediatric">Child (under 12)</option>
@@ -206,59 +81,70 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label data-i18n="context.reason">Reason for Visit</label>
+                            <label for="visit-reason" data-i18n="context.reason">Primary Reason for Visit</label>
                             <textarea id="visit-reason" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="medications" data-i18n="context.medications">Current Medications (optional)</label>
+                            <textarea id="medications" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="prior-diagnoses" data-i18n="context.prior">Prior Diagnoses (optional)</label>
+                            <textarea id="prior-diagnoses" rows="2"></textarea>
                         </div>
                         <button type="submit" class="btn-primary" data-i18n="context.continue">Continue</button>
                     </form>
                 </section>
 
-                <!-- Stage 2: Domains -->
-                <section id="stage-2" class="stage">
-                    <h2 data-i18n="domains.title">Symptom Domains</h2>
-                    <p class="subtitle" data-i18n="domains.subtitle">Select the areas you would like to screen.</p>
-                    <div id="domain-list"></div>
-                    <button class="btn-primary" onclick="generateScaleRecommendations()" data-i18n="domains.continue">Continue to Assessments</button>
+                <!-- Stage 2: Symptom Clustering -->
+                <section id="stage-2" class="stage" aria-labelledby="domains-heading">
+                    <h2 id="domains-heading" data-i18n="domains.title">Symptom Domains</h2>
+                    <p class="subtitle" data-i18n="domains.subtitle">Select all areas that resonate with your current experience. These selections determine which assessments are shown next.</p>
+                    <fieldset id="domain-list" class="domain-grid"></fieldset>
+                    <p id="domains-error" class="field-error hidden" role="alert" data-i18n="domains.error">Please select at least one domain.</p>
+                    <button id="domains-next" class="btn-primary" type="button" data-i18n="domains.continue">Continue to Assessments</button>
                 </section>
 
-                <!-- Stage 3: Scales -->
-                <section id="stage-3" class="stage">
-                    <h2 data-i18n="scales.title">Clinical Assessments</h2>
+                <!-- Stage 3: Clinical Assessments -->
+                <section id="stage-3" class="stage" aria-labelledby="scales-heading">
+                    <h2 id="scales-heading" data-i18n="scales.title">Clinical Assessments</h2>
+                    <p class="subtitle" data-i18n="scales.instruction">Answer every item. You can switch language at any time without losing your answers.</p>
                     <div id="scale-container"></div>
-                    <button class="btn-primary" onclick="calculateResults(); nextStage();" data-i18n="scales.finish">Finish & View Results</button>
+                    <p id="scales-error" class="field-error hidden" role="alert" data-i18n="scales.incomplete">Please complete all questions before continuing.</p>
+                    <button id="scales-finish" class="btn-primary" type="button" data-i18n="scales.finish">Finish &amp; View Results</button>
                 </section>
 
                 <!-- Stage 4: Results -->
-                <section id="stage-4" class="stage">
-                    <h2 data-i18n="results.title">Summary Report</h2>
-                    <div id="report-content"></div>
+                <section id="stage-4" class="stage" aria-labelledby="results-heading">
+                    <h2 id="results-heading" data-i18n="results.title">Summary</h2>
+                    <div id="patient-view"></div>
+                    <details id="clinician-details">
+                        <summary data-i18n="results.clinicianToggle">Clinician-facing detail (scores &amp; differential considerations)</summary>
+                        <div id="report-content"></div>
+                    </details>
                     <div class="action-buttons">
-                        <button class="btn-primary" onclick="generatePDF()" data-i18n="results.print">Download PDF Report</button>
-                        <button class="btn-secondary" onclick="location.reload()" data-i18n="results.clear">Clear All Data & Restart</button>
+                        <button id="pdf-btn" class="btn-primary" type="button" data-i18n="results.print">Download PDF Report</button>
+                        <button id="clear-btn" class="btn-secondary" type="button" data-i18n="results.clear">Clear All Data &amp; Restart</button>
                     </div>
+                    <p class="handoff-note" data-i18n="results.handoff">Save the PDF and bring it to your appointment, or upload it to your clinic's secure portal.</p>
                 </section>
             </div>
 
-            <!-- Safety Modal -->
-            <div id="safety-modal" class="modal hidden">
+            <!-- Safety Override Modal: full-screen, non-dismissible crisis routing -->
+            <div id="safety-modal" class="modal hidden" role="alertdialog" aria-modal="true" aria-labelledby="safety-title" aria-describedby="safety-message">
                 <div class="modal-content">
-                    <h2 data-i18n="safety.title">Important Safety Information</h2>
-                    <p data-i18n="safety.message">Based on your responses, we recommend seeking immediate support.</p>
-                    <div class="crisis-resources">
-                        <p><strong data-i18n="safety.emergency">Emergency:</strong> <span data-i18n="safety.emergency_num">Call local emergency services (e.g., 112)</span></p>
-                        <p><strong data-i18n="safety.helpline">Helpline:</strong> <span data-i18n="safety.helpline_num">Kirane (Mental Health): 1800-599-0019</span></p>
-                    </div>
-                    <button class="btn-primary" onclick="document.getElementById('safety-modal').classList.add('hidden')" data-i18n="safety.close">I Understand</button>
+                    <h2 id="safety-title" data-i18n="safety.title">Important Safety Information</h2>
+                    <p id="safety-message" data-i18n="safety.message">Your answer indicates you may be in distress. Please consider reaching out for immediate support right now:</p>
+                    <div id="crisis-resources" class="crisis-resources"></div>
+                    <p class="safety-footer" data-i18n="safety.dismissNote">You may continue the screening afterwards, but please contact one of these services today.</p>
+                    <button id="safety-close" class="btn-primary" type="button" data-i18n="safety.close">I Understand</button>
                 </div>
             </div>
         </main>
 
-        <footer>
-            <p data-i18n="footer.text">Session-only screening tool. No data is stored or transmitted.</p>
+        <footer role="contentinfo">
+            <p data-i18n="footer.text">Ephemeral session-only screening tool. No backend, no storage, no transmission.</p>
         </footer>
     </div>
-
-    <script src="data.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>
