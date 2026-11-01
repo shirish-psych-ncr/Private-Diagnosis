@@ -1069,6 +1069,32 @@
         "hi": "ध्यान की कमी और/या अतिसक्रियता-आवेगशीलता का लगातार पैटर्न"
       }
     },
+    "oppositional_defiant_disorder": {
+      "name": {
+        "en": "Oppositional Defiant Disorder",
+        "hi": "विरोधी-अवज्ञाकारी व्यवहार विकार"
+      },
+      "tier": 2,
+      "dsm5": "Oppositional Defiant Disorder",
+      "icd11": "6C91",
+      "description": {
+        "en": "Angry/irritable mood, argumentative/defiant behaviour or vindictiveness toward authority figures",
+        "hi": "प्राधिकार व्यक्तियों के प्रति क्रोधित/चिड़चिड़ा मूड, बहस करने वाला/अवज्ञाकारी व्यवहार या बदले की भावना"
+      }
+    },
+    "conduct_disorder": {
+      "name": {
+        "en": "Conduct Disorder",
+        "hi": "आचार विकार"
+      },
+      "tier": 3,
+      "dsm5": "Conduct Disorder",
+      "icd11": "6C90",
+      "description": {
+        "en": "Repetitive pattern violating the rights of others or age-appropriate societal norms",
+        "hi": "दूसरों के अधिकारों या आयु-उपयोज्य सामाजिक मानदंडों का उल्लंघन करने का पुनरावृत्ति पैटर्न"
+      }
+    },
     "alcohol_use_disorder": {
       "name": {
         "en": "Alcohol Use Disorder",
@@ -1605,7 +1631,7 @@
             {
               "id": "v1",
               "text": {
-                "en": "Does not pay attention to details or makes careless mistakes",
+                "en": "Does not pay attention to details or makes careless mistakes with, for example, homework",
                 "hi": "विवरणों पर ध्यान नहीं देता या लापरवाही से गलतियां करता है"
               }
             },
@@ -1626,7 +1652,7 @@
             {
               "id": "v4",
               "text": {
-                "en": "Does not follow through on instructions and fails to finish activities",
+                "en": "Does not follow through when given directions and fails to finish activities (not due to refusal or failure to understand)",
                 "hi": "निर्देशों का पालन नहीं करता और गतिविधियों को पूरा करने में विफल रहता है"
               }
             },
@@ -1640,21 +1666,21 @@
             {
               "id": "v6",
               "text": {
-                "en": "Avoids tasks that require ongoing mental effort",
+                "en": "Avoids, dislikes, or does not want to start tasks that require ongoing mental effort",
                 "hi": "ऐसे कार्यों से बचता है जिनमें निरंतर मानसिक प्रयास की आवश्यकता होती है"
               }
             },
             {
               "id": "v7",
               "text": {
-                "en": "Loses things necessary for tasks or activities",
+                "en": "Loses things necessary for tasks or activities (toys, assignments, pencils, or books)",
                 "hi": "कार्यों या गतिविधियों के लिए आवश्यक चीजें खो देता है"
               }
             },
             {
               "id": "v8",
               "text": {
-                "en": "Is easily distracted by extraneous stimuli",
+                "en": "Is easily distracted by noises or other stimuli",
                 "hi": "बाहरी उत्तेजनाओं से आसानी से विचलित हो जाता है"
               }
             },
@@ -1677,28 +1703,28 @@
             {
               "id": "v10",
               "text": {
-                "en": "Fidgets with or taps hands or feet, or squirms in seat",
+                "en": "Fidgets with hands or feet or squirms in seat",
                 "hi": "हाथ या पैर हिलाता है, या कुर्सी पर तड़पता है"
               }
             },
             {
               "id": "v11",
               "text": {
-                "en": "Leaves seat in situations when remaining seated is expected",
+                "en": "Leaves seat when remaining seated is expected",
                 "hi": "ऐसी स्थितियों में सीट छोड़ देता है जब बैठे रहने की अपेक्षा होती है"
               }
             },
             {
               "id": "v12",
               "text": {
-                "en": "Runs about or climbs in inappropriate situations",
+                "en": "Runs about or climbs too much when remaining seated is expected",
                 "hi": "अनुचित स्थितियों में दौड़ता है या चढ़ता है"
               }
             },
             {
               "id": "v13",
               "text": {
-                "en": "Unable to play or engage in leisure activities quietly",
+                "en": "Has difficulty playing or beginning quiet play activities",
                 "hi": "शांति से खेलने या अवकाश गतिविधियों में शामिल नहीं हो पाता"
               }
             },
@@ -1712,22 +1738,29 @@
             {
               "id": "v15",
               "text": {
-                "en": "Blurts out an answer before a question has been completed",
-                "hi": "प्रश्न पूरा होने से पहले ही उत्तर दे देता है"
+                "en": "Talks too much",
+                "hi": "बहुत ज़्यादा बोलता है"
               }
             },
             {
               "id": "v16",
               "text": {
-                "en": "Has difficulty waiting his/her turn",
-                "hi": "बारी की प्रतीक्षा करने में कठिनाई होती है"
+                "en": "Blurts out answers before questions have been completed",
+                "hi": "प्रश्न पूरे होने से पहले ही उत्तर दे देता है"
               }
             },
             {
               "id": "v17",
               "text": {
-                "en": "Interrupts or intrudes on others",
-                "hi": "दूसरों को टोकता है या बाधा डालता है"
+                "en": "Has difficulty waiting his or her turn",
+                "hi": "बारी की प्रतीक्षा करने में कठिनाई होती है"
+              }
+            },
+            {
+              "id": "v18",
+              "text": {
+                "en": "Interrupts or intrudes on others' conversations and/or activities",
+                "hi": "दूसरों की बातचीत और/या गतिविधियों में बीच में टोकता है या हस्तक्षेप करता है"
               }
             }
           ]
@@ -1772,7 +1805,23 @@
               "isPerformance": true
             },
             {
+              "id": "v52",
+              "text": {
+                "en": "Relationship with parents",
+                "hi": "माता-पिता के साथ संबंध"
+              },
+              "isPerformance": true
+            },
+            {
               "id": "v53",
+              "text": {
+                "en": "Relationship with siblings",
+                "hi": "भाई-बहनों के साथ संबंध"
+              },
+              "isPerformance": true
+            },
+            {
+              "id": "v54",
               "text": {
                 "en": "Relationship with peers",
                 "hi": "समकक्षों के साथ संबंध"
@@ -1780,10 +1829,10 @@
               "isPerformance": true
             },
             {
-              "id": "v54",
+              "id": "v55",
               "text": {
-                "en": "Relationship with parents",
-                "hi": "माता-पिता के साथ संबंध"
+                "en": "Participation in organized activities (e.g., teams)",
+                "hi": "संगठित गतिविधियों (जैसे खेल टीमें) में भागीदारी"
               },
               "isPerformance": true
             }
@@ -1883,10 +1932,65 @@
             "v14",
             "v15",
             "v16",
-            "v17"
+            "v17",
+            "v18"
           ],
           "thresholdCount": 6,
           "minSymptomValue": 2
+        },
+        "oppositionalDefiant": {
+          "ids": [
+            "v19",
+            "v20",
+            "v21",
+            "v22",
+            "v23",
+            "v24",
+            "v25",
+            "v26"
+          ],
+          "thresholdCount": 4,
+          "minSymptomValue": 2,
+          "disordersOnPositive": [
+            "oppositional_defiant_disorder"
+          ]
+        },
+        "conduct": {
+          "ids": [
+            "v27",
+            "v28",
+            "v29",
+            "v30",
+            "v31",
+            "v32",
+            "v33",
+            "v34",
+            "v35",
+            "v36",
+            "v37",
+            "v38",
+            "v39",
+            "v40"
+          ],
+          "thresholdCount": 3,
+          "minSymptomValue": 2,
+          "disordersOnPositive": [
+            "conduct_disorder"
+          ]
+        },
+        "anxietyDepression": {
+          "ids": [
+            "v41",
+            "v42",
+            "v43",
+            "v44",
+            "v45",
+            "v46",
+            "v47"
+          ],
+          "thresholdCount": 3,
+          "minSymptomValue": 2,
+          "disordersOnPositive": []
         },
         "performance": {
           "ids": [
@@ -1894,8 +1998,10 @@
             "v49",
             "v50",
             "v51",
+            "v52",
             "v53",
-            "v54"
+            "v54",
+            "v55"
           ],
           "minImpairedValue": 4,
           "requiresImpairedCount": 1
