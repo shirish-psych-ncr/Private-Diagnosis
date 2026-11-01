@@ -53,7 +53,9 @@
         bindStaticUI();
         applyLanguage(state.lang);
         renderDomainGrid();
-        showStage(0);
+        // Only the consent stage is revealed on load. Stages 1-4 remain hidden
+        // until their Continue controls validate and reveal them in sequence.
+        revealStage(0);
     }
 
     function showError(err) {
@@ -111,7 +113,13 @@
     /* ------------------------------------------------------------------ *
      * 4. STAGE NAVIGATION
      * ------------------------------------------------------------------ */
-    function showStage(n) {
+    /**
+     * Reveal a stage that the user has already legitimately reached. This is
+     * the ONLY function allowed to add the `.active` class to a stage section;
+     * it is called exclusively from the Continue/Finish handlers (and boot),
+     * so later states can never load before their prerequisite is completed.
+     */
+    function revealStage(n) {
         state.stage = n;
         document.querySelectorAll('.stage').forEach((sec, i) => {
             sec.classList.toggle('active', i === n);
@@ -120,8 +128,28 @@
             step.classList.toggle('completed', i < n);
             step.classList.toggle('active', i === n);
         });
+        // Every newly revealed state starts at the top of the page. The next
+        // statement runs synchronously while the new stage is still display:none
+        // (the stylesheet repaints only after this script yields), so scrollTo
+        // cannot be undone by the fadeIn animation's initial translateY(10px).
+        window.scrollTo(0, 0);
         const heading = document.querySelector('#stage-' + n + ' h2');
-        if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: false }); }
+        if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: true }); }
+    }
+
+    /**
+     * Gatekeeper for every "Continue" control. Each stage validates its own
+     * required input via `validate()`; on failure an inline alert is shown and
+     * focus moves to it — the next state is NOT loaded. On success `onPass`
+     * renders the next state's content and reveals it (scrolling to top).
+     */
+    function continueTo(validate, onPass) {
+        if (!validate()) {
+            const alertEl = validate.alertEl || null;
+            if (alertEl && typeof alertEl.focus === 'function') alertEl.focus();
+            return;
+        }
+        onPass();
     }
 
     /* ------------------------------------------------------------------ *
@@ -681,38 +709,66 @@
         consentCheck.addEventListener('change', () => {
             document.getElementById('consent-btn').disabled = !consentCheck.checked;
         });
+
+        // Stage 0 -> 1 gate: consent must be actively granted first.
+        const validateConsent = () => Boolean(consentCheck.checked);
         document.getElementById('consent-btn').addEventListener('click', () => {
-            state.consent = consentCheck.checked;
-            if (state.consent) showStage(1);
+            continueTo(validateConsent, () => {
+                state.consent = true;
+                revealStage(1);
+            });
         });
 
+        // Stage 1 -> 2 gate: age group is required for adaptive instrument routing.
+        const contextAgeError = document.getElementById('context-age-error');
+        const validateContext = () => {
+            const ok = Boolean(document.getElementById('age-group').value);
+            if (contextAgeError) contextAgeError.classList.toggle('hidden', ok);
+            return ok;
+        };
+        validateContext.alertEl = contextAgeError;
         document.getElementById('context-form').addEventListener('submit', e => {
             e.preventDefault();
-            state.context.ageGroup = document.getElementById('age-group').value;
-            state.context.reason = document.getElementById('visit-reason').value.trim();
-            state.context.medications = document.getElementById('medications').value.trim();
-            state.context.priorDiagnoses = document.getElementById('prior-diagnoses').value.trim();
-            if (!state.context.ageGroup) return;
-            showStage(2);
+            continueTo(validateContext, () => {
+                state.context.ageGroup = document.getElementById('age-group').value;
+                state.context.reason = document.getElementById('visit-reason').value.trim();
+                state.context.medications = document.getElementById('medications').value.trim();
+                state.context.priorDiagnoses = document.getElementById('prior-diagnoses').value.trim();
+                revealStage(2);
+            });
         });
 
+        // Stage 2 -> 3 gate: at least one symptom domain must be selected; the
+        // scale content is rendered only after the gate passes.
+        const domainsError = document.getElementById('domains-error');
+        const validateDomains = () => {
+            const ok = state.selectedDomains.size > 0;
+            domainsError.classList.toggle('hidden', ok);
+            return ok;
+        };
+        validateDomains.alertEl = domainsError;
         document.getElementById('domains-next').addEventListener('click', () => {
-            if (!state.selectedDomains.size) {
-                document.getElementById('domains-error').classList.remove('hidden');
-                return;
-            }
-            renderScales();
-            showStage(3);
+            continueTo(validateDomains, () => {
+                renderScales();
+                revealStage(3);
+            });
         });
 
+        // Stage 3 -> 4 gate: every deployed item must be answered before results
+        // are computed and revealed.
+        const scalesError = document.getElementById('scales-error');
+        const validateScales = () => {
+            const ok = allAnswered();
+            scalesError.classList.toggle('hidden', ok);
+            return ok;
+        };
+        validateScales.alertEl = scalesError;
         document.getElementById('scales-finish').addEventListener('click', () => {
-            if (!allAnswered()) {
-                document.getElementById('scales-error').classList.remove('hidden');
-                return;
-            }
-            computeResults();
-            renderResults();
-            showStage(4);
+            continueTo(validateScales, () => {
+                computeResults();
+                renderResults();
+                revealStage(4);
+            });
         });
 
         document.getElementById('pdf-btn').addEventListener('click', generatePDF);
