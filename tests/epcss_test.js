@@ -78,11 +78,22 @@ window.scrollTo = (...args) => scrollCalls.push(args);
 
   const consentBtn = document.getElementById('consent-btn');
   check('consent button disabled initially', consentBtn.disabled === true);
+  // Standard inline-alert treatment: even with the button enabled (e.g. via AT
+  // or a forced click), an unchecked consent box must show the alert and keep
+  // stage 1 hidden — the next state does not load before Continue passes.
+  consentBtn.disabled = false;
+  consentBtn.click();
+  await sleep(50);
+  const consentErr = document.getElementById('consent-error');
+  check('unchecked consent shows inline error', consentErr && !consentErr.classList.contains('hidden'));
+  check('failed consent gate keeps stage 1 hidden', !document.getElementById('stage-1').classList.contains('active'));
+  consentBtn.disabled = true;
   document.getElementById('consent-check').checked = true;
   document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
   check('consent button enabled after check', consentBtn.disabled === false);
   consentBtn.click();
   await sleep(50);
+  check('consent error cleared after valid Continue', consentErr && consentErr.classList.contains('hidden'));
   check('advanced to stage 1 (context)', document.getElementById('stage-1').classList.contains('active'));
   check('scroll-to-top fired on consent Continue', scrollCalls.length >= 1 && scrollCalls[scrollCalls.length - 1][0] === 0 && scrollCalls[scrollCalls.length - 1][1] === 0);
 

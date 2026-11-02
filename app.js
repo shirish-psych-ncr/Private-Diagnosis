@@ -710,8 +710,17 @@
             document.getElementById('consent-btn').disabled = !consentCheck.checked;
         });
 
-        // Stage 0 -> 1 gate: consent must be actively granted first.
-        const validateConsent = () => Boolean(consentCheck.checked);
+        // Stage 0 -> 1 gate: consent must be actively granted first. The button
+        // is normally disabled until the box is checked, but keyboard/AT users
+        // (and any future layout where the button stays enabled) get the same
+        // standard inline-alert treatment as every other Continue gate.
+        const consentError = document.getElementById('consent-error');
+        const validateConsent = () => {
+            const ok = Boolean(consentCheck.checked);
+            if (consentError) consentError.classList.toggle('hidden', ok);
+            return ok;
+        };
+        validateConsent.alertEl = consentError;
         document.getElementById('consent-btn').addEventListener('click', () => {
             continueTo(validateConsent, () => {
                 state.consent = true;
