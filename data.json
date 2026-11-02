@@ -1033,7 +1033,8 @@
       "description": {
         "en": "Symptoms following exposure to traumatic event",
         "hi": "आघातजनक घटना के संपर्क में आने के बाद लक्षण"
-      }
+      },
+      "mappingNote": "ICD-11 PTSD is 6B40; Complex PTSD (6B41) has no separately named DSM-5-TR diagnosis. DSM acute stress disorder is not equivalent to ICD acute stress reaction (QE84), which sits outside Chapter 06 (index 6.1.2-6.1.3)."
     },
     "complex_ptsd": {
       "name": {
@@ -1061,7 +1062,8 @@
         "en": "Difficulty initiating or maintaining sleep",
         "hi": "नींद शुरू करने या बनाए रखने में कठिनाई"
       },
-      "icd11Chapter": "Chapter 07: Sleep-wake disorders"
+      "icd11Chapter": "Chapter 07: Sleep-wake disorders",
+      "mappingNote": "ICD-11 chronic insomnia is 7A00 and short-term insomnia 7A01 (Chapter 07, Sleep-wake disorders); DSM Insomnia Disorder spans both. Select by duration per ICD requirements (index 11.1.2)."
     },
     "adhd": {
       "name": {
@@ -1074,7 +1076,8 @@
       "description": {
         "en": "Persistent pattern of inattention and/or hyperactivity-impulsivity",
         "hi": "ध्यान की कमी और/या अतिसक्रियता-आवेगशीलता का लगातार पैटर्न"
-      }
+      },
+      "mappingNote": "ICD-11 ADHD is 6A05 with presentation subdivisions: predominantly inattentive 6A05.0, predominantly hyperactive-impulsive 6A05.1, combined 6A05.2 (index 1.4.2)."
     },
     "oppositional_defiant_disorder": {
       "name": {
@@ -1115,7 +1118,8 @@
       "description": {
         "en": "Problematic pattern of alcohol use leading to impairment",
         "hi": "शराब के उपयोग की समस्याग्रस्त पैटर्न जिससे हानि होती है"
-      }
+      },
+      "mappingNote": "ICD-11 Disorders due to use of alcohol is the 6C40 family (harmful use 6C40.0, dependence 6C40.2, intoxication 6C40.3, withdrawal 6C40.4, psychotic disorder 6C40.6); DSM Alcohol Use Disorder is a single graded diagnosis. Assess each system independently; 'use disorder' is not automatically equivalent to ICD dependence (index 14.1.2, operational rule on coding specificity)."
     },
     "schizophrenia": {
       "name": {
@@ -1128,7 +1132,8 @@
       "description": {
         "en": "Persistent psychotic symptoms including delusions and hallucinations",
         "hi": "भ्रम और मतिभ्रम सहित लगातार मनोवैज्ञानिक लक्षण"
-      }
+      },
+      "mappingNote": "ICD-11 Schizophrenia is 6A20 within the 6A20-6A24 primary psychotic grouping (6A21 schizoaffective, 6A22 schizotypal, 6A23 acute and transient psychotic, 6A24 delusional). DSM schizophreniform and brief psychotic disorders do not map automatically to 6A23 (index 2.1.2-2.1.3)."
     },
     "bipolar_depressive": {
       "name": {
@@ -1137,7 +1142,8 @@
       },
       "tier": 3,
       "dsm5": "Bipolar II Disorder, current episode depressed",
-      "icd11": "6A61"
+      "icd11": "6A61",
+      "mappingNote": "ICD-11 Bipolar type II disorder is 6A61; episode, psychosis and remission subdivisions are selected separately (e.g. 6A60.x series for type I) and do not denote generic mixed/remission states (index 3.1.2)."
     },
     "adjustment_disorder": {
       "name": {
@@ -1146,7 +1152,8 @@
       },
       "tier": 2,
       "dsm5": "Adjustment Disorder",
-      "icd11": "6B43"
+      "icd11": "6B43",
+      "mappingNote": "ICD-11 Adjustment disorder is 6B43, within the 6B42-6B45 trauma/stressor block together with prolonged grief disorder 6B42, reactive attachment disorder 6B44 and disinhibited social engagement disorder 6B45 (index 6.2.2)."
     },
     "hypersomnolence": {
       "name": {
@@ -1167,7 +1174,8 @@
       "tier": 3,
       "dsm5": "Obstructive Sleep Apnea Hypopnea",
       "icd11": "7A41",
-      "icd11Chapter": "Chapter 07: Sleep-wake disorders"
+      "icd11Chapter": "Chapter 07: Sleep-wake disorders",
+      "mappingNote": "ICD-11 Obstructive sleep apnoea is 7A41; central sleep apnoeas are 7A40 and sleep-related hypoventilation or hypoxemia disorders 7A42, all in Chapter 07 (index 11.2.2)."
     },
     "circadian_rhythm": {
       "name": {
@@ -1217,7 +1225,8 @@
       },
       "tier": 4,
       "dsm5": "Delusional Disorder",
-      "icd11": "6A24"
+      "icd11": "6A24",
+      "mappingNote": "ICD-11 Delusional disorder is 6A24 within the 6A20-6A24 primary psychotic grouping; DSM delusional disorder and ICD 6A24 share a label but duration, symptom and exclusion requirements differ - assess each system independently (index 2.1.1-2.1.3)."
     },
     "ocd": {
       "name": {
@@ -1230,7 +1239,8 @@
       "description": {
         "en": "Obsessions and compulsions consuming more than one hour per day",
         "hi": "प्रतिदिन एक घंटे से अधिक समय लेने वाले द्वेष-विचार और बाध्यताएँ"
-      }
+      },
+      "mappingNote": "ICD-11 OCD is 6B20, the parent of the 6B20-6B25 obsessive-compulsive-related family (body dysmorphic 6B21, olfactory reference 6B22, hypochondriasis 6B23, hoarding 6B24, body-focused repetitive behaviour 6B25) (index 5.1.2)."
     },
     "eating_anorexia": {
       "name": {
@@ -1243,7 +1253,8 @@
       "description": {
         "en": "Restriction of energy intake with intense fear of weight gain",
         "hi": "वजन बढ़ने के तीव्र डर के साथ ऊर्जा-सेवन का प्रतिबंध"
-      }
+      },
+      "mappingNote": "ICD-11 Anorexia nervosa is 6B80 within the 6B80-6B85 feeding/eating family (bulimia 6B81, binge eating 6B82, ARFID 6B83, pica 6B84, rumination-regurgitation 6B85) (index 9.1.2, 9.2.2)."
     },
     "personality_borderline": {
       "name": {
@@ -1327,7 +1338,8 @@
       "description": {
         "en": "Atypical sexual interests causing distress or harm",
         "hi": "कष्ट या हानि उत्पन्न करने वाली असामान्य यौन रुचियाँ"
-      }
+      },
+      "mappingNote": "ICD-11 paraphilic disorders are 6D30-6D36 plus 6D3Z; there are no separately named MMS categories for fetishistic disorder, transvestic disorder or sexual masochism disorder - consider 6D36 only when its requirements are met (index 17.1.2)."
     },
     "factitious": {
       "name": {
@@ -1368,7 +1380,8 @@
       "description": {
         "en": "Persistent deficits in social communication and restricted interests",
         "hi": "सामाजिक संचार में निरंतर कमी और सीमित रुचियाँ"
-      }
+      },
+      "mappingNote": "ICD-11 Autism spectrum disorder is 6A02, subdivided by intellectual-development and functional-language status (6A02.0/.1/.2/.3/.5; 6A02.Y other specified, 6A02.Z unspecified). Do not infer a continuous .0-.5 sequence: 6A02.4 is absent from this MMS release (index 1.3.2)."
     }
   },
   "instruments": {

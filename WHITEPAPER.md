@@ -57,6 +57,7 @@ The disorder database in `data.json` is harmonised against the Comparative DSM-5
 - Stimulant Use Disorder carries "6C45 / 6C46" with a note that ICD-11 separates cocaine (6C45) from amphetamine-type stimulants (6C46); the substance-specific family must be selected rather than a generic parent (§14.2.2).
 - Gender Incongruence notes the life-stage codes HA60 (adolescence/adulthood), HA61 (childhood) and HA6Z (unspecified), and that ICD gender incongruence does not require the DSM distress/impairment criterion (§12.2).
 - Neurocognitive entries note that ICD dementia categories 6D80–6D85 are the principal comparison for DSM major neurocognitive disorder, with 6D71 for mild neurocognitive disorder (§15.1.2).
+- Full coverage: every one of the 33 disorders in the database now carries an Appendix-A-referenced mapping note, including family/parent-category guidance (e.g., OCD 6B20 as parent of the 6B20–6B25 block §5.1.2; anorexia 6B80 within the 6B80–6B85 feeding family §9.1.2; alcohol 6C40 subdivisions §14.1.2), non-equivalence warnings (DSM acute stress disorder vs ICD QE84 §6.1.3; schizophreniform/brief psychotic vs 6A23 §2.1.3; absent 6A02.4 §1.3.2; no ICD counterparts for fetishistic/transvestic/masochism diagnoses §17.1.2), and cross-chapter placement (sleep codes in Chapter 07 §11.x). Mapping notes are clinician-facing only.
 These mapping notes appear only in the clinician view; the patient view continues to withhold diagnostic labels.
 
 3.3 Adaptive Instrument Routing
