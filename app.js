@@ -1735,7 +1735,10 @@
             // items keep their usual raw-sum scoring, and every BISS attached to an
             // endorsed screen-in item is scored as a dimensional severity profile.
             if (domain.instrument === 'auto:bipolartable' && domain.baseInstrument) {
-                deployedScreenInstruments(domain).forEach(({ scale }) => {
+                // Same always-deployed rule as the other optional tables: the BISS
+                // appears on screen as soon as the mood domain is selected, so it
+                // must be scored regardless of how its screen-in items were answered.
+                deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
                     if (scale.id === 'biss') instrumentResults.push(scoreBiss(scale, addFlag));
                 });
                 // fall through to the generic raw-sum block below for the PHQ-9 items

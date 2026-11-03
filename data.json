@@ -1153,6 +1153,31 @@
             "other_specified_personality_disorder",
             "unspecified_personality_disorder"
           ]
+        },
+        {
+          "id": "per_hexaco_1",
+          "text": {
+            "en": "Is an informant-rated personality profile needed — to corroborate or challenge the person's own account, or because self-report alone is insufficient for the referral question?",
+            "hi": "क्या किसी निकट informants (परिवार/साथी/सहकर्मी) द्वारा व्यक्ति-ता-प्रोफाइल की पर्यवेक्षक-रेटिंग आवश्यक है — आत्म-रिपोर्ट की सीमाओं को आंकने या नैदानिक-सूचना हेतु?"
+          },
+          "scale": [
+            {
+              "v": 0,
+              "label": {
+                "en": "No",
+                "hi": "नहीं"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "Yes",
+                "hi": "हाँ"
+              }
+            }
+          ],
+          "scaleId": "hexaco_pi_r_observer",
+          "disorders": []
         }
       ]
     },
@@ -2700,6 +2725,56 @@
       "licensing": {
         "en": "Confirm permission terms with the rights holder before clinical or research use.",
         "hi": "नैदानिक/शोध-प्रयोग से पूर्व अधिकार-वाहक से अनुमति-शर्तें पुष्टि करें।"
+      }
+    },
+    "BISS": {
+      "name": "BISS (Bipolar Inventory of Signs and Symptoms Scale)",
+      "construct": {
+        "en": "Bipolar signs and symptoms - dimensional severity over 7 days",
+        "hi": "द्विध्रुवी लक्षण — 7 दिनों की विमात्मक तीव्रता"
+      },
+      "format": {
+        "en": "44 items rated 0-4 by the clinician from self-report, family and interview observation; two sections (Depression 1-20, Mania 21-44)",
+        "hi": "44 आइटम, चिकित्सक द्वारा 0-4; दो विभाग (अवसाद 1-20, उन्माद 21-44)"
+      },
+      "duration": "~20 min interview",
+      "language": {
+        "en": "English",
+        "hi": "अंग्रेज़ी (हिन्दी शीर्षक)"
+      },
+      "purpose": {
+        "en": "Quantify severity of bipolar signs and symptoms and track change; supports staging of an episode and treatment monitoring. Not diagnostic.",
+        "hi": "द्विध्रुवी लक्षणों की तीव्रता मापना एवं परिवर्तन-निगरानी; अवस्था-प्रबंधन व चिकित्सा-निगरानी में सहायक। रोग-निर्णायक नहीं।"
+      },
+      "source": "BISS, version 1.5 (4/1/08), Charles L. Bowden et al.",
+      "licensing": {
+        "en": "Copyright 2005 Charles L. Bowden, MD. Single copies permitted for researchers/clinicians in nonprofit or publicly owned settings; otherwise written permission required.",
+        "hi": "प्रतिलिप्याधिकार 2005 चार्ल्स एल. बोडेन; गैर-लाभकारी/सार्वजनिक संस्थाओं हेतु एक-प्रति छूट, अन्यथा लिखित अनुमति आवश्यक।"
+      }
+    },
+    "HEXACO-PI-R (Observer)": {
+      "name": "HEXACO-PI-R Observer Report Form (60 items)",
+      "construct": {
+        "en": "पर्यवेक्षक द्वारा रेटित छह-डोमेन व्यक्तित्व-संरचना",
+        "hi": "Six-domain personality structure rated by an informant"
+      },
+      "format": {
+        "en": "60 कथन, मूल्यांकन-विषय के विषय में 1 (पूर्णतः असहमत) से 5 (पूर्णतः सहमत) पर रेटित; 6 डोमेनों में 24 फलक-पैमाने; R-कुंजी आइटम व्युक्रम-अंकित; फलक = उसके आइटमों का माध्य, डोमेन = उसके फलकों का माध्य",
+        "hi": "60 statements rated 1 (strongly disagree) to 5 (strongly agree) about the person being described; 24 facet scales across 6 domains; R-keyed items reverse-scored; facet = mean of its items, domain = mean of its facets"
+      },
+      "duration": "~10-15 min",
+      "language": {
+        "en": "Hindi working translation; English original authoritative",
+        "hi": "हिन्दी कार्यशील अनुवाद; अंग्रेज़ी मूल प्राधिकृत"
+      },
+      "purpose": {
+        "en": "व्यक्ति को अच्छी तरह जानने वाले से व्यक्ति-ता-प्रोफाइल प्राप्त करना — आत्म-रिपोर्ट की पुष्टि/चुनौती एवं रूपरेखा में पर्यवेक्षक-स्तर की सूचना जोड़ना। केवल वर्णनात्मक — कोई नैदानिक कटऑफ नहीं।",
+        "hi": "Obtain a personality profile from someone who knows the person well, to corroborate or challenge self-report and add observer-level information to the formulation. Descriptive only - it carries no diagnostic cut-offs."
+      },
+      "source": "HEXACO-PI-R / HEXACO-60 (Lee & Ashton)",
+      "licensing": {
+        "en": "Item wording and scoring key published freely by the authors; commercial or redistributed use requires their permission.",
+        "hi": "मूल रूप व स्कोरिंग-कुंजी लेखकों द्वारा मुक्त-उपयोग हेतु प्रकाशित; व्यावसायिक/पुनर्विक्रय उपयोग हेतु अनुमति आवश्यक।"
       }
     }
   },
@@ -11215,6 +11290,3123 @@
         "hi": "मापनी का पाठ केवल अधिकार-वाहक की अनुमति से प्रयोग करें; नैदानिक या शोध-प्रयोग से पूर्व वर्तमान लाइसेंस-शर्तें पुष्टि करें।"
       },
       "branching": null
+    },
+    "biss": {
+      "id": "biss",
+      "name": {
+        "en": "Bipolar Inventory of Signs and Symptoms Scale (BISS)",
+        "hi": "बाइपोलर लक्षण एवं रोगलक्षण मापनी (BISS)"
+      },
+      "type": "matrix",
+      "administeredBy": "clinician",
+      "optionalAssessment": true,
+      "sourceInstrument": "BISS",
+      "targetAge": [
+        "adult",
+        "adolescent"
+      ],
+      "directions": {
+        "en": "Items are scored from 0 to 4, based on the most recent 7 day period, utilizing information from self report, and family and clinician observation both outside and during the interview. The anchor statements are examples of behaviors, proportions of time experiencing disturbance, severity of disturbance, and functional impairment that would qualify for a specific score, but do not exclude similar behaviors and internal feelings that would qualify for that score. Items are scored both on the basis of frequency and severity. A score of 3, in most cases, also entails behavior that is observable to others. A score of 0 means the symptom is completely absent. When in doubt between 2 ratings, assign the higher score. Some items in the mania section, e.g. No. 26, Hyperactive, rate behavior that may not have associated impairment of function or adverse consequences. For each defined item, please ask the bolded questions as they are written, or nearly so, for purposes of increasing the consistency of patient responses. The questions in italics are to be asked only if the patient indicates some symptomatology on the bolded general question(s) for the item. Additional questions to those in italics may be needed to establish item severity for individual patients. Rate each item independently. For example, a patient could have both psychomotor slowing (9) and agitation (22) if the behaviors occurred at different times over the rating period. When asking the questions for the item at the top of each page, start with the phrase, \"Over the past week have...\" The Scale lists depressive symptoms first. If the patient is known, or the primary problem area already identified, we recommend commencing the interview with the area of prominent symptomatology and concern to the patient, then completing all remaining sections."
+      },
+      "timeframe": {
+        "en": "Most recent 7 days.",
+        "hi": "अंतिम 7 दिन।"
+      },
+      "ratingScale": {
+        "min": 0,
+        "max": 4,
+        "note": {
+          "en": "Each item is rated 0 (absent) to 4 (severe) on the printed anchor set shown beside it; anchors are examples, not an exhaustive list, and when in doubt between two ratings the higher score is assigned.",
+          "hi": "प्रत्येक आइटम छपाए हुए एंकर-समुच्चय के अनुसार 0 (अनुपस्थित) से 4 (गंभीर) तक रेट किया जाता है; एंकर उदाहरण हैं, पूर्ण सूची नहीं — दो रेटिंगों में संदेह हो तो उच्चतर अंक दें।"
+        }
+      },
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "0 Absent",
+            "hi": "0 अनुपस्थित"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "1 Slight",
+            "hi": "1 हल्का"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "2 Mild",
+            "hi": "2 मंद"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "3 Moderate",
+            "hi": "3 मध्यम"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "4 Severe",
+            "hi": "4 गंभीर"
+          }
+        }
+      ],
+      "parts": [
+        {
+          "id": "biss_sec_d",
+          "partKey": "D",
+          "name": {
+            "en": "I. Depression (items 1-20)"
+          },
+          "questions": [
+            {
+              "id": "biss_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "Sadness - reported: Subjective feeling of depression based on verbal complaints of feeling depressed, sad, blue, gloomy, down in the dumps, empty, \"don't care.\" Do not include such ideational aspects as discouragement, pessimism, or worthlessness; suicide attempts or depressed appearance."
+              },
+              "itemName": {
+                "en": "Sadness - reported"
+              },
+              "definition": {
+                "en": "Subjective feeling of depression based on verbal complaints of feeling depressed, sad, blue, gloomy, down in the dumps, empty, \"don't care.\" Do not include such ideational aspects as discouragement, pessimism, or worthlessness; suicide attempts or depressed appearance."
+              },
+              "probes": [
+                {
+                  "en": "During the past 7 days, how have you been feeling? Describe your mood?"
+                },
+                {
+                  "en": "Have you felt depressed (sad, blue, moody, down, empty, as if you didn't care)?"
+                },
+                {
+                  "en": "Have you cried or been tearful? How often? Does it come and go? How long does it last? How bad is the feeling? Can you stand it?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., only occasionally feels \"sad\" or \"down\""
+                },
+                {
+                  "en": "Mild; e.g., often feels somewhat \"depressed,\" \"blue\" or \"downhearted,\" and/or appears sad and is less responsive to positive stimulus"
+                },
+                {
+                  "en": "Moderate; e.g., most of the time feels \"depressed,\" and/or several manifestations of sadness with limited ability to brighten up"
+                },
+                {
+                  "en": "Severe; e.g., most of the time feels \"wretched,\" sustained gloomy appearance"
+                }
+              ],
+              "safety": true
+            },
+            {
+              "id": "biss_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "Sadness - observed: Appears despondent, gloomy, despairing, as reflected in speech, facial expression, and posture. Rate also by inability to brighten up."
+              },
+              "itemName": {
+                "en": "Sadness - observed"
+              },
+              "definition": {
+                "en": "Appears despondent, gloomy, despairing, as reflected in speech, facial expression, and posture. Rate also by inability to brighten up."
+              },
+              "probes": [
+                {
+                  "en": "Have others commented that you appeared sad, blue, or unhappy?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., looks dispirited, but brightens up easily"
+                },
+                {
+                  "en": "Mild; e.g., more physical manifestations of sadness, and less response to positive stimulus"
+                },
+                {
+                  "en": "Moderate; e.g., often appears sad and unhappy"
+                },
+                {
+                  "en": "Severe; e.g., extreme and continuous gloom and despondency"
+                }
+              ]
+            },
+            {
+              "id": "biss_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "Pessimism: Discouragement, pessimism and hopelessness."
+              },
+              "itemName": {
+                "en": "Pessimism"
+              },
+              "definition": {
+                "en": "Discouragement, pessimism and hopelessness."
+              },
+              "probes": [
+                {
+                  "en": "Have you been discouraged (pessimistic, felt hopeless)?"
+                },
+                {
+                  "en": "What kind of future do you see for yourself?"
+                },
+                {
+                  "en": "How do you think things will work out?"
+                },
+                {
+                  "en": "Can you see yourself or your situation getting any better?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional feelings of discouragement about future"
+                },
+                {
+                  "en": "Mild; e.g., often somewhat discouraged"
+                },
+                {
+                  "en": "Moderate; e.g., very often feels quite pessimistic about the future"
+                },
+                {
+                  "en": "Severe; e.g., pervasive feelings of intense pessimism"
+                }
+              ]
+            },
+            {
+              "id": "biss_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "Suicidality: Suicidal tendencies, including preoccupation with thoughts of death or suicide. Do not include mere fears of dying."
+              },
+              "itemName": {
+                "en": "Suicidality"
+              },
+              "definition": {
+                "en": "Suicidal tendencies, including preoccupation with thoughts of death or suicide. Do not include mere fears of dying."
+              },
+              "probes": [
+                {
+                  "en": "When a person gets upset, depressed, or feels hopeless, he or she may think about dying or even killing themselves. Have you had any such thoughts?"
+                },
+                {
+                  "en": "Have you thought about how you would do it?"
+                },
+                {
+                  "en": "Have you told anybody about suicidal thoughts?"
+                },
+                {
+                  "en": "Have you actually done anything?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional thoughts of death (without suicidal thoughts), \"I would be better off dead\" or \"I wish I were dead.\""
+                },
+                {
+                  "en": "Mild; e.g., frequent thoughts of being better off dead or occasional thoughts of suicide but has no plan or intent"
+                },
+                {
+                  "en": "Moderate; e.g. often thinks of suicide or has thought of a specific method"
+                },
+                {
+                  "en": "Severe; e.g. often thinks of suicide and has thought of a specific plan or has made a suicidal gesture or attempt"
+                }
+              ],
+              "safety": true
+            },
+            {
+              "id": "biss_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "Worry: Worrying, brooding, painful preoccupation and inability to get mind off unpleasant thoughts (may or may not be accompanied by depressive mood)."
+              },
+              "itemName": {
+                "en": "Worry"
+              },
+              "definition": {
+                "en": "Worrying, brooding, painful preoccupation and inability to get mind off unpleasant thoughts (may or may not be accompanied by depressive mood)."
+              },
+              "probes": [
+                {
+                  "en": "Have you been worrying a lot?"
+                },
+                {
+                  "en": "How much do you worry? What kinds of things have you been worrying about?"
+                },
+                {
+                  "en": "How much of your time is spent in this?"
+                },
+                {
+                  "en": "Are you able to get your mind off it?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasionally worries about some realistic or trivial problem"
+                },
+                {
+                  "en": "Mild; e.g., often worries excessively about a problem"
+                },
+                {
+                  "en": "Moderate; e.g., very often worries excessively about a realistic or trivial problem"
+                },
+                {
+                  "en": "Severe; e.g., most of the time is spent in worrying or brooding about problems which he/she cannot dispel"
+                }
+              ]
+            },
+            {
+              "id": "biss_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "Guilt: Feelings of self-reproach or excessive, inappropriate guilt for things done or not done."
+              },
+              "itemName": {
+                "en": "Guilt"
+              },
+              "definition": {
+                "en": "Feelings of self-reproach or excessive, inappropriate guilt for things done or not done."
+              },
+              "probes": [
+                {
+                  "en": "Do you blame yourself for anything you have done or not done?"
+                },
+                {
+                  "en": "What about feeling guilty?"
+                },
+                {
+                  "en": "Do you feel you have done anything wrong?"
+                },
+                {
+                  "en": "Do you deserve punishment?"
+                },
+                {
+                  "en": "Do you feel you have brought this on yourself?"
+                },
+                {
+                  "en": "Have you been critical of yourself?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional feelings of mild self-blame"
+                },
+                {
+                  "en": "Mild; e.g., often feels somewhat guilty about past actions, the significance of which are exaggerated, such as consequences of the illness"
+                },
+                {
+                  "en": "Moderate; e.g., often feels quite guilty about past actions or feelings of guilt that cannot be explained"
+                },
+                {
+                  "en": "Severe; e.g., pervasive feelings of intense guilt, self-reproach or generalizes feelings of self-blame"
+                }
+              ]
+            },
+            {
+              "id": "biss_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "Feelings of inadequacy: Negative evaluation of him or herself, including feelings of inadequacy, failure, worthlessness."
+              },
+              "itemName": {
+                "en": "Feelings of inadequacy"
+              },
+              "definition": {
+                "en": "Negative evaluation of him or herself, including feelings of inadequacy, failure, worthlessness."
+              },
+              "probes": [
+                {
+                  "en": "How has your self-esteem been this past week?"
+                },
+                {
+                  "en": "Are you down on yourself?"
+                },
+                {
+                  "en": "What is your opinion of yourself compared to other people?"
+                },
+                {
+                  "en": "Worthless? A failure? How often do you feel this way about yourself?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional feelings of inadequacy"
+                },
+                {
+                  "en": "Mild; e.g., often feels somewhat inadequate"
+                },
+                {
+                  "en": "Moderate; e.g., often feels like a failure"
+                },
+                {
+                  "en": "Severe; e.g., pervasive feelings of worthlessness"
+                }
+              ]
+            },
+            {
+              "id": "biss_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "Low energy: Difficulty getting started, or slowness initiating and performing everyday activities. Subjective feeling of lack of energy or fatigue. Do not rate lack of interest."
+              },
+              "itemName": {
+                "en": "Low energy"
+              },
+              "definition": {
+                "en": "Difficulty getting started, or slowness initiating and performing everyday activities. Subjective feeling of lack of energy or fatigue. Do not rate lack of interest."
+              },
+              "probes": [
+                {
+                  "en": "Have you had less energy than usual to do things? Have you been getting tired easily? I am not talking about your interest in things, but your physical energy to do things."
+                },
+                {
+                  "en": "Has this interfered with your accomplishing tasks that you ordinarily need to do? Have you needed help in getting started?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional less energy than usual"
+                },
+                {
+                  "en": "Mild; e.g., at times definitely more tired, or less energy than usual"
+                },
+                {
+                  "en": "Moderate; e.g., most of time is very tired, lacking energy"
+                },
+                {
+                  "en": "Severe; e.g., spends most of time resting, nearly always feels fatigued"
+                }
+              ]
+            },
+            {
+              "id": "biss_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "Psychomotor slowing: Generalized slowing down of physical reactions, movements, and speech, including latency in speech. Rate both on observed and reported information."
+              },
+              "itemName": {
+                "en": "Psychomotor slowing"
+              },
+              "definition": {
+                "en": "Generalized slowing down of physical reactions, movements, and speech, including latency in speech. Rate both on observed and reported information."
+              },
+              "probes": [
+                {
+                  "en": "Have you been slowed down, not able to move as quickly as usual?"
+                },
+                {
+                  "en": "Did you find it hard to start talking?"
+                },
+                {
+                  "en": "Did you talk a lot less than usual?"
+                },
+                {
+                  "en": "Did you feel like you were moving in slow motion?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight, of doubtful clinical significance, only subjective feeling of being slowed"
+                },
+                {
+                  "en": "Mild; e.g., conversation is noticeably retarded but not strained"
+                },
+                {
+                  "en": "Moderate; e.g., conversation is strained, or moves very slowly"
+                },
+                {
+                  "en": "Severe; e.g., conversation is difficult to maintain, or hardly moves at all"
+                }
+              ]
+            },
+            {
+              "id": "biss_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "Loss of interest: Subjective experience of reduced interest in the surroundings, or activities that normally give pleasure. Reduced ability to react with adequate emotion to circumstances or people."
+              },
+              "itemName": {
+                "en": "Loss of interest"
+              },
+              "definition": {
+                "en": "Subjective experience of reduced interest in the surroundings, or activities that normally give pleasure. Reduced ability to react with adequate emotion to circumstances or people."
+              },
+              "probes": [
+                {
+                  "en": "When you participated in activities that you usually enjoy, were they pleasurable for you?"
+                },
+                {
+                  "en": "If you did not do any of your usual activities, was this because you did not have the opportunity? (If the answer is opportunity, do not rate towards loss of interest.)"
+                },
+                {
+                  "en": "Can you experience your usual feelings for your loved ones?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slightly reduced ability to enjoy usual interests. Reduced ability to feel anger"
+                },
+                {
+                  "en": "Mild; e.g., loss of interest in the surroundings/activities, loss of feelings for friends and acquaintances"
+                },
+                {
+                  "en": "Moderate; e.g., most of the time has moderately reduced interest in most pleasurable activities"
+                },
+                {
+                  "en": "Severe; e.g., feels emotionally paralyzed, inability to feel anger or grief, and a complete or even painful failure to feel for close relatives and friends"
+                }
+              ]
+            },
+            {
+              "id": "biss_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "Social withdrawal: Reduced interest in and attention to others. Associated with reduced social interactions, and reduced time spent with others."
+              },
+              "itemName": {
+                "en": "Social withdrawal"
+              },
+              "definition": {
+                "en": "Reduced interest in and attention to others. Associated with reduced social interactions, and reduced time spent with others."
+              },
+              "probes": [
+                {
+                  "en": "Have you had less interest in spending time with other people, including your family members, friends, or persons you work with?"
+                },
+                {
+                  "en": "Did you actually spend less time interacting with others?"
+                },
+                {
+                  "en": "How much less time than usual for you does this represent?"
+                },
+                {
+                  "en": "Did you avoid social contact with people whom you normally interact with?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight reduction in interest in social interaction"
+                },
+                {
+                  "en": "Mild; e.g., actual reduction in social interaction, associated with some avoidance of others"
+                },
+                {
+                  "en": "Moderate; e.g., substantially reduced time spent with others, with some adverse consequences to the social avoidance"
+                },
+                {
+                  "en": "Marked reduction in social interactions, with consequent difficulties in relationships with family, friends, peers"
+                }
+              ]
+            },
+            {
+              "id": "biss_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "Reduced sex drive: Reduced sexual interest, fantasies, or a reduction of sexual activity. Judge against the subject's usual sexual interests and habits when well."
+              },
+              "itemName": {
+                "en": "Reduced sex drive"
+              },
+              "definition": {
+                "en": "Reduced sexual interest, fantasies, or a reduction of sexual activity. Judge against the subject's usual sexual interests and habits when well."
+              },
+              "probes": [
+                {
+                  "en": "What has your sexual interest and activity been like this past week?"
+                },
+                {
+                  "en": "Has it been reduced at any time?"
+                },
+                {
+                  "en": "Can you tell me an example of the way it has changed, been low?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; sexual interest is reduced"
+                },
+                {
+                  "en": "Mild; e.g., definite reduction of sexual interest. Usual sexual activities partially reduced"
+                },
+                {
+                  "en": "Moderate; e.g., persistent reduction of sexual interest. Usual sexual activities reduced consistently"
+                },
+                {
+                  "en": "Severe; e.g., complete sexual indifference. \"I have no interest in sex.\""
+                }
+              ]
+            },
+            {
+              "id": "biss_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "Anxiety - reported: Subjective feelings of anxiety, fearfulness, or apprehension, whether or not accompanied by somatic anxiety and whether focused on specific concerns or not."
+              },
+              "itemName": {
+                "en": "Anxiety - reported"
+              },
+              "definition": {
+                "en": "Subjective feelings of anxiety, fearfulness, or apprehension, whether or not accompanied by somatic anxiety and whether focused on specific concerns or not."
+              },
+              "probes": [
+                {
+                  "en": "Have you felt tense or anxious?"
+                },
+                {
+                  "en": "Does this get to the point that you feel uncomfortable?"
+                },
+                {
+                  "en": "Have you had anxiety attacks?"
+                },
+                {
+                  "en": "Are you able to control these feelings?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., fleeting inner tension"
+                },
+                {
+                  "en": "Mild; e.g., periods of tension, fear that can be mastered"
+                },
+                {
+                  "en": "Moderate; e.g., tense, ill at ease most of the time, minimal ability to control tension, fear"
+                },
+                {
+                  "en": "Severe; e.g., tense, fearful, frequent anxiety attacks. Often functionally incapacitating"
+                }
+              ]
+            },
+            {
+              "id": "biss_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "Anxiety - observed: Autonomic over-activity and/or muscle tension, expressed in facial appearance, flushing, sweating, cold hands, posture, movements."
+              },
+              "itemName": {
+                "en": "Anxiety - observed"
+              },
+              "definition": {
+                "en": "Autonomic over-activity and/or muscle tension, expressed in facial appearance, flushing, sweating, cold hands, posture, movements."
+              },
+              "probes": [
+                {
+                  "en": "Over the past week have others commented that you appeared tense or showed signs of anxiety, such as sweating or clammy hands?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; occasional or slight autonomic disturbances such as flushing or sweating under stress"
+                },
+                {
+                  "en": "Mild; e.g., autonomic disturbance on several occasions, even when not under stress"
+                },
+                {
+                  "en": "Moderate; e.g., tense, ill at ease most of the time, minimal ability to control tension, fear"
+                },
+                {
+                  "en": "Severe; e.g., tense, fearful, frequent anxiety attacks. Often functionally incapacitating."
+                }
+              ]
+            },
+            {
+              "id": "biss_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "Somatic anxiety - reported: Has been bothered by 1 or more physiological concomitants of anxiety."
+              },
+              "itemName": {
+                "en": "Somatic anxiety - reported"
+              },
+              "definition": {
+                "en": "Has been bothered by 1 or more physiological concomitants of anxiety."
+              },
+              "probes": [
+                {
+                  "en": "Have you been bothered by physical symptoms like palpitations, shortness of breath, sweating, headaches, stomach cramps, diarrhea or muscle tension?"
+                },
+                {
+                  "en": "If yes, determine if there were other symptoms and the overall severity of the disturbance."
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasionally palms sweat excessively"
+                },
+                {
+                  "en": "Mild; e.g., often has 1 or more physical symptoms to a mild degree"
+                },
+                {
+                  "en": "Moderate; e.g., often has several symptoms or 1 symptom to a considerable degree"
+                },
+                {
+                  "en": "Severe; e.g., very frequently bothered by 1 or more symptoms or 1 symptom to a severe degree"
+                }
+              ]
+            },
+            {
+              "id": "biss_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "Fearfulness: Alerting response associated with perceived unfamiliar or threatening sound, visualization, event or smell, coupled with autonomic arousal (increased pulse, heavy breathing), impulse to retreat or attack."
+              },
+              "itemName": {
+                "en": "Fearfulness"
+              },
+              "definition": {
+                "en": "Alerting response associated with perceived unfamiliar or threatening sound, visualization, event or smell, coupled with autonomic arousal (increased pulse, heavy breathing), impulse to retreat or attack."
+              },
+              "probes": [
+                {
+                  "en": "Some people feel frightened easily when unpleasant events take place around them. Has that happened to you in the past week?"
+                },
+                {
+                  "en": "What about feeling frightened unexpectedly?"
+                },
+                {
+                  "en": "Has the degree that you have been frightened been more than when you are feeling well?"
+                },
+                {
+                  "en": "How have you felt inside when this has happened?"
+                },
+                {
+                  "en": "How well have you been able to control the fear?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight, occasional feelings of fear that quickly abate"
+                },
+                {
+                  "en": "Mild, e.g.; occasional fear that persists despite efforts to control"
+                },
+                {
+                  "en": "Moderate, e.g., fearful most days, sometimes associated with retreating or hostile reaction"
+                },
+                {
+                  "en": "Severe, e.g.; quite fearful most days, much of day. Unable to control fear, or at least one intensely fearful experience."
+                }
+              ]
+            },
+            {
+              "id": "biss_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "Insomnia: Sleep disturbance, including initial, middle and terminal difficulty in getting to sleep or staying asleep or waking up earlier than usual. Take into account the estimated number of hours slept and subjective sense of lost sleep. Do not rate decreased need for sleep."
+              },
+              "itemName": {
+                "en": "Insomnia"
+              },
+              "definition": {
+                "en": "Sleep disturbance, including initial, middle and terminal difficulty in getting to sleep or staying asleep or waking up earlier than usual. Take into account the estimated number of hours slept and subjective sense of lost sleep. Do not rate decreased need for sleep."
+              },
+              "probes": [
+                {
+                  "en": "Are you taking any medication to help you sleep?"
+                },
+                {
+                  "en": "How has your sleep been this last week?"
+                },
+                {
+                  "en": "Did you have any difficulty getting to sleep? How many hours a night were you able to sleep even when tired?"
+                },
+                {
+                  "en": "How many days did you have difficulty sleeping?"
+                },
+                {
+                  "en": "How does that compare with a usual full night of sleep for you?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "No experience of insomnia during rating period"
+                },
+                {
+                  "en": "Slight; e.g., occasional difficulty with insomnia."
+                },
+                {
+                  "en": "Mild; e.g., often has some significant difficulty"
+                },
+                {
+                  "en": "Moderate; e.g., usually has considerable difficulty"
+                },
+                {
+                  "en": "Severe; e.g., almost always has great difficulty"
+                }
+              ]
+            },
+            {
+              "id": "biss_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "Excessive sleep: Increased duration of sleep, compared to the subject's own normal pattern when well. The questions for item 17 will aid in rating this item. It is possible that a patient could receive a positive score for both item 17 and 18. Rate independent of whether person is taking a drug that might alter sleep."
+              },
+              "itemName": {
+                "en": "Excessive sleep"
+              },
+              "definition": {
+                "en": "Increased duration of sleep, compared to the subject's own normal pattern when well. The questions for item 17 will aid in rating this item. It is possible that a patient could receive a positive score for both item 17 and 18. Rate independent of whether person is taking a drug that might alter sleep."
+              },
+              "probes": [
+                {
+                  "en": "During the past week, have you overslept in the morning?"
+                },
+                {
+                  "en": "Do you take naps during the day?"
+                },
+                {
+                  "en": "Do you ever have difficulty getting out of bed?"
+                },
+                {
+                  "en": "How many more hours sleep have you been getting than usual?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "No excessive sleep during this period"
+                },
+                {
+                  "en": "Slight; sleeps longer than usual 1-2 nights/week"
+                },
+                {
+                  "en": "Mild; sleeps 2-3 hours extra most days"
+                },
+                {
+                  "en": "Moderate; e.g., spends part of day asleep in spite of normal or increased sleep at night"
+                },
+                {
+                  "en": "Severe; sleep increased by 4 or more hours, difficulty getting out of bed, despite excessive duration of sleep"
+                }
+              ]
+            },
+            {
+              "id": "biss_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "Reduced appetite: Appetite compared to usual."
+              },
+              "itemName": {
+                "en": "Reduced appetite"
+              },
+              "definition": {
+                "en": "Appetite compared to usual."
+              },
+              "probes": [
+                {
+                  "en": "Has your appetite for food changed in the last week compared to the way it usually is?"
+                },
+                {
+                  "en": "Have you eaten less than you usually do?"
+                },
+                {
+                  "en": "Do you have to force yourself to eat?"
+                },
+                {
+                  "en": "Do other people have to urge you to eat?"
+                },
+                {
+                  "en": "Over the past month, has your weight changed? By how much?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "No change at all"
+                },
+                {
+                  "en": "Slight decrease, questionable clinical significance"
+                },
+                {
+                  "en": "Mild decrease in appetite"
+                },
+                {
+                  "en": "Moderate decrease in appetite associated with change in weight"
+                },
+                {
+                  "en": "Severe loss of appetite, e.g., no appetite, significant weight loss"
+                }
+              ]
+            },
+            {
+              "id": "biss_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "Increased appetite: Increase in appetite and/or binge eating."
+              },
+              "itemName": {
+                "en": "Increased appetite"
+              },
+              "definition": {
+                "en": "Increase in appetite and/or binge eating."
+              },
+              "probes": [
+                {
+                  "en": "Have you eaten more than you usually do?"
+                },
+                {
+                  "en": "Are you able to control how much you eat?"
+                },
+                {
+                  "en": "Have you binged on any foods?"
+                },
+                {
+                  "en": "Have you eaten snacks between regular meals? Appetite associated with change in weight?"
+                },
+                {
+                  "en": "How much of the time have you binged, eaten snacks, etc?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight increase, questionable clinical significance"
+                },
+                {
+                  "en": "Mild increase in appetite"
+                },
+                {
+                  "en": "Moderate loss of control over eating and/or increase in appetite associated with change in weight"
+                },
+                {
+                  "en": "Severe increase (loss of control over eating or significant weight gain)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "biss_sec_m",
+          "partKey": "M",
+          "name": {
+            "en": "II. Mania (items 21-44)"
+          },
+          "questions": [
+            {
+              "id": "biss_21",
+              "itemNumber": 21,
+              "text": {
+                "en": "Impaired concentration: Difficulty in collecting one's thoughts, mounting to incapacitating lack of concentration. Rate frequency, intensity and degree of incapacity produced."
+              },
+              "itemName": {
+                "en": "Impaired concentration"
+              },
+              "definition": {
+                "en": "Difficulty in collecting one's thoughts, mounting to incapacitating lack of concentration. Rate frequency, intensity and degree of incapacity produced."
+              },
+              "probes": [
+                {
+                  "en": "How well have you been able to concentrate?"
+                },
+                {
+                  "en": "Are there any times when your concentration has been below your normal level?"
+                },
+                {
+                  "en": "Has this interfered with your reading, work, making conversation with others?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional difficulties in collecting one's thoughts"
+                },
+                {
+                  "en": "Mild; e.g., difficulties in concentrating and sustaining thought, which at times interferes with reading or conversation"
+                },
+                {
+                  "en": "Moderate; e.g., most of time has impaired concentration, and usual responsibilities and actions are hampered by this"
+                },
+                {
+                  "en": "Severe; e.g., incapacitating lack of concentration"
+                }
+              ]
+            },
+            {
+              "id": "biss_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "Agitation: Purposeless motor activity. Inability to sit still, pacing, fidgeting, wringing hands, pulling at clothes, movement of lips or fingers. Do not include feeling of tension or restlessness. Rate observed and reported behavior."
+              },
+              "itemName": {
+                "en": "Agitation"
+              },
+              "definition": {
+                "en": "Purposeless motor activity. Inability to sit still, pacing, fidgeting, wringing hands, pulling at clothes, movement of lips or fingers. Do not include feeling of tension or restlessness. Rate observed and reported behavior."
+              },
+              "probes": [
+                {
+                  "en": "Were there times when you were unable to sit still? Did you feel like you had to be constantly pacing up and down?"
+                },
+                {
+                  "en": "Did you notice that you were pulling on your clothing, hair, or skin? Did you wring your hands? How frequently did you do this? Did it cause you any difficulties in the way you functioned?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight, and of doubtful clinical significance"
+                },
+                {
+                  "en": "Mild; e.g., occasionally fidgety or unable to sit quietly in a chair"
+                },
+                {
+                  "en": "Moderate; e.g., often pulling at hair, clothing, etc or having to move"
+                },
+                {
+                  "en": "Severe; e.g., constantly fidgety or pulling at hair, clothing, etc or pacing up and down"
+                }
+              ]
+            },
+            {
+              "id": "biss_23",
+              "itemNumber": 23,
+              "text": {
+                "en": "Irritability - reported: Subjective feeling of anger, resentment, or annoyance (directed externally) whether expressed overtly or not. Rate only the intensity and duration of the subjective sense of irritability."
+              },
+              "itemName": {
+                "en": "Irritability - reported"
+              },
+              "definition": {
+                "en": "Subjective feeling of anger, resentment, or annoyance (directed externally) whether expressed overtly or not. Rate only the intensity and duration of the subjective sense of irritability."
+              },
+              "probes": [
+                {
+                  "en": "How irritated, angry, or resentful have you felt - whether you showed it or not?"
+                },
+                {
+                  "en": "How strongly did you feel this way? How much of the time did you feel this way? How did you show your (anger, annoyance, irritability)?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight and of doubtful clinical significance"
+                },
+                {
+                  "en": "Mild; e.g., definitely more irritable than called for by the situation but only occasional and not intense"
+                },
+                {
+                  "en": "Moderate; e.g., often feelings quite angry or occasionally feels very angry"
+                },
+                {
+                  "en": "Severe; e.g., most of the time quite angry or often feels very angry"
+                }
+              ]
+            },
+            {
+              "id": "biss_24",
+              "itemNumber": 24,
+              "text": {
+                "en": "Irritability - observed: Overt expression of irritability, annoyance and anger. Do not rate subjective feelings of annoyance, anger, or irritability on this item, no matter how intense, unless it is expressed overtly. Include any irritability observed by others."
+              },
+              "itemName": {
+                "en": "Irritability - observed"
+              },
+              "definition": {
+                "en": "Overt expression of irritability, annoyance and anger. Do not rate subjective feelings of annoyance, anger, or irritability on this item, no matter how intense, unless it is expressed overtly. Include any irritability observed by others."
+              },
+              "probes": [
+                {
+                  "en": "Over the past week, have you expressed your irritation or anger to others? How often did that occur?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight and of doubtful clinical significance"
+                },
+                {
+                  "en": "Mild; e.g., definitely more irritable than called for by the situation but only occasional and not intense"
+                },
+                {
+                  "en": "Moderate; e.g., often displays anger"
+                },
+                {
+                  "en": "Severe; e.g., most of the time displays intense anger"
+                }
+              ]
+            },
+            {
+              "id": "biss_25",
+              "itemNumber": 25,
+              "text": {
+                "en": "Aggressive behavior: Confrontational, argumentative behavior."
+              },
+              "itemName": {
+                "en": "Aggressive behavior"
+              },
+              "definition": {
+                "en": "Confrontational, argumentative behavior."
+              },
+              "probes": [
+                {
+                  "en": "During the past week, have there been any times when you were loud, demanding, or sarcastic?"
+                },
+                {
+                  "en": "Did you have any arguments or confrontations with people?"
+                },
+                {
+                  "en": "Did you lose your temper when the above occurred? Did you throw or break anything? Did you push or hit anyone?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight and of doubtful clinical significance"
+                },
+                {
+                  "en": "Mild; e.g., loud, sarcastic, at times, but only occasionally"
+                },
+                {
+                  "en": "Moderate; e.g., often demanding or loud"
+                },
+                {
+                  "en": "Severe; e.g., most of time somewhat demanding, loud, or any episode of shouting, hitting, breaking"
+                }
+              ],
+              "safety": true
+            },
+            {
+              "id": "biss_26",
+              "itemNumber": 26,
+              "text": {
+                "en": "Hyperactive: Increase in goal-directed activity as compared with usual level. Consider changes in involvement or activity level associated with work, family, friends, sex drive, projects, interests or activities (e.g., telephone calls, letter writing). Note that this item rates behaviour that may not have associated impairment of function or adverse consequences."
+              },
+              "itemName": {
+                "en": "Hyperactive"
+              },
+              "definition": {
+                "en": "Increase in goal-directed activity as compared with usual level. Consider changes in involvement or activity level associated with work, family, friends, sex drive, projects, interests or activities (e.g., telephone calls, letter writing). Note that this item rates behaviour that may not have associated impairment of function or adverse consequences."
+              },
+              "probes": [
+                {
+                  "en": "Have you been more active or involved in things than usual?"
+                },
+                {
+                  "en": "What about your work, housekeeping, family, friends, sex, hobbies, new projects or interests? How much of your day has been spent on this?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slightly more interest in activities, but of questionable significance"
+                },
+                {
+                  "en": "Mild increase in activity level"
+                },
+                {
+                  "en": "Moderate increase in activity"
+                },
+                {
+                  "en": "Marked increase, almost constantly involved in numerous activities in many areas"
+                }
+              ]
+            },
+            {
+              "id": "biss_27",
+              "itemNumber": 27,
+              "text": {
+                "en": "Energetic: Unusually energetic, more active than the usual level without expected fatigue."
+              },
+              "itemName": {
+                "en": "Energetic"
+              },
+              "definition": {
+                "en": "Unusually energetic, more active than the usual level without expected fatigue."
+              },
+              "probes": [
+                {
+                  "en": "Have you had more energy than usual to do things?"
+                },
+                {
+                  "en": "More than just a return to normal or usual level?"
+                },
+                {
+                  "en": "Did it seem like too much energy?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slightly more energetic but of questionable significance"
+                },
+                {
+                  "en": "Mild increase in energy. Less fatigued than usual."
+                },
+                {
+                  "en": "Moderate increase in energy compared to usual, with little or no fatigue"
+                },
+                {
+                  "en": "Markedly more energetic than usual, all or nearly all of time, with little or no fatigue"
+                }
+              ]
+            },
+            {
+              "id": "biss_28",
+              "itemNumber": 28,
+              "text": {
+                "en": "Increased social interest: Increased interest in, attention to others. Associated with increased social interactions and time spent with others."
+              },
+              "itemName": {
+                "en": "Increased social interest"
+              },
+              "definition": {
+                "en": "Increased interest in, attention to others. Associated with increased social interactions and time spent with others."
+              },
+              "probes": [
+                {
+                  "en": "Have you had more interest than usual in spending time with other people, including church, family, friends, co-workers?"
+                },
+                {
+                  "en": "Did you actually spend more time interacting with others?"
+                },
+                {
+                  "en": "How much more time than usual for you does this represent?"
+                },
+                {
+                  "en": "Did you make social contact with people whom you do not know or have not seen in a long time? What about talking on the phone, or using the internet for conversations?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight increase in interest in social interaction."
+                },
+                {
+                  "en": "Mild; actual increase in social interaction, associated with actively seeking out others"
+                },
+                {
+                  "en": "Moderate; substantially increased time spent with others, causing minor impairment, e.g., inappropriate renewing of old acquaintances"
+                },
+                {
+                  "en": "Marked increase in social interactions, associated with intrusive, unwanted interactions, contacts strangers"
+                }
+              ]
+            },
+            {
+              "id": "biss_29",
+              "itemNumber": 29,
+              "text": {
+                "en": "Racing thoughts - reported: Rapid flow of ideas, which may be observable in speech. There is continuity of thought, although it may be difficult or impossible to stay on track with the content. Rate on subjective report."
+              },
+              "itemName": {
+                "en": "Racing thoughts - reported"
+              },
+              "definition": {
+                "en": "Rapid flow of ideas, which may be observable in speech. There is continuity of thought, although it may be difficult or impossible to stay on track with the content. Rate on subjective report."
+              },
+              "probes": [
+                {
+                  "en": "Have you been bothered by having too many thoughts at once?"
+                },
+                {
+                  "en": "Have your thoughts been speeded up?"
+                },
+                {
+                  "en": "Has this caused any difficulties in staying on track?"
+                },
+                {
+                  "en": "How much of the time has this happened? Is it moderate or severe over the past week?"
+                },
+                {
+                  "en": "How different was that from when you are feeling normal?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., feels talkative"
+                },
+                {
+                  "en": "Mild; e.g., free, lively associations, not interfering with person's staying on track"
+                },
+                {
+                  "en": "Moderate; e.g., rapid flow of ideas, with difficulty returning to primary theme of thoughts"
+                },
+                {
+                  "en": "Severe; e.g., constantly feels thoughts racing, has great difficulty collecting thoughts and returning to main focus"
+                }
+              ]
+            },
+            {
+              "id": "biss_30",
+              "itemNumber": 30,
+              "text": {
+                "en": "Pressured speech: Pressure of talk, increased flow of speech, overly loquacious. Rate both observed and reported behavior."
+              },
+              "itemName": {
+                "en": "Pressured speech"
+              },
+              "definition": {
+                "en": "Pressure of talk, increased flow of speech, overly loquacious. Rate both observed and reported behavior."
+              },
+              "probes": [
+                {
+                  "en": "Have you experienced yourself talking too fast, saying too much in conversations?"
+                },
+                {
+                  "en": "Did others have to interrupt to get a word in?"
+                },
+                {
+                  "en": "Has this interfered with your effectiveness in conversations?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., tendency to talk excessively, not impairing"
+                },
+                {
+                  "en": "Mild; e.g., rapid, verbose speech. Gives detailed answers"
+                },
+                {
+                  "en": "Moderate; e.g., garrulous, difficult to interrupt"
+                },
+                {
+                  "en": "Severe; e.g., speaking almost constantly. Words come tumbling out. Cannot be interrupted most of time."
+                }
+              ]
+            },
+            {
+              "id": "biss_31",
+              "itemNumber": 31,
+              "text": {
+                "en": "Increased sexuality: Stronger sexual interest than usual. May be reflected in an increase in sexual activities or fantasies. Judge in comparison with subject's usual sexual habits when well."
+              },
+              "itemName": {
+                "en": "Increased sexuality"
+              },
+              "definition": {
+                "en": "Stronger sexual interest than usual. May be reflected in an increase in sexual activities or fantasies. Judge in comparison with subject's usual sexual habits when well."
+              },
+              "probes": [
+                {
+                  "en": "How has your interest in sexual activities been the past week?"
+                },
+                {
+                  "en": "Have you thought about, or talked about sexual matters more than usual?"
+                },
+                {
+                  "en": "What has your level of sexual activity been?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight increase in sexual interest"
+                },
+                {
+                  "en": "Mild increase in sexual interest, e.g., fantasies that at times preoccupy patient"
+                },
+                {
+                  "en": "Moderate; e.g., definite increase in sexual interest or activities, or intrusive sexual fantasies"
+                },
+                {
+                  "en": "Severe; e.g., preoccupied with sexual fantasies. Marked increase in sexual activities"
+                }
+              ]
+            },
+            {
+              "id": "biss_32",
+              "itemNumber": 32,
+              "text": {
+                "en": "Less need for sleep: Less need for sleep during the past week. A patient could be scored positive on this item as well as items 17 and 18 for impaired sleep."
+              },
+              "itemName": {
+                "en": "Less need for sleep"
+              },
+              "definition": {
+                "en": "Less need for sleep during the past week. A patient could be scored positive on this item as well as items 17 and 18 for impaired sleep."
+              },
+              "probes": [
+                {
+                  "en": "Have you needed less sleep than usual to feel rested?"
+                },
+                {
+                  "en": "How many hours did you sleep? How many days in the last week did you have a reduced need for sleep? How much sleep do you ordinarily need?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "No reduced need for sleep in past week"
+                },
+                {
+                  "en": "Slight; up to 1 hour less than usual"
+                },
+                {
+                  "en": "Mild; up to 2 hours less than usual"
+                },
+                {
+                  "en": "Moderate; up to 3 hours less than usual"
+                },
+                {
+                  "en": "Severe; 4 or more hours less than usual"
+                }
+              ]
+            },
+            {
+              "id": "biss_33",
+              "itemNumber": 33,
+              "text": {
+                "en": "Grandiose: Increased self-esteem and appraisal of his/her worth, contacts, power or knowledge (up to grandiose delusions) as compared with usual level. Persecutory delusions should not be considered evidence of grandiosity unless the subject feels the persecution is due to some special attributes of his/hers (e.g., power, contacts.)"
+              },
+              "itemName": {
+                "en": "Grandiose"
+              },
+              "definition": {
+                "en": "Increased self-esteem and appraisal of his/her worth, contacts, power or knowledge (up to grandiose delusions) as compared with usual level. Persecutory delusions should not be considered evidence of grandiosity unless the subject feels the persecution is due to some special attributes of his/hers (e.g., power, contacts.)"
+              },
+              "probes": [
+                {
+                  "en": "Have you felt more self-confident than usual?"
+                },
+                {
+                  "en": "Have you felt that you are a particularly important person, or that you have special talents, abilities?"
+                },
+                {
+                  "en": "What about special plans?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., is more expansive, confident than most people in similar circumstances"
+                },
+                {
+                  "en": "Mild; e.g., definitely inflated self-esteem or exaggerates talents somewhat out of proportion to circumstances"
+                },
+                {
+                  "en": "Moderate; e.g., inflated self-esteem clearly out of proportion to circumstances"
+                },
+                {
+                  "en": "Severe; e.g., grandiosity also may have delusional component"
+                }
+              ]
+            },
+            {
+              "id": "biss_34",
+              "itemNumber": 34,
+              "text": {
+                "en": "Elated: Elevated mood and/or optimistic attitude toward the future, out of proportion to the circumstances."
+              },
+              "itemName": {
+                "en": "Elated"
+              },
+              "definition": {
+                "en": "Elevated mood and/or optimistic attitude toward the future, out of proportion to the circumstances."
+              },
+              "probes": [
+                {
+                  "en": "Have there been times when you felt very good or too cheerful or high - not just your normal self?"
+                },
+                {
+                  "en": "Did you feel on top of the world or as if there was nothing you couldn't do?"
+                },
+                {
+                  "en": "Have you felt that everything would work out just the way you wanted?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., good spirits more cheerful than most people in similar circumstances, but of only doubtful clinical significance"
+                },
+                {
+                  "en": "Mild; e.g., definitely elevated mood and optimistic outlook that is somewhat out of proportion to the circumstances"
+                },
+                {
+                  "en": "Moderate; e.g., mood and outlook are clearly out of proportion to circumstances"
+                },
+                {
+                  "en": "Severe; e.g., quality of euphoric, exalted mood"
+                }
+              ]
+            },
+            {
+              "id": "biss_35",
+              "itemNumber": 35,
+              "text": {
+                "en": "Sharpened thinking: Has experienced unusually sharp and clear thinking, associated with creativity, problem solving capabilities."
+              },
+              "itemName": {
+                "en": "Sharpened thinking"
+              },
+              "definition": {
+                "en": "Has experienced unusually sharp and clear thinking, associated with creativity, problem solving capabilities."
+              },
+              "probes": [
+                {
+                  "en": "Have there been periods when your thinking seemed especially clear during the week?"
+                },
+                {
+                  "en": "Do you recall having had any unusually creative ideas or approaches to problems?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., brief periods of thinking more clearly or creatively"
+                },
+                {
+                  "en": "Mild increase in clarity or creativity of thought"
+                },
+                {
+                  "en": "Moderate increase; e.g., believes that has important insight into personal or external affairs but, with real evidence for this"
+                },
+                {
+                  "en": "Marked; e.g., most of time thinking seems exceptionally clear, creative, may be associated with some adverse consequence, e.g., acts on basis of belief in plans, but without reasonable chance of success in action taken"
+                }
+              ]
+            },
+            {
+              "id": "biss_36",
+              "itemNumber": 36,
+              "text": {
+                "en": "Elevated evening energy, interests: Increases in energy, activity, or interests in evening/night period."
+              },
+              "itemName": {
+                "en": "Elevated evening energy, interests"
+              },
+              "definition": {
+                "en": "Increases in energy, activity, or interests in evening/night period."
+              },
+              "probes": [
+                {
+                  "en": "Has your energy, activity or interests been about the same throughout the day?"
+                },
+                {
+                  "en": "Have you had any tendency to be particularly active or take on projects in the evening or at night?"
+                },
+                {
+                  "en": "Have you had more energy during the evening or nighttime?"
+                },
+                {
+                  "en": "Have these kept you up past your usual hour of going to bed, or beyond midnight?"
+                },
+                {
+                  "en": "Has it ever been difficult to stop what you are doing, e.g., reading, TV, project at night?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., frequently has more energy, interests in evening that delay time of getting to bed by up to 1 hour"
+                },
+                {
+                  "en": "Mild; e.g., most evenings takes on activities that delay time getting to sleep by up to 2 hours, feels more energized most evenings/nights with difficulty calming down. Has difficulty discontinuing activities at night."
+                },
+                {
+                  "en": "Moderate; e.g., definite impairment from increased diurnal energy, interests in evenings. Stays up, active beyond midnight. Sleep delayed by over 2 hours."
+                },
+                {
+                  "en": "Severe; e.g., marked interference with time that sleep period starts, and interference with ordinary daytime activities due to elevated energy, activity, or interests in the evening/night"
+                }
+              ]
+            },
+            {
+              "id": "biss_37",
+              "itemNumber": 37,
+              "text": {
+                "en": "Impulsive: Makes decisions, starts actions without considering consequences. Impulsivity may be associated with intrusiveness, spending, criticism of others, sexual behavior."
+              },
+              "itemName": {
+                "en": "Impulsive"
+              },
+              "definition": {
+                "en": "Makes decisions, starts actions without considering consequences. Impulsivity may be associated with intrusiveness, spending, criticism of others, sexual behavior."
+              },
+              "probes": [
+                {
+                  "en": "Have you made any decisions without thinking the situation through?"
+                },
+                {
+                  "en": "Have you made any snap judgments? Have you talked when you should have kept quiet or taken on a project without thinking it through?"
+                },
+                {
+                  "en": "Have you been able to control your responses when placed in a situation where a decision or choice is needed? Have you been patient or impatient when you have had to stand in line, say at a check out counter? Have you cut in line?"
+                },
+                {
+                  "en": "Have you bought things that you did not need?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional impulsive action with little or no adverse consequences"
+                },
+                {
+                  "en": "Mild; e.g., frequent mildly impulsive actions with some adverse consequences, e.g., mild speeding, cutting in line"
+                },
+                {
+                  "en": "Moderate; e.g., frequent impulsive actions, with actual or realistic potential for adverse consequences such as firing, legal charge, traffic ticket. Impulsivity is evident during the interview"
+                },
+                {
+                  "en": "Severe; serious impairment from impulsivity; e.g., accident with medical consequences, ticketed by the police"
+                }
+              ]
+            },
+            {
+              "id": "biss_38",
+              "itemNumber": 38,
+              "text": {
+                "en": "Distractible: Attention easily diverted by external stimuli. Rate principally on observed behavior."
+              },
+              "itemName": {
+                "en": "Distractible"
+              },
+              "definition": {
+                "en": "Attention easily diverted by external stimuli. Rate principally on observed behavior."
+              },
+              "probes": [
+                {
+                  "en": "Do you notice that your attention shifts to other things taking place around you?"
+                },
+                {
+                  "en": "Have you been easily distracted by your surroundings?"
+                },
+                {
+                  "en": "Have you found this causing you to have difficulty in staying on a subject in conversation, or to concentrate?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., attention occasionally distracted by irrelevant stimuli, such as background noises"
+                },
+                {
+                  "en": "Mild; e.g., easily distracted, but returns to primary theme without prompting"
+                },
+                {
+                  "en": "Moderate; e.g., relatively frequent distraction, has difficulty getting back on track, even with prompting"
+                },
+                {
+                  "en": "Severe; e.g., continually distracted by incidental events and objects, which makes interviewing difficult"
+                }
+              ]
+            },
+            {
+              "id": "biss_39",
+              "itemNumber": 39,
+              "text": {
+                "en": "Risky behavior: Involvement in activities with high potential for adverse consequences socially, legally, financially or sexually."
+              },
+              "itemName": {
+                "en": "Risky behavior"
+              },
+              "definition": {
+                "en": "Involvement in activities with high potential for adverse consequences socially, legally, financially or sexually."
+              },
+              "probes": [
+                {
+                  "en": "Have you done anything that was risky or got you in trouble?"
+                },
+                {
+                  "en": "Have spent more than you can afford? Have you told someone off unnecessarily, driven too fast, or done any other things that could have gotten you into trouble? Have you used any drugs that could be harmful to you?"
+                },
+                {
+                  "en": "How often has this occurred over the past week? Can you give an example?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., thoughts of promiscuous behavior, moderately aggressive driving"
+                },
+                {
+                  "en": "Mild; e.g., places self in situations with some risk for injury, attention by police, contracting communicable disease"
+                },
+                {
+                  "en": "Moderate; e.g., frequent risk taking, with at least one serious risk taking action"
+                },
+                {
+                  "en": "Severe; e.g., argues with officials without provocation, runs red lights, solicits sex"
+                }
+              ],
+              "safety": true
+            },
+            {
+              "id": "biss_40",
+              "itemNumber": 40,
+              "text": {
+                "en": "Affective lability: Reported and observed spontaneous sharp shifts of affective or mood states lasting from minutes to hours. Lability may or may not be influenced by circumstances. Often described metaphorically: \"I am on a roller coaster, I am like a yo yo.\" Affects can be sad, giddy, angry, or over confident. Do not rate on basis of what affective states are expressed. Rate on proportion of time with lability, degree of inability to control affective shifts."
+              },
+              "itemName": {
+                "en": "Affective lability"
+              },
+              "definition": {
+                "en": "Reported and observed spontaneous sharp shifts of affective or mood states lasting from minutes to hours. Lability may or may not be influenced by circumstances. Often described metaphorically: \"I am on a roller coaster, I am like a yo yo.\" Affects can be sad, giddy, angry, or over confident. Do not rate on basis of what affective states are expressed. Rate on proportion of time with lability, degree of inability to control affective shifts."
+              },
+              "probes": [
+                {
+                  "en": "How steady has your mood been?"
+                },
+                {
+                  "en": "Do your emotions shift fairly suddenly at times?"
+                },
+                {
+                  "en": "How much of the time are you this way? When this happens can you put a halt to it? Does it interfere in your daily life?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; e.g., occasional periods of fluctuating mood, affects, generally within a day, of questionable clinical significance"
+                },
+                {
+                  "en": "Mild; e.g., frequent mild, mood instability or lability which family, close associates see as dysfunctional"
+                },
+                {
+                  "en": "Moderate; e.g., definite impairment in social, work role function from frequent mood instability"
+                },
+                {
+                  "en": "Serious impairment from mood lability. Persists most of day, most days, interferes with most social, work, role functions"
+                }
+              ]
+            },
+            {
+              "id": "biss_41",
+              "itemNumber": 41,
+              "text": {
+                "en": "Persecutory ideas: From slight distrustfulness through suspiciousness and delusions of persecution. Does not include feelings or beliefs which are completely justified by the situation."
+              },
+              "itemName": {
+                "en": "Persecutory ideas"
+              },
+              "definition": {
+                "en": "From slight distrustfulness through suspiciousness and delusions of persecution. Does not include feelings or beliefs which are completely justified by the situation."
+              },
+              "probes": [
+                {
+                  "en": "Have people been making life hard or deliberately causing you trouble or trying to hurt you?"
+                },
+                {
+                  "en": "Have you had to be on guard with people?"
+                },
+                {
+                  "en": "Have you felt distrustful of others, or afraid that they would take advantage of you? Have you felt that you have been singled out, or targeted for their actions against you?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight feelings of distrustfulness which may be realistically based and are of doubtful clinical significance"
+                },
+                {
+                  "en": "Mild; suspiciousness definitely not warranted by the situation, but only occasional and of mild intensity, e.g., often feels taken advantage of"
+                },
+                {
+                  "en": "Moderate; often suspicious or distrustful, but clearly ideas of reference that are recognized as the imagination"
+                },
+                {
+                  "en": "Severe; pervasive suspiciousness, or persecutory feelings of delusional intensity, e.g., plot may exist against him/her"
+                }
+              ]
+            },
+            {
+              "id": "biss_42",
+              "itemNumber": 42,
+              "text": {
+                "en": "Delusions: Severity of delusions of any type - consider conviction in delusion, preoccupation, and effect on actions. Ask questions appropriate to eliciting delusional ideation."
+              },
+              "itemName": {
+                "en": "Delusions"
+              },
+              "definition": {
+                "en": "Severity of delusions of any type - consider conviction in delusion, preoccupation, and effect on actions. Ask questions appropriate to eliciting delusional ideation."
+              },
+              "probes": [
+                {
+                  "en": "Has your imagination been playing tricks on you in any way?"
+                },
+                {
+                  "en": "Have you had any ideas that other people might not understand?"
+                },
+                {
+                  "en": "Did you think this was your imagination?"
+                },
+                {
+                  "en": "Have you felt controlled by an outside power?"
+                },
+                {
+                  "en": "What did you do about it?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; suspected or likely, but not impairing"
+                },
+                {
+                  "en": "Mild; delusion definitely present, but at times subject questions it as a false belief"
+                },
+                {
+                  "en": "Moderate; delusion has a significant effect on thoughts, feelings, actions, e.g., asks family to forgive sins, preoccupied with belief that he or she has special power."
+                },
+                {
+                  "en": "Severe; delusions have major impact on patient or others, e.g., has delusions of control, calls emergency number about space invaders"
+                }
+              ]
+            },
+            {
+              "id": "biss_43",
+              "itemNumber": 43,
+              "text": {
+                "en": "Hallucinations: Severity of hallucinations of any type. Consider conviction in reality of hallucination, preoccupation, and effects on behaviors. Ask questions appropriate to eliciting hallucinations."
+              },
+              "itemName": {
+                "en": "Hallucinations"
+              },
+              "definition": {
+                "en": "Severity of hallucinations of any type. Consider conviction in reality of hallucination, preoccupation, and effects on behaviors. Ask questions appropriate to eliciting hallucinations."
+              },
+              "probes": [
+                {
+                  "en": "Have you heard voices or other things that weren't there or that other people couldn't hear?"
+                },
+                {
+                  "en": "Has there been anything unusual about the way things looked or sounded or smelled?"
+                },
+                {
+                  "en": "Do you think this was your imagination?"
+                },
+                {
+                  "en": "What did you do about it?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all"
+                },
+                {
+                  "en": "Slight; occasional altered perception of doubtful clinical significance"
+                },
+                {
+                  "en": "Mild; definitely present, but is generally aware that it is imagination and is usually able to ignore it"
+                },
+                {
+                  "en": "Moderate; generally believes in the reality of the hallucination, but it has little influence on behavior"
+                },
+                {
+                  "en": "Severe; convinced the hallucination is real and it has significant effects on actions, e.g., locks doors to keep heard pursuers away"
+                }
+              ],
+              "safety": true
+            },
+            {
+              "id": "biss_44",
+              "itemNumber": 44,
+              "text": {
+                "en": "Impaired insight: Awareness, understanding of his/her emotional illness, aberrant behavior, and corresponding need for psychiatric treatments."
+              },
+              "itemName": {
+                "en": "Impaired insight"
+              },
+              "definition": {
+                "en": "Awareness, understanding of his/her emotional illness, aberrant behavior, and corresponding need for psychiatric treatments."
+              },
+              "probes": [
+                {
+                  "en": "Why are you coming for psychiatric treatment?"
+                },
+                {
+                  "en": "Do you feel that you currently have an emotional problem, or mental illness?"
+                },
+                {
+                  "en": "Do you believe that you need psychiatric treatment?"
+                },
+                {
+                  "en": "How would you explain your (behavior, symptoms, etc)?"
+                }
+              ],
+              "anchors": [
+                {
+                  "en": "Not at all; insight is present, patient admits, understands illness and need for treatment"
+                },
+                {
+                  "en": "Slight impairment; patient feels he/she is ill, or needs treatment, but has little insight into history of illness or what characterizes the illness."
+                },
+                {
+                  "en": "Mild; admits behavior is changed, or need for treatment, but attributes it to a nonpsychiatric external factor (i.e., marital conflict, stress). Factors are plausible and non-delusional."
+                },
+                {
+                  "en": "Moderate impairment; admits behavior is changed, or need for treatment, but gives implausible or delusional explanations"
+                },
+                {
+                  "en": "Severe; denies behavior change, illness, or need for treatment"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sumScoring": true,
+      "scoring": {
+        "method": "biss_sectional_severity",
+        "scaleMin": 0,
+        "scaleMax": 4,
+        "sections": {
+          "depression": {
+            "ids": [
+              "biss_1",
+              "biss_2",
+              "biss_3",
+              "biss_4",
+              "biss_5",
+              "biss_6",
+              "biss_7",
+              "biss_8",
+              "biss_9",
+              "biss_10",
+              "biss_11",
+              "biss_12",
+              "biss_13",
+              "biss_14",
+              "biss_15",
+              "biss_16",
+              "biss_17",
+              "biss_18",
+              "biss_19",
+              "biss_20"
+            ],
+            "count": 20,
+            "maxTotal": 80
+          },
+          "mania": {
+            "ids": [
+              "biss_21",
+              "biss_22",
+              "biss_23",
+              "biss_24",
+              "biss_25",
+              "biss_26",
+              "biss_27",
+              "biss_28",
+              "biss_29",
+              "biss_30",
+              "biss_31",
+              "biss_32",
+              "biss_33",
+              "biss_34",
+              "biss_35",
+              "biss_36",
+              "biss_37",
+              "biss_38",
+              "biss_39",
+              "biss_40",
+              "biss_41",
+              "biss_42",
+              "biss_43",
+              "biss_44"
+            ],
+            "count": 24,
+            "maxTotal": 96
+          }
+        },
+        "positiveItemValue": 2,
+        "rule": {
+          "en": "Section totals are the sum of the item scores: Depression items 1-20 (0-80) and Mania items 21-44 (0-96). An item counts as symptomatic at score >= 2 (mild or worse). The published use of the BISS is dimensional - severity of bipolar signs and symptoms over 7 days and change over time - it has no diagnostic cutoff, so no total converts into a diagnosis. Item 4 (suicidality) >= 1 and items 25/39/43 >= 2 require immediate clinical review.",
+          "hi": "विभाग-योग इतना है: अवसाद आइटम 1-20 (0-80) तथा उन्माद आइटम 21-44 (0-96)। स्कोर >= 2 पर आइटम लक्षणमान्य होता है। BISS का प्रकाशित प्रयोग विमात्मक (7 दिनों में द्विध्रुवी लक्षणों की तीव्रता एवं समय के साथ परिवर्तन) है — इसका कोई नैदानिक कटऑफ नहीं, अतः कुल अंक रोग-निर्णय नहीं बनाता। आइटम 4 >= 1 तथा 25/39/43 >= 2 पर तत्काल चिकित्सकीय समीक्षा आवश्यक।"
+        },
+        "disordersOnPositive": [],
+        "interpretationNote": {
+          "en": "The BISS was designed to capture the full range of bipolar signs and symptoms rather than to generate a categorical diagnosis; interpret the depression and mania profiles together with the longitudinal course, collateral report and DSM-5/ICD criteria.",
+          "hi": "BISS वर्गीकृत रोग-निर्णय हेतु नहीं, द्विध्रुवी लक्षणों की सम्पूर्ण श्रेणी पकड़ने हेतु निर्मित है; अवसाद एवं उन्माद प्रोफाइल को दीर्घानुक्रमिक पाठ्यक्रम, सह-सूचना एवं DSM-5/ICD मानदंडों संग पढ़ें।"
+        }
+      },
+      "safetyItems": [
+        "biss_4",
+        "biss_25",
+        "biss_39",
+        "biss_43"
+      ],
+      "sourcePages": "BISS (Bowden) version 1.5, 4/1/08, pages 1-7 of 7",
+      "translationNote": {
+        "en": "Item text, probes and verbal anchors are the English original. Hindi is provided for the scale title only; the printed instrument is English-language and must be administered in English until a validated translation exists.",
+        "hi": "आइटम-पाठ, प्रश्न एवं एंकर अंग्रेज़ी मूल से हैं। हिन्दी केवल शीर्षक हेतु; छपा मापनी अंग्रेज़ी में ही प्रयोज्य जब तक मान्यताप्त अनुवाद उपलब्ध न हो।"
+      },
+      "licensing": {
+        "en": "Copyright 2005 Charles L. Bowden, MD. Reproduction requires written permission; researchers and clinicians working in nonprofit or publicly owned settings (universities, nonprofit hospitals, government institutions) may make single copies of the BISS for their own use. Confirm the deployment setting qualifies before clinical or research use.",
+        "hi": "प्रतिलिप्याधिकार 2005, चार्ल्स एल. बोडेन। पुनरुत्पादन हेतु लिखित अनुमति आवश्यक; गैर-लाभकारी/सार्वजनिक संस्थाओं के शोधकर्ता-चिकित्सक स्व-उपयोग हेतु एक प्रति बना सकते हैं। प्रयोग से पूर्व संस्था की पात्रता सुनिश्चित करें।"
+      },
+      "disorderKeys": [
+        "bipolar_i_disorder",
+        "bipolar_ii_disorder",
+        "bipolar_depressive",
+        "other_specified_bipolar"
+      ]
+    },
+    "hexaco_pi_r_observer": {
+      "id": "hexaco_pi_r_observer",
+      "name": {
+        "en": "HEXACO-PI-R (Observer Report Form)",
+        "hi": "HEXACO-PI-R (पर्यवेक्षक रिपोर्ट फ़ॉर्म)"
+      },
+      "type": "matrix",
+      "administeredBy": "informant",
+      "optionalAssessment": true,
+      "sourceInstrument": "HEXACO-PI-R / HEXACO-60",
+      "targetAge": [
+        "adolescent",
+        "adult"
+      ],
+      "directions": {
+        "en": "On the following pages you will find a series of statements about the person that you are rating now. Please read each statement and decide how much you agree or disagree with that statement. Then write your response in the space next to the statement using the following scale: 5 = strongly agree, 4 = agree, 3 = neutral (neither agree nor disagree), 2 = disagree, 1 = strongly disagree. Please answer every statement, even if you are not completely sure of your response.\n\nPlease provide the following information about the person that you will be rating: number of years you have been acquainted with this person, sex of the person being rated, and age of the person being rated.",
+        "hi": "निम्न पृष्ठों में उन व्यक्ति के बारे में कथनों की एक श्रृंखला दी गई है जिसे आप अभी रेट कर रहे हैं। प्रत्येक कथन पढ़ें और निर्णय करें कि आप उससे कितना सहमत या असहमत हैं। फिर निम्न पैमाने का उपयोग कर उत्तर दें: 5 = पूर्णतः सहमत, 4 = सहमत, 3 = तटस्थ (न सहमत न असहमत), 2 = असहमत, 1 = पूर्णतः असहमत। प्रत्येक कथन का उत्तर दें, भले ही आप पूर्णतः निश्चित न हों।\n\nमूल्यांकन से पूर्व रेट किए जा रहे व्यक्ति के बारे में ये जानकारी दें: परिचय की संवत्सर-संख्या, लिंग, आयु।"
+      },
+      "timeframe": {
+        "en": "General, long-standing pattern as observed by the informant (not a temporary state).",
+        "hi": "सामान्यतः — स्थायी व्यवहार-पैटर्न (अस्थायी अवस्थाएँ नहीं)।"
+      },
+      "informantFields": [
+        {
+          "id": "hx_years_acquainted",
+          "label": {
+            "en": "Number of years that you have been acquainted with this person",
+            "hi": "परिचय की अवधि (वर्ष)"
+          }
+        },
+        {
+          "id": "hx_subject_sex",
+          "label": {
+            "en": "Sex of the person that you will be rating",
+            "hi": "मूल्यांकन-विषय का लिंग"
+          },
+          "options": [
+            {
+              "v": "female",
+              "label": {
+                "en": "Female",
+                "hi": "स्त्री"
+              }
+            },
+            {
+              "v": "male",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hx_subject_age",
+          "label": {
+            "en": "Age of the person that you will be rating",
+            "hi": "मूल्यांकन-विषय की आयु (वर्ष)"
+          }
+        }
+      ],
+      "parts": [
+        {
+          "id": "hx_items",
+          "partKey": "observer_items",
+          "name": {
+            "en": "Observer ratings — 60 statements (1 = strongly disagree … 5 = strongly agree)",
+            "hi": "पर्यवेक्षक-रेटिंग — 60 कथन (1 = पूर्णतः असहमत … 5 = पूर्णतः सहमत)"
+          },
+          "questions": [
+            {
+              "id": "hx_1",
+              "itemNumber": 1,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she would be quite bored by a visit to an art gallery.",
+                "hi": "वह/वो कला-दीर्घा देखने से बिल्कुल ऊब जाएगा/जाएगी।"
+              }
+            },
+            {
+              "id": "hx_2",
+              "itemNumber": 2,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she cleans his/her office or home quite frequently.",
+                "hi": "वह/वो अपना कार्यालय या घर बहुत अक्सर साफ़ करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_3",
+              "itemNumber": 3,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she rarely holds a grudge, even against people who have badly wronged him/her.",
+                "hi": "वह/वो बुरी तरह ठगा गया हो तब भी शिकायत/द्वेष बहुत कम रखता/रखती है।"
+              }
+            },
+            {
+              "id": "hx_4",
+              "itemNumber": 4,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she feels reasonably satisfied with himself/herself overall.",
+                "hi": "वह/वो समग्र रूप से स्वयं से यथेष्ट संतुष्ट महसूस करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_5",
+              "itemNumber": 5,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she would feel afraid if he/she had to travel in bad weather conditions.",
+                "hi": "वह/वो खराब मौसम में यात्रा करनी हो तो डरेगा/डरेगी।"
+              }
+            },
+            {
+              "id": "hx_6",
+              "itemNumber": 6,
+              "reverseScored": false,
+              "text": {
+                "en": "If he/she wants something from a person he/she dislikes, he/she will act very nicely toward that person in order to get it.",
+                "hi": "जिस व्यक्ति को वह/वो पसंद नहीं करता/करती, उससे कुछ चाहिए हो तो पाने हेतु उसके साथ बड़ा मिलनसार व्यवहार करेगा/करेगी।"
+              }
+            },
+            {
+              "id": "hx_7",
+              "itemNumber": 7,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she is interested in learning about the history and politics of other countries.",
+                "hi": "वह/वो अन्य देशों के इतिहास एवं राजनीति जानने में रुचि रखता/रखती है।"
+              }
+            },
+            {
+              "id": "hx_8",
+              "itemNumber": 8,
+              "reverseScored": false,
+              "text": {
+                "en": "When working, he/she often sets ambitious goals for himself/herself.",
+                "hi": "कार्य करते समय वह/वो अक्सर स्वयं के लिए महत्वाकांक्षी लक्ष्य निर्धारित करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_9",
+              "itemNumber": 9,
+              "reverseScored": true,
+              "text": {
+                "en": "People sometimes say that he/she is too critical of others.",
+                "hi": "लोग कभी-कभी कहते हैं कि वह/वो दूसरों की अधिक आलोचना करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_10",
+              "itemNumber": 10,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she rarely expresses his/her opinions in group meetings.",
+                "hi": "वह/वो सामूहिक बैठकों में अपना मत बहुत कम व्यक्त करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_11",
+              "itemNumber": 11,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she worries about little things.",
+                "hi": "वह/वो छोटी-छोटी बातों की चिंता करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_12",
+              "itemNumber": 12,
+              "reverseScored": true,
+              "text": {
+                "en": "If he/she knew that he/she could never get caught, he/she would be willing to steal a million dollars.",
+                "hi": "पकड़े जाने की सम्भावना न हो तो वह/वो दस लाख रुपये चुराने को तैयार होगा/होगी।"
+              }
+            },
+            {
+              "id": "hx_13",
+              "itemNumber": 13,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she would like a job that requires following a routine rather than being creative.",
+                "hi": "वह/वो रचनात्मकता के बजाय दिनचर्या-पालन वाली नौकरी पसंद करेगा/करेगी।"
+              }
+            },
+            {
+              "id": "hx_14",
+              "itemNumber": 14,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she often checks his/her work over repeatedly to find any mistakes.",
+                "hi": "वह/वो त्रुटियाँ खोजने हेतु अपना कार्य बार-बार जाँचता/जाँचती है।"
+              }
+            },
+            {
+              "id": "hx_15",
+              "itemNumber": 15,
+              "reverseScored": true,
+              "text": {
+                "en": "People sometimes think that he/she is too stubborn.",
+                "hi": "लोग कभी-कभी सोचते हैं कि वह/वो अत्यधिक ज़िद्दी है।"
+              }
+            },
+            {
+              "id": "hx_16",
+              "itemNumber": 16,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she avoids making \"small talk\" with people.",
+                "hi": "वह/वो लोगों से अनौपचारिक गप्पें (small talk) करने से बचता/बचती है।"
+              }
+            },
+            {
+              "id": "hx_17",
+              "itemNumber": 17,
+              "reverseScored": false,
+              "text": {
+                "en": "When he/she suffers from a painful experience, he/she needs someone to make him/her feel comfortable.",
+                "hi": "कष्टदायक अनुभव में वह/वो किसी को स्वयं को सांत्वना देने वाला चाहता/चाहती है।"
+              }
+            },
+            {
+              "id": "hx_18",
+              "itemNumber": 18,
+              "reverseScored": true,
+              "text": {
+                "en": "Having a lot of money is not especially important to him/her.",
+                "hi": "अधिक धन होना उसके/उसके लिए विशेष महत्वपूर्ण नहीं है।"
+              }
+            },
+            {
+              "id": "hx_19",
+              "itemNumber": 19,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she thinks that paying attention to radical ideas is a waste of time.",
+                "hi": "वह/वो उग्र/कट्टर विचारों पर ध्यान देना समय की बर्बादी मानता/मानती है।"
+              }
+            },
+            {
+              "id": "hx_20",
+              "itemNumber": 20,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she makes decisions based on the feeling of the moment rather than on careful thought.",
+                "hi": "वह/वो सूझबूझ के बजाय क्षणिक भावनाओं पर निर्णय लेता/लेती है।"
+              }
+            },
+            {
+              "id": "hx_21",
+              "itemNumber": 21,
+              "reverseScored": true,
+              "text": {
+                "en": "People think of him/her as someone who has a quick temper.",
+                "hi": "लोग उसे/उसे तेज़ गुस्से वाला मानते हैं।"
+              }
+            },
+            {
+              "id": "hx_22",
+              "itemNumber": 22,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she is energetic nearly all the time.",
+                "hi": "वह/वो लगभग सदैव ऊर्जावान रहता/रहती है।"
+              }
+            },
+            {
+              "id": "hx_23",
+              "itemNumber": 23,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she feels like crying when he/she sees other people crying.",
+                "hi": "दूसरों को रोते देख वह/वो स्वयं भी रोने जैसा महसूस करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_24",
+              "itemNumber": 24,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she thinks that he/she is an ordinary person who is no better than others.",
+                "hi": "वह/वो स्वयं को साधारण और दूसरों से श्रेष्ठ नहीं मानता/मानती।"
+              }
+            },
+            {
+              "id": "hx_25",
+              "itemNumber": 25,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she wouldn't spend his/her time reading a book of poetry.",
+                "hi": "वह/वो काव्य-पुस्तक पढ़ने में समय नहीं बिताएगा/बिताएगी।"
+              }
+            },
+            {
+              "id": "hx_26",
+              "itemNumber": 26,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she plans ahead and organizes things, to avoid scrambling at the last minute.",
+                "hi": "अंतिम क्षण की हड़बड़ी से बचने हेतु वह/वो पूर्व-नियोजन एवं संगठन करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_27",
+              "itemNumber": 27,
+              "reverseScored": false,
+              "text": {
+                "en": "His/her attitude toward people who have treated him/her badly is \"forgive and forget\".",
+                "hi": "बुरा करने वालों के प्रति उसका/उसके मनभाव — “क्षमा करो और भूल जाओ”।"
+              }
+            },
+            {
+              "id": "hx_28",
+              "itemNumber": 28,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she thinks that most people like some aspects of his/her personality.",
+                "hi": "वह/वो सोचता/सोचती है कि अधिकतर लोग उसकी/उसके व्यक्तित्व के कुछ पहलू पसंद करते हैं।"
+              }
+            },
+            {
+              "id": "hx_29",
+              "itemNumber": 29,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she doesn't mind doing jobs that involve dangerous work.",
+                "hi": "वह/वो खतरनाक काम वाली नौकरियों में कोई आपत्ति नहीं करता/करती।"
+              }
+            },
+            {
+              "id": "hx_30",
+              "itemNumber": 30,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she wouldn't use flattery to get a raise or promotion at work, even if he/she thought it would succeed.",
+                "hi": "वेतन-वृद्धि या पदोन्नति हेतु चापलूसी उपयोग नहीं करेगा/करेगी, भले सफलता का विश्वास हो।"
+              }
+            },
+            {
+              "id": "hx_31",
+              "itemNumber": 31,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she enjoys looking at maps of different places.",
+                "hi": "वह/वो विभिन्न स्थानों के नक्शे देखने में आनंद लेता/लेती है।"
+              }
+            },
+            {
+              "id": "hx_32",
+              "itemNumber": 32,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she often pushes himself/herself very hard when trying to achieve a goal.",
+                "hi": "लक्ष्य प्राप्ति हेतु वह/वो स्वयं को अक्सर अत्यधिक कठिन परिश्रम के लिए प्रेरित करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_33",
+              "itemNumber": 33,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she generally accepts people's faults without complaining about them.",
+                "hi": "वह/वो सामान्यतः लोगों की कमियाँ शिकायत किए बिना स्वीकार करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_34",
+              "itemNumber": 34,
+              "reverseScored": false,
+              "text": {
+                "en": "In social situations, he/she is usually the one who makes the first move.",
+                "hi": "सामाजिक परिस्थितियों में अक्सर पहल वह/वो करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_35",
+              "itemNumber": 35,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she worries a lot less than most people do.",
+                "hi": "वह/वो अधिकतर लोगों की तुलना में बहुत कम चिंता करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_36",
+              "itemNumber": 36,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she would be tempted to buy stolen property if he/she were financially tight.",
+                "hi": "आर्थिक तंगी में चोरी का माल खरीदने के लिए प्रलोभित होगा/होगी।"
+              }
+            },
+            {
+              "id": "hx_37",
+              "itemNumber": 37,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she would enjoy creating a work of art, such as a novel, a song, or a painting.",
+                "hi": "वह/वो उपन्यास, गीत या चित्रकला जैसे कला-कर्म रचने में आनंद लेगा/लेगी।"
+              }
+            },
+            {
+              "id": "hx_38",
+              "itemNumber": 38,
+              "reverseScored": true,
+              "text": {
+                "en": "When working on something, he/she doesn't pay much attention to small details.",
+                "hi": "कार्य करते समय वह/वो छोटे-छोटे विवरणों पर अधिक ध्यान नहीं देता/देती।"
+              }
+            },
+            {
+              "id": "hx_39",
+              "itemNumber": 39,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she is usually quite flexible in his/her opinions when people disagree with him/her.",
+                "hi": "मतभेद होने पर वह/वो सामान्यतः अपने मतों में काफ़ी लचीला रहता/रहती है।"
+              }
+            },
+            {
+              "id": "hx_40",
+              "itemNumber": 40,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she enjoys having lots of people around to talk with.",
+                "hi": "वह/वो बातचीत हेतु बहुत से लोगों के बीच रहना पसंद करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_41",
+              "itemNumber": 41,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she can handle difficult situations without needing emotional support from anyone else.",
+                "hi": "कठिन परिस्थितियों का सामना वह/वो अन्य किसी के भावनात्मक सहारे के बिना कर सकता/सकती है।"
+              }
+            },
+            {
+              "id": "hx_42",
+              "itemNumber": 42,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she would like to live in a very expensive, high-class neighborhood.",
+                "hi": "वह/वो अत्यंत महँगे, उच्च-वर्गीय पड़ोस में रहना चाहेगा/चाहेगी।"
+              }
+            },
+            {
+              "id": "hx_43",
+              "itemNumber": 43,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she likes people who have unconventional views.",
+                "hi": "वह/वो असम्प्रदायिक/अपरंपरिक विचारों वाले लोगों को पसंद करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_44",
+              "itemNumber": 44,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she makes a lot of mistakes because he/she doesn't think before he/she acts.",
+                "hi": "विचार किए बिना कार्य करने से वह/वो अनेक त्रुटियाँ करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_45",
+              "itemNumber": 45,
+              "reverseScored": false,
+              "text": {
+                "en": "He/she rarely feels anger, even when people treat him/her quite badly.",
+                "hi": "लोग बुरा व्यवहार करें तब भी वह/वो क्रोध बहुत कम महसूस करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_46",
+              "itemNumber": 46,
+              "reverseScored": false,
+              "text": {
+                "en": "On most days, he/she feels cheerful and optimistic.",
+                "hi": "अधिकतर दिनों वह/वो प्रसन्न एवं आशावादी महसूस करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_47",
+              "itemNumber": 47,
+              "reverseScored": false,
+              "text": {
+                "en": "When someone he/she knows well is unhappy, he/she can almost feel that person's pain himself/herself.",
+                "hi": "निकट परिचित दुखी हो तो वह/वो लगभग उसका दर्द स्वयं महसूस कर सकता/सकती है।"
+              }
+            },
+            {
+              "id": "hx_48",
+              "itemNumber": 48,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she wouldn't want people to treat him/her as though he/she were superior to them.",
+                "hi": "लोग उसे/उसे स्वयं से श्रेष्ठ मानकर व्यवहार करें — यह वह/वो नहीं चाहेगा/चाहेगी।"
+              }
+            },
+            {
+              "id": "hx_49",
+              "itemNumber": 49,
+              "reverseScored": false,
+              "text": {
+                "en": "If he/she had the opportunity, he/she would like to attend a classical music concert.",
+                "hi": "अवसर मिले तो वह/वो शास्त्रीय संगीत कार्यक्रम में जाना चाहेगा/चाहेगी।"
+              }
+            },
+            {
+              "id": "hx_50",
+              "itemNumber": 50,
+              "reverseScored": true,
+              "text": {
+                "en": "People often joke with him/her about the messiness of his/her room or desk.",
+                "hi": "लोग उसके/उसके कमरे या मेज़ की अव्यवस्था का अक्सर मज़ाक उड़ाते हैं।"
+              }
+            },
+            {
+              "id": "hx_51",
+              "itemNumber": 51,
+              "reverseScored": true,
+              "text": {
+                "en": "If someone has cheated him/her once, he/she will always feel suspicious of that person.",
+                "hi": "एक बार धोखा हुआ हो तो वह/वो उस व्यक्ति के प्रति सदैव संदेहशील रहेगा/रहेगी।"
+              }
+            },
+            {
+              "id": "hx_52",
+              "itemNumber": 52,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she feels that he/she is an unpopular person.",
+                "hi": "वह/वो स्वयं को अप्रिय/अलोकप्रिय व्यक्ति मानता/मानती है।"
+              }
+            },
+            {
+              "id": "hx_53",
+              "itemNumber": 53,
+              "reverseScored": false,
+              "text": {
+                "en": "When it comes to physical danger, he/she is very fearful.",
+                "hi": "शारीरिक खतरे के मामले में वह/वो अत्यंत भयाकुल होता/होती है।"
+              }
+            },
+            {
+              "id": "hx_54",
+              "itemNumber": 54,
+              "reverseScored": true,
+              "text": {
+                "en": "If he/she wants something from someone, he/she will laugh at that person's worst jokes.",
+                "hi": "किसी से कुछ चाहिए हो तो उसकी सबसे बुरी चुटकुलों पर भी वह/वो हँसेगा/हँसेगी।"
+              }
+            },
+            {
+              "id": "hx_55",
+              "itemNumber": 55,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she would be very bored by a book about the history of science and technology.",
+                "hi": "विज्ञान एवं तकनीकी के इतिहास की पुस्तक से वह/वो बहुत बोर होगा/होगी।"
+              }
+            },
+            {
+              "id": "hx_56",
+              "itemNumber": 56,
+              "reverseScored": true,
+              "text": {
+                "en": "Often when he/she sets a goal, he/she ends up quitting without having reached it.",
+                "hi": "अक्सर लक्ष्य निर्धारित करने पर उसे पाए बिना ही वह/वो बीच में छोड़ देता/छोड़ देती है।"
+              }
+            },
+            {
+              "id": "hx_57",
+              "itemNumber": 57,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she tends to be lenient in judging other people.",
+                "hi": "दूसरों का मूल्यांकन करते समय वह/वो उदार/शिथिल रहने की प्रवृत्ति रखता/रखती है।"
+              }
+            },
+            {
+              "id": "hx_58",
+              "itemNumber": 58,
+              "reverseScored": false,
+              "text": {
+                "en": "When he/she is in a group of people, he/she is often the one who speaks on behalf of the group.",
+                "hi": "समूह में वह/वो अक्सर समूह की ओर से बोलता/बोलती है।"
+              }
+            },
+            {
+              "id": "hx_59",
+              "itemNumber": 59,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she rarely, if ever, has trouble sleeping due to stress or anxiety.",
+                "hi": "तनाव या चिंता के कारण नींद में कठिनाई वह/वो बहुत कम, यदि कभी, अनुभव करता/करती है।"
+              }
+            },
+            {
+              "id": "hx_60",
+              "itemNumber": 60,
+              "reverseScored": true,
+              "text": {
+                "en": "He/she would never accept a bribe, even if it were very large.",
+                "hi": "अत्यधिक बड़ा हो तब भी वह/वो कभी रिश्वत स्वीकार नहीं करेगा/करेगी।"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 1,
+          "label": {
+            "en": "1 Strongly disagree",
+            "hi": "1 पूर्णतः असहमत"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "2 Disagree",
+            "hi": "2 असहमत"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "3 Neutral",
+            "hi": "3 तटस्थ"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "4 Agree",
+            "hi": "4 सहमत"
+          }
+        },
+        {
+          "v": 5,
+          "label": {
+            "en": "5 Strongly agree",
+            "hi": "5 पूर्णतः सहमत"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 1,
+        "max": 5,
+        "note": {
+          "en": "1 = strongly disagree, 2 = disagree, 3 = neutral (neither agree nor disagree), 4 = agree, 5 = strongly agree. Items marked R are reverse-scored.",
+          "hi": "1 = पूर्णतः असहमत · 2 = असहमत · 3 = तटस्थ · 4 = सहमत · 5 = पूर्णतः सहमत। 'R' चिह्नित आइटम व्युक्रम-अंकित होते हैं।"
+        }
+      },
+      "facets": {
+        "sincerity": {
+          "name": {
+            "en": "Sincerity",
+            "hi": "आंतरिकता/निष्ठा"
+          },
+          "domain": "h_h",
+          "items": [
+            6,
+            30,
+            54
+          ]
+        },
+        "fairness": {
+          "name": {
+            "en": "Fairness",
+            "hi": "न्यायपरायणता"
+          },
+          "domain": "h_h",
+          "items": [
+            12,
+            36,
+            60
+          ]
+        },
+        "greed_avoidance": {
+          "name": {
+            "en": "Greed Avoidance",
+            "hi": "लालच-परिहार"
+          },
+          "domain": "h_h",
+          "items": [
+            18,
+            42
+          ]
+        },
+        "modesty": {
+          "name": {
+            "en": "Modesty",
+            "hi": "विनम्रता"
+          },
+          "domain": "h_h",
+          "items": [
+            24,
+            48
+          ]
+        },
+        "fearfulness": {
+          "name": {
+            "en": "Fearfulness",
+            "hi": "भयाकुलता"
+          },
+          "domain": "e",
+          "items": [
+            5,
+            29,
+            53
+          ]
+        },
+        "anxiety": {
+          "name": {
+            "en": "Anxiety",
+            "hi": "चिंता"
+          },
+          "domain": "e",
+          "items": [
+            11,
+            35
+          ]
+        },
+        "dependence": {
+          "name": {
+            "en": "Dependence",
+            "hi": "निर्भरता"
+          },
+          "domain": "e",
+          "items": [
+            17,
+            41
+          ]
+        },
+        "sentimentality": {
+          "name": {
+            "en": "Sentimentality",
+            "hi": "संवेदनशीलता"
+          },
+          "domain": "e",
+          "items": [
+            23,
+            47,
+            59
+          ]
+        },
+        "social_self_esteem": {
+          "name": {
+            "en": "Social Self-Esteem",
+            "hi": "सामाजिक आत्मसम्मान"
+          },
+          "domain": "x",
+          "items": [
+            4,
+            28,
+            52
+          ]
+        },
+        "social_boldness": {
+          "name": {
+            "en": "Social Boldness",
+            "hi": "सामाजिक साहस"
+          },
+          "domain": "x",
+          "items": [
+            10,
+            34,
+            58
+          ]
+        },
+        "sociability": {
+          "name": {
+            "en": "Sociability",
+            "hi": "सामाजिकता"
+          },
+          "domain": "x",
+          "items": [
+            16,
+            40
+          ]
+        },
+        "liveliness": {
+          "name": {
+            "en": "Liveliness",
+            "hi": "प्राणोद्वलन"
+          },
+          "domain": "x",
+          "items": [
+            22,
+            46
+          ]
+        },
+        "forgiveness": {
+          "name": {
+            "en": "Forgiveness",
+            "hi": "क्षमाशीलता"
+          },
+          "domain": "a",
+          "items": [
+            3,
+            27
+          ]
+        },
+        "gentleness": {
+          "name": {
+            "en": "Gentleness",
+            "hi": "कोमलता"
+          },
+          "domain": "a",
+          "items": [
+            9,
+            33,
+            51
+          ]
+        },
+        "flexibility": {
+          "name": {
+            "en": "Flexibility",
+            "hi": "लचीलापन"
+          },
+          "domain": "a",
+          "items": [
+            15,
+            39,
+            57
+          ]
+        },
+        "patience": {
+          "name": {
+            "en": "Patience",
+            "hi": "धैर्य"
+          },
+          "domain": "a",
+          "items": [
+            21,
+            45
+          ]
+        },
+        "organization": {
+          "name": {
+            "en": "Organization",
+            "hi": "सुव्यवस्था"
+          },
+          "domain": "c",
+          "items": [
+            2,
+            26
+          ]
+        },
+        "diligence": {
+          "name": {
+            "en": "Diligence",
+            "hi": "परिश्रमिता"
+          },
+          "domain": "c",
+          "items": [
+            8,
+            32
+          ]
+        },
+        "perfectionism": {
+          "name": {
+            "en": "Perfectionism",
+            "hi": "परिपूर्णता"
+          },
+          "domain": "c",
+          "items": [
+            14,
+            38,
+            50
+          ]
+        },
+        "prudence": {
+          "name": {
+            "en": "Prudence",
+            "hi": "सावधानता"
+          },
+          "domain": "c",
+          "items": [
+            20,
+            44,
+            56
+          ]
+        },
+        "aesthetic_appreciation": {
+          "name": {
+            "en": "Aesthetic Appreciation",
+            "hi": "सौंदर्य-साहाध्यता"
+          },
+          "domain": "o",
+          "items": [
+            1,
+            25
+          ]
+        },
+        "inquisitiveness": {
+          "name": {
+            "en": "Inquisitiveness",
+            "hi": "जिज्ञासा"
+          },
+          "domain": "o",
+          "items": [
+            7,
+            31
+          ]
+        },
+        "creativity": {
+          "name": {
+            "en": "Creativity",
+            "hi": "रचनात्मकता"
+          },
+          "domain": "o",
+          "items": [
+            13,
+            37,
+            49
+          ]
+        },
+        "unconventionality": {
+          "name": {
+            "en": "Unconventionality",
+            "hi": "अपरंपरिकता"
+          },
+          "domain": "o",
+          "items": [
+            19,
+            43,
+            55
+          ]
+        }
+      },
+      "domains": {
+        "h_h": {
+          "name": {
+            "en": "Honesty-Humility",
+            "hi": "प्रामाणिकता-विनम्रता"
+          },
+          "facets": [
+            "sincerity",
+            "fairness",
+            "greed_avoidance",
+            "modesty"
+          ],
+          "facetNames": "Sincerity, Fairness, Greed Avoidance, Modesty"
+        },
+        "e": {
+          "name": {
+            "en": "Emotionality",
+            "hi": "भावनात्मकता"
+          },
+          "facets": [
+            "fearfulness",
+            "anxiety",
+            "dependence",
+            "sentimentality"
+          ],
+          "facetNames": "Fearfulness, Anxiety, Dependence, Sentimentality"
+        },
+        "x": {
+          "name": {
+            "en": "Extraversion",
+            "hi": "बहिर्मुखता"
+          },
+          "facets": [
+            "social_self_esteem",
+            "social_boldness",
+            "sociability",
+            "liveliness"
+          ],
+          "facetNames": "Social Self-Esteem, Social Boldness, Sociability, Liveliness"
+        },
+        "a": {
+          "name": {
+            "en": "Agreeableness",
+            "hi": "सहमतिशीलता"
+          },
+          "facets": [
+            "forgiveness",
+            "gentleness",
+            "flexibility",
+            "patience"
+          ],
+          "facetNames": "Forgiveness, Gentleness, Flexibility, Patience"
+        },
+        "c": {
+          "name": {
+            "en": "Conscientiousness",
+            "hi": "कर्तव्यनिष्ठा"
+          },
+          "facets": [
+            "organization",
+            "diligence",
+            "perfectionism",
+            "prudence"
+          ],
+          "facetNames": "Organization, Diligence, Perfectionism, Prudence"
+        },
+        "o": {
+          "name": {
+            "en": "Openness to Experience",
+            "hi": "अनुभव-के-प्रति-विवृतता"
+          },
+          "facets": [
+            "aesthetic_appreciation",
+            "inquisitiveness",
+            "creativity",
+            "unconventionality"
+          ],
+          "facetNames": "Aesthetic Appreciation, Inquisitiveness, Creativity, Unconventionality"
+        }
+      },
+      "sumScoring": true,
+      "scoring": {
+        "method": "hexaco_observer_facet_domain_means",
+        "scaleMin": 1,
+        "scaleMax": 5,
+        "rule": {
+          "en": "Rate each item 1-5. For every item marked R in the scoring guide, use 6 minus the response. A facet score is the MEAN of its (reversed where keyed) raw items; a domain score is the MEAN of its four facet scores. Report all scores on the 1-5 metric.",
+          "hi": "प्रत्येक आइटम 1-5 पर रेट होता है। पहले व्युक्रम-आइटम (R) के लिए 6 − उत्तर निकालें। प्रत्येक फलक (facet) का अंक = उसके (व्युक्रम-अंकित) आइटमों का माध्य; प्रत्येक डोमेन का अंक = अपने चार फलक-अंकों का माध्य। सभी अंक 1-5 पर रिपोर्ट हों।"
+        },
+        "reverseItems": [
+          1,
+          9,
+          10,
+          12,
+          15,
+          18,
+          19,
+          20,
+          21,
+          24,
+          25,
+          26,
+          30,
+          32,
+          35,
+          36,
+          38,
+          41,
+          42,
+          44,
+          48,
+          50,
+          51,
+          52,
+          54,
+          55,
+          56,
+          57,
+          59,
+          60
+        ],
+        "interpretationNote": {
+          "en": "HEXACO scores are descriptive personality profiles, not diagnostic thresholds — the instrument defines no clinical cut-offs. High H-H indicates sincerity, fairness, greed avoidance and modesty; high E indicates fearfulness, anxiety, dependence and sentimentality; high X indicates social self-esteem, social boldness, sociability and liveliness; high A indicates forgiveness, gentleness, flexibility and patience; high C indicates organization, diligence, perfectionism and prudence; high O indicates aesthetic appreciation, inquisitiveness, creativity and unconventionality. Interpret observer ratings alongside — not instead of — the patient's own report, and note the informant's relationship and exposure to the subject.",
+          "hi": "HEXACO अंक वर्णनात्मक व्यक्तित्व-प्रोफाइल हैं — कोई नैदानिक कटऑफ नहीं। उच्च H-H = प्रामाणिकता/विनम्रता; उच्च E = भय/चिंता/निर्भरता/संवेदनशीलता; उच्च X = सामाजिक आत्मसम्मान/साहस/सामाजिकता/प्राणोद्वलन; उच्च A = क्षमा/कोमलता/लचीलापन/धैर्य; उच्च C = सुव्यवस्था/परिश्रम/परिपूर्णता/सावधानता; उच्च O = सौंदर्य/जिज्ञासा/रचनात्मकता/अपरंपरिकता। पर्यवेक्षक-रिपोर्ट रोगी-स्व-रिपोर्ट से पृथक सन्दर्भ में व्याख्या करें।"
+        },
+        "psychometrics": {
+          "en": "Internal-consistency reliabilities ranged .77 to .80 for college samples and .73 to .80 for community samples, with sufficient convergent validity against theoretically related scales such as the NEO Five-Factor Inventory (Ashton & Lee, 2009).",
+          "hi": "आंतरिक सुसंगतता .77-.80 (कॉलेज नमूने) एवं .73-.80 (सामुदायिक नमूने); NEO-FFI से अभिसारी वैधता पर्याप्त (Ashton & Lee, 2009)।"
+        },
+        "notDiagnostic": true,
+        "disorders": []
+      },
+      "licensing": {
+        "en": "HEXACO-PI-R / HEXACO-60 by Kibeom Lee, Ph.D. & Michael C. Ashton, Ph.D. Item wording and the scoring key are published freely by the authors for research and clinical use; commercial or redistributed use requires their permission. The Hindi rendering here is a working translation and should be reviewed before clinical use.",
+        "hi": "HEXACO-PI-R / HEXACO-60, Kibeom Lee एवं Michael C. Ashton। मूल रूप व स्कोरिंग-कुंजी लेखकों द्वारा शोध/नैदानिक उपयोग हेतु मुक्त प्रकाशित; व्यावसायिक अथवा पुनर्विक्रय उपयोग हेतु उनकी अनुमति आवश्यक। यहाँ का हिन्दी रूपांतर कार्यशील अनुवाद है — नैदानिक प्रयोग से पूर्व समीक्षा कराएँ।"
+      },
+      "translationNote": {
+        "en": "Hindi item wording is a working translation; the English original is authoritative.",
+        "hi": "हिन्दी आइटम-रूप कार्यशील अनुवाद हैं; अंग्रेज़ी मूल प्राधिकृत है।"
+      },
+      "branching": null
     }
   },
   "sharedScales": {
@@ -11410,7 +14602,7 @@
     ]
   },
   "meta": {
-    "schemaVersion": "2.7.0",
+    "schemaVersion": "2.9.0",
     "updated": "2026-11-04",
     "framework": "DSM-5-TR labels compared with ICD-11 codes; selective comparative index, not an official DSM-to-ICD crosswalk",
     "verification": {
@@ -11441,7 +14633,9 @@
       "MID-60 items 22, 37, 44, 56 and 58 (persecutory/degrading voices, waking with means of self-harm) and DES-II item 27 (command/commentary voices) carry safety flags that open the crisis pathway when rated above zero.",
       "FAC22-SR: added from the published scale table (Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) Table 7). English wording is authoritative and was repaired from the scan; Hindi labels are a working translation awaiting bilingual-clinician proofreading. Keying verified at build time: Yes to 5, 8, 10, 11, 14-22 and No to 1-4, 6, 7, 9, 12, 13 = 22 items. Screening only - never diagnostic; factitious disorder additionally requires exclusion of malingering (see reference.malingering).",
       "PHQ-15: 15-item somatic symptom severity index (0-2 each, total 0-30) added as a tier-2 optional screen reached from the `somatic` domain; bands follow the printed cut-points 0-4 / 5-9 / 10-14 / 15+. Severity measure that supplements clinical judgement.",
-      "GCLS implemented as scales.gcls (Gender Congruence and Life Satisfaction Scale; 38 items rated Never=0 to Always=4 over the past 6 months, plus one non-scored genital-surgery tick-box linked to item 26). Four subscales with reverse-keyed positively worded items (16, 20, 22, 30 congruence; 35, 37 negative satisfaction): functional impact 1-13, body preoccupation 14/15/17/18/19/21/23/24/26/27/28/29, social preoccupation 16/20/22/30, life satisfaction 31-38 reported separately (higher = more satisfied). Reached through the new 'gender' domain via routing auto:genderdistress. Items 8 and 13 are safety-flagged (chest/genital self-harm and suicidal ideation) and open the crisis pathway. Dimensional screen only — it never diagnoses gender incongruence, and gender diversity alone is not a disorder."
+      "GCLS implemented as scales.gcls (Gender Congruence and Life Satisfaction Scale; 38 items rated Never=0 to Always=4 over the past 6 months, plus one non-scored genital-surgery tick-box linked to item 26). Four subscales with reverse-keyed positively worded items (16, 20, 22, 30 congruence; 35, 37 negative satisfaction): functional impact 1-13, body preoccupation 14/15/17/18/19/21/23/24/26/27/28/29, social preoccupation 16/20/22/30, life satisfaction 31-38 reported separately (higher = more satisfied). Reached through the new 'gender' domain via routing auto:genderdistress. Items 8 and 13 are safety-flagged (chest/genital self-harm and suicidal ideation) and open the crisis pathway. Dimensional screen only — it never diagnoses gender incongruence, and gender diversity alone is not a disorder.",
+      "BISS implemented as scales.biss (Bipolar Inventory of Signs and Symptoms Scale, Bowden v1.5 4/1/08): 44 clinician-rated items scored 0-4 over the most recent 7 days, each with its own printed verbal anchors, item definition and probe questions. Depression section items 1-20 (0-80), Mania section items 21-44 (0-96); an item counts as symptomatic at >= 2. Dimensional severity measure with no diagnostic cutoff - the score never produces a bipolar diagnosis, it describes severity and change. Reached through the mood domain via routing auto:bipolartable. Items 4 (suicidality), 25 (aggression), 39 (risky behaviour) and 43 (hallucinations) are safety-flagged.",
+      "HEXACO-PI-R Observer Report Form implemented as scales.hexaco_pi_r_observer (60 informant-rated items, 1-5 scale, 24 facets across 6 domains, R items reverse-scored, facet/domain means reported on the 1-5 metric). Descriptive profile only - no diagnostic cut-offs. Item wording and the scoring key are those published by Lee & Ashton; confirm licensing terms for the deployment setting."
     ]
   },
   "i18n": {
