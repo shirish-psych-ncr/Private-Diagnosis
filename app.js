@@ -195,7 +195,7 @@
      * and ASRS-v1.1 (the domain's own item set) for adults, per the whitepaper.
      */
     /* Routes whose optional instruments are always shown once the domain is picked. */
-    const OPTIONAL_TABLE_ROUTES = ['auto:minioptional', 'auto:pdscreen', 'auto:angertable', 'auto:dissociationtable', 'auto:somatoptable', 'auto:genderdistress'];
+    const OPTIONAL_TABLE_ROUTES = ['auto:minioptional', 'auto:pdscreen', 'auto:angertable', 'auto:dissociationtable', 'auto:somatoptable', 'auto:genderdistress', 'auto:bipolartable'];
 
     function routeInstruments() {
         const deployed = [];
@@ -210,6 +210,12 @@
                     instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
                 });
             } else if (OPTIONAL_TABLE_ROUTES.includes(instName)) {
+                if (instName === 'auto:bipolartable' && domain.baseInstrument) {
+                    // The mood domain keeps its own PHQ-9 item set as the primary
+                    // instrument; the BISS rides along underneath as an optional
+                    // clinician-rated table.
+                    deployed.push({ domain, scaleId: null, instrumentLabel: domain.baseInstrument });
+                }
                 // MINI 7.0.2 additional optional interview assessments (pp. 36-37):
                 // A - Cross-Cutting Measures (Severity of Symptom) and
                 // B - Disability / Functional Impairment. Both are clinician-rated
@@ -228,6 +234,14 @@
                 // auto:genderdistress deploys the Gender Congruence and Life Satisfaction
                 // Scale (GCLS) for the `gender` domain - a reverse-keyed, subscale-scored
                 // self-report of gender-related distress and life satisfaction.
+                //
+                // auto:bipolartable deploys the Bipolar Inventory of Signs and Symptoms
+                // Scale (BISS, Bowden) on the `mood` domain: 44 clinician-rated items
+                // scored 0-4 over the most recent 7 days from self-report plus family
+                // and interview observation. The mood domain keeps its own PHQ-9 item
+                // scoring, so the BISS rides along as an optional table attached to the
+                // domain's two bipolar screen-in items (mood_biss_1/2) rather than
+                // replacing the domain instrument.
                 // Screen-in questions for these routes are rendered above the
                 // instruments they relate to, so they stay answerable (see
                 // renderDomainScreenIns).
@@ -407,8 +421,67 @@
     }
 
     /** Sticky-column matrix tables mirroring clinical standards (e.g., VADRS). */
+    /**
+     * Verbal-anchor caption for a matrix table. The printed instruments define
+     * each rating by an example of behaviour / proportion of time / severity /
+     * functional impairment rather than by a bare number, so the on-screen table
+     * has to carry that definition or the rater is left guessing what "3" means.
+     * Scales whose options are plain frequency labels (VADRS, ASRS, PHQ-15, ...)
+     * have no per-item anchor sets and render nothing here.
+     */
+    function renderAnchorLegend(section, scale, cols) {
+        const questions = [];
+        (scale.parts || []).forEach(p => (p.questions || []).forEach(q => questions.push(q)));
+        const withAnchors = questions.filter(q => q.anchors && q.anchors.length);
+        if (!withAnchors.length) return;
+
+        const details = document.createElement('details');
+        details.className = 'anchor-legend';
+        const sum = document.createElement('summary');
+        sum.textContent = state.lang === 'hi'
+            ? 'रेटिंग एंकर (प्रत्येक आइटम के लिए छपा अर्थ)'
+            : 'Rating anchors (printed meaning for each item)';
+        details.appendChild(sum);
+
+        const note = document.createElement('p');
+        note.className = 'anchor-legend-note';
+        note.textContent = L(((scale.ratingScale || {}).note) || {
+            en: 'Anchors are examples of behaviours, proportions of time and functional impairment that qualify for a score; they do not exclude similar experiences. When in doubt between two ratings, assign the higher score.',
+            hi: 'एंकर उन व्यवहारों, समय-अनुपात एवं कार्य-क्षति के उदाहरण हैं जो एक अंक हेतु योग्य हैं; समान अनुभवों को नहीं छोड़ा जाता। दो रेटिंगों में संदेह हो तो उच्चतर अंक दें।'
+        });
+        details.appendChild(note);
+
+        const table = document.createElement('table');
+        table.className = 'anchor-table clinician-table';
+        const head = document.createElement('tr');
+        [state.lang === 'hi' ? 'आइटम' : 'Item'].concat(cols.map(c => L(c.label))).forEach(x => {
+            const th = document.createElement('th'); th.textContent = x; head.appendChild(th);
+        });
+        table.appendChild(head);
+        withAnchors.forEach(q => {
+            const tr = document.createElement('tr');
+            const th = document.createElement('th');
+            th.scope = 'row';
+            th.className = 'row-label';
+            th.textContent = (q.itemNumber != null ? q.itemNumber + '. ' : '') +
+                L(q.itemName || q.text);
+            tr.appendChild(th);
+            cols.forEach((c, i) => {
+                const td = document.createElement('td');
+                const a = q.anchors[i];
+                td.textContent = a ? L(a) : '—';
+                tr.appendChild(td);
+            });
+            table.appendChild(tr);
+        });
+        details.appendChild(table);
+        section.appendChild(details);
+    }
+
     function renderMatrix(section, scale, scaleId) {
         scaleId = scaleId || scale.id;
+        const cols = scale.matrixOptions || CLINICAL_DATA.sharedScales.nrsota;
+        renderAnchorLegend(section, scale, cols);
         scale.parts.forEach(part => {
             const partTitle = document.createElement('h4');
             partTitle.className = 'matrix-part-title';
@@ -508,7 +581,8 @@
                 // precedence over the sequential index so answers can be transcribed
                 // straight onto the paper scoring sheet.
                 const shownNumber = q.itemNumber != null ? q.itemNumber : (idx + 1);
-                rowHead.textContent = shownNumber + '. ' + L(q.text);
+                rowHead.textContent = shownNumber + '. ' +
+                    L(q.itemName || q.text);
                 if (q.reverseScored) {
                     const rev = document.createElement('span');
                     rev.className = 'criterion-note reverse-note';
@@ -520,6 +594,14 @@
                     note.className = 'criterion-note';
                     note.textContent = ' (' + q.criterionNote + ')';
                     rowHead.appendChild(note);
+                }
+                // Printed instrument definitions (BISS item description) render as a
+                // subordinate line so the rating row stays scannable.
+                if (q.definition) {
+                    const dfn = document.createElement('span');
+                    dfn.className = 'item-definition';
+                    dfn.textContent = L(q.definition);
+                    rowHead.appendChild(dfn);
                 }
                 rowHead.id = 'mrow-' + q.id;
                 tr.appendChild(rowHead);
@@ -539,6 +621,24 @@
                     td.appendChild(input);
                     tr.appendChild(td);
                 });
+                if (q.probes && q.probes.length) {
+                    const td = document.createElement('td');
+                    td.colSpan = cols.length;
+                    td.className = 'probe-cell';
+                    const ul = document.createElement('ul');
+                    ul.className = 'probe-list';
+                    q.probes.forEach(p => {
+                        const li = document.createElement('li');
+                        li.textContent = L(p);
+                        ul.appendChild(li);
+                    });
+                    const cap = document.createElement('p');
+                    cap.className = 'probe-caption';
+                    cap.textContent = state.lang === 'hi'
+                        ? 'पूछे जाने वाले प्रश्न:' : 'Ask:';
+                    td.append(cap, ul);
+                    tr.appendChild(td);
+                }
                 table.appendChild(tr);
             });
             wrap.appendChild(table);
@@ -580,7 +680,10 @@
         // screen yet silently skipped because its screen-in item was answered "No".
         // Optional rating-table routes therefore score every attached instrument;
         // other routes keep the original endorse-first behaviour.
-        const alwaysDeployed = OPTIONAL_TABLE_ROUTES.includes(domain.instrument);
+        const alwaysDeployed = OPTIONAL_TABLE_ROUTES.includes(domain.instrument) &&
+            // A hybrid route (mood / auto:bipolartable) still sums its own primary
+            // item set, so the usual endorse-first rule keeps applying there.
+            !(domain.instrument === 'auto:bipolartable' && domain.baseInstrument);
         domain.questions.forEach(q => {
             if (!q.scaleId) return;
             if (!alwaysDeployed && (state.responses[domain.id + ':' + q.id] || 0) < 1) return;
@@ -1269,6 +1372,118 @@
     }
 
     /**
+     * BISS (Bipolar Inventory of Signs and Symptoms Scale, Bowden v1.5) scoring.
+     * 44 clinician-rated items scored 0-4 over the most recent 7 days from
+     * self-report plus family and interview observation. Section I Depression is
+     * items 1-20 (0-80) and section II Mania is items 21-44 (0-96); an item counts
+     * as symptomatic at >= 2 (mild or worse). The printed instrument derives no
+     * diagnostic decision rule, so nothing here converts a total into a bipolar
+     * diagnosis: the differential categories are flagged only when the domain's
+     * own screen-in item is endorsed, exactly as for the other optional tables.
+     */
+    function scoreBiss(scale, addFlag) {
+        const hi = state.lang === 'hi';
+        const ans = id => state.responses[scale.id + ':' + id];
+        const sections = Object.keys((scale.scoring || {}).sections || {});
+        const posV = (scale.scoring || {}).positiveItemValue || 2;
+        const rows = [];
+        let allAnswered = true;
+        sections.forEach(slug => {
+            const sec = scale.scoring.sections[slug];
+            const values = sec.ids.map(ans);
+            const answered = values.filter(v => v !== undefined);
+            if (answered.length !== sec.ids.length) allAnswered = false;
+            const sum = answered.reduce((t, v) => t + Number(v), 0);
+            const done = answered.length === sec.ids.length;
+            const bandLabelFor = s => {
+                if (s === 0) return hi ? 'अनुपस्थित' : 'Absent';
+                if (s <= 10) return hi ? 'हल्का-मंद' : 'Slight-mild';
+                if (s <= 25) return hi ? 'मध्यम' : 'Moderate';
+                return hi ? 'गंभीर' : 'Severe';
+            };
+            rows.push({
+                label: slug === 'depression'
+                    ? (hi ? 'I. अवसाद (आइटम 1-20)' : 'I. Depression (items 1-20)')
+                    : (hi ? 'II. उन्माद (आइटम 21-44)' : 'II. Mania (items 21-44)'),
+                value: done ? (sum + '/' + sec.maxTotal)
+                            : (hi ? 'अपूर्ण (' + answered.length + '/' + sec.count + ')'
+                                  : 'Incomplete (' + answered.length + '/' + sec.count + ')'),
+                flagged: done && sum > 0,
+                detail: done ? (bandLabelFor(sum) + ' · ' +
+                    answered.filter(v => Number(v) >= posV).length + ' ≥ mild' +
+                    (slug === 'mania' ? '' : ' · ' +
+                        answered.filter(v => Number(v) === 1).length + ' slight')) : ''
+            });
+        });
+
+        // Safety register: suicidality (item 4) at any rating, plus aggression
+        // (25), risky behaviour (39) and hallucinations (43) at mild or worse.
+        const safetyHits = (scale.safetyItems || []).filter(id => {
+            const v = ans(id);
+            if (v === undefined) return false;
+            return id === 'biss_4' ? Number(v) >= 1 : Number(v) >= posV;
+        });
+        const itemName = id => {
+            const q = (scale.parts || []).flatMap(p => p.questions || [])
+                .find(x => x.id === id);
+            return q ? L(q.itemName || q.text) : id;
+        };
+
+        const depSum = sections.indexOf('depression') >= 0
+            ? scale.scoring.sections.depression.ids.map(ans)
+                .filter(v => v !== undefined).reduce((t, v) => t + Number(v), 0) : 0;
+        const manSum = sections.indexOf('mania') >= 0
+            ? scale.scoring.sections.mania.ids.map(ans)
+                .filter(v => v !== undefined).reduce((t, v) => t + Number(v), 0) : 0;
+
+        const disorders = [];
+        if (allAnswered) {
+            // Screen-in endorsement decides which bipolar categories need the
+            // structured interview; the BISS itself only grades severity.
+            (scale.disorderKeys || []).forEach(k => {
+                if (!CLINICAL_DATA.disorders[k]) return;
+                const elevated = k === 'bipolar_depressive' ? depSum : manSum;
+                if (elevated > 0) disorders.push(k);
+            });
+            disorders.forEach(d => addFlag(d, 'BISS'));
+        }
+
+        return {
+            name: L(scale.name),
+            score: allAnswered
+                ? (hi ? 'अवसाद ' + depSum + '/80 · उन्माद ' + manSum + '/96'
+                      : 'Depression ' + depSum + '/80 · Mania ' + manSum + '/96')
+                : ((scale.scoring.sections.depression.ids.concat(
+                        scale.scoring.sections.mania.ids)
+                        .filter(id => ans(id) !== undefined)).length + '/44 ' +
+                    (hi ? 'रेटित' : 'rated')),
+            severity: allAnswered
+                ? (hi ? 'विमात्मक तीव्रता — रोग-निर्णायक नहीं'
+                      : 'Dimensional severity — not diagnostic')
+                : (hi ? 'अपूर्ण' : 'Incomplete'),
+            aboveCutoff: false,
+            notDiagnostic: true,
+            answered: scale.scoring.sections.depression.ids.concat(
+                        scale.scoring.sections.mania.ids).filter(id => ans(id) !== undefined).length,
+            total: 44,
+            disorders: disorders,
+            pdRegister: {
+                kind: 'biss',
+                heading: hi ? 'विभाग-वार तीव्रता (7 दिन)' : 'Section severity (past 7 days)',
+                note: L((scale.scoring || {}).interpretationNote || { en: '', hi: '' }) +
+                    (safetyHits.length ? (hi
+                        ? ' · सुरक्षा-चिह्न: ' + safetyHits.map(itemName).join(', ') +
+                          ' — तत्काल जोखिम-मूल्यांकन आवश्यक।'
+                        : ' · Safety flags: ' + safetyHits.map(itemName).join(', ') +
+                          ' — an immediate risk assessment is required.')
+                        : ''),
+                rows: rows
+            },
+            bissSafety: safetyHits.map(itemName)
+        };
+    }
+
+    /**
      * DES-II scoring: total = mean of the 28 item percentages (0-100). A mean of
      * 30 or above is the clinical comparison point that warrants a structured
      * dissociative-disorder interview. Dimensional screening only.
@@ -1516,13 +1731,27 @@
                 return;
             }
 
+            // Bipolar signs & symptoms (BISS) on the mood domain: the nine PHQ-9
+            // items keep their usual raw-sum scoring, and every BISS attached to an
+            // endorsed screen-in item is scored as a dimensional severity profile.
+            if (domain.instrument === 'auto:bipolartable' && domain.baseInstrument) {
+                // Same always-deployed rule as the other optional tables: the BISS
+                // appears on screen as soon as the mood domain is selected, so it
+                // must be scored regardless of how its screen-in items were answered.
+                deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
+                    if (scale.id === 'biss') instrumentResults.push(scoreBiss(scale, addFlag));
+                });
+                // fall through to the generic raw-sum block below for the PHQ-9 items
+            }
+
             // Domain raw-sum scoring against cutoff (PHQ-9/GAD-7/PCL-5/ISI/AUDIT-C/ASRS/CAARS-style)
             let sum = 0, answered = 0;
             domain.questions.forEach(q => {
+                if (q.scaleId) return;   // screen-in gates are not scored items
                 const v = state.responses[domain.id + ':' + q.id];
                 if (v !== undefined) { sum += v; answered++; }
             });
-            const maxPossible = domain.questions.reduce((m, q) =>
+            const maxPossible = domain.questions.filter(q => !q.scaleId).reduce((m, q) =>
                 m + Math.max(...optionsForQuestion(q).map(o => o.v)), 0);
             const cutoff = domain.cutoff != null ? domain.cutoff : Math.round(maxPossible * 0.4);
             const bands = domain.bands || [
@@ -1535,13 +1764,14 @@
             const severity = severityBand(sum, bands);
             if (aboveCutoff) {
                 domain.questions.forEach(q => {
+                    if (q.scaleId) return;   // screen-in gates flag via their own route
                     const v = state.responses[domain.id + ':' + q.id];
-                    if ((v || 0) >= 2 && q.disorders) q.disorders.forEach(d => addFlag(d, domain.instrument || domain.id));
+                    if ((v || 0) >= 2 && q.disorders) q.disorders.forEach(d => addFlag(d, domain.baseInstrument || domain.instrument || domain.id));
                 });
             }
             // Resolve the deployed instrument's canonical name from the library
             // (data.json instruments map), falling back to the domain id.
-            let instrumentName = (domain.instrument || domain.id);
+            let instrumentName = (domain.baseInstrument || domain.instrument || domain.id);
             if (CLINICAL_DATA.instruments) {
                 const slug = instrumentName.toLowerCase().replace(/[^a-z0-9]/g, '');
                 const matchKey = Object.keys(CLINICAL_DATA.instruments)
