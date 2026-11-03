@@ -1034,6 +1034,48 @@
           ]
         }
       ]
+    },
+    {
+      "id": "anger",
+      "name": {
+        "en": "Anger and impulse control",
+        "hi": "क्रोध एवं आवेग-नियंत्रण"
+      },
+      "tier": 2,
+      "description": {
+        "en": "Optional anger-assessment block. Endorsing a screen-in item deploys the corresponding instrument: the STAXI-CA (State-Trait Anger Expression Inventory — 57 rated items across State Anger, Trait Anger and the Anger Expression/Control scales) or the Clinical Anger Scale (21 four-option clusters, summed 0-63). Both produce dimensional/severity information only; neither is diagnostic.",
+        "hi": "वैकल्पिक क्रोध-मूल्यांकन ब्लॉक। स्क्रीन-इन आइटम चुनें तो संबंधित साधन खुलता है: STAXI-CA (अवस्था-लक्षण क्रोध अभिव्यक्ति सूची — 57 रेटेड आइटम: अवस्था क्रोध, लक्षण क्रोध, क्रोध-अभिव्यक्ति/नियंत्रण) अथवा नैदानिक क्रोध पैमाना (21 चार-विकल्प समूह, योग 0-63)। दोनों केवल आयाम/तीव्रता सूचना देते हैं; कोई रोग-निर्णायक नहीं।"
+      },
+      "instrument": "auto:angertable",
+      "cutoff": null,
+      "questions": [
+        {
+          "id": "ang_1",
+          "text": {
+            "en": "Do you often feel angry, irritable or furious, or find yourself reacting with yelling, arguing or physical aggression?",
+            "hi": "क्या आपको प्रायः क्रोध, चिड़चिड़ापन अथवा प्रकोप महसूस होता है, अथवा आप चिल्लाना, वाद-विवाद अथवा शारीरिक आक्रामकता से प्रतिक्रिया देते/देती पाते/पाती हैं?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "staxi_ca",
+          "disorders": [
+            "other_specified_disruptive_impulse_control_behaviour_disorder",
+            "unspecified_disruptive_impulse_control_behaviour_disorder"
+          ]
+        },
+        {
+          "id": "ang_2",
+          "text": {
+            "en": "Over the past several years, has anger been a persistent problem for you — affecting your mood, your relationships, your work or studies, your sleep, appetite or health?",
+            "hi": "गत कुछ वर्षों में क्या क्रोध आपके लिए सतत समस्या रहा है — भावना, संबंध, कार्य/अध्ययन, नींद, भूख अथवा स्वास्थ्य को प्रभावित करता है?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "clinical_anger_scale",
+          "disorders": [
+            "other_specified_disruptive_impulse_control_behaviour_disorder",
+            "unspecified_disruptive_impulse_control_behaviour_disorder"
+          ]
+        }
+      ]
     }
   ],
   "disorders": {
@@ -1845,6 +1887,78 @@
         "en": "Screen-positive personality pattern awaiting the structured interview (IPDE/PDQ-4+ screens are hypothesis-generating only).",
         "hi": "Screen-positive personality pattern awaiting the structured interview (IPDE/PDQ-4+ screens are hypothesis-generating only)."
       }
+    },
+    "intermittent_explosive_disorder": {
+      "name": {
+        "en": "Intermittent Explosive Disorder",
+        "hi": "विविक्त विस्फोटक विकार"
+      },
+      "tier": 3,
+      "dsm5": "Intermittent Explosive Disorder",
+      "icd11": "6B60",
+      "icd10": "F63.81",
+      "mappingNote": {
+        "en": "Anger-screen flag only — severity instruments (STAXI-CA / CAS) quantify anger dimensions and require clinical confirmation before any diagnostic use.",
+        "hi": "केवल क्रोध-स्क्रीन धनात्मक — तीव्रता-पैमाने (STAXI-CA / CAS) क्रोध-आयाम मापते हैं; रोग-निर्णय हेतु नैदानिक पुष्टि आवश्यक।"
+      },
+      "description": {
+        "en": "Recurrent behavioural outbursts representing impulsive aggressive episodes; anger instruments quantify severity but cannot diagnose.",
+        "hi": "Recurrent behavioural outbursts representing impulsive aggressive episodes; anger instruments quantify severity but cannot diagnose."
+      }
+    },
+    "disruptive_mood_dysregulation_disorder": {
+      "name": {
+        "en": "Disruptive Mood Dysregulation Disorder",
+        "hi": "विघ्नकारी मूड-अनियमन विकार"
+      },
+      "tier": 3,
+      "dsm5": "Disruptive Mood Dysregulation Disorder",
+      "icd11": "6A00.1 (paediatric-onset mood dysregulation)",
+      "icd10": "F67.8 / 6A60",
+      "mappingNote": {
+        "en": "Anger-screen flag only — severity instruments (STAXI-CA / CAS) quantify anger dimensions and require clinical confirmation before any diagnostic use.",
+        "hi": "केवल क्रोध-स्क्रीन धनात्मक — तीव्रता-पैमाने (STAXI-CA / CAS) क्रोध-आयाम मापते हैं; रोग-निर्णय हेतु नैदानिक पुष्टि आवश्यक।"
+      },
+      "description": {
+        "en": "Severe persistent irritability with frequent temper outbursts in children/adolescents; STAXI-CA informs severity only.",
+        "hi": "Severe persistent irritability with frequent temper outbursts in children/adolescents; STAXI-CA informs severity only."
+      }
+    },
+    "other_specified_disruptive_impulse_control_behaviour_disorder": {
+      "name": {
+        "en": "Other Specified Disruptive, Impulse-Control and Conduct Disorder",
+        "hi": "अन्य निर्दिष्ट विघ्नकारी, आवेग-नियंत्रण एवं आचरण विकार"
+      },
+      "tier": 3,
+      "dsm5": "Other Specified Disruptive, Impulse-Control and Conduct Disorder",
+      "icd11": "6B90",
+      "icd10": "F63.8",
+      "mappingNote": {
+        "en": "Anger-screen flag only — severity instruments (STAXI-CA / CAS) quantify anger dimensions and require clinical confirmation before any diagnostic use.",
+        "hi": "केवल क्रोध-स्क्रीन धनात्मक — तीव्रता-पैमाने (STAXI-CA / CAS) क्रोध-आयाम मापते हैं; रोग-निर्णय हेतु नैदानिक पुष्टि आवश्यक।"
+      },
+      "description": {
+        "en": "Clinician-specified anger/impulse-control problem that does not meet full criteria for a named disorder.",
+        "hi": "Clinician-specified anger/impulse-control problem that does not meet full criteria for a named disorder."
+      }
+    },
+    "unspecified_disruptive_impulse_control_behaviour_disorder": {
+      "name": {
+        "en": "Unspecified Disruptive, Impulse-Control and Conduct Disorder",
+        "hi": "अनिर्दिष्ट विघ्नकारी, आवेग-नियंत्रण एवं आचरण विकार"
+      },
+      "tier": 3,
+      "dsm5": "Unspecified Disruptive, Impulse-Control and Conduct Disorder",
+      "icd11": "6B91",
+      "icd10": "F63.9",
+      "mappingNote": {
+        "en": "Anger-screen flag only — severity instruments (STAXI-CA / CAS) quantify anger dimensions and require clinical confirmation before any diagnostic use.",
+        "hi": "केवल क्रोध-स्क्रीन धनात्मक — तीव्रता-पैमाने (STAXI-CA / CAS) क्रोध-आयाम मापते हैं; रोग-निर्णय हेतु नैदानिक पुष्टि आवश्यक।"
+      },
+      "description": {
+        "en": "Insufficient information to specify a particular anger/impulse-control disorder.",
+        "hi": "Insufficient information to specify a particular anger/impulse-control disorder."
+      }
     }
   },
   "instruments": {
@@ -2147,6 +2261,28 @@
       },
       "domain": "personality",
       "format": "self-report True/False questionnaire with thresholds",
+      "optionalAssessment": true
+    },
+    "STAXI-CA": {
+      "name": "State-Trait Anger Expression Inventory for Children and Adolescents (STAXI-CA)",
+      "description": {
+        "en": "57-item anger inventory in three printed parts: State Anger (items 1-15, 'how you feel right now'), Trait Anger (items 16-24, 'how you generally feel') and Anger Expression (items 25-57, split into Anger-In, Anger-Out, Anger Control and Denial). Each item is rated 1-4; raw sums are reported per subscale (State 15-60, Trait 16-36, each expression/control scale 10-40, Denial 2-8). Dimensional only — not diagnostic.",
+        "hi": "तीन-भाग 57-आइटम क्रोध-सूची: अवस्था क्रोध (1-15, 'अभी कैसे महसूस'), लक्षण क्रोध (16-24, 'सामान्यतः कैसे महसूस') एवं क्रोध-अभिव्यक्ति (25-57; Anger-In, Anger-Out, क्रोध-नियंत्रण, अस्वीकरण)। प्रत्येक आइटम 1-4 रेटेड; उप-पैमाने अनुसार कच्चे योग (अवस्था 15-60, लक्षण 16-36, प्रत्येक अभिव्यक्ति/नियंत्रण 10-40, अस्वीकरण 2-8)। केवल आयामात्मक — रोग-निर्णायक नहीं।"
+      },
+      "domain": "anger",
+      "format": "self-report 1-4 rating matrix with subscale sums",
+      "duration": "10-15 minutes",
+      "optionalAssessment": true
+    },
+    "CAS": {
+      "name": "Clinical Anger Scale (CAS)",
+      "description": {
+        "en": "21-cluster, four-option (A-D) self-report measure of clinical anger; A=0, B=1, C=2, D=3 summed across clusters for a total range of 0-63. Interpretive ranges: 0-13 minimal, 14-19 mild, 20-28 moderate, 29-63 severe clinical anger (Snell et al., 1995). Screens severity only — not diagnostic.",
+        "hi": "नैदानिक क्रोध का 21-समूह, चार-विकल्प (A-D) स्व-वर्णित माप; A=0, B=1, C=2, D=3 समूहों में जोड़कर शीर्घ 0-63। व्याख्या-परिसर: 0-13 न्यूनतम, 14-19 हल्का, 20-28 मध्यम, 29-63 गंभीर नैदानिक क्रोध (Snell et al., 1995)। केवल तीव्रता स्क्रीन — रोग-निर्णायक नहीं।"
+      },
+      "domain": "anger",
+      "format": "self-report forced-choice cluster matrix with banded total",
+      "duration": "8-12 minutes",
       "optionalAssessment": true
     }
   },
@@ -5918,6 +6054,2058 @@
         "en": "English item wording was reconstructed from a low-quality scan; obvious OCR artifacts were repaired and the reconstruction is flagged for clinician review against the published PDQ-4+ form.",
         "hi": "यह पाठ CURE पैकेट के स्कैन किए गए अंग्रेज़ी पत्रक से लिया गया है; हिन्दी रूपांतरण केवल संकेतात्मक सहायता हेतु है और इसमें कुछ वाक्य-विन्यास अस्पष्ट हैं। कृपया सत्यापित PDQ-4+ संस्करण से पुष्टि करें।"
       }
+    },
+    "staxi_ca": {
+      "id": "staxi_ca",
+      "name": {
+        "en": "STAXI-CA — State-Trait Anger Expression Inventory for Children and Adolescents",
+        "hi": "STAXI-CA — बाल-किशोर हेतु अवस्था-लक्षण क्रोध अभिव्यक्ति सूची"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "sourceInstrument": "STAXI-CA",
+      "targetAge": [
+        "pediatric",
+        "adolescent",
+        "adult"
+      ],
+      "directions": {
+        "en": "Part 1: Read each statement and mark the number on the rating scale that shows how you feel RIGHT NOW. Part 2: Mark how you GENERALLY feel or react. Part 3: Mark how OFTEN you generally react or behave this way when you feel angry or furious. There are no right or wrong answers; do not spend too much time on any one statement.",
+        "hi": "भाग 1: प्रत्येक कथन पढ़कर रेटिंग पैमाने पर वह अंक अंकित करें जो दिखाए कि आप अभी (RIGHT NOW) कैसे महसूस करते हैं। भाग 2: आप सामान्यतः कैसे महसूस करते हैं अथवा प्रतिक्रिया देते हैं, अंकित करें। भाग 3: क्रोधित/प्रकोपित होने पर आप सामान्यतः कितनी बार इस प्रकार व्यवहार करते हैं, अंकित करें। कोई उत्तर सही या गलत नहीं है; किसी एक कथन पर अत्यधिक समय न लगाएँ।"
+      },
+      "timeframe": {
+        "en": "Parts 1-3 as printed on the form.",
+        "hi": "भाग 1-3 यथा-मुद्रित पत्रक।"
+      },
+      "parts": [
+        {
+          "id": "staxi_part1",
+          "name": {
+            "en": "Part 1 — State Anger: How I Feel Right Now",
+            "hi": "भाग 1 — अवस्था क्रोध: अभी मैं कैसा महसूस करता/करती हूँ"
+          },
+          "questions": [
+            {
+              "id": "staxi_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "I am furious.",
+                "hi": "मैं प्रचंड क्रोधित हूँ।"
+              }
+            },
+            {
+              "id": "staxi_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "I feel irritated.",
+                "hi": "मुझे चिड़चिड़ापन महसूस होता है।"
+              }
+            },
+            {
+              "id": "staxi_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "I feel angry.",
+                "hi": "मुझे क्रोध महसूस होता है।"
+              }
+            },
+            {
+              "id": "staxi_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "I feel like yelling at somebody.",
+                "hi": "मैं किसी पर चिल्लाना चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "I feel like breaking things.",
+                "hi": "मैं चीज़ें तोड़ना चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "I am mad.",
+                "hi": "मैं नाराज़/क्रोधित हूँ।"
+              }
+            },
+            {
+              "id": "staxi_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "I feel like banging on the table.",
+                "hi": "मैं मेज़ पर प्रहार करना चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "I feel like hitting someone.",
+                "hi": "मैं किसी को मारना चाहता/चाहती हूँ।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+                "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+              }
+            },
+            {
+              "id": "staxi_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "I feel like swearing.",
+                "hi": "मैं गाली देना चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "I feel annoyed.",
+                "hi": "मुझे क्षुब्धता महसूस होती है।"
+              }
+            },
+            {
+              "id": "staxi_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "I feel like kicking somebody.",
+                "hi": "मैं किसी को लात मारना चाहता/चाहती हूँ।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+                "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+              }
+            },
+            {
+              "id": "staxi_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "I feel like cursing out loud.",
+                "hi": "मैं ज़ोर से शपथ लेना/गाली देना चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "I feel like screaming.",
+                "hi": "मैं चीखना चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "I feel like pounding somebody.",
+                "hi": "मैं किसी को पीटना चाहता/चाहती हूँ।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+                "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+              }
+            },
+            {
+              "id": "staxi_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "I feel like shouting out loud.",
+                "hi": "मैं ज़ोर से चिल्लाना चाहता/चाहती हूँ।"
+              }
+            }
+          ],
+          "options": [
+            {
+              "v": 1,
+              "label": {
+                "en": "1",
+                "hi": "1"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "2",
+                "hi": "2"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "3",
+                "hi": "3"
+              }
+            },
+            {
+              "v": 4,
+              "label": {
+                "en": "4",
+                "hi": "4"
+              }
+            }
+          ],
+          "anchors": [
+            {
+              "v": 1,
+              "label": {
+                "en": "1 Not at all",
+                "hi": "1 बिल्कुल नहीं"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "2 Somewhat",
+                "hi": "2 कुछ हद तक"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "3 Moderately so",
+                "hi": "3 मध्यम रूप से"
+              }
+            },
+            {
+              "v": 4,
+              "label": {
+                "en": "4 Very much so",
+                "hi": "4 अत्यधिक"
+              }
+            }
+          ],
+          "timeframe": {
+            "en": "Right now, at this moment.",
+            "hi": "इसी क्षण, अभी।"
+          }
+        },
+        {
+          "id": "staxi_part2",
+          "name": {
+            "en": "Part 2 — Trait Anger: How I Generally Feel",
+            "hi": "भाग 2 — लक्षण क्रोध: मैं सामान्यतः कैसा महसूस करता/करती हूँ"
+          },
+          "questions": [
+            {
+              "id": "staxi_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "I am quick tempered.",
+                "hi": "मेरा स्वभाव त्वरित-क्रोध वाला है।"
+              }
+            },
+            {
+              "id": "staxi_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "I have a fiery temper.",
+                "hi": "मेरा स्वभाव अग्निश/प्रचंड है।"
+              }
+            },
+            {
+              "id": "staxi_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "I am a hot-headed person.",
+                "hi": "मैं उग्र-स्वभाव व्यक्ति हूँ।"
+              }
+            },
+            {
+              "id": "staxi_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "I get angry when I'm slowed down by others' mistakes.",
+                "hi": "अन्यों की भूलों से विलंब होने पर मुझे क्रोध आता है।"
+              }
+            },
+            {
+              "id": "staxi_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "I feel annoyed when I am not given recognition for doing good work.",
+                "hi": "उत्तम कार्य हेतु प्रशंसा न मिलने पर मुझे क्षुब्धता होती है।"
+              }
+            },
+            {
+              "id": "staxi_21",
+              "itemNumber": 21,
+              "text": {
+                "en": "I fly off the handle.",
+                "hi": "मैं एकदम से फट पड़ता/फट पड़ती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "When I get mad, I say nasty things.",
+                "hi": "नाराज़ होने पर मैं कुरूप बातें कहता/कहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_23",
+              "itemNumber": 23,
+              "text": {
+                "en": "It makes me furious when I am criticized in front of others.",
+                "hi": "अन्यों के सामने आलोचना होने पर मैं प्रचंड क्रोधित हो जाता/जाती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_24",
+              "itemNumber": 24,
+              "text": {
+                "en": "When I get frustrated, I feel like hitting someone.",
+                "hi": "व्यर्थता अनुभव करने पर मैं किसी को मारना चाहता/चाहती हूँ।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+                "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+              }
+            }
+          ],
+          "options": [
+            {
+              "v": 1,
+              "label": {
+                "en": "1",
+                "hi": "1"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "2",
+                "hi": "2"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "3",
+                "hi": "3"
+              }
+            },
+            {
+              "v": 4,
+              "label": {
+                "en": "4",
+                "hi": "4"
+              }
+            }
+          ],
+          "anchors": [
+            {
+              "v": 1,
+              "label": {
+                "en": "1 Almost never",
+                "hi": "1 लगभग कभी नहीं"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "2 Sometimes",
+                "hi": "2 कभी-कभी"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "3 Often",
+                "hi": "3 अक्सर"
+              }
+            },
+            {
+              "v": 4,
+              "label": {
+                "en": "4 Almost always",
+                "hi": "4 लगभग सदैव"
+              }
+            }
+          ],
+          "timeframe": {
+            "en": "In general, how you usually feel or react.",
+            "hi": "सामान्यतः आप कैसे महसूस करते/करती हैं अथवा प्रतिक्रिया देते/देती हैं।"
+          }
+        },
+        {
+          "id": "staxi_part3",
+          "name": {
+            "en": "Part 3 — Anger Expression: How I Generally React or Behave When Angry or Furious",
+            "hi": "भाग 3 — क्रोध अभिव्यक्ति: क्रोधित अथवा प्रकोपित होने पर मैं सामान्यतः कैसे प्रतिक्रिया देता/देती हूँ"
+          },
+          "questions": [
+            {
+              "id": "staxi_25",
+              "itemNumber": 25,
+              "text": {
+                "en": "I feel infuriated when I do a good job and get a poor evaluation.",
+                "hi": "उत्तम कार्य करते हुए निम्न मूल्यांकन मिलने पर मुझे प्रकोप महसूस होता है।"
+              }
+            },
+            {
+              "id": "staxi_26",
+              "itemNumber": 26,
+              "text": {
+                "en": "I control my temper.",
+                "hi": "मैं अपने स्वयं को नियंत्रित रखता/रखती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_27",
+              "itemNumber": 27,
+              "text": {
+                "en": "I express my anger.",
+                "hi": "मैं अपना क्रोध व्यक्त करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_28",
+              "itemNumber": 28,
+              "text": {
+                "en": "I take a deep breath and relax.",
+                "hi": "मैं गहरी श्वास लेकर शिथिल होता/होती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_29",
+              "itemNumber": 29,
+              "text": {
+                "en": "I keep things in.",
+                "hi": "मैं बातें मन में दबाए रखता/रखती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_30",
+              "itemNumber": 30,
+              "text": {
+                "en": "I am patient with others.",
+                "hi": "मैं अन्यों के प्रति धैर्यवान हूँ।"
+              }
+            },
+            {
+              "id": "staxi_31",
+              "itemNumber": 31,
+              "text": {
+                "en": "If someone annoys me, I'm apt to tell him or her how I feel.",
+                "hi": "कोई क्षुब्ध करे तो मैं उसे अपनी भावना बता देता/बताती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_32",
+              "itemNumber": 32,
+              "text": {
+                "en": "I try to calm myself as soon as possible.",
+                "hi": "मैं यथाशीघ्र स्वयं को शांत करने का प्रयास करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_33",
+              "itemNumber": 33,
+              "text": {
+                "en": "I pout or sulk.",
+                "hi": "मैं नाराज़ होकर मुँह बनाता/बनाती हूँ या एकांत में रहता/रहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_34",
+              "itemNumber": 34,
+              "text": {
+                "en": "I control my urge to express my angry feelings.",
+                "hi": "क्रोधावेश व्यक्त करने की प्रवृत्ति पर मैं नियंत्रण रखता/रखती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_35",
+              "itemNumber": 35,
+              "text": {
+                "en": "I lose my temper.",
+                "hi": "मैं स्वभाव खो देता/खो देती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_36",
+              "itemNumber": 36,
+              "text": {
+                "en": "I try to simmer down.",
+                "hi": "मैं उत्ताप शान्त करने का प्रयास करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_37",
+              "itemNumber": 37,
+              "text": {
+                "en": "I withdraw from people.",
+                "hi": "मैं लोगों से दूर हो जाता/जाती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_38",
+              "itemNumber": 38,
+              "text": {
+                "en": "I keep my cool.",
+                "hi": "मैं शीतलता बनाए रखता/रखती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_39",
+              "itemNumber": 39,
+              "text": {
+                "en": "I make sarcastic remarks to others.",
+                "hi": "मैं अन्यों से व्यंग्यात्मक टिप्पणी करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_40",
+              "itemNumber": 40,
+              "text": {
+                "en": "I try to soothe my angry feelings.",
+                "hi": "मैं क्रोधित भावनाओं को शान्त करने का प्रयास करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_41",
+              "itemNumber": 41,
+              "text": {
+                "en": "I control my behaviour.",
+                "hi": "मैं अपना व्यवहार नियंत्रित करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_42",
+              "itemNumber": 42,
+              "text": {
+                "en": "I endeavour to become calm again.",
+                "hi": "मैं पुनः शांत होने का प्रयत्न करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_43",
+              "itemNumber": 43,
+              "text": {
+                "en": "I tend to harbour grudges that I don't tell anyone.",
+                "hi": "मैं दिल में तिरस्कार/नाराज़गी लिए रखता/रखती हूँ और वह किसी को नहीं बताता/बताती।"
+              }
+            },
+            {
+              "id": "staxi_44",
+              "itemNumber": 44,
+              "text": {
+                "en": "I can stop myself from losing my temper.",
+                "hi": "मैं स्वभाव खोने से स्वयं को रोक सकता/सकती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_45",
+              "itemNumber": 45,
+              "text": {
+                "en": "I argue with others.",
+                "hi": "मैं अन्यों से वाद-विवाद करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_46",
+              "itemNumber": 46,
+              "text": {
+                "en": "I reduce my anger as soon as possible.",
+                "hi": "मैं यथाशीघ्र क्रोध कम करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_47",
+              "itemNumber": 47,
+              "text": {
+                "en": "I do things like slam doors.",
+                "hi": "मैं दरवाज़े ज़ोर से बंद करने जैसे कार्य करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_48",
+              "itemNumber": 48,
+              "text": {
+                "en": "I am secretly quite critical of others.",
+                "hi": "मैं मन में अन्यों की काफी आलोचना करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_49",
+              "itemNumber": 49,
+              "text": {
+                "en": "I try to be tolerant.",
+                "hi": "मैं सहिष्णु बनने का प्रयास करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_50",
+              "itemNumber": 50,
+              "text": {
+                "en": "I get calm faster than others do.",
+                "hi": "मैं अन्यों की अपेक्षा शीघ्र शांत हो जाता/जाती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_51",
+              "itemNumber": 51,
+              "text": {
+                "en": "I strike out at whatever infuriates me.",
+                "hi": "जो भी मुझे प्रकोपित करता है, मैं उस पर आक्रमण करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_52",
+              "itemNumber": 52,
+              "text": {
+                "en": "I say nasty things.",
+                "hi": "मैं कुरूप बातें कहता/कहती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_53",
+              "itemNumber": 53,
+              "text": {
+                "en": "I try to be tolerant and understanding.",
+                "hi": "मैं सहिष्णु एवं समझदार बनने का प्रयास करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_54",
+              "itemNumber": 54,
+              "text": {
+                "en": "I am angrier than I am willing to admit.",
+                "hi": "मैं स्वीकार करने से अधिक क्रोधित हूँ।"
+              }
+            },
+            {
+              "id": "staxi_55",
+              "itemNumber": 55,
+              "text": {
+                "en": "I control my angry feelings.",
+                "hi": "मैं क्रोधित भावनाओं को नियंत्रित करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_56",
+              "itemNumber": 56,
+              "text": {
+                "en": "I try to relax.",
+                "hi": "मैं शिथिल होने का प्रयास करता/करती हूँ।"
+              }
+            },
+            {
+              "id": "staxi_57",
+              "itemNumber": 57,
+              "text": {
+                "en": "I'm irritated a great deal more than people are aware of.",
+                "hi": "मैं लोगों की अपेक्षा से बहुत अधिक चिड़चिड़ा हूँ।"
+              }
+            }
+          ],
+          "options": [
+            {
+              "v": 1,
+              "label": {
+                "en": "1",
+                "hi": "1"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "2",
+                "hi": "2"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "3",
+                "hi": "3"
+              }
+            },
+            {
+              "v": 4,
+              "label": {
+                "en": "4",
+                "hi": "4"
+              }
+            }
+          ],
+          "anchors": [
+            {
+              "v": 1,
+              "label": {
+                "en": "1 Almost never",
+                "hi": "1 लगभग कभी नहीं"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "2 Sometimes",
+                "hi": "2 कभी-कभी"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "3 Often",
+                "hi": "3 अक्सर"
+              }
+            },
+            {
+              "v": 4,
+              "label": {
+                "en": "4 Almost always",
+                "hi": "4 लगभग सदैव"
+              }
+            }
+          ],
+          "timeframe": {
+            "en": "How often you generally react or behave this way when angry or furious.",
+            "hi": "क्रोधित/प्रकोपित अवस्था में आप सामान्यतः कितनी बार इस प्रकार व्यवहार करते/करती हैं।"
+          }
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 1,
+          "label": {
+            "en": "1",
+            "hi": "1"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "2",
+            "hi": "2"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "3",
+            "hi": "3"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "4",
+            "hi": "4"
+          }
+        }
+      ],
+      "sumScoring": true,
+      "subscales": {
+        "state": {
+          "name": {
+            "en": "State Anger (SA)",
+            "hi": "अवस्था क्रोध (SA)"
+          },
+          "note": {
+            "en": "Sum of items 1-15 (15-60). How you feel right now.",
+            "hi": "आइटम 1-15 का योग (15-60)। वर्तमान भावना।"
+          },
+          "part": 1,
+          "items": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "trait": {
+          "name": {
+            "en": "Trait Anger (TA)",
+            "hi": "लक्षण क्रोध (TA)"
+          },
+          "note": {
+            "en": "Sum of items 16-24 (16-36). Angry temperament plus anger-referenced other.",
+            "hi": "आइटम 16-24 का योग (16-36)। क्रोड-स्वभाव तथा अन्य-संदर्भित क्रोध।"
+          },
+          "part": 2,
+          "items": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ]
+        },
+        "in": {
+          "name": {
+            "en": "Anger Expression-In (Anger-In)",
+            "hi": "क्रोध-अभिव्यक्ति-अंतः (Anger-In)"
+          },
+          "note": {
+            "en": "Sum of the nine keyed items (9-36): 29, 33, 37, 43, 48, 53, 54, 56, 57. Anger held or suppressed inside.",
+            "hi": "नौ कुंजी-आइटम का योग (9-36): 29, 33, 37, 43, 48, 53, 54, 56, 57। भीतर संचित/दबा हुआ क्रोध।"
+          },
+          "part": 3,
+          "items": [
+            29,
+            33,
+            37,
+            43,
+            48,
+            53,
+            54,
+            56,
+            57
+          ]
+        },
+        "out": {
+          "name": {
+            "en": "Anger Expression-Out (Anger-Out)",
+            "hi": "क्रोध-अभिव्यक्ति-बहिः (Anger-Out)"
+          },
+          "note": {
+            "en": "Sum of the eight keyed items (8-32): 27, 31, 35, 39, 45, 47, 50, 52. Anger expressed outwardly.",
+            "hi": "आठ कुंजी-आइटम का योग (8-32): 27, 31, 35, 39, 45, 47, 50, 52। बाह्य व्यक्त क्रोध।"
+          },
+          "part": 3,
+          "items": [
+            27,
+            31,
+            35,
+            39,
+            45,
+            47,
+            50,
+            52
+          ]
+        },
+        "control": {
+          "name": {
+            "en": "Anger Control",
+            "hi": "क्रोध-नियंत्रण"
+          },
+          "note": {
+            "en": "Sum of the twelve keyed items (12-48): 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49. Higher is better control.",
+            "hi": "बारह कुंजी-आइटम का योग (12-48): 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49। उच्च स्कोर = बेहतर नियंत्रण।"
+          },
+          "part": 3,
+          "items": [
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            49
+          ]
+        },
+        "denial": {
+          "name": {
+            "en": "Anger Expression Denial",
+            "hi": "क्रोध-अभिव्यक्ति-अस्वीकरण"
+          },
+          "note": {
+            "en": "Sum of items 41, 51 and 55 (3-12): 'I control my behaviour', 'I strike out at whatever infuriates me' (reverse-keyed) and 'I control my angry feelings' - the respondent reports no difficulty controlling or no outward anger at all. Denial of anger expression.",
+            "hi": "आइटम 41, 51 एवं 55 का योग (3-12): 'मैं अपना व्यवहार नियंत्रित करता हूँ', 'जो भी प्रकोपित करे उस पर आक्रमण' एवं 'क्रोधित भावनाओं पर नियंत्रण'। क्रोध-अभिव्यक्ति का अस्वीकरण।"
+          },
+          "part": 3,
+          "items": [
+            41,
+            51,
+            55
+          ]
+        }
+      },
+      "normsNote": {
+        "en": "Raw sums are reported; percentile/T-score conversion requires the licensed STAXI-CA manual and its age/sex tables, which are not reproduced here.",
+        "hi": "केवल कच्चे योग रिपोर्ट किए जाते हैं; percentile/T-score रूपांतरण हेतु लाइसेंसप्राप्त STAXI-CA मैनुअल एवं आयु/लिंग तालिकाएँ आवश्यक हैं, जो यहाँ संकलित नहीं।"
+      },
+      "scoring": {
+        "method": "staxi_ca_sum_subscales",
+        "scaleMin": 1,
+        "scaleMax": 4,
+        "rule": {
+          "en": "Sum items within each part/subscale as printed: State Anger 1-15 (15-60), Trait Anger 16-24 (16-36), Anger-In, Anger-Out and Anger Control each from ten Part 3 items (10-40), Denial from items 28 and 33 (2-8). Higher scores indicate more intense/frequent anger on that dimension; Anger Control is interpreted in the opposite direction (higher = better control). No single cutoff defines caseness.",
+          "hi": "प्रत्येक भाग/उप-पैमाने के आइटम यथा-मुद्रित योग करें: अवस्था क्रोध 1-15 (15-60), लक्षण क्रोध 16-24 (16-36), Anger-In, Anger-Out एवं क्रोध-नियंत्रण प्रत्येक दस आइटम से (10-40), अस्वीकरण आइटम 28 एवं 33 से (2-8)। उच्च स्कोर = उस आयाम पर अधिक तीव्र/आवृत्त क्रोध; क्रोध-नियंत्रण विपरीत दिशा में (उच्च = बेहतर नियंत्रण)। कोई एकमानी कटऑफ मानसिक-रोगिता निर्धारित नहीं करता।"
+        },
+        "notDiagnostic": {
+          "en": "STAXI-CA measures anger dimensions; it does not diagnose any disorder.",
+          "hi": "STAXI-CA क्रोध के आयाम मापता है; किसी विकार का रोग-निर्णय नहीं करता।"
+        }
+      },
+      "sourcePages": "User-supplied STAXI-CA item list and Parts 1-3 answer-sheet scans.",
+      "sourceNotes": {
+        "itemNumbers": "Items are numbered 1-57 continuously across the three parts, matching the printed form.",
+        "deviations": [
+          "Numbering convention used by this build (continuous across the three parts, matching the printed STAXI-CA answer sheet): Part 1 State Anger = items 1-15; Part 2 Trait Anger = items 16-24; Part 3 Anger Expression = items 25-57.",
+          "Item 25 'I feel infuriated when I do a good job and get a poor evaluation' appears last in the packet's State-Anger cluster but is part of the Anger-Expression reaction set in this build; Part 1 is scored from items 1-15 and Part 3 covers items 25-57 (item 25 is not keyed to any subscale because the packet did not include the printed key).",
+          "The supplied list is an unnumbered OCR dump that mixes the two forms and contains duplicated transcriptions. Packet stems were resolved against the printed answer sheet: 'I get angry very quickly' -> printed item 15/16 family; 'I get angry when I have to wait because of other's mistakes' -> printed item 19; 'feel annoyed when I am not given recognition...' -> printed item 20; 'When I get bad, I say nasty things' -> 'When I get mad, I say nasty things' (item 22); 'I am angry, but I don't show it' -> printed item 41 family; 'I do things like slamming doors' -> printed item 47; 'I argue with others' -> printed item 45; 'I attack whatever it is that annoys me' / 'I attack whatever makes me angry' -> printed item 50; 'I hold my anger in' -> printed item 29; 'I can stop myself from loosing' -> corrected to 'losing' (printed item 44); 'I get calm faster than others' -> printed item 50 family; 'I try to get calm' / 'I try to relax' -> printed items 32/56; 'I try to be tolerant' and 'I try to be tolerant and understanding' -> printed items 49/53. 'I feel like crying' is not a STAXI-CA stem and was dropped.",
+          "Packet items 10 and 11 were both transcribed as 'I want to smash something'; the printed stems are used (10 'I feel annoyed', 11 'I feel like kicking somebody').",
+          "Packet items 30 and 31 were both transcribed as 'I can stop myself from loosing'; the printed stems are used (30 'I am patient with others', 31 'If someone annoys me, I'm apt to tell him or her how I feel').",
+          "Packet items 42 and 43 were both transcribed as 'I reduce my anger as soon as possible'; the printed stems are used (42 'I endeavour to become calm again', 43 'I tend to harbour grudges that I don't tell anyone').",
+          "'loosing' corrected to 'losing'; 'I have a bad temper' rendered as the printed 'I have a fiery temper' (item 17); 'I get angry when I'm told I'm wrong in front of the others' rendered as the printed 'It makes me furious when I am criticized in front of others' (item 23).",
+          "Part 3 subscale assignment as implemented here: Anger-In 29, 33, 37, 43, 48, 53, 54, 56, 57 (9 items); Anger-Out 27, 31, 35, 39, 45, 47, 50, 52 (8 items); Anger Control 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49 (12 items); Denial 41, 51, 55 (3 items). These four scales partition items 26-57 exactly, with item 25 belonging to Part 1/Part 3 as printed on the packet (verified at build time). NOTE: the supplied packet did not include the printed subscale key, so this partition was reconstructed from the content of each stem; it will differ from the licensed PAR manual - confirm against the manual before clinical scoring."
+        ],
+        "licensing": "STAXI-CA is a copyrighted Psychological Assessment Resources (PAR) instrument. This implementation is for internal/clinical-workflow prototyping; verify licence permission before redistribution."
+      },
+      "translationNote": "Hindi labels are machine-assisted aids; English is authoritative. Clinician proofreading required.",
+      "branching": null
+    },
+    "clinical_anger_scale": {
+      "id": "clinical_anger_scale",
+      "name": {
+        "en": "Clinical Anger Scale (CAS)",
+        "hi": "नैदानिक क्रोध पैमाना (CAS)"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "sourceInstrument": "CAS",
+      "targetAge": [
+        "adult",
+        "older"
+      ],
+      "directions": {
+        "en": "The groups of items below inquire about the types of feelings you have. Each of the 21 groups has four options (A, B, C, D). For each cluster, read and identify the ONE statement that best reflects how you feel, and mark its letter. Answer even if you are not sure. Please be honest in responding to the statements.",
+        "hi": "नीचे दिए समूह आपकी भावनाओं के प्रकार पूछते हैं। प्रत्येक 21 समूह में चार विकल्प (A, B, C, D) हैं। प्रत्येक समूह में वह एक कथन पढ़कर पहचानें जो आपकी भावना सर्वोत्तम दर्शाता है और उसका अक्षर अंकित करें। अनिश्चित हों तो भी उत्तर दें। कथनों पर ईमानदारी से प्रतिविमर्श दें।"
+      },
+      "timeframe": {
+        "en": "Your present feelings across the 21 clusters.",
+        "hi": "21 समूहों में आपकी वर्तमान भावनाएँ।"
+      },
+      "parts": [
+        {
+          "id": "cas_cluster_1",
+          "name": {
+            "en": "1. Anger cluster 1",
+            "hi": "1. क्रोध समूह 1"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I do not feel angry.",
+                "hi": "मैं क्रोधित नहीं महसूस करता/करती।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. I feel angry.",
+                "hi": "मुझे क्रोध महसूस होता है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I am angry most of the time now.",
+                "hi": "अभी मैं अधिकांश समय क्रोधित रहता/रहती हूँ।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I am so angry and hostile all the time that I can't stand it.",
+                "hi": "मैं सदैव इतना क्रोधित एवं शत्रुभावपूर्ण हूँ कि सह नहीं पाता/पाती।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_1",
+              "itemNumber": 1,
+              "cluster": true,
+              "text": {
+                "en": "1. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "1. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_2",
+          "name": {
+            "en": "2. Anger cluster 2",
+            "hi": "2. क्रोध समूह 2"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I am not particularly angry about my future.",
+                "hi": "भविष्य को लेकर विशेष क्रोध नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. When I think about my future, I feel angry.",
+                "hi": "भविष्य का चिंतन कर क्रोध महसूस करता/करती हूँ।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I feel angry about what I have to look forward to.",
+                "hi": "जो प्रतीक्षित है, उससे क्रोध होता है।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I feel intensely angry about my future, since it cannot be improved.",
+                "hi": "भविष्य सुधरने योग्य न जानकर प्रचंड क्रोध होता है।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_2",
+              "itemNumber": 2,
+              "cluster": true,
+              "text": {
+                "en": "2. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "2. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_3",
+          "name": {
+            "en": "3. Anger cluster 3",
+            "hi": "3. क्रोध समूह 3"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. It makes me angry that I feel like such a failure.",
+                "hi": "विफल-भावना से क्रोध होता है।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. It makes me angry that I have failed more than the average person.",
+                "hi": "औसत से अधिक विफलताओं से क्रोध होता है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. As I look back on my life, I feel angry about my failures.",
+                "hi": "जीवन पीछे देखकर विफलताओं पर क्रोध होता है।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. It makes me angry to feel like a complete failure as a person.",
+                "hi": "पूर्णतः विफल होने की भावना पर प्रचंड क्रोध होता है।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_3",
+              "itemNumber": 3,
+              "cluster": true,
+              "text": {
+                "en": "3. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "3. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_4",
+          "name": {
+            "en": "4. Anger cluster 4",
+            "hi": "4. क्रोध समूह 4"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I am not all that angry about things.",
+                "hi": "बातों को लेकर अधिक क्रोध नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. I am becoming more hostile about things than I used to be.",
+                "hi": "पूर्व अपेक्षा अधिक शत्रुभाव होता जा रहा है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I am pretty angry about things these days.",
+                "hi": "इन दिनों काफी क्रोधित रहता/रहती हूँ।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I am angry and hostile about everything.",
+                "hi": "सबके प्रति क्रोधित एवं शत्रुभावपूर्ण हूँ।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_4",
+              "itemNumber": 4,
+              "cluster": true,
+              "text": {
+                "en": "4. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "4. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_5",
+          "name": {
+            "en": "5. Anger cluster 5",
+            "hi": "5. क्रोध समूह 5"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't feel particularly hostile at others.",
+                "hi": "अन्यों के प्रति विशेष शत्रुभाव नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. I feel hostile a good deal of the time.",
+                "hi": "अधिकतर समय थोड़ा शत्रुभाव रहता है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I feel quite hostile most of the time.",
+                "hi": "अधिकांश समय पर्याप्त शत्रुभाव।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I feel hostile all of the time.",
+                "hi": "सदैव शत्रुभाव महसूस करता/करती हूँ।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_5",
+              "itemNumber": 5,
+              "cluster": true,
+              "text": {
+                "en": "5. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "5. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_6",
+          "name": {
+            "en": "6. Anger cluster 6",
+            "hi": "6. क्रोध समूह 6"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't feel that others are trying to annoy me.",
+                "hi": "लोग क्षुब्ध करने का प्रयास नहीं करते लगते।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. At times I think people are trying to annoy me.",
+                "hi": "कभी-कभी लगता है लोग क्षुब्ध करना चाहते हैं।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. More people than usual are beginning to make me feel angry.",
+                "hi": "पूर्व अपेक्षा अधिक लोग क्रोधित करने लगे हैं।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I feel that others are constantly and intentionally making me angry.",
+                "hi": "लोग निरंतर एवं जान-बूझकर मुझे क्रोधित करते हैं।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_6",
+              "itemNumber": 6,
+              "cluster": true,
+              "text": {
+                "en": "6. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "6. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_7",
+          "name": {
+            "en": "7. Anger cluster 7",
+            "hi": "7. क्रोध समूह 7"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't feel angry when I think about myself.",
+                "hi": "अपने बारे में सोचकर क्रोध नहीं होता।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. I feel more angry about myself these days than I used to.",
+                "hi": "इन दिनों पूर्व अपेक्षा स्वयं पर अधिक क्रोध होता है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I feel angry about myself a good deal of the time.",
+                "hi": "अधिकतर समय स्वयं पर क्रोध रहता है।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. When I think about myself, I feel intense anger.",
+                "hi": "स्वयं का चिंतन मात्र से प्रचंड क्रोध होता है।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_7",
+              "itemNumber": 7,
+              "cluster": true,
+              "text": {
+                "en": "7. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "7. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_8",
+          "name": {
+            "en": "8. Anger cluster 8",
+            "hi": "8. क्रोध समूह 8"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't have angry feelings about others having screwed up my life.",
+                "hi": "अन्यों द्वारा जीवन बिगाड़ने का क्रोध नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. It's beginning to make me angry that others are screwing up my life.",
+                "hi": "लोग जीवन बिगाड़ रहे हैं — इससे क्रोध होने लगा है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I feel angry that others prevent me from having a good life.",
+                "hi": "अन्य अच्छा जीवन रोकते हैं — क्रोध होता है।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I am constantly angry because others have made my life totally miserable.",
+                "hi": "अन्य ने जीवन दुःखमय बनाया — सदैव क्रोध रहता है।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_8",
+              "itemNumber": 8,
+              "cluster": true,
+              "text": {
+                "en": "8. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "8. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_9",
+          "name": {
+            "en": "9. Anger cluster 9",
+            "hi": "9. क्रोध समूह 9"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't feel angry enough to hurt someone.",
+                "hi": "किसी को कष्ट देने जتنا क्रोध नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. Sometimes I am so angry that I feel like hurting others, but I would not really do it.",
+                "hi": "कभी-कभी इतना क्रोध कि कष्ट देने का मन, पर करूँगा/करूँगी नहीं।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. My anger is so intense that I sometimes feel like hurting others.",
+                "hi": "क्रोध इतना तीव्र कि कभी-कभी कष्ट देने का मन।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I'm so angry that I would like to hurt someone.",
+                "hi": "इतना क्रोध कि किसी को कष्ट पहुँचाना चाहूँ।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_9",
+              "itemNumber": 9,
+              "cluster": true,
+              "text": {
+                "en": "9. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "9. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Anger with intent to harm another endorsed — assess safety and risk to others.",
+                "hi": "पर-कष्ट-इच्छा सहित क्रोध — सुरक्षा एवं परा-हिंसा जोखिम मूल्यांकन करें।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_10",
+          "name": {
+            "en": "10. Anger cluster 10",
+            "hi": "10. क्रोध समूह 10"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't shout at people any more than usual.",
+                "hi": "पूर्ववत् ही चिलाता/चिलाती हूँ।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. I shout at others more now than I used to.",
+                "hi": "पूर्व अपेक्षा अब अधिक चिल्लाता/चिल्लाती हूँ।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I shout at people all the time now.",
+                "hi": "अब सदैव लोगों पर चिल्लाता/चिल्लाती हूँ।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I shout at others so often that sometimes I just can't stop.",
+                "hi": "इतनी बार चिल्लाता/चिल्लाती हूँ कि कभी रुक नहीं पाता/पाती।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_10",
+              "itemNumber": 10,
+              "cluster": true,
+              "text": {
+                "en": "10. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "10. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_11",
+          "name": {
+            "en": "11. Anger cluster 11",
+            "hi": "11. क्रोध समूह 11"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. Things are not more irritating to me now than usual.",
+                "hi": "बातें पूर्ववत् ही खटकती हैं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. I feel slightly more irritated now than usual.",
+                "hi": "थोड़ी अधिक खटकने लगी हैं।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I feel irritated a good deal of the time.",
+                "hi": "अधिकतर समय चिड़चिड़ापन।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I'm irritated all the time now.",
+                "hi": "अब सदैव चिड़चिड़ापन महसूस होता है।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_11",
+              "itemNumber": 11,
+              "cluster": true,
+              "text": {
+                "en": "11. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "11. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_12",
+          "name": {
+            "en": "12. Anger cluster 12",
+            "hi": "12. क्रोध समूह 12"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. My anger does not interfere with my interest in other people.",
+                "hi": "क्रोध से अन्य-रुचि बाधित नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. My anger sometimes interferes with my interest in others.",
+                "hi": "क्रोध कभी-कभी अन्य-रुचि बाधित करता है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I am becoming so angry that I don't want to be around others.",
+                "hi": "इतना क्रोध कि अन्यों के पास नहीं रहना चाहता/चाहती।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I'm so angry that I can't stand being around people.",
+                "hi": "इतना क्रोध कि लोगों के साथ रहना दुष्कर।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_12",
+              "itemNumber": 12,
+              "cluster": true,
+              "text": {
+                "en": "12. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "12. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_13",
+          "name": {
+            "en": "13. Anger cluster 13",
+            "hi": "13. क्रोध समूह 13"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't have any persistent angry feelings that influence my ability to make decisions.",
+                "hi": "निर्णय-क्षमता पर सतत क्रोध का प्रभाव नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. My feelings of anger occasionally undermine my ability to make decisions.",
+                "hi": "क्रोध कभी-कभी निर्णय-क्षमता कमजोर करता है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I am angry to the extent that it interferes with my making good decisions.",
+                "hi": "क्रोध इतना कि अच्छे निर्णय बाधित होते हैं।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I'm so angry that I can't make good decisions anymore.",
+                "hi": "अब तो क्रोध से अच्छे निर्णय हो ही नहीं पाते।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_13",
+              "itemNumber": 13,
+              "cluster": true,
+              "text": {
+                "en": "13. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "13. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_14",
+          "name": {
+            "en": "14. Anger cluster 14",
+            "hi": "14. क्रोध समूह 14"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I'm not so angry and hostile that others dislike me.",
+                "hi": "क्रोध से अन्य मुझे पसंद न करना — ऐसा नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. People sometimes dislike being around me since I become angry.",
+                "hi": "क्रोध के कारण लोग कभी-कभी दूर रहते हैं।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. More often than not, people stay away from me because I'm so hostile and angry.",
+                "hi": "अधिकतर लोग शत्रुभाव/क्रोध से मुझसे दूर रहते हैं।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. People don't like me anymore because I'm constantly angry all the time.",
+                "hi": "सतत क्रोध के कारण लोग अब मुझे पसंद नहीं करते।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_14",
+              "itemNumber": 14,
+              "cluster": true,
+              "text": {
+                "en": "14. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "14. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_15",
+          "name": {
+            "en": "15. Anger cluster 15",
+            "hi": "15. क्रोध समूह 15"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. My feelings of anger do not interfere with my work.",
+                "hi": "कार्य में क्रोध बाधा नहीं डालता।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. From time to time my feelings of anger interfere with my work.",
+                "hi": "कभी-कभी कार्य में क्रोध बाधा डालता है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. I feel so angry that it interferes with my capacity to work.",
+                "hi": "इतना क्रोध कि कार्य-क्षमता बाधित।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. My feelings of anger prevent me from doing any work at all.",
+                "hi": "क्रोध से कोई कार्य ही नहीं हो पाता।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_15",
+              "itemNumber": 15,
+              "cluster": true,
+              "text": {
+                "en": "15. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "15. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_16",
+          "name": {
+            "en": "16. Anger cluster 16",
+            "hi": "16. क्रोध समूह 16"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. My anger does not interfere with my sleep.",
+                "hi": "नींद में क्रोध बाधा नहीं डालता।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. Sometimes I don't sleep very well because I'm feeling angry.",
+                "hi": "क्रोध के कारण कभी-कभी नींद अच्छी नहीं।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. My anger is so great that I stay awake 1-2 hours later than usual.",
+                "hi": "इतना क्रोध कि पूर्वाह्न 1-2 घंटे अधिक जागता/जागती।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I am so intensely angry that I can't get much sleep during the night.",
+                "hi": "प्रचंड क्रोध से रात्रि में अल्प नींद।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_16",
+              "itemNumber": 16,
+              "cluster": true,
+              "text": {
+                "en": "16. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "16. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_17",
+          "name": {
+            "en": "17. Anger cluster 17",
+            "hi": "17. क्रोध समूह 17"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. My anger does not make me feel anymore tired than usual.",
+                "hi": "क्रोध से पूर्व अपेक्षा अधिक थकान नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. My feelings of anger are beginning to tire me out.",
+                "hi": "क्रोध थकाने लगा है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. My anger is intense enough that it makes me feel very tired.",
+                "hi": "क्रोध इतना तीव्र कि बहुत थकान होती है।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. My feelings of anger leave me too tired to do anything.",
+                "hi": "क्रोध से इतनी थकान कि कुछ भी नहीं कर पाता/पाती।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_17",
+              "itemNumber": 17,
+              "cluster": true,
+              "text": {
+                "en": "17. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "17. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_18",
+          "name": {
+            "en": "18. Anger cluster 18",
+            "hi": "18. क्रोध समूह 18"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. My feelings of anger don't interfere with my health.",
+                "hi": "स्वास्थ्य पर क्रोध का प्रभाव नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. My feelings of anger are beginning to interfere with my health.",
+                "hi": "क्रोध स्वास्थ्य को बाधित करने लगा है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. My anger prevents me from devoting much time and attention to my health.",
+                "hi": "क्रोध से स्वास्थ्य हेतु समय/ध्यान नहीं दे पाता/पाती।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I'm so angry at everything these days that I pay no attention to my health and well-being.",
+                "hi": "इन दिनों सब पर क्रोध — स्वास्थ्य एवं सुस्थिति प्रति ध्यान शून्य।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_18",
+              "itemNumber": 18,
+              "cluster": true,
+              "text": {
+                "en": "18. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "18. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_19",
+          "name": {
+            "en": "19. Anger cluster 19",
+            "hi": "19. क्रोध समूह 19"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. My appetite does not suffer because of my feelings of anger.",
+                "hi": "क्रोध से भूख प्रभावित नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. My feelings of anger are beginning to affect my appetite.",
+                "hi": "क्रोध भूख को प्रभावित करने लगा है।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. My feelings of anger leave me without much of an appetite.",
+                "hi": "क्रोध से भूख khá कम रहती है।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. My anger is so intense that it has taken away my appetite.",
+                "hi": "क्रोध इतना तीव्र कि भूख पूरी समाप्त।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_19",
+              "itemNumber": 19,
+              "cluster": true,
+              "text": {
+                "en": "19. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "19. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_20",
+          "name": {
+            "en": "20. Anger cluster 20",
+            "hi": "20. क्रोध समूह 20"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. My ability to think clearly is unaffected by my feelings of anger.",
+                "hi": "स्पष्ट चिंतन पर क्रोध का प्रभाव नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. Sometimes my feelings of anger prevent me from thinking in a clear-headed way.",
+                "hi": "क्रोध से कभी-कभी स्पष्ट चिंतन बाधित।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. My anger makes it hard for me to think of anything else.",
+                "hi": "क्रोध से अन्य कुछ सोचना कठिन।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I'm so intensely angry and hostile that it completely interferes with my thinking.",
+                "hi": "प्रचंड क्रोध/शत्रुभाव से चिंतन पूर्णतः बाधित।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_20",
+              "itemNumber": 20,
+              "cluster": true,
+              "text": {
+                "en": "20. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "20. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cas_cluster_21",
+          "name": {
+            "en": "21. Anger cluster 21",
+            "hi": "21. क्रोध समूह 21"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "A. I don't feel so angry that it interferes with my interest in sex.",
+                "hi": "क्रोध से यौन-रुचि बाधित नहीं।"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "B. My feelings of anger leave me less interested in sex than I used to be.",
+                "hi": "क्रोध से यौन-रुचि पूर्व अपेक्षा कम।"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "C. My current feelings of anger undermine my interest in sex.",
+                "hi": "वर्तमान क्रोध यौन-रुचि कमजोर करता है।"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "D. I'm so angry about my life that I've completely lost interest in sex.",
+                "hi": "जीवन के क्रोध से यौन-रुचि पूर्णतः लुप्त।"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cas_21",
+              "itemNumber": 21,
+              "cluster": true,
+              "text": {
+                "en": "21. Choose the ONE statement below that best reflects how you feel.",
+                "hi": "21. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "A",
+            "hi": "A"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "B",
+            "hi": "B"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "C",
+            "hi": "C"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "D",
+            "hi": "D"
+          }
+        }
+      ],
+      "optionLetters": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 3,
+        "note": {
+          "en": "Scored A = 0, B = 1, C = 2, D = 3; the 21 cluster scores are summed (range 0-63), higher = greater clinical anger.",
+          "hi": "A = 0, B = 1, C = 2, D = 3 अंकित; 21 समूहों के अंक जोड़े जाते हैं (शीर्घ 0-63), उच्च = अधिक नैदानिक क्रोध।"
+        }
+      },
+      "sumScoring": true,
+      "bands": [
+        {
+          "max": 13,
+          "severity": {
+            "en": "Minimal clinical anger",
+            "hi": "न्यूनतम नैदानिक क्रोध"
+          },
+          "key": "minimal"
+        },
+        {
+          "max": 19,
+          "severity": {
+            "en": "Mild clinical anger",
+            "hi": "हल्का नैदानिक क्रोध"
+          },
+          "key": "mild"
+        },
+        {
+          "max": 28,
+          "severity": {
+            "en": "Moderate clinical anger",
+            "hi": "मध्यम नैदानिक क्रोध"
+          },
+          "key": "moderate"
+        },
+        {
+          "max": 63,
+          "severity": {
+            "en": "Severe clinical anger",
+            "hi": "गंभीर नैदानिक क्रोध"
+          },
+          "key": "severe"
+        }
+      ],
+      "scoring": {
+        "method": "cas_sum_bands",
+        "rule": {
+          "en": "Each cluster of statements is scored on a 4-point Likert scale, with A = 0, B = 1, C = 2, and D = 3. Responses are summed so that higher scores correspond to greater clinical anger (21 items; range 0-63). Interpretive ranges: 0-13 minimal clinical anger; 14-19 mild clinical anger; 20-28 moderate clinical anger; 29-63 severe clinical anger.",
+          "hi": "प्रत्येक कथन-समूह 4-बिंदू Likert पर A = 0, B = 1, C = 2, D = 3 अंकित होता है। सभी जोड़े जाते हैं — उच्च स्कोर = अधिक नैदानिक क्रोध (21 items; शीर्घ 0-63)। व्याख्या-परिसर: 0-13 न्यूनतम; 14-19 हल्का; 20-28 मध्यम; 29-63 गंभीर।"
+        },
+        "maxTotal": 63,
+        "notDiagnostic": {
+          "en": "The CAS screens severity of clinical anger; it is not diagnostic and should be confirmed clinically.",
+          "hi": "CAS नैदानिक क्रोध की तीव्रता स्क्रीन करता है; रोग-निर्णायक नहीं, नैदानिक पुष्टि आवश्यक।"
+        }
+      },
+      "sourcePages": "User-supplied Clinical Anger Scale booklet (copyright 1995) and scoring instructions.",
+      "translationNote": "Hindi labels are machine-assisted aids; English is authoritative. Clinician proofreading required.",
+      "branching": null
     }
   },
   "sharedScales": {
@@ -6113,7 +8301,7 @@
     ]
   },
   "meta": {
-    "schemaVersion": "2.3.0",
+    "schemaVersion": "2.4.0",
     "updated": "2026-11-04",
     "framework": "DSM-5-TR labels compared with ICD-11 codes; selective comparative index, not an official DSM-to-ICD crosswalk",
     "verification": {
@@ -6135,7 +8323,10 @@
     "instrumentNotes": [
       "IPDE ICD-10 screening questionnaire implemented with keyed True/False items; app uses the single-item positive standard explicitly permitted by the instrument authors (printed standard: >=3 keyed items per disorder).",
       "PDQ-4+ implemented with validity items 64/76, Section B item 98 (>=2 impulsivity checks gates Borderline) and item 99 (>=3 conduct checks gates Antisocial), plus the mandatory clinical-significance A-E follow-up checklist.",
-      "Personality instrument item text was transcribed from user-supplied scans; Hindi labels are machine-assisted aids flagged for clinician review. Verify licensing before redistribution."
+      "Personality instrument item text was transcribed from user-supplied scans; Hindi labels are machine-assisted aids flagged for clinician review. Verify licensing before redistribution.",
+      "STAXI-CA implemented as three printed parts (State Anger 1-15, Trait Anger 16-24, Anger Expression 25-57) with Anger-In/Anger-Out/Anger-Control/Denial subscale sums; item stems were transcribed from a user-supplied scan whose duplicated/garbled lines were reconciled against the canonical printed form (see scales.staxi_ca.sourceNotes).",
+      "Clinical Anger Scale (CAS) implemented as 21 four-option clusters scored A=0/B=1/C=2/D=3, summed 0-63 with the published interpretive bands (0-13 minimal, 14-19 mild, 20-28 moderate, 29-63 severe).",
+      "Anger instruments are dimensional/severity measures reached through the new 'anger' domain (routing auto:angertable); they gate no diagnostic box. STAXI-CA is a copyrighted PAR instrument — verify licensing before redistribution."
     ]
   },
   "i18n": {
