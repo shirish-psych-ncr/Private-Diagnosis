@@ -1063,6 +1063,35 @@
                 return;
             }
 
+            // Dissociative-experience inventories (MID-60 short form / DES-II):
+            // each is attached to one screen-in item of the `dissociation` domain.
+            // Both are dimensional severity measures - they flag the dissociative
+            // categories for the structured interview but never diagnose.
+            if (domain.instrument === 'auto:dissociationtable') {
+                if (domain.questions.some(q => (state.responses[domain.id + ':' + q.id] || 0) >= 1)) {
+                    (domain.questions[0].disorders || []).forEach(d => addFlag(d, 'Dissociation screen'));
+                }
+                deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
+                    instrumentResults.push(scale.id === 'mid60'
+                        ? scoreMid60(scale) : scoreDesII(scale));
+                });
+                return;
+            }
+
+            // Somatic-symptom instruments: keyed Yes/No factitious screen (FAC22-SR)
+            // plus the summed PHQ-15 somatic severity index. Neither diagnoses; both
+            // flag the somatic-symptom / factitious categories for clinical review.
+            if (domain.instrument === 'auto:somatoptable') {
+                if (domain.questions.some(q => (state.responses[domain.id + ':' + q.id] || 0) >= 1)) {
+                    (domain.questions[0].disorders || []).forEach(d => addFlag(d, 'Somatic screen'));
+                }
+                deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
+                    if (scale.keyedScoring) instrumentResults.push(scoreFac22(scale, addFlag));
+                    else instrumentResults.push(scorePhq15(scale));
+                });
+                return;
+            }
+
             // Domain raw-sum scoring against cutoff (PHQ-9/GAD-7/PCL-5/ISI/AUDIT-C/ASRS/CAARS-style)
             let sum = 0, answered = 0;
             domain.questions.forEach(q => {
