@@ -206,11 +206,16 @@
                     scaleId: peds ? 'vadrs' : null,
                     instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
                 });
-            } else if (instName === 'auto:minioptional') {
+            } else if (instName === 'auto:minioptional' || instName === 'auto:pdscreen') {
                 // MINI 7.0.2 additional optional interview assessments (pp. 36-37):
                 // A - Cross-Cutting Measures (Severity of Symptom) and
                 // B - Disability / Functional Impairment. Both are clinician-rated
                 // 0-10 tables reached through the domain's own screen-in items.
+                //
+                // auto:pdscreen is the personality-disorder screening block: endorsing a
+                // screen-in item deploys the keyed True/False instrument attached to it
+                // (IPDE ICD-10 module screening questionnaire / PDQ-4+). Neither screen
+                // is diagnostic — they flag which F60/DSM cluster needs the full interview.
                 domain.questions.forEach(q => {
                     if (!q.scaleId) return;
                     if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
@@ -391,6 +396,44 @@
             state.safetyFlags.push({ key, domainId: domain.id });
             openSafetyModal();
         }
+    }
+
+    /* ------------------------------------------------------------------ *
+     * 7a. Personality-disorder screens (IPDE / PDQ-4+) — shared helpers   *
+     * ------------------------------------------------------------------ */
+
+    /** Screen-in questions whose endorsement deploys a keyed T/F instrument. */
+    function deployedPdScreens(domain) {
+        const out = [];
+        if (!domain || !domain.questions) return out;
+        domain.questions.forEach(q => {
+            if (!q.scaleId) return;
+            if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+            const s = CLINICAL_DATA.scales[q.scaleId];
+            if (s && s.keyedScoring) out.push({ question: q, scale: s });
+        });
+        return out;
+    }
+
+    /**
+     * Keyed-answer count for one IPDE module or PDQ-4+ scale.
+     * IPDE items carry `keyedAnswer` ('T' counts when answered True, 'F' when
+     * answered False); PDQ-4+ scales list plain item numbers counted when True.
+     */
+    function keyedCount(scaleId, qids, keyed) {
+        let n = 0;
+        qids.forEach(id => {
+            const v = state.responses[scaleId + ':' + id];
+            if (v === undefined) return;
+            if (keyed) { if ((keyed[id] === 'T') === (v === 1)) n++; }
+            else if (v === 1) n++;
+        });
+        return n;
+    }
+
+    /** Checklists rendered as Yes/No columns inside a PDQ-4+ deployment. */
+    function pdqChecklistParts(scale) {
+        return (scale.parts || []).filter(p => p.options && !p.clinicianRated);
     }
 
     /* ------------------------------------------------------------------ *
