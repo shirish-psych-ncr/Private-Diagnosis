@@ -982,6 +982,93 @@ modP = {
      "flags": ["LIFETIME"], "disordersOnPositive": ["antisocial_personality_disorder"]}]}
 
 # ---------------------------------------------------------------------------
+# Additional optional interview assessments (pages 36-37 of the MINI
+# user-scripted version):
+#   A - Cross-Cutting Measures: severity of symptom (0-10 clinician rating
+#       scale across 13 symptom domains)
+#   B - Disability / Functional Impairment: severity of disability (0-10
+#       clinician rating scale across 12 functioning domains)
+# These are self-contained rating tables; they add no branching logic and do
+# not feed any diagnostic box.
+# ---------------------------------------------------------------------------
+
+ccSymptoms = [
+    ("CCS1", "Depression", "अवसाद"),
+    ("CCS2", "Anger", "क्रोध"),
+    ("CCS3", "Mania (feeling up or high or hyper or full of energy with racing thoughts)",
+     "मैैनिया (उत्फुल्ल/हाई/अति-सक्रिय, दौड़ते विचारों के साथ)"),
+    ("CCS4", "Anxiety", "आतंक/चिंता"),
+    ("CCS5", "Physical (somatic) symptoms", "शारीरिक (देहज) लक्षण"),
+    ("CCS6", "Suicidal thoughts, impulses, plans, intent, (ANY thoughts of killing yourself), or any preparations to kill yourself or ANY attempt to kill yourself",
+     "आत्मघाती विचार, प्रेरणाएँ, योजनाएँ, अभिप्राय (स्वयं को मारने का कोई भी विचार), या आत्महत्या की कोई तैयारी अथवा कोई प्रयास"),
+    ("CCS7", "Hearing sounds or voices others can't hear or fearing someone can hear or read your thoughts or believing things others don't accept as true e.g. that people are spying on you or plotting against you or talking about you (Psychosis)",
+     "ऐसी ध्वनियाँ/आवाज़ें सुनना जो अन्य नहीं सुन सकते, भय कि कोई आपके विचार सुन/पढ़ सकता है, या ऐसी बातें मानना जिन्हें अन्य सत्य नहीं मानते — जैसे लोग आपकी जासूसी/साज़िश कर रहे हैं या आपके बारे में बात करते हैं (मनर्विकार)"),
+    ("CCS8", "Sleep problems", "नींद की समस्याएँ"),
+    ("CCS9", "Memory problems", "स्मृति समस्याएँ"),
+    ("CCS10", "Repetitive or obsessive thoughts or compulsive behaviors",
+     "पुनरावृत्त या विचारग्रस्त (obsessive) विचार या विवशतापूर्ण (compulsive) व्यवहार"),
+    ("CCS11", "Feeling things around you are strange, unreal, detached or unfamiliar, or feeling outside or detached from part or all of your body (Dissociation)",
+     "आसपास की चीज़ें अजीब/अवास्तविक/परिचित-नहीं लगना, या शरीर के कुछ/सभी भाग से विलग/बाहर महसूस करना (वियोजन/Dissociation)"),
+    ("CCS12", "Ability to function at work, at home, in your life, or in your relationships",
+     "कार्य, घर, जीवन या संबंधों में कार्य करने की क्षमता"),
+    ("CCS13", "Overusing alcohol or drugs", "शराब या दवाओं का अत्यधिक सेवन"),
+]
+
+crossCuttingMeasures = {
+  "id": "OPT-A",
+  "optionalAssessment": True,
+  "name": {"en": "Additional Optional Assessment A — Cross-Cutting Measures: Severity of Symptom",
+           "hi": "अतिरिक्त वैकल्पिक मूल्यांकन A — क्रॉस-कटिंग माप: लक्षणों की तीव्रता"},
+  "intro": {"en": "Use this scale to rate the severity of your symptom in the score column in the table below: Assessment of Symptoms That Cut Across Disorders.",
+            "hi": "इस पैमाने का उपयोग नीचे दी गई तालिका के स्कोर कॉलम में अपने लक्षण की तीव्रता रेट करने हेतु करें: विकारों-पार लक्षणों का मूल्यांकन।"},
+  "tableHeading": {"en": "Symptom Name / Score", "hi": "लक्षण का नाम / स्कोर"},
+  "items": [{"id": sid, "text": {"en": sen, "hi": shi}} for sid, sen, shi in ccSymptoms],
+  "ratingScale": {"min": 0, "max": 10, "type": "clinician_rating",
+                  "anchors": [{"v": 0, "label": {"en": "Not present", "hi": "उपस्थित नहीं"}},
+                              {"v": 1, "label": {"en": "Mild", "hi": "हल्का"}},
+                              {"v": 3, "label": {"en": "Moderate", "hi": "मध्यम"}},
+                              {"v": 6, "label": {"en": "Severe", "hi": "गंभीर"}},
+                              {"v": 10, "label": {"en": "Extreme", "hi": "अत्यधिक"}}]},
+  "note": {"en": "Clinician-rated 0-10 severity for each cross-cutting symptom domain; independent of the Module A-P branching logic and does not gate any diagnostic box.",
+           "hi": "प्रत्येक क्रॉस-कटिंग लक्षण-क्षेत्र हेतु चिकित्सक-रेटित 0-10 तीव्रता; माड्यूल A-P की शाखा-विभाजन पद्धति से स्वतंत्र तथा किसी निदान-बक्से को नियंत्रित नहीं करता।"}}
+
+disabilityItems = [
+    ("DIS1", "Work or school work", "कार्य या विद्यालय-कार्य"),
+    ("DIS2", "Social life or leisure activities (like hobbies or things you do for enjoyment)",
+     "सामाजिक जीवन या अवकाश गतिविधियाँ (शौक या मनोरंजन हेतु की जाने वाली चीज़ें)"),
+    ("DIS3", "Family life and/or home responsibilities", "पारिवारिक जीवन और/या घरेलू ज़िम्मेदारियाँ"),
+    ("DIS4", "Ability to get along with people", "लोगों के साथ मिलकर चलने की क्षमता"),
+    ("DIS5", "Personal and social relationships", "व्यक्तिगत एवं सामाजिक संबंध"),
+    ("DIS6", "Ability to understand and to communicate with others", "अन्य को समझने एवं उनसे संवाद करने की क्षमता"),
+    ("DIS7", "Ability to take care of yourself (washing, showering, bathing, dressing properly, brushing teeth, laundry, combing/brushing hair, eating regularly)",
+     "स्वयं की देखभाल की क्षमता (धुलाई, स्नान, उचित वस्त्र, दाँत साफ करना, कपड़े धोना, बाल सुलझाना, नियमित भोजन)"),
+    ("DIS8", "Made you disruptive or aggressive towards others", "आपको दूसरों प्रति अव्यवस्थाकारी या आक्रामक बनाना"),
+    ("DIS9", "Financially (ability to manage your money)", "आर्थिक (धन प्रबंधन की क्षमता)"),
+    ("DIS10", "Ability to get around physically", "भौतिक रूप से इधर-उधर चलने की क्षमता"),
+    ("DIS11", "Spiritual or religious life", "आध्यात्मिक या धार्मिक जीवन"),
+    ("DIS12", "How much did your condition have an impact on other people in your family?",
+     "आपकी स्थिति का आपके परिवार के अन्य लोगों पर कितना प्रभाव पड़ा?"),
+]
+
+disabilityImpairment = {
+  "id": "OPT-B",
+  "optionalAssessment": True,
+  "name": {"en": "Additional Optional Assessment B — Disability / Functional Impairment: Severity of Disability / Impairment",
+           "hi": "अतिरिक्त वैकल्पिक मूल्यांकन B — अक्षमता/कार्यात्मक हानि: अक्षमता/हानि की तीव्रता"},
+  "intro": {"en": "Use this scale to rate in the score column of the table below, how much your symptoms have disrupted your ability to function in the following areas of your life: Assessment of Impairment of Functioning/Disability.",
+            "hi": "इस पैमाने का उपयोग नीचे दी गई तालिका के स्कोर कॉलम में रेट करने हेतु करें कि आपके लक्षणों ने आपके जीवन के निम्न क्षेत्रों में कार्य करने की क्षमता को कितना बाधित किया है: कार्यात्मक हानि/अक्षमता का मूल्यांकन।"},
+  "tableHeading": {"en": "Domain Name / Score", "hi": "क्षेत्र का नाम / स्कोर"},
+  "items": [{"id": did, "text": {"en": den, "hi": dhi}} for did, den, dhi in disabilityItems],
+  "ratingScale": {"min": 0, "max": 10, "type": "clinician_rating",
+                  "anchors": [{"v": 0, "label": {"en": "Not present", "hi": "उपस्थित नहीं"}},
+                              {"v": 1, "label": {"en": "Mild", "hi": "हल्का"}},
+                              {"v": 3, "label": {"en": "Moderate", "hi": "मध्यम"}},
+                              {"v": 6, "label": {"en": "Severe", "hi": "गंभीर"}},
+                              {"v": 10, "label": {"en": "Extreme", "hi": "अत्यधिक"}}]},
+  "note": {"en": "Clinician-rated 0-10 disruption for each functional domain; independent of the Module A-P branching logic and does not gate any diagnostic box.",
+           "hi": "प्रत्येक कार्यात्मक क्षेत्र हेतु चिकित्सक-रेटित 0-10 बाधा; माड्यूल A-P की शाखा-विभाजन पद्धति से स्वतंत्र तथा किसी निदान-बक्से को नियंत्रित नहीं करता।"}}
+
+# ---------------------------------------------------------------------------
 # Additional optional interview assessment: Mood Disorders Diagnostic Algorithm
 # (consult Modules A - Major Depressive Episode, C - (Hypo)manic Episode,
 #  K - Psychotic Disorders). Derived boxes; no new interview items.
@@ -1055,14 +1142,16 @@ mini = {
                                     "N - Generalized Anxiety Disorder",
                                     "O - Rule Out Medical, Organic or Drug Causes For All Disorders",
                                     "P - Antisocial Personality Disorder",
-                                    "Additional optional interview assessments: Mood Disorders Diagnostic Algorithm"],
+                                    "Additional optional interview assessments (pages 36-37): A - Cross-Cutting Measures (Severity of Symptom), B - Disability/Functional Impairment (Severity of Disability/Impairment)",
+                                    "Mood Disorders Diagnostic Algorithm"],
              "note": {"en": "Structured interview modules adapted from the MINI 7.0.2 user-scripted version. This web implementation captures the screening logic only; it is not a substitute for trained interviewer administration. The organic-cause exclusion (Module O) is captured as an explicit clinician-rated No/Yes/Uncertain summary that gates every current-disorder diagnostic box.",
                       "hi": "MINI 7.0.2 के उपयोगकर्ता-स्क्रिप्टेड संस्करण से अनुकूलित संरचित साक्षात्कार माड्यूल। यह वेब कार्यान्वयन केवल स्क्रीनिंग तर्क ग्रहण करता है; प्रशिक्षित इंटरव्यूटर के प्रशासन का विकल्प नहीं है। जैविक-कारण बहिर्गमन (माड्यूल O) को चिकित्सक-रेटित नहीं/हाँ/अनिश्चित सारांश के रूप में ग्रहण किया गया है जो प्रत्येक वर्तमान-विकार निदान-बक्से को नियंत्रित करता है।"}},
   "responseScale": [{"v": 0, "label": YN_NO}, {"v": 1, "label": YN_YES}],
-  "directions": {"en": "These questions follow the MINI 7.0.2 branching logic (Modules A-P plus the Mood Disorders Diagnostic Algorithm: Major Depressive Episode; Suicidality; Manic/Hypomanic Episodes; Panic Disorder; Agoraphobia; Social Anxiety; Obsessive-Compulsive Disorder; Posttraumatic Stress Disorder; Alcohol Use Disorder; Substance Use Disorder; Psychotic Disorders and Mood Disorder With Psychotic Features; Anorexia Nervosa; Bulimia Nervosa; Binge Eating Disorder; Generalized Anxiety Disorder; Rule Out Medical/Organic/Drug Causes; Antisocial Personality Disorder). Answer honestly; sections that do not apply are skipped automatically.",
-                 "hi": "ये प्रश्न MINI 7.0.2 की शाखा-विभाजन पद्धति का पालन करते हैं (माड्यूल A-P एवं मूड-विकार निदान-एल्गोरिद्म: प्रमुख अवसादी एपिसोड; आत्मघातिता; मैैनिक/हाइपोमैैनिक एपिसोड; पैैनिक विकार; एगोराफोबिया; सामाजिक आतंक; O.C.D.; PTSD; मद्य-सेवन विकार; पदार्थ-सेवन विकार; मनर्विकार विकार एवं मनर्विकारी लक्षणों सहित मूड विकार; एनोरेक्सिया नर्वोसा; बुलिमिया नर्वोसा; बिंज-ईटिंग विकार; सामान्यीकृत चिंता विकार; चिकित्सकीय/जैविक/दवा-कारणों का बहिर्गमन; प्रतिसामाजिक व्यक्तित्व विकार)। ईमानदारी से उत्तर दें; लागू न होने वाले भाग स्वतः छोड़े जाएँगे।"},
+  "directions": {"en": "These questions follow the MINI 7.0.2 branching logic (Modules A-P plus the additional optional interview assessments: Cross-Cutting Measures, Disability/Functional Impairment, and the Mood Disorders Diagnostic Algorithm: Major Depressive Episode; Suicidality; Manic/Hypomanic Episodes; Panic Disorder; Agoraphobia; Social Anxiety; Obsessive-Compulsive Disorder; Posttraumatic Stress Disorder; Alcohol Use Disorder; Substance Use Disorder; Psychotic Disorders and Mood Disorder With Psychotic Features; Anorexia Nervosa; Bulimia Nervosa; Binge Eating Disorder; Generalized Anxiety Disorder; Rule Out Medical/Organic/Drug Causes; Antisocial Personality Disorder). Answer honestly; sections that do not apply are skipped automatically.",
+                 "hi": "ये प्रश्न MINI 7.0.2 की शाखा-विभाजन पद्धति का पालन करते हैं (माड्यूल A-P एवं अतिरिक्त वैकल्पिक मूल्यांकन: क्रॉस-कटिंग माप, अक्षमता/कार्यात्मक हानि, तथा मूड-विकार निदान-एल्गोरिद्म: प्रमुख अवसादी एपिसोड; आत्मघातिता; मैैनिक/हाइपोमैैनिक एपिसोड; पैैनिक विकार; एगोराफोबिया; सामाजिक आतंक; O.C.D.; PTSD; मद्य-सेवन विकार; पदार्थ-सेवन विकार; मनर्विकार विकार एवं मनर्विकारी लक्षणों सहित मूड विकार; एनोरेक्सिया नर्वोसा; बुलिमिया नर्वोसा; बिंज-ईटिंग विकार; सामान्यीकृत चिंता विकार; चिकित्सकीय/जैविक/दवा-कारणों का बहिर्गमन; प्रतिसामाजिक व्यक्तित्व विकार)। ईमानदारी से उत्तर दें; लागू न होने वाले भाग स्वतः छोड़े जाएँगे।"},
   "modules": [modA, modB, modC, modD, modE, modF, modG, modH, modI, modJ, modK,
-              modL, modM, modMB, modN, modO, modP, moodAlgorithm]
+              modL, modM, modMB, modN, modO, modP,
+              crossCuttingMeasures, disabilityImpairment, moodAlgorithm]
 }
 
 out = "/tmp/mini.json"
