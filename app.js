@@ -206,7 +206,7 @@
                     scaleId: peds ? 'vadrs' : null,
                     instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
                 });
-            } else if (instName === 'auto:minioptional' || instName === 'auto:pdscreen') {
+            } else if (instName === 'auto:minioptional' || instName === 'auto:pdscreen' || instName === 'auto:angertable') {
                 // MINI 7.0.2 additional optional interview assessments (pp. 36-37):
                 // A - Cross-Cutting Measures (Severity of Symptom) and
                 // B - Disability / Functional Impairment. Both are clinician-rated
@@ -242,8 +242,11 @@
         deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
             const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
             const isPdScreen = !!(scDef && scDef.keyedScoring);
+            const isSummed = !!(scDef && scDef.sumScoring);
             const section = document.createElement('section');
-            section.className = 'scale-section' + (ratingTable ? (isPdScreen ? ' pd-rating-table' : ' clinician-rating-table') : '');
+            section.className = 'scale-section' + (ratingTable
+                ? (isPdScreen ? ' pd-rating-table' : (isSummed ? ' anger-rating-table' : ' clinician-rating-table'))
+                : '');
             const secKey = ratingTable ? domain.id + ':' + scaleId : domain.id;
             section.setAttribute('aria-labelledby', 'scale-h-' + secKey);
 
@@ -254,7 +257,7 @@
             if (ratingTable) {
                 const badge = document.createElement('span');
                 badge.className = 'scale-admin-badge';
-                badge.textContent = isPdScreen
+                badge.textContent = isPdScreen || isSummed
                     ? (state.lang === 'hi' ? 'स्क्रीनिंग केवल — रोग-निर्णायक नहीं' : 'Screening only — not diagnostic')
                     : (state.lang === 'hi' ? 'चिकित्सक-रेटित' : 'Clinician-rated');
                 h.appendChild(document.createTextNode(' · '), badge);
@@ -436,13 +439,23 @@
 
     /** Screen-in questions whose endorsement deploys a keyed T/F instrument. */
     function deployedPdScreens(domain) {
+        return deployedScreenInstruments(domain, s => !!s.keyedScoring);
+    }
+
+    /**
+     * Generic screen-in deployment: returns the scales attached to a domain's
+     * yes/no screen items that the respondent endorsed. `accept` selects which
+     * kind of instrument qualifies (keyed personality screens, summed anger
+     * instruments, ...).
+     */
+    function deployedScreenInstruments(domain, accept) {
         const out = [];
         if (!domain || !domain.questions) return out;
         domain.questions.forEach(q => {
             if (!q.scaleId) return;
             if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
             const s = CLINICAL_DATA.scales[q.scaleId];
-            if (s && s.keyedScoring) out.push({ question: q, scale: s });
+            if (s && accept(s)) out.push({ question: q, scale: s });
         });
         return out;
     }
@@ -627,6 +640,95 @@
         };
     }
 
+    /**
+     * STAXI-CA scoring: raw sums for State Anger (items 1-15), Trait Anger
+     * (16-24) and each Part-3 subscale, plus the composite Expression score
+     * (Anger-In + Anger-Out + Control-Out reversed). The instrument is purely
+     * dimensional - there is no caseness cutoff - so nothing here raises a
+     * differential flag; the flagged-disorder list for the anger domain comes
+     * from the screen-in items themselves.
+     */
+    function scoreStaxi(scale) {
+        const hi = state.lang === 'hi';
+        const ans = id => state.responses[scale.id + ':' + id];
+        const rows = [];
+        let answered = 0, totalItems = 0;
+        Object.keys(scale.subscales).forEach(slug => {
+            const sub = scale.subscales[slug];
+            const ids = sub.items.map(n => 'staxi_' + n);
+            const got = ids.filter(id => ans(id) !== undefined);
+            answered += got.length;
+            totalItems += ids.length;
+            const raw = got.reduce((t, id) => t + Number(ans(id)), 0);
+            const lo = ids.length * (scale.scoring.scaleMin || 1);
+            const up = ids.length * (scale.scoring.scaleMax || 4);
+            rows.push({
+                label: L(sub.name),
+                value: got.length === ids.length ? (raw + '/' + up) : (raw + ' (' + got.length + '/' + ids.length + ')'),
+                flagged: false,
+                detail: (hi ? 'सीमा ' : 'range ') + lo + '-' + up +
+                    (slug === 'control' ? (hi ? ' · उच्च = बेहतर नियंत्रण' : ' · higher = better control') : '')
+            });
+        });
+        // Composite Expression = Anger-In + Anger-Out + (max+min - Control)
+        const num = slug => scale.subscales[slug].items
+            .map(n => ans('staxi_' + n)).filter(v => v !== undefined)
+            .reduce((t, v) => t + Number(v), 0);
+        const complete = Object.keys(scale.subscales)
+            .every(slug => scale.subscales[slug].items.every(n => ans('staxi_' + n) !== undefined));
+        const mn = scale.scoring.scaleMin || 1, mx = scale.scoring.scaleMax || 4;
+        const expr = complete ? (num('in') + num('out') + (mx + mn - num('control'))) : null;
+        if (complete) {
+            rows.push({
+                label: hi ? 'क्रोध-अभिव्यक्ति संयुक्त स्कोर (AES)' : 'Anger Expression Summary (AES)',
+                value: String(expr),
+                flagged: false,
+                detail: hi ? 'Anger-In + Anger-Out + (5 − Anger Control)' : 'Anger-In + Anger-Out + (max+min − Anger Control)'
+            });
+        }
+        return {
+            name: L(scale.name),
+            score: answered + '/' + totalItems + ' ' + (hi ? 'आइटम उत्तरित' : 'items answered'),
+            severity: complete
+                ? (hi ? 'पूर्ण — आयामगत स्कोर (रोग-निर्णायक नहीं)' : 'Complete — dimensional scores (not diagnostic)')
+                : (hi ? 'अपूर्ण' : 'Incomplete'),
+            aboveCutoff: false,
+            notDiagnostic: true,
+            answered, total: totalItems,
+            disorders: [],
+            pdRegister: {
+                kind: 'staxi',
+                heading: hi ? 'STAXi-CA उप-पैमाना प्रोफ़ाइल' : 'STAXI-CA subscale profile',
+                note: L((scale.scoring.rule || {}).en ? scale.scoring.rule : { en: '', hi: '' }),
+                rows: rows
+            }
+        };
+    }
+
+    /**
+     * Clinical Anger Scale scoring: sum of the 21 cluster choices (A=0..D=3,
+     * range 0-63) mapped onto the printed interpretive ranges. Severity band
+     * only - the CAS is dimensional and does not itself raise a disorder flag.
+     */
+    function scoreCas(scale) {
+        const hi = state.lang === 'hi';
+        const ids = [];
+        (scale.parts || []).forEach(part => part.questions.forEach(q => ids.push(q.id)));
+        const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined);
+        const sum = got.reduce((t, id) => t + Number(state.responses[scale.id + ':' + id]), 0);
+        const band = severityBand(sum, scale.bands || []);
+        const maxTotal = ((scale.ratingScale || {}).max || 3) * ids.length;
+        return {
+            name: L(scale.name),
+            score: sum + '/' + maxTotal + ' (' + got.length + '/' + ids.length + ')',
+            severity: (band ? L(band) : '—') + (hi ? ' · रोग-निर्णायक नहीं' : ' · not diagnostic'),
+            aboveCutoff: !!band && (scale.bands || []).indexOf(band) >= ((scale.bands || []).length - 2),
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: []
+        };
+    }
+
     /* ------------------------------------------------------------------ *
      * 7. SAFETY MODAL (non-dismissible except explicit acknowledgement)
      * ------------------------------------------------------------------ */
@@ -762,6 +864,22 @@
                     if (!s || !s.keyedScoring) return;
                     if (s.keying === 'ipde') instrumentResults.push(scoreIpde(s, addFlag));
                     else instrumentResults.push(scorePdq4(s, addFlag));
+                });
+                return;
+            }
+
+            // Summed anger instruments (STAXI-CA / Clinical Anger Scale): deployed
+            // through the domain's own screen-in items. Both are dimensional - they
+            // report severity, never a diagnosis - but a positive screen-in item
+            // still flags the impulse-control categories.
+            if (domain.instrument === 'auto:angertable') {
+                if ((state.responses[domain.id + ':ang_1'] || 0) >= 1 ||
+                    (state.responses[domain.id + ':ang_2'] || 0) >= 1) {
+                    (domain.questions[0].disorders || []).forEach(d => addFlag(d, 'Anger screen'));
+                }
+                deployedScreenInstruments(domain, s => !!s.sumScoring).forEach(({ scale }) => {
+                    instrumentResults.push(scale.keying === 'staxi' || scale.id === 'staxi_ca'
+                        ? scoreStaxi(scale) : scoreCas(scale));
                 });
                 return;
             }
@@ -1256,6 +1374,18 @@
                         for (const item of part.questions)
                             if (state.responses[s.id + ':' + item.id] === undefined) return false;
                     }
+                }
+            }
+
+            // Deployed anger instruments must be fully answered.
+            if (domain.instrument === 'auto:angertable') {
+                for (const q of domain.questions) {
+                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
+                    const s = CLINICAL_DATA.scales[q.scaleId];
+                    if (!s || !s.sumScoring) continue;
+                    for (const part of s.parts)
+                        for (const item of part.questions)
+                            if (state.responses[s.id + ':' + item.id] === undefined) return false;
                 }
             }
 
