@@ -206,6 +206,16 @@
                     scaleId: peds ? 'vadrs' : null,
                     instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
                 });
+            } else if (instName === 'auto:minioptional') {
+                // MINI 7.0.2 additional optional interview assessments (pp. 36-37):
+                // A - Cross-Cutting Measures (Severity of Symptom) and
+                // B - Disability / Functional Impairment. Both are clinician-rated
+                // 0-10 tables reached through the domain's own screen-in items.
+                domain.questions.forEach(q => {
+                    if (!q.scaleId) return;
+                    if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+                    deployed.push({ domain, scaleId: q.scaleId, instrumentLabel: null, ratingTable: true });
+                });
             } else {
                 deployed.push({ domain, scaleId: null, instrumentLabel: instName });
             }
@@ -224,15 +234,23 @@
         container.replaceChildren();
         const deployed = routeInstruments();
 
-        deployed.forEach(({ domain, scaleId, instrumentLabel }) => {
+        deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
             const section = document.createElement('section');
-            section.className = 'scale-section';
-            section.setAttribute('aria-labelledby', 'scale-h-' + domain.id);
+            section.className = 'scale-section' + (ratingTable ? ' clinician-rating-table' : '');
+            const secKey = ratingTable ? domain.id + ':' + scaleId : domain.id;
+            section.setAttribute('aria-labelledby', 'scale-h-' + secKey);
 
             const h = document.createElement('h3');
-            h.id = 'scale-h-' + domain.id;
+            h.id = 'scale-h-' + secKey;
             h.className = 'scale-heading';
-            h.textContent = L(domain.name) + (instrumentLabel ? ' — ' + instrumentLabel : '');
+            const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
+            h.textContent = (scDef ? L(scDef.name) : L(domain.name) + (instrumentLabel ? ' — ' + instrumentLabel : ''));
+            if (ratingTable) {
+                const badge = document.createElement('span');
+                badge.className = 'scale-admin-badge';
+                badge.textContent = state.lang === 'hi' ? 'चिकित्सक-रेटित' : 'Clinician-rated';
+                h.appendChild(document.createTextNode(' · '), badge);
+            }
             section.appendChild(h);
 
             const help = document.createElement('p');
@@ -299,6 +317,16 @@
 
             const isPerf = !!part.questions[0] && part.questions[0].isPerformance;
             const cols = isPerf ? scale.performanceOptions : scale.matrixOptions;
+
+            // Clinician-rated severity tables (e.g. MINI optional assessments A/B)
+            // print the numeric score column first, then the verbal anchors, exactly
+            // as on the paper form: "Symptom Name | Score 0..10".
+            if (scale.ratingScale && !isPerf) {
+                const anchorTh = document.createElement('p');
+                anchorTh.className = 'scale-rating-anchors';
+                anchorTh.textContent = L(scale.ratingScale.note || { en: '', hi: '' });
+                section.appendChild(anchorTh);
+            }
 
             const wrap = document.createElement('div');
             wrap.className = 'matrix-scroll';
@@ -456,6 +484,39 @@
                 return;
             }
 
+            // Clinician-rated severity tables (MINI optional assessments A/B): the
+            // printed form records one 0-10 rating per row and derives no total, so
+            // these are reported as a rating register rather than a cutoff score.
+            if (domain.instrument === 'auto:minioptional') {
+                domain.questions.forEach(q => {
+                    if (!q.scaleId) return;
+                    if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+                    const s = CLINICAL_DATA.scales[q.scaleId];
+                    if (!s) return;
+                    const rows = s.parts[0].questions;
+                    const rated = rows.map(r => state.responses[q.scaleId + ':' + r.id])
+                        .filter(v => v !== undefined);
+                    const anchorName = v => {
+                        const anchors = ((s.ratingScale || {}).anchors || []).slice().sort((a, b) => b.v - a.v);
+                        const hit = anchors.find(a => v >= a.v);
+                        return hit ? L(hit.label) : String(v);
+                    };
+                    instrumentResults.push({
+                        name: L(s.name),
+                        score: rated.length + '/' + rows.length + ' rated' +
+                            (rated.length ? ' | max ' + Math.max(...rated) + '/10 (' + anchorName(Math.max(...rated)) + ')' : ''),
+                        severity: rated.length
+                            ? (state.lang === 'hi' ? 'चिकित्सक-रेटित' : 'Clinician-rated')
+                            : (state.lang === 'hi' ? 'अपूर्ण' : 'Incomplete'),
+                        aboveCutoff: false,
+                        answered: rated.length, total: rows.length,
+                        disorders: [],
+                        ratingRegister: rows.map(r => ({ id: r.id, label: L(r.text), value: state.responses[q.scaleId + ':' + r.id] }))
+                    });
+                });
+                return;
+            }
+
             // Domain raw-sum scoring against cutoff (PHQ-9/GAD-7/PCL-5/ISI/AUDIT-C/ASRS/CAARS-style)
             let sum = 0, answered = 0;
             domain.questions.forEach(q => {
@@ -569,6 +630,34 @@
         tbl.appendChild(tbody);
         rc.appendChild(tbl);
 
+        // Clinician-rated rating tables (MINI optional assessments A & B)
+        r.instrumentResults.filter(x => x.ratingRegister && x.ratingRegister.length).forEach(reg => {
+            const h = document.createElement('h4');
+            h.textContent = reg.name;
+            rc.appendChild(h);
+            const t = document.createElement('table');
+            t.className = 'clinician-table rating-register';
+            const trh = document.createElement('tr');
+            [state.lang === 'hi' ? 'नाम' : 'Name', state.lang === 'hi' ? 'स्कोर (0-10)' : 'Score (0-10)'].forEach(x => {
+                const th = document.createElement('th'); th.textContent = x; trh.appendChild(th);
+            });
+            t.appendChild(trh);
+            reg.ratingRegister.forEach(row => {
+                const tr = document.createElement('tr');
+                const td1 = document.createElement('td'); td1.textContent = row.label;
+                const td2 = document.createElement('td'); td2.textContent = row.value === undefined ? '—' : String(row.value);
+                tr.append(td1, td2);
+                t.appendChild(tr);
+            });
+            rc.appendChild(t);
+            const note = document.createElement('p');
+            note.className = 'rating-register-note';
+            note.textContent = state.lang === 'hi'
+                ? 'पैमाना: 0 अनुपस्थित, 1 हल्का, 3 मध्यम, 6 गंभीर, 10 अत्यधिक। प्रत्येक पंक्ति स्वतंत्र रूप से रेट की जाती है; कोई कुल अंक नहीं एवं यह रेटिंग किसी निदान-बक्से को नियंत्रित नहीं करता।'
+                : 'Scale: 0 Not present, 1 Mild, 3 Moderate, 6 Severe, 10 Extreme. Each row is rated independently; no composite total is derived and these ratings do not gate any diagnostic box.';
+            rc.appendChild(note);
+        });
+
         const diffH = document.createElement('h4');
         diffH.textContent = state.lang === 'hi' ? 'विभेदक विचार (Differential Considerations)' : 'Differential Considerations';
         rc.appendChild(diffH);
@@ -656,6 +745,29 @@
             doc.setTextColor(0);
             y += 10;
         }
+
+        // MINI optional assessments A & B: reproduce the printed rating tables
+        // ("Symptom Name / Score", "Domain Name / Score") row by row.
+        const ratingTables = r.instrumentResults.filter(x => x.ratingRegister && x.ratingRegister.length);
+        ratingTables.forEach(tbl => {
+            if (y > 230) { doc.addPage(); y = 20; }
+            doc.setFontSize(12);
+            doc.text(tbl.name + ' — For Office Use Only', 14, y); y += 2;
+            doc.autoTable({
+                startY: y,
+                head: [['Name', 'Score (0-10)']],
+                body: tbl.ratingRegister.map(row => [row.label, row.value === undefined ? '—' : String(row.value)]),
+                theme: 'grid',
+                styles: { fontSize: 8 },
+                columnStyles: { 1: { cellWidth: 26 } }
+            });
+            y = doc.lastAutoTable.finalY + 4;
+            doc.setFontSize(8);
+            doc.setTextColor(120);
+            doc.text('Scale: 0 Not present, 1 Mild, 3 Moderate, 6 Severe, 10 Extreme. Each row is rated independently; no composite total is derived and these ratings do not gate any diagnostic box.', 14, y);
+            doc.setTextColor(0);
+            y += 10;
+        });
 
         doc.setFontSize(12);
         doc.text('Differential Considerations (hypothesis-generating only)', 14, y); y += 2;
