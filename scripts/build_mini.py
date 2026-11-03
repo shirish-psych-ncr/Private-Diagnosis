@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble /tmp/mini.json — MINI 7.0.2 (DSM-5) Modules A-J, bilingual EN/HI.
+"""Assemble /tmp/mini.json — MINI 7.0.2 (DSM-5) Modules A-K, bilingual EN/HI.
 
 Module B is loaded verbatim from scripts/modB.json; the other modules are
 defined here with the official screening logic:
@@ -31,6 +31,15 @@ defined here with the official screening logic:
     class-specific withdrawal checklists (sedatives 2+, opiates 3+,
     stimulants 2+, cannabis 3+), 2+ gate -> Substance Use Disorder box with
     specifiers.
+  - Module K: psychotic screen K1-K7a/b (persecutory, mind reading, thought
+    insertion/possession, delusions of reference, other odd beliefs, auditory
+    and visual hallucinations) plus clinician-judged K8-K10 (disorganized
+    speech, disorganized/catatonic behavior, negative symptoms) -> Mood
+    Disorder With Psychotic Features lifetime (K11a + K11b) and current (K12)
+    boxes with the mood-vs-psychotic duration rules, then Psychotic Disorder
+    current (K13) and lifetime (K14) boxes requiring 1+ "b" (or "a") symptom
+    of K1-K8, 2+ of K1-K10, two symptoms in the same 1-month period, and
+    organic cause ruled out (O2 summary).
 """
 import json, os
 
@@ -562,6 +571,126 @@ modJ = {
      "flags": USE_DISORDER_SPECIFIERS, "disordersOnPositive": ["substance_use_disorder"]}]
 }
 
+# Module K — Psychotic Disorders and Mood Disorder With Psychotic Features.
+# Each screening item is an "a" (lifetime) question with a linked "b" (current)
+# follow-up coded only if the "a" answer was Yes; K8-K10 are clinician-
+# judgment observations. Ask for an example of every positively answered item.
+K_SYMPTOMS = [
+  {"id": "K1", "role": {"en": "Persecutory delusions", "hi": "अतासी भ्रम"},
+   "note": {"en": "NOTE: Ask for examples to rule out actual stalking.",
+            "hi": "सूचना: वास्तविक पीछा-करी (stalking) को खारिज करने हेतु उदाहरण पूछें।"},
+   "a": q("K1a", "Have you ever believed that people were spying on you, or that someone was plotting against you, or trying to hurt you?",
+          "क्या आपको कभी विश्वास हुआ कि लोग आपकी जासूसी कर रहे हैं, या कोई आपके विरुद्ध षड्यंत्र रच रहा है, या आपको नुकसान पहुँचाने का प्रयास कर रहा है?"),
+   "b": q("K1b", "If Yes: do you currently believe these things?",
+          "यदि 'हाँ': क्या आप वर्तमान में भी इन बातों में विश्वास करते हैं?")},
+  {"id": "K2", "role": {"en": "Mind reading / hearing others' thoughts",
+                        "hi": "मन-पठन / अन्य के विचार सुनना"},
+   "a": q("K2a", "Have you ever believed that someone was reading your mind or could hear your thoughts, or that you could actually read someone's mind or hear what another person was thinking?",
+          "क्या आपको कभी विश्वास हुआ कि कोई आपका मन पढ़ रहा है या आपके विचार सुन सकता है, या कि आप वास्तव में किसी का मन पढ़ सकते हैं या दूसरे व्यक्ति के विचार सुन सकते हैं?"),
+   "b": q("K2b", "If Yes: do you currently believe these things?",
+          "यदि 'हाँ': क्या आप वर्तमान में भी इन बातों में विश्वास करते हैं?")},
+  {"id": "K3", "role": {"en": "Thought insertion / possession",
+                        "hi": "विचार-आरोपण / ग्रस्त-भाव"},
+   "note": {"en": "CLINICIAN: Ask for examples and discount any that are not psychotic.",
+            "hi": "चिकित्सक: उदाहरण पूछें और अमनर्विकार वृत्तांतों को खारिज करें।"},
+   "a": q("K3a", "Have you ever believed that someone or some force outside of yourself put thoughts in your mind that were not your own, or made you act in a way that was not your usual self? Have you ever felt that you were possessed?",
+          "क्या आपको कभी विश्वास हुआ कि किसी बाहरी व्यक्ति/शक्ति ने आपके मन में आपके स्वयं के न हो वाले विचार रखे, या आपको ऐसे व्यवहार पर विवश किया जो आपका स्वाभाविक स्वभाव नहीं? क्या कभी लगा कि आप ग्रस्त (possessed) हैं?"),
+   "b": q("K3b", "If Yes: do you currently believe these things?",
+          "यदि 'हाँ': क्या आप वर्तमान में भी इन बातों में विश्वास करते हैं?")},
+  {"id": "K4", "role": {"en": "Delusions of reference", "hi": "संदर्भ-भ्रम"},
+   "a": q("K4a", "Have you ever believed that you were being sent special messages through the TV, radio, internet, newspapers, books, or magazines, or that a person you did not personally know was particularly interested in you?",
+          "क्या आपको कभी विश्वास हुआ कि टीवी, रेडियो, इंटरनेट, समाचार-पत्र, पुस्तकों या पत्रिकाओं के माध्यम से आपको विशेष संदेश भेजे जा रहे हैं, या कि कोई व्यक्ति जिसे आप व्यक्तिगत रूप से नहीं जानते विशेष रूप से आपमें रुचि रखता है?"),
+   "b": q("K4b", "If Yes: do you currently believe these things?",
+          "यदि 'हाँ': क्या आप वर्तमान में भी इन बातों में विश्वास करते हैं?")},
+  {"id": "K5", "role": {"en": "Other odd / delusional beliefs reported by others",
+                        "hi": "अन्य विषम/भ्रामक मान्यताएँ (परजनों द्वारा)"},
+   "note": {"en": "CLINICIAN: Ask for examples. Only code Yes if the examples are clearly delusional ideas not explored in questions K1 to K4 — for example, religious, death, disease or somatic delusions, delusions of grandiosity, jealousy or guilt, or of failure, inadequacy, ruin, or destitution, or nihilistic delusions.",
+            "hi": "चिकित्सक: उदाहरण पूछें। केवल तभी 'हाँ' कोड करें जब उदाहरण स्पष्टतः भ्रामक विचार हों जो K1–K4 में नहीं पूछे गए — यथा धर्म/मृत्यु/रोग/कायिक भ्रम; वैभव, ईर्ष्या या अपराध के भ्रम; असफलता, अक्षमता, बर्बादी या दरिद्रता के भ्रम; शून्यतावादी भ्रम।"},
+   "a": q("K5a", "Have your relatives or friends ever considered any of your beliefs odd or unusual?",
+          "क्या आपके आत्मीय/मित्रों ने कभी आपकी कोई मान्यता विषम या असामान्य मानी?"),
+   "b": q("K5b", "If Yes: do they currently consider your beliefs strange or unusual?",
+          "यदि 'हाँ': क्या वे वर्तमान में भी आपकी मान्यताएँ विचित्र/असामान्य मानते हैं?")},
+  {"id": "K6", "role": {"en": "Auditory hallucinations", "hi": "श्रवण-छलात्मक अनुभव"},
+   "voiceNote": {"en": "If yes to voice hallucination: Was the voice commenting on your thoughts or behavior, or did you hear two or more voices talking to each other?",
+                 "hi": "यदि स्वर-छलाहन 'हाँ': क्या स्वर आपके विचार/व्यवहार पर टिप्पणी कर रहा था, या दो या अधिक स्वर एक-दूसरे से बात कर रहे थे?"},
+   "a": q("K6a", "Have you ever heard things other people couldn't hear, such as voices?",
+          "क्या आपने कभी ऐसी चीज़ें सुनी जो दूसरों को नहीं सुनाई दीं, जैसे स्वर/आवाज़ें?"),
+   "b": q("K6b", "If Yes to K6a: have you heard sounds/voices in the past month?",
+          "यदि K6a 'हाँ': क्या पिछले माह में आपको स्वर/आवाज़ें सुनाई दीं?")},
+  {"id": "K7", "role": {"en": "Visual hallucinations", "hi": "दृश्य-छलात्मक अनुभव"},
+   "note": {"en": "CLINICIAN: Check to see if these are culturally inappropriate.",
+            "hi": "चिकित्सक: जाँचें कि ये सांस्कृतिक दृष्टि से अनुचित तो नहीं हैं।"},
+   "a": q("K7a", "Have you ever had visions when you were awake, or have you ever seen things other people couldn't see?",
+          "क्या आपको कभी जागती अवस्था में दृश्य-आभास (visions) हुए, या कभी ऐसी चीज़ें दिखाई दीं जो दूसरों को नहीं दिखीं?"),
+   "b": q("K7b", "If Yes: have you seen these things in the past month?",
+          "यदि 'हाँ': क्या पिछले माह में आपको ऐसी चीज़ें दिखाई दीं?")},
+  {"id": "K8", "clinicianJudgment": True,
+   "role": {"en": "Disorganized / incoherent speech", "hi": "विशृंखल/असंगत वाक्"},
+   "a": q("K8a", "Clinician's judgment: Did the patient ever in the past exhibit disorganized, incoherent or derailed speech, or marked loosening of associations?",
+          "चिकित्सकीय निर्णय: क्या रोगी ने अतीत में कभी विशृंखल, असंगत या भ्रष्ट वाक् प्रदर्शित की, या सह-संबंधों का सुस्पष्ट शिथिलन (loosening of associations) देखा गया?"),
+   "b": q("K8b", "Clinician's judgment: Is the patient currently exhibiting incoherence, disorganized or derailed speech, or marked loosening of associations?",
+          "चिकित्सकीय निर्णय: क्या रोगी वर्तमान में असंगति, विशृंखल/भ्रष्ट वाक् या सह-संबंधों का सुस्पष्ट शिथिलन प्रदर्शित कर रहा है?")},
+  {"id": "K9", "clinicianJudgment": True,
+   "role": {"en": "Disorganized or catatonic behavior", "hi": "विशृंखल या कटाटोनिक व्यवहार"},
+   "a": q("K9a", "Clinician's judgment: Did the patient ever in the past exhibit disorganized or catatonic behavior?",
+          "चिकित्सकीय निर्णय: क्या रोगी ने अतीत में कभी विशृंखल या कटाटोनिक व्यवहार प्रदर्शित किया?"),
+   "b": q("K9b", "Clinician's judgment: Is the patient currently exhibiting disorganized or catatonic behavior?",
+          "चिकित्सकीय निर्णय: क्या रोगी वर्तमान में विशृंखल या कटाटोनिक व्यवहार प्रदर्शित कर रहा है?")},
+  {"id": "K10", "clinicianJudgment": True,
+   "role": {"en": "Negative symptoms", "hi": "नकारात्मक लक्षण"},
+   "a": q("K10a", "Clinician's judgment: Did the patient ever in the past have negative symptoms, e.g. significant reduction of emotional expression or affective flattening, poverty of speech (alogia) or an inability to initiate or persist in goal-directed activities (avolition)?",
+          "चिकित्सकीय निर्णय: क्या रोगी को अतीत में कभी नकारात्मक लक्षण रहे — यथा भावनात्मक अभिव्यक्ति का महत्वपूर्ण ह्रास/भाव-फ्लैटनेस, वाक्-दारिद्र्य (alogia), या लक्ष्य-संचालित गतिविधियाँ आरंभ करने/निर्vah करने में अक्षमता (avolition)?"),
+   "b": q("K10b", "Clinician's judgment: Are negative symptoms of schizophrenia, e.g. significant reduction of emotional expression or affective flattening, poverty of speech (alogia) or an inability to initiate or persist in goal-directed activities (avolition), prominent during the interview?",
+          "चिकित्सकीय निर्णय: क्या साक्षात्कार के दौरान स्क़िज़ोफ्रेनिया के नकारात्मक लक्षण — भावनात्मक अभिव्यक्ति का महत्वपूर्ण ह्रास/भाव-फ्लैटनेस, वाक्-दारिद्र्य (alogia), या लक्ष्य-संचालित गतिविधियों में अक्षमता (avolition) — सुस्पष्ट हैं?")},
+]
+
+modK = {
+  "id": "K",
+  "name": {"en": "Module K — Psychotic Disorders and Mood Disorder With Psychotic Features",
+           "hi": "माड्यूल K — मनर्विकार विकार एवं मनर्विकारी लक्षणों सहित मूड विकार"},
+  "moduleNote": {"en": "Ask for an example of each question answered positively. Code Yes only if the examples clearly show a distortion of thought or of perception or if they are not culturally appropriate. The purpose of this module is to exclude patients with psychotic disorders. This module needs experience.",
+                  "hi": "प्रत्येक सकारात्मक उत्तर का उदाहरण पूछें। केवल तभी 'हाँ' कोड करें जब उदाहरण स्पष्ट रूप से चिंतन या प्रत्यक्ष-ज्ञान का विरूपण दर्शाते हों, या वे सांस्कृतिक दृष्टि से अनुचित हों। इस माड्यूल का उद्देश्य मनर्विकार रोगियों को बहिर्गत करना है। इसके लिए अनुभव आवश्यक है।"},
+  "intro": {"en": "Now I am going to ask you about unusual experiences that some people have.",
+             "hi": "अब मैं कुछ असामान्य अनुभवों के बारे में पूछूँगा जो कुछ लोगों को होते हैं।"},
+  "symptoms": K_SYMPTOMS,
+  "k11Intro": {"en": "K11a — Lifetime mood disorder with psychotic features",
+               "hi": "K11a — जीवनभर का मनर्विकारी लक्षणों सहित मूड विकार"},
+  "k11a": {"id": "K11a",
+           "text": {"en": "Are 1 or more \"a\" questions from K1a to K7a coded Yes? AND is either MAJOR DEPRESSIVE EPISODE (current, recurrent or past) or MANIC OR HYPOMANIC EPISODE (current or past) coded Yes? AND how long has the mood episode lasted / how long has the psychotic episode lasted? If such a mood episode is present, code Yes to K11a ONLY IF the mood disturbance is present for the majority of the total duration of the active and residual periods of the psychotic symptoms. Otherwise code No.",
+                    "hi": "क्या K1a से K7a तक के 1 या अधिक «a» प्रश्न 'हाँ' कोडित हैं? और क्या प्रमुख अवसादी एपिसोड (वर्तमान/पुनरावर्ती/अतीत) या मैैनिक/हाइपोमैैनिक एपिसोड (वर्तमान/अतीत) 'हाँ' कोडित है? साथ ही मूड एपिसोड कब तक रहा / मनर्विकारी एपिसोड कब तक रहा? यदि ऐसा मूड एपिसोड उपस्थित है तो K11a पर 'हाँ' केवल तभी कोड करें जब मूड-विकृति मनर्विकारी लक्षणों की सक्रिय एवं शेषकालीन अवधियों की कुल अवधि के अधिकांश भाग में विद्यमान रही हो। अन्यथा 'नहीं' कोड करें।"},
+           "durationFields": [{"id": "K11_mood_duration", "label": {"en": "How long has the mood episode lasted?", "hi": "मूड एपिसोड कब तक रहा?"}},
+                              {"id": "K11_psych_duration", "label": {"en": "How long has the psychotic episode lasted?", "hi": "मनर्विकारी एपिसोड कब तक रहा?"}}],
+           "skipRule": {"en": "If No to K11a and the total duration of the mood episode is LESS than the total duration of the psychotic episode, then circle No in both 'MOOD DISORDER WITH PSYCHOTIC FEATURES' diagnostic boxes and move to K13.",
+                        "hi": "यदि K11a 'नहीं' और मूड एपिसोड की कुल अवधि मनर्विकारी एपिसोड की कुल अवधि से कम है, तो दोनों 'मनर्विकारी लक्षणों सहित मूड विकार' निदान-बक्ses में 'नहीं' घेरें और K13 पर जाएँ।"}},
+  "k11b": {"id": "K11b",
+           "text": {"en": "You told me earlier that you had period(s) when you felt (depressed/high/persistently irritable). Were the beliefs and experiences you just described (symptoms coded Yes from K1a to K7a) restricted exclusively to times when you were feeling depressed/high/irritable? If the patient ever had a period of at least 2 weeks of having these beliefs or experiences (psychotic symptoms) when they were NOT depressed/high/irritable, code NO to this disorder. If the answer is No to this disorder grouping, also circle No to K12 and move to K13.",
+                    "hi": "आपने पहले बताया कि आपको ऐसी अवधियाँ आईं जब आप (उदास/उन्मुक्त/सतत चिड़चिड़े) महसूस करते थे। क्या अभी वर्णित मान्यताएँ/अनुभव (K1a–K7a में 'हाँ' कोडित लक्षण) केवल उन्हीं समयों तक सीमित थे जब आप उदास/उन्मुक्त/चिड़चिड़े थे? यदि रोगी को कभी कम से कम 2 सप्ताह तक ऐसी मान्यताएँ/अनुभव (मनर्विकारी लक्षण) उन समयों में हुए जब वे उदास/उन्मुक्त/चिड़चिड़े नहीं थे, तो इस विकार पर 'नहीं' कोड करें। यदि इस समूह पर उत्तर 'नहीं' है तो K12 पर भी 'नहीं' घेरें और K13 पर जाएँ।"}},
+  "k12": {"id": "K12",
+          "text": {"en": "Are 1 or more \"b\" questions from K1b to K7b coded Yes? AND is either MAJOR DEPRESSIVE EPISODE (current) or MANIC OR HYPOMANIC EPISODE (current) coded Yes? If the answer is Yes to this disorder (lifetime or current), circle No to K13 and K14 and move to the next module.",
+                   "hi": "क्या K1b से K7b तक के 1 या अधिक «b» प्रश्न 'हाँ' कोडित हैं? और क्या प्रमुख अवसादी एपिसोड (वर्तमान) या मैैनिक/हाइपोमैैनिक एपिसोड (वर्तमान) 'हाँ' कोडित है? यदि इस विकार पर उत्तर 'हाँ' (जीवनभर या वर्तमान) है तो K13 व K14 पर 'नहीं' घेरें और अगले माड्यूल पर जाएँ।"}},
+  "k13": {"id": "K13",
+          "text": {"en": "Are 1 or more \"b\" questions from K1b to K8b coded Yes? AND are 2 or more \"b\" questions from K1b to K10b coded Yes? AND did at least two of the psychotic symptoms occur during the same 1-month period? AND is \"RULE OUT ORGANIC CAUSE (O2 SUMMARY)\" coded Yes?",
+                   "hi": "क्या K1b से K8b तक के 1 या अधिक «b» प्रश्न 'हाँ' कोडित हैं? और क्या K1b से K10b तक के 2 या अधिक «b» प्रश्न 'हाँ' कोडित हैं? और क्या कम से कम दो मनर्विकारी लक्षण उसी 1-माह की अवधि में हुए? और क्या «जैविक कारण का बहिर्गमन (O2 सारांश)» 'हाँ' कोडित है?"}},
+  "k14": {"id": "K14",
+          "text": {"en": "Is K13 coded Yes? OR [are 1 or more \"a\" questions from K1a to K8a coded Yes? AND are 2 or more \"a\" questions from K1a to K10a coded Yes? AND did at least 2 of the psychotic symptoms occur during the same 1-month period?] AND is \"RULE OUT ORGANIC CAUSE (O2 SUMMARY)\" coded Yes?",
+                   "hi": "क्या K13 'हाँ' कोडित है? या [K1a से K8a तक के 1 या अधिक «a» प्रश्न 'हाँ' कोडित हैं? और K1a से K10a तक के 2 या अधिक «a» प्रश्न 'हाँ' कोडित हैं? और कम से कम 2 मनर्विकारी लक्षण उसी 1-माह की अवधि में हुए?] और «जैविक कारण का बहिर्गमन (O2 सारांश)» 'हाँ' कोडित है?"}},
+  "diagnosticBoxes": [
+    {"id": "K11_diag", "label": {"en": "Mood Disorder With Psychotic Features — Lifetime",
+                                 "hi": "मनर्विकारी लक्षणों सहित मूड विकार — जीवनभर"},
+     "rule": "K11a Yes AND K11b Yes (psychotic symptoms confined to the mood episodes). If Yes here or in K12, circle No to K13 and K14.",
+     "flags": ["LIFETIME"], "disordersOnPositive": ["mood_disorder_with_psychotic_features"]},
+    {"id": "K12_diag", "label": {"en": "Mood Disorder With Psychotic Features — Current",
+                                 "hi": "मनर्विकारी लक्षणों सहित मूड विकार — वर्तमान"},
+     "rule": "1+ of K1b-K7b Yes AND a CURRENT major depressive or manic/hypomanic episode Yes AND K11b logic (psychosis restricted to mood episodes).",
+     "flags": ["CURRENT"], "disordersOnPositive": ["mood_disorder_with_psychotic_features"]},
+    {"id": "K13_diag", "label": {"en": "Psychotic Disorder — Current", "hi": "मनर्विकार विकार — वर्तमान"},
+     "rule": "1+ of K1b-K8b Yes AND 2+ of K1b-K10b Yes AND >=2 symptoms within the same 1-month period AND organic cause ruled out (O2 summary). Not applicable if a Mood Disorder With Psychotic Features box was coded Yes.",
+     "flags": ["CURRENT"], "disordersOnPositive": ["psychotic_disorder"]},
+    {"id": "K14_diag", "label": {"en": "Psychotic Disorder — Lifetime", "hi": "मनर्विकार विकार — जीवनभर"},
+     "rule": "K13 Yes, OR [1+ of K1a-K8a Yes AND 2+ of K1a-K10a Yes AND >=2 symptoms within the same 1-month period] AND organic cause ruled out (O2 summary).",
+     "flags": ["LIFETIME"], "disordersOnPositive": ["psychotic_disorder"]}]
+}
+
 with open(os.path.join(HERE, "modB.json"), encoding="utf-8") as f:
     modB = json.load(f)
 
@@ -574,13 +703,14 @@ mini = {
              "modulesImplemented": ["A - Major Depressive Episode", "B - Suicidality", "C - Manic and Hypomanic Episodes",
                                     "D - Panic Disorder", "E - Agoraphobia", "F - Social Anxiety Disorder",
                                     "G - Obsessive-Compulsive Disorder", "H - Posttraumatic Stress Disorder",
-                                    "I - Alcohol Use Disorder", "J - Substance Use Disorder (Non-alcohol)"],
+                                    "I - Alcohol Use Disorder", "J - Substance Use Disorder (Non-alcohol)",
+                                    "K - Psychotic Disorders and Mood Disorder With Psychotic Features"],
              "note": {"en": "Structured interview modules adapted from the MINI 7.0.2 user-scripted version. This web implementation captures the screening logic only; it is not a substitute for trained interviewer administration. The organic-cause exclusion (Module O) is approximated by the prior-diagnoses and medications context fields.",
                       "hi": "MINI 7.0.2 के उपयोगकर्ता-स्क्रिप्टेड संस्करण से अनुकूलित संरचित साक्षात्कार माड्यूल। यह वेब कार्यान्वयन केवल स्क्रीनिंग तर्क ग्रहण करता है; प्रशिक्षित इंटरव्यूटर के प्रशासन का विकल्प नहीं है। जैविक-कारण बहिर्ागमन (माड्यूल O) को पूर्व-निदान एवं दवा संदर्भ फ़ील्ड द्वारा अनुमानित किया गया है।"}},
   "responseScale": [{"v": 0, "label": YN_NO}, {"v": 1, "label": YN_YES}],
-  "directions": {"en": "These questions follow the MINI 7.0.2 branching logic (Modules A-J: Major Depressive Episode; Suicidality; Manic/Hypomanic Episodes; Panic Disorder; Agoraphobia; Social Anxiety; Obsessive-Compulsive Disorder; Posttraumatic Stress Disorder; Alcohol Use Disorder; Substance Use Disorder). Answer honestly; sections that do not apply are skipped automatically.",
-                 "hi": "ये प्रश्न MINI 7.0.2 की शाखा-विभाजन पद्धति का पालन करते हैं (माड्यूल A-J: प्रमुख अवसादी एपिसोड; आत्मघातिता; मैैनिक/हाइपोमैैनिक एपिसोड; पैैनिक विकार; एगोराफोबिया; सामाजिक आतंक; O.C.D.; PTSD; मद्य-सेवन विकार; पदार्थ-सेवन विकार)। ईमानदारी से उत्तर दें; लागू न होने वाले भाग स्वतः छोड़े जाएँगे।"},
-  "modules": [modA, modB, modC, modD, modE, modF, modG, modH, modI, modJ]
+  "directions": {"en": "These questions follow the MINI 7.0.2 branching logic (Modules A-K: Major Depressive Episode; Suicidality; Manic/Hypomanic Episodes; Panic Disorder; Agoraphobia; Social Anxiety; Obsessive-Compulsive Disorder; Posttraumatic Stress Disorder; Alcohol Use Disorder; Substance Use Disorder; Psychotic Disorders and Mood Disorder With Psychotic Features). Answer honestly; sections that do not apply are skipped automatically.",
+                 "hi": "ये प्रश्न MINI 7.0.2 की शाखा-विभाजन पद्धति का पालन करते हैं (माड्यूल A-K: प्रमुख अवसादी एपिसोड; आत्मघातिता; मैैनिक/हाइपोमैैनिक एपिसोड; पैैनिक विकार; एगोराफोबिया; सामाजिक आतंक; O.C.D.; PTSD; मद्य-सेवन विकार; पदार्थ-सेवन विकार; मनर्विकार विकार एवं मनर्विकारी लक्षणों सहित मूड विकार)। ईमानदारी से उत्तर दें; लागू न होने वाले भाग स्वतः छोड़े जाएँगे।"},
+  "modules": [modA, modB, modC, modD, modE, modF, modG, modH, modI, modJ, modK]
 }
 
 out = "/tmp/mini.json"
