@@ -207,7 +207,8 @@
                     instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
                 });
             } else if (instName === 'auto:minioptional' || instName === 'auto:pdscreen' ||
-                instName === 'auto:angertable' || instName === 'auto:dissociationtable') {
+                instName === 'auto:angertable' || instName === 'auto:dissociationtable' ||
+                instName === 'auto:somatoptable') {
                 // MINI 7.0.2 additional optional interview assessments (pp. 36-37):
                 // A - Cross-Cutting Measures (Severity of Symptom) and
                 // B - Disability / Functional Impairment. Both are clinician-rated
@@ -247,11 +248,15 @@
 
         deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
             const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
+            // The badge describes who completes the form (administeredBy), not
+            // which scoring algorithm applies: keyed T/F screens such as FAC22-SR
+            // are patient-completed even though they score like the IPDE/PDQ block.
+            const isSelfReport = !!(scDef && scDef.administeredBy === 'self-report');
             const isPdScreen = !!(scDef && scDef.keyedScoring);
             const isSummed = !!(scDef && scDef.sumScoring);
             const section = document.createElement('section');
             section.className = 'scale-section' + (ratingTable
-                ? (isPdScreen ? ' pd-rating-table' : (isSummed ? ' anger-rating-table' : ' clinician-rating-table'))
+                ? (isSelfReport ? ' anger-rating-table' : ' clinician-rating-table')
                 : '');
             const secKey = ratingTable ? domain.id + ':' + scaleId : domain.id;
             section.setAttribute('aria-labelledby', 'scale-h-' + secKey);
@@ -657,15 +662,20 @@
     function scoreStaxi(scale) {
         const hi = state.lang === 'hi';
         const ans = id => state.responses[scale.id + ':' + id];
+        const slugs = Object.keys(scale.subscales);
+        // Item-level totals come from the printed parts, not from the subscale
+        // lists: item 25 is scored on Part 3 but belongs to no expression
+        // subscale, so counting subscale items would over-report completion.
+        const allIds = [];
+        (scale.parts || []).forEach(part => part.questions.forEach(q => allIds.push(q.id)));
+        const answeredOf = ids => ids.filter(id => ans(id) !== undefined);
+        const sumOf = ids => answeredOf(ids).reduce((t, id) => t + Number(ans(id)), 0);
         const rows = [];
-        let answered = 0, totalItems = 0;
-        Object.keys(scale.subscales).forEach(slug => {
+        slugs.forEach(slug => {
             const sub = scale.subscales[slug];
             const ids = sub.items.map(n => 'staxi_' + n);
-            const got = ids.filter(id => ans(id) !== undefined);
-            answered += got.length;
-            totalItems += ids.length;
-            const raw = got.reduce((t, id) => t + Number(ans(id)), 0);
+            const got = answeredOf(ids);
+            const raw = sumOf(ids);
             const lo = ids.length * (scale.scoring.scaleMin || 1);
             const up = ids.length * (scale.scoring.scaleMax || 4);
             rows.push({
@@ -673,34 +683,45 @@
                 value: got.length === ids.length ? (raw + '/' + up) : (raw + ' (' + got.length + '/' + ids.length + ')'),
                 flagged: false,
                 detail: (hi ? 'सीमा ' : 'range ') + lo + '-' + up +
-                    (slug === 'control' ? (hi ? ' · उच्च = बेहतर नियंत्रण' : ' · higher = better control') : '')
+                    (slug === 'control' ? (hi ? ' · उच्च = बेहतर नियंत्रण' : ' · higher = better control') : '') +
+                    (slug === 'denial' ? (hi ? ' · व्याख्या सावधानी से करें' : ' · interpret with caution') : '')
             });
         });
-        // Composite Expression = Anger-In + Anger-Out + (max+min - Control)
-        const num = slug => scale.subscales[slug].items
-            .map(n => ans('staxi_' + n)).filter(v => v !== undefined)
-            .reduce((t, v) => t + Number(v), 0);
-        const complete = Object.keys(scale.subscales)
-            .every(slug => scale.subscales[slug].items.every(n => ans('staxi_' + n) !== undefined));
+        // Composite Expression = Anger-In + Anger-Out + reversed Anger Control,
+        // where each control item is reversed as (scaleMax + scaleMin - response).
         const mn = scale.scoring.scaleMin || 1, mx = scale.scoring.scaleMax || 4;
-        const expr = complete ? (num('in') + num('out') + (mx + mn - num('control'))) : null;
-        if (complete) {
+        const completePart = slug => scale.subscales[slug].items
+            .every(n => ans('staxi_' + n) !== undefined);
+        const controlReversed = scale.subscales.control.items
+            .map(n => ans('staxi_' + n))
+            .filter(v => v !== undefined)
+            .reduce((t, v) => t + (mx + mn - Number(v)), 0);
+        const exprComplete = ['in', 'out', 'control'].every(completePart);
+        const expr = exprComplete
+            ? (sumOf(scale.subscales.in.items.map(n => 'staxi_' + n)) +
+               sumOf(scale.subscales.out.items.map(n => 'staxi_' + n)) + controlReversed)
+            : null;
+        const answered = answeredOf(allIds).length;
+        const complete = answered === allIds.length;
+        if (exprComplete) {
             rows.push({
                 label: hi ? 'क्रोध-अभिव्यक्ति संयुक्त स्कोर (AES)' : 'Anger Expression Summary (AES)',
                 value: String(expr),
                 flagged: false,
-                detail: hi ? 'Anger-In + Anger-Out + (5 − Anger Control)' : 'Anger-In + Anger-Out + (max+min − Anger Control)'
+                detail: hi
+                    ? 'Anger-In + Anger-Out + (5 − प्रत्येक Control आइटम)'
+                    : 'Anger-In + Anger-Out + reversed Anger Control (per item: max+min − response)'
             });
         }
         return {
             name: L(scale.name),
-            score: answered + '/' + totalItems + ' ' + (hi ? 'आइटम उत्तरित' : 'items answered'),
+            score: answered + '/' + allIds.length + ' ' + (hi ? 'आइटम उत्तरित' : 'items answered'),
             severity: complete
                 ? (hi ? 'पूर्ण — आयामगत स्कोर (रोग-निर्णायक नहीं)' : 'Complete — dimensional scores (not diagnostic)')
                 : (hi ? 'अपूर्ण' : 'Incomplete'),
             aboveCutoff: false,
             notDiagnostic: true,
-            answered, total: totalItems,
+            answered, total: allIds.length,
             disorders: [],
             pdRegister: {
                 kind: 'staxi',
@@ -722,13 +743,21 @@
         (scale.parts || []).forEach(part => part.questions.forEach(q => ids.push(q.id)));
         const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined);
         const sum = got.reduce((t, id) => t + Number(state.responses[scale.id + ':' + id]), 0);
-        const band = severityBand(sum, scale.bands || []);
+        const complete = got.length === ids.length;
+        // Printed interpretive ranges are inclusive of their lower bound:
+        // 0-13 minimal · 14-19 mild · 20-28 moderate · 29-63 severe.
+        const bandIdx = (() => {
+            const bands = scale.bands || [];
+            for (let i = 0; i < bands.length; i++) if (sum <= bands[i].max) return i;
+            return bands.length - 1;
+        })();
         const maxTotal = ((scale.ratingScale || {}).max || 3) * ids.length;
         return {
             name: L(scale.name),
             score: sum + '/' + maxTotal + ' (' + got.length + '/' + ids.length + ')',
-            severity: (band ? L(band) : '—') + (hi ? ' · रोग-निर्णायक नहीं' : ' · not diagnostic'),
-            aboveCutoff: !!band && (scale.bands || []).indexOf(band) >= ((scale.bands || []).length - 2),
+            severity: (bandLabel(sum, scale.bands) || (hi ? 'अपूर्ण' : 'Incomplete')) +
+                (hi ? ' · रोग-निर्णायक नहीं' : ' · not diagnostic'),
+            aboveCutoff: complete && bandIdx >= 2,
             notDiagnostic: true,
             answered: got.length, total: ids.length,
             disorders: []
@@ -736,7 +765,121 @@
     }
 
     /* ------------------------------------------------------------------ *
-     * 7c. Dissociation instruments (MID-60 short form / DES-II)          *
+     * 7c. Somatic-symptom instruments (FAC22-SR / PHQ-15)                *
+     * ------------------------------------------------------------------ */
+
+    /**
+     * Count keyed answers across an instrument's item parts.
+     *  - keyed T/F instruments (IPDE, FAC22-SR): each question carries
+     *    `keyedAnswer` 'T' (counts when answered True) or 'F' (counts when
+     *    answered False);
+     *  - plain True-count instruments (PDQ-4+ scales): any answer of 1 counts.
+     * `skip` lets a caller exclude follow-up/clinician-rated parts.
+     */
+    function keyedHitsOfParts(scale, skip) {
+        const hits = [];
+        (scale.parts || []).forEach(part => {
+            if (skip && skip(part)) return;
+            (part.questions || []).forEach(q => {
+                const v = state.responses[scale.id + ':' + q.id];
+                if (v === undefined) return;
+                if (q.keyedAnswer !== undefined) {
+                    if ((q.keyedAnswer === 'T') === (v === 1)) hits.push(q.itemNumber != null ? q.itemNumber : q.id);
+                } else if (v === 1) hits.push(q.itemNumber != null ? q.itemNumber : q.id);
+            });
+        });
+        return hits;
+    }
+
+    /**
+     * FAC22-SR (Senthil & Prabhakar, 2019) — factitious disorder self-report
+     * screen. Keying as printed: Yes to items 5, 8, 10-22 and No to items 1-4,
+     * 6, 7, 9, 12, 13. Bands: 9-14 possible factitious disorder, 15+ probable.
+     * A screen only — it must never be used to diagnose factitious disorder,
+     * which requires excluding deception for external gain and medical
+     * malingering, so a positive result flags the category for clinical review.
+     */
+    function scoreFac22(scale, addFlag) {
+        const hi = state.lang === 'hi';
+        const ids = [];
+        (scale.parts || []).forEach(part => (part.questions || []).forEach(q => ids.push(q.id)));
+        const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined);
+        const complete = got.length === ids.length;
+        const keyed = keyedHitsOfParts(scale);
+        const sc = scale.scoring || {};
+        const probableAt = sc.probableThreshold != null ? sc.probableThreshold : 15;
+        const possibleAt = sc.possibleThreshold != null ? sc.possibleThreshold : 9;
+        const level = keyed.length >= probableAt ? 2 : (keyed.length >= possibleAt ? 1 : 0);
+        if (complete && level > 0) {
+            (sc.disorders || scale.disorders ||
+                ['factitious_disorder', 'somatic_symptom_disorder']).forEach(d => {
+                    const key = CLINICAL_DATA.disorders[d] ? d : null;
+                    if (key) addFlag(key, 'FAC22-SR');
+                });
+        }
+        return {
+            name: L(scale.name),
+            score: keyed.length + ' (' + got.length + '/' + ids.length + ')',
+            severity: level === 2
+                ? (hi ? 'संभावित भत्रुण रोग — पूर्ण मूल्यांकन आवश्यक' : 'Probable factitious disorder — full evaluation indicated')
+                : level === 1
+                    ? (hi ? 'संभव भत्रुण रोग — पूर्ण मूल्यांकन आवश्यक' : 'Possible factitious disorder — full evaluation indicated')
+                    : (hi ? 'स्क्रीन नेगेटिव' : 'Screen negative'),
+            aboveCutoff: complete && level > 0,
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: [],
+            pdRegister: {
+                kind: 'fac22',
+                heading: hi ? 'FAC22-SR कुंजी-अंक' : 'FAC22-SR keyed score',
+                note: L(sc.rule || { en: '', hi: '' }),
+                rows: [{
+                    label: hi ? 'कुंजीकृत उत्तर (Yes 5,8,10-22 · No 1-4,6,7,9,12,13)' : 'Keyed responses (Yes 5,8,10-22 · No 1-4,6,7,9,12,13)',
+                    value: keyed.length + '/22',
+                    flagged: level > 0,
+                    detail: hi
+                        ? possibleAt + '-' + (probableAt - 1) + ' संभव · ' + probableAt + '+ संभावित'
+                        : possibleAt + '-' + (probableAt - 1) + ' possible · ' + probableAt + '+ probable'
+                }]
+            }
+        };
+    }
+
+    /**
+     * PHQ-15 somatic symptom severity index: sum of 15 items scored 0-2 over
+     * the past four weeks. Printed cut-points 0-4 no somatisation, 5-9 mild,
+     * 10-14 moderate, 15+ severe. Severity measure only — it supplements
+     * clinical judgement and does not by itself establish a diagnosis.
+     */
+    function scorePhq15(scale) {
+        const hi = state.lang === 'hi';
+        const ids = [];
+        (scale.parts || []).forEach(part => (part.questions || []).forEach(q => ids.push(q.id)));
+        const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined);
+        const complete = got.length === ids.length;
+        const sum = got.reduce((t, id) => t + Number(state.responses[scale.id + ':' + id]), 0);
+        const maxTotal = ((scale.ratingScale || {}).max || 2) * ids.length;
+        // Band list is ordered ascending by `max`; treat "no somatisation" as
+        // non-clinical so the differential is only nudged from 5 upwards.
+        const bandIdx = (() => {
+            const bands = scale.bands || [];
+            for (let i = 0; i < bands.length; i++) if (sum <= bands[i].max) return i;
+            return bands.length - 1;
+        })();
+        return {
+            name: L(scale.name),
+            score: sum + '/' + maxTotal + ' (' + got.length + '/' + ids.length + ')',
+            severity: (bandLabel(sum, scale.bands) || (hi ? 'अपूर्ण' : 'Incomplete')) +
+                (hi ? ' · रोग-निर्णायक नहीं' : ' · not diagnostic'),
+            aboveCutoff: complete && bandIdx >= 1,
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: []
+        };
+    }
+
+    /* ------------------------------------------------------------------ *
+     * 7d. Dissociation instruments (MID-60 short form / DES-II)          *
      * ------------------------------------------------------------------ */
 
     /** Resolve an instrument disorder key, falling back to the legacy
@@ -884,7 +1027,6 @@
         const mean = got.length ? got.reduce((a, b) => a + b, 0) / got.length : null;
         const cutoff = (scale.scoring || {}).cutoff || 30;
         const above = mean !== null && complete && mean >= cutoff;
-        const band = mean === null ? null : severityBand(mean, scale.bands || []);
         const disorders = [];
         if (above) {
             [dissDisorder(['other_specified_dissociative_disorder']),
@@ -897,7 +1039,7 @@
             name: L(scale.name),
             score: mean === null ? '—'
                 : (Math.round(mean * 10) / 10 + '% (' + got.length + '/' + ids.length + ')'),
-            severity: (band ? L(band) : (hi ? 'अपूर्ण' : 'Incomplete')) +
+            severity: (mean === null ? (hi ? 'अपूर्ण' : 'Incomplete') : bandLabel(mean, scale.bands)) +
                 (above ? (hi ? ' · नैदानिक-तुलना बिंदु ≥' + cutoff + ' पार' : ' · above the ≥' + cutoff + ' clinical comparison point') : ''),
             aboveCutoff: above,
             notDiagnostic: true,
@@ -939,6 +1081,21 @@
     /* ------------------------------------------------------------------ *
      * 8. SCORING ENGINE — deterministic, rubric-equivalent computation
      * ------------------------------------------------------------------ */
+    /**
+     * Band lookup that understands both shapes used across the instrument set:
+     *  - `{ max, severity: {en, hi} }`   (PHQ-9 / CAS / DES-II style bands)
+     *  - `{ max, label:   {en, hi} }`   (MID-60 printed score ranges)
+     * Returns a localised string (or null when no bands are configured), so a
+     * caller never has to know which shape the scale uses.
+     */
+    function bandLabel(score, bands) {
+        if (!bands || !bands.length) return null;
+        let b = bands[bands.length - 1];
+        for (const cand of bands) { if (score <= cand.max) { b = cand; break; } }
+        const text = b.severity != null ? b.severity : b.label;
+        return text == null ? null : L(text);
+    }
+
     function severityBand(score, bands) {
         for (const b of bands) if (score <= b.max) return b.severity;
         return bands[bands.length - 1].severity;
@@ -1585,19 +1742,21 @@
                 }
             }
 
-            // Deployed anger instruments must be fully answered.
-            if (domain.instrument === 'auto:angertable') {
+            // Deployed anger / dissociation / somatic instruments must be fully
+            // answered too (their printed items are all patient-completed).
+            if (['auto:angertable', 'auto:dissociationtable', 'auto:somatoptable']
+                    .includes(domain.instrument)) {
                 for (const q of domain.questions) {
                     if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
                     const s = CLINICAL_DATA.scales[q.scaleId];
-                    if (!s || !s.sumScoring) continue;
-                    for (const part of s.parts)
+                    if (!s) continue;
+                    for (const part of s.parts) {
+                        if (part.clinicianRated) continue;
                         for (const item of part.questions)
                             if (state.responses[s.id + ':' + item.id] === undefined) return false;
+                    }
                 }
             }
-
-            // MINI optional rating tables: every row must carry a rating.
             if (domain.instrument === 'auto:minioptional') {
                 for (const q of domain.questions) {
                     if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
