@@ -124,6 +124,33 @@
             "bipolar_depressive"
           ],
           "safety": true
+        },
+        {
+          "id": "mood_biss_1",
+          "text": {
+            "en": "Has the person had a distinct period of abnormally elevated, expansive or irritable mood, or is there a clear history of hypomanic/manic episodes? (Deploys the BISS 7-day severity profile below.)",
+            "hi": "क्या व्यक्ति का कोई सुस्पष्ट काल अत्युच्च/प्रसारित/कोपमय मूड का रहा है, या हाइपोमैनिक/मैनिक अवस्थाओं का स्पष्ट इतिहास है? (नीचे दी BISS 7-दिवसीय तीव्रता-मापनी लागू होती है।)"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "biss",
+          "disorders": [
+            "bipolar_i_disorder",
+            "bipolar_ii_disorder",
+            "other_specified_bipolar"
+          ]
+        },
+        {
+          "id": "mood_biss_2",
+          "text": {
+            "en": "Is a clinician-rated 7-day profile of depressive AND manic symptoms needed to stage the current episode or monitor treatment response?",
+            "hi": "क्या वर्तमान अवस्था के चरण-निर्धारण या चिकित्सा-प्रतिक्रिया निगरानी हेतु चिकित्सक-रेटित अवसादी एवं उन्मादी लक्षणों का 7-दिवसीय प्रोफाइल आवश्यक है?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "biss",
+          "disorders": [
+            "bipolar_depressive",
+            "other_specified_bipolar"
+          ]
         }
       ],
       "cutoff": 10,
@@ -132,7 +159,12 @@
         "MDQ",
         "BDI-II"
       ],
-      "instrument": "phq9"
+      "instrument": "auto:bipolartable",
+      "baseInstrument": "phq9",
+      "help": {
+        "en": "The domain's nine PHQ-9 items are scored as usual. In addition, selecting this domain deploys the Bipolar Inventory of Signs and Symptoms Scale (BISS): 44 items rated 0-4 by the clinician over the most recent 7 days, using self-report plus family and interview observation. Section I covers depressive signs (items 1-20), section II manic signs (items 21-44). The BISS is dimensional - it quantifies severity and change; it carries no diagnostic cutoff and never by itself establishes bipolar disorder.",
+        "hi": "डोमेन के नौ PHQ-9 आइटम यथावत् अंकित होते हैं। इसके अतिरिक्त यह डोमेन बाइपोलर लक्षण एवं रोगलक्षण मापनी (BISS) खोलता है — 44 आइटम, चिकित्सक द्वारा अंतिम 7 दिनों हेतु 0-4, स्व-रिपोर्ट एवं परिवार/साक्षात्कार-अवलोकन से। विभाग I अवसादी लक्षण (1-20), विभाग II उन्मादी लक्षण (21-44)। BISS विमात्मक है — तीव्रता एवं परिवर्तन मापता है; इसका कोई नैदानिक कटऑफ नहीं और यह एकमात्र रूप से द्विध्रुवी विकार निर्धारित नहीं करता।"
+      }
     },
     {
       "id": "anxiety",
