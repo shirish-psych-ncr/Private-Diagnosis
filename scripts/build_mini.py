@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble /tmp/mini.json — MINI 7.0.2 (DSM-5) Modules A-K, bilingual EN/HI.
+"""Assemble /tmp/mini.json — MINI 7.0.2 (DSM-5) Modules A-P, bilingual EN/HI.
 
 Module B is loaded verbatim from scripts/modB.json; the other modules are
 defined here with the official screening logic:
@@ -40,6 +40,32 @@ defined here with the official screening logic:
     current (K13) and lifetime (K14) boxes requiring 1+ "b" (or "a") symptom
     of K1-K8, 2+ of K1-K10, two symptoms in the same 1-month period, and
     organic cause ruled out (O2 summary).
+  - Module L: anorexia nervosa — height/weight entry with BMI-17 threshold
+    table, L2 restriction, L3 fear of gaining weight, L4 body-image items
+    (1+ gate -> L5), diagnostic box.
+  - Module M: bulimia nervosa — binge screen M1/M2 (gate), weekly frequency
+    M3, compensatory behaviours M4 (+M4a flag), self-evaluation M5, episode/
+    day counts M6, anorexia-criteria check M7, M8 gate -> Bulimia Nervosa
+    Current box; downstream Anorexia Binge-Eating/Purging and Restricting
+    Type boxes (shared eating-disorder severity specifiers).
+  - Module MB: binge eating disorder — exclusion of anorexia/bulimia (MB1/
+    MB2), M2/M3/M4 linkage gates, MB6a-e binging behaviours (3+ gate), MB7
+    distress, MB8 binge counts -> Binge-Eating Disorder Current box with
+    severity specifiers.
+  - Module N: GAD — excessive worry N1a most days N1b, not-better-explained
+    gate, uncontrollable worry N2, six associated symptoms N3a-f (3+ gate),
+    N4 impact + organic rule-out -> Current GAD box.
+  - Module O: rule out medical/organic/drug causes — O1a substances, O1b
+    medical illness, O2 clinician judgment, O2 SUMMARY (inverse of O2;
+    feeds every organic-exclusion gate above).
+  - Module P: antisocial personality disorder — conduct-disorder items P1a-f
+    before age 15 (2+ gate), adult criteria P2a-g (3+ gate; politically or
+    religiously motivated behaviours excluded) -> ASPD Lifetime box.
+  - Mood Disorders Diagnostic Algorithm (after Module P): derived boxes for
+    Major Depressive Disorder, Bipolar I, Bipolar II and Other Specified
+    Bipolar and Related Disorder from Modules A/C/K plus the O2 summary,
+    with psychotic-feature, mixed-features, anxious-distress, severity and
+    most-recent-episode specifiers.
 """
 import json, os
 
@@ -691,6 +717,326 @@ modK = {
      "flags": ["LIFETIME"], "disordersOnPositive": ["psychotic_disorder"]}]
 }
 
+# Height/weight table corresponding to a BMI threshold of 17.0 kg/m2 (Module L).
+HEIGHT_WEIGHT_TABLE = {
+  "bmiThreshold": 17.0,
+  "columns": [
+    {"ftin": "4'9\"",  "cm": 145, "lb": 79,  "kg": 36},
+    {"ftin": "4'10\"", "cm": 147, "lb": 82,  "kg": 37},
+    {"ftin": "4'11\"", "cm": 150, "lb": 84,  "kg": 38.5},
+    {"ftin": "5'0\"",  "cm": 152, "lb": 87,  "kg": 39.5},
+    {"ftin": "5'1\"",  "cm": 155, "lb": 90,  "kg": 41},
+    {"ftin": "5'2\"",  "cm": 158, "lb": 93,  "kg": 42.5},
+    {"ftin": "5'3\"",  "cm": 160, "lb": 96,  "kg": 43.5},
+    {"ftin": "5'4\"",  "cm": 163, "lb": 99,  "kg": 45.5},
+    {"ftin": "5'5\"",  "cm": 165, "lb": 102, "kg": 46.5},
+    {"ftin": "5'6\"",  "cm": 168, "lb": 106, "kg": 48},
+    {"ftin": "5'7\"",  "cm": 170, "lb": 109, "kg": 49},
+    {"ftin": "5'8\"",  "cm": 173, "lb": 112, "kg": 51},
+    {"ftin": "5'9\"",  "cm": 175, "lb": 115, "kg": 52},
+    {"ftin": "5'10\"", "cm": 178, "lb": 119, "kg": 54},
+    {"ftin": "5'11\"", "cm": 180, "lb": 122, "kg": 55},
+    {"ftin": "6'0\"",  "cm": 183, "lb": 125, "kg": 57},
+    {"ftin": "6'1\"",  "cm": 185, "lb": 129, "kg": 58.5},
+    {"ftin": "6'2\"",  "cm": 188, "lb": 133, "kg": 60},
+    {"ftin": "6'3\"",  "cm": 191, "lb": 136, "kg": 62}],
+  "note": {"en": "The weight thresholds above are calculated using a body mass index (BMI) equal to or below 17.0 kg/m2 for the patient's height using the Center of Disease Control & Prevention BMI Calculator. This is the threshold guideline below which a person is deemed underweight by the DSM-5 for Anorexia Nervosa.",
+            "hi": "उपरोक्त भार-सीमाएँ रोगी की ऊँचाई हेतु CDC BMI कैलकुलेटर का उपयोग कर BMI 17.0 किग्रा/मी² या उससे कम पर गणना की गई हैं। यह वह सीमा-निर्देश है जिसके नीचे व्यक्ति को DSM-5 द्वारा एनोरेक्सिया नर्वोसा हेतु अल्पभारी माना जाता है।"}}
+
+modL = {
+  "id": "L",
+  "name": {"en": "Module L — Anorexia Nervosa",
+           "hi": "माड्यूल L — एनोरेक्सिया नर्वोसा"},
+  "screen": {"intro": {"en": "L1 — Height and lowest weight in the past 3 months",
+                        "hi": "L1 — ऊँचाई और पिछले 3 माह का न्यूनतम वज़न"},
+             "questions": [
+      q("L1a", "How tall are you? (feet/inches or centimetres)",
+        "आपकी ऊँचाई कितनी है? (फ़ीट/इंच या सेंटीमीटर)", nonScoring=True, measurement="height"),
+      q("L1b", "What was your lowest weight in the past 3 months? (pounds or kilograms)",
+        "पिछले 3 माह में आपका सबसे कम वज़न क्या था? (पाउंड या किलोग्राम)", nonScoring=True, measurement="weight")],
+             "gateRule": "IF L1c No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+             "gateNote": {"en": "If the patient's weight is above the threshold for his/her height, Module L terminates (Anorexia Nervosa coded No).",
+                          "hi": "यदि रोगी का वज़न उसकी ऊँचाई की सीमा से अधिक है, तो माड्यूल L समाप्त (एनोरेक्सिया नर्वोसा 'नहीं' कोड)।"}},
+  "l1c": {"id": "L1c",
+          "text": {"en": "Is patient's weight equal to or below the threshold corresponding to his/her height? (See the height/weight table below.)",
+                   "hi": "क्या रोगी का वज़न उसकी ऊँचाई संगत सीमा के बराबर या उससे कम है? (नीचे ऊँचाई/वज़न सारणी देखें।)"},
+          "thresholdTable": HEIGHT_WEIGHT_TABLE},
+  "pastThreeMonthsIntro": {"en": "In the past 3 months:", "hi": "पिछले 3 माह में:"},
+  "l2": q("L2", "In spite of this low weight, have you tried not to gain weight or to restrict your food intake?",
+          "इतने कम वज़न के बावजूद, क्या आपने वज़न बढ़ने से रोकने या भोजन-सेवन सीमित करने का प्रयास किया?"),
+  "l3": q("L3", "Have you intensely feared gaining weight or becoming fat, even though you were underweight?",
+          "क्या आपको अल्पभारी होने के बावजूद वज़न बढ़ने या मोटे होने का तीव्र भय रहा?"),
+  "l4": [
+      q("L4a", "Have you considered yourself too big/fat or that part of your body was too big/fat?",
+        "क्या आपने स्वयं को अधिक बड़ा/मोटा या शरीर का कोई भाग अधिक बड़ा/मोटा समझा?"),
+      q("L4b", "Has your body weight or shape greatly influenced how you felt about yourself?",
+        "क्या आपके शारीरिक वज़न/आकार ने स्वयं के प्रति आपकी भावना को बहुत प्रभावित किया?"),
+      q("L4c", "Have you thought that your current low body weight was normal or excessive?",
+        "क्या आपने वर्तमान कम शारीरिक वज़न को सामान्य या अधिक माना?")],
+  "l5Gate": {"rule": "IF 0 of L4 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+             "text": {"en": "L5: Are 1 or more items from L4 coded Yes?",
+                      "hi": "L5: क्या L4 के 1 या अधिक मद 'हाँ' कोडित हैं?"}},
+  "diagnosticBoxes": [
+    {"id": "L_diag", "label": {"en": "Anorexia Nervosa — Current", "hi": "एनोरेक्सिया नर्वोसा — वर्तमान"},
+     "rule": "L1c Yes AND L2 Yes AND L3 Yes AND L5 Yes (1+ of L4). Restricting vs Binge-Eating/Purging type is decided in Module M (M7/M8).",
+     "flags": ["CURRENT"], "disordersOnPositive": ["eating_anorexia"]}]
+}
+
+# Shared severity specifiers for eating disorders (Modules M / MB).
+EATING_SEVERITY_SPECIFIERS = ["MILD", "MODERATE", "SEVERE", "EXTREME"]
+
+modM = {
+  "id": "M",
+  "name": {"en": "Module M — Bulimia Nervosa",
+           "hi": "माड्यूल M — बुलिमिया नर्वोसा"},
+  "screen": {"intro": {"en": "Screen-in question (past three months)", "hi": "स्क्रीन-इन प्रश्न (पिछले तीन माह)"},
+             "questions": [
+      q("M1", "In the past three months, did you have eating binges or times when you ate a very large amount of food within a 2-hour period?",
+        "पिछले तीन माह में, क्या आपको भोजन-प्रपात (binge) हुए या ऐसे समय जब आपने 2-घंटे की अवधि में बहुत अधिक मात्रा में भोजन किया?")],
+             "gateRule": "IF M1 No -> GO TO THE DIAGNOSTIC BOXES, CIRCLE NO IN THE BULIMIA NERVOSA AND IN THE ANOREXIA NERVOSA BINGE EATING/PURGING TYPE DIAGNOSTIC BOXES. BUT IF ANOREXIA NERVOSA (MODULE L) IS CODED YES, CONTINUE WITH THE QUESTIONS TO BE ABLE TO PROPERLY CODE ANOREXIA NERVOSA RESTRICTING TYPE.",
+             "gateNote": {"en": "If M1 is No, circle No in both the Bulimia Nervosa box and the Anorexia Nervosa Binge-Eating/Purging Type box; if Anorexia Nervosa (Module L) was coded Yes, continue with the questions to properly code Anorexia Nervosa Restricting Type.",
+                          "hi": "यदि M1 'नहीं', तो बुलिमिया नर्वोसा एवं एनोरेक्सिया नर्वोसा बिंज-ईटिंग/पर्जिंग-टाइप दोनों बक्सेस में 'नहीं' घेरें; यदि एनोरेक्सिया नर्वोसा (माड्यूल L) 'हाँ' कोडित है, तो रेस्ट्रिक्टिंग-टाइप सही ढंग से कोड करने हेतु प्रश्न जारी रखें।"}},
+  "m2": q("M2", "During these binges, did you feel that your eating was out of control?",
+          "इन प्रपातों के दौरान, क्या आपको लगा कि आपका भोजन नियंत्रण से बाहर था?"),
+  "pastThreeMonthsIntro": {"en": "In the past 3 months:", "hi": "पिछले 3 माह में:"},
+  "m3": q("M3", "Did you have eating binges as often as once a week?",
+          "क्या आपको सप्ताह में कम से कम एक बार भोजन-प्रपात हुए?"),
+  "m4": q("M4", "Did you do anything to compensate for, or to prevent a weight gain, like vomiting, fasting, exercising or taking laxatives, enemas, diuretics (fluid pills), or other medications? Did you do this as often as once a week?",
+          "क्या आपने वज़न बढ़ने से रोकने/क्षतिपूर्ति हेतु कुछ किया — जैसे उल्टी, उपवास, व्यायाम, या लैक्सेटिव, एनिमा, डाययूरेटिक (फ्लुइड पिल्स) अथवा अन्य दवाएँ लेना? क्या यह सप्ताह में कम से कम एक बार किया?"),
+  "m4a": {"id": "M4a", "numeric": True, "max": 99,
+          "text": {"en": "M4a — number recorded here refers to the frequency of inappropriate compensatory behaviours (episodes per week); see M6.",
+                   "hi": "M4a — यहाँ अंकित संख्या अनुचित क्षतिपूर्ति-व्यवहारों की आवृत्ति (सप्ताह में एपिसोड) दर्शाती है; M6 देखें।"}},
+  "m5": q("M5", "Did your body weight or shape greatly influence how you felt about yourself?",
+          "क्या आपके शारीरिक वज़न/आकार ने स्वयं के प्रति आपकी भावना को बहुत प्रभावित किया?"),
+  "m6Episodes": {"id": "M6a", "numeric": True, "max": 99,
+                  "text": {"en": "Number of episodes of inappropriate compensatory behaviors per week?",
+                           "hi": "प्रति सप्ताह अनुचित क्षतिपूर्ति-व्यवहारों के एपिसोड की संख्या?"}},
+  "m6Days": {"id": "M6b", "numeric": True, "max": 7,
+             "text": {"en": "Number of days of inappropriate compensatory behaviors per week?",
+                      "hi": "प्रति सप्ताह अनुचित क्षतिपूर्ति-व्यवहारों वाले दिनों की संख्या?"}},
+  "m7": q("M7", "Did these binges occur only when you were under the threshold weight (write in the threshold weight for this patient's height from the height/weight table in the Anorexia Nervosa module)?",
+          "क्या ये प्रपात केवल तभी हुए जब आप सीमा-वज़न (माड्यूल L की ऊँचाई/वज़न सारणी से इस रोगी की ऊँचाई हेतु सीमा-वज़न यहाँ लिखें) से कम पर थे?"),
+  "m8Gate": {"rule": "IF NOT (M5 Yes AND (M6 No OR M7 No)) -> Bulimia Nervosa NO.",
+             "text": {"en": "Is M5 coded Yes AND is either M6 or M7 coded No?",
+                      "hi": "क्या M5 'हाँ' कोडित है और क्या M6 या M7 में से कोई भी 'नहीं' कोडित है?"}},
+  "specifierNote": {"en": "Specifiers of eating disorder: MILD = 1-3 episodes of inappropriate compensatory behaviors; MODERATE = 4-7; SEVERE = 8-13; EXTREME = 14 or more.",
+                    "hi": "भोजन-विकार विशेषण: मृदु = अनुचित क्षतिपूर्ति-व्यवहारों के 1-3 एपिसोड; मध्यम = 4-7; गंभीर = 8-13; अत्यंत गंभीर = 14 या अधिक।"},
+  "diagnosticBoxes": [
+    {"id": "M_diag", "label": {"en": "Bulimia Nervosa — Current", "hi": "बुलिमिया नर्वोसा — वर्तमान"},
+     "rule": "M1 Yes AND M2 Yes AND M8 gate Yes (M5 Yes AND either M6 or M7 No). Severity by weekly episodes of inappropriate compensatory behaviors (1-3 mild, 4-7 moderate, 8-13 severe, 14+ extreme).",
+     "flags": ["CURRENT"] + EATING_SEVERITY_SPECIFIERS, "disordersOnPositive": ["eating_bulimia"]},
+    {"id": "M_an_bept_diag", "label": {"en": "Anorexia Nervosa, Binge Eating/Purging Type — Current",
+                                       "hi": "एनोरेक्सिया नर्वोसा, बिंज-ईटिंग/पर्जिंग प्रकार — वर्तमान"},
+     "rule": "Asked only if Module L (Anorexia Nervosa) was coded Yes: M7 Yes (binges occurred only while underweight) -> Binge-Eating/Purging Type; otherwise continue to code Restricting Type.",
+     "flags": ["CURRENT"], "disordersOnPositive": ["eating_anorexia"]},
+    {"id": "M_an_restrict_diag", "label": {"en": "Anorexia Nervosa, Restricting Type — Current",
+                                            "hi": "एनोरेक्सिया नर्वोसा, रेस्ट्रिक्टिंग प्रकार — वर्तमान"},
+     "rule": "Do the patient's symptoms meet criteria for Anorexia Nervosa? AND is M2 or M4 coded No? (Patient has not been regularly bingeing or purging.)",
+     "flags": ["CURRENT"], "disordersOnPositive": ["eating_anorexia"]}]}
+
+modMB = {
+  "id": "MB",
+  "name": {"en": "Module MB — Binge Eating Disorder",
+           "hi": "माड्यूल MB — बिंज-ईटिंग (अतिभक्षण) विकार"},
+  "gateRules": [
+    {"rule": "IF MB1 Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+     "id": "MB1", "text": {"en": "Do the patient's symptoms meet criteria for Anorexia Nervosa?",
+                            "hi": "क्या रोगी के लक्षण एनोरेक्सिया नर्वोसा के मानदंड पूरे करते हैं?"}},
+    {"rule": "IF MB2 Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+     "id": "MB2", "text": {"en": "Do the patient's symptoms meet criteria for Bulimia Nervosa?",
+                            "hi": "क्या रोगी के लक्षण बुलिमिया नर्वोसा के मानदंड पूरे करते हैं?"}},
+    {"rule": "IF MB3 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+     "id": "MB3", "text": {"en": "Is M2 coded Yes? (During binges, eating felt out of control.)",
+                            "hi": "क्या M2 'हाँ' कोडित है? (प्रपात के दौरान भोजन नियंत्रण-बाहर लगा।)"}},
+    {"rule": "IF MB4 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+     "id": "MB4", "text": {"en": "Is M3 coded Yes? (Binges at least once a week.)",
+                            "hi": "क्या M3 'हाँ' कोडित है? (सप्ताह में कम से कम एक बार प्रपात।)"}},
+    {"rule": "IF MB5 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+     "id": "MB5", "text": {"en": "Is M4 coded Yes? If M4 was bypassed in Module M (Bulimia Nervosa), ask M4 now to code MB5.",
+                            "hi": "क्या M4 'हाँ' कोडित है? यदि माड्यूल M (बुलिमिया नर्वोसा) में M4 छोड़ा गया था, तो MB5 कोड हेतु अब M4 पूछें।"}}],
+  "mb6Intro": {"en": "In the last 3 months during the binging did you:", "hi": "पिछले 3 माह में प्रपात के दौरान क्या आप:"},
+  "mb6": [
+      q("MB6a", "Eat more rapidly than normal?", "क्या सामान्य से तेज़ खाते थे?"),
+      q("MB6b", "Eat until you felt uncomfortably full?", "क्या अप्रिय ढंग से भरपूर महसूस करने तक खाते थे?"),
+      q("MB6c", "Eat large amounts of food when you were not hungry?", "क्या भूख न होने पर भी अधिक भोजन खाते थे?"),
+      q("MB6d", "Eat alone because you felt embarrassed about how much you were eating?", "क्या खाने की मात्रा से शर्मिंदगी के कारण अकेले खाते थे?"),
+      q("MB6e", "Feel guilty, depressed or disgusted with yourself after binging?", "क्या प्रपात के बाद स्वयं के प्रति अपराधबोध, उदासी या घृणा महसूस हुई?")],
+  "mb6Gate": {"rule": "IF <3 of MB6 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+              "text": {"en": "Are 3 or more MB6 questions coded Yes?",
+                        "hi": "क्या MB6 के 3 या अधिक प्रश्न 'हाँ' कोडित हैं?"}},
+  "mb7": q("MB7", "Does your binging distress you a lot?",
+           "क्या आपका प्रपात आपको बहुत कष्ट देता है?"),
+  "mb8Episodes": {"id": "MB8a", "numeric": True, "max": 99,
+                  "text": {"en": "Number of binge eating episodes per week?",
+                            "hi": "प्रति सप्ताह अतिभक्षण एपिसोड की संख्या?"}},
+  "mb8Days": {"id": "MB8b", "numeric": True, "max": 7,
+              "text": {"en": "Number of binge eating days per week?",
+                       "hi": "प्रति सप्ताह अतिभक्षण दिनों की संख्या?"}},
+  "specifierNote": {"en": "Specifiers of eating disorder: MILD = 1-3 episodes of binge eating per week; MODERATE = 4-7; SEVERE = 8-13; EXTREME = 14 or more.",
+                    "hi": "भोजन-विकार विशेषण: मृदु = प्रति सप्ताह 1-3 प्रपात एपिसोड; मध्यम = 4-7; गंभीर = 8-13; अत्यंत गंभीर = 14 या अधिक।"},
+  "diagnosticBoxes": [
+    {"id": "MB_diag", "label": {"en": "Binge-Eating Disorder — Current", "hi": "बिंज-ईटिंग (अतिभक्षण) विकार — वर्तमान"},
+     "rule": "MB1 No AND MB2 No AND MB3 Yes AND MB4 Yes AND MB5 No AND >=3 of MB6 Yes AND MB7 Yes. Severity by weekly binge-eating episodes (1-3 mild, 4-7 moderate, 8-13 severe, 14+ extreme).",
+     "flags": ["CURRENT"] + EATING_SEVERITY_SPECIFIERS, "disordersOnPositive": ["eating_binge_eating"]}]}
+
+modN = {
+  "id": "N",
+  "name": {"en": "Module N — Generalized Anxiety Disorder",
+           "hi": "माड्यूल N — सामान्यीकृत चिंता विकार"},
+  "screen": {"intro": {"en": "Screen-in questions (past 6 months)", "hi": "स्क्रीन-इन प्रश्न (पिछले 6 माह)"},
+             "probe": {"en": "IN ENGLISH, if the patient is unclear about what you mean, probe by asking (Do others think that you are a worrier or a 'worry wart'?) and get examples.",
+                        "hi": "यदि रोगी को प्रश्न का अर्थ स्पष्ट न हो तो पूछकर जाँचें (क्या दूसरे लोग आपको चिंता-प्रवण व्यक्ति समझते हैं?) और उदाहरण प्राप्त करें।"},
+             "questions": [
+      q("N1a", "Were you excessively anxious or worried about several routine things, over the past 6 months?",
+        "पिछले 6 माह में क्या आप अत्यधिक चिंतित/चिंताग्रस्त रहे — कई सामान्य/रोज़मर्रा की बातों को लेकर?"),
+      q("N1b", "Are these anxieties and worries present most days?",
+        "क्या ये आतंक/चिंताएँ अधिकतर दिनों में विद्यमान रहीं?")],
+             "gateRule": "IF N1a OR N1b No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+             "gateNote": {"en": "If either screen-in is No, Module N terminates (Generalized Anxiety Disorder coded No).",
+                          "hi": "यदि कोई भी स्क्रीन-इन 'नहीं', माड्यूल N समाप्त (सामान्यीकृत चिंता विकार 'नहीं' कोड)।"}},
+  "notBetterExplainedGate": {"rule": "IF Yes (anxieties restricted to / better explained by a prior disorder) -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+                             "text": {"en": "Are the patient's anxiety and worries restricted exclusively to, or better explained by, any disorder prior to this point?",
+                                      "hi": "क्या रोगी की चिंता/आतंक अनन्य रूप से यहाँ तक के किसी पूर्व विकार तक सीमित हैं, या उससे बेहतर ढंग से व्याख्यायित होती हैं?"}},
+  "n2": q("N2", "Do you find it difficult to control the worries?",
+          "क्या आपको चिंताओं को नियंत्रित करना कठिन लगता है?"),
+  "n3Intro": {"en": "When you were anxious over the past 6 months, did you, most of the time: (Code No if the symptoms are confined to features of any disorder explored prior to this point.)",
+              "hi": "पिछले 6 माह में जब आप चिंतित थे, तब अधिकतर समय क्या आप: (यदि लक्षण यहाँ तक जाँचे गए किसी विकार की विशेषताओं तक सीमित हों तो 'नहीं' कोड करें।)"},
+  "n3": [
+      q("N3a", "Feel restless, keyed up or on edge?", "बेचैन, उत्तेजित या सतर्क भाव?"),
+      q("N3b", "Have muscle tension?", "मांसपेशियों में तनाव?"),
+      q("N3c", "Feel tired, weak or exhausted easily?", "जल्दी थकान, दुर्बलता या शून्यता?"),
+      q("N3d", "Have difficulty concentrating or find your mind going blank?", "ध्यान केंद्रित करने में कठिनाई या मन खाली हो जाना?"),
+      q("N3e", "Feel irritable?", "चिड़चिड़ापन?"),
+      q("N3f", "Have difficulty sleeping (difficulty falling asleep, waking up in the middle of the night, early morning wakening or sleeping excessively)?",
+        "नींद में कठिनाई (सोने में कठिनाई, बीच में उठना, सुबह जल्द उठना या अधिक सोना)?")],
+  "n3Gate": {"rule": "IF <3 of N3 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+             "text": {"en": "Are 3 or more N3 answers coded Yes?", "hi": "क्या N3 के 3 या अधिक उत्तर 'हाँ' कोडित हैं?"}},
+  "n4": q("N4", "Do these anxieties and worries significantly disrupt your ability to work, to function socially or in your relationships or in other important areas of your life or cause you significant distress?",
+          "क्या ये आतंक/चिंताएँ कार्य, सामाजिक/संबंध-कार्यक्षमता या जीवन के अन्य महत्वपूर्ण क्षेत्रों को महत्वपूर्ण रूप से बाधित करती हैं, या आपको महत्वपूर्ण कष्ट देती हैं?"),
+  "diagnosticBoxes": [
+    {"id": "N_diag", "label": {"en": "Generalized Anxiety Disorder — Current", "hi": "सामान्यीकृत चिंता विकार — वर्तमान"},
+     "rule": "N1a AND N1b AND not-better-explained gate No AND N2 AND N3-gate (>=3) AND N4 all Yes AND organic cause ruled out (O2 summary).",
+     "flags": ["CURRENT"], "disordersOnPositive": ["gad"]}]}
+
+NYU_OPTIONS = [{"v": "no", "label": YN_NO}, {"v": "yes", "label": YN_YES},
+               {"v": "uncertain", "label": {"en": "Uncertain", "hi": "अनिश्चित"}}]
+
+modO = {
+  "id": "O",
+  "name": {"en": "Module O — Rule Out Medical, Organic or Drug Causes For All Disorders",
+           "hi": "माड्यूल O — सभी विकारों हेतु चिकित्सकीय/जैविक/दवा-जन्य कारणों का बहिर्गमन"},
+  "applicabilityNote": {"en": "If the patient codes positive for any current disorder or a major depressive episode or a manic or a hypomanic episode, ask the following about the period just before these symptoms began.",
+                         "hi": "यदि रोगी किसी वर्तमान विकार या प्रमुख अवसादी एपिसोड या मैैनिक/हाइपोमैैनिक एपिसोड पर सकारात्मक कोडित होता है, तो इन लक्षणों के ठीक पूर्व काल के बारे में निम्न पूछें।"},
+  "intro": {"en": "Just before these symptoms began:", "hi": "इन लक्षणों के शुरू होने से ठीक पहले:"},
+  "questions": [
+    q("O1a", "Were you taking any drugs or medicines or in withdrawal from any of these?",
+      "क्या आप कोई नशा/दवा ले रहे थे या उनसे विषमुक्ति-अवस्था में थे?", options=NYU_OPTIONS),
+    q("O1b", "Did you have any medical illness?", "क्या आपको कोई चिकित्सकीय रोग था?", options=NYU_OPTIONS),
+    q("O2", "If O1a or O1b is coded Yes: in the clinician's judgment, is either likely to be a direct cause of the patient's disorder? If necessary, ask additional open-ended questions.",
+      "यदि O1a या O1b 'हाँ' कोडित हो: चिकित्सक के निर्णय अनुसार, क्या इनमें से कोई रोगी के विकार का प्रत्यक्ष कारण होने की संभावना है? आवश्यकतानुसार अतिरिक्त खुले प्रश्न पूछें।",
+      options=NYU_OPTIONS, clinicianJudgment=True)],
+  "o2Summary": {"id": "O2_summary", "derived": True,
+                "rule": "Has an 'organic'/medical/drug related cause been ruled out? If O2 is Yes, then O2 SUMMARY is No. If O2 is No, then O2 SUMMARY is Yes. Otherwise it is Uncertain.",
+                "text": {"en": "O2 SUMMARY: Has an 'organic'/medical/drug related cause been ruled out?",
+                          "hi": "O2 सारांश: क्या 'जैविक'/चिकित्सकीय/दवा-संबंधित कारण बहिर्गत किया गया है?"},
+                "options": NYU_OPTIONS}}
+
+modP = {
+  "id": "P",
+  "name": {"en": "Module P — Antisocial Personality Disorder",
+           "hi": "माड्यूल P — प्रतिसामाजिक व्यक्तित्व विकार"},
+  "p1Intro": {"en": "Before you were 15 years old, did you:", "hi": "15 वर्ष की आयु से पूर्व, क्या आप:"},
+  "p1": [
+      q("P1a", "Repeatedly skip school or run away from home overnight or stayed out at night against your parent's rules?",
+        "बार-बार विद्यालय छोड़ना, रात को घर से भागना, या माता-पिता के नियमों के विरुद्ध रात बाहर रहना?"),
+      q("P1b", "Repeatedly lie, cheat, 'con' others, or steal or break into someone's house or car?",
+        "बार-बार झूठ, छल, दूसरों को ठगना, चोरी, या किसी के घर/गाड़ी में जबरन प्रवेश?"),
+      q("P1c", "Start fights or bully, threaten, or intimidate others?",
+        "झगड़े शुरू करना, या दूसरों को बुलिंग, धमकी या भयभीत करना?"),
+      q("P1d", "Deliberately destroy things or start fires?", "जानबूझकर चीज़ें नष्ट करना या आग लगाना?"),
+      q("P1e", "Deliberately hurt animals or people?", "जानबूझकर पशुओं या लोगों को कष्ट पहुँचाना?"),
+      q("P1f", "Force someone into sexual activity?", "किसी को यौन क्रिया हेतु विवश करना?")],
+  "p1Gate": {"rule": "IF <2 of P1 answers Yes -> SKIP ALL THE P2 QUESTIONS, GO TO THE DIAGNOSTIC BOX AND CIRCLE NO.",
+             "text": {"en": "Are 2 or more P1 answers coded Yes?", "hi": "क्या P1 के 2 या अधिक उत्तर 'हाँ' कोडित हैं?"}},
+  "p2Note": {"en": "Do not code Yes to the behaviors below if they are exclusively politically or religiously motivated.",
+             "hi": "निम्न व्यवहारों पर 'हाँ' कोड न करें यदि वे अनन्य रूप से राजनीतिक या धार्मिक प्रेरित हैं।"},
+  "p2Intro": {"en": "Since you were 15 years old, have you:", "hi": "15 वर्ष की आयु के बाद से, क्या आप:"},
+  "p2": [
+      q("P2a", "Done things that are illegal or would be grounds to get arrested, even if you didn't get caught (for example destroying property, shoplifting, stealing, selling drugs, or committing a felony)?",
+        "ऐसे कार्य किए जो अवैध हैं या गिरफ़्तारी का आधार बन सकते, चाहे पकड़े गए या नहीं (जैसे संपत्ति नष्ट, दुकान-चोरी, चोरी, दवा-बेचना, गंभीर अपराध)?"),
+      q("P2b", "Often lied or 'conned' other people to get money or pleasure, or lied just for fun?",
+        "धन/सुख हेतु बार-बार झूठ बोला या लोगों को ठगा, या केवल मनोरंजन हेतु झूठ बोला?"),
+      q("P2c", "Been impulsive and didn't care about planning ahead?", "अववेगी रहे और पूर्व-योजना की चिंता नहीं की?"),
+      q("P2d", "Been in physical fights repeatedly or assaulted others (including physical fights with your spouse or children)?",
+        "बार-बार शारीरिक झगड़े या दूसरों पर हमला (पत्नी/संतान से शारीरिक झगड़े सहित)?"),
+      q("P2e", "Exposed others or yourself to danger without caring?", "बेपरवाही से दूसरों/स्वयं को खतरे में डाला?"),
+      q("P2f", "Repeatedly behaved in a way that others would consider irresponsible, like failing to pay for things you owed, deliberately being impulsive or deliberately not working to support yourself?",
+        "बार-बार ऐसी व्यवहार जो दूसरे लापरवाही मानें — जैसे उधार चुकाना नहीं, जानबूझकर अववेगता, या स्वयं को पोषण हेतु काम न करना?"),
+      q("P2g", "Felt no guilt after hurting, mistreating, lying to, or stealing from others, or after damaging property?",
+        "दूसरों को कष्ट/दुरुपयोग/झूठ/चोरी के बाद या संपत्ति नष्ट करने के बाद कोई अपराधबोध न हुआ?")],
+  "p2Gate": {"rule": "IF <3 of P2 answers Yes -> Antisocial Personality Disorder NO.",
+             "text": {"en": "Are 3 or more P2 questions coded Yes?", "hi": "क्या P2 के 3 या अधिक प्रश्न 'हाँ' कोडित हैं?"}},
+  "diagnosticBoxes": [
+    {"id": "P_diag", "label": {"en": "Antisocial Personality Disorder — Lifetime", "hi": "प्रतिसामाजिक व्यक्तित्व विकार — जीवनभर"},
+     "rule": ">=2 of P1a-P1f Yes AND >=3 of P2a-P2g Yes (behaviors not exclusively politically or religiously motivated).",
+     "flags": ["LIFETIME"], "disordersOnPositive": ["antisocial_personality_disorder"]}]}
+
+# ---------------------------------------------------------------------------
+# Additional optional interview assessment: Mood Disorders Diagnostic Algorithm
+# (consult Modules A - Major Depressive Episode, C - (Hypo)manic Episode,
+#  K - Psychotic Disorders). Derived boxes; no new interview items.
+# ---------------------------------------------------------------------------
+moodAlgorithm = {
+  "id": "ALG-MOOD",
+  "optionalAssessment": True,
+  "name": {"en": "Mood Disorders: Diagnostic Algorithm",
+            "hi": "मूड विकार: निदान एल्गोरिद्म"},
+  "consultModules": ["A - Major Depressive Episode", "C - (Hypo)manic Episode", "K - Psychotic Disorders"],
+  "steps": [
+    {"id": "1a", "text": {"en": "Module K: Is K11b coded Yes?",
+                           "hi": "माड्यूल K: क्या K11b 'हाँ' कोडित है?"}},
+    {"id": "1b", "text": {"en": "Module K: Is K12a coded Yes?",
+                           "hi": "माड्यूल K: क्या K12a 'हाँ' कोडित है?"}},
+    {"id": "2a", "perTimeframe": ["current", "past"],
+     "text": {"en": "Circle Yes if a delusional idea is identified in A3e or in any psychotic feature in K1 through K7.",
+               "hi": "'हाँ' घेरें यदि A3e में या K1–K7 की किसी मनर्विकारी विशेषता में भ्रामक विचार चिह्नित हो।"}},
+    {"id": "2b", "perTimeframe": ["current", "past"],
+     "text": {"en": "Circle Yes if a delusional idea is identified in C3a or in any psychotic feature in K1 through K7.",
+               "hi": "'हाँ' घेरें यदि C3a में या K1–K7 की किसी मनर्विकारी विशेषता में भ्रामक विचार चिह्नित हो।"}}],
+  "specifierNotes": [
+    {"en": "Mixed features: hypo/manic with mixed features = hypo/manic + at least 3 symptoms from A3; depressed with mixed features = major depressive episode + at least 3 symptoms from C3.",
+     "hi": "मिश्र-लक्षण: हाइपो/मैैनिक मिश्र-लक्षणों सहित = हाइपो/मैैनिक + A3 के कम से कम 3 लक्षण; अवसादित मिश्र-लक्षणों सहित = प्रमुख अवसादी एपिसोड + C3 के कम से कम 3 लक्षण।"},
+    {"en": "With anxious distress = with at least 3 symptoms from N3.",
+     "hi": "आतंक-पीड़ा सहित = N3 के कम से कम 3 लक्षण।"}],
+  "diagnosticBoxes": [
+    {"id": "ALG_MDD", "label": {"en": "Major Depressive Disorder — Current / Past",
+                                 "hi": "प्रमुख अवसादी विकार — वर्तमान / अतीत"},
+     "rule": "MAJOR DEPRESSIVE EPISODE coded Yes (current or past) AND MANIC EPISODE No (current and past) AND HYPOMANIC EPISODE No (current and past) AND organic cause ruled out (O2 summary). Specify if the depressive episode is current or past or both. With psychotic features, CURRENT: if 1b OR 2a (current) = Yes; PAST: if 1a OR 2a (past) = Yes.",
+     "flags": ["MDD CURRENT", "MDD PAST", "WITH PSYCHOTIC FEATURES CURRENT", "WITH PSYCHOTIC FEATURES PAST"],
+     "disordersOnPositive": ["depression_mdd"]},
+    {"id": "ALG_BPI", "label": {"en": "Bipolar I Disorder — Current / Past",
+                                 "hi": "बाइपोलर I विकार — वर्तमान / अतीत"},
+     "rule": "MANIC EPISODE coded Yes (current or past) AND organic cause ruled out (O2 summary). Single manic episode: if manic episode (current or past) Yes AND major depressive episode (current and past) No. With psychotic features, CURRENT: if 1b OR 2a (current) OR 2b (current) = Yes; PAST: if 1a OR 2a (past) OR 2b (past) = Yes. Specify most recent episode (manic/depressed/hypomanic, mutually exclusive) and whether it had mixed, anxious or psychotic features, and severity (mild/moderate/severe).",
+     "flags": ["BIPOLAR I CURRENT", "BIPOLAR I PAST", "SINGLE MANIC EPISODE", "WITH PSYCHOTIC FEATURES CURRENT", "WITH PSYCHOTIC FEATURES PAST",
+               "MOST RECENT: MANIC", "MOST RECENT: DEPRESSED", "MOST RECENT: HYPOMANIC",
+               "MOST RECENT WITH MIXED FEATURES", "MOST RECENT WITH ANXIOUS DISTRESS",
+               "MOST RECENT MILD", "MOST RECENT MODERATE", "MOST RECENT SEVERE"],
+     "disordersOnPositive": ["bipolar_i_disorder"]},
+    {"id": "ALG_BPII", "label": {"en": "Bipolar II Disorder — Current / Past",
+                                  "hi": "बाइपोलर II विकार — वर्तमान / अतीत"},
+     "rule": "MAJOR DEPRESSIVE EPISODE Yes (current or past) AND HYPOMANIC EPISODE Yes (current or past) AND MANIC EPISODE No (current and past) AND organic cause ruled out (O2 summary). Specify if bipolar disorder is current or past or both; most recent mood episode hypomanic or depressed (mutually exclusive); most recent episode with mixed/anxious/psychotic features; severity mild/moderate/severe.",
+     "flags": ["BIPOLAR II CURRENT", "BIPOLAR II PAST",
+               "MOST RECENT: HYPOMANIC", "MOST RECENT: DEPRESSED",
+               "MOST RECENT WITH MIXED FEATURES", "MOST RECENT WITH ANXIOUS DISTRESS",
+               "MOST RECENT MILD", "MOST RECENT MODERATE", "MOST RECENT SEVERE"],
+     "disordersOnPositive": ["bipolar_ii_disorder"]},
+    {"id": "ALG_OSBR", "label": {"en": "Other Specified Bipolar and Related Disorder — Current / Past",
+                                  "hi": "अन्य निर्दिष्ट बाइपोलर एवं संबंधित विकार — वर्तमान / अतीत"},
+     "rule": "Either: MAJOR DEPRESSIVE EPISODE No (current and past) AND MANIC EPISODE No (current and past) AND C4b Yes for the appropriate timeframe AND C8b Yes; OR: MANIC EPISODE No (current and past) AND HYPOMANIC EPISODE No (current and past) AND C4a Yes for the appropriate timeframe AND C8c Yes. Specify if current or past or both.",
+     "flags": ["CURRENT", "PAST"], "disordersOnPositive": ["other_specified_bipolar"]}],
+  "note": {"en": "Additional optional interview assessments (pages 36 & 37 of the MINI user-scripted version): this algorithm derives its diagnostic boxes from Modules A, C and K plus the O2 summary; it adds no new interview questions.",
+            "hi": "अतिरिक्त वैकल्पिक साक्षात्कार मूल्यांकन (MINI उपयोगकर्ता-स्क्रिप्टेड संस्करण के पृष्ठ 36 एवं 37): यह एल्गोरिद्म माड्यूल A, C, K तथा O2 सारांश से निदान-बक्से व्युत्पन्न करता है; कोई नया साक्षात्कार-प्रश्न नहीं जोड़ता।"}}
+
 with open(os.path.join(HERE, "modB.json"), encoding="utf-8") as f:
     modB = json.load(f)
 
@@ -704,13 +1050,19 @@ mini = {
                                     "D - Panic Disorder", "E - Agoraphobia", "F - Social Anxiety Disorder",
                                     "G - Obsessive-Compulsive Disorder", "H - Posttraumatic Stress Disorder",
                                     "I - Alcohol Use Disorder", "J - Substance Use Disorder (Non-alcohol)",
-                                    "K - Psychotic Disorders and Mood Disorder With Psychotic Features"],
-             "note": {"en": "Structured interview modules adapted from the MINI 7.0.2 user-scripted version. This web implementation captures the screening logic only; it is not a substitute for trained interviewer administration. The organic-cause exclusion (Module O) is approximated by the prior-diagnoses and medications context fields.",
-                      "hi": "MINI 7.0.2 के उपयोगकर्ता-स्क्रिप्टेड संस्करण से अनुकूलित संरचित साक्षात्कार माड्यूल। यह वेब कार्यान्वयन केवल स्क्रीनिंग तर्क ग्रहण करता है; प्रशिक्षित इंटरव्यूटर के प्रशासन का विकल्प नहीं है। जैविक-कारण बहिर्ागमन (माड्यूल O) को पूर्व-निदान एवं दवा संदर्भ फ़ील्ड द्वारा अनुमानित किया गया है।"}},
+                                    "K - Psychotic Disorders and Mood Disorder With Psychotic Features",
+                                    "L - Anorexia Nervosa", "M - Bulimia Nervosa", "MB - Binge Eating Disorder",
+                                    "N - Generalized Anxiety Disorder",
+                                    "O - Rule Out Medical, Organic or Drug Causes For All Disorders",
+                                    "P - Antisocial Personality Disorder",
+                                    "Additional optional interview assessments: Mood Disorders Diagnostic Algorithm"],
+             "note": {"en": "Structured interview modules adapted from the MINI 7.0.2 user-scripted version. This web implementation captures the screening logic only; it is not a substitute for trained interviewer administration. The organic-cause exclusion (Module O) is captured as an explicit clinician-rated No/Yes/Uncertain summary that gates every current-disorder diagnostic box.",
+                      "hi": "MINI 7.0.2 के उपयोगकर्ता-स्क्रिप्टेड संस्करण से अनुकूलित संरचित साक्षात्कार माड्यूल। यह वेब कार्यान्वयन केवल स्क्रीनिंग तर्क ग्रहण करता है; प्रशिक्षित इंटरव्यूटर के प्रशासन का विकल्प नहीं है। जैविक-कारण बहिर्गमन (माड्यूल O) को चिकित्सक-रेटित नहीं/हाँ/अनिश्चित सारांश के रूप में ग्रहण किया गया है जो प्रत्येक वर्तमान-विकार निदान-बक्से को नियंत्रित करता है।"}},
   "responseScale": [{"v": 0, "label": YN_NO}, {"v": 1, "label": YN_YES}],
-  "directions": {"en": "These questions follow the MINI 7.0.2 branching logic (Modules A-K: Major Depressive Episode; Suicidality; Manic/Hypomanic Episodes; Panic Disorder; Agoraphobia; Social Anxiety; Obsessive-Compulsive Disorder; Posttraumatic Stress Disorder; Alcohol Use Disorder; Substance Use Disorder; Psychotic Disorders and Mood Disorder With Psychotic Features). Answer honestly; sections that do not apply are skipped automatically.",
-                 "hi": "ये प्रश्न MINI 7.0.2 की शाखा-विभाजन पद्धति का पालन करते हैं (माड्यूल A-K: प्रमुख अवसादी एपिसोड; आत्मघातिता; मैैनिक/हाइपोमैैनिक एपिसोड; पैैनिक विकार; एगोराफोबिया; सामाजिक आतंक; O.C.D.; PTSD; मद्य-सेवन विकार; पदार्थ-सेवन विकार; मनर्विकार विकार एवं मनर्विकारी लक्षणों सहित मूड विकार)। ईमानदारी से उत्तर दें; लागू न होने वाले भाग स्वतः छोड़े जाएँगे।"},
-  "modules": [modA, modB, modC, modD, modE, modF, modG, modH, modI, modJ, modK]
+  "directions": {"en": "These questions follow the MINI 7.0.2 branching logic (Modules A-P plus the Mood Disorders Diagnostic Algorithm: Major Depressive Episode; Suicidality; Manic/Hypomanic Episodes; Panic Disorder; Agoraphobia; Social Anxiety; Obsessive-Compulsive Disorder; Posttraumatic Stress Disorder; Alcohol Use Disorder; Substance Use Disorder; Psychotic Disorders and Mood Disorder With Psychotic Features; Anorexia Nervosa; Bulimia Nervosa; Binge Eating Disorder; Generalized Anxiety Disorder; Rule Out Medical/Organic/Drug Causes; Antisocial Personality Disorder). Answer honestly; sections that do not apply are skipped automatically.",
+                 "hi": "ये प्रश्न MINI 7.0.2 की शाखा-विभाजन पद्धति का पालन करते हैं (माड्यूल A-P एवं मूड-विकार निदान-एल्गोरिद्म: प्रमुख अवसादी एपिसोड; आत्मघातिता; मैैनिक/हाइपोमैैनिक एपिसोड; पैैनिक विकार; एगोराफोबिया; सामाजिक आतंक; O.C.D.; PTSD; मद्य-सेवन विकार; पदार्थ-सेवन विकार; मनर्विकार विकार एवं मनर्विकारी लक्षणों सहित मूड विकार; एनोरेक्सिया नर्वोसा; बुलिमिया नर्वोसा; बिंज-ईटिंग विकार; सामान्यीकृत चिंता विकार; चिकित्सकीय/जैविक/दवा-कारणों का बहिर्गमन; प्रतिसामाजिक व्यक्तित्व विकार)। ईमानदारी से उत्तर दें; लागू न होने वाले भाग स्वतः छोड़े जाएँगे।"},
+  "modules": [modA, modB, modC, modD, modE, modF, modG, modH, modI, modJ, modK,
+              modL, modM, modMB, modN, modO, modP, moodAlgorithm]
 }
 
 out = "/tmp/mini.json"

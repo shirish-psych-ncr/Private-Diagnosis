@@ -1256,6 +1256,90 @@
       },
       "mappingNote": "ICD-11 Anorexia nervosa is 6B80 within the 6B80-6B85 feeding/eating family (bulimia 6B81, binge eating 6B82, ARFID 6B83, pica 6B84, rumination-regurgitation 6B85) (index 9.1.2, 9.2.2)."
     },
+    "eating_bulimia": {
+      "name": {
+        "en": "Bulimia Nervosa",
+        "hi": "बुलिमिया नर्वोसा"
+      },
+      "tier": 3,
+      "dsm5": "Bulimia Nervosa",
+      "icd11": "6B81",
+      "description": {
+        "en": "Recurrent binge eating with compensatory behaviours to prevent weight gain",
+        "hi": "बार-बार अतिभक्षण और वजन बढ़ने रोकने हेतु क्षतिपूर्ति व्यवहार"
+      },
+      "mappingNote": "ICD-11 Bulimia nervosa is 6B81 within the 6B80-6B85 feeding/eating family (anorexia 6B80, binge eating 6B82, ARFID 6B83, pica 6B84, rumination-regurgitation 6B85) (index 9.1.2, 9.2.2); severity and remission qualifiers are selected separately."
+    },
+    "eating_binge_eating": {
+      "name": {
+        "en": "Binge-Eating Disorder",
+        "hi": "अतिभक्षण (बिंज-ईटिंग) विकार"
+      },
+      "tier": 3,
+      "dsm5": "Binge-Eating Disorder",
+      "icd11": "6B82",
+      "description": {
+        "en": "Recurrent binge eating without regular compensatory behaviours, with marked distress",
+        "hi": "नियमित क्षतिपूर्ति-व्यवहार के बिना बार-बार अतिभक्षण, महत्वपूर्ण कष्ट सहित"
+      },
+      "mappingNote": "ICD-11 Binge-eating disorder is 6B82 within the 6B80-6B85 feeding/eating family (index 9.1.2, 9.2.2). DSM requires weekly binges for 3 months; ICD-11 frequency/duration requirements differ - assess each system independently."
+    },
+    "antisocial_personality_disorder": {
+      "name": {
+        "en": "Antisocial Personality Disorder",
+        "hi": "प्रतिसामाजिक व्यक्तित्व विकार"
+      },
+      "tier": 3,
+      "dsm5": "Antisocial Personality Disorder",
+      "icd11": "6D12.2",
+      "description": {
+        "en": "Pervasive disregard for and violation of the rights of others since age 15",
+        "hi": "15 वर्ष की आयु से दूसरों के अधिकारों की व्यापक अवहेलना एवं उल्लंघन"
+      },
+      "mappingNote": "ICD-11 does not carry a distinct Antisocial Personality Disorder category; the closest comparison is 6D12 Dissociality pattern qualifier within personality disorder diagnosis (severity must be established first, Rule 5). DSM conduct-disorder history before age 15 has no automatic ICD equivalent - assess each system independently."
+    },
+    "bipolar_i_disorder": {
+      "name": {
+        "en": "Bipolar I Disorder",
+        "hi": "द्विध्रुवी I विकार"
+      },
+      "tier": 3,
+      "dsm5": "Bipolar I Disorder",
+      "icd11": "6A60",
+      "description": {
+        "en": "At least one manic episode, with or without depressive episodes",
+        "hi": "कम से कम एक मैैनिक एपिसोड, अवसादी एपिसोड सहित या विना"
+      },
+      "mappingNote": "ICD-11 Bipolar type I disorder is 6A60; current episode, psychosis and remission subdivisions are selected separately (index 3.1.2) and do not denote generic mixed/remission states."
+    },
+    "bipolar_ii_disorder": {
+      "name": {
+        "en": "Bipolar II Disorder",
+        "hi": "द्विध्रुवी II विकार"
+      },
+      "tier": 3,
+      "dsm5": "Bipolar II Disorder",
+      "icd11": "6A61",
+      "description": {
+        "en": "At least one hypomanic episode and one major depressive episode, never manic",
+        "hi": "कम से कम एक हाइपोमैैनिक एवं एक प्रमुख अवसादी एपिसोड, कभी मैैनिक नहीं"
+      },
+      "mappingNote": "ICD-11 Bipolar type II disorder is 6A61; episode, psychosis and remission subdivisions are selected separately (index 3.1.2)."
+    },
+    "other_specified_bipolar": {
+      "name": {
+        "en": "Other Specified Bipolar and Related Disorder",
+        "hi": "अन्य निर्दिष्ट द्विध्रुवी एवं संबंधित विकार"
+      },
+      "tier": 3,
+      "dsm5": "Other Specified Bipolar and Related Disorder",
+      "icd11": "6A6Y",
+      "description": {
+        "en": "Bipolar-spectrum presentations causing impairment that do not meet full criteria",
+        "hi": "द्विध्रुवी-स्पेक्ट्रम प्रस्तुतियाँ जो पूर्ण मानदंड पूरे किए बिना हानि जनती हैं"
+      },
+      "mappingNote": "DSM other specified bipolar categories map to ICD-11 6A6Y Other specified bipolar or related disorder; short-duration hypomanic/manic episodes and cyclothymia have different thresholds across systems - assess each independently (index 3.1.2)."
+    },
     "personality_borderline": {
       "name": {
         "en": "Borderline Personality Disorder",
