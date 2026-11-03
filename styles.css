@@ -518,6 +518,13 @@ footer { background: #f0f4f8; padding: 1.5rem; text-align: center; color: #666; 
 .clinician-table{width:100%;border-collapse:collapse;margin:.75rem 0}
 .clinician-table th,.clinician-table td{border:1px solid var(--border-color);padding:.5rem .75rem;text-align:left;font-size:.9rem}
 .clinician-table thead{background:var(--bg-tertiary)}
+/* Clinician-rated severity tables (MINI optional assessments A & B) */
+.scale-admin-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--primary-color);border:1px solid var(--primary-color);border-radius:999px;padding:.1rem .55rem;vertical-align:middle}
+.clinician-rating-table{border-left-color:#7c3aed}
+.scale-rating-anchors{color:var(--text-secondary);font-size:.85rem;margin:.25rem 0 .5rem;line-height:1.5}
+.rating-register td:last-child,.rating-register th:last-child{text-align:center;width:6.5rem}
+.rating-register-note{color:var(--text-secondary);font-size:.85rem;margin:.25rem 0 1.25rem;line-height:1.5}
+@media (max-width:768px){.rating-register td:last-child,.rating-register th:last-child{width:auto}}
 .differential-list{list-style:none;padding:0}
 .differential-list li{padding:.5rem .75rem;border-bottom:1px dashed var(--border-color)}
 .handoff-note{color:var(--text-secondary);font-size:.9rem;margin-top:1rem}

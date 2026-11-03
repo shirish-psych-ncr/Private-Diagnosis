@@ -949,6 +949,49 @@
         "CAARMS"
       ],
       "instrument": "caarms"
+    },
+    {
+      "id": "functional_impairment",
+      "name": {
+        "en": "Functioning & cross-cutting symptoms",
+        "hi": "कार्यात्मकता एवं क्रॉस-कटिंग लक्षण"
+      },
+      "tier": 5,
+      "description": {
+        "en": "Optional MINI 7.0.2 clinician-rated rating tables (user-scripted version pp. 36-37): A - Cross-Cutting Measures (Severity of Symptom) and B - Disability / Functional Impairment (Severity of Disability / Impairment).",
+        "hi": "MINI 7.0.2 के वैकल्पिक चिकित्सक-रेटित रेटिंग-तालिकाएँ (उपयोगकर्ता-स्क्रिप्टेड संस्करण पृ. 36-37): A - क्रॉस-कटिंग माप (लक्षणों की तीव्रता) और B - अक्षमता/कार्यात्मक हानि (अक्षमता/हानि की तीव्रता)।"
+      },
+      "timeframe": {
+        "en": "Rate each row independently from 0 (not present) to 10 (extreme) in the score column.",
+        "hi": "प्रत्येक पंक्ति को स्वतंत्र रूप से 0 (अनुपस्थित) से 10 (अत्यधिक) तक स्कोर कॉलम में रेट करें।"
+      },
+      "instrument": "auto:minioptional",
+      "instruments": [
+        "MINI 7.0.2"
+      ],
+      "optionalAssessment": true,
+      "administeredBy": "clinician",
+      "cutoff": null,
+      "questions": [
+        {
+          "id": "fi_1",
+          "text": {
+            "en": "Are there symptoms to rate on the Cross-Cutting Measures (Severity of Symptom) table?",
+            "hi": "क्या क्रॉस-कटिंग माप (लक्षणों की तीव्रता) तालिका पर रेट करने हेतु लक्षण उपस्थित हैं?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "mini_cross_cutting"
+        },
+        {
+          "id": "fi_2",
+          "text": {
+            "en": "Have your symptoms disrupted your ability to function in any area of your life?",
+            "hi": "क्या आपके लक्षणों ने आपके जीवन के किसी क्षेत्र में कार्य करने की आपकी क्षमता को बाधित किया है?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "mini_disability"
+        }
+      ]
     }
   ],
   "disorders": {
@@ -1759,18 +1802,23 @@
     "MINI 7.0.2": {
       "name": "Mini International Neuropsychiatric Interview (MINI), English Version 7.0.2, for DSM-5",
       "description": {
-        "en": "Structured clinician diagnostic interview covering Modules A-P (mood, anxiety, trauma, substance, psychotic, eating, personality disorders), the Mood Disorders Diagnostic Algorithm, and optional Cross-Cutting Measures and Disability assessments",
-        "hi": "संरचित चिकित्सकीय निदान साक्षात्कार - माड्यूल A-P (मूड, चिंता, आघात, पदार्थ, मनर्विकार, भोजन, व्यक्तित्व विकार), मूड-विकार निदान-एल्गोरिद्म, तथा वैकल्पिक क्रॉस-कटिंग माप और अक्षमता मूल्यांकन शामिल"
+        "en": "Structured clinician diagnostic interview covering Modules A-P (mood, anxiety, trauma, substance, psychotic, eating, personality disorders), the Mood Disorders Diagnostic Algorithm, and the additional optional interview assessments on pages 37-38: A - Cross-Cutting Measures (Severity of Symptom, 13 items) and B - Disability / Functional Impairment (Severity of Disability / Impairment, 12 items), both rated 0-10 (Not present / Mild / Moderate / Severe / Extreme)",
+        "hi": "संरचित चिकित्सकीय निदान साक्षात्कार - माड्यूल A-P (मूड, चिंता, आघात, पदार्थ, मनर्विकार, भोजन, व्यक्तित्व विकार), मूड-विकार निदान-एल्गोरिद्म, तथा पृष्ठ 37-38 के अतिरिक्त वैकल्पिक साक्षात्कार-मूल्यांकन: A - क्रॉस-कटिंग माप (लक्षणों की तीव्रता, 13_items) और B - अक्षमता/कार्यात्मक हानि (अक्षमता/हानि की तीव्रता, 12_items), दोनों 0-10 पर रेट (अनुपस्थित/हल्का/मध्यम/गंभीर/अत्यधिक)"
       },
       "domains": [
         "mood",
         "anxiety",
         "trauma",
         "substance",
-        "psychosis"
+        "psychosis",
+        "functional_impairment"
       ],
       "duration": "30-45 minutes",
-      "administeredBy": "clinician"
+      "administeredBy": "clinician",
+      "optionalAssessments": [
+        "mini_cross_cutting",
+        "mini_disability"
+      ]
     },
     "VADRS": {
       "name": "Vanderbilt ADHD Diagnostic Rating Scale",
@@ -2425,6 +2473,754 @@
         "en": "Each rating should be considered in the context of what is appropriate for the age of your child. When completing this form, please think about your child's behaviors in the past 6 months.",
         "hi": "प्रत्येक रेटिंग बच्चे की आयु के अनुसार उपयुक्त होने के संदर्भ में विचार की जानी चाहिए। यह फ़ॉर्म भरते समय कृपया पिछले 6 माह में अपने बच्चे के व्यवहार के बारे में सोचें।"
       }
+    },
+    "mini_cross_cutting": {
+      "id": "mini_cross_cutting",
+      "miniModuleId": "OPT-A",
+      "name": {
+        "en": "MINI Optional Assessment A — Cross-Cutting Measures: Severity of Symptom",
+        "hi": "MINI वैकल्पिक मूल्यांकन A — क्रॉस-कटिंग माप: लक्षणों की तीव्रता"
+      },
+      "type": "matrix",
+      "administeredBy": "clinician",
+      "optionalAssessment": true,
+      "sourceInstrument": "MINI 7.0.2",
+      "targetAge": [
+        "adult",
+        "adolescent"
+      ],
+      "directions": {
+        "en": "Use this scale to rate the severity of your symptom in the score column in the table below: Assessment of Symptoms That Cut Across Disorders.",
+        "hi": "इस पैमाने का उपयोग नीचे दी गई तालिका के स्कोर कॉलम में अपने लक्षण की तीव्रता रेट करने हेतु करें: विकारों-पार लक्षणों का मूल्यांकन।"
+      },
+      "timeframe": {
+        "en": "Rate severity for the time period the clinician is assessing (MINI modules use current episode / past month unless otherwise specified).",
+        "hi": "चिकित्सक द्वारा मूल्यांकन किए जा रहे समय-काल हेतु तीव्रता रेट करें (MINI माड्यूल यथानिर्दिष्ट न हो तो वर्तमान एपिसोड/गत माह का प्रयोग करते हैं)।"
+      },
+      "parts": [
+        {
+          "id": "opta",
+          "name": {
+            "en": "Symptom Name",
+            "hi": "लक्षण का नाम"
+          },
+          "questions": [
+            {
+              "id": "CCS1",
+              "text": {
+                "en": "Depression",
+                "hi": "अवसाद"
+              }
+            },
+            {
+              "id": "CCS2",
+              "text": {
+                "en": "Anger",
+                "hi": "क्रोध"
+              }
+            },
+            {
+              "id": "CCS3",
+              "text": {
+                "en": "Mania (feeling up or high or hyper or full of energy with racing thoughts)",
+                "hi": "मैैनिया (उत्फुल्ल/हाई/अति-सक्रिय, दौड़ते विचारों के साथ)"
+              }
+            },
+            {
+              "id": "CCS4",
+              "text": {
+                "en": "Anxiety",
+                "hi": "आतंक/चिंता"
+              }
+            },
+            {
+              "id": "CCS5",
+              "text": {
+                "en": "Physical (somatic) symptoms",
+                "hi": "शारीरिक (देहज) लक्षण"
+              }
+            },
+            {
+              "id": "CCS6",
+              "text": {
+                "en": "Suicidal thoughts, impulses, plans, intent, (ANY thoughts of killing yourself), or any preparations to kill yourself or ANY attempt to kill yourself",
+                "hi": "आत्मघाती विचार, प्रेरणाएँ, योजनाएँ, अभिप्राय (स्वयं को मारने का कोई भी विचार), या आत्महत्या की कोई तैयारी अथवा कोई प्रयास"
+              }
+            },
+            {
+              "id": "CCS7",
+              "text": {
+                "en": "Hearing sounds or voices others can't hear or fearing someone can hear or read your thoughts or believing things others don't accept as true e.g. that people are spying on you or plotting against you or talking about you (Psychosis)",
+                "hi": "ऐसी ध्वनियाँ/आवाज़ें सुनना जो अन्य नहीं सुन सकते, भय कि कोई आपके विचार सुन/पढ़ सकता है, या ऐसी बातें मानना जिन्हें अन्य सत्य नहीं मानते — जैसे लोग आपकी जासूसी/साज़िश कर रहे हैं या आपके बारे में बात करते हैं (मनर्विकार)"
+              }
+            },
+            {
+              "id": "CCS8",
+              "text": {
+                "en": "Sleep problems",
+                "hi": "नींद की समस्याएँ"
+              }
+            },
+            {
+              "id": "CCS9",
+              "text": {
+                "en": "Memory problems",
+                "hi": "स्मृति समस्याएँ"
+              }
+            },
+            {
+              "id": "CCS10",
+              "text": {
+                "en": "Repetitive or obsessive thoughts or compulsive behaviors",
+                "hi": "पुनरावृत्त या विचारग्रस्त (obsessive) विचार या विवशतापूर्ण (compulsive) व्यवहार"
+              }
+            },
+            {
+              "id": "CCS11",
+              "text": {
+                "en": "Feeling things around you are strange, unreal, detached or unfamiliar, or feeling outside or detached from part or all of your body (Dissociation)",
+                "hi": "आसपास की चीज़ें अजीब/अवास्तविक/परिचित-नहीं लगना, या शरीर के कुछ/सभी भाग से विलग/बाहर महसूस करना (वियोजन/Dissociation)"
+              }
+            },
+            {
+              "id": "CCS12",
+              "text": {
+                "en": "Ability to function at work, at home, in your life, or in your relationships",
+                "hi": "कार्य, घर, जीवन या संबंधों में कार्य करने की क्षमता"
+              }
+            },
+            {
+              "id": "CCS13",
+              "text": {
+                "en": "Overusing alcohol or drugs",
+                "hi": "शराब या दवाओं का अत्यधिक सेवन"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "Not present",
+            "hi": "उपस्थित नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Mild",
+            "hi": "हल्का"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "2",
+            "hi": "2"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "Moderate",
+            "hi": "मध्यम"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "4",
+            "hi": "4"
+          }
+        },
+        {
+          "v": 5,
+          "label": {
+            "en": "5",
+            "hi": "5"
+          }
+        },
+        {
+          "v": 6,
+          "label": {
+            "en": "Severe",
+            "hi": "गंभीर"
+          }
+        },
+        {
+          "v": 7,
+          "label": {
+            "en": "7",
+            "hi": "7"
+          }
+        },
+        {
+          "v": 8,
+          "label": {
+            "en": "8",
+            "hi": "8"
+          }
+        },
+        {
+          "v": 9,
+          "label": {
+            "en": "9",
+            "hi": "9"
+          }
+        },
+        {
+          "v": 10,
+          "label": {
+            "en": "Extreme",
+            "hi": "अत्यधिक"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 10,
+        "type": "clinician_rating",
+        "anchors": [
+          {
+            "v": 0,
+            "label": {
+              "en": "Not present",
+              "hi": "उपस्थित नहीं"
+            }
+          },
+          {
+            "v": 1,
+            "label": {
+              "en": "Mild",
+              "hi": "हल्का"
+            }
+          },
+          {
+            "v": 3,
+            "label": {
+              "en": "Moderate",
+              "hi": "मध्यम"
+            }
+          },
+          {
+            "v": 6,
+            "label": {
+              "en": "Severe",
+              "hi": "गंभीर"
+            }
+          },
+          {
+            "v": 10,
+            "label": {
+              "en": "Extreme",
+              "hi": "अत्यधिक"
+            }
+          }
+        ],
+        "note": {
+          "en": "Severity anchors: 0 Not present, 1 Mild, 3 Moderate, 6 Severe, 10 Extreme (any integer 0-10 may be entered).",
+          "hi": "तीव्रता-संदर्भ: 0 अनुपस्थित, 1 हल्का, 3 मध्यम, 6 गंभीर, 10 अत्यधिक (0-10 के बीच कोई भी पूर्णांक दर्ज किया जा सकता है)।"
+        }
+      },
+      "scoring": {
+        "method": "clinician_rated_severity_no_total",
+        "note": {
+          "en": "Each row is rated independently on the 0-10 severity/disruption scale; the scale produces no composite total and gates no diagnostic box.",
+          "hi": "प्रत्येक पंक्ति 0-10 तीव्रता/बाधा पैमाने पर स्वतंत्र रूप से रेट की जाती है; यह पैमाना कोई कुल अंक नहीं बनाता और किसी निदान-बक्से को नियंत्रित नहीं करता।"
+        },
+        "anchorLabels": {
+          "0": {
+            "en": "Not present",
+            "hi": "उपस्थित नहीं"
+          },
+          "1": {
+            "en": "Mild",
+            "hi": "हल्का"
+          },
+          "3": {
+            "en": "Moderate",
+            "hi": "मध्यम"
+          },
+          "6": {
+            "en": "Severe",
+            "hi": "गंभीर"
+          },
+          "10": {
+            "en": "Extreme",
+            "hi": "अत्यधिक"
+          }
+        },
+        "reportRows": [
+          {
+            "id": "CCS1",
+            "text": {
+              "en": "Depression",
+              "hi": "अवसाद"
+            }
+          },
+          {
+            "id": "CCS2",
+            "text": {
+              "en": "Anger",
+              "hi": "क्रोध"
+            }
+          },
+          {
+            "id": "CCS3",
+            "text": {
+              "en": "Mania (feeling up or high or hyper or full of energy with racing thoughts)",
+              "hi": "मैैनिया (उत्फुल्ल/हाई/अति-सक्रिय, दौड़ते विचारों के साथ)"
+            }
+          },
+          {
+            "id": "CCS4",
+            "text": {
+              "en": "Anxiety",
+              "hi": "आतंक/चिंता"
+            }
+          },
+          {
+            "id": "CCS5",
+            "text": {
+              "en": "Physical (somatic) symptoms",
+              "hi": "शारीरिक (देहज) लक्षण"
+            }
+          },
+          {
+            "id": "CCS6",
+            "text": {
+              "en": "Suicidal thoughts, impulses, plans, intent, (ANY thoughts of killing yourself), or any preparations to kill yourself or ANY attempt to kill yourself",
+              "hi": "आत्मघाती विचार, प्रेरणाएँ, योजनाएँ, अभिप्राय (स्वयं को मारने का कोई भी विचार), या आत्महत्या की कोई तैयारी अथवा कोई प्रयास"
+            }
+          },
+          {
+            "id": "CCS7",
+            "text": {
+              "en": "Hearing sounds or voices others can't hear or fearing someone can hear or read your thoughts or believing things others don't accept as true e.g. that people are spying on you or plotting against you or talking about you (Psychosis)",
+              "hi": "ऐसी ध्वनियाँ/आवाज़ें सुनना जो अन्य नहीं सुन सकते, भय कि कोई आपके विचार सुन/पढ़ सकता है, या ऐसी बातें मानना जिन्हें अन्य सत्य नहीं मानते — जैसे लोग आपकी जासूसी/साज़िश कर रहे हैं या आपके बारे में बात करते हैं (मनर्विकार)"
+            }
+          },
+          {
+            "id": "CCS8",
+            "text": {
+              "en": "Sleep problems",
+              "hi": "नींद की समस्याएँ"
+            }
+          },
+          {
+            "id": "CCS9",
+            "text": {
+              "en": "Memory problems",
+              "hi": "स्मृति समस्याएँ"
+            }
+          },
+          {
+            "id": "CCS10",
+            "text": {
+              "en": "Repetitive or obsessive thoughts or compulsive behaviors",
+              "hi": "पुनरावृत्त या विचारग्रस्त (obsessive) विचार या विवशतापूर्ण (compulsive) व्यवहार"
+            }
+          },
+          {
+            "id": "CCS11",
+            "text": {
+              "en": "Feeling things around you are strange, unreal, detached or unfamiliar, or feeling outside or detached from part or all of your body (Dissociation)",
+              "hi": "आसपास की चीज़ें अजीब/अवास्तविक/परिचित-नहीं लगना, या शरीर के कुछ/सभी भाग से विलग/बाहर महसूस करना (वियोजन/Dissociation)"
+            }
+          },
+          {
+            "id": "CCS12",
+            "text": {
+              "en": "Ability to function at work, at home, in your life, or in your relationships",
+              "hi": "कार्य, घर, जीवन या संबंधों में कार्य करने की क्षमता"
+            }
+          },
+          {
+            "id": "CCS13",
+            "text": {
+              "en": "Overusing alcohol or drugs",
+              "hi": "शराब या दवाओं का अत्यधिक सेवन"
+            }
+          }
+        ]
+      },
+      "sourcePages": "MINI 7.0.2 user-scripted version, pp. 36-37 (Additional Optional Interview Assessments A and B)",
+      "branching": {
+        "screenInItem": "fi_cross_cutting",
+        "note": {
+          "en": "Screen-in item fi_1 controls this table: it is completed only when symptoms are present to rate (MINI optional assessments are not scored and never gate a diagnostic box).",
+          "hi": "स्क्रीन-इन आइटम fi_1 इस तालिका को नियंत्रित करता है: यह केवल लक्षण उपस्थित होने पर पूर्ण होती है (MINI वैकल्पिक मूल्यांकन स्कोर नहीं किए जाते और किसी निदान-बक्से को नियंत्रित नहीं करते)।"
+        }
+      }
+    },
+    "mini_disability": {
+      "id": "mini_disability",
+      "miniModuleId": "OPT-B",
+      "name": {
+        "en": "MINI Optional Assessment B — Disability / Functional Impairment: Severity of Disability / Impairment",
+        "hi": "MINI वैकल्पिक मूल्यांकन B — अक्षमता/कार्यात्मक हानि: अक्षमता/हानि की तीव्रता"
+      },
+      "type": "matrix",
+      "administeredBy": "clinician",
+      "optionalAssessment": true,
+      "sourceInstrument": "MINI 7.0.2",
+      "targetAge": [
+        "adult",
+        "adolescent"
+      ],
+      "directions": {
+        "en": "Use this scale to rate in the score column of the table below, how much your symptoms have disrupted your ability to function in the following areas of your life: Assessment of Impairment of Functioning/Disability.",
+        "hi": "इस पैमाने का उपयोग नीचे दी गई तालिका के स्कोर कॉलम में रेट करने हेतु करें कि आपके लक्षणों ने आपके जीवन के निम्न क्षेत्रों में कार्य करने की क्षमता को कितना बाधित किया है: कार्यात्मक हानि/अक्षमता का मूल्यांकन।"
+      },
+      "timeframe": {
+        "en": "Rate how much your symptoms have disrupted your ability to function in each area of your life.",
+        "hi": "रेट करें कि आपके लक्षणों ने आपके जीवन के प्रत्येक क्षेत्र में कार्य करने की क्षमता को कितना बाधित किया है।"
+      },
+      "parts": [
+        {
+          "id": "optb",
+          "name": {
+            "en": "Domain Name",
+            "hi": "क्षेत्र का नाम"
+          },
+          "questions": [
+            {
+              "id": "DIS1",
+              "text": {
+                "en": "Work or school work",
+                "hi": "कार्य या विद्यालय-कार्य"
+              }
+            },
+            {
+              "id": "DIS2",
+              "text": {
+                "en": "Social life or leisure activities (like hobbies or things you do for enjoyment)",
+                "hi": "सामाजिक जीवन या अवकाश गतिविधियाँ (शौक या मनोरंजन हेतु की जाने वाली चीज़ें)"
+              }
+            },
+            {
+              "id": "DIS3",
+              "text": {
+                "en": "Family life and/or home responsibilities",
+                "hi": "पारिवारिक जीवन और/या घरेलू ज़िम्मेदारियाँ"
+              }
+            },
+            {
+              "id": "DIS4",
+              "text": {
+                "en": "Ability to get along with people",
+                "hi": "लोगों के साथ मिलकर चलने की क्षमता"
+              }
+            },
+            {
+              "id": "DIS5",
+              "text": {
+                "en": "Personal and social relationships",
+                "hi": "व्यक्तिगत एवं सामाजिक संबंध"
+              }
+            },
+            {
+              "id": "DIS6",
+              "text": {
+                "en": "Ability to understand and to communicate with others",
+                "hi": "अन्य को समझने एवं उनसे संवाद करने की क्षमता"
+              }
+            },
+            {
+              "id": "DIS7",
+              "text": {
+                "en": "Ability to take care of yourself (washing, showering, bathing, dressing properly, brushing teeth, laundry, combing/brushing hair, eating regularly)",
+                "hi": "स्वयं की देखभाल की क्षमता (धुलाई, स्नान, उचित वस्त्र, दाँत साफ करना, कपड़े धोना, बाल सुलझाना, नियमित भोजन)"
+              }
+            },
+            {
+              "id": "DIS8",
+              "text": {
+                "en": "Made you disruptive or aggressive towards others",
+                "hi": "आपको दूसरों प्रति अव्यवस्थाकारी या आक्रामक बनाना"
+              }
+            },
+            {
+              "id": "DIS9",
+              "text": {
+                "en": "Financially (ability to manage your money)",
+                "hi": "आर्थिक (धन प्रबंधन की क्षमता)"
+              }
+            },
+            {
+              "id": "DIS10",
+              "text": {
+                "en": "Ability to get around physically",
+                "hi": "भौतिक रूप से इधर-उधर चलने की क्षमता"
+              }
+            },
+            {
+              "id": "DIS11",
+              "text": {
+                "en": "Spiritual or religious life",
+                "hi": "आध्यात्मिक या धार्मिक जीवन"
+              }
+            },
+            {
+              "id": "DIS12",
+              "text": {
+                "en": "How much did your condition have an impact on other people in your family?",
+                "hi": "आपकी स्थिति का आपके परिवार के अन्य लोगों पर कितना प्रभाव पड़ा?"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "Not present",
+            "hi": "उपस्थित नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Mild",
+            "hi": "हल्का"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "2",
+            "hi": "2"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "Moderate",
+            "hi": "मध्यम"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "4",
+            "hi": "4"
+          }
+        },
+        {
+          "v": 5,
+          "label": {
+            "en": "5",
+            "hi": "5"
+          }
+        },
+        {
+          "v": 6,
+          "label": {
+            "en": "Severe",
+            "hi": "गंभीर"
+          }
+        },
+        {
+          "v": 7,
+          "label": {
+            "en": "7",
+            "hi": "7"
+          }
+        },
+        {
+          "v": 8,
+          "label": {
+            "en": "8",
+            "hi": "8"
+          }
+        },
+        {
+          "v": 9,
+          "label": {
+            "en": "9",
+            "hi": "9"
+          }
+        },
+        {
+          "v": 10,
+          "label": {
+            "en": "Extreme",
+            "hi": "अत्यधिक"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 10,
+        "type": "clinician_rating",
+        "anchors": [
+          {
+            "v": 0,
+            "label": {
+              "en": "Not present",
+              "hi": "उपस्थित नहीं"
+            }
+          },
+          {
+            "v": 1,
+            "label": {
+              "en": "Mild",
+              "hi": "हल्का"
+            }
+          },
+          {
+            "v": 3,
+            "label": {
+              "en": "Moderate",
+              "hi": "मध्यम"
+            }
+          },
+          {
+            "v": 6,
+            "label": {
+              "en": "Severe",
+              "hi": "गंभीर"
+            }
+          },
+          {
+            "v": 10,
+            "label": {
+              "en": "Extreme",
+              "hi": "अत्यधिक"
+            }
+          }
+        ],
+        "note": {
+          "en": "Disruption anchors: 0 Not present, 1 Mild, 3 Moderate, 6 Severe, 10 Extreme (any integer 0-10 may be entered).",
+          "hi": "बाधा-संदर्भ: 0 अनुपस्थित, 1 हल्का, 3 मध्यम, 6 गंभीर, 10 अत्यधिक (0-10 के बीच कोई भी पूर्णांक दर्ज किया जा सकता है)।"
+        }
+      },
+      "scoring": {
+        "method": "clinician_rated_severity_no_total",
+        "note": {
+          "en": "Each row is rated independently on the 0-10 severity/disruption scale; the scale produces no composite total and gates no diagnostic box.",
+          "hi": "प्रत्येक पंक्ति 0-10 तीव्रता/बाधा पैमाने पर स्वतंत्र रूप से रेट की जाती है; यह पैमाना कोई कुल अंक नहीं बनाता और किसी निदान-बक्से को नियंत्रित नहीं करता।"
+        },
+        "anchorLabels": {
+          "0": {
+            "en": "Not present",
+            "hi": "उपस्थित नहीं"
+          },
+          "1": {
+            "en": "Mild",
+            "hi": "हल्का"
+          },
+          "3": {
+            "en": "Moderate",
+            "hi": "मध्यम"
+          },
+          "6": {
+            "en": "Severe",
+            "hi": "गंभीर"
+          },
+          "10": {
+            "en": "Extreme",
+            "hi": "अत्यधिक"
+          }
+        },
+        "reportRows": [
+          {
+            "id": "DIS1",
+            "text": {
+              "en": "Work or school work",
+              "hi": "कार्य या विद्यालय-कार्य"
+            }
+          },
+          {
+            "id": "DIS2",
+            "text": {
+              "en": "Social life or leisure activities (like hobbies or things you do for enjoyment)",
+              "hi": "सामाजिक जीवन या अवकाश गतिविधियाँ (शौक या मनोरंजन हेतु की जाने वाली चीज़ें)"
+            }
+          },
+          {
+            "id": "DIS3",
+            "text": {
+              "en": "Family life and/or home responsibilities",
+              "hi": "पारिवारिक जीवन और/या घरेलू ज़िम्मेदारियाँ"
+            }
+          },
+          {
+            "id": "DIS4",
+            "text": {
+              "en": "Ability to get along with people",
+              "hi": "लोगों के साथ मिलकर चलने की क्षमता"
+            }
+          },
+          {
+            "id": "DIS5",
+            "text": {
+              "en": "Personal and social relationships",
+              "hi": "व्यक्तिगत एवं सामाजिक संबंध"
+            }
+          },
+          {
+            "id": "DIS6",
+            "text": {
+              "en": "Ability to understand and to communicate with others",
+              "hi": "अन्य को समझने एवं उनसे संवाद करने की क्षमता"
+            }
+          },
+          {
+            "id": "DIS7",
+            "text": {
+              "en": "Ability to take care of yourself (washing, showering, bathing, dressing properly, brushing teeth, laundry, combing/brushing hair, eating regularly)",
+              "hi": "स्वयं की देखभाल की क्षमता (धुलाई, स्नान, उचित वस्त्र, दाँत साफ करना, कपड़े धोना, बाल सुलझाना, नियमित भोजन)"
+            }
+          },
+          {
+            "id": "DIS8",
+            "text": {
+              "en": "Made you disruptive or aggressive towards others",
+              "hi": "आपको दूसरों प्रति अव्यवस्थाकारी या आक्रामक बनाना"
+            }
+          },
+          {
+            "id": "DIS9",
+            "text": {
+              "en": "Financially (ability to manage your money)",
+              "hi": "आर्थिक (धन प्रबंधन की क्षमता)"
+            }
+          },
+          {
+            "id": "DIS10",
+            "text": {
+              "en": "Ability to get around physically",
+              "hi": "भौतिक रूप से इधर-उधर चलने की क्षमता"
+            }
+          },
+          {
+            "id": "DIS11",
+            "text": {
+              "en": "Spiritual or religious life",
+              "hi": "आध्यात्मिक या धार्मिक जीवन"
+            }
+          },
+          {
+            "id": "DIS12",
+            "text": {
+              "en": "How much did your condition have an impact on other people in your family?",
+              "hi": "आपकी स्थिति का आपके परिवार के अन्य लोगों पर कितना प्रभाव पड़ा?"
+            }
+          }
+        ]
+      },
+      "sourcePages": "MINI 7.0.2 user-scripted version, pp. 36-37 (Additional Optional Interview Assessments A and B)",
+      "branching": {
+        "screenInItem": "fi_disability",
+        "note": {
+          "en": "Screen-in item fi_2 controls this table: it is completed only when functional disruption is reported (MINI optional assessments are not scored and never gate a diagnostic box).",
+          "hi": "स्क्रीन-इन आइटम fi_2 इस तालिका को नियंत्रित करता है: यह केवल कार्यात्मक हानि रिपोर्ट होने पर पूर्ण होती है (MINI वैकल्पिक मूल्यांकन स्कोर नहीं किए जाते और किसी निदान-बक्से को नियंत्रित नहीं करते)।"
+        }
+      }
     }
   },
   "sharedScales": {
@@ -2531,6 +3327,22 @@
           "hi": "बहुत अधिक"
         }
       }
+    ],
+    "yesno": [
+      {
+        "v": 0,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      }
     ]
   },
   "tiers": {
@@ -2604,8 +3416,8 @@
     ]
   },
   "meta": {
-    "schemaVersion": "2.1.0",
-    "updated": "2026-11-02",
+    "schemaVersion": "2.2.0",
+    "updated": "2026-11-04",
     "framework": "DSM-5-TR labels compared with ICD-11 codes; selective comparative index, not an official DSM-to-ICD crosswalk",
     "verification": {
       "date": "2 November 2026",
