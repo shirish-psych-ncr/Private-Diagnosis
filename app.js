@@ -267,7 +267,10 @@
 
     function optionsForQuestion(q) {
         if (q.scale) return q.scale;
-        if (q.sharedScale) return CLINICAL_DATA.sharedScales[q.sharedScale];
+        // Normalise the shared-scale key so small OCR/typing slips in the data
+        // (e.g. "yes_no" vs "yesno") cannot silently drop a question's options.
+        const norm = String(q.sharedScale || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (norm && CLINICAL_DATA.sharedScales[norm]) return CLINICAL_DATA.sharedScales[norm];
         return [];
     }
 
@@ -279,10 +282,12 @@
         h.className = 'scale-heading';
         h.textContent = L(domain.name);
         section.appendChild(h);
-        const tf = document.createElement('p');
-        tf.className = 'scale-timeframe';
-        tf.textContent = L(domain.timeframe);
-        section.appendChild(tf);
+        if (domain.timeframe) {
+            const tf = document.createElement('p');
+            tf.className = 'scale-timeframe';
+            tf.textContent = L(domain.timeframe);
+            section.appendChild(tf);
+        }
         if (domain.help) {
             const hp = document.createElement('p');
             hp.className = 'scale-directions';

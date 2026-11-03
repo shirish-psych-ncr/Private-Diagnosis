@@ -948,7 +948,7 @@
             "hi": "क्या आपके कई शारीरिक लक्षण हैं जो आपको परेशान करते हैं या जिन्हें चिकित्सक स्पष्ट रूप से समझा नहीं पाए?"
           },
           "scaleId": "phq15",
-          "sharedScale": "yes_no",
+          "sharedScale": "yesno",
           "disorders": [
             "somatic_symptom_disorder",
             "conversion_disorder"
@@ -961,7 +961,7 @@
             "hi": "क्या आपको लगता है कि आपके रोग का प्रबंध अपेक्षा से भिन्न रहा, अथवा बीमारी के दौरान आपको मिलने वाला ध्यान आपके लिए अत्यंत महत्वपूर्ण है?"
           },
           "scaleId": "fac22_sr",
-          "sharedScale": "yes_no",
+          "sharedScale": "yesno",
           "disorders": [
             "factitious_disorder",
             "somatic_symptom_disorder"
@@ -1248,7 +1248,7 @@
             "hi": "क्या आपको कष्ट होता है क्योंकि जन्म के समय सौंपा गया लिंग उस लिंग से मेल नहीं खाता जिसे आप स्वयं के रूप में जानते हैं?"
           },
           "scaleId": "gcls",
-          "sharedScale": "yes_no",
+          "sharedScale": "yesno",
           "disorders": [
             "gender_incongruence"
           ]
@@ -1260,7 +1260,7 @@
             "hi": "पिछले 6 माह में आपके लिंग संबंधी कष्ट ने आपके सामाजिक जीवन, शिक्षा या कार्य, संबंधों, या जीवन के आनंद में बाधा डाली है?"
           },
           "scaleId": "gcls",
-          "sharedScale": "yes_no",
+          "sharedScale": "yesno",
           "disorders": [
             "gender_incongruence"
           ]
