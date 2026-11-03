@@ -1756,6 +1756,22 @@
       ],
       "duration": "30-60 minutes"
     },
+    "MINI 7.0.2": {
+      "name": "Mini International Neuropsychiatric Interview (MINI), English Version 7.0.2, for DSM-5",
+      "description": {
+        "en": "Structured clinician diagnostic interview covering Modules A-P (mood, anxiety, trauma, substance, psychotic, eating, personality disorders), the Mood Disorders Diagnostic Algorithm, and optional Cross-Cutting Measures and Disability assessments",
+        "hi": "संरचित चिकित्सकीय निदान साक्षात्कार - माड्यूल A-P (मूड, चिंता, आघात, पदार्थ, मनर्विकार, भोजन, व्यक्तित्व विकार), मूड-विकार निदान-एल्गोरिद्म, तथा वैकल्पिक क्रॉस-कटिंग माप और अक्षमता मूल्यांकन शामिल"
+      },
+      "domains": [
+        "mood",
+        "anxiety",
+        "trauma",
+        "substance",
+        "psychosis"
+      ],
+      "duration": "30-45 minutes",
+      "administeredBy": "clinician"
+    },
     "VADRS": {
       "name": "Vanderbilt ADHD Diagnostic Rating Scale",
       "description": {
