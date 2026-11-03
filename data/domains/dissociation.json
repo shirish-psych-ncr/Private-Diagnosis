@@ -1,0 +1,43 @@
+{
+  "id": "dissociation",
+  "name": {
+    "en": "Dissociation",
+    "hi": "वियोजन"
+  },
+  "tier": 2,
+  "instrument": "auto:dissociationtable",
+  "timeframe": {
+    "en": "Screen-in items refer to the past month and to experiences had when you are not under the influence of alcohol or drugs; the deployed instruments then rate lifetime/current dissociative experiences.",
+    "hi": "स्क्रीन-इन प्रश्न गत माह को एवं उन अनुभवों को संदर्भित करते हैं जो शराब/नशे के प्रभाव में न रहते हुए हों; तत्पश्चात् संलग्न उपकरण जीवन-भर/वर्तमान वियोजीय अनुभव रेट करते हैं।"
+  },
+  "questions": [
+    {
+      "id": "dis_1",
+      "text": {
+        "en": "Do you often have experiences such as losing track of time or part of the day, finding things you don't remember buying or doing, feeling detached from your body or from surroundings, or hearing voices inside your head — when you are not under the influence of alcohol or drugs?",
+        "hi": "क्या आपको प्रायः ऐसे अनुभव होते हैं — समय/दिन का कुछ भाग खो जाना, बिना खरीदे-किए वस्तुएँ मिलना, शरीर या चारों ओर से विलगता, सिर के भीतर आवाज़ें सुनना — जब आप शराब/नशे के प्रभाव में न हों?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "mid60",
+      "disorders": [
+        "dissociative_identity_disorder",
+        "other_specified_dissociative_disorder",
+        "unspecified_dissociative_disorder"
+      ]
+    },
+    {
+      "id": "dis_2",
+      "text": {
+        "en": "Have other people told you that you sometimes seem to go blank, forget conversations or events, act unlike yourself, or that you describe more than one 'part' of you?",
+        "hi": "क्या दूसरों ने बताया है कि कभी-कभी आप खाली-से लगते हैं, बातचीत/घटनाएँ भूल जाते हैं, अपने से भिन्न व्यवहार करते हैं, अथवा आप अपने भीतर एक से अधिक \"अंश\" का वर्णन करते हैं?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "desii",
+      "disorders": [
+        "dissociative_identity_disorder",
+        "other_specified_dissociative_disorder",
+        "unspecified_dissociative_disorder"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "anxiety",
+  "name": {
+    "en": "Anxiety",
+    "hi": "चिंता"
+  },
+  "tier": 1,
+  "questions": [
+    {
+      "id": "anxiety_1",
+      "text": {
+        "en": "Feeling nervous, anxious, or on edge",
+        "hi": "घबराहट, चिंता, या बेचैन महसूस करना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "gad",
+        "panic_disorder",
+        "social_anxiety"
+      ]
+    },
+    {
+      "id": "anxiety_2",
+      "text": {
+        "en": "Not being able to stop or control worrying",
+        "hi": "चिंता को रोकने या नियंत्रित करने में असमर्थता"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "gad",
+        "panic_disorder",
+        "social_anxiety"
+      ]
+    },
+    {
+      "id": "anxiety_3",
+      "text": {
+        "en": "Worrying too much about different things",
+        "hi": "अलग-अलग चीज़ों के बारे में बहुत ज़्यादा चिंता करना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "gad",
+        "panic_disorder",
+        "social_anxiety"
+      ]
+    },
+    {
+      "id": "anxiety_4",
+      "text": {
+        "en": "Trouble relaxing",
+        "hi": "आराम करने में कठिनाई"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "gad",
+        "panic_disorder",
+        "social_anxiety"
+      ]
+    },
+    {
+      "id": "anxiety_5",
+      "text": {
+        "en": "Being so restless that it is hard to sit still",
+        "hi": "इतना बेचैन होना कि शांत बैठना कठिन हो"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "gad",
+        "panic_disorder",
+        "social_anxiety"
+      ]
+    },
+    {
+      "id": "anxiety_6",
+      "text": {
+        "en": "Becoming easily annoyed or irritable",
+        "hi": "आसानी से चिड़चिड़ा या नाराज़ हो जाना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "gad",
+        "panic_disorder",
+        "social_anxiety"
+      ]
+    },
+    {
+      "id": "anxiety_7",
+      "text": {
+        "en": "Feeling afraid as if something awful might happen",
+        "hi": "डर महसूस करना मानो कुछ भयंकर हो सकता है"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "gad",
+        "panic_disorder",
+        "social_anxiety"
+      ]
+    }
+  ],
+  "cutoff": 10,
+  "instruments": [
+    "GAD-7",
+    "BAI",
+    "STAI"
+  ],
+  "instrument": "gad7"
+}

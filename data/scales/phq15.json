@@ -1,0 +1,261 @@
+{
+  "id": "phq15",
+  "name": {
+    "en": "PHQ-15 — Somatic Symptom Severity Scale",
+    "hi": "PHQ-15 — शारीरिक लक्षण तीव्रता मापनी"
+  },
+  "type": "matrix",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "PHQ-15",
+  "targetAge": [
+    "adult"
+  ],
+  "directions": {
+    "en": "During the past four weeks, how much have you been bothered by any of the following problems?",
+    "hi": "पिछले चार सप्ताह में, निम्नलिखित समस्याओं से आप कितने परेशान रहे हैं?"
+  },
+  "timeframe": {
+    "en": "Past four weeks.",
+    "hi": "पिछले चार सप्ताह।"
+  },
+  "parts": [
+    {
+      "id": "phq15_items",
+      "name": {
+        "en": "Somatic symptoms",
+        "hi": "शारीरिक लक्षण"
+      },
+      "options": [
+        {
+          "v": 0,
+          "label": {
+            "en": "Not bothered at all",
+            "hi": "बिल्कुल परेशान नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Bothered a little",
+            "hi": "थोड़ा परेशान"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "Bothered a lot",
+            "hi": "बहुत परेशान"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "phq15_1",
+          "itemNumber": 1,
+          "text": {
+            "en": "Stomach pain",
+            "hi": "पेट में दर्द"
+          }
+        },
+        {
+          "id": "phq15_2",
+          "itemNumber": 2,
+          "text": {
+            "en": "Back pain",
+            "hi": "पीठ में दर्द"
+          }
+        },
+        {
+          "id": "phq15_3",
+          "itemNumber": 3,
+          "text": {
+            "en": "Pain in your arms or legs or other joints",
+            "hi": "बाँहों या टाँगों या अन्य जोड़ों में दर्द"
+          }
+        },
+        {
+          "id": "phq15_4",
+          "itemNumber": 4,
+          "text": {
+            "en": "Menstrual cramps or other problems with your periods (women only)",
+            "hi": "मासिक धर्म में ऐंठन या अन्य समस्याएँ (केवल महिलाएँ)"
+          },
+          "applicability": "women_only"
+        },
+        {
+          "id": "phq15_5",
+          "itemNumber": 5,
+          "text": {
+            "en": "Headaches",
+            "hi": "सिरदर्द"
+          }
+        },
+        {
+          "id": "phq15_6",
+          "itemNumber": 6,
+          "text": {
+            "en": "Chest pain",
+            "hi": "छाती में दर्द"
+          }
+        },
+        {
+          "id": "phq15_7",
+          "itemNumber": 7,
+          "text": {
+            "en": "Dizziness",
+            "hi": "चक्कर आना"
+          }
+        },
+        {
+          "id": "phq15_8",
+          "itemNumber": 8,
+          "text": {
+            "en": "Fainting spells",
+            "hi": "बेहोशी के दौर"
+          }
+        },
+        {
+          "id": "phq15_9",
+          "itemNumber": 9,
+          "text": {
+            "en": "Feeling your heart pound or race",
+            "hi": "दिल जोर से या तेज़ धड़कना"
+          }
+        },
+        {
+          "id": "phq15_10",
+          "itemNumber": 10,
+          "text": {
+            "en": "Shortness of breath",
+            "hi": "साँस कम पड़ना"
+          }
+        },
+        {
+          "id": "phq15_11",
+          "itemNumber": 11,
+          "text": {
+            "en": "Pain or problems during sexual intercourse",
+            "hi": "सहवास के दौरान दर्द या समस्या"
+          }
+        },
+        {
+          "id": "phq15_12",
+          "itemNumber": 12,
+          "text": {
+            "en": "Constipation, loose bowels, or diarrhoea",
+            "hi": "कब्ज़, ढीली दस्त या पतले मल"
+          }
+        },
+        {
+          "id": "phq15_13",
+          "itemNumber": 13,
+          "text": {
+            "en": "Nausea, gas, or indigestion",
+            "hi": "जी मचलाना, गैस या अपच"
+          }
+        },
+        {
+          "id": "phq15_14",
+          "itemNumber": 14,
+          "text": {
+            "en": "Feeling tired, or having low energy",
+            "hi": "थकान या ऊर्जा का अभाव"
+          }
+        },
+        {
+          "id": "phq15_15",
+          "itemNumber": 15,
+          "text": {
+            "en": "Trouble sleeping",
+            "hi": "नींद में समस्या"
+          }
+        }
+      ]
+    }
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": {
+        "en": "Not bothered at all",
+        "hi": "बिल्कुल परेशान नहीं"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "Bothered a little",
+        "hi": "थोड़ा परेशान"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "Bothered a lot",
+        "hi": "बहुत परेशान"
+      }
+    }
+  ],
+  "ratingScale": {
+    "min": 0,
+    "max": 2,
+    "note": {
+      "en": "Not bothered at all = 0 · Bothered a little = 1 · Bothered a lot = 2. Sum all 15 items (range 0-30).",
+      "hi": "बिल्कुल परेशान नहीं = 0 · थोड़ा परेशान = 1 · बहुत परेशान = 2। सभी 15 आइटम जोड़ें (शीर्घ 0-30)।"
+    }
+  },
+  "sumScoring": true,
+  "scoring": {
+    "method": "phq15_sum_bands",
+    "scaleMin": 0,
+    "scaleMax": 2,
+    "rule": {
+      "en": "0-4 = no somatisation disorder; 5-9 = mild; 10-14 = moderate; 15+ = severe somatisation disorder.",
+      "hi": "0-4 = कोई सोमटाइज़ेशन रोग नहीं; 5-9 = हल्का; 10-14 = मध्यम; 15+ = गंभीर सोमटाइज़ेशन रोग।"
+    },
+    "notDiagnostic": {
+      "en": "The PHQ-15 is intended to supplement clinical acumen and experience for individual patients; it does not diagnose.",
+      "hi": "PHQ-15 का उद्देश्य चिकित्सकीय बुद्धि एवं अनुभव की सहायता करना है; यह रोग-निर्णय नहीं करता।"
+    },
+    "disorders": [
+      "somatic_symptom_disorder"
+    ]
+  },
+  "bands": [
+    {
+      "max": 4,
+      "severity": {
+        "en": "No somatisation disorder",
+        "hi": "सोमटाइज़ेशन रोग नहीं"
+      },
+      "key": "none"
+    },
+    {
+      "max": 9,
+      "severity": {
+        "en": "Mild somatisation disorder",
+        "hi": "हल्का सोमटाइज़ेशन रोग"
+      },
+      "key": "mild"
+    },
+    {
+      "max": 14,
+      "severity": {
+        "en": "Moderate somatisation disorder",
+        "hi": "मध्यम सोमटाइज़ेशन रोग"
+      },
+      "key": "moderate"
+    },
+    {
+      "max": 30,
+      "severity": {
+        "en": "Severe somatisation disorder",
+        "hi": "गंभीर सोमटाइज़ेशन रोग"
+      },
+      "key": "severe"
+    }
+  ],
+  "sourcePages": "PHQ-15 (Kroenke et al.) — 15-item somatic symptom severity scale, printed form supplied",
+  "branching": null
+}

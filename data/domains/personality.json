@@ -1,0 +1,67 @@
+{
+  "id": "personality",
+  "name": {
+    "en": "Personality functioning",
+    "hi": "व्यक्तित्व कार्यक्षमता"
+  },
+  "tier": 2,
+  "description": {
+    "en": "Optional personality-disorder screening block. Endorsing a screen-in item deploys the corresponding self-report instrument: the IPDE ICD-10 module screening questionnaire (five-option True/False keyed items across the nine F60 clusters) or the PDQ-4+ (99-item questionnaire with validity items, Section B impulsivity/conduct checklists and the mandatory clinical-significance follow-up). Neither instrument is diagnostic.",
+    "hi": "वैकल्पिक व्यक्तित्व विकार स्क्रीनिंग ब्लॉक। स्क्रीन-इन आइटम चुनें तो संबंधित साधन खुलता है: IPDE ICD-10 माड्यूल स्क्रीनिंग प्रश्नावली (नौं F60 क्लस्टर पर कुंजी-उत्तर T/F आइटम) अथवा PDQ-4+ (99-आइटम, वैधता आइटम, खंड-B सूचियाँ एवं अनिवार्य नैदानिक महत्व अनुवर्ती)। कोई भी साधन रोग-निर्णायक नहीं है।"
+  },
+  "instrument": "auto:pdscreen",
+  "cutoff": null,
+  "questions": [
+    {
+      "id": "pd_1",
+      "text": {
+        "en": "Over the past several years, have people frequently complained about how you relate to others, or have you repeatedly found yourself in conflict in close relationships?",
+        "hi": "गत कुछ वर्षों में क्या लोग आपके संबंधों पर प्रायः शिकायत करते आए हैं अथवा घनिष्ठ संबंधों में आप बार-बार संघर्ष में रहे हैं?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "ipde_screen",
+      "disorders": [
+        "other_specified_personality_disorder",
+        "unspecified_personality_disorder"
+      ]
+    },
+    {
+      "id": "pd_2",
+      "text": {
+        "en": "Do you tend to react to other people in ways that have stayed much the same since adolescence — for example being unusually suspicious, withdrawn, demanding, emotionally unstable, or rigid about rules?",
+        "hi": "क्या आप किशोरावस्था से लगभग अपरिवर्तित  tarike से लोगों को प्रतिक्रिया देते आए हैं — जैसे असामान्य संदेहशीलता, एकांतवाद, मांगपन, भावनात्मक अस्थिरता अथवा नियमों पर कठोरता?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "pdq4_screen",
+      "disorders": [
+        "other_specified_personality_disorder",
+        "unspecified_personality_disorder"
+      ]
+    },
+    {
+      "id": "per_hexaco_1",
+      "text": {
+        "en": "Is an informant-rated personality profile needed — to corroborate or challenge the person's own account, or because self-report alone is insufficient for the referral question?",
+        "hi": "क्या किसी निकट informants (परिवार/साथी/सहकर्मी) द्वारा व्यक्ति-ता-प्रोफाइल की पर्यवेक्षक-रेटिंग आवश्यक है — आत्म-रिपोर्ट की सीमाओं को आंकने या नैदानिक-सूचना हेतु?"
+      },
+      "scale": [
+        {
+          "v": 0,
+          "label": {
+            "en": "No",
+            "hi": "नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ"
+          }
+        }
+      ],
+      "scaleId": "hexaco_pi_r_observer",
+      "disorders": []
+    }
+  ]
+}

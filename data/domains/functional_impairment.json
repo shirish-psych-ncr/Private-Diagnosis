@@ -1,0 +1,43 @@
+{
+  "id": "functional_impairment",
+  "name": {
+    "en": "Functioning & cross-cutting symptoms",
+    "hi": "कार्यात्मकता एवं क्रॉस-कटिंग लक्षण"
+  },
+  "tier": 5,
+  "description": {
+    "en": "Optional MINI 7.0.2 clinician-rated rating tables (user-scripted version pp. 36-37): A - Cross-Cutting Measures (Severity of Symptom) and B - Disability / Functional Impairment (Severity of Disability / Impairment).",
+    "hi": "MINI 7.0.2 के वैकल्पिक चिकित्सक-रेटित रेटिंग-तालिकाएँ (उपयोगकर्ता-स्क्रिप्टेड संस्करण पृ. 36-37): A - क्रॉस-कटिंग माप (लक्षणों की तीव्रता) और B - अक्षमता/कार्यात्मक हानि (अक्षमता/हानि की तीव्रता)।"
+  },
+  "timeframe": {
+    "en": "Rate each row independently from 0 (not present) to 10 (extreme) in the score column.",
+    "hi": "प्रत्येक पंक्ति को स्वतंत्र रूप से 0 (अनुपस्थित) से 10 (अत्यधिक) तक स्कोर कॉलम में रेट करें।"
+  },
+  "instrument": "auto:minioptional",
+  "instruments": [
+    "MINI 7.0.2"
+  ],
+  "optionalAssessment": true,
+  "administeredBy": "clinician",
+  "cutoff": null,
+  "questions": [
+    {
+      "id": "fi_1",
+      "text": {
+        "en": "Are there symptoms to rate on the Cross-Cutting Measures (Severity of Symptom) table?",
+        "hi": "क्या क्रॉस-कटिंग माप (लक्षणों की तीव्रता) तालिका पर रेट करने हेतु लक्षण उपस्थित हैं?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "mini_cross_cutting"
+    },
+    {
+      "id": "fi_2",
+      "text": {
+        "en": "Have your symptoms disrupted your ability to function in any area of your life?",
+        "hi": "क्या आपके लक्षणों ने आपके जीवन के किसी क्षेत्र में कार्य करने की आपकी क्षमता को बाधित किया है?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "mini_disability"
+    }
+  ]
+}

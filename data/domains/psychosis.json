@@ -1,0 +1,102 @@
+{
+  "id": "psychosis",
+  "name": {
+    "en": "Thoughts & Perceptions",
+    "hi": "विचार और धारणाएं"
+  },
+  "tier": 4,
+  "questions": [
+    {
+      "id": "psychosis_1",
+      "text": {
+        "en": "Do you ever hear voices that other people cannot hear?",
+        "hi": "क्या आप कभी ऐसी आवाज़ें सुनते हैं जो अन्य लोग नहीं सुन सकते?"
+      },
+      "scale": [
+        {
+          "value": 0,
+          "label": {
+            "en": "No",
+            "hi": "नहीं"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Yes",
+            "hi": "हां"
+          }
+        }
+      ],
+      "disorders": [
+        "schizophrenia",
+        "schizoaffective",
+        "brief_psychotic"
+      ],
+      "safety": true
+    },
+    {
+      "id": "psychosis_2",
+      "text": {
+        "en": "Do you ever feel like people are watching you or following you?",
+        "hi": "क्या आपको कभी ऐसा लगता है कि लोग आपको देख रहे हैं या आपका पीछा कर रहे हैं?"
+      },
+      "scale": [
+        {
+          "value": 0,
+          "label": {
+            "en": "No",
+            "hi": "नहीं"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Yes",
+            "hi": "हां"
+          }
+        }
+      ],
+      "disorders": [
+        "schizophrenia",
+        "delusional_disorder"
+      ],
+      "safety": true
+    },
+    {
+      "id": "psychosis_3",
+      "text": {
+        "en": "Do you ever feel that your thoughts are being broadcast so that other people can hear them?",
+        "hi": "क्या आपको कभी ऐसा लगता है कि आपके विचार इस प्रकार प्रसारित हो रहे हैं कि अन्य लोग उन्हें सुन सकते हैं?"
+      },
+      "scale": [
+        {
+          "v": 0,
+          "label": {
+            "en": "No",
+            "hi": "नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ"
+          }
+        }
+      ],
+      "disorders": [
+        "schizophrenia",
+        "brief_psychotic"
+      ],
+      "safety": true
+    }
+  ],
+  "cutoff": 1,
+  "instruments": [
+    "PANSS",
+    "BPRS",
+    "CAARMS"
+  ],
+  "instrument": "caarms"
+}
