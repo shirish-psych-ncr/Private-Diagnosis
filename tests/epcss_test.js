@@ -214,6 +214,85 @@ window.scrollTo = (...args) => scrollCalls.push(args);
     check('modal closes via acknowledge button', document.getElementById('safety-modal').classList.contains('hidden'));
   }
 
+  // ---------------------------------------------------------------------
+  // Somatic optional instruments: FAC22-SR keyed screen + PHQ-15 severity.
+  // Endorsing both somatic screen-in items must deploy both printed tables,
+  // block results until every item is answered, and score the FAC22 keying
+  // exactly as published (Yes to 5, 8, 10, 11, 14-22; No to 1-4, 6, 7, 9,
+  // 12, 13) with bands 9-14 possible / 15+ probable factitious disorder.
+  // ---------------------------------------------------------------------
+  resetApp();
+  await sleep(50);
+  document.getElementById('consent-check').checked = true;
+  document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
+  document.getElementById('consent-btn').click();
+  document.getElementById('age-group').value = 'adult';
+  document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+  await sleep(50);
+  check('somatic domain present in grid', pickDomain('somatic'));
+  document.getElementById('domains-next').click();
+  await sleep(50);
+
+  const somScreens = Array.from(
+    document.querySelectorAll('#scale-container input[name^="somatic:"][value="1"]'));
+  check('somatic domain deploys both screen-in items', somScreens.length >= 2);
+  somScreens.forEach(r => { r.checked = true; r.dispatchEvent(new window.Event('change', { bubbles: true })); });
+  await sleep(80);
+
+  const scaleText2 = document.getElementById('scale-container').textContent;
+  check('FAC22-SR instrument deployed after screen-in', /FAC22/i.test(scaleText2));
+  check('PHQ-15 instrument deployed after screen-in', /PHQ-?15/i.test(scaleText2));
+
+  const DATA2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data.json'), 'utf8'));
+  const facItems = DATA2.scales.fac22_sr.parts[0].questions;
+  const phqItems = DATA2.scales.phq15.parts[0].questions;
+
+  function answerScale(scaleId, valueFor) {
+    const items = DATA2.scales[scaleId].parts.reduce((a, p) => a.concat(p.questions || []), []);
+    items.forEach(it => {
+      const v = valueFor(it);
+      const radio = document.querySelector('#scale-container input[name="' + scaleId + ':' + it.id + '"][value="' + v + '"]');
+      if (radio) { radio.checked = true; radio.dispatchEvent(new window.Event('change', { bubbles: true })); }
+    });
+    return items.length;
+  }
+  const nFac = answerScale('fac22_sr', it => (it.keyedAnswer === 'T' ? 1 : 0));   // every item keyed-positive
+  const nPhq = answerScale('phq15', () => 2);                                     // "bothered a lot" throughout
+  await sleep(80);
+  check('FAC22-SR rendered all 22 items', nFac === 22 && /name="fac22_sr:fac_22"/.test(document.getElementById('scale-container').innerHTML));
+  check('PHQ-15 rendered all 15 items with 0-2 anchors', nPhq === 15 && /Bothered a lot/.test(document.getElementById('scale-container').textContent));
+
+  document.getElementById('scales-finish').click();
+  await sleep(120);
+  const report2 = document.getElementById('report-content').textContent;
+  check('results reached once somatic instruments complete', document.getElementById('stage-3').classList.contains('active'));
+  check('clinician report shows FAC22-SR keyed score 22', /FAC22[\s\S]{0,160}?22\s*\/\s*22/.test(report2));
+  check('FAC22 max keying reported as probable factitious disorder', /Probable factitious disorder/i.test(report2));
+  check('factitious disorder appears in clinician differential', /factitious/i.test(report2));
+  check('clinician report shows PHQ-15 total 30', /PHQ-?15[\s\S]{0,160}?30\s*\/\s*30/.test(report2));
+  check('PHQ-15 band reported as severe somatisation', /Severe somatis/i.test(report2));
+  check('screens marked not diagnostic', /not diagnostic/i.test(report2));
+
+  // Partial completion must be blocked (no silent scoring of an incomplete table).
+  resetApp();
+  await sleep(50);
+  document.getElementById('consent-check').checked = true;
+  document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
+  document.getElementById('consent-btn').click();
+  document.getElementById('age-group').value = 'adult';
+  document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+  await sleep(50);
+  check('somatic domain present in grid', pickDomain('somatic'));
+  document.getElementById('domains-next').click();
+  await sleep(50);
+  Array.from(document.querySelectorAll('#scale-container input[name^="somatic:"][value="1"]'))
+    .forEach(r => { r.checked = true; r.dispatchEvent(new window.Event('change', { bubbles: true })); });
+  await sleep(80);
+  answerScale('phq15', () => 1);   // leave all 22 FAC22 items blank
+  document.getElementById('scales-finish').click();
+  await sleep(120);
+  check('incomplete FAC22-SR blocks results', !document.getElementById('stage-3').classList.contains('active'));
+
   console.log('\n' + (failures === 0 ? 'ALL TESTS PASSED' : failures + ' FAILURES'));
   process.exit(failures === 0 ? 0 : 1);
 })().catch(e => { console.error('TEST HARNESS ERROR:', e); process.exit(2); });

@@ -194,6 +194,9 @@
      * instruments to deploy. `auto:adhd` routes VADRS for pediatric/adolescent
      * and ASRS-v1.1 (the domain's own item set) for adults, per the whitepaper.
      */
+    /* Routes whose optional instruments are always shown once the domain is picked. */
+    const OPTIONAL_TABLE_ROUTES = ['auto:minioptional', 'auto:pdscreen', 'auto:angertable', 'auto:dissociationtable', 'auto:somatoptable'];
+
     function routeInstruments() {
         const deployed = [];
         CLINICAL_DATA.domains.forEach(domain => {
@@ -223,9 +226,20 @@
                 // Clinical Anger Scale); auto:dissociationtable deploys the dissociative-
                 // experience self-report instruments (MID-60 short form, DES-II), each
                 // attached to one screen-in item of the `dissociation` domain.
+                // Screen-in questions for these routes are rendered above the
+                // instruments they relate to, so they stay answerable (see
+                // renderDomainScreenIns).
                 domain.questions.forEach(q => {
                     if (!q.scaleId) return;
-                    if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+                    // Optional rating tables (MINI A/B, IPDE, PDQ-4+, anger,
+                    // dissociation, somatic instruments) are deployed as soon as their
+                    // domain is selected. Gating them behind their own screen-in item
+                    // would be a dead end: the screen-in question and the instrument it
+                    // unlocks live on the same page, so under an endorse-first rule the
+                    // table could never appear and the screen-in could never be endorsed.
+                    // The screen-in answers still drive the domain-level flag in
+                    // computeResults(); endorsing one records clinical intent and never
+                    // adds or removes a table.
                     deployed.push({ domain, scaleId: q.scaleId, instrumentLabel: null, ratingTable: true });
                 });
             } else {
@@ -241,10 +255,72 @@
         return [];
     }
 
+    /** Compact Yes/No screen-in block for domains that always show their tables. */
+    function renderDomainScreenIns(container, domain) {
+        const section = document.createElement('section');
+        section.className = 'scale-section domain-screenin';
+        const h = document.createElement('h3');
+        h.className = 'scale-heading';
+        h.textContent = L(domain.name);
+        section.appendChild(h);
+        const tf = document.createElement('p');
+        tf.className = 'scale-timeframe';
+        tf.textContent = L(domain.timeframe);
+        section.appendChild(tf);
+        if (domain.help) {
+            const hp = document.createElement('p');
+            hp.className = 'scale-directions';
+            hp.textContent = L(domain.help);
+            section.appendChild(hp);
+        }
+        domain.questions.filter(q => q.scaleId).forEach((q, idx) => {
+            const fieldset = document.createElement('fieldset');
+            fieldset.className = 'question-block' + (q.safety ? ' safety-item' : '');
+            const legend = document.createElement('legend');
+            legend.textContent = (idx + 1) + '. ' + L(q.text);
+            legend.id = 'lbl-' + q.id;
+            fieldset.appendChild(legend);
+            optionsForQuestion(q).forEach(opt => {
+                const key = domain.id + ':' + q.id;
+                const input = document.createElement('input');
+                input.type = 'radio';
+                input.name = key;
+                input.value = opt.v;
+                input.id = key + '_' + opt.v;
+                if (state.responses[key] === opt.v) input.checked = true;
+                input.addEventListener('change', () => onAnswer(key, opt.v, q, domain));
+                const label = document.createElement('label');
+                label.htmlFor = input.id;
+                label.textContent = L(opt.label);
+                const wrap = document.createElement('div');
+                wrap.className = 'radio-row';
+                wrap.append(input, label);
+                fieldset.appendChild(wrap);
+            });
+            section.appendChild(fieldset);
+        });
+        container.appendChild(section);
+    }
+
     function renderScales() {
         const container = document.getElementById('scale-container');
         container.replaceChildren();
         const deployed = routeInstruments();
+
+        // Screen-in questions for the optional rating-table routes are rendered
+        // first, as one compact block per domain. Those instruments are always
+        // deployed once their domain is selected (gating a table behind its own
+        // screen-in item would be circular — both live on the same page), so the
+        // Yes/No gate needs its own home above the tables. Endorsing an item tells
+        // the clinician which domain narrative to read the table within; it never
+        // adds or removes a table.
+        const seenScreenIns = new Set();
+        deployed.forEach(({ domain, ratingTable }) => {
+            if (!ratingTable || !domain.questions.some(q => q.scaleId)) return;
+            if (seenScreenIns.has(domain.id)) return;
+            seenScreenIns.add(domain.id);
+            renderDomainScreenIns(container, domain);
+        });
 
         deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
             const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
@@ -462,9 +538,15 @@
     function deployedScreenInstruments(domain, accept) {
         const out = [];
         if (!domain || !domain.questions) return out;
+        // Tables are shown as soon as the domain is selected (see routeInstruments),
+        // so scoring must follow the same rule — otherwise an instrument can be on
+        // screen yet silently skipped because its screen-in item was answered "No".
+        // Optional rating-table routes therefore score every attached instrument;
+        // other routes keep the original endorse-first behaviour.
+        const alwaysDeployed = OPTIONAL_TABLE_ROUTES.includes(domain.instrument);
         domain.questions.forEach(q => {
             if (!q.scaleId) return;
-            if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+            if (!alwaysDeployed && (state.responses[domain.id + ':' + q.id] || 0) < 1) return;
             const s = CLINICAL_DATA.scales[q.scaleId];
             if (s && accept(s)) out.push({ question: q, scale: s });
         });
@@ -778,14 +860,25 @@
      */
     function keyedHitsOfParts(scale, skip) {
         const hits = [];
+        // Option value that represents the affirmative answer ("True" / "Yes").
+        // PDQ-4+ and IPDE use True=1; FAC22-SR lists Yes first so Yes=1 as well.
+        const affirm = (() => {
+            const opts = scale.matrixOptions || [];
+            const t = opts.find(o => /^(true|yes)$/i.test((o.label || {}).en || ''));
+            return t ? t.v : 1;
+        })();
         (scale.parts || []).forEach(part => {
             if (skip && skip(part)) return;
             (part.questions || []).forEach(q => {
                 const v = state.responses[scale.id + ':' + q.id];
                 if (v === undefined) return;
                 if (q.keyedAnswer !== undefined) {
-                    if ((q.keyedAnswer === 'T') === (v === 1)) hits.push(q.itemNumber != null ? q.itemNumber : q.id);
-                } else if (v === 1) hits.push(q.itemNumber != null ? q.itemNumber : q.id);
+                    if ((q.keyedAnswer === 'T') === (v === affirm)) {
+                        hits.push(q.itemNumber != null ? q.itemNumber : q.id);
+                    }
+                } else if (v === affirm) {
+                    hits.push(q.itemNumber != null ? q.itemNumber : q.id);
+                }
             });
         });
         return hits;
@@ -1726,28 +1819,15 @@
             for (const q of domain.questions)
                 if (state.responses[domain.id + ':' + q.id] === undefined) return false;
 
-            // Deployed keyed personality screens must be fully answered too. The
-            // clinical-significance follow-up is clinician-rated and happens after
-            // the interview, so it is excluded from the completeness gate.
-            if (domain.instrument === 'auto:pdscreen') {
+            // Every optional instrument attached to a screen-in item of this domain
+            // must be fully answered before results are shown — scoring a partially
+            // completed printed form would misreport its severity bands. Two
+            // exceptions: (a) clinician-rated follow-up parts (PDQ-4+ clinical
+            // significance, MINI disability register) are completed after the
+            // interview, and (b) performance/observer forms keep their own gates.
+            if (OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) {
                 for (const q of domain.questions) {
-                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
-                    const s = CLINICAL_DATA.scales[q.scaleId];
-                    if (!s || !s.keyedScoring) continue;
-                    for (const part of s.parts) {
-                        if (part.clinicianRated) continue;
-                        for (const item of part.questions)
-                            if (state.responses[s.id + ':' + item.id] === undefined) return false;
-                    }
-                }
-            }
-
-            // Deployed anger / dissociation / somatic instruments must be fully
-            // answered too (their printed items are all patient-completed).
-            if (['auto:angertable', 'auto:dissociationtable', 'auto:somatoptable']
-                    .includes(domain.instrument)) {
-                for (const q of domain.questions) {
-                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
+                    if (!q.scaleId) continue;
                     const s = CLINICAL_DATA.scales[q.scaleId];
                     if (!s) continue;
                     for (const part of s.parts) {
@@ -1755,16 +1835,6 @@
                         for (const item of part.questions)
                             if (state.responses[s.id + ':' + item.id] === undefined) return false;
                     }
-                }
-            }
-            if (domain.instrument === 'auto:minioptional') {
-                for (const q of domain.questions) {
-                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
-                    const s = CLINICAL_DATA.scales[q.scaleId];
-                    if (!s) continue;
-                    for (const part of s.parts)
-                        for (const item of part.questions)
-                            if (state.responses[s.id + ':' + item.id] === undefined) return false;
                 }
             }
         }

@@ -892,6 +892,52 @@
       "instrument": "auto:adhd"
     },
     {
+      "id": "somatic",
+      "name": {
+        "en": "Somatic symptoms & health-related preoccupation",
+        "hi": "शारीरिक लक्षण एवं स्वास्थ्य-संबंधी चिंतन"
+      },
+      "tier": 2,
+      "optional": true,
+      "instrument": "auto:somatoptable",
+      "timeframe": {
+        "en": "Past months of physical symptoms and healthcare contact.",
+        "hi": "पिछले कई माह के शारीरिक लक्षण एवं चिकित्सा-संपर्क।"
+      },
+      "help": {
+        "en": "Endorse either question to open the corresponding rating instrument: the PHQ-15 somatic severity index and/or the FAC22-SR factitious-disorder screen. Both are screening/severity measures and never establish a diagnosis by themselves.",
+        "hi": "किसी भी प्रश्न को स्वीकार करने पर संगत मापनी खुलेगी: PHQ-15 शारीरिक तीव्रता सूचकांक एवं/अथवा FAC22-SR भत्रुण-रोग स्क्रीन। दोनों स्क्रीन/तीव्रता माप हैं; स्वयं रोग-निर्णय नहीं करते।"
+      },
+      "questions": [
+        {
+          "id": "som_1",
+          "text": {
+            "en": "Do you have several physical symptoms that bother you or that doctors have not been able to explain clearly?",
+            "hi": "क्या आपके कई शारीरिक लक्षण हैं जो आपको परेशान करते हैं या जिन्हें चिकित्सक स्पष्ट रूप से समझा नहीं पाए?"
+          },
+          "scaleId": "phq15",
+          "sharedScale": "yes_no",
+          "disorders": [
+            "somatic_symptom_disorder",
+            "conversion_disorder"
+          ]
+        },
+        {
+          "id": "som_2",
+          "text": {
+            "en": "Do you feel that your illness has been treated differently from what you expected, or that the attention you receive while being ill matters greatly to you?",
+            "hi": "क्या आपको लगता है कि आपके रोग का प्रबंध अपेक्षा से भिन्न रहा, अथवा बीमारी के दौरान आपको मिलने वाला ध्यान आपके लिए अत्यंत महत्वपूर्ण है?"
+          },
+          "scaleId": "fac22_sr",
+          "sharedScale": "yes_no",
+          "disorders": [
+            "factitious_disorder",
+            "somatic_symptom_disorder"
+          ]
+        }
+      ]
+    },
+    {
       "id": "psychosis",
       "name": {
         "en": "Thoughts & Perceptions",
@@ -2072,6 +2118,55 @@
         "hi": "विलगता, वास्तविकता-विचलन अथवा दोनों की निरंतर/पुनरावृत्त घटनाएँ, वास्तविकता-परीक्षण सुरक्षित।"
       },
       "mappingNote": "ICD-11 6B61; DSM-5-TR DDD. Flagged by the MID-60 D/DD subscale."
+    },
+    "somatic_symptom_disorder": {
+      "name": {
+        "en": "Somatic Symptom Disorder",
+        "hi": "सोमेटिक लक्षण विकार"
+      },
+      "category": "somatic",
+      "dsm5Code": "300.82 (F45.1)",
+      "icd11Code": "6B41",
+      "notes": {
+        "en": "PHQ-15 ≥ 10 (moderate-severe somatisation) supports the differential; the diagnosis requires distressing somatic symptoms plus excessive thoughts, feelings or behaviours about them.",
+        "hi": "PHQ-15 ≥ 10 (मध्यम-गंभीर सोमटाइज़ेशन) विभेदी-सूची का समर्थन करता है; निर्णय के लिए क्लेशजनक शारीरिक लक्षण तथा उनके प्रति अत्यधिक विचार/भाव/व्यवहार आवश्यक।"
+      },
+      "instruments": [
+        "PHQ-15"
+      ]
+    },
+    "conversion_disorder": {
+      "name": {
+        "en": "Functional Neurological Symptom Disorder (Conversion)",
+        "hi": "क्रियात्मक तंत्रिका-लक्षण विकार (कन्वर्ज़न)"
+      },
+      "category": "somatic",
+      "dsm5Code": "300.11 (F44)",
+      "icd11Code": "6B40",
+      "notes": {
+        "en": "Neutral symptom description only — do not tell the patient the symptoms are 'not real'. MID-60 conversion subscales (body symptoms, pseudo-seizures) and PHQ-15 inform the differential.",
+        "hi": "तटस्थ लक्षण-वर्णन करें — रोगी से कहें नहीं कि लक्षण 'असली' नहीं हैं। MID-60 कन्वर्ज़न उप-पैमाने एवं PHQ-15 विभेदी-सूची में सहायक।"
+      },
+      "instruments": [
+        "PHQ-15",
+        "MID-60"
+      ]
+    },
+    "factitious_disorder": {
+      "name": {
+        "en": "Factitious Disorder (imposed on self)",
+        "hi": "छलरोग (स्व-आरोपित)"
+      },
+      "category": "somatic",
+      "dsm5Code": "300.19 (F45.81)",
+      "icd11Code": "6B42",
+      "notes": {
+        "en": "FAC22-SR is a screen only. Diagnosis requires evidence of falsification/induction of symptoms with an identified deception motive of assuming the patient role, AND exclusion of external incentives (malingering). Never confront based on a score alone.",
+        "hi": "FAC22-SR केवल स्क्रीन है। निर्णय हेतु लक्षण-रोपण/छल का प्रमाण एवं रोगी-भूमिका अपनाने की प्रेरणा आवश्यक, साथ ही बाह्य लाभ (मालिंगरिंग) का विवर्जन। केवल अंक के आधार पर कभी अभियुक्त न करें।"
+      },
+      "instruments": [
+        "FAC22-SR"
+      ]
     }
   },
   "instruments": {
@@ -2425,6 +2520,56 @@
       "format": "self-report percentage matrix with mean total",
       "duration": "5-10 minutes",
       "optionalAssessment": true
+    },
+    "FAC22-SR": {
+      "name": "FAC22-SR (Factitious Disorder Symptom Scale, self-report)",
+      "construct": {
+        "en": "Factitious disorder screening",
+        "hi": "छलरोग स्क्रीनिंग"
+      },
+      "format": {
+        "en": "22 Yes/No items, keyed; 9-14 possible, 15+ probable",
+        "hi": "22 हाँ/नहीं आइटम, keyed; 9-14 संभव, 15+ संभावित"
+      },
+      "duration": "~5 min",
+      "language": {
+        "en": "English (authoritative), Hindi working translation",
+        "hi": "अंग्रेज़ी (प्रामाणिक), हिन्दी कार्य-अनुवाद"
+      },
+      "purpose": {
+        "en": "Screen for factitious disorder in patients with medically unexplained symptoms. Not diagnostic; must be combined with record review and exclusion of malingering.",
+        "hi": "अस्पष्टीकृत शारीरिक लक्षण वाले रोगियों में छलरोग की स्क्रीनिंग। रोग-निर्णायक नहीं; रिकॉर्ड-समीक्षा एवं मालिंगरिंग-विवर्जन के साथ उपयोग।"
+      },
+      "source": "Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) Table 7",
+      "licensing": {
+        "en": "Published research instrument (open-access journal article); verify reuse terms.",
+        "hi": "प्रकाशित अनुसंधान-मापनी (open-access); पुनरुपयोग-शर्ताएँ सत्यापित करें।"
+      }
+    },
+    "PHQ-15": {
+      "name": "PHQ-15 (Patient Health Questionnaire — Somatic Symptoms)",
+      "construct": {
+        "en": "Somatic symptom severity",
+        "hi": "शारीरिक लक्षण तीव्रता"
+      },
+      "format": {
+        "en": "15 items scored 0-2 over 4 weeks (0-30)",
+        "hi": "15 आइटम, 4 सप्ताह, 0-2 अंकन (0-30)"
+      },
+      "duration": "~3 min",
+      "language": {
+        "en": "English, Hindi",
+        "hi": "अंग्रेज़ी, हिन्दी"
+      },
+      "purpose": {
+        "en": "Quantify somatic symptom burden; supplements clinical judgement (cut-points 5 / 10 / 15).",
+        "hi": "शारीरिक लक्षण-भार का परिमाणीकरण; चिकित्सकीय निर्णय की सहायता (सीमा 5 / 10 / 15)।"
+      },
+      "source": "PHQ-15 (Kroenke, Spitzer & Williams); free to use, no permission required",
+      "licensing": {
+        "en": "Public-domain PHQ family instrument.",
+        "hi": "PHQ परिवार की सार्वजनिक-उपयोग मापनी।"
+      }
     }
   },
   "scales": {
@@ -9772,6 +9917,589 @@
         "hi": "अंग्रेज़ी कथन प्राधिकृत हैं; हिंदी लेबल चिकित्सक-समीक्षा हेतु यंत्र-सहायित अनुवाद हैं और नैदानिक प्रयोग से पूर्व योग्य अनुवादक से शुद्धि आवश्यक।"
       },
       "branching": null
+    },
+    "fac22_sr": {
+      "id": "fac22_sr",
+      "name": {
+        "en": "FAC22-SR — Factitious Disorder Symptom Scale (Self-Report)",
+        "hi": "FAC22-SR — छलरोग लक्षण मापनी (स्व-रिपोर्ट)"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "optionalAssessment": true,
+      "sourceInstrument": "FAC22-SR",
+      "targetAge": [
+        "adult"
+      ],
+      "directions": {
+        "en": "Please answer Yes or No to each statement. Do not skip any item. If you are not sure, choose the answer that is more likely to be correct. There is no time limit, but do not spend too long on any single statement.",
+        "hi": "प्रत्येक कथन का हाँ या नहीं में उत्तर दें। कोई आइटम छोड़ें नहीं। यदि निश्चित नहीं हैं तो अधिक संभावित उत्तर चुनें। समय-सीमा नहीं है, किंतु किसी एक कथन पर अधिक समय व्यर्थ न करें।"
+      },
+      "timeframe": {
+        "en": "Present pattern over recent illness experience.",
+        "hi": "वर्तमान रोग-अनुभव की समसामयिक पैटर्न।"
+      },
+      "parts": [
+        {
+          "id": "fac22_items",
+          "name": {
+            "en": "FAC22-SR items 1-22",
+            "hi": "FAC22-SR आइटम 1-22"
+          },
+          "options": [
+            {
+              "v": 1,
+              "label": {
+                "en": "True",
+                "hi": "सत्य"
+              }
+            },
+            {
+              "v": 0,
+              "label": {
+                "en": "False",
+                "hi": "मिथ्या"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "fac_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "With my physical symptoms, I affirm being referred for psychiatric counselling today.",
+                "hi": "अपने शारीरिक लक्षणों के साथ, आज मुझे मनोचिकित्सकीय परामर्श हेतु भेजे जाने में मैं सहमत हूँ।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "I do agree that others find my symptoms atypical and unusually recurring.",
+                "hi": "मैं स्वीकार करता/करती हूँ कि अन्य लोगों को मेरे लक्षण असामान्य एवं बारम्बार लगते हैं।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "I do think that because my symptoms are so mild/trivial, physicians often miss their significance and seriousness.",
+                "hi": "मुझे लगता है कि मेरे लक्षण अत्यंत तुच्छ होने के कारण चिकित्सक अक्सर उनके महत्व एवं गंभीरता को उपेक्षित कर देते हैं।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "I would be happy if I can suddenly find myself sprightly healthy and strong.",
+                "hi": "यदि मैं अचानक पूर्णतः स्वस्थ व बलिष्ठ पाऊँ तो मुझे प्रसन्नता होगी।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "I would be anxious if I find my family members had left for their work as/if I appear healthy to them.",
+                "hi": "यदि मुझे दिखने में स्वस्थ पाकर मेरे परिवारजन कार्य हेतु चले जाएँ तो मुझे चिंता होगी।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "It is just chance that people fail to notice or weren't around, every time when I experienced these symptoms.",
+                "hi": "यह केवल संयोग है कि हर बार इन लक्षणों के अनुभव के समय लोग मौजूद नहीं थे या उन्होंने ध्यान नहीं दिया।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "I would pull myself up to help (with errands or earning) a family member more sick than me.",
+                "hi": "मुझसे अधिक बीमार परिवार-सदस्य की सहायता (कार्यों या कमाई में) के लिए मैं खुद को उठा लाऊँगा/उठा लाऊँगी।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "(If I had to play in a video game or a stage play) I would prefer portraying an injured warrior dying in bed, than one left unattended in battle.",
+                "hi": "(यदि मुझे किसी वीडियो गेम या रंगमंच में भाग लेना हो) तो मैं शয्ये पर मरता हुआ घायल योद्धा की भूमिका करने को मैं युद्धभूमि में अनदेखा किए गए सैनिक के रूप निभाने से अधिक प्रिय मानूँगा/मानूँगी।"
+              },
+              "keyedAnswer": "T",
+              "criterionNote": {
+                "en": "self-prepared / heroic patient-role item",
+                "hi": "स्व-तैयारी / नायक-रोगी-भूमिका आइटम"
+              }
+            },
+            {
+              "id": "fac_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "I usually feel timid and offended when a stranger offers to help me.",
+                "hi": "जब कोई अपरिचित व्यक्ति सहायता की पेशकश करता है तो मैं सामान्यतः संकोची एवं आहत महसूस करता/करती हूँ।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "I am eager and brave enough to undergo painful bodily investigations.",
+                "hi": "पीड़ादायक शारीरिक जाँचों से गुज़रने के लिए मैं उत्सुक एवं साहसी हूँ।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "I would prefer crying or lamenting to a close friend, than crying alone.",
+                "hi": "अकेले रोने के बजाय किसी निकट मित्र से रोना या विलाप करना मुझे अधिक अधिक प्रिय लगता है।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "I feel giddy or immobilised often when I get emotional when alone.",
+                "hi": "अकेले भावुक होते ही प्रायः मुझे चक्कर आता है या मैं स्तब्ध हो जाता/जाती हूँ।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "I would feel ashamed if people find about my physical illness.",
+                "hi": "यदि लोग मेरी शारीरिक बीमारी के बारे में जान लें तो मुझे लज्जा आएगी।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "I often get gloomy, unsatisfied or irritable on the day of my discharge from hospital.",
+                "hi": "अस्पताल से छुट्टी के दिन मैं प्रायः विषण्ण, असंतुष्ट या चिड़चिड़ा हो जाता/हो जाती हूँ।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "I might not have accessed the physician but for the erratic concern shown by my family members/friend(s).",
+                "hi": "परिवारजनों/मित्रों द्वारा दिखाई गई उलटी-सीधी चिंता न होती तो शायद मैं चिकित्सक के पास न जाता/जाती।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "I find my clinical tests and lab investigations done too casually to get any positive result.",
+                "hi": "मुझे लगता है कि मेरे नैदानिक परीक्षण एवं जाँचें इतनी सावधानी-विहीन ढंग से की जाती हैं कि उनसे सकारात्मक परिणाम नहीं मिलता।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "I feel unsatisfied and deprived when the health professionals show lesser than usual interest in talking with me.",
+                "hi": "स्वास्थ्य-विशेषज्ञों द्वारा मेरी बातचीत में अपेक्षाकृत कम रुचि दिखाने पर मैं असंतुष्ट एवं वंचित महसूस करता/करती हूँ।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "I understand that people with my symptoms may or may not be hearing voices when alone, either transiently or regularly. I hear such voices too.",
+                "hi": "मुझे ज्ञात है कि मेरे जैसे लक्षण वाले लोग एकान्त में आवाज़ें सुन सकते हैं या नहीं, क्षणिक या नियमित। मुझे भी ऐसी आवाज़ें सुनाई देती हैं।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "I understand that people with my symptoms may or may not have visual loss, either momentarily or regularly. I have had visual loss too.",
+                "hi": "मुझे ज्ञात है कि मेरे जैसे लक्षण वाले लोगों को क्षणिक या नियमित दृष्टि-हानि हो सकती है। मुझे भी दृष्टि-हानि हुई है।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "I understand that people with my symptoms may or may not have weakness/abnormal movements of one or more limbs, either momentarily or continuously. I have had such weakness/abnormal movements too.",
+                "hi": "मुझे ज्ञात है कि मेरे जैसे लक्षण वाले एक या अधिक अंगों में क्षणिक या सतत दुर्बलता/असामान्य गतियाँ हो सकती हैं। मुझे भी ऐसी दुर्बलता/असामान्य गतियाँ हुई हैं।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_21",
+              "itemNumber": 21,
+              "text": {
+                "en": "I have encountered interesting adventures that had been brilliant and wonderful, and/or a series of heartbreaking tragic events including multiple personal crises - many times victimizing me.",
+                "hi": "मेरे जीवन में रोमांचक, दिव्य अनुभव भी रहे हैं और हृदयविदारक श्रृंखलाबद्ध दुर्घटनाएँ भी — जिनमें अनेक बार मैं पीड़ित बना।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "Wherever I go, many a time I have had the pleasure of playing a hero/heroine of those circumstances and had been wondered at and hailed as a saviour by the people there.",
+                "hi": "जहाँ-जहाँ मैं गया/गई, अनेक बार मैं उन परिस्थितियों का नायक/नायिका बनकर सबका ध्यान आकर्षित करता/करती रहा/रही और लोगों ने मुझे तारीफ़ की।"
+              },
+              "keyedAnswer": "T",
+              "criterionNote": {
+                "en": "self-prepared / heroic patient-role item",
+                "hi": "स्व-तैयारी / नायक-रोगी-भूमिका आइटम"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 1,
+          "label": {
+            "en": "True",
+            "hi": "सत्य"
+          }
+        },
+        {
+          "v": 0,
+          "label": {
+            "en": "False",
+            "hi": "मिथ्या"
+          }
+        }
+      ],
+      "keyedScoring": true,
+      "scoring": {
+        "method": "fac22_sr_keyed_sum",
+        "possibleThreshold": 9,
+        "probableThreshold": 15,
+        "maxKeyed": 22,
+        "rule": {
+          "en": "Score 1 each for Yes to items 5, 8, 10, 11, 14-22, and No to items 1-4, 6, 7, 9, 12 and 13. A score of 9-14: possible factitious disorder; 15 or more: probable factitious disorder.",
+          "hi": "आइटम 5, 8, 10, 11, 14-22 के 'हाँ' तथा आइटम 1-4, 6, 7, 9, 12, 13 के 'नहीं' उत्तर पर क्रमशः 1 अंक। 9-14 अंक: संभव भत्रुण रोग (factitious); 15 या अधिक: संभावित भत्रुण रोग।"
+        },
+        "notDiagnostic": {
+          "en": "A screen only. Factitious disorder requires that deception for external gain (malingering) be excluded and that the presentation be established over time; this scale cannot make the diagnosis.",
+          "hi": "यह केवल स्क्रीन है। भत्रुण रोग के लिए बाह्य लाभ हेतु छल (मालिंगरिंग) का विवर्जन आवश्यक है तथा प्रस्तुति कालक्रम में स्थापित हो; यह मापनी रोग-निर्णय नहीं कर सकती।"
+        },
+        "disorders": [
+          "factitious_disorder",
+          "somatic_symptom_disorder"
+        ]
+      },
+      "bands": [
+        {
+          "max": 8,
+          "severity": {
+            "en": "Below screen threshold",
+            "hi": "स्क्रीन-सीमा से नीचे"
+          },
+          "key": "negative"
+        },
+        {
+          "max": 14,
+          "severity": {
+            "en": "Possible factitious disorder",
+            "hi": "संभव भत्रुण रोग"
+          },
+          "key": "possible"
+        },
+        {
+          "max": 22,
+          "severity": {
+            "en": "Probable factitious disorder",
+            "hi": "संभावित भत्रुण रोग"
+          },
+          "key": "probable"
+        }
+      ],
+      "sourcePages": "Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) — Table 7 (FAC22-SR scale) and scoring note",
+      "translationNote": {
+        "en": "English wording is authoritative (repaired from the scanned table). Hindi labels are a working translation and must be proofread by a bilingual clinician before clinical use.",
+        "hi": "अंग्रेज़ी पाठ प्रामाणिक है (स्कैन की गई तालिका से संशोधित)। हिन्दी अनुवाद कार्य-प्रगति पर है; नैदानिक प्रयोग से पूर्व द्विभाषी चिकित्सक से शुद्धि आवश्यक।"
+      },
+      "branching": null
+    },
+    "phq15": {
+      "id": "phq15",
+      "name": {
+        "en": "PHQ-15 — Somatic Symptom Severity Scale",
+        "hi": "PHQ-15 — शारीरिक लक्षण तीव्रता मापनी"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "optionalAssessment": true,
+      "sourceInstrument": "PHQ-15",
+      "targetAge": [
+        "adult"
+      ],
+      "directions": {
+        "en": "During the past four weeks, how much have you been bothered by any of the following problems?",
+        "hi": "पिछले चार सप्ताह में, निम्नलिखित समस्याओं से आप कितने परेशान रहे हैं?"
+      },
+      "timeframe": {
+        "en": "Past four weeks.",
+        "hi": "पिछले चार सप्ताह।"
+      },
+      "parts": [
+        {
+          "id": "phq15_items",
+          "name": {
+            "en": "Somatic symptoms",
+            "hi": "शारीरिक लक्षण"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "Not bothered at all",
+                "hi": "बिल्कुल परेशान नहीं"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "Bothered a little",
+                "hi": "थोड़ा परेशान"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "Bothered a lot",
+                "hi": "बहुत परेशान"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "phq15_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "Stomach pain",
+                "hi": "पेट में दर्द"
+              }
+            },
+            {
+              "id": "phq15_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "Back pain",
+                "hi": "पीठ में दर्द"
+              }
+            },
+            {
+              "id": "phq15_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "Pain in your arms or legs or other joints",
+                "hi": "बाँहों या टाँगों या अन्य जोड़ों में दर्द"
+              }
+            },
+            {
+              "id": "phq15_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "Menstrual cramps or other problems with your periods (women only)",
+                "hi": "मासिक धर्म में ऐंठन या अन्य समस्याएँ (केवल महिलाएँ)"
+              },
+              "applicability": "women_only"
+            },
+            {
+              "id": "phq15_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "Headaches",
+                "hi": "सिरदर्द"
+              }
+            },
+            {
+              "id": "phq15_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "Chest pain",
+                "hi": "छाती में दर्द"
+              }
+            },
+            {
+              "id": "phq15_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "Dizziness",
+                "hi": "चक्कर आना"
+              }
+            },
+            {
+              "id": "phq15_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "Fainting spells",
+                "hi": "बेहोशी के दौर"
+              }
+            },
+            {
+              "id": "phq15_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "Feeling your heart pound or race",
+                "hi": "दिल जोर से या तेज़ धड़कना"
+              }
+            },
+            {
+              "id": "phq15_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "Shortness of breath",
+                "hi": "साँस कम पड़ना"
+              }
+            },
+            {
+              "id": "phq15_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "Pain or problems during sexual intercourse",
+                "hi": "सहवास के दौरान दर्द या समस्या"
+              }
+            },
+            {
+              "id": "phq15_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "Constipation, loose bowels, or diarrhoea",
+                "hi": "कब्ज़, ढीली दस्त या पतले मल"
+              }
+            },
+            {
+              "id": "phq15_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "Nausea, gas, or indigestion",
+                "hi": "जी मचलाना, गैस या अपच"
+              }
+            },
+            {
+              "id": "phq15_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "Feeling tired, or having low energy",
+                "hi": "थकान या ऊर्जा का अभाव"
+              }
+            },
+            {
+              "id": "phq15_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "Trouble sleeping",
+                "hi": "नींद में समस्या"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "Not bothered at all",
+            "hi": "बिल्कुल परेशान नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Bothered a little",
+            "hi": "थोड़ा परेशान"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "Bothered a lot",
+            "hi": "बहुत परेशान"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 2,
+        "note": {
+          "en": "Not bothered at all = 0 · Bothered a little = 1 · Bothered a lot = 2. Sum all 15 items (range 0-30).",
+          "hi": "बिल्कुल परेशान नहीं = 0 · थोड़ा परेशान = 1 · बहुत परेशान = 2। सभी 15 आइटम जोड़ें (शीर्घ 0-30)।"
+        }
+      },
+      "sumScoring": true,
+      "scoring": {
+        "method": "phq15_sum_bands",
+        "scaleMin": 0,
+        "scaleMax": 2,
+        "rule": {
+          "en": "0-4 = no somatisation disorder; 5-9 = mild; 10-14 = moderate; 15+ = severe somatisation disorder.",
+          "hi": "0-4 = कोई सोमटाइज़ेशन रोग नहीं; 5-9 = हल्का; 10-14 = मध्यम; 15+ = गंभीर सोमटाइज़ेशन रोग।"
+        },
+        "notDiagnostic": {
+          "en": "The PHQ-15 is intended to supplement clinical acumen and experience for individual patients; it does not diagnose.",
+          "hi": "PHQ-15 का उद्देश्य चिकित्सकीय बुद्धि एवं अनुभव की सहायता करना है; यह रोग-निर्णय नहीं करता।"
+        },
+        "disorders": [
+          "somatic_symptom_disorder"
+        ]
+      },
+      "bands": [
+        {
+          "max": 4,
+          "severity": {
+            "en": "No somatisation disorder",
+            "hi": "सोमटाइज़ेशन रोग नहीं"
+          },
+          "key": "none"
+        },
+        {
+          "max": 9,
+          "severity": {
+            "en": "Mild somatisation disorder",
+            "hi": "हल्का सोमटाइज़ेशन रोग"
+          },
+          "key": "mild"
+        },
+        {
+          "max": 14,
+          "severity": {
+            "en": "Moderate somatisation disorder",
+            "hi": "मध्यम सोमटाइज़ेशन रोग"
+          },
+          "key": "moderate"
+        },
+        {
+          "max": 30,
+          "severity": {
+            "en": "Severe somatisation disorder",
+            "hi": "गंभीर सोमटाइज़ेशन रोग"
+          },
+          "key": "severe"
+        }
+      ],
+      "sourcePages": "PHQ-15 (Kroenke et al.) — 15-item somatic symptom severity scale, printed form supplied",
+      "branching": null
     }
   },
   "sharedScales": {
@@ -9967,7 +10695,7 @@
     ]
   },
   "meta": {
-    "schemaVersion": "2.5.0",
+    "schemaVersion": "2.6.0",
     "updated": "2026-11-04",
     "framework": "DSM-5-TR labels compared with ICD-11 codes; selective comparative index, not an official DSM-to-ICD crosswalk",
     "verification": {
@@ -9995,7 +10723,9 @@
       "Anger instruments are dimensional/severity measures reached through the new 'anger' domain (routing auto:angertable); they gate no diagnostic box. STAXI-CA is a copyrighted PAR instrument — verify licensing before redistribution.",
       "Dissociation instruments implemented as scales.mid60 (Multidimensional Inventory of Dissociation 60-item short form; index = mean of 60 ratings x 10 with printed score ranges and 12 subscale clinical cutoffs) and scales.desii (Dissociative Experiences Scale II; 28 percentage items, total = mean, clinical comparison point >= 30). Reached through the new 'dissociation' domain via routing auto:dissociationtable; both are self-report dimensional screening measures and gate no diagnostic box.",
       "MID-60 short-form reference: Kate, Jamieson, Dorahy & Middleton (2021), Journal of Trauma & Dissociation 22(3), 265-287. Two printed subscale-key anomalies (body-symptom item 21 vs trance item 21 duplication) are documented in scales.mid60.sourceNotes instead of being silently corrected. The full 253-item MID is copyrighted — verify licensing before redistribution.",
-      "MID-60 items 22, 37, 44, 56 and 58 (persecutory/degrading voices, waking with means of self-harm) and DES-II item 27 (command/commentary voices) carry safety flags that open the crisis pathway when rated above zero."
+      "MID-60 items 22, 37, 44, 56 and 58 (persecutory/degrading voices, waking with means of self-harm) and DES-II item 27 (command/commentary voices) carry safety flags that open the crisis pathway when rated above zero.",
+      "FAC22-SR: added from the published scale table (Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) Table 7). English wording is authoritative and was repaired from the scan; Hindi labels are a working translation awaiting bilingual-clinician proofreading. Keying verified at build time: Yes to 5, 8, 10, 11, 14-22 and No to 1-4, 6, 7, 9, 12, 13 = 22 items. Screening only - never diagnostic; factitious disorder additionally requires exclusion of malingering (see reference.malingering).",
+      "PHQ-15: 15-item somatic symptom severity index (0-2 each, total 0-30) added as a tier-2 optional screen reached from the `somatic` domain; bands follow the printed cut-points 0-4 / 5-9 / 10-14 / 15+. Severity measure that supplements clinical judgement."
     ]
   },
   "i18n": {
@@ -10106,6 +10836,194 @@
       "results.clinicianToggle": "चिकित्सक-अभिमुख विवरण (स्कोर एवं विभेदक विचार)",
       "results.handoff": "PDF सहेजें और नियुक्ति में लाएँ, या क्लिनिक के सुरक्षित पोर्टल पर अपलोड करें।",
       "safety.dismissNote": "आप बाद में स्क्रीनिंग जारी रख सकते हैं, लेकिन कृपया आज ही इनमें से एक सेवा से संपर्क करें।"
+    }
+  },
+  "reference": {
+    "malingering": {
+      "id": "malingering_reference",
+      "name": {
+        "en": "Forensic reference: malingering, feigning & suspect effort",
+        "hi": "फॉरेंसिक संदर्भ: मालिंगरिंग, छल-अभिनय एवं संदेहजनक प्रयास"
+      },
+      "nonScored": true,
+      "clinicianOnly": true,
+      "source": "Supplied forensic-handbook extract (res ipsa / malingering evaluation notes)",
+      "sections": [
+        {
+          "id": "definitions",
+          "title": {
+            "en": "Key definitions",
+            "hi": "मुख्य परिभाषाएँ"
+          },
+          "items": [
+            {
+              "en": "Malingering (DSM-5): intentional production of false or grossly exaggerated physical or psychological symptoms motivated by external incentives — avoiding military duty, avoiding work, obtaining financial compensation, evading criminal prosecution, obtaining drugs.",
+              "hi": "मालिंगरिंग (DSM-5): बाह्य प्रलोभन (सैनिक सेवा से बचाव, कार्य से बचाव, आर्थिक क्षतिपूर्ति, दंड से बचाव, मादक द्रव्य प्राप्ति) हेतु शारीरिक/मानसिक लक्षणों का जानबूझकर मिथ्या या अत्यधिक वर्धन।"
+            },
+            {
+              "en": "Feigning: deliberate fabrication or gross exaggeration of symptoms without assumptions about its goals (Rogers & Bender, 2003).",
+              "hi": "छल-अभिनय: लक्ष्य संबंधी पूर्वधारणा के बिना लक्षणों का जानबूझकर निर्माण या अत्यधिक वर्धन (Rogers & Bender, 2003)।"
+            },
+            {
+              "en": "Suspect effort: effort-test performance suggesting the examinee is not applying best effort; may be intentional or non-intentional (also suboptimal/incomplete/submaximal effort).",
+              "hi": "संदेहजनक प्रयास: परीक्षार्थी द्वारा सर्वोत्तम प्रयास न लगाने का संकेत; सचेत या असचेत हो सकता है (उप-इष्टतम/अपूर्ण/उप-अधिकतम प्रयास)।"
+            },
+            {
+              "en": "Factitious disorder: voluntary production of symptoms to assume the patient role, with no other obvious secondary gain.",
+              "hi": "छलरोग: रोगी-भूमिका अपनाने हेतु लक्षणों की स्वेच्छा-उत्पत्ति,अन्य कोई सुगम्य द्वितीयक लाभ के बिना।"
+            },
+            {
+              "en": "Ganser syndrome: approximate answers (2+2=5), clouding of consciousness, somatic conversion (especially sensory), hallucinations.",
+              "hi": "गैंसर सिंड्रोम: अनुमानोत्तर (2+2=5), चेतना की मंदता, शारीरिक कन्वर्ज़न (विशेषतः संवेदी), एवं Hallucination।"
+            }
+          ]
+        },
+        {
+          "id": "depression",
+          "title": {
+            "en": "Evaluating possible malingered depression",
+            "hi": "संभावित वर्धित अवसाद का मूल्यांकन"
+          },
+          "items": [
+            {
+              "en": "Gervais et al. (2001): 25-30% of civil-litigation claimants of major depression probably malingered on forced-choice testing.",
+              "hi": "Gervais आदि (2001): दीवानी वादों में प्रस्तावित प्रमुख अवसाद के 25-30% दाता संभवतः फोर्सड-चॉइस परीक्षण पर मालिंगरिंग कर रहे थे।"
+            },
+            {
+              "en": "Review DSM-5 criteria first; then weigh inconsistency between reported state and observed behaviour: full range of facial expression, normal motor activity, laughing/joking, enjoyment of activities, no verifiable weight change, indiscriminate endorsement of unrelated symptoms, laudatory self-presentation, blame of others, poor performance on very easy personal questions, sudden worsening once told they will be 'tested', mood change when observed vs unobserved.",
+              "hi": "प्रथम DSM-5 मानदंड देखें; फिर वर्णित अवस्था एवं प्रत्यक्ष व्यवहार की विसंगति पर विचार: भाव-अभिव्यक्ति का पूर्ण विस्तार, सामान्य मोटर क्रिया, हँसी-मज़ाक, कार्यों में रूचि, वजन-परिवर्तन का अप्रमाणित, असंबंधित लक्षणों का अंधाधुंध समर्थन, स्व-प्रशंसा, दूसरों पर दोषारोपण, अत्यंत सरल व्यक्तिगत प्रश्नों पर खराब प्रदर्शन, 'परीक्षण' बताते ही स्मरण/एकाग्रता का आकस्मिक अवमदन, प्रेक्षित अप्रत्यक्ष अवस्था में अंतर।"
+            }
+          ]
+        },
+        {
+          "id": "hallucinations",
+          "title": {
+            "en": "Malingered versus true hallucinations",
+            "hi": "छल-अभिनयित एवं वास्तविक Hallucination"
+          },
+          "items": [
+            {
+              "en": "Start open-ended ('Describe what you are hearing. Is there anything else you can describe?'); avoid educating the evaluee about expected signs — 'clinician assisted deception'.",
+              "hi": "प्रथम खुले प्रश्न ('जो सुनाई दे उसका वर्णन करें। और कुछ?'); अपेक्षित लक्षणों की शिक्षा न दें — इसे 'चिकित्सक-सहायताप्राप्त छल' कहते हैं।"
+            },
+            {
+              "en": "Phenomenology to document: content, clarity, loudness, vividness, duration, frequency, continuous/intermittent, single/multiple voices, gender, inside/outside the head, tone, person addressed, insight, belief others can hear, relationship to speaker, other sensory modalities, alone/with others, conversing back, ability to dismiss, mood, relation to delusions, confusion, reaction, commands, consequences of disobeying, effort not to obey, alternative motives, what worsens/improves, number of voices.",
+              "hi": "अभिलिखित घटना-विज्ञान: विषय, स्पष्टता, प्रबलता, व्यक्तता, काल, आवृत्ति, सतत/विविक्त, एक/अनेक स्वर, लिंग, मस्तिष्क के अंतः/बहिः, ध्वनि-स्वर, संबोधन, अंतर्दृष्टि, अन्यको श्रवण-विश्वास, वक्ता-संबंध, अन्य इंद्रिय-द्वारा, एकांत/समूह, उत्तर-दान, निवारण-समर्थता, भाव, भ्रम-संबंध, विषमता, प्रतिक्रिया, आदेश, अवमान्यता के परिणाम, अवमान्य इच्छा, वैकल्पिक प्रेरणा, वर्धन-हेतु, संख्या।"
+            },
+            {
+              "en": "In genuine psychosis voices are usually intermittent; Nayani & David (1996): 49% external, 38% internal, 12% both; abuse the commonest content; 76% identify at least one coping strategy (working, posture change, interpersonal contact, medication); being alone worsens voices in 80%, radio/TV worsen them.",
+              "hi": "वास्तविक मनोविकृति में स्वर प्रायः विविक्त; Nayani और David (1996): 49% बाह्य, 38% आंतरिक, 12% उभय; गाली सबसे सामान्य; 76% कम-से-कम एक सामना-रणनीति बताते हैं (कार्य, मुद्रा-परिवर्तन, संपर्क, औषधि); 80% में एकांत से वृद्धि, रेडियो/टीवी से भी वर्धन।"
+            },
+            {
+              "en": "Suspect auditory hallucinations: continuous rather than intermittent, vague/inaudible, not associated with delusions, stilted language, no strategies to diminish voices, claim that all commands are obeyed.",
+              "hi": "संदेहजनक श्रवण-भ्रम: सतत बजाय विविक्त, अस्पष्ट/अश्रव्य, भ्रम से असंबद्ध, कृत्रिम भाषा, स्वर-निवारण की कोई रणनीति नहीं, समस्त आदेश-पालन का दावा।"
+            },
+            {
+              "en": "Suspect visual hallucinations: visual alone in schizophrenia, black-and-white, dramatic/atypical, changing with eyes closed, miniature or giant figures, visions unrelated to delusions or auditory hallucinations. (Visual hallucinations were found in 46% of malingerers vs 4% of genuinely psychotic individuals; drug-induced visual phenomena are typically formed with eyes closed.)",
+              "hi": "संदेहजनक दृष्टि-भ्रम: स्किज़ोफ्रेनिया में केवल दृष्टि, श्वेत-श्याम, नाटकीय/असामान्य, नेत्र-बंद करने पर परिवर्तन, लीलिपुटियन/विराट आकृतियाँ, भ्रम-असंबद्ध दर्शन। (मालिंगरेटर्स में 46% बनाम वास्तविक मनोविकृतों में 4% दृष्टि-भ्रम; मादक-प्रेरित दृष्टि-घटनाएँ प्रायः नेत्र-बंद अवस्था में।)"
+            }
+          ]
+        },
+        {
+          "id": "delusions",
+          "title": {
+            "en": "Malingered versus true delusions",
+            "hi": "छल-अभिनयित एवं वास्तविक भ्रम"
+          },
+          "items": [
+            {
+              "en": "Delusion: a fixed false belief held in an inappropriate context with inappropriate justification.",
+              "hi": "भ्रम: अपोचित संदर्भ एवं अपोचित उचितकरण के साथ स्थिर मिथ्या विश्वास।"
+            },
+            {
+              "en": "Common themes: disease, nihilism/poverty/sin/guilt, grandiosity, jealousy, erotomania, persecution, reference, religion, poisoning, possession, royal descent, delusional parasitosis, Capgras syndrome.",
+              "hi": "सामान्य विषय: रोग, शून्यता/दरिद्रता/पाप/अपराध-भाव, वैभवंशा, ईर्ष्या, प्रणय-भ्रम, उत्पीड़न, संदर्भ, धर्म, विष-प्रयोग, ग्रहण, राजवंश-वंशज, भ्रामक परजीविता, कैपग्रस।"
+            },
+            {
+              "en": "Clues to malingered delusions: abrupt onset or termination, eagerness to call attention to the delusion, conduct inconsistent with the delusion, bizarre content without disordered thought, delusions paired with exaggerated cognitive deficit.",
+              "hi": "छल-संकेत: आकस्मिक आरंभ/अंत, भ्रम पर ध्यान खींचने की उत्सुकता, भ्रम-असंगत व्यवहार, विचार-विकृति के बिना विचित्र विषय, अतिरंजित संज्ञान-क्षति के साथ भ्रम।"
+            }
+          ]
+        },
+        {
+          "id": "amnesia",
+          "title": {
+            "en": "Claimed amnesia: forensic review",
+            "hi": "दावा-कृत स्मृतिलोप: फॉरेंसिक समीक्षा"
+          },
+          "items": [
+            {
+              "en": "First clarify that the complaint is amnesia rather than dementia/delirium/developmental memory difficulty; a memory evaluation covers orientation, recall of prose, rote learning, visuospatial retention, remote memory/fund of information and autobiographical memory, with medical work-up (labs, neuro exam, imaging) as indicated.",
+              "hi": "प्रथम स्पष्ट करें कि शिकायत स्मृतिलोप है, मूर्छा/डीमेंशिया/विकास-जनित स्मरण-कठिनाई नहीं; मूल्यांकन में दिशा-काल ज्ञान, गद्य-स्मरण, रट-अध्ययन, दृश्य-स्थानिक धारणा, सुदूर स्मरण/सूचना-भंडार एवं आत्मकथात्मक स्मरण, तथा आवश्यक चिकित्सीय जाँच।"
+            },
+            {
+              "en": "Organic causes to consider: substance use, anterior communicating artery aneurysm rupture, anoxia, brain disease/injury, cerebrovascular accident, delirium, dementia, ECT, encephalitis, hypoglycaemia, somnambulism, transient epileptic amnesia, Wernicke-Korsakoff syndrome.",
+              "hi": "कारणात्मक जैविक कारण: मादक द्रव्य, ACoA एनेवरिज्म भंग, अनॉक्सिया, मस्तिष्क रोग/आघात, CVA, delirium, डीमेंशिया, ECT, एन्सेफलाइटिस, हाइपोग्लाइसीमिया, स्लीप-वॉकिंग, क्षणिक मृगवानीय स्मृतिलोप, Wernicke-Korsakoff।"
+            },
+            {
+              "en": "Ribot's law: after head trauma older memories return before recent ones, with the gap limited to the event and seconds beforehand; recovery that does not follow this pattern warrants screening for malingering.",
+              "hi": "राइबोट-नियम: मस्तिष्क-आघात पश्चात् पुरानी स्मृतियाँ नवीन से पूर्व लौटती हैं, अंतराल घटना एवं उसके कुछ क्षण पूर्व तक सीमित; इस पैटर्न से हटने वाली पुनर्प्राप्ति पर मालिंगरिंग-स्क्रीन आवश्यक।"
+            },
+            {
+              "en": "Patterns consistent with malingered amnesia: circumscribed loss for the offence with recall before and after; sharp sudden onset and offset; complete loss for a circumscribed period (complete amnesia for a criminal act is very rare); dogmatic belief that nothing could aid recovery; overly dramatic presentation; implausibly precise time window; attributing amnesia to intoxication contrary to available evidence.",
+              "hi": "मालिंगरिंग-संगत पैटर्न: केवल अपराध-काल की सीमित हानि, पूर्व-पश्चात् स्मरण; आकस्मिक आरंभ-अंत; सीमित काल का पूर्ण लोप (अपराध का पूर्ण अमांसिया अत्यंत दुर्लभ); किसी सहायता से स्मरण-पुनर्प्राप्ति का अडंबरहीन अविश्वास; अत्यंत नाटकीय प्रस्तुति; अविश्वसनीय रूप से सटीक समय-सीमा; प्रमाण-विरुद्ध मतवैषम्य को हेतु बताना।"
+            },
+            {
+              "en": "Alcohol/substance claims: over half (and in some studies >85%) of offenders claiming amnesia were intoxicated near the offence, but intoxication sufficient to produce genuine amnesia is uncommon — do not accept the claim without corroborating levels/evidence.",
+              "hi": "मदिरा/मादक दावे: अमांसिया-दाता अपराधियों में अर्धे से अधिक (कुछ अध्ययनों में >85%) नशे में थे, किंतु वास्तविक अमांसिया उत्पन्न करने योग्य मात्रा दुर्लभ — प्रमाण-राशि के बिना दावा स्वीकार न करें।"
+            },
+            {
+              "en": "Planning matters: instrumental (planned) offences involve elaborative encoding and rehearsal, which improve memory, so genuine amnesia for planned violence is unexpected; impulsive/reactive offences may be followed by partial retrograde gaps.",
+              "hi": "योजना-प्रसंग: सयोजित (योजनाबद्ध) अपराधों में विस्तृत एनकोडिंग-अभ्यास स्मरण बढ़ाता है, अतः योजनाबद्ध हिंसा का वास्तविक अमांसिया अप्रत्याशित; आवेगजनित अपराधों में आंशिक पश्चगामी अंतराल संभव।"
+            },
+            {
+              "en": "Self-report dissociation instruments (DES/DES-II, MID) rely entirely on self-report: a high score does not prove claimed memory loss is genuine (McLeod 2004; Woodworth 2009 — DES tendency correlated with perceived, not objective, memory impairment).",
+              "hi": "स्व-रिपोर्ट वियोजन मापनियाँ (DES/DES-II, MID) पूर्णतः स्व-रिपोर्ट पर निर्भर: उच्च अंक दावा-कृत स्मृतिलोप की प्रामाणिकता सिद्ध नहीं करता (McLeod 2004; Woodworth 2009)।"
+            }
+          ]
+        },
+        {
+          "id": "pathway",
+          "title": {
+            "en": "Pathway to homicidal violence (Calhoun & Weston 2003; steps 7-8 per Christianson et al. 2007)",
+            "hi": "हत्याकांड-हेतु हिंसा की पथ-रेखा (Calhoun और Weston 2003; चरण 7-8 Christianson आदि 2007)"
+          },
+          "items": [
+            {
+              "en": "Step 1 Grievance — anger, revenge, feeling wronged.",
+              "hi": "चरण 1 शिकायत — क्रोध, प्रतिशोध, अन्याय-भाव।"
+            },
+            {
+              "en": "Step 2 Ideation — accepting violence to right the wrong or fulfil violent/sexual fantasies; identifying with other assailants.",
+              "hi": "चरण 2 विचारधारा — अन्याय-सुधार या हिंसक/यौन कल्पना हेतु हिंसा स्वीकार; अन्य आक्रमणकारियों से तादात्म्य।"
+            },
+            {
+              "en": "Step 3 Research and planning — gathering information, inquiring about the target, surveillance.",
+              "hi": "चरण 3 अनुसंधान-योजना — सूचना-संग्रह, लक्ष्य-पूछताछ, निगरानी।"
+            },
+            {
+              "en": "Step 4 Preparations — assembling equipment, practising, choosing clothing, writing messages, making a will.",
+              "hi": "चरण 4 पूर्वतैयारी — उपकरण-संग्रह, अभ्यास, वस्त्र-चयन, संदेश-लेखन, वसीयत।"
+            },
+            {
+              "en": "Step 5 Breach — positioning oneself close to the potential victim.",
+              "hi": "चरण 5 प्रवेश — संभावित शिकार के निकट स्थितिग्रहण।"
+            },
+            {
+              "en": "Step 6 Attack — enacting the plan, requiring commitment and resolve.",
+              "hi": "चरण 6 आक्रमण — योजना-क्रियान्वयन, संकल्प-आवश्यकता।"
+            },
+            {
+              "en": "Step 7 Realisation — actions upon the victim's body, additional violence or sexual acts.",
+              "hi": "चरण 7 साक्षात्कार — शरीर पर क्रियाएँ, अतिरिक्त हिंसा/यौन कृत्य।"
+            },
+            {
+              "en": "Step 8 Post-crime behaviour — behaviours aimed at avoiding discovery or staging the scene.",
+              "hi": "चरण 8 अपराधोत्तर व्यवहार — पकड़े जाने से बचाव अथवा घटना-स्थल की रचना।"
+            }
+          ]
+        }
+      ]
     }
   }
 }
