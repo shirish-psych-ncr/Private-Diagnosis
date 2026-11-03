@@ -992,6 +992,48 @@
           "scaleId": "mini_disability"
         }
       ]
+    },
+    {
+      "id": "personality",
+      "name": {
+        "en": "Personality functioning",
+        "hi": "व्यक्तित्व कार्यक्षमता"
+      },
+      "tier": 2,
+      "description": {
+        "en": "Optional personality-disorder screening block. Endorsing a screen-in item deploys the corresponding self-report instrument: the IPDE ICD-10 module screening questionnaire (five-option True/False keyed items across the nine F60 clusters) or the PDQ-4+ (99-item questionnaire with validity items, Section B impulsivity/conduct checklists and the mandatory clinical-significance follow-up). Neither instrument is diagnostic.",
+        "hi": "वैकल्पिक व्यक्तित्व विकार स्क्रीनिंग ब्लॉक। स्क्रीन-इन आइटम चुनें तो संबंधित साधन खुलता है: IPDE ICD-10 माड्यूल स्क्रीनिंग प्रश्नावली (नौं F60 क्लस्टर पर कुंजी-उत्तर T/F आइटम) अथवा PDQ-4+ (99-आइटम, वैधता आइटम, खंड-B सूचियाँ एवं अनिवार्य नैदानिक महत्व अनुवर्ती)। कोई भी साधन रोग-निर्णायक नहीं है।"
+      },
+      "instrument": "auto:pdscreen",
+      "cutoff": null,
+      "questions": [
+        {
+          "id": "pd_1",
+          "text": {
+            "en": "Over the past several years, have people frequently complained about how you relate to others, or have you repeatedly found yourself in conflict in close relationships?",
+            "hi": "गत कुछ वर्षों में क्या लोग आपके संबंधों पर प्रायः शिकायत करते आए हैं अथवा घनिष्ठ संबंधों में आप बार-बार संघर्ष में रहे हैं?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "ipde_screen",
+          "disorders": [
+            "other_specified_personality_disorder",
+            "unspecified_personality_disorder"
+          ]
+        },
+        {
+          "id": "pd_2",
+          "text": {
+            "en": "Do you tend to react to other people in ways that have stayed much the same since adolescence — for example being unusually suspicious, withdrawn, demanding, emotionally unstable, or rigid about rules?",
+            "hi": "क्या आप किशोरावस्था से लगभग अपरिवर्तित  tarike से लोगों को प्रतिक्रिया देते आए हैं — जैसे असामान्य संदेहशीलता, एकांतवाद, मांगपन, भावनात्मक अस्थिरता अथवा नियमों पर कठोरता?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "pdq4_screen",
+          "disorders": [
+            "other_specified_personality_disorder",
+            "unspecified_personality_disorder"
+          ]
+        }
+      ]
     }
   ],
   "disorders": {
@@ -1551,6 +1593,258 @@
         "hi": "सामाजिक संचार में निरंतर कमी और सीमित रुचियाँ"
       },
       "mappingNote": "ICD-11 Autism spectrum disorder is 6A02, subdivided by intellectual-development and functional-language status (6A02.0/.1/.2/.3/.5; 6A02.Y other specified, 6A02.Z unspecified). Do not infer a continuous .0-.5 sequence: 6A02.4 is absent from this MMS release (index 1.3.2)."
+    },
+    "paranoid_personality_disorder": {
+      "name": {
+        "en": "Paranoid Personality Disorder",
+        "hi": "संशयात्मक व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Paranoid Personality Disorder",
+      "icd11": "6D10",
+      "icd10": "F60.0",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Pattern of pervasive distrust and suspiciousness such that others' motives are interpreted as malevolent.",
+        "hi": "Pattern of pervasive distrust and suspiciousness such that others' motives are interpreted as malevolent."
+      }
+    },
+    "schizoid_personality_disorder": {
+      "name": {
+        "en": "Schizoid Personality Disorder",
+        "hi": "स्किज़ॉइड व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Schizoid Personality Disorder",
+      "icd11": "6D11",
+      "icd10": "F60.1",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Detachment from social relationships and a restricted range of emotional expression.",
+        "hi": "Detachment from social relationships and a restricted range of emotional expression."
+      }
+    },
+    "schizotypal_personality_disorder": {
+      "name": {
+        "en": "Schizotypal Personality Disorder",
+        "hi": "स्किज़ोटिपल व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Schizotypal Personality Disorder",
+      "icd11": "6D12",
+      "icd10": "F60.2 (ICD-10 schizotypal is F21)",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Social deficits with acute discomfort in close relationships, cognitive or perceptual distortions, and eccentricities of behaviour.",
+        "hi": "Social deficits with acute discomfort in close relationships, cognitive or perceptual distortions, and eccentricities of behaviour."
+      }
+    },
+    "borderline_personality_disorder": {
+      "name": {
+        "en": "Borderline Personality Disorder",
+        "hi": "सीमांत व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Borderline Personality Disorder",
+      "icd11": "6D110",
+      "icd10": "F60.31",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Instability of interpersonal relationships, self-image and affects, and marked impulsivity.",
+        "hi": "Instability of interpersonal relationships, self-image and affects, and marked impulsivity."
+      }
+    },
+    "impulsive_control_features": {
+      "name": {
+        "en": "Impulsive control features (ICD-10 F60.30 dissocial, impulsive subtype)",
+        "hi": "आवेगी नियंत्रण लक्षण (ICD-10 F60.30)"
+      },
+      "tier": 2,
+      "dsm5": "Impulsive control features (ICD-10 F60.30 dissocial, impulsive subtype)",
+      "icd11": "6D11",
+      "icd10": "F60.30",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Emotional instability and impulsive tendency without the full borderline pattern.",
+        "hi": "Emotional instability and impulsive tendency without the full borderline pattern."
+      }
+    },
+    "histrionic_personality_disorder": {
+      "name": {
+        "en": "Histrionic Personality Disorder",
+        "hi": "हिस्ट्रियोनिक व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Histrionic Personality Disorder",
+      "icd11": "6D13",
+      "icd10": "F60.4",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Excessive emotionality and attention-seeking.",
+        "hi": "Excessive emotionality and attention-seeking."
+      }
+    },
+    "narcissistic_personality_disorder": {
+      "name": {
+        "en": "Narcissistic Personality Disorder",
+        "hi": "नार्सिसिस्टिक व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Narcissistic Personality Disorder",
+      "icd11": "6D14",
+      "icd10": "F60.6 (ICD-10 has no dedicated category)",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Grandiosity, need for admiration and lack of empathy.",
+        "hi": "Grandiosity, need for admiration and lack of empathy."
+      }
+    },
+    "avoidant_personality_disorder": {
+      "name": {
+        "en": "Avoidant Personality Disorder",
+        "hi": "परिहरणकारी व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Avoidant Personality Disorder",
+      "icd11": "6D15",
+      "icd10": "F60.6",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Social inhibition, feelings of inadequacy and hypersensitivity to negative evaluation.",
+        "hi": "Social inhibition, feelings of inadequacy and hypersensitivity to negative evaluation."
+      }
+    },
+    "dependent_personality_disorder": {
+      "name": {
+        "en": "Dependent Personality Disorder",
+        "hi": "निर्भर व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Dependent Personality Disorder",
+      "icd11": "6D16",
+      "icd10": "F60.7",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Excessive need to be taken care of leading to submissive and clinging behaviour and fears of separation.",
+        "hi": "Excessive need to be taken care of leading to submissive and clinging behaviour and fears of separation."
+      }
+    },
+    "obsessive_compulsive_personality_disorder": {
+      "name": {
+        "en": "Obsessive-Compulsive Personality Disorder",
+        "hi": "ऑब्सेसिव-कंपल्सिव व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Obsessive-Compulsive Personality Disorder",
+      "icd11": "6D17",
+      "icd10": "F60.5",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Preoccupation with orderliness, perfectionism and mental and interpersonal control at the expense of flexibility.",
+        "hi": "Preoccupation with orderliness, perfectionism and mental and interpersonal control at the expense of flexibility."
+      }
+    },
+    "passive_aggressive_personality_disorder": {
+      "name": {
+        "en": "Passive-Aggressive (Negativistic) Personality Features",
+        "hi": "निष्क्रिय-आक्रामक (नकारात्मकता) व्यक्तित्व लक्षण"
+      },
+      "tier": 2,
+      "dsm5": "Passive-Aggressive (Negativistic) Personality Features",
+      "icd11": "6D1Z",
+      "icd10": "F60.89",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Pessimistic, obstructive handling of tasks and indirect expression of dissatisfaction; DSM-IV provisional category.",
+        "hi": "Pessimistic, obstructive handling of tasks and indirect expression of dissatisfaction; DSM-IV provisional category."
+      }
+    },
+    "depressive_personality_disorder": {
+      "name": {
+        "en": "Depressive Personality Features",
+        "hi": "अवसादी व्यक्तित्व लक्षण"
+      },
+      "tier": 2,
+      "dsm5": "Depressive Personality Features",
+      "icd11": "6D1Z",
+      "icd10": "F60.89",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Chronic gloomy, self-critical, pessimistic disposition; not an official DSM-5 disorder.",
+        "hi": "Chronic gloomy, self-critical, pessimistic disposition; not an official DSM-5 disorder."
+      }
+    },
+    "other_specified_personality_disorder": {
+      "name": {
+        "en": "Other Specified Personality Disorder",
+        "hi": "अन्य निर्दिष्ट व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Other Specified Personality Disorder",
+      "icd11": "6D1Z",
+      "icd10": "F60.8 / F60.9",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Clinically significant personality pattern causing distress or impairment that does not meet full criteria for a specific cluster-C/A/B disorder.",
+        "hi": "Clinically significant personality pattern causing distress or impairment that does not meet full criteria for a specific cluster-C/A/B disorder."
+      }
+    },
+    "unspecified_personality_disorder": {
+      "name": {
+        "en": "Unspecified Personality Disorder",
+        "hi": "अनिर्दिष्ट व्यक्तित्व विकार"
+      },
+      "tier": 2,
+      "dsm5": "Unspecified Personality Disorder",
+      "icd11": "6D1Z",
+      "icd10": "F60.9",
+      "mappingNote": {
+        "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+        "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+      },
+      "description": {
+        "en": "Screen-positive personality pattern awaiting the structured interview (IPDE/PDQ-4+ screens are hypothesis-generating only).",
+        "hi": "Screen-positive personality pattern awaiting the structured interview (IPDE/PDQ-4+ screens are hypothesis-generating only)."
+      }
     }
   },
   "instruments": {
@@ -1834,6 +2128,26 @@
         "pediatric",
         "adolescent"
       ]
+    },
+    "IPDE": {
+      "name": "International Personality Disorder Examination (IPDE) — ICD-10 module screening questionnaire",
+      "description": {
+        "en": "Loranger's structured interview; the brief screening form covers the nine ICD-10 F60 personality categories (paranoid, schizoid, dissocial, impulsive, borderline, histrionic, anankastic, anxious, dependent) with keyed True/False items. Three or more keyed items fail the screen for that disorder (this app flags at one, per the authors' lower-standard option); the screen is never diagnostic.",
+        "hi": "loranger_का_संरचित_साक्षात्कार;_संक्षिप्त_स्क्रीनिंग_पत्रक_ICD-10 की_nौं_F60 श्रेणियों_को_कुंजी-उत्तर T/F आइटम_से_कवर_करता_है। तीन_अथवा_अधिक_कुंजी_आइटम_उस_विकार_की_स्क्रीन_असफल_करते_हैं (यह_ऐप_लेखकों_के_निम्नतर_मानदंड_अनुसार_एक_पर_धनात्मक_करता_है);_स्क्रीन_कभी_रोग-निर्णायक_नहीं।"
+      },
+      "domain": "personality",
+      "format": "clinician/self-administered keyed True-False screen",
+      "optionalAssessment": true
+    },
+    "PDQ-4+": {
+      "name": "Personality Diagnostic Questionnaire-4+ (PDQ-4+)",
+      "description": {
+        "en": "99-item True/False self-report screen for 12 DSM personality disorders, with two validity items (64, 76), Section B impulsivity (item 98) and conduct-disorder (item 99) checklists gating Borderline and Antisocial respectively, and a mandatory five-part clinical-significance follow-up (accuracy, duration, pervasiveness, impairment, distress). Not diagnostic.",
+        "hi": "12 DSM व्यक्तित्व_विकार_हेतु 99-आइटम T/F स्व-वर्णित_स्क्रीन;_दो_वैधता_आइटम (64, 76),_खंड-B आवेगी_आइटम 98 एवं_आचरण-विकार_आइटम 99 क्रमशः सीमांत_एवं_विरोधी_समाजवादी_द्वार_रूप, तथा_पाँच-भाग_नैदानिक_महत्व_अनुवर्ती_अनिवार्य। रोग-निर्णायक_नहीं।"
+      },
+      "domain": "personality",
+      "format": "self-report True/False questionnaire with thresholds",
+      "optionalAssessment": true
     }
   },
   "scales": {
@@ -3221,6 +3535,2389 @@
           "hi": "स्क्रीन-इन आइटम fi_2 इस तालिका को नियंत्रित करता है: यह केवल कार्यात्मक हानि रिपोर्ट होने पर पूर्ण होती है (MINI वैकल्पिक मूल्यांकन स्कोर नहीं किए जाते और किसी निदान-बक्से को नियंत्रित नहीं करते)।"
         }
       }
+    },
+    "ipde_screen": {
+      "id": "ipde_screen",
+      "name": {
+        "en": "IPDE ICD-10 Module Screening Questionnaire",
+        "hi": "IPDE ICD-10 माड्यूल स्क्रीनिंग प्रश्नावली"
+      },
+      "type": "matrix",
+      "administeredBy": "self-or-clinician",
+      "sourceInstrument": "IPDE",
+      "targetAge": [
+        "adult"
+      ],
+      "directions": {
+        "en": "Please do not skip any item. If you are not sure of an answer, select the one TRUE or FALSE which is more likely to be correct. There is no time limit, but do not spend too much time thinking about the answer to any single statement. When the answer is TRUE, mark T. When the answer is FALSE, mark F.",
+        "hi": "कृपया किसी भी item को छोड़ें नहीं। उत्तर में निश्चित न हों तो सत्य अथवा मिथ्या में से अधिक संभावित सही चुनें। समय की सीमा नहीं है, किंतु किसी एक कथन पर अत्यधिक चिंतन न करें। उत्तर सत्य हो तो T और मिथ्या हो तो F अंकित करें।"
+      },
+      "timeframe": {
+        "en": "Rate how you generally are, not how you feel at this moment.",
+        "hi": "सामान्य स्व का मूल्यांकन करें, इस क्षण की भावना का नहीं।"
+      },
+      "parts": [
+        {
+          "id": "ipde_F60_0",
+          "name": {
+            "en": "F60.0 Paranoid",
+            "hi": "F60.0 Paranoid"
+          },
+          "icd10Module": "F60.0",
+          "disorderName": {
+            "en": "Paranoid Personality Disorder",
+            "hi": "Paranoid Personality Disorder"
+          },
+          "disorders": [
+            "paranoid_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "I don't react well when someone offends me.",
+                "hi": "जब कोई मुझे अपमानित करे तो मैं अच्छी तरह प्रतिक्रिया नहीं करता/करती।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.0",
+              "disorders": [
+                "paranoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "Most people are fair and honest with me.",
+                "hi": "अधिकतर लोग मेरे साथ न्यायपूर्ण और ईमानदार होते हैं।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.0",
+              "disorders": [
+                "paranoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_24",
+              "itemNumber": 24,
+              "text": {
+                "en": "People often make fun of me behind my back.",
+                "hi": "लोग अक्सर पीठ पीछे मेरा मज़ाक उड़ाते हैं।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.0",
+              "disorders": [
+                "paranoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_36",
+              "itemNumber": 36,
+              "text": {
+                "en": "I think my spouse (lover) may be unfaithful to me.",
+                "hi": "मुझे लगता है कि मेरे जीवनसाथी (प्रेमी/प्रेमिका) ने मेरे साथ विश्वासघात किया होगा।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.0",
+              "disorders": [
+                "paranoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_52",
+              "itemNumber": 52,
+              "text": {
+                "en": "I am convinced there is a conspiracy behind many things in the world.",
+                "hi": "मुझे विश्वास है कि संसार की कई घटनाओं के पीछे षड्यंत्र है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.0",
+              "disorders": [
+                "paranoid_personality_disorder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_1",
+          "name": {
+            "en": "F60.1 Schizoid",
+            "hi": "F60.1 Schizoid"
+          },
+          "icd10Module": "F60.1",
+          "disorderName": {
+            "en": "Schizoid Personality Disorder",
+            "hi": "Schizoid Personality Disorder"
+          },
+          "disorders": [
+            "schizoid_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "I usually get fun and enjoyment out of life.",
+                "hi": "मैं आमतौर पर जीवन से मज़ा और आनंद प्राप्त करता/करती हूँ।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.1",
+              "disorders": [
+                "schizoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "I almost never get angry about anything.",
+                "hi": "मैं लगभग किसी भी चीज़ पर कभी क्रोधित नहीं होता/होती।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.1",
+              "disorders": [
+                "schizoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "People think I am cold and detached.",
+                "hi": "लोग मुझे ठंडा और विरक्त मानते हैं।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.1",
+              "disorders": [
+                "schizoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_31",
+              "itemNumber": 31,
+              "text": {
+                "en": "I have little or no desire to have sex with anyone.",
+                "hi": "किसी के साथ यौन संबंध की मेरी इच्छा कम या शून्य है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.1",
+              "disorders": [
+                "schizoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_46",
+              "itemNumber": 46,
+              "text": {
+                "en": "मुझे वे गतिविधियाँ पसंद हैं जो मैं अकेले कर सकूँ।",
+                "hi": "मुझे वे गतिविधियाँ पसंद हैं जो मैं अकेले कर सकूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.1",
+              "disorders": [
+                "schizoid_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_58",
+              "itemNumber": 58,
+              "text": {
+                "en": "I am more interested in my own thoughts than what goes on around me.",
+                "hi": "चारों ओर घटित होने वाली बातों की तुलना में मैं स्वयं के विचारों में अधिक रुचि रखता/रखती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.1",
+              "disorders": [
+                "schizoid_personality_disorder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_2",
+          "name": {
+            "en": "F60.2 Dissocial",
+            "hi": "F60.2 Dissocial"
+          },
+          "icd10Module": "F60.2",
+          "disorderName": {
+            "en": "Antisocial Personality Disorder",
+            "hi": "Antisocial Personality Disorder"
+          },
+          "disorders": [
+            "antisocial_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "I've never been arrested.",
+                "hi": "मुझे कभी गिरफ्तार नहीं किया गया।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "I usually feel bad when I hurt or mistreat someone.",
+                "hi": "जब मैं किसी को ठेस पहुँचाता/पहुँचाती हूँ तो आमतौर पर बुरा महसूस करता/करती हूँ।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "At times I've refused to hold a job, even when I was expected to.",
+                "hi": "कभी-कभी मैंने नौकरी पकड़ने से इनकार किया है, भले अपेक्षा थी।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_27",
+              "itemNumber": 27,
+              "text": {
+                "en": "I fight for my rights even when it annoys people.",
+                "hi": "मैं अपने अधिकारों हेतु लड़ता/लड़ती हूँ भले लोगों को बुरा लगे।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_29",
+              "itemNumber": 29,
+              "text": {
+                "en": "I will lie or con someone if it serves my purpose.",
+                "hi": "अपने काम निकालने हेतु मैं झूठ बोल सकता/सकती हूँ या किसी को ठगा सकता/सकती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_51",
+              "itemNumber": 51,
+              "text": {
+                "en": "It's hard for me to stay out of trouble.",
+                "hi": "मुसीबत से दूर रहना मेरे लिए कठिन है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_56",
+              "itemNumber": 56,
+              "text": {
+                "en": "I take chances and do reckless things.",
+                "hi": "मैं जोखिम उठाता/उठाती और बेपरवाह कार्य करता/करती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_59",
+              "itemNumber": 59,
+              "text": {
+                "en": "I usually try to get people to do things my way.",
+                "hi": "मैं आमतौर पर लोगों को अपनी बात मनवाने का प्रयत्न करता/करती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.2",
+              "disorders": [
+                "antisocial_personality_disorder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_30",
+          "name": {
+            "en": "F60.30 Impulsive",
+            "hi": "F60.30 Impulsive"
+          },
+          "icd10Module": "F60.30",
+          "disorderName": {
+            "en": "Impulsive subtype / intermittent explosive features",
+            "hi": "Impulsive subtype / intermittent explosive features"
+          },
+          "disorders": [
+            "impulsive_control_features"
+          ],
+          "questions": [
+            {
+              "id": "ipde_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "I argue or fight when people try to stop me from doing what I want.",
+                "hi": "जब लोग मेरी मनचाही चीज़ रोकने की कोशिश करते हैं तो मैं बहस या लड़ाई करता/करती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.30",
+              "disorders": [
+                "impulsive_control_features"
+              ]
+            },
+            {
+              "id": "ipde_30",
+              "itemNumber": 30,
+              "text": {
+                "en": "I don't stick with a plan if I don't get results right away.",
+                "hi": "जल्दी परिणाम न मिले तो मैं योजना पर टिकता/टिकती नहीं।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.30",
+              "disorders": [
+                "impulsive_control_features"
+              ]
+            },
+            {
+              "id": "ipde_37",
+              "itemNumber": 37,
+              "text": {
+                "en": "Sometimes I get so angry I break or smash things.",
+                "hi": "कभी-कभी इतना क्रोध आता है कि मैं चीज़ें तोड़ता/तोड़ती या फेंकता/फेंकती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.30",
+              "disorders": [
+                "impulsive_control_features"
+              ]
+            },
+            {
+              "id": "ipde_47",
+              "itemNumber": 47,
+              "text": {
+                "en": "I lose my temper and get into physical fights.",
+                "hi": "मैं आत्म-नियंत्रण खोकर शारीरिक झगड़ों में उलझ जाता/जाती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.30",
+              "disorders": [
+                "impulsive_control_features"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_31",
+          "name": {
+            "en": "F60.31 Borderline",
+            "hi": "F60.31 Borderline"
+          },
+          "icd10Module": "F60.31",
+          "disorderName": {
+            "en": "Borderline Personality Disorder",
+            "hi": "Borderline Personality Disorder"
+          },
+          "disorders": [
+            "borderline_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "I can't decide what kind of person I want to be.",
+                "hi": "मैं यह तय नहीं कर सकता/सकती कि मैं कैसा व्यक्ति बनना चाहता/चाहती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.31",
+              "disorders": [
+                "borderline_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "I go to extremes to try to keep people from leaving me.",
+                "hi": "लोगों को खोने से रोकने हेतु मैं अति में जाता/जाती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.31",
+              "disorders": [
+                "borderline_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "I get into very intense relationships that don't last.",
+                "hi": "मैं बहुत तीव्र संबंधों में उलझता/उलझती हूँ जो टिकते नहीं।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.31",
+              "disorders": [
+                "borderline_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_25",
+              "itemNumber": 25,
+              "text": {
+                "en": "I have never threatened suicide or injured myself on purpose.",
+                "hi": "मैंने कभी आत्महत्या की धमकी नहीं दी या जान-बूझकर स्वयं को क्षति नहीं पहुँचाई।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.31",
+              "disorders": [
+                "borderline_personality_disorder"
+              ],
+              "safety": true
+            },
+            {
+              "id": "ipde_26",
+              "itemNumber": 26,
+              "text": {
+                "en": "My feelings are like the weather; they are always changing.",
+                "hi": "मेरी भावनाएँ मौसम की तरह हैं; ये सदैव बदलती रहती हैं।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.31",
+              "disorders": [
+                "borderline_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_40",
+              "itemNumber": 40,
+              "text": {
+                "en": "I often feel 'empty' inside.",
+                "hi": "अक्सर भीतर से खालीपन महसूस करता/करती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.31",
+              "disorders": [
+                "borderline_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_53",
+              "itemNumber": 53,
+              "text": {
+                "en": "I'm very moody.",
+                "hi": "मैं बहुत मिजाज़-परिवर्ती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.31",
+              "disorders": [
+                "borderline_personality_disorder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_4",
+          "name": {
+            "en": "F60.4 Histrionic",
+            "hi": "F60.4 Histrionic"
+          },
+          "icd10Module": "F60.4",
+          "disorderName": {
+            "en": "Histrionic Personality Disorder",
+            "hi": "Histrionic Personality Disorder"
+          },
+          "disorders": [
+            "histrionic_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "I show my feelings for everyone to see.",
+                "hi": "मैं अपने भाव सबको दिखाने देता/दिखाती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.4",
+              "disorders": [
+                "histrionic_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "I am too easily influenced by what goes on around me.",
+                "hi": "मैं चारों ओर होने वाली बातों से बहुत सहजता से प्रभावित हो जाता/जाती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.4",
+              "disorders": [
+                "histrionic_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_28",
+              "itemNumber": 28,
+              "text": {
+                "en": "I like to dress so I stand out in a crowd.",
+                "hi": "मुझे ऐसा पोशाक पहनना पसंद है जिससे भीड़ में मैं दिखूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.4",
+              "disorders": [
+                "histrionic_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_35",
+              "itemNumber": 35,
+              "text": {
+                "en": "I would rather not be the centre of attention.",
+                "hi": "मैं ध्यान का केंद्र नहीं बनना चाहता/चाहती।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.4",
+              "disorders": [
+                "histrionic_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_44",
+              "itemNumber": 44,
+              "text": {
+                "en": "I have a reputation for being a flirt.",
+                "hi": "मुछल्लद होने की मेरी साख है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.4",
+              "disorders": [
+                "histrionic_personality_disorder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_5",
+          "name": {
+            "en": "F60.5 Anankastic",
+            "hi": "F60.5 Anankastic"
+          },
+          "icd10Module": "F60.5",
+          "disorderName": {
+            "en": "Obsessive-Compulsive Personality Disorder",
+            "hi": "Obsessive-Compulsive Personality Disorder"
+          },
+          "disorders": [
+            "obsessive_compulsive_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "I am a very cautious person.",
+                "hi": "मैं अत्यंत सावधान व्यक्ति हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.5",
+              "disorders": [
+                "obsessive_compulsive_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_23",
+              "itemNumber": 23,
+              "text": {
+                "en": "I spend too much time trying to do things perfectly.",
+                "hi": "चीज़ें पूर्ण करने के लिए मैं बहुत अधिक समय लगाता/लगाती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.5",
+              "disorders": [
+                "obsessive_compulsive_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_32",
+              "itemNumber": 32,
+              "text": {
+                "en": "People think I am too strict about rules and regulations.",
+                "hi": "लोग मानते हैं कि मैं नियम-कानूनों के बारे में बहुत कठोर हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.5",
+              "disorders": [
+                "obsessive_compulsive_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_41",
+              "itemNumber": 41,
+              "text": {
+                "en": "I work so hard I don't have time left for anything else.",
+                "hi": "इतना कार्य करता/करती हूँ कि अन्य किसी चीज़ हेतु समय नहीं बचता।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.5",
+              "disorders": [
+                "obsessive_compulsive_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_48",
+              "itemNumber": 48,
+              "text": {
+                "en": "People think I am too stiff or formal.",
+                "hi": "लोग मुझे बहुत रूढ़/कठोर मानते हैं।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.5",
+              "disorders": [
+                "obsessive_compulsive_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_54",
+              "itemNumber": 54,
+              "text": {
+                "en": "It's hard for me to get used to a new way of doing things.",
+                "hi": "किसी नए तरीके से कार्य करने का अभ्यस्त होना मेरे लिए कठिन है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.5",
+              "disorders": [
+                "obsessive_compulsive_personality_disorder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_6",
+          "name": {
+            "en": "F60.6 Anxious (Avoidant)",
+            "hi": "F60.6 Anxious (Avoidant)"
+          },
+          "icd10Module": "F60.6",
+          "disorderName": {
+            "en": "Avoidant Personality Disorder",
+            "hi": "Avoidant Personality Disorder"
+          },
+          "disorders": [
+            "avoidant_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "I usually feel tense or nervous.",
+                "hi": "मुझे आमतौर पर तनाव या घबराहट महसूस होती है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.6",
+              "disorders": [
+                "avoidant_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "I feel awkward or out of place in social situations.",
+                "hi": "सामाजिक परिस्थितियों में मैं अजीब या बेढंगा महसूस करता/करती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.6",
+              "disorders": [
+                "avoidant_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_34",
+              "itemNumber": 34,
+              "text": {
+                "en": "I won't get involved with people until I am certain they like me.",
+                "hi": "लोगों से जुड़ने से पहले निश्चित होना चाहता/चाहती हूँ कि वे मुझे पसंद करते हैं।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.6",
+              "disorders": [
+                "avoidant_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_39",
+              "itemNumber": 39,
+              "text": {
+                "en": "I worry a lot that people may not like me.",
+                "hi": "लोग मुझे पसंद न करें, इसका बहुत चिंता करता/करती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.6",
+              "disorders": [
+                "avoidant_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_43",
+              "itemNumber": 43,
+              "text": {
+                "en": "A lot of things seem dangerous to me that don't bother most people.",
+                "hi": "कई चीज़ें मुझे खतरनाक लगती हैं जिनसे सामान्य लोग प्रभावित नहीं होते।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.6",
+              "disorders": [
+                "avoidant_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_50",
+              "itemNumber": 50,
+              "text": {
+                "en": "I keep to myself even when there are other people around.",
+                "hi": "आसपास लोग होने पर भी मैं स्वयं को अलग रखता/रखती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.6",
+              "disorders": [
+                "avoidant_personality_disorder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ipde_F60_7",
+          "name": {
+            "en": "F60.7 Dependent",
+            "hi": "F60.7 Dependent"
+          },
+          "icd10Module": "F60.7",
+          "disorderName": {
+            "en": "Dependent Personality Disorder",
+            "hi": "Dependent Personality Disorder"
+          },
+          "disorders": [
+            "dependent_personality_disorder"
+          ],
+          "questions": [
+            {
+              "id": "ipde_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "I let others make my big decisions for me.",
+                "hi": "मैं अपने बड़े निर्णय दूसरों को करने देता/करने देती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "I find it hard to disagree with people if I depend on them a lot.",
+                "hi": "जिन पर मैं बहुत निर्भर हूँ उनसे असहमत होना मुझे कठिन लगता है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "I've held grudges against people for years.",
+                "hi": "मैं वर्षों तक लोगों के प्रति द्বেष रखता/रखती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_33",
+              "itemNumber": 33,
+              "text": {
+                "en": "I usually feel uncomfortable or helpless when I am alone.",
+                "hi": "अकेले होने पर मुझे सहज नहीं या असहाय महसूस होता है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_42",
+              "itemNumber": 42,
+              "text": {
+                "en": "I worry about being left alone and having to care for myself.",
+                "hi": "अकेले रह जाने और स्वयं की देखभाल करने की चिंता सताती है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_45",
+              "itemNumber": 45,
+              "text": {
+                "en": "I don't ask favors from people I depend on a lot.",
+                "hi": "जिन पर बहुत निर्भर हूँ उनसे मैं सहायता नहीं माँगता/माँगती।"
+              },
+              "keyedAnswer": "F",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_49",
+              "itemNumber": 49,
+              "text": {
+                "en": "I often seek advice or reassurance about everyday decisions.",
+                "hi": "रोज़मर्रा के निर्णय हेतु मैं प्रायः सलाह या आश्वासन माँगता/माँगती हूँ।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            },
+            {
+              "id": "ipde_57",
+              "itemNumber": 57,
+              "text": {
+                "en": "Everyone needs a friend or two to be happy.",
+                "hi": "सुखी रहने हेतु प्रत्येक को एक-दो मित्रों की आवश्यकता होती है।"
+              },
+              "keyedAnswer": "T",
+              "screenItems": "F60.7",
+              "disorders": [
+                "dependent_personality_disorder"
+              ]
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 1,
+          "label": {
+            "en": "True",
+            "hi": "सत्य"
+          }
+        },
+        {
+          "v": 0,
+          "label": {
+            "en": "False",
+            "hi": "मिथ्या"
+          }
+        }
+      ],
+      "keyedScoring": true,
+      "keying": "ipde",
+      "scoring": {
+        "method": "ipde_keyed_answer_screen",
+        "rule": {
+          "en": "Circle the item numbers not followed by F, if they were answered True. Circle the remaining item numbers (those followed by F), if they were answered False. If three or more items from a disorder are circled, the subject has failed the screen for that disorder, and should be interviewed.",
+          "hi": "जिन आइटम संख्याओं के पास F नहीं है उनको सत्य उत्तर पर वृत्त करें। शेष (F वाले) को मिथ्या उत्तर पर वृत्त करें। यदि किसी विकार के तीन अथवा अधिक आइटम वृत्त हुए तो उस विकार की स्क्रीन असफल हुई और साक्षात्कार आवश्यक है।"
+        },
+        "failThreshold": 3,
+        "appStandard": {
+          "en": "This application applies the LOWER screening standard permitted by the instrument's authors ('clinicians and investigators may wish to adopt lower or higher screening standards'): ONE or more keyed items flags the ICD-10 F60 cluster for the full IPDE interview. The screen is not diagnostic and yields no dimensional score.",
+          "hi": "यह एप्लिकेशन लेखकों द्वारा अनुमत निम्नतर स्क्रीनिंग मानदंड लागू करता है: एक अथवा अधिक कुंजी-उत्तर आइटम ICD-10 F60 क्लस्टर को पूर्ण IPDE साक्षात्कार हेतु चिह्नित करता है। यह स्क्रीन रोग-निर्णायक नहीं है और कोई विमानी अंक नहीं देती।"
+        },
+        "positiveThreshold": 1,
+        "note": {
+          "en": "The screen should not be used to make a diagnosis or to calculate a dimensional score for a personality disorder.",
+          "hi": "व्यक्तित्व विकार का रोग-निर्णय अथवा विमानी अंक हेतु स्क्रीन का प्रयोग न करें।"
+        }
+      },
+      "sourcePages": "IPDE International Personality Disorder Examination — ICD-10 module screening questionnaire & scoring summary",
+      "licensingNote": {
+        "en": "IPDE screening form reproduced for local clinical/research use; verify current licensing with the instrument publisher before redistribution.",
+        "hi": "स्थानीय नैदानिक /शोध प्रयोग हेतु अभिलिखित; पुनर्वितरण से पूर्व प्रकाशक लाइसेंस सत्यापित करें।"
+      },
+      "translationNote": {
+        "en": "Item wording is transcribed verbatim from the English screening form. Hindi labels are a machine-assisted aid flagged for clinician review; the printed form omits item 3.",
+        "hi": "यह पाठ पत्रक के अंग्रेज़ी मूल से लिया गया है; हिन्दी रूपांतरण केवल संकेतात्मक सहायता हेतु है और इसमें कुछ वाक्य-विन्यास अस्पष्ट हैं। कृपया सत्यापित अंग्रेज़ी/IPDE संस्करण से पुष्टि करें।"
+      }
+    },
+    "pdq4_screen": {
+      "id": "pdq4_screen",
+      "name": {
+        "en": "PDQ-4+ Personality Questionnaire (99 items)",
+        "hi": "PDQ-4+ व्यक्तित्व प्रश्नावली (99 आइटम)"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "sourceInstrument": "PDQ-4+",
+      "targetAge": [
+        "adult"
+      ],
+      "directions": {
+        "en": "The purpose of this personality questionnaire is for you to describe the kind of person you are. When answering the questions, think about how you have tended to feel, think, and act over the past several years. Please answer either True or False to each item. T (True) means that the statement is generally true for you. F (False) means that the statement is generally false for you. Even if you are not entirely sure about the answer, indicate T or F for every question. There are no correct answers. You may take as much time as you wish.",
+        "hi": "इस व्यक्तित्व प्रश्नावली का उद्देश्य आप द्वारा स्व वर्णन है। उत्तर देते समय गत कुछ वर्षों में अपनी भावना, विचार एवं व्यवहार पर विचार करें। प्रत्येक कथन हेतु सत्य अथवा मिथ्या चुनें। T अर्थ आप हेतु सामान्यतः सत्य; F अर्थ सामान्यतः मिथ्या। पूर्ण निश्चितता न हो तो भी प्रत्येक प्रश्न का उत्तर अवश्य दीजिए। कोई सही अथवा गलत उत्तर नहीं है।"
+      },
+      "timeframe": {
+        "en": "Answer based on long-standing patterns, not temporary states (e.g., mood episodes, substance use).",
+        "hi": "दीर्घकालिक रूपों पर उत्तर देें, अस्थायी अवस्थाओं पर नहीं (जैसे मूड एपिसोड, पदार्थ सेवन)।"
+      },
+      "parts": [
+        {
+          "id": "pdq_items",
+          "name": {
+            "en": "Personality Questionnaire Items",
+            "hi": "व्यक्तित्व प्रश्नावली आइटम"
+          },
+          "questions": [
+            {
+              "id": "pdq_1",
+              "text": {
+                "en": "I avoid working with others who may criticize me.",
+                "hi": "मैं उन लोगों के साथ काम करने से परहेज करता/करती हूँ जो मुझे आलोचित कर सकते हैं।"
+              },
+              "itemNumber": 1
+            },
+            {
+              "id": "pdq_2",
+              "text": {
+                "en": "I can't make decisions without the advice, or reassurance, of others.",
+                "hi": "दूसरों की सलाह या आश्वासन के बिना मैं निर्णय नहीं ले सकता/सकती।"
+              },
+              "itemNumber": 2
+            },
+            {
+              "id": "pdq_3",
+              "text": {
+                "en": "I often get lost in details and lose sight of the \"big picture\".",
+                "hi": "मैं प्रायः विवरणों में खो जाता/जाती हूँ और 'पूरी तस्वीर' देखना भूल जाता/जाती हूँ।"
+              },
+              "itemNumber": 3
+            },
+            {
+              "id": "pdq_4",
+              "text": {
+                "en": "I need to be the center of attention.",
+                "hi": "मुझे ध्यान का केंद्र बनने की आवश्यकता होती है।"
+              },
+              "itemNumber": 4
+            },
+            {
+              "id": "pdq_5",
+              "text": {
+                "en": "I have accomplished far more than others give me credit.",
+                "hi": "मैंने इतनी अधिक सफलता अर्जित की है जितना लोग मुझे श्रेय देते हैं।"
+              },
+              "itemNumber": 5
+            },
+            {
+              "id": "pdq_6",
+              "text": {
+                "en": "I'll go to extremes to prevent those whom I love from ever leaving me.",
+                "hi": "प्रियजनों को मुझसे दूर जाने से रोकने हेतु मैं अति में जाता/जाती हूँ।"
+              },
+              "itemNumber": 6
+            },
+            {
+              "id": "pdq_7",
+              "text": {
+                "en": "Others have complained that I do not keep up with my work or commitments.",
+                "hi": "लोग शिकायत करते हैं कि मैं अपना कार्य या प्रतिबद्धताएँ पूरी नहीं करता/करती।"
+              },
+              "itemNumber": 7
+            },
+            {
+              "id": "pdq_8",
+              "text": {
+                "en": "I've been in trouble with the law several times (or would have been if I had been caught).",
+                "hi": "कानून से मेरे कई बार झंझट रहे हैं (अथवा होते यदि पकड़ा जाता)।"
+              },
+              "itemNumber": 8
+            },
+            {
+              "id": "pdq_9",
+              "text": {
+                "en": "Spending time with family or friends just doesn't interest me.",
+                "hi": "परिवार या मित्रों के साथ समय बिताने में मुझे रुचि नहीं है।"
+              },
+              "itemNumber": 9
+            },
+            {
+              "id": "pdq_10",
+              "text": {
+                "en": "I get special messages from things happening around me.",
+                "hi": "चारों ओर घटित होने वाली बातों से मुझे विशेष संदेश मिलते हैं।"
+              },
+              "itemNumber": 10
+            },
+            {
+              "id": "pdq_11",
+              "text": {
+                "en": "I know that people will take advantage of me, or try to cheat me, if I let them.",
+                "hi": "मुझे ज्ञात है कि लोग मुझे ठगा करेंगे अथवा दोहन करेंगे यदि मैं अनुमति दूँ।"
+              },
+              "itemNumber": 11
+            },
+            {
+              "id": "pdq_12",
+              "text": {
+                "en": "Sometimes I get upset.",
+                "hi": "कभी-कभी मैं परेशान हो जाता/जाती हूँ।"
+              },
+              "itemNumber": 12
+            },
+            {
+              "id": "pdq_13",
+              "text": {
+                "en": "I make friends with people only when I am sure they like me.",
+                "hi": "मैं लोगों से मित्रता तभी करता/करती हूँ जब निश्चित होऊँ कि वे मुझे पसंद करते हैं।"
+              },
+              "itemNumber": 13
+            },
+            {
+              "id": "pdq_14",
+              "text": {
+                "en": "I am usually depressed.",
+                "hi": "मैं प्रायः अवसादग्रस्त रहता/रहती हूँ।"
+              },
+              "itemNumber": 14
+            },
+            {
+              "id": "pdq_15",
+              "text": {
+                "en": "I prefer that other people assume responsibility for me.",
+                "hi": "मैं चाहता/चाहती हूँ कि अन्य लोग मेरे लिए उत्तरदायित्व लें।"
+              },
+              "itemNumber": 15
+            },
+            {
+              "id": "pdq_16",
+              "text": {
+                "en": "I waste time trying to make things too perfect.",
+                "hi": "चीज़ों को अत्यंत पूर्ण बनाने के प्रयास में मैं समय बर्बाद करता/करती हूँ।"
+              },
+              "itemNumber": 16
+            },
+            {
+              "id": "pdq_17",
+              "text": {
+                "en": "I am \"sexier\" than most people.",
+                "hi": "मैं अधिकतर लोगों की तुलना में अधिक आकर्षक/आकर्षी हूँ।"
+              },
+              "itemNumber": 17
+            },
+            {
+              "id": "pdq_18",
+              "text": {
+                "en": "I often find myself thinking about how great a person I am, or will be.",
+                "hi": "मैं प्रायः स्वयं को यह सोचते पाता/पाती हूँ कि मैं कितना महान व्यक्ति हूँ अथवा हूँगा।"
+              },
+              "itemNumber": 18
+            },
+            {
+              "id": "pdq_19",
+              "text": {
+                "en": "I either love someone or hate them, with nothing in between.",
+                "hi": "मैं किसी से या तो प्रेम करता/करती हूँ या घृणा, बीच का कुछ नहीं।"
+              },
+              "itemNumber": 19
+            },
+            {
+              "id": "pdq_20",
+              "text": {
+                "en": "I get into a lot of physical fights.",
+                "hi": "मेरे कई शारीरिक झगड़े होते हैं।"
+              },
+              "itemNumber": 20
+            },
+            {
+              "id": "pdq_21",
+              "text": {
+                "en": "I feel that others don't understand or appreciate me.",
+                "hi": "मुझे लगता है कि अन्य लोग मुझे समझते नहीं या सराहते नहीं।"
+              },
+              "itemNumber": 21
+            },
+            {
+              "id": "pdq_22",
+              "text": {
+                "en": "I would rather do things by myself than with other people.",
+                "hi": "मैं अन्य लोगों के साथ करने की बजाय कार्य स्वयं करना पसंद करता/करती हूँ।"
+              },
+              "itemNumber": 22
+            },
+            {
+              "id": "pdq_23",
+              "text": {
+                "en": "I have the ability to know that some things will happen before they actually do.",
+                "hi": "कुछ घटनाएँ घटने से पूर्व ही जानने की क्षमता मुझमें है।"
+              },
+              "itemNumber": 23
+            },
+            {
+              "id": "pdq_24",
+              "text": {
+                "en": "I often wonder whether the people I know can really be trusted.",
+                "hi": "मैं प्रायः सोचता/सोचती हूँ कि क्या मेरे परिचित सच में विश्वसनीय हैं।"
+              },
+              "itemNumber": 24
+            },
+            {
+              "id": "pdq_25",
+              "text": {
+                "en": "Occasionally I talk about people behind their backs.",
+                "hi": "कभी-कभी मैं पीठ पीछे लोगों की बात करता/करती हूँ।"
+              },
+              "itemNumber": 25
+            },
+            {
+              "id": "pdq_26",
+              "text": {
+                "en": "I am inhibited in my intimate relationships because I am afraid of being ridiculed.",
+                "hi": "उपहास के भय से मैं अपने घनिष्ठ संबंधों में संकोची रहता/रहती हूँ।"
+              },
+              "itemNumber": 26
+            },
+            {
+              "id": "pdq_27",
+              "text": {
+                "en": "I fear losing the support of others if I disagree with them.",
+                "hi": "उनसे असहमत होने पर दूसरों का समर्थन खोने का भय सताता है।"
+              },
+              "itemNumber": 27
+            },
+            {
+              "id": "pdq_28",
+              "text": {
+                "en": "I have many shortcomings.",
+                "hi": "मुझे अनेक कमियाँ हैं।"
+              },
+              "itemNumber": 28
+            },
+            {
+              "id": "pdq_29",
+              "text": {
+                "en": "I put my work ahead of being with my family or friends or having fun.",
+                "hi": "मैं परिवार, मित्रों या आनंद से पहले अपना कार्य रखता/रखती हूँ।"
+              },
+              "itemNumber": 29
+            },
+            {
+              "id": "pdq_30",
+              "text": {
+                "en": "I show my emotions easily.",
+                "hi": "मैं सहजता से अपनी भावनाएँ प्रकट करता/करती हूँ।"
+              },
+              "itemNumber": 30
+            },
+            {
+              "id": "pdq_31",
+              "text": {
+                "en": "Only certain special people can really appreciate and understand me.",
+                "hi": "केवल कुछ विशेष व्यक्ति ही वास्तव में मुझे सराह व समझ सकते हैं।"
+              },
+              "itemNumber": 31
+            },
+            {
+              "id": "pdq_32",
+              "text": {
+                "en": "I often wonder who I really am.",
+                "hi": "मैं प्रायः सोचता/सोचती हूँ कि वास्तव में मैं कौन हूँ।"
+              },
+              "itemNumber": 32
+            },
+            {
+              "id": "pdq_33",
+              "text": {
+                "en": "I have difficulty paying bills because I don't stay at any one job for very long.",
+                "hi": "बिल चुकाने में कठिनाई होती है क्योंकि मैं कोई नौकरी अधिक काल तक नहीं करता/करती।"
+              },
+              "itemNumber": 33
+            },
+            {
+              "id": "pdq_34",
+              "text": {
+                "en": "Sex just doesn't interest me.",
+                "hi": "यौन विषय में मुझे रुचि नहीं है।"
+              },
+              "itemNumber": 34
+            },
+            {
+              "id": "pdq_35",
+              "text": {
+                "en": "Others consider me moody and \"hot tempered\".",
+                "hi": "लोग मुझे मिजाज़ी व 'गर्म स्वभाव' का मानते हैं।"
+              },
+              "itemNumber": 35
+            },
+            {
+              "id": "pdq_36",
+              "text": {
+                "en": "I can often sense, or feel things, that others can't.",
+                "hi": "मैं प्रायः ऐसी बातें अनुभव कर सकता/सकती हूँ जो अन्य नहीं कर सकते।"
+              },
+              "itemNumber": 36
+            },
+            {
+              "id": "pdq_37",
+              "text": {
+                "en": "Others will use what I tell them against me.",
+                "hi": "लोग मेरी कही बात मेरे विरुद्ध प्रयोग करेंगे।"
+              },
+              "itemNumber": 37
+            },
+            {
+              "id": "pdq_38",
+              "text": {
+                "en": "There are some people I don't like.",
+                "hi": "कुछ लोग ऐसे हैं जिन्हें मैं पसंद नहीं करता/करती।"
+              },
+              "itemNumber": 38
+            },
+            {
+              "id": "pdq_39",
+              "text": {
+                "en": "I am more sensitive to criticism or rejection than most people.",
+                "hi": "आलोचना या अस्वीकृति प्रति अधिकतर लोगों की अपेक्षा मैं अधिक संवेदनशील हूँ।"
+              },
+              "itemNumber": 39
+            },
+            {
+              "id": "pdq_40",
+              "text": {
+                "en": "I find it difficult to start something if I have to do it by myself.",
+                "hi": "स्वयं से करना पड़े तो आरंभ करने में कठिनाई होती है।"
+              },
+              "itemNumber": 40
+            },
+            {
+              "id": "pdq_41",
+              "text": {
+                "en": "I have a higher sense of morality than other people.",
+                "hi": "अन्य लोगों की तुलना में मेरा नैतिक बोध उच्चतर है।"
+              },
+              "itemNumber": 41
+            },
+            {
+              "id": "pdq_42",
+              "text": {
+                "en": "I am my own worst critic.",
+                "hi": "मैं स्वयं का सबसे कठोर आलोचक हूँ।"
+              },
+              "itemNumber": 42
+            },
+            {
+              "id": "pdq_43",
+              "text": {
+                "en": "I use my \"looks\" to get the attention that I need.",
+                "hi": "मुझे चाहिए वाला ध्यान पाने हेतु मैं अपना 'रूप' प्रयोग करता/करती हूँ।"
+              },
+              "itemNumber": 43
+            },
+            {
+              "id": "pdq_44",
+              "text": {
+                "en": "I very much need other people to take notice or compliment me.",
+                "hi": "मुझे अत्यंत आवश्यकता है कि लोग मुझे ध्यान दें या प्रशंसा करें।"
+              },
+              "itemNumber": 44
+            },
+            {
+              "id": "pdq_45",
+              "text": {
+                "en": "I have tried to hurt or kill myself.",
+                "hi": "मैंने स्वयं को क्षति पहुँचाने अथवा आत्महत्या के प्रयास किए हैं।"
+              },
+              "itemNumber": 45,
+              "safety": true
+            },
+            {
+              "id": "pdq_46",
+              "text": {
+                "en": "I do a lot of things without considering the consequences.",
+                "hi": "मैं परिणामों को विचारे बिना अनेक कार्य करता/करती हूँ।"
+              },
+              "itemNumber": 46
+            },
+            {
+              "id": "pdq_47",
+              "text": {
+                "en": "There are few activities that I have any interest.",
+                "hi": "ऐसी गतिविधियाँ कम हैं जिनमें मुझे रुचि है।"
+              },
+              "itemNumber": 47
+            },
+            {
+              "id": "pdq_48",
+              "text": {
+                "en": "People often have difficulty understanding what I say.",
+                "hi": "लोगों को मेरी बात समझने में कठिनाई होती है।"
+              },
+              "itemNumber": 48
+            },
+            {
+              "id": "pdq_49",
+              "text": {
+                "en": "I object to supervisors telling me how I should do my job.",
+                "hi": "अधिकारी द्वारा कार्य-विधि बताने का मैं विरोध करता/करती हूँ।"
+              },
+              "itemNumber": 49
+            },
+            {
+              "id": "pdq_50",
+              "text": {
+                "en": "I keep alert to figure out the real meaning of what people are saying.",
+                "hi": "लोगों की बात का वास्तविक अर्थ जानने हेतु मैं सतर्क रहता/रहती हूँ।"
+              },
+              "itemNumber": 50
+            },
+            {
+              "id": "pdq_51",
+              "text": {
+                "en": "I have never told a lie.",
+                "hi": "मैंने कभी झूठ नहीं बोला।"
+              },
+              "itemNumber": 51
+            },
+            {
+              "id": "pdq_52",
+              "text": {
+                "en": "I am afraid to meet new people because I feel inadequate.",
+                "hi": "नए लोगों से मिलने से भय लगता है क्योंकि मैं अपर्याप्त अनुभव करता/करती हूँ।"
+              },
+              "itemNumber": 52
+            },
+            {
+              "id": "pdq_53",
+              "text": {
+                "en": "I want people to like me so much that I volunteer to do things that I'd rather not do.",
+                "hi": "लोग मुझे पसंद करें, इसकी इतनी इच्छा है कि अनचाहे कार्य भी स्वैच्छिक करता/करती हूँ।"
+              },
+              "itemNumber": 53
+            },
+            {
+              "id": "pdq_54",
+              "text": {
+                "en": "I have accumulated lots of things that I don't need but I can't bear to throw out.",
+                "hi": "अनेक अनावश्यक वस्तुएँ जमा कर चुका हूँ पर फेंकने की सहनशक्ति नहीं।"
+              },
+              "itemNumber": 54
+            },
+            {
+              "id": "pdq_55",
+              "text": {
+                "en": "Even though I talk a lot, people say that I have trouble getting to the point.",
+                "hi": "अधिक बोलने के बावजूद लोग कहते हैं कि मैं मुख्य बात तक नहीं पहुँच पाता/पहुँचती।"
+              },
+              "itemNumber": 55
+            },
+            {
+              "id": "pdq_56",
+              "text": {
+                "en": "I worry a lot.",
+                "hi": "मैं बहुत चिंता करता/करती हूँ।"
+              },
+              "itemNumber": 56
+            },
+            {
+              "id": "pdq_57",
+              "text": {
+                "en": "I expect other people to do favors for me even though I do not usually do favors for them.",
+                "hi": "मुझे आशा है कि अन्य मेरे उपकार करेंगे यद्यपि मैं प्रायः उनके नहीं करता/करती।"
+              },
+              "itemNumber": 57
+            },
+            {
+              "id": "pdq_58",
+              "text": {
+                "en": "I am a very moody person.",
+                "hi": "मैं अत्यंत मिजाज़-परिवर्ती व्यक्ति हूँ।"
+              },
+              "itemNumber": 58
+            },
+            {
+              "id": "pdq_59",
+              "text": {
+                "en": "Lying comes easily to me and I often do it.",
+                "hi": "झूठ बोलना मुझे सहज है और मैं प्रायः बोलता/बोलती हूँ।"
+              },
+              "itemNumber": 59
+            },
+            {
+              "id": "pdq_60",
+              "text": {
+                "en": "I am not interested in having close friends.",
+                "hi": "घनिष्ठ मित्रता रखने में मेरी रुचि नहीं है।"
+              },
+              "itemNumber": 60
+            },
+            {
+              "id": "pdq_61",
+              "text": {
+                "en": "I am often on guard against being taken advantage of.",
+                "hi": "दोहन हुए जाय, इससे बचने हेतु मैं प्रायः सतर्क रहता/रहती हूँ।"
+              },
+              "itemNumber": 61
+            },
+            {
+              "id": "pdq_62",
+              "text": {
+                "en": "I never forget, or forgive, those who do me wrong.",
+                "hi": "मुझे अन्याय करने वालों को न भूलता/भूलती हूँ, न क्षमा करता/करती हूँ।"
+              },
+              "itemNumber": 62
+            },
+            {
+              "id": "pdq_63",
+              "text": {
+                "en": "I resent those who have more \"luck\" than I.",
+                "hi": "जिनका भाग्य मुझसे अच्छा है उनपर मुझे कड़वाहट होती है।"
+              },
+              "itemNumber": 63
+            },
+            {
+              "id": "pdq_64",
+              "text": {
+                "en": "A nuclear war may not be such a bad idea.",
+                "hi": "परमाणु युद्ध इतना बुरा विचार न हो।"
+              },
+              "itemNumber": 64,
+              "safety": true
+            },
+            {
+              "id": "pdq_65",
+              "text": {
+                "en": "When alone, I feel helpless and unable to care for myself.",
+                "hi": "अकेले होने पर असहाय व स्वयं की देखभाल में असमर्थ अनुभव करता/करती हूँ।"
+              },
+              "itemNumber": 65
+            },
+            {
+              "id": "pdq_66",
+              "text": {
+                "en": "If others can't do things correctly, I would prefer to do them myself.",
+                "hi": "अन्य सही ढंग से न करें तो मैं कार्य स्वयं करना पसंद करता/करती हूँ।"
+              },
+              "itemNumber": 66
+            },
+            {
+              "id": "pdq_67",
+              "text": {
+                "en": "I have a flair for the dramatic.",
+                "hi": "मुझे नाटकीयता की सहज शैली है।"
+              },
+              "itemNumber": 67
+            },
+            {
+              "id": "pdq_68",
+              "text": {
+                "en": "Some people think that I take advantage of others.",
+                "hi": "कुछ लोग सोचते हैं कि मैं दूसरों का दोहन करता/करती हूँ।"
+              },
+              "itemNumber": 68
+            },
+            {
+              "id": "pdq_69",
+              "text": {
+                "en": "I feel that my life is dull and meaningless.",
+                "hi": "मुझे लगता है मेरा जीवन रसहीन व निरर्थक है।"
+              },
+              "itemNumber": 69
+            },
+            {
+              "id": "pdq_70",
+              "text": {
+                "en": "I am critical of others.",
+                "hi": "मैं दूसरों की आलोचना करता/करती हूँ।"
+              },
+              "itemNumber": 70
+            },
+            {
+              "id": "pdq_71",
+              "text": {
+                "en": "I don't care what others have to say about me.",
+                "hi": "लोग मेरे विषय क्या कहते हैं, इससे मुझे फर्क नहीं पड़ता।"
+              },
+              "itemNumber": 71
+            },
+            {
+              "id": "pdq_72",
+              "text": {
+                "en": "I have difficulties relating to others in a one-to-one situation.",
+                "hi": "एक-से-एक परिस्थिति में संबंध बनाने में कठिनाई होती है।"
+              },
+              "itemNumber": 72
+            },
+            {
+              "id": "pdq_73",
+              "text": {
+                "en": "People have often complained that I did not realize that they were upset.",
+                "hi": "लोग शिकायत करते रहे कि मैं उनकी उद्विग्नाता पहचान नहीं पाता/पाती।"
+              },
+              "itemNumber": 73
+            },
+            {
+              "id": "pdq_74",
+              "text": {
+                "en": "By looking at me, people might think that I'm pretty odd, eccentric or weird.",
+                "hi": "मुझे देखकर लोग सोच सकते हैं कि मैं बहुत अजीब, विचित्र हूँ।"
+              },
+              "itemNumber": 74
+            },
+            {
+              "id": "pdq_75",
+              "text": {
+                "en": "I enjoy doing risky things.",
+                "hi": "जोखिम वाले कार्य करने में मुझे आनंद मिलता है।"
+              },
+              "itemNumber": 75
+            },
+            {
+              "id": "pdq_76",
+              "text": {
+                "en": "I have lied a lot on this questionnaire.",
+                "hi": "इस प्रश्नावली में मैंने बहुत झूठ बोला है।"
+              },
+              "itemNumber": 76,
+              "safety": true
+            },
+            {
+              "id": "pdq_77",
+              "text": {
+                "en": "I complain a lot about my hardships.",
+                "hi": "मैं अपनी कठिनाइयों की बहुत शिकायत करता/करती हूँ।"
+              },
+              "itemNumber": 77
+            },
+            {
+              "id": "pdq_78",
+              "text": {
+                "en": "I have difficulty controlling my anger or temper.",
+                "hi": "क्रोध या प्रकोप पर नियंत्रण में कठिनाई होती है।"
+              },
+              "itemNumber": 78
+            },
+            {
+              "id": "pdq_79",
+              "text": {
+                "en": "Some people are jealous of me.",
+                "hi": "कुछ लोग मुझसे ईर्ष्या करते हैं।"
+              },
+              "itemNumber": 79
+            },
+            {
+              "id": "pdq_80",
+              "text": {
+                "en": "I am easily influenced by others.",
+                "hi": "मैं दूसरों से सहजता से प्रभावित हो जाता/जाती हूँ।"
+              },
+              "itemNumber": 80
+            },
+            {
+              "id": "pdq_81",
+              "text": {
+                "en": "I see myself as thrifty, but others see me as being cheap.",
+                "hi": "मैं स्वयं को मितव्ययी मानता/मानती हूँ पर लोग कंजूस मानते हैं।"
+              },
+              "itemNumber": 81
+            },
+            {
+              "id": "pdq_82",
+              "text": {
+                "en": "I am terrified of being left to care for myself.",
+                "hi": "स्वयं की देखभाल हेतु अकेले छोड़े जाने का भय सताता है।"
+              },
+              "itemNumber": 82
+            },
+            {
+              "id": "pdq_83",
+              "text": {
+                "en": "I suffer from low self-esteem.",
+                "hi": "मैं निम्न आत्म-सम्मान से पीड़ित हूँ।"
+              },
+              "itemNumber": 83
+            },
+            {
+              "id": "pdq_84",
+              "text": {
+                "en": "I am a pessimist.",
+                "hi": "मैं निराशावादी हूँ।"
+              },
+              "itemNumber": 84
+            },
+            {
+              "id": "pdq_85",
+              "text": {
+                "en": "I waste no time in getting back at people who insult me.",
+                "hi": "अपमान करने वालों से बदला लेने में देर नहीं लगाता/लगाती।"
+              },
+              "itemNumber": 85
+            },
+            {
+              "id": "pdq_86",
+              "text": {
+                "en": "Being around other people makes me nervous.",
+                "hi": "लोगों के बीच रहने पर घबराहट होती है।"
+              },
+              "itemNumber": 86
+            },
+            {
+              "id": "pdq_87",
+              "text": {
+                "en": "In new situations, I fear being embarrassed.",
+                "hi": "नई परिस्थितियों में अपमानित होने का भय लगता है।"
+              },
+              "itemNumber": 87
+            },
+            {
+              "id": "pdq_88",
+              "text": {
+                "en": "I take relationships more seriously than do those who I'm involved with.",
+                "hi": "मैं संबंधों को अपने सहभागियों की अपेक्षा अधिक गंभीरता से लेता/लेती हूँ।"
+              },
+              "itemNumber": 88
+            },
+            {
+              "id": "pdq_89",
+              "text": {
+                "en": "People complain that I'm \"stubborn as a mule\".",
+                "hi": "लोग शिकायत करते हैं कि मैं अत्यंत ज़िद्दी हूँ।"
+              },
+              "itemNumber": 89
+            },
+            {
+              "id": "pdq_90",
+              "text": {
+                "en": "When a close relationship ends, I need to get involved with someone else immediately.",
+                "hi": "घनिष्ठ संबंध समाप्त होते ही तुरंत किसी अन्य से जुड़ना आवश्यक लगता है।"
+              },
+              "itemNumber": 90
+            },
+            {
+              "id": "pdq_91",
+              "text": {
+                "en": "I can be nasty with someone one minute, then find myself apologizing to them the next minute.",
+                "hi": "एक पल किसी पर नाराज़, अगले पल क्षमायाचना — ऐसा होता है।"
+              },
+              "itemNumber": 91
+            },
+            {
+              "id": "pdq_92",
+              "text": {
+                "en": "Others consider me to be stuck up.",
+                "hi": "लोग मुझे घमंडी मानते हैं।"
+              },
+              "itemNumber": 92
+            },
+            {
+              "id": "pdq_93",
+              "text": {
+                "en": "When stressed, things happen, like I get paranoid or just \"black out\".",
+                "hi": "तनाव में ऐसी बातें होती हैं जैसे अत्यधिक संदेहवाद अथवा स्मृति-छाया (black out)।"
+              },
+              "itemNumber": 93
+            },
+            {
+              "id": "pdq_94",
+              "text": {
+                "en": "I don't care if others get hurt so long as I get what I want.",
+                "hi": "अपना काम निकलने तक दूसरों को क्षति हो तो मुझे परवाह नहीं।"
+              },
+              "itemNumber": 94
+            },
+            {
+              "id": "pdq_95",
+              "text": {
+                "en": "I keep my distance from others.",
+                "hi": "मैं दूसरों से दूरी बनाए रखता/रखती हूँ।"
+              },
+              "itemNumber": 95
+            },
+            {
+              "id": "pdq_96",
+              "text": {
+                "en": "I often wonder whether my wife (husband, girlfriend or boyfriend) has been unfaithful to me.",
+                "hi": "मैं प्रायः सोचता/सोचती हूँ कि क्या मेरे जीवनसाथी ने विश्वासघात किया।"
+              },
+              "itemNumber": 96
+            },
+            {
+              "id": "pdq_97",
+              "text": {
+                "en": "I often feel guilty.",
+                "hi": "मुझे प्रायः अपराधबोध होता है।"
+              },
+              "itemNumber": 97
+            },
+            {
+              "id": "pdq_98",
+              "text": {
+                "en": "When I was an adult, I have done things on impulse that could have gotten me into trouble.",
+                "hi": "वयस्क होने पर आवेगी कार्य किए जो मुझे मुसीबत में डाल सकते थे।"
+              },
+              "itemNumber": 98,
+              "isSectionB": true
+            },
+            {
+              "id": "pdq_99",
+              "text": {
+                "en": "When I was a kid (before age 15), I was somewhat of a juvenile delinquent, doing some of the things below.",
+                "hi": "15 वर्ष से पूर्व बचपन में मैं कुछ हद तक किशोर-अपराधी था; नीचे दी गई कुछ बातें करता था।"
+              },
+              "itemNumber": 99,
+              "isSectionB": true
+            }
+          ]
+        },
+        {
+          "id": "pdq_98_impulsivity",
+          "linkedItem": 98,
+          "name": {
+            "en": "Item 98 — Impulsive activities (check those that apply)",
+            "hi": "आइटम 98 — आवेगी गतिविधियाँ (लागू होने पर चिह्नित करें)"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "No",
+                "hi": "नहीं"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "Yes",
+                "hi": "हाँ"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "i98_spend",
+              "text": {
+                "en": "Spend more money than I have.",
+                "hi": "मेरे पास से अधिक धन व्यय करना।"
+              }
+            },
+            {
+              "id": "i98_sex",
+              "text": {
+                "en": "Having sex with people I hardly know.",
+                "hi": "परिचित न लोगों के साथ यौन संबंध।"
+              }
+            },
+            {
+              "id": "i98_drink",
+              "text": {
+                "en": "Drinking too much.",
+                "hi": "अधिक शराब सेवन।"
+              }
+            },
+            {
+              "id": "i98_drugs",
+              "text": {
+                "en": "Taking drugs.",
+                "hi": "मादक द्रव्य लेना।"
+              }
+            },
+            {
+              "id": "i98_binge",
+              "text": {
+                "en": "Eating binges.",
+                "hi": "अतिभोजन के एपिसोड।"
+              }
+            },
+            {
+              "id": "i98_drive",
+              "text": {
+                "en": "Reckless driving.",
+                "hi": "बेपरवाह ड्राइविंग।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "pdq_99_conduct",
+          "linkedItem": 99,
+          "name": {
+            "en": "Item 99 — Juvenile conduct problems before age 15 (check those that apply)",
+            "hi": "आइटम 99 — 15 वर्ष से पूर्व किशोरावस्था की आचरण समस्याएँ (लागू होने पर चिह्नित करें)"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "No",
+                "hi": "नहीं"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "Yes",
+                "hi": "हाँ"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cd99_bully",
+              "text": {
+                "en": "I was considered a bully.",
+                "hi": "मुझे दुर्व्यवहारकारी माना जाता था।"
+              }
+            },
+            {
+              "id": "cd99_fights",
+              "text": {
+                "en": "I used to start fights with other kids.",
+                "hi": "मैं अन्य बच्चों से झगड़े आरंभ करता था।"
+              }
+            },
+            {
+              "id": "cd99_weapon",
+              "text": {
+                "en": "I used a weapon in fights that I had.",
+                "hi": "झगड़ों में मैंने अस्त्र प्रयोग किया।"
+              }
+            },
+            {
+              "id": "cd99_rob",
+              "text": {
+                "en": "I robbed or mugged other people.",
+                "hi": "मैं लोगों को लूटता था।"
+              }
+            },
+            {
+              "id": "cd99_cruel_people",
+              "text": {
+                "en": "I was physically cruel to other people.",
+                "hi": "मैं लोगों के प्रति शारीरिक रूप से क्रूर था।"
+              }
+            },
+            {
+              "id": "cd99_cruel_animals",
+              "text": {
+                "en": "I was physically cruel to animals.",
+                "hi": "मैं पशुओं के प्रति शारीरिक रूप से क्रूर था।"
+              }
+            },
+            {
+              "id": "cd99_sex",
+              "text": {
+                "en": "I forced someone to have sex with me.",
+                "hi": "मैंने किसी को बलपूर्वक संबंध बनाने को बाध्य किया।"
+              }
+            },
+            {
+              "id": "cd99_lie",
+              "text": {
+                "en": "I lied a lot.",
+                "hi": "मैं बहुत झूठ बोलता था।"
+              }
+            },
+            {
+              "id": "cd99_stay_out",
+              "text": {
+                "en": "I stayed out at night without permission.",
+                "hi": "अनुमति बिना रात भर बाहर रहता था।"
+              }
+            },
+            {
+              "id": "cd99_steal",
+              "text": {
+                "en": "I stole things from others.",
+                "hi": "मैं दूसरों की वस्तुएँ चुराता था।"
+              }
+            },
+            {
+              "id": "cd99_fire",
+              "text": {
+                "en": "I set fires.",
+                "hi": "मैं आग लगाता था।"
+              }
+            },
+            {
+              "id": "cd99_property",
+              "text": {
+                "en": "I broke windows or destroyed property.",
+                "hi": "मैं खिड़कियाँ तोड़ता या संपत्ति नष्ट करता था।"
+              }
+            },
+            {
+              "id": "cd99_runaway",
+              "text": {
+                "en": "I ran away from home overnight more than once.",
+                "hi": "एक से अधिक बार घर से रात भर गायब हुआ।"
+              }
+            },
+            {
+              "id": "cd99_truancy",
+              "text": {
+                "en": "I began skipping school a lot before age 13.",
+                "hi": "13 वर्ष से पूर्व मैं विद्यालय प्रायः छूटता था।"
+              }
+            },
+            {
+              "id": "cd99_break_in",
+              "text": {
+                "en": "I broke into someone's house, building, or car.",
+                "hi": "मैं किसी के घर, भवन या वाहन में सेंध लगाता था।"
+              }
+            }
+          ]
+        },
+        {
+          "id": "pdq_clinical_significance",
+          "name": {
+            "en": "Clinical Significance Evaluation (mandatory follow-up for each flagged scale)",
+            "hi": "नैदानिक महत्व मूल्यांकन (चिह्नित प्रत्येक पैमाने हेतु अनिवार्य अनुवर्ती)"
+          },
+          "clinicianRated": true,
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "No",
+                "hi": "नहीं"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "Yes",
+                "hi": "हाँ"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "cs_a",
+              "text": {
+                "en": "Are all these items totally true for you?",
+                "hi": "क्या ये सभी आइटम आपके लिए पूर्णतः सत्य हैं?"
+              },
+              "criterionNote": "Accuracy — client must confirm (or remove false positives)"
+            },
+            {
+              "id": "cs_b",
+              "text": {
+                "en": "How long have these traits been part of your personality?",
+                "hi": "ये लक्षण कब से आपके व्यक्तित्व का अंग हैं?"
+              },
+              "criterionNote": "Duration — most of life / since before age 18"
+            },
+            {
+              "id": "cs_c",
+              "text": {
+                "en": "Are these traits present even when you're NOT depressed, anxious, using substances, or physically ill?",
+                "hi": "क्या ये लक्षण तब भी विद्यमान हैं जब आप अवसादग्रस्त, चिंतित, पदार्थाधीन अथवा शारीरिक रूप से रोगी नहीं हैं?"
+              },
+              "criterionNote": "Pervasiveness — not limited to transient states"
+            },
+            {
+              "id": "cs_d",
+              "text": {
+                "en": "Have these traits caused problems in work, relationships, or home life?",
+                "hi": "क्या इन लक्षणों ने कार्य, संबंध या गृह-जीवन में समस्याएँ उत्पन्न की हैं?"
+              },
+              "criterionNote": "Impairment — yes in at least one area"
+            },
+            {
+              "id": "cs_e",
+              "text": {
+                "en": "Do these traits bother you or cause you distress?",
+                "hi": "क्या ये लक्षण आपको परेशान करते हैं अथवा पीड़ा देते हैं?"
+              },
+              "criterionNote": "Distress — yes"
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 1,
+          "label": {
+            "en": "True",
+            "hi": "सत्य"
+          }
+        },
+        {
+          "v": 0,
+          "label": {
+            "en": "False",
+            "hi": "मिथ्या"
+          }
+        }
+      ],
+      "keyedScoring": true,
+      "keying": "pdq4",
+      "itemNumberPrefix": true,
+      "validity": {
+        "items": [
+          {
+            "id": "pdq_64",
+            "statement": {
+              "en": "A nuclear war may not be such a bad idea.",
+              "hi": "परमाणु युद्ध इतना बुरा विचार न हो।"
+            },
+            "pathologicalResponse": "True",
+            "meaning": {
+              "en": "Suggests random, exaggerated, or invalid responding.",
+              "hi": "यादृच्छिक/ अतिरंजित अथवा अमान्य प्रतिविमर्श सूचित।"
+            }
+          },
+          {
+            "id": "pdq_76",
+            "statement": {
+              "en": "I have lied a lot on this questionnaire.",
+              "hi": "इस प्रश्नावली में मैंने बहुत झूठ बोला है।"
+            },
+            "pathologicalResponse": "True",
+            "meaning": {
+              "en": "Indicates response distortion or poor validity.",
+              "hi": "प्रतिविमर्श विकृति अथवा निम्न वैधता सूचित।"
+            }
+          }
+        ],
+        "rule": {
+          "en": "Before scoring, check these infrequency/validity items. If either is True, interpret results with extreme caution or consider the profile invalid.",
+          "hi": "अंकन से पूर्व ये अवरण/वैधता आइटम जाँचें। यदि कोई एक सत्य हो तो परिणाम अत्यंत सावधानी से व्याख्यायित करें अथवा प्रोफ़ाइल अमान्य मानें।"
+        }
+      },
+      "scales": [
+        {
+          "slug": "Paranoid",
+          "profileColumn": "Par",
+          "name": {
+            "en": "Paranoid",
+            "hi": "Paranoid"
+          },
+          "threshold": 4,
+          "items": [
+            11,
+            24,
+            37,
+            50,
+            62,
+            85,
+            96
+          ],
+          "disorders": [
+            "paranoid_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Schizoid",
+          "profileColumn": "Szid",
+          "name": {
+            "en": "Schizoid",
+            "hi": "Schizoid"
+          },
+          "threshold": 4,
+          "items": [
+            9,
+            22,
+            34,
+            47,
+            60,
+            71,
+            95
+          ],
+          "disorders": [
+            "schizoid_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Schizotypal",
+          "profileColumn": "Sztp",
+          "name": {
+            "en": "Schizotypal",
+            "hi": "Schizotypal"
+          },
+          "threshold": 5,
+          "items": [
+            1,
+            10,
+            23,
+            31,
+            36,
+            48,
+            61,
+            72,
+            74,
+            86
+          ],
+          "disorders": [
+            "schizotypal_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Antisocial",
+          "profileColumn": "Ant",
+          "name": {
+            "en": "Antisocial",
+            "hi": "Antisocial"
+          },
+          "threshold": 3,
+          "items": [
+            8,
+            20,
+            33,
+            46,
+            59,
+            75,
+            94
+          ],
+          "disorders": [
+            "antisocial_personality_disorder"
+          ],
+          "requiresSectionB": "sectionB_99"
+        },
+        {
+          "slug": "Borderline",
+          "profileColumn": "Bor",
+          "name": {
+            "en": "Borderline",
+            "hi": "Borderline"
+          },
+          "threshold": 5,
+          "items": [
+            6,
+            19,
+            32,
+            45,
+            58,
+            69,
+            78,
+            93
+          ],
+          "disorders": [
+            "borderline_personality_disorder"
+          ],
+          "requiresSectionB": "sectionB_98"
+        },
+        {
+          "slug": "Histrionic",
+          "profileColumn": "His",
+          "name": {
+            "en": "Histrionic",
+            "hi": "Histrionic"
+          },
+          "threshold": 4,
+          "items": [
+            4,
+            17,
+            30,
+            43,
+            55,
+            67,
+            80,
+            90
+          ],
+          "disorders": [
+            "histrionic_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Narcissistic",
+          "profileColumn": "Nar",
+          "name": {
+            "en": "Narcissistic",
+            "hi": "Narcissistic"
+          },
+          "threshold": 5,
+          "items": [
+            5,
+            18,
+            31,
+            44,
+            57,
+            68,
+            73,
+            79,
+            92
+          ],
+          "disorders": [
+            "narcissistic_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Avoidant",
+          "profileColumn": "Av",
+          "name": {
+            "en": "Avoidant",
+            "hi": "Avoidant"
+          },
+          "threshold": 4,
+          "items": [
+            1,
+            13,
+            26,
+            39,
+            52,
+            83,
+            87
+          ],
+          "disorders": [
+            "avoidant_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Dependent",
+          "profileColumn": "Dep",
+          "name": {
+            "en": "Dependent",
+            "hi": "Dependent"
+          },
+          "threshold": 5,
+          "items": [
+            2,
+            15,
+            27,
+            40,
+            53,
+            65,
+            82
+          ],
+          "disorders": [
+            "dependent_personality_disorder"
+          ]
+        },
+        {
+          "slug": "OC",
+          "profileColumn": "OC",
+          "name": {
+            "en": "Obsessive-Compulsive",
+            "hi": "Obsessive-Compulsive"
+          },
+          "threshold": 4,
+          "items": [
+            3,
+            16,
+            29,
+            41,
+            54,
+            66,
+            81,
+            89
+          ],
+          "disorders": [
+            "obsessive_compulsive_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Negativistic",
+          "profileColumn": "Neg",
+          "name": {
+            "en": "Passive-Aggressive (Negativistic)",
+            "hi": "Passive-Aggressive (Negativistic)"
+          },
+          "threshold": 4,
+          "items": [
+            7,
+            21,
+            35,
+            49,
+            63,
+            77,
+            91
+          ],
+          "disorders": [
+            "passive_aggressive_personality_disorder"
+          ]
+        },
+        {
+          "slug": "Depressive",
+          "profileColumn": "Dpt",
+          "name": {
+            "en": "Depressive",
+            "hi": "Depressive"
+          },
+          "threshold": 5,
+          "items": [
+            14,
+            28,
+            42,
+            56,
+            70,
+            84,
+            97
+          ],
+          "disorders": [
+            "depressive_personality_disorder"
+          ]
+        }
+      ],
+      "scoring": {
+        "method": "pdq4_true_count_thresholds_with_section_b",
+        "countRule": {
+          "en": "Count only True responses on the keyed items of each scale. Item 60 appears on both Schizoid and Schizotypal — count it once.",
+          "hi": "प्रत्येक पैमाने के कुंजी-आइटम में केवल सत्य गनें। आइटम 60 Sczoid एवं Schizotypal दोनों में है — एक वार गनें।"
+        },
+        "sectionB": {
+          "pdq_98_impulsivity": {
+            "minimum": 2,
+            "gateScale": "Borderline"
+          },
+          "pdq_99_conduct": {
+            "minimum": 3,
+            "gateScale": "Antisocial"
+          }
+        },
+        "clinicalSignificance": {
+          "en": "A PD screen is only clinically significant if criteria A-E (accuracy, duration, pervasiveness, impairment, distress) are ALL met after the initial positive screen. If any criterion fails, the screen is not clinically meaningful (e.g., due to state effects, exaggeration, or transient stress).",
+          "hi": "प्रारंभिक धनात्मक स्क्रीन पश्चात् A-E (यथार्थता, कालावधि, व्यापकता, बाधा, पीड़ा) सभी मानदंड पूर्त हों तो ही स्क्रीन नैदानिक दृष्ट्या महत्वपूर्ण है। कोई एक असफल तो स्क्रीन नैदानिक दृष्ट्या अर्थहीन।"
+        },
+        "comorbidityNote": {
+          "en": "High comorbidity is common (e.g., Borderline + Avoidant + Depressive).",
+          "hi": "सह-रोगिता सामान्य है (जैसे सीमांत+ परिहरण+ अवसाद)।"
+        },
+        "notDiagnosticNote": {
+          "en": "The PDQ-4+ is a self-report screening tool; it is not diagnostic but identifies individuals who may warrant a structured clinical interview for a personality disorder.",
+          "hi": "PDQ-4+ स्व-वर्णित_स्क्रीनिंग_साधन_है;_रोग-निर्णायक_नहीं,_किंतु_संरचित_नैदानिक_साक्षात्कार_के_पात्र_व्यक्तियों_को_चिह्नित_करता_है।"
+        }
+      },
+      "sourcePages": "PDQ-4+ instructions, profile sheet and Full Assessment Guide (CURE Counseling & Assessment Training Centre packet)",
+      "licensingNote": {
+        "en": "PDQ-4+ content transcribed from the provided packet; verify current licensing/warranties before clinical redistribution.",
+        "hi": "प्रदत्त पैकेट से अभिलिखित; नैदानिक पुनर्वितरण से पूर्व वर्तमान लाइसेंस सत्यापित करें।"
+      },
+      "translationNote": {
+        "en": "English item wording was reconstructed from a low-quality scan; obvious OCR artifacts were repaired and the reconstruction is flagged for clinician review against the published PDQ-4+ form.",
+        "hi": "यह पाठ CURE पैकेट के स्कैन किए गए अंग्रेज़ी पत्रक से लिया गया है; हिन्दी रूपांतरण केवल संकेतात्मक सहायता हेतु है और इसमें कुछ वाक्य-विन्यास अस्पष्ट हैं। कृपया सत्यापित PDQ-4+ संस्करण से पुष्टि करें।"
+      }
     }
   },
   "sharedScales": {
@@ -3416,7 +6113,7 @@
     ]
   },
   "meta": {
-    "schemaVersion": "2.2.0",
+    "schemaVersion": "2.3.0",
     "updated": "2026-11-04",
     "framework": "DSM-5-TR labels compared with ICD-11 codes; selective comparative index, not an official DSM-to-ICD crosswalk",
     "verification": {
@@ -3434,6 +6131,11 @@
       "Coding specificity: distinguish a parent family from a final assignable diagnosis; select valid child codes and qualifiers from the chosen release. Do not assume sequential code ranges exist.",
       "Cross-chapter referencing: ICD-11 sleep-wake disorders are in Chapter 07, nervous-system diseases in Chapter 08, sexual dysfunctions and gender incongruence in Chapter 17, PMDD in Chapter 16. Chapter placement does not establish DSM diagnostic equivalence or billing compatibility.",
       "Completeness: this dataset is a screening aid and does not enumerate every diagnosis, residual category, severity or course qualifier, exclusion or diagnostic requirement in either manual."
+    ],
+    "instrumentNotes": [
+      "IPDE ICD-10 screening questionnaire implemented with keyed True/False items; app uses the single-item positive standard explicitly permitted by the instrument authors (printed standard: >=3 keyed items per disorder).",
+      "PDQ-4+ implemented with validity items 64/76, Section B item 98 (>=2 impulsivity checks gates Borderline) and item 99 (>=3 conduct checks gates Antisocial), plus the mandatory clinical-significance A-E follow-up checklist.",
+      "Personality instrument item text was transcribed from user-supplied scans; Hindi labels are machine-assisted aids flagged for clinician review. Verify licensing before redistribution."
     ]
   },
   "i18n": {

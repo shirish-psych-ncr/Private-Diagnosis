@@ -525,6 +525,14 @@ footer { background: #f0f4f8; padding: 1.5rem; text-align: center; color: #666; 
 .rating-register td:last-child,.rating-register th:last-child{text-align:center;width:6.5rem}
 .rating-register-note{color:var(--text-secondary);font-size:.85rem;margin:.25rem 0 1.25rem;line-height:1.5}
 @media (max-width:768px){.rating-register td:last-child,.rating-register th:last-child{width:auto}}
+/* Personality-disorder screens (IPDE ICD-10 module screen / PDQ-4+) */
+.pd-rating-table{border-left-color:#0e7490}
+.matrix-part-note{color:var(--text-secondary);font-size:.82rem;font-style:italic;margin:.15rem 0 .35rem;line-height:1.45}
+.criterion-note{color:var(--text-secondary);font-weight:400;font-size:.8rem;font-style:italic}
+.pd-register td:nth-child(2),.pd-register th:nth-child(2){text-align:center;width:7rem;white-space:nowrap}
+.pd-register tr.flagged-row{background:#fef9c3}
+.pd-validity-note{font-size:.85rem;margin:.35rem 0;color:#0f766e}
+.pd-validity-note.failed{color:#b91c1c;font-weight:600;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:.5rem .75rem}
 .differential-list{list-style:none;padding:0}
 .differential-list li{padding:.5rem .75rem;border-bottom:1px dashed var(--border-color)}
 .handoff-note{color:var(--text-secondary);font-size:.9rem;margin-top:1rem}
