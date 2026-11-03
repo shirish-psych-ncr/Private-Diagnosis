@@ -1,0 +1,1078 @@
+{
+  "id": "hexaco_pi_r_observer",
+  "name": {
+    "en": "HEXACO-PI-R (Observer Report Form)",
+    "hi": "HEXACO-PI-R (पर्यवेक्षक रिपोर्ट फ़ॉर्म)"
+  },
+  "type": "matrix",
+  "administeredBy": "informant",
+  "optionalAssessment": true,
+  "sourceInstrument": "HEXACO-PI-R / HEXACO-60",
+  "targetAge": [
+    "adolescent",
+    "adult"
+  ],
+  "directions": {
+    "en": "On the following pages you will find a series of statements about the person that you are rating now. Please read each statement and decide how much you agree or disagree with that statement. Then write your response in the space next to the statement using the following scale: 5 = strongly agree, 4 = agree, 3 = neutral (neither agree nor disagree), 2 = disagree, 1 = strongly disagree. Please answer every statement, even if you are not completely sure of your response.\n\nPlease provide the following information about the person that you will be rating: number of years you have been acquainted with this person, sex of the person being rated, and age of the person being rated.",
+    "hi": "निम्न पृष्ठों में उन व्यक्ति के बारे में कथनों की एक श्रृंखला दी गई है जिसे आप अभी रेट कर रहे हैं। प्रत्येक कथन पढ़ें और निर्णय करें कि आप उससे कितना सहमत या असहमत हैं। फिर निम्न पैमाने का उपयोग कर उत्तर दें: 5 = पूर्णतः सहमत, 4 = सहमत, 3 = तटस्थ (न सहमत न असहमत), 2 = असहमत, 1 = पूर्णतः असहमत। प्रत्येक कथन का उत्तर दें, भले ही आप पूर्णतः निश्चित न हों।\n\nमूल्यांकन से पूर्व रेट किए जा रहे व्यक्ति के बारे में ये जानकारी दें: परिचय की संवत्सर-संख्या, लिंग, आयु।"
+  },
+  "timeframe": {
+    "en": "General, long-standing pattern as observed by the informant (not a temporary state).",
+    "hi": "सामान्यतः — स्थायी व्यवहार-पैटर्न (अस्थायी अवस्थाएँ नहीं)।"
+  },
+  "informantFields": [
+    {
+      "id": "hx_years_acquainted",
+      "label": {
+        "en": "Number of years that you have been acquainted with this person",
+        "hi": "परिचय की अवधि (वर्ष)"
+      }
+    },
+    {
+      "id": "hx_subject_sex",
+      "label": {
+        "en": "Sex of the person that you will be rating",
+        "hi": "मूल्यांकन-विषय का लिंग"
+      },
+      "options": [
+        {
+          "v": "female",
+          "label": {
+            "en": "Female",
+            "hi": "स्त्री"
+          }
+        },
+        {
+          "v": "male",
+          "label": {
+            "en": "Male",
+            "hi": "पुरुष"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hx_subject_age",
+      "label": {
+        "en": "Age of the person that you will be rating",
+        "hi": "मूल्यांकन-विषय की आयु (वर्ष)"
+      }
+    }
+  ],
+  "parts": [
+    {
+      "id": "hx_items",
+      "partKey": "observer_items",
+      "name": {
+        "en": "Observer ratings — 60 statements (1 = strongly disagree … 5 = strongly agree)",
+        "hi": "पर्यवेक्षक-रेटिंग — 60 कथन (1 = पूर्णतः असहमत … 5 = पूर्णतः सहमत)"
+      },
+      "questions": [
+        {
+          "id": "hx_1",
+          "itemNumber": 1,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she would be quite bored by a visit to an art gallery.",
+            "hi": "वह/वो कला-दीर्घा देखने से बिल्कुल ऊब जाएगा/जाएगी।"
+          }
+        },
+        {
+          "id": "hx_2",
+          "itemNumber": 2,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she cleans his/her office or home quite frequently.",
+            "hi": "वह/वो अपना कार्यालय या घर बहुत अक्सर साफ़ करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_3",
+          "itemNumber": 3,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she rarely holds a grudge, even against people who have badly wronged him/her.",
+            "hi": "वह/वो बुरी तरह ठगा गया हो तब भी शिकायत/द्वेष बहुत कम रखता/रखती है।"
+          }
+        },
+        {
+          "id": "hx_4",
+          "itemNumber": 4,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she feels reasonably satisfied with himself/herself overall.",
+            "hi": "वह/वो समग्र रूप से स्वयं से यथेष्ट संतुष्ट महसूस करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_5",
+          "itemNumber": 5,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she would feel afraid if he/she had to travel in bad weather conditions.",
+            "hi": "वह/वो खराब मौसम में यात्रा करनी हो तो डरेगा/डरेगी।"
+          }
+        },
+        {
+          "id": "hx_6",
+          "itemNumber": 6,
+          "reverseScored": false,
+          "text": {
+            "en": "If he/she wants something from a person he/she dislikes, he/she will act very nicely toward that person in order to get it.",
+            "hi": "जिस व्यक्ति को वह/वो पसंद नहीं करता/करती, उससे कुछ चाहिए हो तो पाने हेतु उसके साथ बड़ा मिलनसार व्यवहार करेगा/करेगी।"
+          }
+        },
+        {
+          "id": "hx_7",
+          "itemNumber": 7,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she is interested in learning about the history and politics of other countries.",
+            "hi": "वह/वो अन्य देशों के इतिहास एवं राजनीति जानने में रुचि रखता/रखती है।"
+          }
+        },
+        {
+          "id": "hx_8",
+          "itemNumber": 8,
+          "reverseScored": false,
+          "text": {
+            "en": "When working, he/she often sets ambitious goals for himself/herself.",
+            "hi": "कार्य करते समय वह/वो अक्सर स्वयं के लिए महत्वाकांक्षी लक्ष्य निर्धारित करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_9",
+          "itemNumber": 9,
+          "reverseScored": true,
+          "text": {
+            "en": "People sometimes say that he/she is too critical of others.",
+            "hi": "लोग कभी-कभी कहते हैं कि वह/वो दूसरों की अधिक आलोचना करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_10",
+          "itemNumber": 10,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she rarely expresses his/her opinions in group meetings.",
+            "hi": "वह/वो सामूहिक बैठकों में अपना मत बहुत कम व्यक्त करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_11",
+          "itemNumber": 11,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she worries about little things.",
+            "hi": "वह/वो छोटी-छोटी बातों की चिंता करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_12",
+          "itemNumber": 12,
+          "reverseScored": true,
+          "text": {
+            "en": "If he/she knew that he/she could never get caught, he/she would be willing to steal a million dollars.",
+            "hi": "पकड़े जाने की सम्भावना न हो तो वह/वो दस लाख रुपये चुराने को तैयार होगा/होगी।"
+          }
+        },
+        {
+          "id": "hx_13",
+          "itemNumber": 13,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she would like a job that requires following a routine rather than being creative.",
+            "hi": "वह/वो रचनात्मकता के बजाय दिनचर्या-पालन वाली नौकरी पसंद करेगा/करेगी।"
+          }
+        },
+        {
+          "id": "hx_14",
+          "itemNumber": 14,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she often checks his/her work over repeatedly to find any mistakes.",
+            "hi": "वह/वो त्रुटियाँ खोजने हेतु अपना कार्य बार-बार जाँचता/जाँचती है।"
+          }
+        },
+        {
+          "id": "hx_15",
+          "itemNumber": 15,
+          "reverseScored": true,
+          "text": {
+            "en": "People sometimes think that he/she is too stubborn.",
+            "hi": "लोग कभी-कभी सोचते हैं कि वह/वो अत्यधिक ज़िद्दी है।"
+          }
+        },
+        {
+          "id": "hx_16",
+          "itemNumber": 16,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she avoids making \"small talk\" with people.",
+            "hi": "वह/वो लोगों से अनौपचारिक गप्पें (small talk) करने से बचता/बचती है।"
+          }
+        },
+        {
+          "id": "hx_17",
+          "itemNumber": 17,
+          "reverseScored": false,
+          "text": {
+            "en": "When he/she suffers from a painful experience, he/she needs someone to make him/her feel comfortable.",
+            "hi": "कष्टदायक अनुभव में वह/वो किसी को स्वयं को सांत्वना देने वाला चाहता/चाहती है।"
+          }
+        },
+        {
+          "id": "hx_18",
+          "itemNumber": 18,
+          "reverseScored": true,
+          "text": {
+            "en": "Having a lot of money is not especially important to him/her.",
+            "hi": "अधिक धन होना उसके/उसके लिए विशेष महत्वपूर्ण नहीं है।"
+          }
+        },
+        {
+          "id": "hx_19",
+          "itemNumber": 19,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she thinks that paying attention to radical ideas is a waste of time.",
+            "hi": "वह/वो उग्र/कट्टर विचारों पर ध्यान देना समय की बर्बादी मानता/मानती है।"
+          }
+        },
+        {
+          "id": "hx_20",
+          "itemNumber": 20,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she makes decisions based on the feeling of the moment rather than on careful thought.",
+            "hi": "वह/वो सूझबूझ के बजाय क्षणिक भावनाओं पर निर्णय लेता/लेती है।"
+          }
+        },
+        {
+          "id": "hx_21",
+          "itemNumber": 21,
+          "reverseScored": true,
+          "text": {
+            "en": "People think of him/her as someone who has a quick temper.",
+            "hi": "लोग उसे/उसे तेज़ गुस्से वाला मानते हैं।"
+          }
+        },
+        {
+          "id": "hx_22",
+          "itemNumber": 22,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she is energetic nearly all the time.",
+            "hi": "वह/वो लगभग सदैव ऊर्जावान रहता/रहती है।"
+          }
+        },
+        {
+          "id": "hx_23",
+          "itemNumber": 23,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she feels like crying when he/she sees other people crying.",
+            "hi": "दूसरों को रोते देख वह/वो स्वयं भी रोने जैसा महसूस करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_24",
+          "itemNumber": 24,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she thinks that he/she is an ordinary person who is no better than others.",
+            "hi": "वह/वो स्वयं को साधारण और दूसरों से श्रेष्ठ नहीं मानता/मानती।"
+          }
+        },
+        {
+          "id": "hx_25",
+          "itemNumber": 25,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she wouldn't spend his/her time reading a book of poetry.",
+            "hi": "वह/वो काव्य-पुस्तक पढ़ने में समय नहीं बिताएगा/बिताएगी।"
+          }
+        },
+        {
+          "id": "hx_26",
+          "itemNumber": 26,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she plans ahead and organizes things, to avoid scrambling at the last minute.",
+            "hi": "अंतिम क्षण की हड़बड़ी से बचने हेतु वह/वो पूर्व-नियोजन एवं संगठन करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_27",
+          "itemNumber": 27,
+          "reverseScored": false,
+          "text": {
+            "en": "His/her attitude toward people who have treated him/her badly is \"forgive and forget\".",
+            "hi": "बुरा करने वालों के प्रति उसका/उसके मनभाव — “क्षमा करो और भूल जाओ”।"
+          }
+        },
+        {
+          "id": "hx_28",
+          "itemNumber": 28,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she thinks that most people like some aspects of his/her personality.",
+            "hi": "वह/वो सोचता/सोचती है कि अधिकतर लोग उसकी/उसके व्यक्तित्व के कुछ पहलू पसंद करते हैं।"
+          }
+        },
+        {
+          "id": "hx_29",
+          "itemNumber": 29,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she doesn't mind doing jobs that involve dangerous work.",
+            "hi": "वह/वो खतरनाक काम वाली नौकरियों में कोई आपत्ति नहीं करता/करती।"
+          }
+        },
+        {
+          "id": "hx_30",
+          "itemNumber": 30,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she wouldn't use flattery to get a raise or promotion at work, even if he/she thought it would succeed.",
+            "hi": "वेतन-वृद्धि या पदोन्नति हेतु चापलूसी उपयोग नहीं करेगा/करेगी, भले सफलता का विश्वास हो।"
+          }
+        },
+        {
+          "id": "hx_31",
+          "itemNumber": 31,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she enjoys looking at maps of different places.",
+            "hi": "वह/वो विभिन्न स्थानों के नक्शे देखने में आनंद लेता/लेती है।"
+          }
+        },
+        {
+          "id": "hx_32",
+          "itemNumber": 32,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she often pushes himself/herself very hard when trying to achieve a goal.",
+            "hi": "लक्ष्य प्राप्ति हेतु वह/वो स्वयं को अक्सर अत्यधिक कठिन परिश्रम के लिए प्रेरित करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_33",
+          "itemNumber": 33,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she generally accepts people's faults without complaining about them.",
+            "hi": "वह/वो सामान्यतः लोगों की कमियाँ शिकायत किए बिना स्वीकार करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_34",
+          "itemNumber": 34,
+          "reverseScored": false,
+          "text": {
+            "en": "In social situations, he/she is usually the one who makes the first move.",
+            "hi": "सामाजिक परिस्थितियों में अक्सर पहल वह/वो करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_35",
+          "itemNumber": 35,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she worries a lot less than most people do.",
+            "hi": "वह/वो अधिकतर लोगों की तुलना में बहुत कम चिंता करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_36",
+          "itemNumber": 36,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she would be tempted to buy stolen property if he/she were financially tight.",
+            "hi": "आर्थिक तंगी में चोरी का माल खरीदने के लिए प्रलोभित होगा/होगी।"
+          }
+        },
+        {
+          "id": "hx_37",
+          "itemNumber": 37,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she would enjoy creating a work of art, such as a novel, a song, or a painting.",
+            "hi": "वह/वो उपन्यास, गीत या चित्रकला जैसे कला-कर्म रचने में आनंद लेगा/लेगी।"
+          }
+        },
+        {
+          "id": "hx_38",
+          "itemNumber": 38,
+          "reverseScored": true,
+          "text": {
+            "en": "When working on something, he/she doesn't pay much attention to small details.",
+            "hi": "कार्य करते समय वह/वो छोटे-छोटे विवरणों पर अधिक ध्यान नहीं देता/देती।"
+          }
+        },
+        {
+          "id": "hx_39",
+          "itemNumber": 39,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she is usually quite flexible in his/her opinions when people disagree with him/her.",
+            "hi": "मतभेद होने पर वह/वो सामान्यतः अपने मतों में काफ़ी लचीला रहता/रहती है।"
+          }
+        },
+        {
+          "id": "hx_40",
+          "itemNumber": 40,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she enjoys having lots of people around to talk with.",
+            "hi": "वह/वो बातचीत हेतु बहुत से लोगों के बीच रहना पसंद करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_41",
+          "itemNumber": 41,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she can handle difficult situations without needing emotional support from anyone else.",
+            "hi": "कठिन परिस्थितियों का सामना वह/वो अन्य किसी के भावनात्मक सहारे के बिना कर सकता/सकती है।"
+          }
+        },
+        {
+          "id": "hx_42",
+          "itemNumber": 42,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she would like to live in a very expensive, high-class neighborhood.",
+            "hi": "वह/वो अत्यंत महँगे, उच्च-वर्गीय पड़ोस में रहना चाहेगा/चाहेगी।"
+          }
+        },
+        {
+          "id": "hx_43",
+          "itemNumber": 43,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she likes people who have unconventional views.",
+            "hi": "वह/वो असम्प्रदायिक/अपरंपरिक विचारों वाले लोगों को पसंद करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_44",
+          "itemNumber": 44,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she makes a lot of mistakes because he/she doesn't think before he/she acts.",
+            "hi": "विचार किए बिना कार्य करने से वह/वो अनेक त्रुटियाँ करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_45",
+          "itemNumber": 45,
+          "reverseScored": false,
+          "text": {
+            "en": "He/she rarely feels anger, even when people treat him/her quite badly.",
+            "hi": "लोग बुरा व्यवहार करें तब भी वह/वो क्रोध बहुत कम महसूस करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_46",
+          "itemNumber": 46,
+          "reverseScored": false,
+          "text": {
+            "en": "On most days, he/she feels cheerful and optimistic.",
+            "hi": "अधिकतर दिनों वह/वो प्रसन्न एवं आशावादी महसूस करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_47",
+          "itemNumber": 47,
+          "reverseScored": false,
+          "text": {
+            "en": "When someone he/she knows well is unhappy, he/she can almost feel that person's pain himself/herself.",
+            "hi": "निकट परिचित दुखी हो तो वह/वो लगभग उसका दर्द स्वयं महसूस कर सकता/सकती है।"
+          }
+        },
+        {
+          "id": "hx_48",
+          "itemNumber": 48,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she wouldn't want people to treat him/her as though he/she were superior to them.",
+            "hi": "लोग उसे/उसे स्वयं से श्रेष्ठ मानकर व्यवहार करें — यह वह/वो नहीं चाहेगा/चाहेगी।"
+          }
+        },
+        {
+          "id": "hx_49",
+          "itemNumber": 49,
+          "reverseScored": false,
+          "text": {
+            "en": "If he/she had the opportunity, he/she would like to attend a classical music concert.",
+            "hi": "अवसर मिले तो वह/वो शास्त्रीय संगीत कार्यक्रम में जाना चाहेगा/चाहेगी।"
+          }
+        },
+        {
+          "id": "hx_50",
+          "itemNumber": 50,
+          "reverseScored": true,
+          "text": {
+            "en": "People often joke with him/her about the messiness of his/her room or desk.",
+            "hi": "लोग उसके/उसके कमरे या मेज़ की अव्यवस्था का अक्सर मज़ाक उड़ाते हैं।"
+          }
+        },
+        {
+          "id": "hx_51",
+          "itemNumber": 51,
+          "reverseScored": true,
+          "text": {
+            "en": "If someone has cheated him/her once, he/she will always feel suspicious of that person.",
+            "hi": "एक बार धोखा हुआ हो तो वह/वो उस व्यक्ति के प्रति सदैव संदेहशील रहेगा/रहेगी।"
+          }
+        },
+        {
+          "id": "hx_52",
+          "itemNumber": 52,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she feels that he/she is an unpopular person.",
+            "hi": "वह/वो स्वयं को अप्रिय/अलोकप्रिय व्यक्ति मानता/मानती है।"
+          }
+        },
+        {
+          "id": "hx_53",
+          "itemNumber": 53,
+          "reverseScored": false,
+          "text": {
+            "en": "When it comes to physical danger, he/she is very fearful.",
+            "hi": "शारीरिक खतरे के मामले में वह/वो अत्यंत भयाकुल होता/होती है।"
+          }
+        },
+        {
+          "id": "hx_54",
+          "itemNumber": 54,
+          "reverseScored": true,
+          "text": {
+            "en": "If he/she wants something from someone, he/she will laugh at that person's worst jokes.",
+            "hi": "किसी से कुछ चाहिए हो तो उसकी सबसे बुरी चुटकुलों पर भी वह/वो हँसेगा/हँसेगी।"
+          }
+        },
+        {
+          "id": "hx_55",
+          "itemNumber": 55,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she would be very bored by a book about the history of science and technology.",
+            "hi": "विज्ञान एवं तकनीकी के इतिहास की पुस्तक से वह/वो बहुत बोर होगा/होगी।"
+          }
+        },
+        {
+          "id": "hx_56",
+          "itemNumber": 56,
+          "reverseScored": true,
+          "text": {
+            "en": "Often when he/she sets a goal, he/she ends up quitting without having reached it.",
+            "hi": "अक्सर लक्ष्य निर्धारित करने पर उसे पाए बिना ही वह/वो बीच में छोड़ देता/छोड़ देती है।"
+          }
+        },
+        {
+          "id": "hx_57",
+          "itemNumber": 57,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she tends to be lenient in judging other people.",
+            "hi": "दूसरों का मूल्यांकन करते समय वह/वो उदार/शिथिल रहने की प्रवृत्ति रखता/रखती है।"
+          }
+        },
+        {
+          "id": "hx_58",
+          "itemNumber": 58,
+          "reverseScored": false,
+          "text": {
+            "en": "When he/she is in a group of people, he/she is often the one who speaks on behalf of the group.",
+            "hi": "समूह में वह/वो अक्सर समूह की ओर से बोलता/बोलती है।"
+          }
+        },
+        {
+          "id": "hx_59",
+          "itemNumber": 59,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she rarely, if ever, has trouble sleeping due to stress or anxiety.",
+            "hi": "तनाव या चिंता के कारण नींद में कठिनाई वह/वो बहुत कम, यदि कभी, अनुभव करता/करती है।"
+          }
+        },
+        {
+          "id": "hx_60",
+          "itemNumber": 60,
+          "reverseScored": true,
+          "text": {
+            "en": "He/she would never accept a bribe, even if it were very large.",
+            "hi": "अत्यधिक बड़ा हो तब भी वह/वो कभी रिश्वत स्वीकार नहीं करेगा/करेगी।"
+          }
+        }
+      ]
+    }
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": {
+        "en": "1 Strongly disagree",
+        "hi": "1 पूर्णतः असहमत"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "2 Disagree",
+        "hi": "2 असहमत"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "3 Neutral",
+        "hi": "3 तटस्थ"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "4 Agree",
+        "hi": "4 सहमत"
+      }
+    },
+    {
+      "v": 5,
+      "label": {
+        "en": "5 Strongly agree",
+        "hi": "5 पूर्णतः सहमत"
+      }
+    }
+  ],
+  "ratingScale": {
+    "min": 1,
+    "max": 5,
+    "note": {
+      "en": "1 = strongly disagree, 2 = disagree, 3 = neutral (neither agree nor disagree), 4 = agree, 5 = strongly agree. Items marked R are reverse-scored.",
+      "hi": "1 = पूर्णतः असहमत · 2 = असहमत · 3 = तटस्थ · 4 = सहमत · 5 = पूर्णतः सहमत। 'R' चिह्नित आइटम व्युक्रम-अंकित होते हैं।"
+    }
+  },
+  "facets": {
+    "sincerity": {
+      "name": {
+        "en": "Sincerity",
+        "hi": "आंतरिकता/निष्ठा"
+      },
+      "domain": "h_h",
+      "items": [
+        6,
+        30,
+        54
+      ]
+    },
+    "fairness": {
+      "name": {
+        "en": "Fairness",
+        "hi": "न्यायपरायणता"
+      },
+      "domain": "h_h",
+      "items": [
+        12,
+        36,
+        60
+      ]
+    },
+    "greed_avoidance": {
+      "name": {
+        "en": "Greed Avoidance",
+        "hi": "लालच-परिहार"
+      },
+      "domain": "h_h",
+      "items": [
+        18,
+        42
+      ]
+    },
+    "modesty": {
+      "name": {
+        "en": "Modesty",
+        "hi": "विनम्रता"
+      },
+      "domain": "h_h",
+      "items": [
+        24,
+        48
+      ]
+    },
+    "fearfulness": {
+      "name": {
+        "en": "Fearfulness",
+        "hi": "भयाकुलता"
+      },
+      "domain": "e",
+      "items": [
+        5,
+        29,
+        53
+      ]
+    },
+    "anxiety": {
+      "name": {
+        "en": "Anxiety",
+        "hi": "चिंता"
+      },
+      "domain": "e",
+      "items": [
+        11,
+        35
+      ]
+    },
+    "dependence": {
+      "name": {
+        "en": "Dependence",
+        "hi": "निर्भरता"
+      },
+      "domain": "e",
+      "items": [
+        17,
+        41
+      ]
+    },
+    "sentimentality": {
+      "name": {
+        "en": "Sentimentality",
+        "hi": "संवेदनशीलता"
+      },
+      "domain": "e",
+      "items": [
+        23,
+        47,
+        59
+      ]
+    },
+    "social_self_esteem": {
+      "name": {
+        "en": "Social Self-Esteem",
+        "hi": "सामाजिक आत्मसम्मान"
+      },
+      "domain": "x",
+      "items": [
+        4,
+        28,
+        52
+      ]
+    },
+    "social_boldness": {
+      "name": {
+        "en": "Social Boldness",
+        "hi": "सामाजिक साहस"
+      },
+      "domain": "x",
+      "items": [
+        10,
+        34,
+        58
+      ]
+    },
+    "sociability": {
+      "name": {
+        "en": "Sociability",
+        "hi": "सामाजिकता"
+      },
+      "domain": "x",
+      "items": [
+        16,
+        40
+      ]
+    },
+    "liveliness": {
+      "name": {
+        "en": "Liveliness",
+        "hi": "प्राणोद्वलन"
+      },
+      "domain": "x",
+      "items": [
+        22,
+        46
+      ]
+    },
+    "forgiveness": {
+      "name": {
+        "en": "Forgiveness",
+        "hi": "क्षमाशीलता"
+      },
+      "domain": "a",
+      "items": [
+        3,
+        27
+      ]
+    },
+    "gentleness": {
+      "name": {
+        "en": "Gentleness",
+        "hi": "कोमलता"
+      },
+      "domain": "a",
+      "items": [
+        9,
+        33,
+        51
+      ]
+    },
+    "flexibility": {
+      "name": {
+        "en": "Flexibility",
+        "hi": "लचीलापन"
+      },
+      "domain": "a",
+      "items": [
+        15,
+        39,
+        57
+      ]
+    },
+    "patience": {
+      "name": {
+        "en": "Patience",
+        "hi": "धैर्य"
+      },
+      "domain": "a",
+      "items": [
+        21,
+        45
+      ]
+    },
+    "organization": {
+      "name": {
+        "en": "Organization",
+        "hi": "सुव्यवस्था"
+      },
+      "domain": "c",
+      "items": [
+        2,
+        26
+      ]
+    },
+    "diligence": {
+      "name": {
+        "en": "Diligence",
+        "hi": "परिश्रमिता"
+      },
+      "domain": "c",
+      "items": [
+        8,
+        32
+      ]
+    },
+    "perfectionism": {
+      "name": {
+        "en": "Perfectionism",
+        "hi": "परिपूर्णता"
+      },
+      "domain": "c",
+      "items": [
+        14,
+        38,
+        50
+      ]
+    },
+    "prudence": {
+      "name": {
+        "en": "Prudence",
+        "hi": "सावधानता"
+      },
+      "domain": "c",
+      "items": [
+        20,
+        44,
+        56
+      ]
+    },
+    "aesthetic_appreciation": {
+      "name": {
+        "en": "Aesthetic Appreciation",
+        "hi": "सौंदर्य-साहाध्यता"
+      },
+      "domain": "o",
+      "items": [
+        1,
+        25
+      ]
+    },
+    "inquisitiveness": {
+      "name": {
+        "en": "Inquisitiveness",
+        "hi": "जिज्ञासा"
+      },
+      "domain": "o",
+      "items": [
+        7,
+        31
+      ]
+    },
+    "creativity": {
+      "name": {
+        "en": "Creativity",
+        "hi": "रचनात्मकता"
+      },
+      "domain": "o",
+      "items": [
+        13,
+        37,
+        49
+      ]
+    },
+    "unconventionality": {
+      "name": {
+        "en": "Unconventionality",
+        "hi": "अपरंपरिकता"
+      },
+      "domain": "o",
+      "items": [
+        19,
+        43,
+        55
+      ]
+    }
+  },
+  "domains": {
+    "h_h": {
+      "name": {
+        "en": "Honesty-Humility",
+        "hi": "प्रामाणिकता-विनम्रता"
+      },
+      "facets": [
+        "sincerity",
+        "fairness",
+        "greed_avoidance",
+        "modesty"
+      ],
+      "facetNames": "Sincerity, Fairness, Greed Avoidance, Modesty"
+    },
+    "e": {
+      "name": {
+        "en": "Emotionality",
+        "hi": "भावनात्मकता"
+      },
+      "facets": [
+        "fearfulness",
+        "anxiety",
+        "dependence",
+        "sentimentality"
+      ],
+      "facetNames": "Fearfulness, Anxiety, Dependence, Sentimentality"
+    },
+    "x": {
+      "name": {
+        "en": "Extraversion",
+        "hi": "बहिर्मुखता"
+      },
+      "facets": [
+        "social_self_esteem",
+        "social_boldness",
+        "sociability",
+        "liveliness"
+      ],
+      "facetNames": "Social Self-Esteem, Social Boldness, Sociability, Liveliness"
+    },
+    "a": {
+      "name": {
+        "en": "Agreeableness",
+        "hi": "सहमतिशीलता"
+      },
+      "facets": [
+        "forgiveness",
+        "gentleness",
+        "flexibility",
+        "patience"
+      ],
+      "facetNames": "Forgiveness, Gentleness, Flexibility, Patience"
+    },
+    "c": {
+      "name": {
+        "en": "Conscientiousness",
+        "hi": "कर्तव्यनिष्ठा"
+      },
+      "facets": [
+        "organization",
+        "diligence",
+        "perfectionism",
+        "prudence"
+      ],
+      "facetNames": "Organization, Diligence, Perfectionism, Prudence"
+    },
+    "o": {
+      "name": {
+        "en": "Openness to Experience",
+        "hi": "अनुभव-के-प्रति-विवृतता"
+      },
+      "facets": [
+        "aesthetic_appreciation",
+        "inquisitiveness",
+        "creativity",
+        "unconventionality"
+      ],
+      "facetNames": "Aesthetic Appreciation, Inquisitiveness, Creativity, Unconventionality"
+    }
+  },
+  "sumScoring": true,
+  "scoring": {
+    "method": "hexaco_observer_facet_domain_means",
+    "scaleMin": 1,
+    "scaleMax": 5,
+    "rule": {
+      "en": "Rate each item 1-5. For every item marked R in the scoring guide, use 6 minus the response. A facet score is the MEAN of its (reversed where keyed) raw items; a domain score is the MEAN of its four facet scores. Report all scores on the 1-5 metric.",
+      "hi": "प्रत्येक आइटम 1-5 पर रेट होता है। पहले व्युक्रम-आइटम (R) के लिए 6 − उत्तर निकालें। प्रत्येक फलक (facet) का अंक = उसके (व्युक्रम-अंकित) आइटमों का माध्य; प्रत्येक डोमेन का अंक = अपने चार फलक-अंकों का माध्य। सभी अंक 1-5 पर रिपोर्ट हों।"
+    },
+    "reverseItems": [
+      1,
+      9,
+      10,
+      12,
+      15,
+      18,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26,
+      30,
+      32,
+      35,
+      36,
+      38,
+      41,
+      42,
+      44,
+      48,
+      50,
+      51,
+      52,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60
+    ],
+    "interpretationNote": {
+      "en": "HEXACO scores are descriptive personality profiles, not diagnostic thresholds — the instrument defines no clinical cut-offs. High H-H indicates sincerity, fairness, greed avoidance and modesty; high E indicates fearfulness, anxiety, dependence and sentimentality; high X indicates social self-esteem, social boldness, sociability and liveliness; high A indicates forgiveness, gentleness, flexibility and patience; high C indicates organization, diligence, perfectionism and prudence; high O indicates aesthetic appreciation, inquisitiveness, creativity and unconventionality. Interpret observer ratings alongside — not instead of — the patient's own report, and note the informant's relationship and exposure to the subject.",
+      "hi": "HEXACO अंक वर्णनात्मक व्यक्तित्व-प्रोफाइल हैं — कोई नैदानिक कटऑफ नहीं। उच्च H-H = प्रामाणिकता/विनम्रता; उच्च E = भय/चिंता/निर्भरता/संवेदनशीलता; उच्च X = सामाजिक आत्मसम्मान/साहस/सामाजिकता/प्राणोद्वलन; उच्च A = क्षमा/कोमलता/लचीलापन/धैर्य; उच्च C = सुव्यवस्था/परिश्रम/परिपूर्णता/सावधानता; उच्च O = सौंदर्य/जिज्ञासा/रचनात्मकता/अपरंपरिकता। पर्यवेक्षक-रिपोर्ट रोगी-स्व-रिपोर्ट से पृथक सन्दर्भ में व्याख्या करें।"
+    },
+    "psychometrics": {
+      "en": "Internal-consistency reliabilities ranged .77 to .80 for college samples and .73 to .80 for community samples, with sufficient convergent validity against theoretically related scales such as the NEO Five-Factor Inventory (Ashton & Lee, 2009).",
+      "hi": "आंतरिक सुसंगतता .77-.80 (कॉलेज नमूने) एवं .73-.80 (सामुदायिक नमूने); NEO-FFI से अभिसारी वैधता पर्याप्त (Ashton & Lee, 2009)।"
+    },
+    "notDiagnostic": true,
+    "disorders": []
+  },
+  "licensing": {
+    "en": "HEXACO-PI-R / HEXACO-60 by Kibeom Lee, Ph.D. & Michael C. Ashton, Ph.D. Item wording and the scoring key are published freely by the authors for research and clinical use; commercial or redistributed use requires their permission. The Hindi rendering here is a working translation and should be reviewed before clinical use.",
+    "hi": "HEXACO-PI-R / HEXACO-60, Kibeom Lee एवं Michael C. Ashton। मूल रूप व स्कोरिंग-कुंजी लेखकों द्वारा शोध/नैदानिक उपयोग हेतु मुक्त प्रकाशित; व्यावसायिक अथवा पुनर्विक्रय उपयोग हेतु उनकी अनुमति आवश्यक। यहाँ का हिन्दी रूपांतर कार्यशील अनुवाद है — नैदानिक प्रयोग से पूर्व समीक्षा कराएँ।"
+  },
+  "translationNote": {
+    "en": "Hindi item wording is a working translation; the English original is authoritative.",
+    "hi": "हिन्दी आइटम-रूप कार्यशील अनुवाद हैं; अंग्रेज़ी मूल प्राधिकृत है।"
+  },
+  "branching": null
+}

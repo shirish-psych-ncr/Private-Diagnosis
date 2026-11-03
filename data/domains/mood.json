@@ -1,0 +1,166 @@
+{
+  "id": "mood",
+  "name": {
+    "en": "Mood",
+    "hi": "मूड"
+  },
+  "tier": 1,
+  "questions": [
+    {
+      "id": "mood_1",
+      "text": {
+        "en": "Little interest or pleasure in doing things",
+        "hi": "चीजों को करने में थोड़ी रुचि या आनंद न होना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_2",
+      "text": {
+        "en": "Feeling down, depressed, or hopeless",
+        "hi": "उदास, अवसादग्रस्त, या निराश महसूस करना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_3",
+      "text": {
+        "en": "Trouble falling or staying asleep, or sleeping too much",
+        "hi": "नींद आने में या नींद बने रहने में कठिनाई, या बहुत ज़्यादा सोना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_4",
+      "text": {
+        "en": "Feeling tired or having little energy",
+        "hi": "थकान महसूस करना या ऊर्जा का अभाव"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_5",
+      "text": {
+        "en": "Poor appetite or overeating",
+        "hi": "भूख कम लगना या ज़्यादा खाना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_6",
+      "text": {
+        "en": "Feeling bad about yourself, or that you are a failure or have let yourself or your family down",
+        "hi": "अपने बारे में बुरा महसूस करना, या कि आप विफल हैं या अपने और परिवार को निराश किया"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_7",
+      "text": {
+        "en": "Trouble concentrating on things, such as reading the newspaper or watching television",
+        "hi": "चीज़ों पर ध्यान केंद्रित करने में कठिनाई, जैसे अखबार पढ़ना या टीवी देखना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_8",
+      "text": {
+        "en": "Moving or speaking so slowly that other people noticed, or being fidgety and restless",
+        "hi": "इतना धीमा चलना या बोलना कि दूसरों ने नोटिस किया, या बेचैन और अशांत होना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_9",
+      "text": {
+        "en": "Thoughts that you would be better off dead, or of hurting yourself",
+        "hi": "विचार कि आप मर जाएँ तो बेहतर होगा, या खुद को नुकसान पहुँचाने के"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "bipolar_depressive"
+      ],
+      "safety": true
+    },
+    {
+      "id": "mood_biss_1",
+      "text": {
+        "en": "Has the person had a distinct period of abnormally elevated, expansive or irritable mood, or is there a clear history of hypomanic/manic episodes? (Deploys the BISS 7-day severity profile below.)",
+        "hi": "क्या व्यक्ति का कोई सुस्पष्ट काल अत्युच्च/प्रसारित/कोपमय मूड का रहा है, या हाइपोमैनिक/मैनिक अवस्थाओं का स्पष्ट इतिहास है? (नीचे दी BISS 7-दिवसीय तीव्रता-मापनी लागू होती है।)"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "biss",
+      "disorders": [
+        "bipolar_i_disorder",
+        "bipolar_ii_disorder",
+        "other_specified_bipolar"
+      ]
+    },
+    {
+      "id": "mood_biss_2",
+      "text": {
+        "en": "Is a clinician-rated 7-day profile of depressive AND manic symptoms needed to stage the current episode or monitor treatment response?",
+        "hi": "क्या वर्तमान अवस्था के चरण-निर्धारण या चिकित्सा-प्रतिक्रिया निगरानी हेतु चिकित्सक-रेटित अवसादी एवं उन्मादी लक्षणों का 7-दिवसीय प्रोफाइल आवश्यक है?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "biss",
+      "disorders": [
+        "bipolar_depressive",
+        "other_specified_bipolar"
+      ]
+    }
+  ],
+  "cutoff": 10,
+  "instruments": [
+    "PHQ-9",
+    "MDQ",
+    "BDI-II"
+  ],
+  "instrument": "auto:bipolartable",
+  "baseInstrument": "phq9",
+  "help": {
+    "en": "The domain's nine PHQ-9 items are scored as usual. In addition, selecting this domain deploys the Bipolar Inventory of Signs and Symptoms Scale (BISS): 44 items rated 0-4 by the clinician over the most recent 7 days, using self-report plus family and interview observation. Section I covers depressive signs (items 1-20), section II manic signs (items 21-44). The BISS is dimensional - it quantifies severity and change; it carries no diagnostic cutoff and never by itself establishes bipolar disorder.",
+    "hi": "डोमेन के नौ PHQ-9 आइटम यथावत् अंकित होते हैं। इसके अतिरिक्त यह डोमेन बाइपोलर लक्षण एवं रोगलक्षण मापनी (BISS) खोलता है — 44 आइटम, चिकित्सक द्वारा अंतिम 7 दिनों हेतु 0-4, स्व-रिपोर्ट एवं परिवार/साक्षात्कार-अवलोकन से। विभाग I अवसादी लक्षण (1-20), विभाग II उन्मादी लक्षण (21-44)। BISS विमात्मक है — तीव्रता एवं परिवर्तन मापता है; इसका कोई नैदानिक कटऑफ नहीं और यह एकमात्र रूप से द्विध्रुवी विकार निर्धारित नहीं करता।"
+  }
+}

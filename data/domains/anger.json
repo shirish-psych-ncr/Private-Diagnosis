@@ -1,0 +1,42 @@
+{
+  "id": "anger",
+  "name": {
+    "en": "Anger and impulse control",
+    "hi": "क्रोध एवं आवेग-नियंत्रण"
+  },
+  "tier": 2,
+  "description": {
+    "en": "Optional anger-assessment block. Endorsing a screen-in item deploys the corresponding instrument: the STAXI-CA (State-Trait Anger Expression Inventory — 57 rated items across State Anger, Trait Anger and the Anger Expression/Control scales) or the Clinical Anger Scale (21 four-option clusters, summed 0-63). Both produce dimensional/severity information only; neither is diagnostic.",
+    "hi": "वैकल्पिक क्रोध-मूल्यांकन ब्लॉक। स्क्रीन-इन आइटम चुनें तो संबंधित साधन खुलता है: STAXI-CA (अवस्था-लक्षण क्रोध अभिव्यक्ति सूची — 57 रेटेड आइटम: अवस्था क्रोध, लक्षण क्रोध, क्रोध-अभिव्यक्ति/नियंत्रण) अथवा नैदानिक क्रोध पैमाना (21 चार-विकल्प समूह, योग 0-63)। दोनों केवल आयाम/तीव्रता सूचना देते हैं; कोई रोग-निर्णायक नहीं।"
+  },
+  "instrument": "auto:angertable",
+  "cutoff": null,
+  "questions": [
+    {
+      "id": "ang_1",
+      "text": {
+        "en": "Do you often feel angry, irritable or furious, or find yourself reacting with yelling, arguing or physical aggression?",
+        "hi": "क्या आपको प्रायः क्रोध, चिड़चिड़ापन अथवा प्रकोप महसूस होता है, अथवा आप चिल्लाना, वाद-विवाद अथवा शारीरिक आक्रामकता से प्रतिक्रिया देते/देती पाते/पाती हैं?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "staxi_ca",
+      "disorders": [
+        "other_specified_disruptive_impulse_control_behaviour_disorder",
+        "unspecified_disruptive_impulse_control_behaviour_disorder"
+      ]
+    },
+    {
+      "id": "ang_2",
+      "text": {
+        "en": "Over the past several years, has anger been a persistent problem for you — affecting your mood, your relationships, your work or studies, your sleep, appetite or health?",
+        "hi": "गत कुछ वर्षों में क्या क्रोध आपके लिए सतत समस्या रहा है — भावना, संबंध, कार्य/अध्ययन, नींद, भूख अथवा स्वास्थ्य को प्रभावित करता है?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "clinical_anger_scale",
+      "disorders": [
+        "other_specified_disruptive_impulse_control_behaviour_disorder",
+        "unspecified_disruptive_impulse_control_behaviour_disorder"
+      ]
+    }
+  ]
+}

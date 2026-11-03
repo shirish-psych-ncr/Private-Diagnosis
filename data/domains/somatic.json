@@ -1,0 +1,46 @@
+{
+  "id": "somatic",
+  "name": {
+    "en": "Somatic symptoms & health-related preoccupation",
+    "hi": "शारीरिक लक्षण एवं स्वास्थ्य-संबंधी चिंतन"
+  },
+  "tier": 2,
+  "optional": true,
+  "instrument": "auto:somatoptable",
+  "timeframe": {
+    "en": "Past months of physical symptoms and healthcare contact.",
+    "hi": "पिछले कई माह के शारीरिक लक्षण एवं चिकित्सा-संपर्क।"
+  },
+  "help": {
+    "en": "Endorse either question to open the corresponding rating instrument: the PHQ-15 somatic severity index and/or the FAC22-SR factitious-disorder screen. Both are screening/severity measures and never establish a diagnosis by themselves.",
+    "hi": "किसी भी प्रश्न को स्वीकार करने पर संगत मापनी खुलेगी: PHQ-15 शारीरिक तीव्रता सूचकांक एवं/अथवा FAC22-SR भत्रुण-रोग स्क्रीन। दोनों स्क्रीन/तीव्रता माप हैं; स्वयं रोग-निर्णय नहीं करते।"
+  },
+  "questions": [
+    {
+      "id": "som_1",
+      "text": {
+        "en": "Do you have several physical symptoms that bother you or that doctors have not been able to explain clearly?",
+        "hi": "क्या आपके कई शारीरिक लक्षण हैं जो आपको परेशान करते हैं या जिन्हें चिकित्सक स्पष्ट रूप से समझा नहीं पाए?"
+      },
+      "scaleId": "phq15",
+      "sharedScale": "yesno",
+      "disorders": [
+        "somatic_symptom_disorder",
+        "conversion_disorder"
+      ]
+    },
+    {
+      "id": "som_2",
+      "text": {
+        "en": "Do you feel that your illness has been treated differently from what you expected, or that the attention you receive while being ill matters greatly to you?",
+        "hi": "क्या आपको लगता है कि आपके रोग का प्रबंध अपेक्षा से भिन्न रहा, अथवा बीमारी के दौरान आपको मिलने वाला ध्यान आपके लिए अत्यंत महत्वपूर्ण है?"
+      },
+      "scaleId": "fac22_sr",
+      "sharedScale": "yesno",
+      "disorders": [
+        "factitious_disorder",
+        "somatic_symptom_disorder"
+      ]
+    }
+  ]
+}

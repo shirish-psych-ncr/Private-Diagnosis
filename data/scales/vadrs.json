@@ -1,0 +1,637 @@
+{
+  "id": "vadrs",
+  "name": {
+    "en": "Vanderbilt ADHD Diagnostic Rating Scale (VADRS)",
+    "hi": "वैंडरबिल्ट एडीएचडी डायग्नोस्टिक रेटिंग स्केल"
+  },
+  "type": "matrix",
+  "targetAge": [
+    "pediatric",
+    "adolescent"
+  ],
+  "parts": [
+    {
+      "id": "attention",
+      "name": {
+        "en": "Part IA: Inattention",
+        "hi": "भाग I-A: ध्यान की कमी"
+      },
+      "questions": [
+        {
+          "id": "v1",
+          "text": {
+            "en": "Does not pay attention to details or makes careless mistakes with, for example, homework",
+            "hi": "विवरणों पर ध्यान नहीं देता या लापरवाही से गलतियां करता है"
+          }
+        },
+        {
+          "id": "v2",
+          "text": {
+            "en": "Has difficulty keeping attention to what needs to be done",
+            "hi": "जो करने की आवश्यकता है उस पर ध्यान रखने में कठिनाई होती है"
+          }
+        },
+        {
+          "id": "v3",
+          "text": {
+            "en": "Does not seem to listen when spoken to directly",
+            "hi": "सीधे बात करने पर सुनता नहीं प्रतीत होता"
+          }
+        },
+        {
+          "id": "v4",
+          "text": {
+            "en": "Does not follow through when given directions and fails to finish activities (not due to refusal or failure to understand)",
+            "hi": "निर्देशों का पालन नहीं करता और गतिविधियों को पूरा करने में विफल रहता है"
+          }
+        },
+        {
+          "id": "v5",
+          "text": {
+            "en": "Has difficulty organizing tasks and activities",
+            "hi": "कार्यों और गतिविधियों को व्यवस्थित करने में कठिनाई होती है"
+          }
+        },
+        {
+          "id": "v6",
+          "text": {
+            "en": "Avoids, dislikes, or does not want to start tasks that require ongoing mental effort",
+            "hi": "ऐसे कार्यों से बचता है जिनमें निरंतर मानसिक प्रयास की आवश्यकता होती है"
+          }
+        },
+        {
+          "id": "v7",
+          "text": {
+            "en": "Loses things necessary for tasks or activities (toys, assignments, pencils, or books)",
+            "hi": "कार्यों या गतिविधियों के लिए आवश्यक चीजें खो देता है"
+          }
+        },
+        {
+          "id": "v8",
+          "text": {
+            "en": "Is easily distracted by noises or other stimuli",
+            "hi": "बाहरी उत्तेजनाओं से आसानी से विचलित हो जाता है"
+          }
+        },
+        {
+          "id": "v9",
+          "text": {
+            "en": "Is forgetful in daily activities",
+            "hi": "दैनिक गतिविधियों में भूलक्कड़ है"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hyperactivity",
+      "name": {
+        "en": "Part IB: Hyperactivity / Impulsivity",
+        "hi": "भाग I-B: अतिसक्रियता / आवेगशीलता"
+      },
+      "questions": [
+        {
+          "id": "v10",
+          "text": {
+            "en": "Fidgets with hands or feet or squirms in seat",
+            "hi": "हाथ या पैर हिलाता है, या कुर्सी पर तड़पता है"
+          }
+        },
+        {
+          "id": "v11",
+          "text": {
+            "en": "Leaves seat when remaining seated is expected",
+            "hi": "ऐसी स्थितियों में सीट छोड़ देता है जब बैठे रहने की अपेक्षा होती है"
+          }
+        },
+        {
+          "id": "v12",
+          "text": {
+            "en": "Runs about or climbs too much when remaining seated is expected",
+            "hi": "अनुचित स्थितियों में दौड़ता है या चढ़ता है"
+          }
+        },
+        {
+          "id": "v13",
+          "text": {
+            "en": "Has difficulty playing or beginning quiet play activities",
+            "hi": "शांति से खेलने या अवकाश गतिविधियों में शामिल नहीं हो पाता"
+          }
+        },
+        {
+          "id": "v14",
+          "text": {
+            "en": "Is \"on the go,\" acts as if \"driven by a motor\"",
+            "hi": "लगातार गति में रहता है, मानो \"मोटर से संचालित\" हो"
+          }
+        },
+        {
+          "id": "v15",
+          "text": {
+            "en": "Talks too much",
+            "hi": "बहुत ज़्यादा बोलता है"
+          }
+        },
+        {
+          "id": "v16",
+          "text": {
+            "en": "Blurts out answers before questions have been completed",
+            "hi": "प्रश्न पूरे होने से पहले ही उत्तर दे देता है"
+          }
+        },
+        {
+          "id": "v17",
+          "text": {
+            "en": "Has difficulty waiting his or her turn",
+            "hi": "बारी की प्रतीक्षा करने में कठिनाई होती है"
+          }
+        },
+        {
+          "id": "v18",
+          "text": {
+            "en": "Interrupts or intrudes on others' conversations and/or activities",
+            "hi": "दूसरों की बातचीत और/या गतिविधियों में बीच में टोकता है या हस्तक्षेप करता है"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oppositionalDefiant",
+      "name": {
+        "en": "Part IC: Oppositional Defiant Symptoms",
+        "hi": "भाग I-C: प्रतिरोधी-अवज्ञाकारी लक्षण"
+      },
+      "questions": [
+        {
+          "id": "v19",
+          "text": {
+            "en": "Argues with adults",
+            "hi": "वयस्कों के साथ बहस करता है"
+          }
+        },
+        {
+          "id": "v20",
+          "text": {
+            "en": "Loses temper",
+            "hi": "गुस्सा खो देता है / तुरंत चिड़चिड़ा होता है"
+          }
+        },
+        {
+          "id": "v21",
+          "text": {
+            "en": "Actively defies or refuses to go along with adults' requests or rules",
+            "hi": "वयस्कों की बातों या नियमों का जानबूझकर पालन नहीं करता या इनकार करता है"
+          }
+        },
+        {
+          "id": "v22",
+          "text": {
+            "en": "Deliberately annoys people",
+            "hi": "जानबूझकर लोगों को परेशान करता है"
+          }
+        },
+        {
+          "id": "v23",
+          "text": {
+            "en": "Blames others for his or her mistakes or misbehaviors",
+            "hi": "अपनी गलतियों या दुर्व्यवहारों के लिए दूसरों को दोष देता है"
+          }
+        },
+        {
+          "id": "v24",
+          "text": {
+            "en": "Is touchy or easily annoyed by others",
+            "hi": "चिड़चिड़ा है या दूसरों से आसानी से नाराज हो जाता है"
+          }
+        },
+        {
+          "id": "v25",
+          "text": {
+            "en": "Is angry or resentful",
+            "hi": "गुस्से या कड़वाहट में रहता है"
+          }
+        },
+        {
+          "id": "v26",
+          "text": {
+            "en": "Is spiteful and wants to get even",
+            "hi": "बदले की भावना रखता है और बदला लेना चाहता है"
+          }
+        }
+      ]
+    },
+    {
+      "id": "conduct",
+      "name": {
+        "en": "Part ID: Conduct Disorder Symptoms",
+        "hi": "भाग I-D: कंडक्ट डिसऑर्डर लक्षण"
+      },
+      "questions": [
+        {
+          "id": "v27",
+          "text": {
+            "en": "Bullies, threatens, or intimidates others",
+            "hi": "दूसरों को धमकाता है, डराता है या प्रताड़ित करता है"
+          }
+        },
+        {
+          "id": "v28",
+          "text": {
+            "en": "Starts physical fights",
+            "hi": "शारीरिक लड़ाई शुरू करता है"
+          }
+        },
+        {
+          "id": "v29",
+          "text": {
+            "en": "Lies to get out of trouble or to avoid obligations (i.e., \"cons\" others)",
+            "hi": "मुसीबत से बचने या जिम्मेदारियों टालने के लिए झूठ बोलता है"
+          }
+        },
+        {
+          "id": "v30",
+          "text": {
+            "en": "Is truant from school (skips school) without permission",
+            "hi": "बिना अनुमति स्कूल से गैरहाज़िर रहता है (स्कूल छोड़कर भागता है)"
+          }
+        },
+        {
+          "id": "v31",
+          "text": {
+            "en": "Is physically cruel to people",
+            "hi": "लोगों के प्रति शारीरिक रूप से क्रूर व्यवहार करता है"
+          }
+        },
+        {
+          "id": "v32",
+          "text": {
+            "en": "Has stolen things that have value",
+            "hi": "मूल्यवान चीज़ें चुराई हैं"
+          }
+        },
+        {
+          "id": "v33",
+          "text": {
+            "en": "Is physically cruel to animals",
+            "hi": "जानवरों के प्रति शारीरिक रूप से क्रूर व्यवहार करता है"
+          }
+        },
+        {
+          "id": "v34",
+          "text": {
+            "en": "Deliberately destroys others' property",
+            "hi": "दूसरों की संपत्ति जानबूझकर नष्ट करता है"
+          }
+        },
+        {
+          "id": "v35",
+          "text": {
+            "en": "Has used a weapon that can cause serious harm (bat, knife, brick, gun)",
+            "hi": "गंभीर क्षति कर सकने वाले हथियार का उपयोग किया है (बल्टी, चाकू, ईंट, बंदूक)"
+          }
+        },
+        {
+          "id": "v36",
+          "text": {
+            "en": "Has deliberately set fires to cause damage",
+            "hi": "जानबूझकर नुकसान पहुँचाने के लिए आग लगाई है"
+          }
+        },
+        {
+          "id": "v37",
+          "text": {
+            "en": "Has broken into someone else's home, business, or car",
+            "hi": "किसी और के घर, व्यापार स्थल या वाहन में जबरन घुसा है"
+          }
+        },
+        {
+          "id": "v38",
+          "text": {
+            "en": "Has stayed out at night without permission",
+            "hi": "बिना अनुमति रात भर बाहर रहा है"
+          }
+        },
+        {
+          "id": "v39",
+          "text": {
+            "en": "Has run away from home overnight",
+            "hi": "घर से रात भर के लिए भागा है"
+          }
+        },
+        {
+          "id": "v40",
+          "text": {
+            "en": "Has forced someone into sexual activity",
+            "hi": "किसी को यौन गतिविधि के लिए बाध्य किया है"
+          },
+          "safety": true
+        }
+      ]
+    },
+    {
+      "id": "anxietyDepression",
+      "name": {
+        "en": "Part IE: Anxiety/Depression Symptoms",
+        "hi": "भाग I-E: चिंता/अवसाद लक्षण"
+      },
+      "questions": [
+        {
+          "id": "v41",
+          "text": {
+            "en": "Is fearful, anxious, or worried",
+            "hi": "डरा, व्याकुल या चिंतित रहता है"
+          }
+        },
+        {
+          "id": "v42",
+          "text": {
+            "en": "Is afraid to try new things for fear of making mistakes",
+            "hi": "गलती करने के डर से नई चीज़ें आज़माने से डरता है"
+          }
+        },
+        {
+          "id": "v43",
+          "text": {
+            "en": "Feels worthless or inferior",
+            "hi": "अपने आपको बेकार या हीन महसूस करता है"
+          }
+        },
+        {
+          "id": "v44",
+          "text": {
+            "en": "Blames self for problems, feels guilty",
+            "hi": "समस्याओं के लिए खुद को दोष देता है, अपराधबोध महसूस करता है"
+          }
+        },
+        {
+          "id": "v45",
+          "text": {
+            "en": "Feels lonely, unwanted, or unloved; complains that \"no one loves him or her\"",
+            "hi": "अकेला, अवांछित या निरपेक्ष महसूस करता है; शिकायत करता है कि 'कोई उसे प्यार नहीं करता'"
+          }
+        },
+        {
+          "id": "v46",
+          "text": {
+            "en": "Is sad, unhappy, or depressed",
+            "hi": "उदास, अप्रसन्न या अवसादग्रस्त रहता है"
+          }
+        },
+        {
+          "id": "v47",
+          "text": {
+            "en": "Is self-conscious or easily embarrassed",
+            "hi": "अत्यधिक स्व-चेतना वाला है या आसानी से शर्मा जाता है"
+          }
+        }
+      ]
+    },
+    {
+      "id": "performance",
+      "name": {
+        "en": "Part II: Performance",
+        "hi": "भाग II: प्रदर्शन"
+      },
+      "questions": [
+        {
+          "id": "v48",
+          "text": {
+            "en": "Overall school performance",
+            "hi": "समग्र स्कूल प्रदर्शन"
+          },
+          "isPerformance": true
+        },
+        {
+          "id": "v49",
+          "text": {
+            "en": "Reading",
+            "hi": "पठन"
+          },
+          "isPerformance": true
+        },
+        {
+          "id": "v50",
+          "text": {
+            "en": "Mathematics",
+            "hi": "गणित"
+          },
+          "isPerformance": true
+        },
+        {
+          "id": "v51",
+          "text": {
+            "en": "Writing",
+            "hi": "लेखन"
+          },
+          "isPerformance": true
+        },
+        {
+          "id": "v52",
+          "text": {
+            "en": "Relationship with parents",
+            "hi": "माता-पिता के साथ संबंध"
+          },
+          "isPerformance": true
+        },
+        {
+          "id": "v53",
+          "text": {
+            "en": "Relationship with siblings",
+            "hi": "भाई-बहनों के साथ संबंध"
+          },
+          "isPerformance": true
+        },
+        {
+          "id": "v54",
+          "text": {
+            "en": "Relationship with peers",
+            "hi": "समकक्षों के साथ संबंध"
+          },
+          "isPerformance": true
+        },
+        {
+          "id": "v55",
+          "text": {
+            "en": "Participation in organized activities (e.g., teams)",
+            "hi": "संगठित गतिविधियों (जैसे खेल टीमें) में भागीदारी"
+          },
+          "isPerformance": true
+        }
+      ]
+    }
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": {
+        "en": "Never",
+        "hi": "कभी नहीं"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "Occasionally",
+        "hi": "कभी-कभी"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "Often",
+        "hi": "अक्सर"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "Very Often",
+        "hi": "बहुत अक्सर"
+      }
+    }
+  ],
+  "performanceOptions": [
+    {
+      "v": 1,
+      "label": {
+        "en": "Excellent",
+        "hi": "उत्कृष्ट"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "Above Average",
+        "hi": "औसत से ऊपर"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "Average",
+        "hi": "औसत"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "Somewhat of a Problem",
+        "hi": "थोड़ी समस्या"
+      }
+    },
+    {
+      "v": 5,
+      "label": {
+        "en": "Problematic",
+        "hi": "समस्याग्रस्त"
+      }
+    }
+  ],
+  "scoring": {
+    "type": "vadrs",
+    "inattention": {
+      "ids": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9"
+      ],
+      "thresholdCount": 6,
+      "minSymptomValue": 2
+    },
+    "hyperactivity": {
+      "ids": [
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15",
+        "v16",
+        "v17",
+        "v18"
+      ],
+      "thresholdCount": 6,
+      "minSymptomValue": 2
+    },
+    "oppositionalDefiant": {
+      "ids": [
+        "v19",
+        "v20",
+        "v21",
+        "v22",
+        "v23",
+        "v24",
+        "v25",
+        "v26"
+      ],
+      "thresholdCount": 4,
+      "minSymptomValue": 2,
+      "disordersOnPositive": [
+        "oppositional_defiant_disorder"
+      ]
+    },
+    "conduct": {
+      "ids": [
+        "v27",
+        "v28",
+        "v29",
+        "v30",
+        "v31",
+        "v32",
+        "v33",
+        "v34",
+        "v35",
+        "v36",
+        "v37",
+        "v38",
+        "v39",
+        "v40"
+      ],
+      "thresholdCount": 3,
+      "minSymptomValue": 2,
+      "disordersOnPositive": [
+        "conduct_disorder"
+      ]
+    },
+    "anxietyDepression": {
+      "ids": [
+        "v41",
+        "v42",
+        "v43",
+        "v44",
+        "v45",
+        "v46",
+        "v47"
+      ],
+      "thresholdCount": 3,
+      "minSymptomValue": 2,
+      "disordersOnPositive": []
+    },
+    "performance": {
+      "ids": [
+        "v48",
+        "v49",
+        "v50",
+        "v51",
+        "v52",
+        "v53",
+        "v54",
+        "v55"
+      ],
+      "minImpairedValue": 4,
+      "requiresImpairedCount": 1
+    },
+    "disordersOnPositive": [
+      "adhd"
+    ]
+  },
+  "directions": {
+    "en": "Each rating should be considered in the context of what is appropriate for the age of your child. When completing this form, please think about your child's behaviors in the past 6 months.",
+    "hi": "प्रत्येक रेटिंग बच्चे की आयु के अनुसार उपयुक्त होने के संदर्भ में विचार की जानी चाहिए। यह फ़ॉर्म भरते समय कृपया पिछले 6 माह में अपने बच्चे के व्यवहार के बारे में सोचें।"
+  }
+}

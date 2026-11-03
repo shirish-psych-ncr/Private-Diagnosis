@@ -1,0 +1,44 @@
+{
+  "id": "gender",
+  "name": {
+    "en": "Gender identity, incongruence & related distress",
+    "hi": "लिंग-पहचान, असंगति एवं संबंधी कष्ट"
+  },
+  "tier": 2,
+  "optional": true,
+  "instrument": "auto:genderdistress",
+  "timeframe": {
+    "en": "Past 6 months.",
+    "hi": "पिछले 6 माह।"
+  },
+  "help": {
+    "en": "Endorsing either question deploys the Gender Congruence and Life Satisfaction Scale (GCLS), a 38-item self-report of gender-related distress, body and social preoccupation, and life satisfaction over the past 6 months. It describes distress and functioning; it does not diagnose gender incongruence, and gender diversity alone is not a mental disorder.",
+    "hi": "किसी भी प्रश्न को स्वीकार करने पर लंग-संगति एवं जीवन-संतुष्टि मापनी (GCLS) खुलेगी — 38 आइटम की स्व-रिपोर्ट जो पिछले 6 माह के लिंग-संबंधी कष्ट, शारीरिक व सामाजिक आसक्ति तथा जीवन-संतुष्टि को वर्णित करती है। यह कष्ट एवं कार्य-क्षमता का वर्णन करता है; लिंग-असंगति का रोग-निर्णय नहीं करता, और केवल लिंग-विविधता मानसिक विकार नहीं है।"
+  },
+  "questions": [
+    {
+      "id": "gen_1",
+      "text": {
+        "en": "Do you feel distress because the gender you were assigned at birth does not match the gender you know yourself to be?",
+        "hi": "क्या आपको कष्ट होता है क्योंकि जन्म के समय सौंपा गया लिंग उस लिंग से मेल नहीं खाता जिसे आप स्वयं के रूप में जानते हैं?"
+      },
+      "scaleId": "gcls",
+      "sharedScale": "yesno",
+      "disorders": [
+        "gender_incongruence"
+      ]
+    },
+    {
+      "id": "gen_2",
+      "text": {
+        "en": "Has distress about your gender interfered with your social life, education or work, relationships, or enjoyment of life in the past 6 months?",
+        "hi": "पिछले 6 माह में आपके लिंग संबंधी कष्ट ने आपके सामाजिक जीवन, शिक्षा या कार्य, संबंधों, या जीवन के आनंद में बाधा डाली है?"
+      },
+      "scaleId": "gcls",
+      "sharedScale": "yesno",
+      "disorders": [
+        "gender_incongruence"
+      ]
+    }
+  ]
+}

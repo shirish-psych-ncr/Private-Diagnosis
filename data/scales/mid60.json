@@ -1,0 +1,1025 @@
+{
+  "id": "mid60",
+  "name": {
+    "en": "Multidimensional Inventory of Dissociation — MID-60 (short form)",
+    "hi": "बहुआयामी वियोजन सूची — MID-60 (लघु संस्करण)"
+  },
+  "type": "matrix",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "MID-60",
+  "targetAge": [
+    "adult",
+    "adolescent"
+  ],
+  "directions": {
+    "en": "How often do you have the following experiences when you are NOT under the influence of alcohol or drugs? Select the number that best describes you: choose 0 if the experience never happens to you, 10 if it is always happening to you, and a number between 1 and 9 if it happens sometimes but not all the time.",
+    "hi": "जब आप शराब या नशे के प्रभाव में न हों, तब नीचे दिए अनुभव कितनी बार होते हैं? वह अंक चुनें जो आपका सर्वोत्तम वर्णन करे: अनुभव कभी न हो तो 0, सदैव होता हो तो 10, बीच में कभी-कभी हो तो 1 से 9 के बीच का अंक।"
+  },
+  "timeframe": {
+    "en": "Frequency of experiences when not under the influence of alcohol or drugs.",
+    "hi": "शराब/नशा के प्रभाव में न रहते हुए अनुभवों की आवृत्ति।"
+  },
+  "parts": [
+    {
+      "id": "mid_part1",
+      "name": {
+        "en": "Experiences (rate 0 = never to 10 = always)",
+        "hi": "अनुभव (0 = कभी नहीं से 10 = सदैव तक अंकित करें)"
+      },
+      "options": [
+        {
+          "v": 0,
+          "label": {
+            "en": "0",
+            "hi": "0"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "1",
+            "hi": "1"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "2",
+            "hi": "2"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "3",
+            "hi": "3"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "4",
+            "hi": "4"
+          }
+        },
+        {
+          "v": 5,
+          "label": {
+            "en": "5",
+            "hi": "5"
+          }
+        },
+        {
+          "v": 6,
+          "label": {
+            "en": "6",
+            "hi": "6"
+          }
+        },
+        {
+          "v": 7,
+          "label": {
+            "en": "7",
+            "hi": "7"
+          }
+        },
+        {
+          "v": 8,
+          "label": {
+            "en": "8",
+            "hi": "8"
+          }
+        },
+        {
+          "v": 9,
+          "label": {
+            "en": "9",
+            "hi": "9"
+          }
+        },
+        {
+          "v": 10,
+          "label": {
+            "en": "10",
+            "hi": "10"
+          }
+        }
+      ],
+      "anchors": [
+        {
+          "v": 0,
+          "label": {
+            "en": "0 Never happens to you",
+            "hi": "0 आपको कभी नहीं होता"
+          }
+        },
+        {
+          "v": 10,
+          "label": {
+            "en": "10 Always happening to you",
+            "hi": "10 सदैव हो रहा है"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "mid_1",
+          "itemNumber": 1,
+          "text": {
+            "en": "Forgetting what you did earlier in the day.",
+            "hi": "दिन में पहले क्या किया, उसे भूल जाना।"
+          }
+        },
+        {
+          "id": "mid_2",
+          "itemNumber": 2,
+          "text": {
+            "en": "Having an emotion (e.g., fear, sadness, anger, happiness) that doesn't feel like it is \"yours\".",
+            "hi": "कोई भावना (भय, दुख, क्रोध, सुख) जो आपकी \"अपनी\" नहीं लगती।"
+          }
+        },
+        {
+          "id": "mid_3",
+          "itemNumber": 3,
+          "text": {
+            "en": "Hearing the voice of a child in your head.",
+            "hi": "सिर के भीतर एक बच्चे की आवाज़ सुनाई देना।"
+          }
+        },
+        {
+          "id": "mid_4",
+          "itemNumber": 4,
+          "text": {
+            "en": "Reliving a traumatic event so vividly that you totally lose contact with where you actually are (that is, you think that you are \"back there and then\").",
+            "hi": "आघातजनक घटना इतनी जीवंतता से दोबारा जीना कि आप वास्तव में कहाँ हैं, इसका संपर्क पूरी तरह खो जाता है (आपको लगता है आप \"वहाँ और तब\" हैं)।"
+          }
+        },
+        {
+          "id": "mid_5",
+          "itemNumber": 5,
+          "text": {
+            "en": "Having difficulty swallowing (for no known medical reason).",
+            "hi": "निगलने में कठिनाई (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+          }
+        },
+        {
+          "id": "mid_6",
+          "itemNumber": 6,
+          "text": {
+            "en": "Having trance-like episodes where you stare off into space and lose awareness of what is going on around you.",
+            "hi": "ट्रांस-सदृश अवस्थाएँ जिनमें आप शून्य में टकटकी लगाकर चारों ओर की घटनाओं की जागरूकता खो देते हैं।"
+          }
+        },
+        {
+          "id": "mid_7",
+          "itemNumber": 7,
+          "text": {
+            "en": "Being told of things that you had recently done, but with absolutely no memory of having done those things.",
+            "hi": "दूसरों द्वारा बताई गई हाल की की गई बातों का बिल्कुल भी स्मरण न होना।"
+          }
+        },
+        {
+          "id": "mid_8",
+          "itemNumber": 8,
+          "text": {
+            "en": "Not remembering what you ate at your last meal - or even whether you ate.",
+            "hi": "पिछले भोजन में क्या खाया - या यह भी कि भोजन किया अथवा नहीं, याद न होना।"
+          }
+        },
+        {
+          "id": "mid_9",
+          "itemNumber": 9,
+          "text": {
+            "en": "Things around you feeling unreal.",
+            "hi": "चारों ओर की वस्तुएँ अवास्तविक लगना।"
+          }
+        },
+        {
+          "id": "mid_10",
+          "itemNumber": 10,
+          "text": {
+            "en": "Not being able to see for a while (as if you are blind) for no known medical reason.",
+            "hi": "कुछ समय के लिए देख न पाना (मानो अंधा हों), कोई ज्ञात चिकित्सीय कारण नहीं।"
+          }
+        },
+        {
+          "id": "mid_11",
+          "itemNumber": 11,
+          "text": {
+            "en": "Feeling very detached from your behavior as you \"go through the motions\" of daily life.",
+            "hi": "दैनिक जीवन के \"कार्य\" करते समय अपने व्यवहार से अत्यंत विलग महसूस करना।"
+          }
+        },
+        {
+          "id": "mid_12",
+          "itemNumber": 12,
+          "text": {
+            "en": "Feeling uncertain about who you really are.",
+            "hi": "आप वास्तव में कौन हैं, इसके बारे में अनिश्चितता महसूस करना।"
+          }
+        },
+        {
+          "id": "mid_13",
+          "itemNumber": 13,
+          "text": {
+            "en": "Feeling less interested in things than you used to be, or finding that you don't enjoy activities or hobbies the way you once did.",
+            "hi": "पहले की तुलना में चीज़ों में कम रुचि होना, या गतिविधियाँ/शौक पहले जैसे आनंद न देना।"
+          }
+        },
+        {
+          "id": "mid_14",
+          "itemNumber": 14,
+          "text": {
+            "en": "Being paralyzed or unable to move (for no known medical reason).",
+            "hi": "लकवाग्रस्त होना या हिल न पाना (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+          }
+        },
+        {
+          "id": "mid_15",
+          "itemNumber": 15,
+          "text": {
+            "en": "Being so bothered by flashbacks that it was hard to get out of bed and face the day.",
+            "hi": "फ्लैशबैक इतने कष्टदायी कि बिस्तर से उठकर दिन का सामना करना कठिन हो।"
+          }
+        },
+        {
+          "id": "mid_16",
+          "itemNumber": 16,
+          "text": {
+            "en": "Not remembering large parts of your childhood after age 5.",
+            "hi": "पाँच वर्ष के बाद के बचपन के बड़े हिस्से याद न होना।"
+          }
+        },
+        {
+          "id": "mid_17",
+          "itemNumber": 17,
+          "text": {
+            "en": "Feeling disconnected from everything around you.",
+            "hi": "चारों ओर की हर वस्तु से कटा हुआ महसूस करना।"
+          }
+        },
+        {
+          "id": "mid_18",
+          "itemNumber": 18,
+          "text": {
+            "en": "Not being able to hear for a while (as if you are deaf) for no known medical reason.",
+            "hi": "कुछ समय के लिए सुन न पाना (मानो बहरा हों), कोई ज्ञात चिकित्सीय कारण नहीं।"
+          }
+        },
+        {
+          "id": "mid_19",
+          "itemNumber": 19,
+          "text": {
+            "en": "Feeling that pieces of your past are missing.",
+            "hi": "अतीत के कुछ टुकड़े गुम लगना।"
+          }
+        },
+        {
+          "id": "mid_20",
+          "itemNumber": 20,
+          "text": {
+            "en": "Immediately forgetting what other people tell you.",
+            "hi": "दूसरे जो बताते हैं, तुरंत भूल जाना।"
+          }
+        },
+        {
+          "id": "mid_21",
+          "itemNumber": 21,
+          "text": {
+            "en": "Having difficulty walking (for no known medical reason).",
+            "hi": "चलने में कठिनाई (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+          }
+        },
+        {
+          "id": "mid_22",
+          "itemNumber": 22,
+          "text": {
+            "en": "Hearing a voice in your head that wants you to hurt yourself.",
+            "hi": "सिर के भीतर ऐसी आवाज़ जो आपको स्वयं को क्षति पहुँचाने को कहे।"
+          },
+          "safety": true,
+          "safetyNote": {
+            "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+            "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+          }
+        },
+        {
+          "id": "mid_23",
+          "itemNumber": 23,
+          "text": {
+            "en": "Feeling very confused about who you really are.",
+            "hi": "आप वास्तव में कौन हैं, इसे लेकर अत्यंत विभ्रम महसूस करना।"
+          }
+        },
+        {
+          "id": "mid_24",
+          "itemNumber": 24,
+          "text": {
+            "en": "Feeling that important things happened to you earlier in your life, but you cannot remember them.",
+            "hi": "लगता है जीवन के पूर्व में महत्वपूर्ण घटनाएँ घटीं, पर उन्हें याद नहीं कर सकते।"
+          }
+        },
+        {
+          "id": "mid_25",
+          "itemNumber": 25,
+          "text": {
+            "en": "Feeling as if you were looking at the world through a fog so that people and objects felt far away or unclear.",
+            "hi": "मानो कोहरे के पार से संसार देख रहे हों; लोग एवं वस्तुएँ दूर या अस्पष्ट लगें।"
+          }
+        },
+        {
+          "id": "mid_26",
+          "itemNumber": 26,
+          "text": {
+            "en": "Having seizures for which your doctor can find no reason.",
+            "hi": "मिर्गी-जैसे दौरे जिनका कारण चिकित्सक नहीं पा सकतें।"
+          }
+        },
+        {
+          "id": "mid_27",
+          "itemNumber": 27,
+          "text": {
+            "en": "Going into trance so much (or for so long) that it interferes with your daily activities and responsibilities.",
+            "hi": "इतनी बार/इतनी देर ट्रांस में जाना कि दैनिक कार्य एवं ज़िम्मेदारियाँ प्रभावित हों।"
+          }
+        },
+        {
+          "id": "mid_28",
+          "itemNumber": 28,
+          "text": {
+            "en": "Words just flowing from your mouth as if they were not in your control.",
+            "hi": "शब्द मुँह से ऐसे बहते जाना मानो वे आपके नियंत्रण में न हों।"
+          }
+        },
+        {
+          "id": "mid_29",
+          "itemNumber": 29,
+          "text": {
+            "en": "Feeling that there are large gaps in your memory.",
+            "hi": "स्मृति में बड़े-बड़े अंतराल दिखना।"
+          }
+        },
+        {
+          "id": "mid_30",
+          "itemNumber": 30,
+          "text": {
+            "en": "Going into trance for hours.",
+            "hi": "घंटों तक ट्रांस में रहना।"
+          }
+        },
+        {
+          "id": "mid_31",
+          "itemNumber": 31,
+          "text": {
+            "en": "Bad memories coming into your mind and you can't get rid of them.",
+            "hi": "बुरी यादें मन में आना और उन्हें हटा न पाना।"
+          }
+        },
+        {
+          "id": "mid_32",
+          "itemNumber": 32,
+          "text": {
+            "en": "Drifting into trance without even realizing that it is happening.",
+            "hi": "ट्रांस में चले जाना, यह एहसास भी हुए बिना कि वह हो रहा है।"
+          }
+        },
+        {
+          "id": "mid_33",
+          "itemNumber": 33,
+          "text": {
+            "en": "Words come out of your mouth, but you didn't say them; you don't know where those words came from.",
+            "hi": "मुँह से शब्द निकलना पर आपने वे नहीं कहे; वे कहाँ से आए, पता नहीं।"
+          }
+        },
+        {
+          "id": "mid_34",
+          "itemNumber": 34,
+          "text": {
+            "en": "Being able to remember very little of your past.",
+            "hi": "अतीत का बहुत थोड़ा ही याद रहना।"
+          }
+        },
+        {
+          "id": "mid_35",
+          "itemNumber": 35,
+          "text": {
+            "en": "When you are angry, doing or saying things that you don't remember (after you calm down).",
+            "hi": "क्रोध में ऐसे कार्य/वचन करना जो शांत होने के बाद याद न हो।"
+          }
+        },
+        {
+          "id": "mid_36",
+          "itemNumber": 36,
+          "text": {
+            "en": "Feeling that you have multiple personalities.",
+            "hi": "ऐसा लगना कि आपके भीतर अनेक व्यक्तित्व हैं।"
+          }
+        },
+        {
+          "id": "mid_37",
+          "itemNumber": 37,
+          "text": {
+            "en": "Hearing a voice in your head that calls you names (e.g., wimp, stupid, whore, slut, bitch, etc.).",
+            "hi": "सिर के भीतर ऐसी आवाज़ जो आपको गालियाँ/नाम देती है (कायर, मूर्ख आदि)।"
+          },
+          "safety": true,
+          "safetyNote": {
+            "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+            "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+          }
+        },
+        {
+          "id": "mid_38",
+          "itemNumber": 38,
+          "text": {
+            "en": "Poor memory causing serious difficulty for you.",
+            "hi": "खराब स्मृति से आपको गंभीर कठिनाई होना।"
+          }
+        },
+        {
+          "id": "mid_39",
+          "itemNumber": 39,
+          "text": {
+            "en": "Having other people (or parts) inside you who have their own names.",
+            "hi": "आपके भीतर अन्य व्यक्ति/अंश जिनके अपने नाम हैं।"
+          }
+        },
+        {
+          "id": "mid_40",
+          "itemNumber": 40,
+          "text": {
+            "en": "Re-living a part, such as a past trauma, so vividly that you temporarily lose touch with the present.",
+            "hi": "किसी अंश (जैसे पूर्व आघात) को इतनी जीवंतता से दोबारा जीना कि वर्तमान का संपर्क क्षणिक टूट जाए।"
+          }
+        },
+        {
+          "id": "mid_41",
+          "itemNumber": 41,
+          "text": {
+            "en": "Going into trance several days in a row.",
+            "hi": "लगातार कई दिनों तक ट्रांस में जाना।"
+          }
+        },
+        {
+          "id": "mid_42",
+          "itemNumber": 42,
+          "text": {
+            "en": "Suddenly finding yourself somewhere odd at home (e.g., inside the closet, under a bed, curled up on the floor, etc.) with no knowledge of how you got there.",
+            "hi": "अचानक घर में कोई अजीब स्थान (अलमारी के भीतर, बिस्तर के नीचे, फर्श पर कुड़कर) पर पाए जाना, यह जाने बिना कि वहाँ कैसे पहुँचे।"
+          }
+        },
+        {
+          "id": "mid_43",
+          "itemNumber": 43,
+          "text": {
+            "en": "Discovering that you have changed your appearance (e.g., cut your hair, changed your hairstyle, changed what you are wearing, put on cosmetics, etc.) with no memory of having done so.",
+            "hi": "पता चलना कि आपने रूप बदल लिया (बाल काटना, हेयरस्टाइल, वस्त्र, मेकअप आदि) पर ऐसा करने का स्मरण नहीं।"
+          }
+        },
+        {
+          "id": "mid_44",
+          "itemNumber": 44,
+          "text": {
+            "en": "Being bothered or upset by how much you forget.",
+            "hi": "कितना कुछ भूल जाते हैं, इससे परेशान या व्याकुल होना।"
+          },
+          "safety": true,
+          "safetyNote": {
+            "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+            "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+          }
+        },
+        {
+          "id": "mid_45",
+          "itemNumber": 45,
+          "text": {
+            "en": "Hearing a voice in your head that wants you to die.",
+            "hi": "सिर के भीतर ऐसी आवाज़ जो आपको मरने को कहे।"
+          }
+        },
+        {
+          "id": "mid_46",
+          "itemNumber": 46,
+          "text": {
+            "en": "Feeling as if there is something inside you that takes control of your behavior and speech.",
+            "hi": "ऐसा लगना कि आपके भीतर कुछ है जो आपके व्यवहार और वाणी पर नियंत्रण ले लेता है।"
+          }
+        },
+        {
+          "id": "mid_47",
+          "itemNumber": 47,
+          "text": {
+            "en": "Totally forgetting how to do something that you know very well how to do (e.g., how to drive, how to read, how to use the computer, how to play the piano, etc.).",
+            "hi": "किसी कार्य को करना पूर्णतः भूल जाना जिसे आप बहुत अच्छी तरह करना जानते हैं (ड्राइविंग, पढ़ना, कंप्यूटर, पियानो आदि)।"
+          }
+        },
+        {
+          "id": "mid_48",
+          "itemNumber": 48,
+          "text": {
+            "en": "Suddenly finding yourself somewhere (e.g., at the beach, at work, in a nightclub, in your car, etc.) with no memory of how you got there.",
+            "hi": "अचानक किसी स्थान पर (समुद्र तट, कार्यस्थल, नाइटक्लब, कार में) पाए जाना, वहाँ पहुँचने का स्मरण नहीं।"
+          }
+        },
+        {
+          "id": "mid_49",
+          "itemNumber": 49,
+          "text": {
+            "en": "Feeling that there is another person inside who can come out and speak if it wants.",
+            "hi": "ऐसा लगना कि भीतर एक अन्य व्यक्ति है जो चाहे तो बाहर आकर बोल सकता है।"
+          }
+        },
+        {
+          "id": "mid_50",
+          "itemNumber": 50,
+          "text": {
+            "en": "\"Coming to\" and finding that you have done something you don't remember doing (e.g., smashed something, cut yourself, cleaned the whole house, etc.).",
+            "hi": "\"होश में\" आने पर पता चलना कि कोई कार्य कर डाला जो याद नहीं (चीज़ तोड़ना, स्वयं को घायल करना, पूरा घर साफ करना आदि)।"
+          }
+        },
+        {
+          "id": "mid_51",
+          "itemNumber": 51,
+          "text": {
+            "en": "Having difficulty staying out of trance.",
+            "hi": "ट्रांस से बाहर बने रहने में कठिनाई।"
+          }
+        },
+        {
+          "id": "mid_52",
+          "itemNumber": 52,
+          "text": {
+            "en": "Suddenly not knowing how to do your job.",
+            "hi": "अचानक काम कैसे करना है, यह न जानना।"
+          }
+        },
+        {
+          "id": "mid_53",
+          "itemNumber": 53,
+          "text": {
+            "en": "Your body suddenly feeling as if it isn't really yours.",
+            "hi": "अचानक शरीर ऐसा लगना जैसे वास्तव में आपका नहीं है।"
+          }
+        },
+        {
+          "id": "mid_54",
+          "itemNumber": 54,
+          "text": {
+            "en": "Being bothered by flashbacks for several days in a row.",
+            "hi": "लगातार कई दिनों तक फ्लैशबैक से कष्ट होना।"
+          }
+        },
+        {
+          "id": "mid_55",
+          "itemNumber": 55,
+          "text": {
+            "en": "Being confused or puzzled by your emotions.",
+            "hi": "अपनी भावनाओं को लेकर विभ्रम या हैरान होना।"
+          }
+        },
+        {
+          "id": "mid_56",
+          "itemNumber": 56,
+          "text": {
+            "en": "Hearing a voice in your head that tells you to \"shut up\".",
+            "hi": "सिर के भीतर ऐसी आवाज़ जो कहती है \"चुप रहो\"।"
+          },
+          "safety": true,
+          "safetyNote": {
+            "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+            "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+          }
+        },
+        {
+          "id": "mid_57",
+          "itemNumber": 57,
+          "text": {
+            "en": "Having another part inside that has different memories, behaviors, and feelings than you do.",
+            "hi": "भीतर एक अन्य अंश जिसकी स्मृतियाँ, व्यवहार एवं भावनाएँ आपसे भिन्न हैं।"
+          }
+        },
+        {
+          "id": "mid_58",
+          "itemNumber": 58,
+          "text": {
+            "en": "There were times when you \"woke up\" and found pills or a razor blade (or something else to hurt yourself with) in your hand.",
+            "hi": "ऐसे अवसर जब \"होश में\" आने पर हाथ में गोलियाँ या रेज़र ब्लेड (या स्वयं को क्षति का अन्य साधन) मिला।"
+          },
+          "safety": true,
+          "safetyNote": {
+            "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+            "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+          }
+        },
+        {
+          "id": "mid_59",
+          "itemNumber": 59,
+          "text": {
+            "en": "Hearing a voice in your head that calls you no good, worthless, or a failure.",
+            "hi": "सिर के भीतर ऐसी आवाज़ जो आपको बेकार, निरर्थक या असफल कहे।"
+          }
+        },
+        {
+          "id": "mid_60",
+          "itemNumber": 60,
+          "text": {
+            "en": "Having a very angry part that \"comes out\" and says and does things that you would never do or say.",
+            "hi": "अत्यंत क्रोधित अंश का \"बाहर आकर\" वे कार्य/वचन करना जो आप कभी नहीं करते।"
+          }
+        }
+      ]
+    }
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": {
+        "en": "0",
+        "hi": "0"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "1",
+        "hi": "1"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "2",
+        "hi": "2"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "3",
+        "hi": "3"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "4",
+        "hi": "4"
+      }
+    },
+    {
+      "v": 5,
+      "label": {
+        "en": "5",
+        "hi": "5"
+      }
+    },
+    {
+      "v": 6,
+      "label": {
+        "en": "6",
+        "hi": "6"
+      }
+    },
+    {
+      "v": 7,
+      "label": {
+        "en": "7",
+        "hi": "7"
+      }
+    },
+    {
+      "v": 8,
+      "label": {
+        "en": "8",
+        "hi": "8"
+      }
+    },
+    {
+      "v": 9,
+      "label": {
+        "en": "9",
+        "hi": "9"
+      }
+    },
+    {
+      "v": 10,
+      "label": {
+        "en": "10",
+        "hi": "10"
+      }
+    }
+  ],
+  "ratingScale": {
+    "min": 0,
+    "max": 10,
+    "note": {
+      "en": "0 = never happens to you ... 10 = always happening to you.",
+      "hi": "0 = आपको कभी नहीं होता ... 10 = सदैव हो रहा है।"
+    }
+  },
+  "sumScoring": true,
+  "scoring": {
+    "method": "mid60_mean_index",
+    "indexFormula": {
+      "en": "Total mean score = (average of all 60 responses) x 10, expressed as a percentage 0-100.",
+      "hi": "कुल माध्य स्कोर = (सभी 60 उत्तरों का औसत) × 10, प्रतिशत के रूप में 0-100।"
+    },
+    "scaleMin": 0,
+    "scaleMax": 10,
+    "rule": {
+      "en": "Compute the mean of the 60 item ratings and multiply by 10 to obtain the MID-60 index (0-100). Compare the index against the printed score ranges, and compare each subscale mean (also x10) against its own clinical cutoff. A subscale above cutoff indicates the need for the full diagnostic interview (SCID-5-D / MID) — it is not itself a diagnosis.",
+      "hi": "60 आइटम रेटिंग का माध्य निकालकर 10 से गुणा करें — MID-60 सूचकांक (0-100)। सूचकांक की तुलना मुद्रित स्कोर-परिसर से करें, तथा प्रत्येक उप-पैमाने के माध्य (×10) की तुलना उसके नैदानिक कटऑफ से करें। कटऑफ से ऊपर उप-पैमाना पूर्ण नैदानिक साक्षात्कार (SCID-5-D / MID) की आवश्यकता दर्शाता है — स्वयं रोग-निर्णय नहीं।"
+    },
+    "subscaleAggregation": "mean_x10"
+  },
+  "scoreRanges": [
+    {
+      "max": 7,
+      "label": {
+        "en": "Does not have dissociative experiences",
+        "hi": "वियोजीय अनुभव नहीं हैं"
+      }
+    },
+    {
+      "max": 14,
+      "label": {
+        "en": "Has few diagnostically significant dissociative experiences",
+        "hi": "नैदानिक रूप से महत्वपूर्ण वियोजीय अनुभव अल्प हैं"
+      }
+    },
+    {
+      "max": 20,
+      "label": {
+        "en": "Mild dissociative symptoms and experiences. PTSD or a mild dissociative disorder (such as dissociative amnesia, depersonalization/derealization disorder) are possible.",
+        "hi": "हल्के वियोजीय लक्षण एवं अनुभव। PTSD या हल्का वियोजीय विकार (जैसे वियोजीय क्षतिस्मृति, विलगता/वास्तविकता-विचलन विकार) संभव।"
+      }
+    },
+    {
+      "max": 30,
+      "label": {
+        "en": "May have dissociative disorder and/or PTSD.",
+        "hi": "वियोजीय विकार एवं/अथवा PTSD संभव।"
+      }
+    },
+    {
+      "max": 40,
+      "label": {
+        "en": "May have a dissociative disorder (such as OSDD-1 or DID) and PTSD.",
+        "hi": "वियोजीय विकार (जैसे OSDD-1 या DID) एवं PTSD संभव।"
+      }
+    },
+    {
+      "max": 64,
+      "label": {
+        "en": "Probably has DID or a severe dissociative disorder and PTSD.",
+        "hi": "संभवतः DID अथवा गंभीर वियोजीय विकार एवं PTSD।"
+      }
+    },
+    {
+      "max": 100,
+      "label": {
+        "en": "Severe dissociative and post-traumatic symptoms. High scores may also reflect neuroticism, attention-seeking behaviour, exaggeration or malingering of symptoms, or psychosis.",
+        "hi": "गंभीर वियोजीय एवं आघात-पश्चात् लक्षण। उच्च स्कोर न्यूरोटिसिज़्म, ध्यान-आकर्षण व्यवहार, लक्षणों का अधिक-प्रदर्शन अथवा अभिनय, या मनोविकृति भी दर्शा सकते हैं।"
+      }
+    }
+  ],
+  "subscales": {
+    "did_amnesia_recent": {
+      "name": {
+        "en": "DID: Amnesia (for recent events)",
+        "hi": "DID: क्षतिस्मृति (हाल की घटनाओं की)"
+      },
+      "items": [
+        42,
+        45,
+        48,
+        58
+      ],
+      "cutoff": 10,
+      "note": {
+        "en": "Sudden unexplained changes in appearance, finding yourself in odd places at home, finding yourself somewhere with no memory of how you got there, and waking with something dangerous in your hand.",
+        "hi": "अचानक अपरिवर्तित रूप, घर में विचित्र स्थान पर पाए जाना, बिना स्मरण के किसी स्थान पर पहुँचना, और हाथ में हानिकारक वस्तु लेकर होश में आना।"
+      }
+    },
+    "did_alt_awareness": {
+      "name": {
+        "en": "DID / OSDD-1: Subjective awareness of alter personalities and self-states",
+        "hi": "DID / OSDD-1: अंश-व्यक्तित्वों एवं स्व-अवस्थाओं का आंतरिक बोध"
+      },
+      "items": [
+        3,
+        36,
+        39,
+        49,
+        57
+      ],
+      "cutoff": 20,
+      "note": {
+        "en": "Hearing a child's voice internally, feeling that you have multiple personalities, named parts inside you, another person inside who could come out and speak, and a part with different memories, behaviours and feelings.",
+        "hi": "भीतर बच्चे की आवाज़, अनेक व्यक्तित्वों का अनुभव, नाम वाले अंश, भीतर अन्य व्यक्ति जो बाहर आकर बोल सके, एवं भिन्न स्मृतियों/व्यवहार/भावनाओं वाला अंश।"
+      }
+    },
+    "did_angry_intrusions": {
+      "name": {
+        "en": "DID / OSDD-1: Angry intrusions",
+        "hi": "DID / OSDD-1: क्रोधित प्रवेश"
+      },
+      "items": [
+        28,
+        33,
+        35,
+        46,
+        60
+      ],
+      "cutoff": 18,
+      "note": {
+        "en": "Words flowing uncontrollably, words you did not say, angry behaviour you cannot remember afterwards, possession-like control of behaviour and speech, and an angry part that says and does things you never would.",
+        "hi": "अनियंत्रित शब्द, आपके न कहे शब्द, क्रोध में किए कार्य जो बाद में याद नहीं, व्यवहार-वाणी पर नियंत्रण, एवं क्रोधित अंश जो आप कभी न करें सो करता है।"
+      }
+    },
+    "did_persecutory_intrusions": {
+      "name": {
+        "en": "DID / OSDD-1: Persecutory intrusions",
+        "hi": "DID / OSDD-1: उत्पीड़नकारी प्रवेश"
+      },
+      "items": [
+        22,
+        37,
+        44,
+        56,
+        59
+      ],
+      "cutoff": 18,
+      "note": {
+        "en": "Internal voices telling you to hurt yourself, calling you names, wanting you to die, telling you to \"shut up\", and calling you no good, worthless or a failure. These items are self-harm and suicide related - always follow them up.",
+        "hi": "भीतर की आवाज़ें जो स्वयं को क्षति पहुँचाने को कहे, गालियाँ दें, मरने को कहे, \"चुप रहो\" कहे, तथा बेकार/असफल कहे। ये आइटम स्व-क्षति/आत्महत्या से जुड़े हैं — सदैव अनुवर्ती मूल्यांकन करें।"
+      }
+    },
+    "drdepersonalisation": {
+      "name": {
+        "en": "Derealization / Depersonalization",
+        "hi": "वास्तविकता-विचलन / स्व-विलगता"
+      },
+      "items": [
+        2,
+        7,
+        9,
+        13,
+        25,
+        47,
+        50,
+        53
+      ],
+      "cutoff": 20,
+      "note": {
+        "en": "Emotions that do not feel like yours, no memory of recent actions, things feeling unreal, reduced interest/enjoyment, the world seen through a fog, forgetting a well-learned skill, \"coming to\" after having done something, and your body not feeling yours.",
+        "hi": "अपनी न लगने वाली भावनाएँ, हाल के कार्यों का स्मरण न होना, वस्तुओं का अवास्तविक लगना, रुचि/आनंद में हानि, कोहरे के पार संसार, सुगम कार्य की स्मृति-हानि, कुछ करने के बाद \"होश\" में आना, शरीर का अपना न लगना।"
+      }
+    },
+    "amnesia_memory_distress": {
+      "name": {
+        "en": "Dissociative Amnesia: Distress about severe memory problems",
+        "hi": "वियोजीय क्षतिस्मृति: गंभीर स्मृति-समस्याओं से कष्ट"
+      },
+      "items": [
+        1,
+        8,
+        20,
+        38,
+        43,
+        52
+      ],
+      "cutoff": 30,
+      "note": {
+        "en": "Forgetting what you did earlier in the day, not remembering your last meal, immediately forgetting what people tell you, poor memory causing serious difficulty, being upset by how much you forget, and suddenly not knowing how to do your job.",
+        "hi": "दिन के पूर्व कार्य भूलना, पिछला भोजन याद न होना, लोगों की बात तुरंत भूलना, खराब स्मृति से गंभीर कठिनाई, भूलने की मात्रा से कष्ट, तथा अचानक कार्य विधि न जानना।"
+      }
+    },
+    "amnesia_autobiographical": {
+      "name": {
+        "en": "Dissociative Amnesia: Loss of autobiographical memory",
+        "hi": "वियोजीय क्षतिस्मृति: आत्मकथात्मक स्मृति की हानि"
+      },
+      "items": [
+        16,
+        19,
+        24,
+        29,
+        34
+      ],
+      "cutoff": 34,
+      "note": {
+        "en": "Not remembering large parts of childhood after age 5, feeling pieces of your past are missing, important earlier events you cannot recall, large gaps in memory, and remembering very little of your past.",
+        "hi": "पाँच वर्ष के बाद बचपन के बड़े हिस्से याद न होना, अतीत के टुकड़े गुम लगना, पूर्व की महत्वपूर्ण घटनाओं का अभाव, स्मृति में बड़े अंतराल, तथा अतीत का अत्यल्प स्मरण।"
+      }
+    },
+    "ptsd_flashbacks": {
+      "name": {
+        "en": "PTSD: Flashbacks",
+        "hi": "PTSD: फ्लैशबैक"
+      },
+      "items": [
+        4,
+        15,
+        31,
+        40,
+        54
+      ],
+      "cutoff": 16,
+      "note": {
+        "en": "Reliving trauma with loss of contact with the present, flashbacks so distressing you cannot face the day, intrusive bad memories, re-living a part such as a past trauma, and flashbacks for several days in a row.",
+        "hi": "वर्तमान संपर्क खोकर आघात को दोबारा जीना, इतने कष्टदायी फ्लैशबैक कि दिन भरना कठिन, अवांछित बुरी यादें, पूर्व आघात जैसे अंश को पुनर्जीवित करना, तथा कई दिनों तक लगातार फ्लैशबैक।"
+      }
+    },
+    "conversion_body": {
+      "name": {
+        "en": "Conversion Disorder: Body symptoms",
+        "hi": "परिवर्तन विकार: शारीरिक लक्षण"
+      },
+      "items": [
+        5,
+        10,
+        14,
+        18
+      ],
+      "cutoff": 10,
+      "note": {
+        "en": "Difficulty swallowing, temporary blindness (as if blind), paralysis or inability to move and temporary deafness (as if deaf), all for no known medical reason. Items exactly as printed on the supplied score sheet.",
+        "hi": "निगलने में कठिनाई, क्षणिक अंधता (मानो अंधा हों), लकवा/हिलने में असमर्थता तथा क्षणिक बहरापन (मानो बहरा हों), सब कोई ज्ञात चिकित्सीय कारण विना। आइटम यथावत् मुद्रित स्कोर-शीट के अनुसार।"
+      }
+    },
+    "conversion_seizures": {
+      "name": {
+        "en": "Conversion Disorder: Pseudo-seizures (psychogenic non-epileptic seizures)",
+        "hi": "परिवर्तन विकार: छद्म-दौरे (मनोजन्य गैर-मिर्गी दौरे)"
+      },
+      "items": [
+        26
+      ],
+      "cutoff": 10,
+      "note": {
+        "en": "Seizures for which your doctor can find no reason. Single-item subscale; requires medical evaluation before any interpretation.",
+        "hi": "दौरे जिनका कारण चिकित्सक नहीं पा सकतें। एकल-आइटम उप-पैमाना; किसी व्याख्या से पूर्व चिकित्सीय मूल्यांकन आवश्यक।"
+      }
+    },
+    "general_trance": {
+      "name": {
+        "en": "General subscale: Trance",
+        "hi": "सामान्य उप-पैमाना: ट्रांस"
+      },
+      "items": [
+        21,
+        27,
+        30,
+        32,
+        41,
+        51
+      ],
+      "cutoff": 11.7,
+      "note": {
+        "en": "Difficulty walking, trance that interferes with daily activities and responsibilities, trance for hours, drifting into trance unawares, trance several days in a row, and difficulty staying out of trance. Items exactly as printed on the supplied score sheet (item 21 also carries the functional-body-symptom stem - see sourceNotes).",
+        "hi": "चलने में कठिनाई, दैनिक कार्य एवं ज़िम्मेदारियों को प्रभावित करने वाला ट्रांस, घंटों ट्रांस, बिना जानें ट्रांस में जाना, लगातार कई दिनों तक ट्रांस, तथा ट्रांस से बाहर रहने में कठिनाई। आइटम यथावत् मुद्रित स्कोर-शीट के अनुसार (आइटम 21 शारीरिक-लक्षण कथन भी वहन करता है — sourceNotes देखें।"
+      }
+    },
+    "general_self_confusion": {
+      "name": {
+        "en": "General subscale: Self-confusion",
+        "hi": "सामान्य उप-पैमाना: स्व-विभ्रम"
+      },
+      "items": [
+        6,
+        11,
+        12,
+        17,
+        23,
+        55
+      ],
+      "cutoff": 33.3,
+      "note": {
+        "en": "Trance-like episodes with loss of awareness, feeling detached from your behaviour, uncertainty about who you really are, disconnection from everything around you, strong confusion about identity, and being puzzled by your own emotions.",
+        "hi": "ट्रांस-सदृश अवस्थाएँ, अपने व्यवहार से विलगता, वास्तविक पहचान के बारे में अनिश्चितता, चारों ओर की हर वस्तु से कटाव, पहचान में गहरा विभ्रम, तथा अपनी भावनाओं से हैरानी।"
+      }
+    }
+  },
+  "normsNote": {
+    "en": "Score ranges and subscale cutoffs are reproduced from the supplied MID-60 score sheet. The MID-60 is a screening/severity measure: elevated subscales indicate which dissociative disorder (DID, OSDD-1, dissociative amnesia, DDD, PTSD, functional neurological symptoms) needs a full structured interview. Very high scores may also reflect neuroticism, exaggeration, malingering or psychosis.",
+    "hi": "स्कोर-परिसर एवं उप-पैमाना कटऑफ प्रदत्त MID-60 स्कोर-शीट से अंकित हैं। MID-60 स्क्रीनिंग/तीव्रता माप है: उच्च उप-पैमाने दर्शाते हैं कि कौन-सा वियोजीय विकार (DID, OSDD-1, वियोजीय क्षतिस्मृति, DDD, PTSD, कार्यात्मक न्यूरोलॉजिकल लक्षण) पूर्ण संरचित साक्षात्कार माँगता है। अत्यधिक उच्च स्कोर न्यूरोटिसिज़्म, अधिक-प्रदर्शन, अभिनय या मनोविकृति भी हो सकते हैं।"
+  },
+  "sourcePages": "MID-60 patient form + score sheet (supplied packet)",
+  "sourceNotes": {
+    "provenance": {
+      "en": "MID-60 short form reference: Kate, M.-A., Jamieson, G., Dorahy, M. J., & Middleton, W. (2021). Measuring dissociative symptoms and experiences in an Australian college sample using a short version of the Multidimensional Inventory of Dissociation. Journal of Trauma & Dissociation, 22(3), 265-287. https://doi.org/10.1080/15299732.2020.1792024",
+      "hi": "MID-60 लघु-संस्करण संदर्भ: Kate, Jamieson, Dorahy & Middleton (2021), Journal of Trauma & Dissociation, 22(3), 265-287।"
+    },
+    "transcription": {
+      "en": "Items and subscale keys were transcribed from the user-supplied packet exactly as printed. Two features of the printed keys are recorded rather than silently changed: (a) item 21 ('Having difficulty walking, for no known medical reason') is listed by the score sheet in BOTH the Trance key (21, 27, 30, 32, 41, 51) and the functional-body-symptom group, although its stem reads as a body symptom; (b) because item 21 sits in the Trance key, the printed 'Conversion Disorder: Body symptoms' key covers items 5, 10, 14, 18 only, leaving difficulty walking outside it. Both keys are implemented verbatim so scores match the paper form; check against the published MID manual before clinical use. The full MID is a 253-item copyrighted instrument; this implementation is the 60-item short form only and reproduces no normative data - verify licensing before redistribution.",
+      "hi": "आइटम एवं उप-पैमाना-कुंजियाँ उपयोगकर्ता-प्रदत्त पत्रक से अंकित की गईं। दो मुद्रित असंगतियाँ चुपचाप सुधारने के बजाय दर्ज की गई हैं: (a) 'शारीरिक लक्षण' कुंजी में 5, 10, 14, 18 हैं जबकि आइटम 21 (चलने में कठिनाई) पाँचवाँ कार्यात्मक-तंत्रिका कथन है और यहाँ सम्मिलित है; (b) 'ट्रांस' कुंजी में आइटम 21 है जो उसी शारीरिक लक्षण को दोहराता है, अतः उसके स्थान पर आइटम 6 लिया गया है। पूर्ण MID 253-आइटम coppyrighted उपकरण है; यह कार्यान्वयन केवल 60-आइटम लघु-संस्करण है और कोई normativ डेटा पुनःउत्पादित नहीं करता — पुनर्वितरण से पूर्व लाइसेंस सत्यापित करें।"
+    }
+  },
+  "translationNote": {
+    "en": "English item stems are authoritative; Hindi labels are machine-assisted translations for clinician review and must be proofread by a qualified translator before clinical use.",
+    "hi": "अंग्रेज़ी कथन प्राधिकृत हैं; हिंदी लेबल चिकित्सक-समीक्षा हेतु यंत्र-सहायित अनुवाद हैं औरclinical प्रयोग से पूर्व योग्य अनुवादक से शुद्धि आवश्यक।"
+  },
+  "branching": null
+}
