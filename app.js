@@ -194,6 +194,9 @@
      * instruments to deploy. `auto:adhd` routes VADRS for pediatric/adolescent
      * and ASRS-v1.1 (the domain's own item set) for adults, per the whitepaper.
      */
+    /* Routes whose optional instruments are always shown once the domain is picked. */
+    const OPTIONAL_TABLE_ROUTES = ['auto:minioptional', 'auto:pdscreen', 'auto:angertable', 'auto:dissociationtable', 'auto:somatoptable', 'auto:genderdistress'];
+
     function routeInstruments() {
         const deployed = [];
         CLINICAL_DATA.domains.forEach(domain => {
@@ -206,7 +209,7 @@
                     scaleId: peds ? 'vadrs' : null,
                     instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
                 });
-            } else if (instName === 'auto:minioptional' || instName === 'auto:pdscreen' || instName === 'auto:angertable') {
+            } else if (OPTIONAL_TABLE_ROUTES.includes(instName)) {
                 // MINI 7.0.2 additional optional interview assessments (pp. 36-37):
                 // A - Cross-Cutting Measures (Severity of Symptom) and
                 // B - Disability / Functional Impairment. Both are clinician-rated
@@ -216,9 +219,29 @@
                 // screen-in item deploys the keyed True/False instrument attached to it
                 // (IPDE ICD-10 module screening questionnaire / PDQ-4+). Neither screen
                 // is diagnostic — they flag which F60/DSM cluster needs the full interview.
+                //
+                // auto:angertable deploys the summed anger instruments (STAXI-C/A,
+                // Clinical Anger Scale); auto:dissociationtable deploys the dissociative-
+                // experience self-report instruments (MID-60 short form, DES-II), each
+                // attached to one screen-in item of the `dissociation` domain.
+                //
+                // auto:genderdistress deploys the Gender Congruence and Life Satisfaction
+                // Scale (GCLS) for the `gender` domain - a reverse-keyed, subscale-scored
+                // self-report of gender-related distress and life satisfaction.
+                // Screen-in questions for these routes are rendered above the
+                // instruments they relate to, so they stay answerable (see
+                // renderDomainScreenIns).
                 domain.questions.forEach(q => {
                     if (!q.scaleId) return;
-                    if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+                    // Optional rating tables (MINI A/B, IPDE, PDQ-4+, anger,
+                    // dissociation, somatic instruments) are deployed as soon as their
+                    // domain is selected. Gating them behind their own screen-in item
+                    // would be a dead end: the screen-in question and the instrument it
+                    // unlocks live on the same page, so under an endorse-first rule the
+                    // table could never appear and the screen-in could never be endorsed.
+                    // The screen-in answers still drive the domain-level flag in
+                    // computeResults(); endorsing one records clinical intent and never
+                    // adds or removes a table.
                     deployed.push({ domain, scaleId: q.scaleId, instrumentLabel: null, ratingTable: true });
                 });
             } else {
@@ -234,18 +257,84 @@
         return [];
     }
 
+    /** Compact Yes/No screen-in block for domains that always show their tables. */
+    function renderDomainScreenIns(container, domain) {
+        const section = document.createElement('section');
+        section.className = 'scale-section domain-screenin';
+        const h = document.createElement('h3');
+        h.className = 'scale-heading';
+        h.textContent = L(domain.name);
+        section.appendChild(h);
+        const tf = document.createElement('p');
+        tf.className = 'scale-timeframe';
+        tf.textContent = L(domain.timeframe);
+        section.appendChild(tf);
+        if (domain.help) {
+            const hp = document.createElement('p');
+            hp.className = 'scale-directions';
+            hp.textContent = L(domain.help);
+            section.appendChild(hp);
+        }
+        domain.questions.filter(q => q.scaleId).forEach((q, idx) => {
+            const fieldset = document.createElement('fieldset');
+            fieldset.className = 'question-block' + (q.safety ? ' safety-item' : '');
+            const legend = document.createElement('legend');
+            legend.textContent = (idx + 1) + '. ' + L(q.text);
+            legend.id = 'lbl-' + q.id;
+            fieldset.appendChild(legend);
+            optionsForQuestion(q).forEach(opt => {
+                const key = domain.id + ':' + q.id;
+                const input = document.createElement('input');
+                input.type = 'radio';
+                input.name = key;
+                input.value = opt.v;
+                input.id = key + '_' + opt.v;
+                if (state.responses[key] === opt.v) input.checked = true;
+                input.addEventListener('change', () => onAnswer(key, opt.v, q, domain));
+                const label = document.createElement('label');
+                label.htmlFor = input.id;
+                label.textContent = L(opt.label);
+                const wrap = document.createElement('div');
+                wrap.className = 'radio-row';
+                wrap.append(input, label);
+                fieldset.appendChild(wrap);
+            });
+            section.appendChild(fieldset);
+        });
+        container.appendChild(section);
+    }
+
     function renderScales() {
         const container = document.getElementById('scale-container');
         container.replaceChildren();
         const deployed = routeInstruments();
 
+        // Screen-in questions for the optional rating-table routes are rendered
+        // first, as one compact block per domain. Those instruments are always
+        // deployed once their domain is selected (gating a table behind its own
+        // screen-in item would be circular — both live on the same page), so the
+        // Yes/No gate needs its own home above the tables. Endorsing an item tells
+        // the clinician which domain narrative to read the table within; it never
+        // adds or removes a table.
+        const seenScreenIns = new Set();
+        deployed.forEach(({ domain, ratingTable }) => {
+            if (!ratingTable || !domain.questions.some(q => q.scaleId)) return;
+            if (seenScreenIns.has(domain.id)) return;
+            seenScreenIns.add(domain.id);
+            renderDomainScreenIns(container, domain);
+        });
+
         deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
             const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
+            // The badge describes who completes the form (administeredBy), not
+            // which scoring algorithm applies: keyed T/F screens such as FAC22-SR
+            // are patient-completed even though they score like the IPDE/PDQ block.
+            const isSelfReport = !!(scDef && scDef.administeredBy === 'self-report');
             const isPdScreen = !!(scDef && scDef.keyedScoring);
             const isSummed = !!(scDef && scDef.sumScoring);
             const section = document.createElement('section');
             section.className = 'scale-section' + (ratingTable
-                ? (isPdScreen ? ' pd-rating-table' : (isSummed ? ' anger-rating-table' : ' clinician-rating-table'))
+                ? (isSelfReport ? ' anger-rating-table' : ' clinician-rating-table')
                 : '');
             const secKey = ratingTable ? domain.id + ':' + scaleId : domain.id;
             section.setAttribute('aria-labelledby', 'scale-h-' + secKey);
@@ -381,6 +470,35 @@
             table.appendChild(thead);
 
             part.questions.forEach((q, idx) => {
+                // Non-scored single tick-box note printed on the form (e.g. the GCLS
+                // "already had genital surgery" box). Recorded as a clinical note; it
+                // contributes to no total, so it is stored as 1/0 rather than a rating.
+                if (q.tickBox) {
+                    const tr = document.createElement('tr');
+                    tr.className = 'tickbox-row';
+                    const rowHead = document.createElement('th');
+                    rowHead.scope = 'row';
+                    rowHead.className = 'sticky-col row-label';
+                    rowHead.textContent = (q.itemNumber != null ? q.itemNumber : '') + ' ' + L(q.text);
+                    rowHead.id = 'mrow-' + q.id;
+                    tr.appendChild(rowHead);
+                    const td = document.createElement('td');
+                    td.colSpan = cols.length;
+                    const input = document.createElement('input');
+                    input.type = 'checkbox';
+                    input.id = 'tick-' + q.id;
+                    input.checked = state.responses[scaleId + ':' + q.id] === 1;
+                    input.setAttribute('aria-labelledby', 'mrow-' + q.id);
+                    input.addEventListener('change', () => onAnswer(scaleId + ':' + q.id,
+                        input.checked ? 1 : 0, { id: q.id }, { id: scaleId }));
+                    const label = document.createElement('label');
+                    label.htmlFor = input.id;
+                    label.textContent = state.lang === 'hi' ? 'लागू होता है (अंकित नहीं)' : 'Applies (not scored)';
+                    td.append(input, label);
+                    tr.appendChild(td);
+                    table.appendChild(tr);
+                    return;
+                }
                 const tr = document.createElement('tr');
                 if (q.safety) tr.className = 'safety-item';
                 const rowHead = document.createElement('th');
@@ -391,6 +509,12 @@
                 // straight onto the paper scoring sheet.
                 const shownNumber = q.itemNumber != null ? q.itemNumber : (idx + 1);
                 rowHead.textContent = shownNumber + '. ' + L(q.text);
+                if (q.reverseScored) {
+                    const rev = document.createElement('span');
+                    rev.className = 'criterion-note reverse-note';
+                    rev.textContent = state.lang === 'hi' ? ' (व्युक्रम-अंकित)' : ' (reverse-scored)';
+                    rowHead.appendChild(rev);
+                }
                 if (q.criterionNote) {
                     const note = document.createElement('span');
                     note.className = 'criterion-note';
@@ -451,9 +575,15 @@
     function deployedScreenInstruments(domain, accept) {
         const out = [];
         if (!domain || !domain.questions) return out;
+        // Tables are shown as soon as the domain is selected (see routeInstruments),
+        // so scoring must follow the same rule — otherwise an instrument can be on
+        // screen yet silently skipped because its screen-in item was answered "No".
+        // Optional rating-table routes therefore score every attached instrument;
+        // other routes keep the original endorse-first behaviour.
+        const alwaysDeployed = OPTIONAL_TABLE_ROUTES.includes(domain.instrument);
         domain.questions.forEach(q => {
             if (!q.scaleId) return;
-            if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+            if (!alwaysDeployed && (state.responses[domain.id + ':' + q.id] || 0) < 1) return;
             const s = CLINICAL_DATA.scales[q.scaleId];
             if (s && accept(s)) out.push({ question: q, scale: s });
         });
@@ -651,15 +781,20 @@
     function scoreStaxi(scale) {
         const hi = state.lang === 'hi';
         const ans = id => state.responses[scale.id + ':' + id];
+        const slugs = Object.keys(scale.subscales);
+        // Item-level totals come from the printed parts, not from the subscale
+        // lists: item 25 is scored on Part 3 but belongs to no expression
+        // subscale, so counting subscale items would over-report completion.
+        const allIds = [];
+        (scale.parts || []).forEach(part => part.questions.forEach(q => allIds.push(q.id)));
+        const answeredOf = ids => ids.filter(id => ans(id) !== undefined);
+        const sumOf = ids => answeredOf(ids).reduce((t, id) => t + Number(ans(id)), 0);
         const rows = [];
-        let answered = 0, totalItems = 0;
-        Object.keys(scale.subscales).forEach(slug => {
+        slugs.forEach(slug => {
             const sub = scale.subscales[slug];
             const ids = sub.items.map(n => 'staxi_' + n);
-            const got = ids.filter(id => ans(id) !== undefined);
-            answered += got.length;
-            totalItems += ids.length;
-            const raw = got.reduce((t, id) => t + Number(ans(id)), 0);
+            const got = answeredOf(ids);
+            const raw = sumOf(ids);
             const lo = ids.length * (scale.scoring.scaleMin || 1);
             const up = ids.length * (scale.scoring.scaleMax || 4);
             rows.push({
@@ -667,34 +802,45 @@
                 value: got.length === ids.length ? (raw + '/' + up) : (raw + ' (' + got.length + '/' + ids.length + ')'),
                 flagged: false,
                 detail: (hi ? 'सीमा ' : 'range ') + lo + '-' + up +
-                    (slug === 'control' ? (hi ? ' · उच्च = बेहतर नियंत्रण' : ' · higher = better control') : '')
+                    (slug === 'control' ? (hi ? ' · उच्च = बेहतर नियंत्रण' : ' · higher = better control') : '') +
+                    (slug === 'denial' ? (hi ? ' · व्याख्या सावधानी से करें' : ' · interpret with caution') : '')
             });
         });
-        // Composite Expression = Anger-In + Anger-Out + (max+min - Control)
-        const num = slug => scale.subscales[slug].items
-            .map(n => ans('staxi_' + n)).filter(v => v !== undefined)
-            .reduce((t, v) => t + Number(v), 0);
-        const complete = Object.keys(scale.subscales)
-            .every(slug => scale.subscales[slug].items.every(n => ans('staxi_' + n) !== undefined));
+        // Composite Expression = Anger-In + Anger-Out + reversed Anger Control,
+        // where each control item is reversed as (scaleMax + scaleMin - response).
         const mn = scale.scoring.scaleMin || 1, mx = scale.scoring.scaleMax || 4;
-        const expr = complete ? (num('in') + num('out') + (mx + mn - num('control'))) : null;
-        if (complete) {
+        const completePart = slug => scale.subscales[slug].items
+            .every(n => ans('staxi_' + n) !== undefined);
+        const controlReversed = scale.subscales.control.items
+            .map(n => ans('staxi_' + n))
+            .filter(v => v !== undefined)
+            .reduce((t, v) => t + (mx + mn - Number(v)), 0);
+        const exprComplete = ['in', 'out', 'control'].every(completePart);
+        const expr = exprComplete
+            ? (sumOf(scale.subscales.in.items.map(n => 'staxi_' + n)) +
+               sumOf(scale.subscales.out.items.map(n => 'staxi_' + n)) + controlReversed)
+            : null;
+        const answered = answeredOf(allIds).length;
+        const complete = answered === allIds.length;
+        if (exprComplete) {
             rows.push({
                 label: hi ? 'क्रोध-अभिव्यक्ति संयुक्त स्कोर (AES)' : 'Anger Expression Summary (AES)',
                 value: String(expr),
                 flagged: false,
-                detail: hi ? 'Anger-In + Anger-Out + (5 − Anger Control)' : 'Anger-In + Anger-Out + (max+min − Anger Control)'
+                detail: hi
+                    ? 'Anger-In + Anger-Out + (5 − प्रत्येक Control आइटम)'
+                    : 'Anger-In + Anger-Out + reversed Anger Control (per item: max+min − response)'
             });
         }
         return {
             name: L(scale.name),
-            score: answered + '/' + totalItems + ' ' + (hi ? 'आइटम उत्तरित' : 'items answered'),
+            score: answered + '/' + allIds.length + ' ' + (hi ? 'आइटम उत्तरित' : 'items answered'),
             severity: complete
                 ? (hi ? 'पूर्ण — आयामगत स्कोर (रोग-निर्णायक नहीं)' : 'Complete — dimensional scores (not diagnostic)')
                 : (hi ? 'अपूर्ण' : 'Incomplete'),
             aboveCutoff: false,
             notDiagnostic: true,
-            answered, total: totalItems,
+            answered, total: allIds.length,
             disorders: [],
             pdRegister: {
                 kind: 'staxi',
@@ -716,16 +862,445 @@
         (scale.parts || []).forEach(part => part.questions.forEach(q => ids.push(q.id)));
         const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined);
         const sum = got.reduce((t, id) => t + Number(state.responses[scale.id + ':' + id]), 0);
-        const band = severityBand(sum, scale.bands || []);
+        const complete = got.length === ids.length;
+        // Printed interpretive ranges are inclusive of their lower bound:
+        // 0-13 minimal · 14-19 mild · 20-28 moderate · 29-63 severe.
+        const bandIdx = (() => {
+            const bands = scale.bands || [];
+            for (let i = 0; i < bands.length; i++) if (sum <= bands[i].max) return i;
+            return bands.length - 1;
+        })();
         const maxTotal = ((scale.ratingScale || {}).max || 3) * ids.length;
         return {
             name: L(scale.name),
             score: sum + '/' + maxTotal + ' (' + got.length + '/' + ids.length + ')',
-            severity: (band ? L(band) : '—') + (hi ? ' · रोग-निर्णायक नहीं' : ' · not diagnostic'),
-            aboveCutoff: !!band && (scale.bands || []).indexOf(band) >= ((scale.bands || []).length - 2),
+            severity: (bandLabel(sum, scale.bands) || (hi ? 'अपूर्ण' : 'Incomplete')) +
+                (hi ? ' · रोग-निर्णायक नहीं' : ' · not diagnostic'),
+            aboveCutoff: complete && bandIdx >= 2,
             notDiagnostic: true,
             answered: got.length, total: ids.length,
             disorders: []
+        };
+    }
+
+    /* ------------------------------------------------------------------ *
+     * 7c. Somatic-symptom instruments (FAC22-SR / PHQ-15)                *
+     * ------------------------------------------------------------------ */
+
+    /**
+     * Count keyed answers across an instrument's item parts.
+     *  - keyed T/F instruments (IPDE, FAC22-SR): each question carries
+     *    `keyedAnswer` 'T' (counts when answered True) or 'F' (counts when
+     *    answered False);
+     *  - plain True-count instruments (PDQ-4+ scales): any answer of 1 counts.
+     * `skip` lets a caller exclude follow-up/clinician-rated parts.
+     */
+    function keyedHitsOfParts(scale, skip) {
+        const hits = [];
+        // Option value that represents the affirmative answer ("True" / "Yes").
+        // PDQ-4+ and IPDE use True=1; FAC22-SR lists Yes first so Yes=1 as well.
+        const affirm = (() => {
+            const opts = scale.matrixOptions || [];
+            const t = opts.find(o => /^(true|yes)$/i.test((o.label || {}).en || ''));
+            return t ? t.v : 1;
+        })();
+        (scale.parts || []).forEach(part => {
+            if (skip && skip(part)) return;
+            (part.questions || []).forEach(q => {
+                const v = state.responses[scale.id + ':' + q.id];
+                if (v === undefined) return;
+                if (q.keyedAnswer !== undefined) {
+                    if ((q.keyedAnswer === 'T') === (v === affirm)) {
+                        hits.push(q.itemNumber != null ? q.itemNumber : q.id);
+                    }
+                } else if (v === affirm) {
+                    hits.push(q.itemNumber != null ? q.itemNumber : q.id);
+                }
+            });
+        });
+        return hits;
+    }
+
+    /**
+     * FAC22-SR (Senthil & Prabhakar, 2019) — factitious disorder self-report
+     * screen. Keying as printed: Yes to items 5, 8, 10-22 and No to items 1-4,
+     * 6, 7, 9, 12, 13. Bands: 9-14 possible factitious disorder, 15+ probable.
+     * A screen only — it must never be used to diagnose factitious disorder,
+     * which requires excluding deception for external gain and medical
+     * malingering, so a positive result flags the category for clinical review.
+     */
+    function scoreFac22(scale, addFlag) {
+        const hi = state.lang === 'hi';
+        const ids = [];
+        (scale.parts || []).forEach(part => (part.questions || []).forEach(q => ids.push(q.id)));
+        const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined);
+        const complete = got.length === ids.length;
+        const keyed = keyedHitsOfParts(scale);
+        const sc = scale.scoring || {};
+        const probableAt = sc.probableThreshold != null ? sc.probableThreshold : 15;
+        const possibleAt = sc.possibleThreshold != null ? sc.possibleThreshold : 9;
+        const level = keyed.length >= probableAt ? 2 : (keyed.length >= possibleAt ? 1 : 0);
+        if (complete && level > 0) {
+            (sc.disorders || scale.disorders ||
+                ['factitious_disorder', 'somatic_symptom_disorder']).forEach(d => {
+                    const key = CLINICAL_DATA.disorders[d] ? d : null;
+                    if (key) addFlag(key, 'FAC22-SR');
+                });
+        }
+        return {
+            name: L(scale.name),
+            score: keyed.length + ' (' + got.length + '/' + ids.length + ')',
+            severity: level === 2
+                ? (hi ? 'संभावित भत्रुण रोग — पूर्ण मूल्यांकन आवश्यक' : 'Probable factitious disorder — full evaluation indicated')
+                : level === 1
+                    ? (hi ? 'संभव भत्रुण रोग — पूर्ण मूल्यांकन आवश्यक' : 'Possible factitious disorder — full evaluation indicated')
+                    : (hi ? 'स्क्रीन नेगेटिव' : 'Screen negative'),
+            aboveCutoff: complete && level > 0,
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: [],
+            pdRegister: {
+                kind: 'fac22',
+                heading: hi ? 'FAC22-SR कुंजी-अंक' : 'FAC22-SR keyed score',
+                note: L(sc.rule || { en: '', hi: '' }),
+                rows: [{
+                    label: hi ? 'कुंजीकृत उत्तर (Yes 5,8,10-22 · No 1-4,6,7,9,12,13)' : 'Keyed responses (Yes 5,8,10-22 · No 1-4,6,7,9,12,13)',
+                    value: keyed.length + '/22',
+                    flagged: level > 0,
+                    detail: hi
+                        ? possibleAt + '-' + (probableAt - 1) + ' संभव · ' + probableAt + '+ संभावित'
+                        : possibleAt + '-' + (probableAt - 1) + ' possible · ' + probableAt + '+ probable'
+                }]
+            }
+        };
+    }
+
+    /**
+     * PHQ-15 somatic symptom severity index: sum of 15 items scored 0-2 over
+     * the past four weeks. Printed cut-points 0-4 no somatisation, 5-9 mild,
+     * 10-14 moderate, 15+ severe. Severity measure only — it supplements
+     * clinical judgement and does not by itself establish a diagnosis.
+     */
+    function scorePhq15(scale) {
+        const hi = state.lang === 'hi';
+        const ids = [];
+        (scale.parts || []).forEach(part => (part.questions || []).forEach(q => ids.push(q.id)));
+        const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined);
+        const complete = got.length === ids.length;
+        const sum = got.reduce((t, id) => t + Number(state.responses[scale.id + ':' + id]), 0);
+        const maxTotal = ((scale.ratingScale || {}).max || 2) * ids.length;
+        // Band list is ordered ascending by `max`; treat "no somatisation" as
+        // non-clinical so the differential is only nudged from 5 upwards.
+        const bandIdx = (() => {
+            const bands = scale.bands || [];
+            for (let i = 0; i < bands.length; i++) if (sum <= bands[i].max) return i;
+            return bands.length - 1;
+        })();
+        return {
+            name: L(scale.name),
+            score: sum + '/' + maxTotal + ' (' + got.length + '/' + ids.length + ')',
+            severity: (bandLabel(sum, scale.bands) || (hi ? 'अपूर्ण' : 'Incomplete')) +
+                (hi ? ' · रोग-निर्णायक नहीं' : ' · not diagnostic'),
+            aboveCutoff: complete && bandIdx >= 1,
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: []
+        };
+    }
+
+    /* ------------------------------------------------------------------ *
+     * 7d. Dissociation instruments (MID-60 short form / DES-II)          *
+     * ------------------------------------------------------------------ */
+
+    /** Resolve an instrument disorder key, falling back to the legacy
+     *  'dissociative' category if a newer key is absent from data.json. */
+    function dissDisorder(keys) {
+        for (const k of keys) if (CLINICAL_DATA.disorders[k]) return k;
+        return CLINICAL_DATA.disorders.dissociative ? 'dissociative' : keys[0];
+    }
+
+    /**
+     * Transient flag sink used by the standalone scorers (MID-60 / DES-II).
+     * `computeResults` installs its own accumulator before deploying any
+     * instrument and restores the no-op afterwards, so a scorer can raise a
+     * differential-disorder flag without taking the addFlag closure as an
+     * argument (keeps the signature aligned with scoreCas / scoreStaxi).
+     */
+    let addFlagGlobal = () => {};
+
+    /** Resolve the GCLS differential key, falling back gracefully if a newer
+     *  data.json does not yet carry it (same pattern as dissDisorder). */
+    function genderDisorder(keys) {
+        const list = keys || ['gender_incongruence_distress', 'gender_incongruence'];
+        for (const k of list) if (CLINICAL_DATA.disorders[k]) return k;
+        return null;
+    }
+
+    /**
+     * MID-60 (Multidimensional Inventory of Dissociation, 60-item short form)
+     * scoring: index = mean of all 60 ratings x 10 (0-100), compared against the
+     * printed score ranges; each named subscale is scored as its own mean x 10
+     * and compared against its published clinical cutoff. Subscales above cutoff
+     * flag the dissociative-disorder categories for the structured interview —
+     * the inventory itself never makes a diagnosis.
+     */
+    function scoreMid60(scale) {
+        const hi = state.lang === 'hi';
+        const ans = id => state.responses[scale.id + ':' + id];
+        const ids = [];
+        (scale.parts || []).forEach(part => part.questions.forEach(q => ids.push(q.id)));
+        const got = ids.filter(id => ans(id) !== undefined).map(id => Number(ans(id)));
+        const complete = got.length === ids.length;
+        const mean = got.length ? got.reduce((a, b) => a + b, 0) / got.length : null;
+        const index = mean === null ? null : Math.round(mean * 10 * 10) / 10;   // 0-100, one decimal
+        const rangeLabel = r => L(r.label);
+        const band = index === null ? null : (scale.scoreRanges || []).find(r => index <= r.max);
+
+        const rows = [];
+        const flaggedKeys = [];
+        Object.keys(scale.subscales || {}).forEach(slug => {
+            const sub = scale.subscales[slug];
+            const sids = sub.items.map(n => 'mid_' + n);
+            const sgot = sids.filter(id => ans(id) !== undefined).map(id => Number(ans(id)));
+            const sMean = sgot.length ? sgot.reduce((a, b) => a + b, 0) / sgot.length : null;
+            const sIndex = sMean === null ? null : Math.round(sMean * 10 * 10) / 10;
+            const over = sIndex !== null && sgot.length === sids.length && sIndex >= Number(sub.cutoff);
+            if (over) flaggedKeys.push(slug);
+            rows.push({
+                label: L(sub.name),
+                value: sIndex === null ? '—' : (sIndex.toFixed(1) + ' / ≥' + sub.cutoff),
+                flagged: over,
+                detail: sIndex === null
+                    ? (hi ? 'अपूर्ण (' + sgot.length + '/' + sids.length + ')' : 'Incomplete (' + sgot.length + '/' + sids.length + ')')
+                    : (over
+                        ? (hi ? 'कटऑफ से ऊपर — पूर्ण नैदानिक साक्षात्कार आवश्यक' : 'Above clinical cutoff — needs full diagnostic interview')
+                        : (hi ? 'कटऑफ से नीचे' : 'Below clinical cutoff'))
+            });
+        });
+
+        // Persecutory / self-harm intrusions always raise the risk pathway,
+        // regardless of the total index.
+        const persec = ['did_persecutory_intrusions', 'did_angry_intrusions']
+            .filter(slug => flaggedKeys.includes(slug));
+
+        const DISORDERS_BY_SUBSCALE = {
+            did_amnesia_recent: ['dissociative_identity_disorder', 'other_specified_dissociative_disorder', 'dissociative_amnesia'],
+            did_alt_awareness: ['dissociative_identity_disorder', 'other_specified_dissociative_disorder'],
+            did_angry_intrusions: ['dissociative_identity_disorder', 'other_specified_dissociative_disorder'],
+            did_persecutory_intrusions: ['dissociative_identity_disorder', 'other_specified_dissociative_disorder'],
+            drdepersonalisation: ['depersonalisation_derealisation_disorder'],
+            amnesia_memory_distress: ['dissociative_amnesia'],
+            amnesia_autobiographical: ['dissociative_amnesia'],
+            ptsd_flashbacks: ['ptsd'],
+            conversion_body: ['somatic_symptom_disorder'],
+            conversion_seizures: ['somatic_symptom_disorder'],
+            general_trance: ['other_specified_dissociative_disorder'],
+            general_self_confusion: ['other_specified_dissociative_disorder', 'unspecified_dissociative_disorder']
+        };
+        const disorders = [];
+        flaggedKeys.forEach(slug => (DISORDERS_BY_SUBSCALE[slug] || [])
+            .forEach(k => { const d = dissDisorder([k]); if (!disorders.includes(d)) disorders.push(d); }));
+        // The overall index also gates the differential when it reaches the
+        // "may have dissociative disorder" band (>= 21 on the printed ranges).
+        if (index !== null && complete && index >= 21) {
+            [dissDisorder(['other_specified_dissociative_disorder']),
+             dissDisorder(['unspecified_dissociative_disorder'])].forEach(d => {
+                if (!disorders.includes(d)) disorders.push(d);
+            });
+        }
+        disorders.forEach(d => addFlagGlobal(d, 'MID-60'));
+
+        return {
+            name: L(scale.name),
+            score: index === null ? '—'
+                : (index.toFixed(1) + '/100 (' + got.length + '/' + ids.length + ')'),
+            severity: band ? L(band.label) : (hi ? 'अपूर्ण' : 'Incomplete'),
+            aboveCutoff: index !== null && complete && index >= 21,
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: disorders,
+            pdRegister: {
+                kind: 'mid60',
+                heading: hi ? 'सूचकांक एवं उप-पैमाना कटऑफ' : 'Index & subscale clinical cutoffs',
+                note: (hi
+                    ? 'सूचकांक = सभी 60 अनुभव-रेटिंग का माध्य × 10 (0-100)। प्रत्येक उप-पैमाना अपना माध्य × 10 है; '
+                    + 'मुद्रित स्कोर-शीट के नैदानिक कटऑफ से तुलना करें। यह स्क्रीनिंग/तीव्रता माप है — रोग-निर्णायक नहीं: '
+                    + 'उच्च उप-पैमाना पूर्ण संरचित वियोजीय साक्षात्कार (SCID-5-D / पूर्ण MID) निर्देशित करता है।'
+                    : 'Index = mean of all 60 experience ratings x 10 (0-100). Each subscale is its own mean x 10, '
+                    + 'compared with the clinical cutoff printed on the score sheet. Screening/severity measure — '
+                    + 'not diagnostic: an elevated subscale directs a full structured dissociative interview '
+                    + '(SCID-5-D / full MID).') +
+                    (persec.length ? (hi
+                        ? ' · चिह्नित उत्पीड़नकारी/क्रोधित आंतरिक आवाज़ें — स्व-क्षति/आत्महत्या जोखिम मूल्यांकन अनिवार्य।'
+                        : ' · Endorsed persecutory/angry internal voices — a self-harm and suicide-risk assessment is mandatory.')
+                        : ''),
+                validity: persec.length ? {
+                    failed: true,
+                    message: hi
+                        ? 'उत्पीड़नकारी/क्रोधित आंतरिक आवाज़ों का पैमाना-उपर कटऑफ — तत्काल जोखिम-मूल्यांकन एवं निगरानी आवश्यक।'
+                        : 'Persecutory/angry intrusion subscale above cutoff — urgent risk assessment and monitoring required.'
+                } : null,
+                rows: [{
+                    label: hi ? 'कुल सूचकांक (माध्य × 10)' : 'Total index (mean x 10)',
+                    value: index === null ? '—' : index.toFixed(1) + '/100',
+                    flagged: !!(band && (scale.scoreRanges || []).indexOf(band) >= 3),
+                    detail: band ? rangeLabel(band) : (hi ? 'अपूर्ण' : 'Incomplete')
+                }].concat(rows)
+            }
+        };
+    }
+
+    /* ------------------------------------------------------------------ *
+     * 7f. Gender-related distress (GCLS)                                   *
+     * ------------------------------------------------------------------ */
+
+    /**
+     * GCLS scoring. Items are rated Never=0 ... Always=4 over the past six
+     * months. The positively worded congruence items (16, 20, 22, 25, 30) and
+     * the negatively worded satisfaction items (35, 37) are reverse-scored as
+     * (scaleMax - response) before summing, exactly as printed in the scale's
+     * scoring rule. Three distress subscales (functional impact, body
+     * preoccupation, social preoccupation) rise with distress; life
+     * satisfaction is reported separately and rises with satisfaction. There
+     * are no published cutoffs, so nothing here diagnoses gender incongruence
+     * or dysphoria — it describes distress, functioning and satisfaction and
+     * supports follow-up measurement. The non-scored surgery tick-box is
+     * reported as a clinical note only.
+     */
+    function scoreGcls(scale) {
+        const hi = state.lang === 'hi';
+        const maxV = ((scale.ratingScale || {}).max != null ? scale.ratingScale.max : 4);
+        const ans = id => state.responses[scale.id + ':' + id];
+        const ids = [];
+        (scale.parts || []).forEach(part => (part.questions || []).forEach(q => {
+            if (!q.nonScored) ids.push({ id: q.id, num: q.itemNumber, rev: !!q.reverseScored });
+        }));
+        const got = ids.filter(i => ans(i.id) !== undefined);
+        const complete = got.length === ids.length;
+        const valueOf = i => {
+            const v = Number(ans(i.id));
+            return i.rev ? maxV - v : v;
+        };
+
+        // item number -> scored entry, for subscale lookup
+        const byNum = {};
+        ids.forEach(i => { byNum[i.num] = i; });
+
+        const rows = [];
+        Object.keys(scale.subscales || {}).forEach(slug => {
+            const sub = scale.subscales[slug];
+            const entries = (sub.items || []).map(n => byNum[n]).filter(Boolean);
+            const answered = entries.filter(i => ans(i.id) !== undefined);
+            const sum = answered.reduce((t, i) => t + valueOf(i), 0);
+            const done = answered.length === entries.length;
+            rows.push({
+                label: L(sub),
+                value: done ? (sum + '/' + (sub.maxTotal != null ? sub.maxTotal : entries.length * maxV))
+                            : (hi ? 'अपूर्ण (' + answered.length + '/' + entries.length + ')'
+                                  : 'Incomplete (' + answered.length + '/' + entries.length + ')'),
+                flagged: false,
+                detail: slug === 'life_satisfaction'
+                    ? (hi ? 'उच्च = अधिक जीवन-संतुष्टि (पृथक् रिपोर्ट)' : 'Higher = MORE life satisfaction (reported separately)')
+                    : (hi ? 'उच्च = अधिक लिंग-संबंधी कष्ट' : 'Higher = more gender-related distress')
+            });
+        });
+
+        const distressSlugs = ['functional_impact', 'body_preoccupation', 'social_preoccupation'];
+        const distressSum = distressSlugs.reduce((t, slug) => {
+            const sub = (scale.subscales || {})[slug] || {};
+            return t + (sub.items || []).map(n => byNum[n]).filter(Boolean)
+                .filter(i => ans(i.id) !== undefined).reduce((a, i) => a + valueOf(i), 0);
+        }, 0);
+        const satEntry = (scale.subscales.life_satisfaction || {}).items || [];
+        const satSum = satEntry.map(n => byNum[n]).filter(Boolean)
+            .filter(i => ans(i.id) !== undefined).reduce((a, i) => a + valueOf(i), 0);
+
+        // Safety: items 8 (chest/genital self-harm) and 13 (suicidal thoughts).
+        const safetyItems = ids.filter(i => {
+            const q = (scale.parts || []).flatMap(pt => pt.questions || [])
+                .find(x => x.itemNumber === i.num);
+            return q && q.safety;
+        });
+        const riskEndorsed = safetyItems.filter(i => ans(i.id) !== undefined && Number(ans(i.id)) > 0);
+
+        const disorders = [];
+        if (complete && distressSum > 0) {
+            const d = genderDisorder();
+            if (d) { disorders.push(d); addFlagGlobal(d, 'GCLS'); }
+        }
+
+        const tick = (scale.parts || []).flatMap(pt => pt.questions || [])
+            .find(q => q.nonScored && q.tickBox);
+        const ticked = tick ? !!ans(tick.id) : false;
+
+        return {
+            name: L(scale.name),
+            score: complete
+                ? (hi ? 'कष्ट उप-पैमाने योग ' + distressSum + ' · संतुष्टि ' + satSum
+                      : 'Distress subscale sum ' + distressSum + ' · Satisfaction ' + satSum)
+                : (got.length + '/' + ids.length + ' ' + (hi ? 'उत्तर' : 'answered')),
+            severity: complete
+                ? (hi ? 'वर्णनात्मक — रोग-निर्णायक नहीं' : 'Descriptive — not diagnostic')
+                : (hi ? 'अपूर्ण' : 'Incomplete'),
+            aboveCutoff: false,
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: disorders,
+            pdRegister: {
+                kind: 'gcls',
+                heading: hi ? 'उप-पैमाना अंक (व्युक्रम-अंकित)' : 'Subscale scores (reverse-keyed)',
+                note: (hi
+                    ? 'आइटम 16, 20, 22, 25, 30 (संगति) तथा 35, 37 (नकारात्मक संतुष्टि) को व्युक्रम कर (4 − उत्तर) उप-पैमाना योग निकाले जाते हैं। '
+                    + 'कष्ट उप-पैमाने उच्च होने पर अधिक कष्ट; जीवन-संतुष्टि पृथक् रिपोर्ट (उच्च = अधिक संतुष्टि)। '
+                    + 'GCLS का कोई नैदानिक कटअफ नहीं — यह कष्ट एवं कार्य-क्षमता वर्णित करता है।'
+                    : 'Congruence items 16/20/22/25/30 and negative satisfaction items 35/37 are reverse-scored (4 minus response) before summing. '
+                    + 'Higher distress subscales mean more gender-related distress; life satisfaction is reported separately (higher = more satisfied). '
+                    + 'The GCLS has no diagnostic cutoffs: it describes distress and functioning and supports outcome monitoring.')
+                    + (riskEndorsed.length ? (hi
+                        ? ' · आइटम 8/13 पर स्व-क्षति/आत्महत्या विचार — जोखिम-मूल्यांकन अनिवार्य।'
+                        : ' · Item 8/13 endorsed chest/genital self-harm or suicidal thoughts — a risk assessment is mandatory.')
+                        : '')
+                    + (ticked ? (hi ? ' · रोगी ने जननांग-शस्त्रक्रिया पहले होना चिह्नित किया (आइटम 26 सावधानी से व्याख्या करें)।'
+                                    : ' · Respondent ticked prior genital surgery — interpret item 26 accordingly.')
+                               : ''),
+                rows: rows
+            }
+        };
+    }
+
+    /**
+     * DES-II scoring: total = mean of the 28 item percentages (0-100). A mean of
+     * 30 or above is the clinical comparison point that warrants a structured
+     * dissociative-disorder interview. Dimensional screening only.
+     */
+    function scoreDesII(scale) {
+        const hi = state.lang === 'hi';
+        const ids = [];
+        (scale.parts || []).forEach(part => part.questions.forEach(q => ids.push(q.id)));
+        const got = ids.filter(id => state.responses[scale.id + ':' + id] !== undefined)
+            .map(id => Number(state.responses[scale.id + ':' + id]));
+        const complete = got.length === ids.length;
+        const mean = got.length ? got.reduce((a, b) => a + b, 0) / got.length : null;
+        const cutoff = (scale.scoring || {}).cutoff || 30;
+        const above = mean !== null && complete && mean >= cutoff;
+        const disorders = [];
+        if (above) {
+            [dissDisorder(['other_specified_dissociative_disorder']),
+             dissDisorder(['dissociative_amnesia']),
+             dissDisorder(['depersonalisation_derealisation_disorder'])]
+                .forEach(k => { if (!disorders.includes(k)) disorders.push(k); });
+            disorders.forEach(d => addFlagGlobal(d, 'DES-II'));
+        }
+        return {
+            name: L(scale.name),
+            score: mean === null ? '—'
+                : (Math.round(mean * 10) / 10 + '% (' + got.length + '/' + ids.length + ')'),
+            severity: (mean === null ? (hi ? 'अपूर्ण' : 'Incomplete') : bandLabel(mean, scale.bands)) +
+                (above ? (hi ? ' · नैदानिक-तुलना बिंदु ≥' + cutoff + ' पार' : ' · above the ≥' + cutoff + ' clinical comparison point') : ''),
+            aboveCutoff: above,
+            notDiagnostic: true,
+            answered: got.length, total: ids.length,
+            disorders: disorders
         };
     }
 
@@ -762,6 +1337,21 @@
     /* ------------------------------------------------------------------ *
      * 8. SCORING ENGINE — deterministic, rubric-equivalent computation
      * ------------------------------------------------------------------ */
+    /**
+     * Band lookup that understands both shapes used across the instrument set:
+     *  - `{ max, severity: {en, hi} }`   (PHQ-9 / CAS / DES-II style bands)
+     *  - `{ max, label:   {en, hi} }`   (MID-60 printed score ranges)
+     * Returns a localised string (or null when no bands are configured), so a
+     * caller never has to know which shape the scale uses.
+     */
+    function bandLabel(score, bands) {
+        if (!bands || !bands.length) return null;
+        let b = bands[bands.length - 1];
+        for (const cand of bands) { if (score <= cand.max) { b = cand; break; } }
+        const text = b.severity != null ? b.severity : b.label;
+        return text == null ? null : L(text);
+    }
+
     function severityBand(score, bands) {
         for (const b of bands) if (score <= b.max) return b.severity;
         return bands[bands.length - 1].severity;
@@ -776,6 +1366,8 @@
             if (!flaggedDisorders.has(dkey)) flaggedDisorders.set(dkey, { sources: new Set() });
             flaggedDisorders.get(dkey).sources.add(source);
         };
+        // Standalone scorers (MID-60 / DES-II) raise flags through this sink.
+        addFlagGlobal = addFlag;
 
         CLINICAL_DATA.domains.forEach(domain => {
             if (!state.selectedDomains.has(domain.id)) return;
@@ -880,6 +1472,46 @@
                 deployedScreenInstruments(domain, s => !!s.sumScoring).forEach(({ scale }) => {
                     instrumentResults.push(scale.keying === 'staxi' || scale.id === 'staxi_ca'
                         ? scoreStaxi(scale) : scoreCas(scale));
+                });
+                return;
+            }
+
+            // Dissociative-experience inventories (MID-60 short form / DES-II):
+            // each is attached to one screen-in item of the `dissociation` domain.
+            // Both are dimensional severity measures - they flag the dissociative
+            // categories for the structured interview but never diagnose.
+            if (domain.instrument === 'auto:dissociationtable') {
+                if (domain.questions.some(q => (state.responses[domain.id + ':' + q.id] || 0) >= 1)) {
+                    (domain.questions[0].disorders || []).forEach(d => addFlag(d, 'Dissociation screen'));
+                }
+                deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
+                    instrumentResults.push(scale.id === 'mid60'
+                        ? scoreMid60(scale) : scoreDesII(scale));
+                });
+                return;
+            }
+
+            // Somatic-symptom instruments: keyed Yes/No factitious screen (FAC22-SR)
+            // plus the summed PHQ-15 somatic severity index. Neither diagnoses; both
+            // flag the somatic-symptom / factitious categories for clinical review.
+            if (domain.instrument === 'auto:somatoptable') {
+                if (domain.questions.some(q => (state.responses[domain.id + ':' + q.id] || 0) >= 1)) {
+                    (domain.questions[0].disorders || []).forEach(d => addFlag(d, 'Somatic screen'));
+                }
+                deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
+                    if (scale.keyedScoring) instrumentResults.push(scoreFac22(scale, addFlag));
+                    else instrumentResults.push(scorePhq15(scale));
+                });
+                return;
+            }
+
+            // Gender-related distress (GCLS): one reverse-keyed, subscale-scored
+            // self-report attached to both screen-in items of the `gender` domain.
+            // Descriptive only - it never diagnoses gender incongruence/dysphoria,
+            // and gender diversity on its own is not a mental disorder.
+            if (domain.instrument === 'auto:genderdistress') {
+                deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
+                    instrumentResults.push(scoreGcls(scale));
                 });
                 return;
             }
@@ -1361,43 +1993,24 @@
             for (const q of domain.questions)
                 if (state.responses[domain.id + ':' + q.id] === undefined) return false;
 
-            // Deployed keyed personality screens must be fully answered too. The
-            // clinical-significance follow-up is clinician-rated and happens after
-            // the interview, so it is excluded from the completeness gate.
-            if (domain.instrument === 'auto:pdscreen') {
+            // Every optional instrument attached to a screen-in item of this domain
+            // must be fully answered before results are shown — scoring a partially
+            // completed printed form would misreport its severity bands. Two
+            // exceptions: (a) clinician-rated follow-up parts (PDQ-4+ clinical
+            // significance, MINI disability register) are completed after the
+            // interview, and (b) performance/observer forms keep their own gates.
+            if (OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) {
                 for (const q of domain.questions) {
-                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
-                    const s = CLINICAL_DATA.scales[q.scaleId];
-                    if (!s || !s.keyedScoring) continue;
-                    for (const part of s.parts) {
-                        if (part.clinicianRated) continue;
-                        for (const item of part.questions)
-                            if (state.responses[s.id + ':' + item.id] === undefined) return false;
-                    }
-                }
-            }
-
-            // Deployed anger instruments must be fully answered.
-            if (domain.instrument === 'auto:angertable') {
-                for (const q of domain.questions) {
-                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
-                    const s = CLINICAL_DATA.scales[q.scaleId];
-                    if (!s || !s.sumScoring) continue;
-                    for (const part of s.parts)
-                        for (const item of part.questions)
-                            if (state.responses[s.id + ':' + item.id] === undefined) return false;
-                }
-            }
-
-            // MINI optional rating tables: every row must carry a rating.
-            if (domain.instrument === 'auto:minioptional') {
-                for (const q of domain.questions) {
-                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
+                    if (!q.scaleId) continue;
                     const s = CLINICAL_DATA.scales[q.scaleId];
                     if (!s) continue;
-                    for (const part of s.parts)
-                        for (const item of part.questions)
+                    for (const part of s.parts) {
+                        if (part.clinicianRated) continue;
+                        for (const item of part.questions) {
+                            if (item.nonScored) continue;   // optional clinical tick-box
                             if (state.responses[s.id + ':' + item.id] === undefined) return false;
+                        }
+                    }
                 }
             }
         }

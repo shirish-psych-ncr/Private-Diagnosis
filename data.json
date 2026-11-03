@@ -501,6 +501,49 @@
       "instrument": "pcl5"
     },
     {
+      "id": "dissociation",
+      "name": {
+        "en": "Dissociation",
+        "hi": "वियोजन"
+      },
+      "tier": 2,
+      "instrument": "auto:dissociationtable",
+      "timeframe": {
+        "en": "Screen-in items refer to the past month and to experiences had when you are not under the influence of alcohol or drugs; the deployed instruments then rate lifetime/current dissociative experiences.",
+        "hi": "स्क्रीन-इन प्रश्न गत माह को एवं उन अनुभवों को संदर्भित करते हैं जो शराब/नशे के प्रभाव में न रहते हुए हों; तत्पश्चात् संलग्न उपकरण जीवन-भर/वर्तमान वियोजीय अनुभव रेट करते हैं।"
+      },
+      "questions": [
+        {
+          "id": "dis_1",
+          "text": {
+            "en": "Do you often have experiences such as losing track of time or part of the day, finding things you don't remember buying or doing, feeling detached from your body or from surroundings, or hearing voices inside your head — when you are not under the influence of alcohol or drugs?",
+            "hi": "क्या आपको प्रायः ऐसे अनुभव होते हैं — समय/दिन का कुछ भाग खो जाना, बिना खरीदे-किए वस्तुएँ मिलना, शरीर या चारों ओर से विलगता, सिर के भीतर आवाज़ें सुनना — जब आप शराब/नशे के प्रभाव में न हों?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "mid60",
+          "disorders": [
+            "dissociative_identity_disorder",
+            "other_specified_dissociative_disorder",
+            "unspecified_dissociative_disorder"
+          ]
+        },
+        {
+          "id": "dis_2",
+          "text": {
+            "en": "Have other people told you that you sometimes seem to go blank, forget conversations or events, act unlike yourself, or that you describe more than one 'part' of you?",
+            "hi": "क्या दूसरों ने बताया है कि कभी-कभी आप खाली-से लगते हैं, बातचीत/घटनाएँ भूल जाते हैं, अपने से भिन्न व्यवहार करते हैं, अथवा आप अपने भीतर एक से अधिक \"अंश\" का वर्णन करते हैं?"
+          },
+          "sharedScale": "yesno",
+          "scaleId": "desii",
+          "disorders": [
+            "dissociative_identity_disorder",
+            "other_specified_dissociative_disorder",
+            "unspecified_dissociative_disorder"
+          ]
+        }
+      ]
+    },
+    {
       "id": "sleep",
       "name": {
         "en": "Sleep",
@@ -849,6 +892,52 @@
       "instrument": "auto:adhd"
     },
     {
+      "id": "somatic",
+      "name": {
+        "en": "Somatic symptoms & health-related preoccupation",
+        "hi": "शारीरिक लक्षण एवं स्वास्थ्य-संबंधी चिंतन"
+      },
+      "tier": 2,
+      "optional": true,
+      "instrument": "auto:somatoptable",
+      "timeframe": {
+        "en": "Past months of physical symptoms and healthcare contact.",
+        "hi": "पिछले कई माह के शारीरिक लक्षण एवं चिकित्सा-संपर्क।"
+      },
+      "help": {
+        "en": "Endorse either question to open the corresponding rating instrument: the PHQ-15 somatic severity index and/or the FAC22-SR factitious-disorder screen. Both are screening/severity measures and never establish a diagnosis by themselves.",
+        "hi": "किसी भी प्रश्न को स्वीकार करने पर संगत मापनी खुलेगी: PHQ-15 शारीरिक तीव्रता सूचकांक एवं/अथवा FAC22-SR भत्रुण-रोग स्क्रीन। दोनों स्क्रीन/तीव्रता माप हैं; स्वयं रोग-निर्णय नहीं करते।"
+      },
+      "questions": [
+        {
+          "id": "som_1",
+          "text": {
+            "en": "Do you have several physical symptoms that bother you or that doctors have not been able to explain clearly?",
+            "hi": "क्या आपके कई शारीरिक लक्षण हैं जो आपको परेशान करते हैं या जिन्हें चिकित्सक स्पष्ट रूप से समझा नहीं पाए?"
+          },
+          "scaleId": "phq15",
+          "sharedScale": "yes_no",
+          "disorders": [
+            "somatic_symptom_disorder",
+            "conversion_disorder"
+          ]
+        },
+        {
+          "id": "som_2",
+          "text": {
+            "en": "Do you feel that your illness has been treated differently from what you expected, or that the attention you receive while being ill matters greatly to you?",
+            "hi": "क्या आपको लगता है कि आपके रोग का प्रबंध अपेक्षा से भिन्न रहा, अथवा बीमारी के दौरान आपको मिलने वाला ध्यान आपके लिए अत्यंत महत्वपूर्ण है?"
+          },
+          "scaleId": "fac22_sr",
+          "sharedScale": "yes_no",
+          "disorders": [
+            "factitious_disorder",
+            "somatic_symptom_disorder"
+          ]
+        }
+      ]
+    },
+    {
       "id": "psychosis",
       "name": {
         "en": "Thoughts & Perceptions",
@@ -1073,6 +1162,50 @@
           "disorders": [
             "other_specified_disruptive_impulse_control_behaviour_disorder",
             "unspecified_disruptive_impulse_control_behaviour_disorder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gender",
+      "name": {
+        "en": "Gender identity, incongruence & related distress",
+        "hi": "लिंग-पहचान, असंगति एवं संबंधी कष्ट"
+      },
+      "tier": 2,
+      "optional": true,
+      "instrument": "auto:genderdistress",
+      "timeframe": {
+        "en": "Past 6 months.",
+        "hi": "पिछले 6 माह।"
+      },
+      "help": {
+        "en": "Endorsing either question deploys the Gender Congruence and Life Satisfaction Scale (GCLS), a 38-item self-report of gender-related distress, body and social preoccupation, and life satisfaction over the past 6 months. It describes distress and functioning; it does not diagnose gender incongruence, and gender diversity alone is not a mental disorder.",
+        "hi": "किसी भी प्रश्न को स्वीकार करने पर लंग-संगति एवं जीवन-संतुष्टि मापनी (GCLS) खुलेगी — 38 आइटम की स्व-रिपोर्ट जो पिछले 6 माह के लिंग-संबंधी कष्ट, शारीरिक व सामाजिक आसक्ति तथा जीवन-संतुष्टि को वर्णित करती है। यह कष्ट एवं कार्य-क्षमता का वर्णन करता है; लिंग-असंगति का रोग-निर्णय नहीं करता, और केवल लिंग-विविधता मानसिक विकार नहीं है।"
+      },
+      "questions": [
+        {
+          "id": "gen_1",
+          "text": {
+            "en": "Do you feel distress because the gender you were assigned at birth does not match the gender you know yourself to be?",
+            "hi": "क्या आपको कष्ट होता है क्योंकि जन्म के समय सौंपा गया लिंग उस लिंग से मेल नहीं खाता जिसे आप स्वयं के रूप में जानते हैं?"
+          },
+          "scaleId": "gcls",
+          "sharedScale": "yes_no",
+          "disorders": [
+            "gender_incongruence"
+          ]
+        },
+        {
+          "id": "gen_2",
+          "text": {
+            "en": "Has distress about your gender interfered with your social life, education or work, relationships, or enjoyment of life in the past 6 months?",
+            "hi": "पिछले 6 माह में आपके लिंग संबंधी कष्ट ने आपके सामाजिक जीवन, शिक्षा या कार्य, संबंधों, या जीवन के आनंद में बाधा डाली है?"
+          },
+          "scaleId": "gcls",
+          "sharedScale": "yes_no",
+          "disorders": [
+            "gender_incongruence"
           ]
         }
       ]
@@ -1959,6 +2092,155 @@
         "en": "Insufficient information to specify a particular anger/impulse-control disorder.",
         "hi": "Insufficient information to specify a particular anger/impulse-control disorder."
       }
+    },
+    "dissociative_identity_disorder": {
+      "name": {
+        "en": "Dissociative Identity Disorder",
+        "hi": "वियोजीय पहचान विकार"
+      },
+      "tier": 5,
+      "dsm5": "Dissociative Identity Disorder",
+      "icd11": "6B64",
+      "description": {
+        "en": "Two or more distinct personality states with recurrent amnesia; disruption of identity characterized by marked discontinuity of sense of self and sense of agency.",
+        "hi": "दो या अधिक भिन्न व्यक्तित्व-अवस्थाएँ एवं बार-बार क्षतिस्मृति; स्व-बोध एवं कर्तृत्व-बोध में स्पष्ट असंततता।"
+      },
+      "mappingNote": "ICD-11 6B64 corresponds to DSM-5-TR Dissociative Identity Disorder; the pre-existing 'dissociative' key holds the same label and is retained for backward compatibility. Flagged by MID-60/DES-II screens only — diagnosis requires the full structured interview."
+    },
+    "other_specified_dissociative_disorder": {
+      "name": {
+        "en": "Other Specified Dissociative Disorder",
+        "hi": "अन्य निर्दिष्ट वियोजीय विकार"
+      },
+      "tier": 5,
+      "dsm5": "Other Specified Dissociative Disorder",
+      "icd11": "6B6Y",
+      "description": {
+        "en": "Clinically significant dissociative symptoms that do not meet criteria for a specific dissociative disorder (e.g. OSDD-1: identity disruption with less distinct parts, or without amnesia).",
+        "hi": "नैदानिक रूप से महत्वपूर्ण वियोजीय लक्षण जो किसी निश्चित वियोजीय विकार के मानदंड पूर्ण नहीं करते (जैसे OSDD-1: कम भिन्न अंशों के साथ पहचान-विचलन, अथवा क्षतिस्मृति विना)।"
+      },
+      "mappingNote": "ICD-11 6B6Y Other specified dissociative disorder; DSM-5-TR OSDD. Screen flags only."
+    },
+    "unspecified_dissociative_disorder": {
+      "name": {
+        "en": "Unspecified Dissociative Disorder",
+        "hi": "अनिर्दिष्ट वियोजीय विकार"
+      },
+      "tier": 5,
+      "dsm5": "Unspecified Dissociative Disorder",
+      "icd11": "6B6Z",
+      "description": {
+        "en": "Dissociative symptoms of clinical significance where criteria are not met or information is insufficient for a specific diagnosis.",
+        "hi": "नैदानिक महत्व वाले वियोजीय लक्षण जहाँ मानदंड पूर्ण नहीं हैं अथवा विशिष्ट निदान हेतु सूचना अपर्याप्त है।"
+      },
+      "mappingNote": "ICD-11 6B6Z Unspecified dissociative disorder; DSM-5-TR unspecified. Screen flags only."
+    },
+    "dissociative_amnesia": {
+      "name": {
+        "en": "Dissociative Amnesia",
+        "hi": "वियोजीय क्षतिस्मृति"
+      },
+      "tier": 5,
+      "dsm5": "Dissociative Amnesia",
+      "icd11": "6B60",
+      "description": {
+        "en": "Inability to recall important autobiographical information, inconsistent with ordinary forgetting; may include dissociative fugue.",
+        "hi": "महत्वपूर्ण आत्मकथात्मक सूचना का स्मरण-असमर्थता, साधारण विस्मरण से असंगत; वियोजीय फ्यूग सम्मिलित हो सकती है।"
+      },
+      "mappingNote": "ICD-11 6B60; DSM-5-TR Dissociative Amnesia. Flagged by MID-60 amnesia subscales."
+    },
+    "depersonalisation_derealisation_disorder": {
+      "name": {
+        "en": "Depersonalization/Derealization Disorder",
+        "hi": "विलगता/वास्तविकता-विचलन विकार"
+      },
+      "tier": 5,
+      "dsm5": "Depersonalization/Derealization Disorder",
+      "icd11": "6B61",
+      "description": {
+        "en": "Persistent or recurrent episodes of depersonalization, derealization or both, with intact reality testing.",
+        "hi": "विलगता, वास्तविकता-विचलन अथवा दोनों की निरंतर/पुनरावृत्त घटनाएँ, वास्तविकता-परीक्षण सुरक्षित।"
+      },
+      "mappingNote": "ICD-11 6B61; DSM-5-TR DDD. Flagged by the MID-60 D/DD subscale."
+    },
+    "somatic_symptom_disorder": {
+      "name": {
+        "en": "Somatic Symptom Disorder",
+        "hi": "सोमेटिक लक्षण विकार"
+      },
+      "category": "somatic",
+      "dsm5Code": "300.82 (F45.1)",
+      "icd11Code": "6B41",
+      "notes": {
+        "en": "PHQ-15 ≥ 10 (moderate-severe somatisation) supports the differential; the diagnosis requires distressing somatic symptoms plus excessive thoughts, feelings or behaviours about them.",
+        "hi": "PHQ-15 ≥ 10 (मध्यम-गंभीर सोमटाइज़ेशन) विभेदी-सूची का समर्थन करता है; निर्णय के लिए क्लेशजनक शारीरिक लक्षण तथा उनके प्रति अत्यधिक विचार/भाव/व्यवहार आवश्यक।"
+      },
+      "instruments": [
+        "PHQ-15"
+      ]
+    },
+    "conversion_disorder": {
+      "name": {
+        "en": "Functional Neurological Symptom Disorder (Conversion)",
+        "hi": "क्रियात्मक तंत्रिका-लक्षण विकार (कन्वर्ज़न)"
+      },
+      "category": "somatic",
+      "dsm5Code": "300.11 (F44)",
+      "icd11Code": "6B40",
+      "notes": {
+        "en": "Neutral symptom description only — do not tell the patient the symptoms are 'not real'. MID-60 conversion subscales (body symptoms, pseudo-seizures) and PHQ-15 inform the differential.",
+        "hi": "तटस्थ लक्षण-वर्णन करें — रोगी से कहें नहीं कि लक्षण 'असली' नहीं हैं। MID-60 कन्वर्ज़न उप-पैमाने एवं PHQ-15 विभेदी-सूची में सहायक।"
+      },
+      "instruments": [
+        "PHQ-15",
+        "MID-60"
+      ]
+    },
+    "factitious_disorder": {
+      "name": {
+        "en": "Factitious Disorder (imposed on self)",
+        "hi": "छलरोग (स्व-आरोपित)"
+      },
+      "category": "somatic",
+      "dsm5Code": "300.19 (F45.81)",
+      "icd11Code": "6B42",
+      "notes": {
+        "en": "FAC22-SR is a screen only. Diagnosis requires evidence of falsification/induction of symptoms with an identified deception motive of assuming the patient role, AND exclusion of external incentives (malingering). Never confront based on a score alone.",
+        "hi": "FAC22-SR केवल स्क्रीन है। निर्णय हेतु लक्षण-रोपण/छल का प्रमाण एवं रोगी-भूमिका अपनाने की प्रेरणा आवश्यक, साथ ही बाह्य लाभ (मालिंगरिंग) का विवर्जन। केवल अंक के आधार पर कभी अभियुक्त न करें।"
+      },
+      "instruments": [
+        "FAC22-SR"
+      ]
+    },
+    "gender_incongruence_distress": {
+      "name": {
+        "en": "Gender-related distress (GCLS screen)",
+        "hi": "लिंग-संबंधी कष्ट (GCLS स्क्रीन)"
+      },
+      "tier": 2,
+      "dsm5": "Gender Dysphoria (severity specifier)",
+      "icd11": "HA60",
+      "description": {
+        "en": "Elevated gender-related distress and/or reduced life satisfaction on the GCLS, recorded as a screening finding that needs the diagnostic assessment of gender incongruence/dysphoria.",
+        "hi": "GCLS पर उच्च लिंग-संबंधी कष्ट अथवा कम जीवन-संतुष्टि — एक स्क्रीनिंग प्राप्ति के रूप में अंकित, जिसके लिए लिंग-असंगति/डिस्फोरिया का नैदानिक मूल्यांकन आवश्यक।"
+      },
+      "icd11Chapter": "Chapter 17: Conditions related to sexual health",
+      "mappingNote": "Screen flag only. GCLS subscale scores describe distress and functioning; the diagnosis of gender incongruence (ICD-11 HA60/HA61/HA6Z) or DSM-5-TR gender dysphoria requires the published criteria met over at least six months, established by clinical assessment. Never record a GCLS score as a diagnosis, and never treat gender diversity itself as disorder."
+    },
+    "gender_dysphoria_with_functional_impairment": {
+      "name": {
+        "en": "Gender-related functional impairment & low life satisfaction",
+        "hi": "लिंग-संबंधी कार्य-बाधा एवं निम्न जीवन-संतुष्टि"
+      },
+      "tier": 2,
+      "dsm5": "Contextual specifier (functioning)",
+      "icd11": "QA2x / contextual",
+      "description": {
+        "en": "High functional-impact and low life-satisfaction scores on the GCLS — a treatment-planning and follow-up marker rather than a diagnosis.",
+        "hi": "GCLS पर उच्च कार्यात्मक-प्रभाव एवं निम्न जीवन-संतुष्टि स्कोर — रोग-निर्णय नहीं, वرن उपचार-योजना एवं अनुवर्ती का सूचक।"
+      },
+      "icd11Chapter": "Contextual codes (not a Chapter 06 mental disorder)",
+      "mappingNote": "Contextual modifier only; never a primary diagnosis. Use it to record that distress about gender is disrupting school/work, relationships, intimacy or home life, and to justify psychosocial support, referral to a gender service and repeat measurement of satisfaction over time."
     }
   },
   "instruments": {
@@ -2284,6 +2566,109 @@
       "format": "self-report forced-choice cluster matrix with banded total",
       "duration": "8-12 minutes",
       "optionalAssessment": true
+    },
+    "MID-60": {
+      "name": {
+        "en": "Multidimensional Inventory of Dissociation — MID-60 (short form)",
+        "hi": "बहुआयामी वियोजन सूची — MID-60 (लघु संस्करण)"
+      },
+      "description": {
+        "en": "60-item dissociative-experience inventory rated 0-10 (never → always) when not intoxicated. Index = mean of all 60 responses x 10 (0-100) with printed score ranges (0-7 none; 7-14 few; 15-20 mild; 21-30 may have DD/PTSD; 31-40 may have DD such as OSDD-1/DID; 41-64 probably DID or severe DD; 64+ severe). Twelve subscales carry individual clinical cutoffs (DID amnesia 10; alter awareness 20; angry intrusions 18; persecutory intrusions 18; D/DD 20; amnesia distress 30; autobiographical amnesia 34; PTSD flashbacks 16; conversion body symptoms 10; pseudo-seizures 10; trance 11.7; self-confusion 33.3). Screening/severity only — not diagnostic.",
+        "hi": "60-आइटम वियोजीय-अनुभव सूची, नशे में न रहते हुए 0-10 (कभी नहीं → सदैव) रेटेड। सूचकांक = सभी 60 उत्तरों का माध्य × 10 (0-100), मुद्रित स्कोर-परिसर सहित। बारह उप-पैमानों पर पृथक नैदानिक कटऑफ (DID क्षतिस्मृति 10; अंश-बोध 20; क्रोधित प्रवेश 18; उत्पीड़नकारी प्रवेश 18; D/DD 20; क्षतिस्मृति-कष्ट 30; आत्मकथात्मक क्षतिस्मृति 34; PTSD फ्लैशबैक 16; परिवर्तन शारीरिक लक्षण 10; छद्म-दौरे 10; ट्रांस 11.7; स्व-विभ्रम 33.3)। केवल स्क्रीनिंग/तीव्रता — रोग-निर्णायक नहीं।"
+      },
+      "domain": "dissociation",
+      "format": "self-report 0-10 frequency matrix with index and subscale cutoffs",
+      "duration": "10-15 minutes",
+      "optionalAssessment": true
+    },
+    "DES-II": {
+      "name": {
+        "en": "Dissociative Experiences Scale (DES-II)",
+        "hi": "वियोजीय अनुभव पैमाना (DES-II)"
+      },
+      "description": {
+        "en": "28-item self-report measure; each item is scored as the percentage of time the experience occurs (0-100%) and the total is the mean of the 28 percentages. A mean of 30 or higher is the clinical comparison point indicating a need for a structured dissociative interview (Eve Bernstein Carlson, Ph.D. & Frank W. Putnam, M.D.). Not diagnostic on its own.",
+        "hi": "28-आइटम स्व-वर्णित माप; प्रत्येक आइटम अनुभव के प्रतिशत समय (0-100%) से अंकित और कुल 28 प्रतिशतों का माध्य है। 30 या अधिक का माध्य नैदानिक-तुलना बिंदु है जो संरचित वियोजीय साक्षात्कार हेतु निर्देशित करता है (Carlson & Putnam)। स्वयं में रोग-निर्णायक नहीं।"
+      },
+      "domain": "dissociation",
+      "format": "self-report percentage matrix with mean total",
+      "duration": "5-10 minutes",
+      "optionalAssessment": true
+    },
+    "FAC22-SR": {
+      "name": "FAC22-SR (Factitious Disorder Symptom Scale, self-report)",
+      "construct": {
+        "en": "Factitious disorder screening",
+        "hi": "छलरोग स्क्रीनिंग"
+      },
+      "format": {
+        "en": "22 Yes/No items, keyed; 9-14 possible, 15+ probable",
+        "hi": "22 हाँ/नहीं आइटम, keyed; 9-14 संभव, 15+ संभावित"
+      },
+      "duration": "~5 min",
+      "language": {
+        "en": "English (authoritative), Hindi working translation",
+        "hi": "अंग्रेज़ी (प्रामाणिक), हिन्दी कार्य-अनुवाद"
+      },
+      "purpose": {
+        "en": "Screen for factitious disorder in patients with medically unexplained symptoms. Not diagnostic; must be combined with record review and exclusion of malingering.",
+        "hi": "अस्पष्टीकृत शारीरिक लक्षण वाले रोगियों में छलरोग की स्क्रीनिंग। रोग-निर्णायक नहीं; रिकॉर्ड-समीक्षा एवं मालिंगरिंग-विवर्जन के साथ उपयोग।"
+      },
+      "source": "Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) Table 7",
+      "licensing": {
+        "en": "Published research instrument (open-access journal article); verify reuse terms.",
+        "hi": "प्रकाशित अनुसंधान-मापनी (open-access); पुनरुपयोग-शर्ताएँ सत्यापित करें।"
+      }
+    },
+    "PHQ-15": {
+      "name": "PHQ-15 (Patient Health Questionnaire — Somatic Symptoms)",
+      "construct": {
+        "en": "Somatic symptom severity",
+        "hi": "शारीरिक लक्षण तीव्रता"
+      },
+      "format": {
+        "en": "15 items scored 0-2 over 4 weeks (0-30)",
+        "hi": "15 आइटम, 4 सप्ताह, 0-2 अंकन (0-30)"
+      },
+      "duration": "~3 min",
+      "language": {
+        "en": "English, Hindi",
+        "hi": "अंग्रेज़ी, हिन्दी"
+      },
+      "purpose": {
+        "en": "Quantify somatic symptom burden; supplements clinical judgement (cut-points 5 / 10 / 15).",
+        "hi": "शारीरिक लक्षण-भार का परिमाणीकरण; चिकित्सकीय निर्णय की सहायता (सीमा 5 / 10 / 15)।"
+      },
+      "source": "PHQ-15 (Kroenke, Spitzer & Williams); free to use, no permission required",
+      "licensing": {
+        "en": "Public-domain PHQ family instrument.",
+        "hi": "PHQ परिवार की सार्वजनिक-उपयोग मापनी।"
+      }
+    },
+    "GCLS": {
+      "name": "GCLS (Gender Congruence and Life Satisfaction Scale)",
+      "construct": {
+        "en": "Gender congruence, gender-related distress & life satisfaction",
+        "hi": "लंग-संगति, लिंग-संबंधी कष्ट एवं जीवन-संतुष्टि"
+      },
+      "format": {
+        "en": "38 items rated Never-Rarely-Sometimes-Often-Always (0-4) over 6 months, + 1 non-scored genital-surgery tick-box; 4 subscales",
+        "hi": "38 आइटम, कभी नहीं–सदैव (0-4), 6 माह, + 1 अ-अंकित जननांग-शस्त्रक्रिया चिह्न; 4 उप-पैमाने"
+      },
+      "duration": "~10 min",
+      "language": {
+        "en": "English, Hindi",
+        "hi": "अंग्रेज़ी, हिन्दी"
+      },
+      "purpose": {
+        "en": "Quantify gender-related distress, body and social preoccupation and life satisfaction; supports assessment and outcome monitoring.",
+        "hi": "लिंग-संबंधी कष्ट, शारीरिक व सामाजिक आसक्ति तथा जीवन-संतुष्टि का परिमाणीकरण; मूल्यांकन एवं परिणाम-निगरानी में सहायक।"
+      },
+      "source": "Gender Congruence and Life Satisfaction Scale (GCLS)",
+      "licensing": {
+        "en": "Confirm permission terms with the rights holder before clinical or research use.",
+        "hi": "नैदानिक/शोध-प्रयोग से पूर्व अधिकार-वाहक से अनुमति-शर्तें पुष्टि करें।"
+      }
     }
   },
   "scales": {
@@ -8106,6 +8491,2698 @@
       "sourcePages": "User-supplied Clinical Anger Scale booklet (copyright 1995) and scoring instructions.",
       "translationNote": "Hindi labels are machine-assisted aids; English is authoritative. Clinician proofreading required.",
       "branching": null
+    },
+    "mid60": {
+      "id": "mid60",
+      "name": {
+        "en": "Multidimensional Inventory of Dissociation — MID-60 (short form)",
+        "hi": "बहुआयामी वियोजन सूची — MID-60 (लघु संस्करण)"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "optionalAssessment": true,
+      "sourceInstrument": "MID-60",
+      "targetAge": [
+        "adult",
+        "adolescent"
+      ],
+      "directions": {
+        "en": "How often do you have the following experiences when you are NOT under the influence of alcohol or drugs? Select the number that best describes you: choose 0 if the experience never happens to you, 10 if it is always happening to you, and a number between 1 and 9 if it happens sometimes but not all the time.",
+        "hi": "जब आप शराब या नशे के प्रभाव में न हों, तब नीचे दिए अनुभव कितनी बार होते हैं? वह अंक चुनें जो आपका सर्वोत्तम वर्णन करे: अनुभव कभी न हो तो 0, सदैव होता हो तो 10, बीच में कभी-कभी हो तो 1 से 9 के बीच का अंक।"
+      },
+      "timeframe": {
+        "en": "Frequency of experiences when not under the influence of alcohol or drugs.",
+        "hi": "शराब/नशा के प्रभाव में न रहते हुए अनुभवों की आवृत्ति।"
+      },
+      "parts": [
+        {
+          "id": "mid_part1",
+          "name": {
+            "en": "Experiences (rate 0 = never to 10 = always)",
+            "hi": "अनुभव (0 = कभी नहीं से 10 = सदैव तक अंकित करें)"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "0",
+                "hi": "0"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "1",
+                "hi": "1"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "2",
+                "hi": "2"
+              }
+            },
+            {
+              "v": 3,
+              "label": {
+                "en": "3",
+                "hi": "3"
+              }
+            },
+            {
+              "v": 4,
+              "label": {
+                "en": "4",
+                "hi": "4"
+              }
+            },
+            {
+              "v": 5,
+              "label": {
+                "en": "5",
+                "hi": "5"
+              }
+            },
+            {
+              "v": 6,
+              "label": {
+                "en": "6",
+                "hi": "6"
+              }
+            },
+            {
+              "v": 7,
+              "label": {
+                "en": "7",
+                "hi": "7"
+              }
+            },
+            {
+              "v": 8,
+              "label": {
+                "en": "8",
+                "hi": "8"
+              }
+            },
+            {
+              "v": 9,
+              "label": {
+                "en": "9",
+                "hi": "9"
+              }
+            },
+            {
+              "v": 10,
+              "label": {
+                "en": "10",
+                "hi": "10"
+              }
+            }
+          ],
+          "anchors": [
+            {
+              "v": 0,
+              "label": {
+                "en": "0 Never happens to you",
+                "hi": "0 आपको कभी नहीं होता"
+              }
+            },
+            {
+              "v": 10,
+              "label": {
+                "en": "10 Always happening to you",
+                "hi": "10 सदैव हो रहा है"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "mid_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "Forgetting what you did earlier in the day.",
+                "hi": "दिन में पहले क्या किया, उसे भूल जाना।"
+              }
+            },
+            {
+              "id": "mid_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "Having an emotion (e.g., fear, sadness, anger, happiness) that doesn't feel like it is \"yours\".",
+                "hi": "कोई भावना (भय, दुख, क्रोध, सुख) जो आपकी \"अपनी\" नहीं लगती।"
+              }
+            },
+            {
+              "id": "mid_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "Hearing the voice of a child in your head.",
+                "hi": "सिर के भीतर एक बच्चे की आवाज़ सुनाई देना।"
+              }
+            },
+            {
+              "id": "mid_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "Reliving a traumatic event so vividly that you totally lose contact with where you actually are (that is, you think that you are \"back there and then\").",
+                "hi": "आघातजनक घटना इतनी जीवंतता से दोबारा जीना कि आप वास्तव में कहाँ हैं, इसका संपर्क पूरी तरह खो जाता है (आपको लगता है आप \"वहाँ और तब\" हैं)।"
+              }
+            },
+            {
+              "id": "mid_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "Having difficulty swallowing (for no known medical reason).",
+                "hi": "निगलने में कठिनाई (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+              }
+            },
+            {
+              "id": "mid_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "Having trance-like episodes where you stare off into space and lose awareness of what is going on around you.",
+                "hi": "ट्रांस-सदृश अवस्थाएँ जिनमें आप शून्य में टकटकी लगाकर चारों ओर की घटनाओं की जागरूकता खो देते हैं।"
+              }
+            },
+            {
+              "id": "mid_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "Being told of things that you had recently done, but with absolutely no memory of having done those things.",
+                "hi": "दूसरों द्वारा बताई गई हाल की की गई बातों का बिल्कुल भी स्मरण न होना।"
+              }
+            },
+            {
+              "id": "mid_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "Not remembering what you ate at your last meal - or even whether you ate.",
+                "hi": "पिछले भोजन में क्या खाया - या यह भी कि भोजन किया अथवा नहीं, याद न होना।"
+              }
+            },
+            {
+              "id": "mid_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "Things around you feeling unreal.",
+                "hi": "चारों ओर की वस्तुएँ अवास्तविक लगना।"
+              }
+            },
+            {
+              "id": "mid_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "Not being able to see for a while (as if you are blind) for no known medical reason.",
+                "hi": "कुछ समय के लिए देख न पाना (मानो अंधा हों), कोई ज्ञात चिकित्सीय कारण नहीं।"
+              }
+            },
+            {
+              "id": "mid_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "Feeling very detached from your behavior as you \"go through the motions\" of daily life.",
+                "hi": "दैनिक जीवन के \"कार्य\" करते समय अपने व्यवहार से अत्यंत विलग महसूस करना।"
+              }
+            },
+            {
+              "id": "mid_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "Feeling uncertain about who you really are.",
+                "hi": "आप वास्तव में कौन हैं, इसके बारे में अनिश्चितता महसूस करना।"
+              }
+            },
+            {
+              "id": "mid_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "Feeling less interested in things than you used to be, or finding that you don't enjoy activities or hobbies the way you once did.",
+                "hi": "पहले की तुलना में चीज़ों में कम रुचि होना, या गतिविधियाँ/शौक पहले जैसे आनंद न देना।"
+              }
+            },
+            {
+              "id": "mid_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "Being paralyzed or unable to move (for no known medical reason).",
+                "hi": "लकवाग्रस्त होना या हिल न पाना (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+              }
+            },
+            {
+              "id": "mid_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "Being so bothered by flashbacks that it was hard to get out of bed and face the day.",
+                "hi": "फ्लैशबैक इतने कष्टदायी कि बिस्तर से उठकर दिन का सामना करना कठिन हो।"
+              }
+            },
+            {
+              "id": "mid_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "Not remembering large parts of your childhood after age 5.",
+                "hi": "पाँच वर्ष के बाद के बचपन के बड़े हिस्से याद न होना।"
+              }
+            },
+            {
+              "id": "mid_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "Feeling disconnected from everything around you.",
+                "hi": "चारों ओर की हर वस्तु से कटा हुआ महसूस करना।"
+              }
+            },
+            {
+              "id": "mid_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "Not being able to hear for a while (as if you are deaf) for no known medical reason.",
+                "hi": "कुछ समय के लिए सुन न पाना (मानो बहरा हों), कोई ज्ञात चिकित्सीय कारण नहीं।"
+              }
+            },
+            {
+              "id": "mid_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "Feeling that pieces of your past are missing.",
+                "hi": "अतीत के कुछ टुकड़े गुम लगना।"
+              }
+            },
+            {
+              "id": "mid_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "Immediately forgetting what other people tell you.",
+                "hi": "दूसरे जो बताते हैं, तुरंत भूल जाना।"
+              }
+            },
+            {
+              "id": "mid_21",
+              "itemNumber": 21,
+              "text": {
+                "en": "Having difficulty walking (for no known medical reason).",
+                "hi": "चलने में कठिनाई (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+              }
+            },
+            {
+              "id": "mid_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "Hearing a voice in your head that wants you to hurt yourself.",
+                "hi": "सिर के भीतर ऐसी आवाज़ जो आपको स्वयं को क्षति पहुँचाने को कहे।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+                "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+              }
+            },
+            {
+              "id": "mid_23",
+              "itemNumber": 23,
+              "text": {
+                "en": "Feeling very confused about who you really are.",
+                "hi": "आप वास्तव में कौन हैं, इसे लेकर अत्यंत विभ्रम महसूस करना।"
+              }
+            },
+            {
+              "id": "mid_24",
+              "itemNumber": 24,
+              "text": {
+                "en": "Feeling that important things happened to you earlier in your life, but you cannot remember them.",
+                "hi": "लगता है जीवन के पूर्व में महत्वपूर्ण घटनाएँ घटीं, पर उन्हें याद नहीं कर सकते।"
+              }
+            },
+            {
+              "id": "mid_25",
+              "itemNumber": 25,
+              "text": {
+                "en": "Feeling as if you were looking at the world through a fog so that people and objects felt far away or unclear.",
+                "hi": "मानो कोहरे के पार से संसार देख रहे हों; लोग एवं वस्तुएँ दूर या अस्पष्ट लगें।"
+              }
+            },
+            {
+              "id": "mid_26",
+              "itemNumber": 26,
+              "text": {
+                "en": "Having seizures for which your doctor can find no reason.",
+                "hi": "मिर्गी-जैसे दौरे जिनका कारण चिकित्सक नहीं पा सकतें।"
+              }
+            },
+            {
+              "id": "mid_27",
+              "itemNumber": 27,
+              "text": {
+                "en": "Going into trance so much (or for so long) that it interferes with your daily activities and responsibilities.",
+                "hi": "इतनी बार/इतनी देर ट्रांस में जाना कि दैनिक कार्य एवं ज़िम्मेदारियाँ प्रभावित हों।"
+              }
+            },
+            {
+              "id": "mid_28",
+              "itemNumber": 28,
+              "text": {
+                "en": "Words just flowing from your mouth as if they were not in your control.",
+                "hi": "शब्द मुँह से ऐसे बहते जाना मानो वे आपके नियंत्रण में न हों।"
+              }
+            },
+            {
+              "id": "mid_29",
+              "itemNumber": 29,
+              "text": {
+                "en": "Feeling that there are large gaps in your memory.",
+                "hi": "स्मृति में बड़े-बड़े अंतराल दिखना।"
+              }
+            },
+            {
+              "id": "mid_30",
+              "itemNumber": 30,
+              "text": {
+                "en": "Going into trance for hours.",
+                "hi": "घंटों तक ट्रांस में रहना।"
+              }
+            },
+            {
+              "id": "mid_31",
+              "itemNumber": 31,
+              "text": {
+                "en": "Bad memories coming into your mind and you can't get rid of them.",
+                "hi": "बुरी यादें मन में आना और उन्हें हटा न पाना।"
+              }
+            },
+            {
+              "id": "mid_32",
+              "itemNumber": 32,
+              "text": {
+                "en": "Drifting into trance without even realizing that it is happening.",
+                "hi": "ट्रांस में चले जाना, यह एहसास भी हुए बिना कि वह हो रहा है।"
+              }
+            },
+            {
+              "id": "mid_33",
+              "itemNumber": 33,
+              "text": {
+                "en": "Words come out of your mouth, but you didn't say them; you don't know where those words came from.",
+                "hi": "मुँह से शब्द निकलना पर आपने वे नहीं कहे; वे कहाँ से आए, पता नहीं।"
+              }
+            },
+            {
+              "id": "mid_34",
+              "itemNumber": 34,
+              "text": {
+                "en": "Being able to remember very little of your past.",
+                "hi": "अतीत का बहुत थोड़ा ही याद रहना।"
+              }
+            },
+            {
+              "id": "mid_35",
+              "itemNumber": 35,
+              "text": {
+                "en": "When you are angry, doing or saying things that you don't remember (after you calm down).",
+                "hi": "क्रोध में ऐसे कार्य/वचन करना जो शांत होने के बाद याद न हो।"
+              }
+            },
+            {
+              "id": "mid_36",
+              "itemNumber": 36,
+              "text": {
+                "en": "Feeling that you have multiple personalities.",
+                "hi": "ऐसा लगना कि आपके भीतर अनेक व्यक्तित्व हैं।"
+              }
+            },
+            {
+              "id": "mid_37",
+              "itemNumber": 37,
+              "text": {
+                "en": "Hearing a voice in your head that calls you names (e.g., wimp, stupid, whore, slut, bitch, etc.).",
+                "hi": "सिर के भीतर ऐसी आवाज़ जो आपको गालियाँ/नाम देती है (कायर, मूर्ख आदि)।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+                "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+              }
+            },
+            {
+              "id": "mid_38",
+              "itemNumber": 38,
+              "text": {
+                "en": "Poor memory causing serious difficulty for you.",
+                "hi": "खराब स्मृति से आपको गंभीर कठिनाई होना।"
+              }
+            },
+            {
+              "id": "mid_39",
+              "itemNumber": 39,
+              "text": {
+                "en": "Having other people (or parts) inside you who have their own names.",
+                "hi": "आपके भीतर अन्य व्यक्ति/अंश जिनके अपने नाम हैं।"
+              }
+            },
+            {
+              "id": "mid_40",
+              "itemNumber": 40,
+              "text": {
+                "en": "Re-living a part, such as a past trauma, so vividly that you temporarily lose touch with the present.",
+                "hi": "किसी अंश (जैसे पूर्व आघात) को इतनी जीवंतता से दोबारा जीना कि वर्तमान का संपर्क क्षणिक टूट जाए।"
+              }
+            },
+            {
+              "id": "mid_41",
+              "itemNumber": 41,
+              "text": {
+                "en": "Going into trance several days in a row.",
+                "hi": "लगातार कई दिनों तक ट्रांस में जाना।"
+              }
+            },
+            {
+              "id": "mid_42",
+              "itemNumber": 42,
+              "text": {
+                "en": "Suddenly finding yourself somewhere odd at home (e.g., inside the closet, under a bed, curled up on the floor, etc.) with no knowledge of how you got there.",
+                "hi": "अचानक घर में कोई अजीब स्थान (अलमारी के भीतर, बिस्तर के नीचे, फर्श पर कुड़कर) पर पाए जाना, यह जाने बिना कि वहाँ कैसे पहुँचे।"
+              }
+            },
+            {
+              "id": "mid_43",
+              "itemNumber": 43,
+              "text": {
+                "en": "Discovering that you have changed your appearance (e.g., cut your hair, changed your hairstyle, changed what you are wearing, put on cosmetics, etc.) with no memory of having done so.",
+                "hi": "पता चलना कि आपने रूप बदल लिया (बाल काटना, हेयरस्टाइल, वस्त्र, मेकअप आदि) पर ऐसा करने का स्मरण नहीं।"
+              }
+            },
+            {
+              "id": "mid_44",
+              "itemNumber": 44,
+              "text": {
+                "en": "Being bothered or upset by how much you forget.",
+                "hi": "कितना कुछ भूल जाते हैं, इससे परेशान या व्याकुल होना।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+                "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+              }
+            },
+            {
+              "id": "mid_45",
+              "itemNumber": 45,
+              "text": {
+                "en": "Hearing a voice in your head that wants you to die.",
+                "hi": "सिर के भीतर ऐसी आवाज़ जो आपको मरने को कहे।"
+              }
+            },
+            {
+              "id": "mid_46",
+              "itemNumber": 46,
+              "text": {
+                "en": "Feeling as if there is something inside you that takes control of your behavior and speech.",
+                "hi": "ऐसा लगना कि आपके भीतर कुछ है जो आपके व्यवहार और वाणी पर नियंत्रण ले लेता है।"
+              }
+            },
+            {
+              "id": "mid_47",
+              "itemNumber": 47,
+              "text": {
+                "en": "Totally forgetting how to do something that you know very well how to do (e.g., how to drive, how to read, how to use the computer, how to play the piano, etc.).",
+                "hi": "किसी कार्य को करना पूर्णतः भूल जाना जिसे आप बहुत अच्छी तरह करना जानते हैं (ड्राइविंग, पढ़ना, कंप्यूटर, पियानो आदि)।"
+              }
+            },
+            {
+              "id": "mid_48",
+              "itemNumber": 48,
+              "text": {
+                "en": "Suddenly finding yourself somewhere (e.g., at the beach, at work, in a nightclub, in your car, etc.) with no memory of how you got there.",
+                "hi": "अचानक किसी स्थान पर (समुद्र तट, कार्यस्थल, नाइटक्लब, कार में) पाए जाना, वहाँ पहुँचने का स्मरण नहीं।"
+              }
+            },
+            {
+              "id": "mid_49",
+              "itemNumber": 49,
+              "text": {
+                "en": "Feeling that there is another person inside who can come out and speak if it wants.",
+                "hi": "ऐसा लगना कि भीतर एक अन्य व्यक्ति है जो चाहे तो बाहर आकर बोल सकता है।"
+              }
+            },
+            {
+              "id": "mid_50",
+              "itemNumber": 50,
+              "text": {
+                "en": "\"Coming to\" and finding that you have done something you don't remember doing (e.g., smashed something, cut yourself, cleaned the whole house, etc.).",
+                "hi": "\"होश में\" आने पर पता चलना कि कोई कार्य कर डाला जो याद नहीं (चीज़ तोड़ना, स्वयं को घायल करना, पूरा घर साफ करना आदि)।"
+              }
+            },
+            {
+              "id": "mid_51",
+              "itemNumber": 51,
+              "text": {
+                "en": "Having difficulty staying out of trance.",
+                "hi": "ट्रांस से बाहर बने रहने में कठिनाई।"
+              }
+            },
+            {
+              "id": "mid_52",
+              "itemNumber": 52,
+              "text": {
+                "en": "Suddenly not knowing how to do your job.",
+                "hi": "अचानक काम कैसे करना है, यह न जानना।"
+              }
+            },
+            {
+              "id": "mid_53",
+              "itemNumber": 53,
+              "text": {
+                "en": "Your body suddenly feeling as if it isn't really yours.",
+                "hi": "अचानक शरीर ऐसा लगना जैसे वास्तव में आपका नहीं है।"
+              }
+            },
+            {
+              "id": "mid_54",
+              "itemNumber": 54,
+              "text": {
+                "en": "Being bothered by flashbacks for several days in a row.",
+                "hi": "लगातार कई दिनों तक फ्लैशबैक से कष्ट होना।"
+              }
+            },
+            {
+              "id": "mid_55",
+              "itemNumber": 55,
+              "text": {
+                "en": "Being confused or puzzled by your emotions.",
+                "hi": "अपनी भावनाओं को लेकर विभ्रम या हैरान होना।"
+              }
+            },
+            {
+              "id": "mid_56",
+              "itemNumber": 56,
+              "text": {
+                "en": "Hearing a voice in your head that tells you to \"shut up\".",
+                "hi": "सिर के भीतर ऐसी आवाज़ जो कहती है \"चुप रहो\"।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+                "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+              }
+            },
+            {
+              "id": "mid_57",
+              "itemNumber": 57,
+              "text": {
+                "en": "Having another part inside that has different memories, behaviors, and feelings than you do.",
+                "hi": "भीतर एक अन्य अंश जिसकी स्मृतियाँ, व्यवहार एवं भावनाएँ आपसे भिन्न हैं।"
+              }
+            },
+            {
+              "id": "mid_58",
+              "itemNumber": 58,
+              "text": {
+                "en": "There were times when you \"woke up\" and found pills or a razor blade (or something else to hurt yourself with) in your hand.",
+                "hi": "ऐसे अवसर जब \"होश में\" आने पर हाथ में गोलियाँ या रेज़र ब्लेड (या स्वयं को क्षति का अन्य साधन) मिला।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+                "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+              }
+            },
+            {
+              "id": "mid_59",
+              "itemNumber": 59,
+              "text": {
+                "en": "Hearing a voice in your head that calls you no good, worthless, or a failure.",
+                "hi": "सिर के भीतर ऐसी आवाज़ जो आपको बेकार, निरर्थक या असफल कहे।"
+              }
+            },
+            {
+              "id": "mid_60",
+              "itemNumber": 60,
+              "text": {
+                "en": "Having a very angry part that \"comes out\" and says and does things that you would never do or say.",
+                "hi": "अत्यंत क्रोधित अंश का \"बाहर आकर\" वे कार्य/वचन करना जो आप कभी नहीं करते।"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "0",
+            "hi": "0"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "1",
+            "hi": "1"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "2",
+            "hi": "2"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "3",
+            "hi": "3"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "4",
+            "hi": "4"
+          }
+        },
+        {
+          "v": 5,
+          "label": {
+            "en": "5",
+            "hi": "5"
+          }
+        },
+        {
+          "v": 6,
+          "label": {
+            "en": "6",
+            "hi": "6"
+          }
+        },
+        {
+          "v": 7,
+          "label": {
+            "en": "7",
+            "hi": "7"
+          }
+        },
+        {
+          "v": 8,
+          "label": {
+            "en": "8",
+            "hi": "8"
+          }
+        },
+        {
+          "v": 9,
+          "label": {
+            "en": "9",
+            "hi": "9"
+          }
+        },
+        {
+          "v": 10,
+          "label": {
+            "en": "10",
+            "hi": "10"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 10,
+        "note": {
+          "en": "0 = never happens to you ... 10 = always happening to you.",
+          "hi": "0 = आपको कभी नहीं होता ... 10 = सदैव हो रहा है।"
+        }
+      },
+      "sumScoring": true,
+      "scoring": {
+        "method": "mid60_mean_index",
+        "indexFormula": {
+          "en": "Total mean score = (average of all 60 responses) x 10, expressed as a percentage 0-100.",
+          "hi": "कुल माध्य स्कोर = (सभी 60 उत्तरों का औसत) × 10, प्रतिशत के रूप में 0-100।"
+        },
+        "scaleMin": 0,
+        "scaleMax": 10,
+        "rule": {
+          "en": "Compute the mean of the 60 item ratings and multiply by 10 to obtain the MID-60 index (0-100). Compare the index against the printed score ranges, and compare each subscale mean (also x10) against its own clinical cutoff. A subscale above cutoff indicates the need for the full diagnostic interview (SCID-5-D / MID) — it is not itself a diagnosis.",
+          "hi": "60 आइटम रेटिंग का माध्य निकालकर 10 से गुणा करें — MID-60 सूचकांक (0-100)। सूचकांक की तुलना मुद्रित स्कोर-परिसर से करें, तथा प्रत्येक उप-पैमाने के माध्य (×10) की तुलना उसके नैदानिक कटऑफ से करें। कटऑफ से ऊपर उप-पैमाना पूर्ण नैदानिक साक्षात्कार (SCID-5-D / MID) की आवश्यकता दर्शाता है — स्वयं रोग-निर्णय नहीं।"
+        },
+        "subscaleAggregation": "mean_x10"
+      },
+      "scoreRanges": [
+        {
+          "max": 7,
+          "label": {
+            "en": "Does not have dissociative experiences",
+            "hi": "वियोजीय अनुभव नहीं हैं"
+          }
+        },
+        {
+          "max": 14,
+          "label": {
+            "en": "Has few diagnostically significant dissociative experiences",
+            "hi": "नैदानिक रूप से महत्वपूर्ण वियोजीय अनुभव अल्प हैं"
+          }
+        },
+        {
+          "max": 20,
+          "label": {
+            "en": "Mild dissociative symptoms and experiences. PTSD or a mild dissociative disorder (such as dissociative amnesia, depersonalization/derealization disorder) are possible.",
+            "hi": "हल्के वियोजीय लक्षण एवं अनुभव। PTSD या हल्का वियोजीय विकार (जैसे वियोजीय क्षतिस्मृति, विलगता/वास्तविकता-विचलन विकार) संभव।"
+          }
+        },
+        {
+          "max": 30,
+          "label": {
+            "en": "May have dissociative disorder and/or PTSD.",
+            "hi": "वियोजीय विकार एवं/अथवा PTSD संभव।"
+          }
+        },
+        {
+          "max": 40,
+          "label": {
+            "en": "May have a dissociative disorder (such as OSDD-1 or DID) and PTSD.",
+            "hi": "वियोजीय विकार (जैसे OSDD-1 या DID) एवं PTSD संभव।"
+          }
+        },
+        {
+          "max": 64,
+          "label": {
+            "en": "Probably has DID or a severe dissociative disorder and PTSD.",
+            "hi": "संभवतः DID अथवा गंभीर वियोजीय विकार एवं PTSD।"
+          }
+        },
+        {
+          "max": 100,
+          "label": {
+            "en": "Severe dissociative and post-traumatic symptoms. High scores may also reflect neuroticism, attention-seeking behaviour, exaggeration or malingering of symptoms, or psychosis.",
+            "hi": "गंभीर वियोजीय एवं आघात-पश्चात् लक्षण। उच्च स्कोर न्यूरोटिसिज़्म, ध्यान-आकर्षण व्यवहार, लक्षणों का अधिक-प्रदर्शन अथवा अभिनय, या मनोविकृति भी दर्शा सकते हैं।"
+          }
+        }
+      ],
+      "subscales": {
+        "did_amnesia_recent": {
+          "name": {
+            "en": "DID: Amnesia (for recent events)",
+            "hi": "DID: क्षतिस्मृति (हाल की घटनाओं की)"
+          },
+          "items": [
+            42,
+            45,
+            48,
+            58
+          ],
+          "cutoff": 10,
+          "note": {
+            "en": "Sudden unexplained changes in appearance, finding yourself in odd places at home, finding yourself somewhere with no memory of how you got there, and waking with something dangerous in your hand.",
+            "hi": "अचानक अपरिवर्तित रूप, घर में विचित्र स्थान पर पाए जाना, बिना स्मरण के किसी स्थान पर पहुँचना, और हाथ में हानिकारक वस्तु लेकर होश में आना।"
+          }
+        },
+        "did_alt_awareness": {
+          "name": {
+            "en": "DID / OSDD-1: Subjective awareness of alter personalities and self-states",
+            "hi": "DID / OSDD-1: अंश-व्यक्तित्वों एवं स्व-अवस्थाओं का आंतरिक बोध"
+          },
+          "items": [
+            3,
+            36,
+            39,
+            49,
+            57
+          ],
+          "cutoff": 20,
+          "note": {
+            "en": "Hearing a child's voice internally, feeling that you have multiple personalities, named parts inside you, another person inside who could come out and speak, and a part with different memories, behaviours and feelings.",
+            "hi": "भीतर बच्चे की आवाज़, अनेक व्यक्तित्वों का अनुभव, नाम वाले अंश, भीतर अन्य व्यक्ति जो बाहर आकर बोल सके, एवं भिन्न स्मृतियों/व्यवहार/भावनाओं वाला अंश।"
+          }
+        },
+        "did_angry_intrusions": {
+          "name": {
+            "en": "DID / OSDD-1: Angry intrusions",
+            "hi": "DID / OSDD-1: क्रोधित प्रवेश"
+          },
+          "items": [
+            28,
+            33,
+            35,
+            46,
+            60
+          ],
+          "cutoff": 18,
+          "note": {
+            "en": "Words flowing uncontrollably, words you did not say, angry behaviour you cannot remember afterwards, possession-like control of behaviour and speech, and an angry part that says and does things you never would.",
+            "hi": "अनियंत्रित शब्द, आपके न कहे शब्द, क्रोध में किए कार्य जो बाद में याद नहीं, व्यवहार-वाणी पर नियंत्रण, एवं क्रोधित अंश जो आप कभी न करें सो करता है।"
+          }
+        },
+        "did_persecutory_intrusions": {
+          "name": {
+            "en": "DID / OSDD-1: Persecutory intrusions",
+            "hi": "DID / OSDD-1: उत्पीड़नकारी प्रवेश"
+          },
+          "items": [
+            22,
+            37,
+            44,
+            56,
+            59
+          ],
+          "cutoff": 18,
+          "note": {
+            "en": "Internal voices telling you to hurt yourself, calling you names, wanting you to die, telling you to \"shut up\", and calling you no good, worthless or a failure. These items are self-harm and suicide related - always follow them up.",
+            "hi": "भीतर की आवाज़ें जो स्वयं को क्षति पहुँचाने को कहे, गालियाँ दें, मरने को कहे, \"चुप रहो\" कहे, तथा बेकार/असफल कहे। ये आइटम स्व-क्षति/आत्महत्या से जुड़े हैं — सदैव अनुवर्ती मूल्यांकन करें।"
+          }
+        },
+        "drdepersonalisation": {
+          "name": {
+            "en": "Derealization / Depersonalization",
+            "hi": "वास्तविकता-विचलन / स्व-विलगता"
+          },
+          "items": [
+            2,
+            7,
+            9,
+            13,
+            25,
+            47,
+            50,
+            53
+          ],
+          "cutoff": 20,
+          "note": {
+            "en": "Emotions that do not feel like yours, no memory of recent actions, things feeling unreal, reduced interest/enjoyment, the world seen through a fog, forgetting a well-learned skill, \"coming to\" after having done something, and your body not feeling yours.",
+            "hi": "अपनी न लगने वाली भावनाएँ, हाल के कार्यों का स्मरण न होना, वस्तुओं का अवास्तविक लगना, रुचि/आनंद में हानि, कोहरे के पार संसार, सुगम कार्य की स्मृति-हानि, कुछ करने के बाद \"होश\" में आना, शरीर का अपना न लगना।"
+          }
+        },
+        "amnesia_memory_distress": {
+          "name": {
+            "en": "Dissociative Amnesia: Distress about severe memory problems",
+            "hi": "वियोजीय क्षतिस्मृति: गंभीर स्मृति-समस्याओं से कष्ट"
+          },
+          "items": [
+            1,
+            8,
+            20,
+            38,
+            43,
+            52
+          ],
+          "cutoff": 30,
+          "note": {
+            "en": "Forgetting what you did earlier in the day, not remembering your last meal, immediately forgetting what people tell you, poor memory causing serious difficulty, being upset by how much you forget, and suddenly not knowing how to do your job.",
+            "hi": "दिन के पूर्व कार्य भूलना, पिछला भोजन याद न होना, लोगों की बात तुरंत भूलना, खराब स्मृति से गंभीर कठिनाई, भूलने की मात्रा से कष्ट, तथा अचानक कार्य विधि न जानना।"
+          }
+        },
+        "amnesia_autobiographical": {
+          "name": {
+            "en": "Dissociative Amnesia: Loss of autobiographical memory",
+            "hi": "वियोजीय क्षतिस्मृति: आत्मकथात्मक स्मृति की हानि"
+          },
+          "items": [
+            16,
+            19,
+            24,
+            29,
+            34
+          ],
+          "cutoff": 34,
+          "note": {
+            "en": "Not remembering large parts of childhood after age 5, feeling pieces of your past are missing, important earlier events you cannot recall, large gaps in memory, and remembering very little of your past.",
+            "hi": "पाँच वर्ष के बाद बचपन के बड़े हिस्से याद न होना, अतीत के टुकड़े गुम लगना, पूर्व की महत्वपूर्ण घटनाओं का अभाव, स्मृति में बड़े अंतराल, तथा अतीत का अत्यल्प स्मरण।"
+          }
+        },
+        "ptsd_flashbacks": {
+          "name": {
+            "en": "PTSD: Flashbacks",
+            "hi": "PTSD: फ्लैशबैक"
+          },
+          "items": [
+            4,
+            15,
+            31,
+            40,
+            54
+          ],
+          "cutoff": 16,
+          "note": {
+            "en": "Reliving trauma with loss of contact with the present, flashbacks so distressing you cannot face the day, intrusive bad memories, re-living a part such as a past trauma, and flashbacks for several days in a row.",
+            "hi": "वर्तमान संपर्क खोकर आघात को दोबारा जीना, इतने कष्टदायी फ्लैशबैक कि दिन भरना कठिन, अवांछित बुरी यादें, पूर्व आघात जैसे अंश को पुनर्जीवित करना, तथा कई दिनों तक लगातार फ्लैशबैक।"
+          }
+        },
+        "conversion_body": {
+          "name": {
+            "en": "Conversion Disorder: Body symptoms",
+            "hi": "परिवर्तन विकार: शारीरिक लक्षण"
+          },
+          "items": [
+            5,
+            10,
+            14,
+            18
+          ],
+          "cutoff": 10,
+          "note": {
+            "en": "Difficulty swallowing, temporary blindness (as if blind), paralysis or inability to move and temporary deafness (as if deaf), all for no known medical reason. Items exactly as printed on the supplied score sheet.",
+            "hi": "निगलने में कठिनाई, क्षणिक अंधता (मानो अंधा हों), लकवा/हिलने में असमर्थता तथा क्षणिक बहरापन (मानो बहरा हों), सब कोई ज्ञात चिकित्सीय कारण विना। आइटम यथावत् मुद्रित स्कोर-शीट के अनुसार।"
+          }
+        },
+        "conversion_seizures": {
+          "name": {
+            "en": "Conversion Disorder: Pseudo-seizures (psychogenic non-epileptic seizures)",
+            "hi": "परिवर्तन विकार: छद्म-दौरे (मनोजन्य गैर-मिर्गी दौरे)"
+          },
+          "items": [
+            26
+          ],
+          "cutoff": 10,
+          "note": {
+            "en": "Seizures for which your doctor can find no reason. Single-item subscale; requires medical evaluation before any interpretation.",
+            "hi": "दौरे जिनका कारण चिकित्सक नहीं पा सकतें। एकल-आइटम उप-पैमाना; किसी व्याख्या से पूर्व चिकित्सीय मूल्यांकन आवश्यक।"
+          }
+        },
+        "general_trance": {
+          "name": {
+            "en": "General subscale: Trance",
+            "hi": "सामान्य उप-पैमाना: ट्रांस"
+          },
+          "items": [
+            21,
+            27,
+            30,
+            32,
+            41,
+            51
+          ],
+          "cutoff": 11.7,
+          "note": {
+            "en": "Difficulty walking, trance that interferes with daily activities and responsibilities, trance for hours, drifting into trance unawares, trance several days in a row, and difficulty staying out of trance. Items exactly as printed on the supplied score sheet (item 21 also carries the functional-body-symptom stem - see sourceNotes).",
+            "hi": "चलने में कठिनाई, दैनिक कार्य एवं ज़िम्मेदारियों को प्रभावित करने वाला ट्रांस, घंटों ट्रांस, बिना जानें ट्रांस में जाना, लगातार कई दिनों तक ट्रांस, तथा ट्रांस से बाहर रहने में कठिनाई। आइटम यथावत् मुद्रित स्कोर-शीट के अनुसार (आइटम 21 शारीरिक-लक्षण कथन भी वहन करता है — sourceNotes देखें।"
+          }
+        },
+        "general_self_confusion": {
+          "name": {
+            "en": "General subscale: Self-confusion",
+            "hi": "सामान्य उप-पैमाना: स्व-विभ्रम"
+          },
+          "items": [
+            6,
+            11,
+            12,
+            17,
+            23,
+            55
+          ],
+          "cutoff": 33.3,
+          "note": {
+            "en": "Trance-like episodes with loss of awareness, feeling detached from your behaviour, uncertainty about who you really are, disconnection from everything around you, strong confusion about identity, and being puzzled by your own emotions.",
+            "hi": "ट्रांस-सदृश अवस्थाएँ, अपने व्यवहार से विलगता, वास्तविक पहचान के बारे में अनिश्चितता, चारों ओर की हर वस्तु से कटाव, पहचान में गहरा विभ्रम, तथा अपनी भावनाओं से हैरानी।"
+          }
+        }
+      },
+      "normsNote": {
+        "en": "Score ranges and subscale cutoffs are reproduced from the supplied MID-60 score sheet. The MID-60 is a screening/severity measure: elevated subscales indicate which dissociative disorder (DID, OSDD-1, dissociative amnesia, DDD, PTSD, functional neurological symptoms) needs a full structured interview. Very high scores may also reflect neuroticism, exaggeration, malingering or psychosis.",
+        "hi": "स्कोर-परिसर एवं उप-पैमाना कटऑफ प्रदत्त MID-60 स्कोर-शीट से अंकित हैं। MID-60 स्क्रीनिंग/तीव्रता माप है: उच्च उप-पैमाने दर्शाते हैं कि कौन-सा वियोजीय विकार (DID, OSDD-1, वियोजीय क्षतिस्मृति, DDD, PTSD, कार्यात्मक न्यूरोलॉजिकल लक्षण) पूर्ण संरचित साक्षात्कार माँगता है। अत्यधिक उच्च स्कोर न्यूरोटिसिज़्म, अधिक-प्रदर्शन, अभिनय या मनोविकृति भी हो सकते हैं।"
+      },
+      "sourcePages": "MID-60 patient form + score sheet (supplied packet)",
+      "sourceNotes": {
+        "provenance": {
+          "en": "MID-60 short form reference: Kate, M.-A., Jamieson, G., Dorahy, M. J., & Middleton, W. (2021). Measuring dissociative symptoms and experiences in an Australian college sample using a short version of the Multidimensional Inventory of Dissociation. Journal of Trauma & Dissociation, 22(3), 265-287. https://doi.org/10.1080/15299732.2020.1792024",
+          "hi": "MID-60 लघु-संस्करण संदर्भ: Kate, Jamieson, Dorahy & Middleton (2021), Journal of Trauma & Dissociation, 22(3), 265-287।"
+        },
+        "transcription": {
+          "en": "Items and subscale keys were transcribed from the user-supplied packet exactly as printed. Two features of the printed keys are recorded rather than silently changed: (a) item 21 ('Having difficulty walking, for no known medical reason') is listed by the score sheet in BOTH the Trance key (21, 27, 30, 32, 41, 51) and the functional-body-symptom group, although its stem reads as a body symptom; (b) because item 21 sits in the Trance key, the printed 'Conversion Disorder: Body symptoms' key covers items 5, 10, 14, 18 only, leaving difficulty walking outside it. Both keys are implemented verbatim so scores match the paper form; check against the published MID manual before clinical use. The full MID is a 253-item copyrighted instrument; this implementation is the 60-item short form only and reproduces no normative data - verify licensing before redistribution.",
+          "hi": "आइटम एवं उप-पैमाना-कुंजियाँ उपयोगकर्ता-प्रदत्त पत्रक से अंकित की गईं। दो मुद्रित असंगतियाँ चुपचाप सुधारने के बजाय दर्ज की गई हैं: (a) 'शारीरिक लक्षण' कुंजी में 5, 10, 14, 18 हैं जबकि आइटम 21 (चलने में कठिनाई) पाँचवाँ कार्यात्मक-तंत्रिका कथन है और यहाँ सम्मिलित है; (b) 'ट्रांस' कुंजी में आइटम 21 है जो उसी शारीरिक लक्षण को दोहराता है, अतः उसके स्थान पर आइटम 6 लिया गया है। पूर्ण MID 253-आइटम coppyrighted उपकरण है; यह कार्यान्वयन केवल 60-आइटम लघु-संस्करण है और कोई normativ डेटा पुनःउत्पादित नहीं करता — पुनर्वितरण से पूर्व लाइसेंस सत्यापित करें।"
+        }
+      },
+      "translationNote": {
+        "en": "English item stems are authoritative; Hindi labels are machine-assisted translations for clinician review and must be proofread by a qualified translator before clinical use.",
+        "hi": "अंग्रेज़ी कथन प्राधिकृत हैं; हिंदी लेबल चिकित्सक-समीक्षा हेतु यंत्र-सहायित अनुवाद हैं औरclinical प्रयोग से पूर्व योग्य अनुवादक से शुद्धि आवश्यक।"
+      },
+      "branching": null
+    },
+    "desii": {
+      "id": "desii",
+      "name": {
+        "en": "Dissociative Experiences Scale — DES-II",
+        "hi": "वियोजीय अनुभव पैमाना — DES-II"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "optionalAssessment": true,
+      "sourceInstrument": "DES-II",
+      "targetAge": [
+        "adult",
+        "adolescent"
+      ],
+      "directions": {
+        "en": "This questionnaire consists of twenty-eight questions about experiences that you may have in your daily life. We are interested in how often you have these experiences. Your answers must show how often these experiences happen to you when you are NOT under the influence of alcohol or drugs. For each item, determine to what degree the described experience applies to you and mark the number showing the percentage of the time you have the experience (0% = never, 100% = always).",
+        "hi": "यह प्रश्नावनी आपके दैनिक जीवन के संभाव्य अनुभवों से संबंधित अट्ठाईस प्रश्नों की है। हमें यह जानना है कि ये अनुभव आपको कितनी बार होते हैं। उत्तर यह दर्शाएँ कि ये अनुभव शराब या नशे के प्रभाव में न रहते हुए कितनी बार होते हैं। प्रत्येक प्रश्न हेतु निर्धारित करें कि वर्णित अनुभव आपको किस सीमा तक लागू होता है और वह प्रतिशत अंकित करें (0% = कभी नहीं, 100% = सदैव)।"
+      },
+      "timeframe": {
+        "en": "How often the experiences occur in daily life (not under the influence of alcohol or drugs).",
+        "hi": "दैनिक जीवन में अनुभव कितनी बार होते हैं (शराब/नशे के प्रभाव में नहीं)।"
+      },
+      "parts": [
+        {
+          "id": "desii_part1",
+          "name": {
+            "en": "Percentage of time the experience happens (0% Never to 100% Always)",
+            "hi": "अनुभव कितने प्रतिशत समय होता है (0% कभी नहीं से 100% सदैव तक)"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "0%",
+                "hi": "0%"
+              }
+            },
+            {
+              "v": 10,
+              "label": {
+                "en": "10%",
+                "hi": "10%"
+              }
+            },
+            {
+              "v": 20,
+              "label": {
+                "en": "20%",
+                "hi": "20%"
+              }
+            },
+            {
+              "v": 30,
+              "label": {
+                "en": "30%",
+                "hi": "30%"
+              }
+            },
+            {
+              "v": 40,
+              "label": {
+                "en": "40%",
+                "hi": "40%"
+              }
+            },
+            {
+              "v": 50,
+              "label": {
+                "en": "50%",
+                "hi": "50%"
+              }
+            },
+            {
+              "v": 60,
+              "label": {
+                "en": "60%",
+                "hi": "60%"
+              }
+            },
+            {
+              "v": 70,
+              "label": {
+                "en": "70%",
+                "hi": "70%"
+              }
+            },
+            {
+              "v": 80,
+              "label": {
+                "en": "80%",
+                "hi": "80%"
+              }
+            },
+            {
+              "v": 90,
+              "label": {
+                "en": "90%",
+                "hi": "90%"
+              }
+            },
+            {
+              "v": 100,
+              "label": {
+                "en": "100%",
+                "hi": "100%"
+              }
+            }
+          ],
+          "anchors": [
+            {
+              "v": 0,
+              "label": {
+                "en": "0% (Never)",
+                "hi": "0% (कभी नहीं)"
+              }
+            },
+            {
+              "v": 100,
+              "label": {
+                "en": "100% (Always)",
+                "hi": "100% (सदैव)"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "desii_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "Driving or riding in a car, bus or subway and suddenly realizing that you don't remember what has happened during all or part of the trip.",
+                "hi": "कार/बस/मेट्रो में यात्रा करते समय अचानक एहसास कि यात्रा के सभी/कुछ भाग की घटनाएँ याद नहीं।"
+              }
+            },
+            {
+              "id": "desii_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "Listening to someone talk and suddenly realizing that you did not hear part or all of what was said.",
+                "hi": "किसी की बात सुनते हुए अचानक एहसास कि कही गई बात का कुछ/पूरा भाग सुनाई ही नहीं दिया।"
+              }
+            },
+            {
+              "id": "desii_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "Finding yourself in a place and having no idea how you got there.",
+                "hi": "किसी स्थान पर स्वयं को पाकर भी यह न जानना कि वहाँ कैसे पहुँचे।"
+              }
+            },
+            {
+              "id": "desii_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "Finding yourself dressed in clothes that you don't remember putting on.",
+                "hi": "ऐसे वस्त्र पहने पाए जाना जो पहने का स्मरण नहीं।"
+              }
+            },
+            {
+              "id": "desii_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "Finding new things among your belongings that you do not remember buying.",
+                "hi": "अपने सामान में नई वस्तुएँ मिलना जिनके खरीदने का स्मरण नहीं।"
+              }
+            },
+            {
+              "id": "desii_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "Being approached by people you do not know, who call you by another name or insist that you have met them before.",
+                "hi": "अपरिचित लोग आपको अन्य नाम से बुलाना या पूर्व-मुलाकात पर जोर देना।"
+              }
+            },
+            {
+              "id": "desii_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "Feeling as though you are standing next to yourself or watching yourself do something, seeing yourself as if looking at another person.",
+                "hi": "ऐसा लगना जैसे स्वयं के पास खड़े होकर अपना कार्य देख रहे हों, मानो अन्य व्यक्ति देख रहे हों।"
+              }
+            },
+            {
+              "id": "desii_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "Being told that you sometimes do not recognize friends or family members.",
+                "hi": "दूसरों द्वारा बताया जाना कि कभी-कभी आप मित्रों या परिवार वालों को नहीं पहचान पाते।"
+              }
+            },
+            {
+              "id": "desii_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "Having no memory for some important events in your lives (for example, a wedding or graduation).",
+                "hi": "जीवन की कुछ महत्वपूर्ण घटनाओं (जैसे विवाह, स्नातक समारोह) की स्मृति का अभाव।"
+              }
+            },
+            {
+              "id": "desii_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "Being accused of lying when you do not think that you have lied.",
+                "hi": "झूठ बोलने का आरोप लगना जब आपको लगता है कि आपने झूठ नहीं बोला।"
+              }
+            },
+            {
+              "id": "desii_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "Looking in a mirror and not recognizing yourself.",
+                "hi": "दर्पण में स्वयं को देखकर न पहचान पाना।"
+              }
+            },
+            {
+              "id": "desii_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "Feeling that other people, objects, and the world around you are not real.",
+                "hi": "लोगों, वस्तुओं एवं चारों ओर के संसार को अवास्तविक अनुभव करना।"
+              }
+            },
+            {
+              "id": "desii_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "Feeling that your body does not seem to belong to you.",
+                "hi": "शरीर का आपको नहीं लगना।"
+              }
+            },
+            {
+              "id": "desii_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "Remembering a past event so vividly that you feel as if you were reliving that event.",
+                "hi": "पूर्व घटना इतनी जीवंतता से याद करना मानो उसे पुनः जी रहे हों।"
+              }
+            },
+            {
+              "id": "desii_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "Not being sure whether things you remember happening really did happen or whether you just dreamed them.",
+                "hi": "यह निश्चित न होना कि याद आ रही घटनाएँ वास्तव में घटीं अथवा केवल स्वप्न थीं।"
+              }
+            },
+            {
+              "id": "desii_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "Being in a familiar place but finding it strange and unfamiliar.",
+                "hi": "परिचित स्थान पर होते हुए उसे विचित्र एवं अपरिचित लगना।"
+              }
+            },
+            {
+              "id": "desii_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "Watching television or a movie and becoming so absorbed in the story that you are unaware of other events happening around you.",
+                "hi": "टीवी/फिल्म में इतना लीन होना कि चारों ओर घटित अन्य घटनाओं का पता न चले।"
+              }
+            },
+            {
+              "id": "desii_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "Becoming so involved in a fantasy or daydream that it feels as though it were really happening to you.",
+                "hi": "कल्पना/दिवास्वप्न में इतना लीन होना मानो वह वास्तव में घट रहा हो।"
+              }
+            },
+            {
+              "id": "desii_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "Being able to ignore pain.",
+                "hi": "दर्द को उपेक्षित कर पाना।"
+              }
+            },
+            {
+              "id": "desii_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "Sitting staring off into space, thinking of nothing, and not aware of the passage of time.",
+                "hi": "शून्य में टकटकी लगाकर बैठना, कुछ न सोचना, समय बीतने का पता न चलना।"
+              }
+            },
+            {
+              "id": "desii_21",
+              "itemNumber": 21,
+              "text": {
+                "en": "When alone, talking out loud to yourself.",
+                "hi": "एकांत में स्वयं से ऊँची आवाज़ में बात करना।"
+              }
+            },
+            {
+              "id": "desii_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "Acting so differently in one situation compared with another that you feel almost as if you were two different people.",
+                "hi": "एक परिस्थिति में दूसरी की तुलना में इतना भिन्न व्यवहार कि लगें दो भिन्न व्यक्ति।"
+              }
+            },
+            {
+              "id": "desii_23",
+              "itemNumber": 23,
+              "text": {
+                "en": "In certain situations being able to do things with amazing ease and spontaneity that would usually be difficult for you (for example, sports, work, social situations).",
+                "hi": "कुछ परिस्थितियों में आश्चर्यजनक सहजता से कार्य कर पाना जो सामान्यतः कठिन हों (खेल, कार्य, सामाजिक)।"
+              }
+            },
+            {
+              "id": "desii_24",
+              "itemNumber": 24,
+              "text": {
+                "en": "Not being able to remember whether you have done something or have just thought about doing that thing (for example, not knowing whether you have just mailed a letter or have just thought about mailing it).",
+                "hi": "यह स्मरण न होना कि कोई कार्य किया अथवा केवल करने का विचार किया (जैसे पत्र डाक भेजना)।"
+              }
+            },
+            {
+              "id": "desii_25",
+              "itemNumber": 25,
+              "text": {
+                "en": "Finding evidence that you have done things that you do not remember doing.",
+                "hi": "ऐसे प्रमाण मिलना कि आपने कार्य किए पर उनका स्मरण नहीं।"
+              }
+            },
+            {
+              "id": "desii_26",
+              "itemNumber": 26,
+              "text": {
+                "en": "Finding writings, drawings, or notes among your belongings that you must have done but cannot remember doing.",
+                "hi": "सामान में लिखावट/चित्र/नोट मिलना जो आपके ही हों पर करने का स्मरण न हो।"
+              }
+            },
+            {
+              "id": "desii_27",
+              "itemNumber": 27,
+              "text": {
+                "en": "Hearing voices inside your head that tell you to do things or comment on things that you are doing.",
+                "hi": "सिर के भीतर ऐसी आवाज़ें जो कार्य करने को कहें या आपके कार्य पर टिप्पणी करें।"
+              },
+              "safety": true,
+              "safetyNote": {
+                "en": "Command/commentary internal voices endorsed — assess for psychosis, DID persecutory parts and risk to self or others.",
+                "hi": "आदेश/टिप्पणी करने वाली भीतरी आवाज़ें — मनोविकृति, DID के उत्पीड़नकारी अंश तथा स्व/पर-जोखिम का मूल्यांकन करें।"
+              }
+            },
+            {
+              "id": "desii_28",
+              "itemNumber": 28,
+              "text": {
+                "en": "Feeling as if you are looking at the world through a fog, so that people and objects appear far away or unclear.",
+                "hi": "ऐसा लगना जैसे कोहरे के पार से संसार देख रहे हों; लोग एवं वस्तुएँ दूर या अस्पष्ट।"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "0%",
+            "hi": "0%"
+          }
+        },
+        {
+          "v": 10,
+          "label": {
+            "en": "10%",
+            "hi": "10%"
+          }
+        },
+        {
+          "v": 20,
+          "label": {
+            "en": "20%",
+            "hi": "20%"
+          }
+        },
+        {
+          "v": 30,
+          "label": {
+            "en": "30%",
+            "hi": "30%"
+          }
+        },
+        {
+          "v": 40,
+          "label": {
+            "en": "40%",
+            "hi": "40%"
+          }
+        },
+        {
+          "v": 50,
+          "label": {
+            "en": "50%",
+            "hi": "50%"
+          }
+        },
+        {
+          "v": 60,
+          "label": {
+            "en": "60%",
+            "hi": "60%"
+          }
+        },
+        {
+          "v": 70,
+          "label": {
+            "en": "70%",
+            "hi": "70%"
+          }
+        },
+        {
+          "v": 80,
+          "label": {
+            "en": "80%",
+            "hi": "80%"
+          }
+        },
+        {
+          "v": 90,
+          "label": {
+            "en": "90%",
+            "hi": "90%"
+          }
+        },
+        {
+          "v": 100,
+          "label": {
+            "en": "100%",
+            "hi": "100%"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 100,
+        "note": {
+          "en": "Each item is answered with the percentage of time the experience happens: 0% 10 20 30 40 50 60 70 80 90 100% (Never → Always).",
+          "hi": "प्रत्येक प्रश्न का उत्तर अनुभव के प्रतिशत समय से: 0% 10 20 30 40 50 60 70 80 90 100% (कभी नहीं → सदैव)।"
+        }
+      },
+      "sumScoring": true,
+      "scoring": {
+        "method": "desii_mean_percent",
+        "indexFormula": {
+          "en": "DES-II total = the mean of the twenty-eight item percentages (0-100).",
+          "hi": "DES-II कुल = अट्ठाईस आइटम प्रतिशतों का माध्य (0-100)।"
+        },
+        "scaleMin": 0,
+        "scaleMax": 100,
+        "cutoff": 30,
+        "rule": {
+          "en": "Sum the twenty-eight item percentages and divide by 28. A mean DES-II score of 30 or above is the commonly used clinical comparison point and warrants a structured dissociative-disorder interview; higher means indicate greater dissociative severity. The DES-II is a screening measure and is not diagnostic on its own.",
+          "hi": "अट्ठाईस आइटम प्रतिशतों को जोड़कर 28 से भाग दें। 30 या उससे अधिक का माध्य DES-II स्कोर सामान्यतः प्रयुक्त नैदानिक-तुलना बिंदु है और संरचित वियोजीय-विकार साक्षात्कार हेतु निर्देशित करता है; उच्च माध्य अधिक वियोजन-तीव्रता दर्शाता है। DES-II स्क्रीनिंग माप है, स्वयं में रोग-निर्णायक नहीं।"
+        }
+      },
+      "bands": [
+        {
+          "max": 9,
+          "severity": {
+            "en": "Low dissociative experiences",
+            "hi": "अल्प वियोजीय अनुभव"
+          }
+        },
+        {
+          "max": 29,
+          "severity": {
+            "en": "Moderate dissociative experiences",
+            "hi": "मध्यम वियोजीय अनुभव"
+          }
+        },
+        {
+          "max": 44,
+          "severity": {
+            "en": "High dissociative experiences (>= 30: clinical comparison point)",
+            "hi": "उच्च वियोजीय अनुभव (≥30: नैदानिक-तुलना बिंदु)"
+          }
+        },
+        {
+          "max": 100,
+          "severity": {
+            "en": "Very high dissociative experiences",
+            "hi": "अत्यंत उच्च वियोजीय अनुभव"
+          }
+        }
+      ],
+      "normsNote": {
+        "en": "No population norms are reproduced here. The >= 30 mean is the widely used clinical comparison point from the DES-II literature (Carlson & Putnam); interpret alongside the MID-60 subscale pattern, trauma history and the structured interview.",
+        "hi": "यहाँ कोई जनसंख्या-नॉर्म पुनःउत्पादित नहीं किए गए। ≥30 माध्य DES-II साहित्य (Carlson & Putnam) का व्यापक रूप से प्रयुक्त नैदानिक-तुलना बिंदु है; MID-60 उप-पैमाना प्रतिरूप, आघात-इतिहास एवं संरचित साक्षात्कार के साथ व्याख्या करें।"
+      },
+      "sourcePages": "DES-II directions + items 1-28 (supplied packet)",
+      "translationNote": {
+        "en": "English item stems are authoritative; Hindi labels are machine-assisted translations for clinician review and must be proofread by a qualified translator before clinical use.",
+        "hi": "अंग्रेज़ी कथन प्राधिकृत हैं; हिंदी लेबल चिकित्सक-समीक्षा हेतु यंत्र-सहायित अनुवाद हैं और नैदानिक प्रयोग से पूर्व योग्य अनुवादक से शुद्धि आवश्यक।"
+      },
+      "branching": null
+    },
+    "fac22_sr": {
+      "id": "fac22_sr",
+      "name": {
+        "en": "FAC22-SR — Factitious Disorder Symptom Scale (Self-Report)",
+        "hi": "FAC22-SR — छलरोग लक्षण मापनी (स्व-रिपोर्ट)"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "optionalAssessment": true,
+      "sourceInstrument": "FAC22-SR",
+      "targetAge": [
+        "adult"
+      ],
+      "directions": {
+        "en": "Please answer Yes or No to each statement. Do not skip any item. If you are not sure, choose the answer that is more likely to be correct. There is no time limit, but do not spend too long on any single statement.",
+        "hi": "प्रत्येक कथन का हाँ या नहीं में उत्तर दें। कोई आइटम छोड़ें नहीं। यदि निश्चित नहीं हैं तो अधिक संभावित उत्तर चुनें। समय-सीमा नहीं है, किंतु किसी एक कथन पर अधिक समय व्यर्थ न करें।"
+      },
+      "timeframe": {
+        "en": "Present pattern over recent illness experience.",
+        "hi": "वर्तमान रोग-अनुभव की समसामयिक पैटर्न।"
+      },
+      "parts": [
+        {
+          "id": "fac22_items",
+          "name": {
+            "en": "FAC22-SR items 1-22",
+            "hi": "FAC22-SR आइटम 1-22"
+          },
+          "options": [
+            {
+              "v": 1,
+              "label": {
+                "en": "True",
+                "hi": "सत्य"
+              }
+            },
+            {
+              "v": 0,
+              "label": {
+                "en": "False",
+                "hi": "मिथ्या"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "fac_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "With my physical symptoms, I affirm being referred for psychiatric counselling today.",
+                "hi": "अपने शारीरिक लक्षणों के साथ, आज मुझे मनोचिकित्सकीय परामर्श हेतु भेजे जाने में मैं सहमत हूँ।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "I do agree that others find my symptoms atypical and unusually recurring.",
+                "hi": "मैं स्वीकार करता/करती हूँ कि अन्य लोगों को मेरे लक्षण असामान्य एवं बारम्बार लगते हैं।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "I do think that because my symptoms are so mild/trivial, physicians often miss their significance and seriousness.",
+                "hi": "मुझे लगता है कि मेरे लक्षण अत्यंत तुच्छ होने के कारण चिकित्सक अक्सर उनके महत्व एवं गंभीरता को उपेक्षित कर देते हैं।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "I would be happy if I can suddenly find myself sprightly healthy and strong.",
+                "hi": "यदि मैं अचानक पूर्णतः स्वस्थ व बलिष्ठ पाऊँ तो मुझे प्रसन्नता होगी।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "I would be anxious if I find my family members had left for their work as/if I appear healthy to them.",
+                "hi": "यदि मुझे दिखने में स्वस्थ पाकर मेरे परिवारजन कार्य हेतु चले जाएँ तो मुझे चिंता होगी।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "It is just chance that people fail to notice or weren't around, every time when I experienced these symptoms.",
+                "hi": "यह केवल संयोग है कि हर बार इन लक्षणों के अनुभव के समय लोग मौजूद नहीं थे या उन्होंने ध्यान नहीं दिया।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "I would pull myself up to help (with errands or earning) a family member more sick than me.",
+                "hi": "मुझसे अधिक बीमार परिवार-सदस्य की सहायता (कार्यों या कमाई में) के लिए मैं खुद को उठा लाऊँगा/उठा लाऊँगी।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "(If I had to play in a video game or a stage play) I would prefer portraying an injured warrior dying in bed, than one left unattended in battle.",
+                "hi": "(यदि मुझे किसी वीडियो गेम या रंगमंच में भाग लेना हो) तो मैं शয्ये पर मरता हुआ घायल योद्धा की भूमिका करने को मैं युद्धभूमि में अनदेखा किए गए सैनिक के रूप निभाने से अधिक प्रिय मानूँगा/मानूँगी।"
+              },
+              "keyedAnswer": "T",
+              "criterionNote": {
+                "en": "self-prepared / heroic patient-role item",
+                "hi": "स्व-तैयारी / नायक-रोगी-भूमिका आइटम"
+              }
+            },
+            {
+              "id": "fac_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "I usually feel timid and offended when a stranger offers to help me.",
+                "hi": "जब कोई अपरिचित व्यक्ति सहायता की पेशकश करता है तो मैं सामान्यतः संकोची एवं आहत महसूस करता/करती हूँ।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "I am eager and brave enough to undergo painful bodily investigations.",
+                "hi": "पीड़ादायक शारीरिक जाँचों से गुज़रने के लिए मैं उत्सुक एवं साहसी हूँ।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "I would prefer crying or lamenting to a close friend, than crying alone.",
+                "hi": "अकेले रोने के बजाय किसी निकट मित्र से रोना या विलाप करना मुझे अधिक अधिक प्रिय लगता है।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "I feel giddy or immobilised often when I get emotional when alone.",
+                "hi": "अकेले भावुक होते ही प्रायः मुझे चक्कर आता है या मैं स्तब्ध हो जाता/जाती हूँ।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "I would feel ashamed if people find about my physical illness.",
+                "hi": "यदि लोग मेरी शारीरिक बीमारी के बारे में जान लें तो मुझे लज्जा आएगी।"
+              },
+              "keyedAnswer": "F"
+            },
+            {
+              "id": "fac_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "I often get gloomy, unsatisfied or irritable on the day of my discharge from hospital.",
+                "hi": "अस्पताल से छुट्टी के दिन मैं प्रायः विषण्ण, असंतुष्ट या चिड़चिड़ा हो जाता/हो जाती हूँ।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "I might not have accessed the physician but for the erratic concern shown by my family members/friend(s).",
+                "hi": "परिवारजनों/मित्रों द्वारा दिखाई गई उलटी-सीधी चिंता न होती तो शायद मैं चिकित्सक के पास न जाता/जाती।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "I find my clinical tests and lab investigations done too casually to get any positive result.",
+                "hi": "मुझे लगता है कि मेरे नैदानिक परीक्षण एवं जाँचें इतनी सावधानी-विहीन ढंग से की जाती हैं कि उनसे सकारात्मक परिणाम नहीं मिलता।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "I feel unsatisfied and deprived when the health professionals show lesser than usual interest in talking with me.",
+                "hi": "स्वास्थ्य-विशेषज्ञों द्वारा मेरी बातचीत में अपेक्षाकृत कम रुचि दिखाने पर मैं असंतुष्ट एवं वंचित महसूस करता/करती हूँ।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "I understand that people with my symptoms may or may not be hearing voices when alone, either transiently or regularly. I hear such voices too.",
+                "hi": "मुझे ज्ञात है कि मेरे जैसे लक्षण वाले लोग एकान्त में आवाज़ें सुन सकते हैं या नहीं, क्षणिक या नियमित। मुझे भी ऐसी आवाज़ें सुनाई देती हैं।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "I understand that people with my symptoms may or may not have visual loss, either momentarily or regularly. I have had visual loss too.",
+                "hi": "मुझे ज्ञात है कि मेरे जैसे लक्षण वाले लोगों को क्षणिक या नियमित दृष्टि-हानि हो सकती है। मुझे भी दृष्टि-हानि हुई है।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "I understand that people with my symptoms may or may not have weakness/abnormal movements of one or more limbs, either momentarily or continuously. I have had such weakness/abnormal movements too.",
+                "hi": "मुझे ज्ञात है कि मेरे जैसे लक्षण वाले एक या अधिक अंगों में क्षणिक या सतत दुर्बलता/असामान्य गतियाँ हो सकती हैं। मुझे भी ऐसी दुर्बलता/असामान्य गतियाँ हुई हैं।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_21",
+              "itemNumber": 21,
+              "text": {
+                "en": "I have encountered interesting adventures that had been brilliant and wonderful, and/or a series of heartbreaking tragic events including multiple personal crises - many times victimizing me.",
+                "hi": "मेरे जीवन में रोमांचक, दिव्य अनुभव भी रहे हैं और हृदयविदारक श्रृंखलाबद्ध दुर्घटनाएँ भी — जिनमें अनेक बार मैं पीड़ित बना।"
+              },
+              "keyedAnswer": "T"
+            },
+            {
+              "id": "fac_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "Wherever I go, many a time I have had the pleasure of playing a hero/heroine of those circumstances and had been wondered at and hailed as a saviour by the people there.",
+                "hi": "जहाँ-जहाँ मैं गया/गई, अनेक बार मैं उन परिस्थितियों का नायक/नायिका बनकर सबका ध्यान आकर्षित करता/करती रहा/रही और लोगों ने मुझे तारीफ़ की।"
+              },
+              "keyedAnswer": "T",
+              "criterionNote": {
+                "en": "self-prepared / heroic patient-role item",
+                "hi": "स्व-तैयारी / नायक-रोगी-भूमिका आइटम"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 1,
+          "label": {
+            "en": "True",
+            "hi": "सत्य"
+          }
+        },
+        {
+          "v": 0,
+          "label": {
+            "en": "False",
+            "hi": "मिथ्या"
+          }
+        }
+      ],
+      "keyedScoring": true,
+      "scoring": {
+        "method": "fac22_sr_keyed_sum",
+        "possibleThreshold": 9,
+        "probableThreshold": 15,
+        "maxKeyed": 22,
+        "rule": {
+          "en": "Score 1 each for Yes to items 5, 8, 10, 11, 14-22, and No to items 1-4, 6, 7, 9, 12 and 13. A score of 9-14: possible factitious disorder; 15 or more: probable factitious disorder.",
+          "hi": "आइटम 5, 8, 10, 11, 14-22 के 'हाँ' तथा आइटम 1-4, 6, 7, 9, 12, 13 के 'नहीं' उत्तर पर क्रमशः 1 अंक। 9-14 अंक: संभव भत्रुण रोग (factitious); 15 या अधिक: संभावित भत्रुण रोग।"
+        },
+        "notDiagnostic": {
+          "en": "A screen only. Factitious disorder requires that deception for external gain (malingering) be excluded and that the presentation be established over time; this scale cannot make the diagnosis.",
+          "hi": "यह केवल स्क्रीन है। भत्रुण रोग के लिए बाह्य लाभ हेतु छल (मालिंगरिंग) का विवर्जन आवश्यक है तथा प्रस्तुति कालक्रम में स्थापित हो; यह मापनी रोग-निर्णय नहीं कर सकती।"
+        },
+        "disorders": [
+          "factitious_disorder",
+          "somatic_symptom_disorder"
+        ]
+      },
+      "bands": [
+        {
+          "max": 8,
+          "severity": {
+            "en": "Below screen threshold",
+            "hi": "स्क्रीन-सीमा से नीचे"
+          },
+          "key": "negative"
+        },
+        {
+          "max": 14,
+          "severity": {
+            "en": "Possible factitious disorder",
+            "hi": "संभव भत्रुण रोग"
+          },
+          "key": "possible"
+        },
+        {
+          "max": 22,
+          "severity": {
+            "en": "Probable factitious disorder",
+            "hi": "संभावित भत्रुण रोग"
+          },
+          "key": "probable"
+        }
+      ],
+      "sourcePages": "Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) — Table 7 (FAC22-SR scale) and scoring note",
+      "translationNote": {
+        "en": "English wording is authoritative (repaired from the scanned table). Hindi labels are a working translation and must be proofread by a bilingual clinician before clinical use.",
+        "hi": "अंग्रेज़ी पाठ प्रामाणिक है (स्कैन की गई तालिका से संशोधित)। हिन्दी अनुवाद कार्य-प्रगति पर है; नैदानिक प्रयोग से पूर्व द्विभाषी चिकित्सक से शुद्धि आवश्यक।"
+      },
+      "branching": null
+    },
+    "phq15": {
+      "id": "phq15",
+      "name": {
+        "en": "PHQ-15 — Somatic Symptom Severity Scale",
+        "hi": "PHQ-15 — शारीरिक लक्षण तीव्रता मापनी"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "optionalAssessment": true,
+      "sourceInstrument": "PHQ-15",
+      "targetAge": [
+        "adult"
+      ],
+      "directions": {
+        "en": "During the past four weeks, how much have you been bothered by any of the following problems?",
+        "hi": "पिछले चार सप्ताह में, निम्नलिखित समस्याओं से आप कितने परेशान रहे हैं?"
+      },
+      "timeframe": {
+        "en": "Past four weeks.",
+        "hi": "पिछले चार सप्ताह।"
+      },
+      "parts": [
+        {
+          "id": "phq15_items",
+          "name": {
+            "en": "Somatic symptoms",
+            "hi": "शारीरिक लक्षण"
+          },
+          "options": [
+            {
+              "v": 0,
+              "label": {
+                "en": "Not bothered at all",
+                "hi": "बिल्कुल परेशान नहीं"
+              }
+            },
+            {
+              "v": 1,
+              "label": {
+                "en": "Bothered a little",
+                "hi": "थोड़ा परेशान"
+              }
+            },
+            {
+              "v": 2,
+              "label": {
+                "en": "Bothered a lot",
+                "hi": "बहुत परेशान"
+              }
+            }
+          ],
+          "questions": [
+            {
+              "id": "phq15_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "Stomach pain",
+                "hi": "पेट में दर्द"
+              }
+            },
+            {
+              "id": "phq15_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "Back pain",
+                "hi": "पीठ में दर्द"
+              }
+            },
+            {
+              "id": "phq15_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "Pain in your arms or legs or other joints",
+                "hi": "बाँहों या टाँगों या अन्य जोड़ों में दर्द"
+              }
+            },
+            {
+              "id": "phq15_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "Menstrual cramps or other problems with your periods (women only)",
+                "hi": "मासिक धर्म में ऐंठन या अन्य समस्याएँ (केवल महिलाएँ)"
+              },
+              "applicability": "women_only"
+            },
+            {
+              "id": "phq15_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "Headaches",
+                "hi": "सिरदर्द"
+              }
+            },
+            {
+              "id": "phq15_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "Chest pain",
+                "hi": "छाती में दर्द"
+              }
+            },
+            {
+              "id": "phq15_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "Dizziness",
+                "hi": "चक्कर आना"
+              }
+            },
+            {
+              "id": "phq15_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "Fainting spells",
+                "hi": "बेहोशी के दौर"
+              }
+            },
+            {
+              "id": "phq15_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "Feeling your heart pound or race",
+                "hi": "दिल जोर से या तेज़ धड़कना"
+              }
+            },
+            {
+              "id": "phq15_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "Shortness of breath",
+                "hi": "साँस कम पड़ना"
+              }
+            },
+            {
+              "id": "phq15_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "Pain or problems during sexual intercourse",
+                "hi": "सहवास के दौरान दर्द या समस्या"
+              }
+            },
+            {
+              "id": "phq15_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "Constipation, loose bowels, or diarrhoea",
+                "hi": "कब्ज़, ढीली दस्त या पतले मल"
+              }
+            },
+            {
+              "id": "phq15_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "Nausea, gas, or indigestion",
+                "hi": "जी मचलाना, गैस या अपच"
+              }
+            },
+            {
+              "id": "phq15_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "Feeling tired, or having low energy",
+                "hi": "थकान या ऊर्जा का अभाव"
+              }
+            },
+            {
+              "id": "phq15_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "Trouble sleeping",
+                "hi": "नींद में समस्या"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "Not bothered at all",
+            "hi": "बिल्कुल परेशान नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Bothered a little",
+            "hi": "थोड़ा परेशान"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "Bothered a lot",
+            "hi": "बहुत परेशान"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 2,
+        "note": {
+          "en": "Not bothered at all = 0 · Bothered a little = 1 · Bothered a lot = 2. Sum all 15 items (range 0-30).",
+          "hi": "बिल्कुल परेशान नहीं = 0 · थोड़ा परेशान = 1 · बहुत परेशान = 2। सभी 15 आइटम जोड़ें (शीर्घ 0-30)।"
+        }
+      },
+      "sumScoring": true,
+      "scoring": {
+        "method": "phq15_sum_bands",
+        "scaleMin": 0,
+        "scaleMax": 2,
+        "rule": {
+          "en": "0-4 = no somatisation disorder; 5-9 = mild; 10-14 = moderate; 15+ = severe somatisation disorder.",
+          "hi": "0-4 = कोई सोमटाइज़ेशन रोग नहीं; 5-9 = हल्का; 10-14 = मध्यम; 15+ = गंभीर सोमटाइज़ेशन रोग।"
+        },
+        "notDiagnostic": {
+          "en": "The PHQ-15 is intended to supplement clinical acumen and experience for individual patients; it does not diagnose.",
+          "hi": "PHQ-15 का उद्देश्य चिकित्सकीय बुद्धि एवं अनुभव की सहायता करना है; यह रोग-निर्णय नहीं करता।"
+        },
+        "disorders": [
+          "somatic_symptom_disorder"
+        ]
+      },
+      "bands": [
+        {
+          "max": 4,
+          "severity": {
+            "en": "No somatisation disorder",
+            "hi": "सोमटाइज़ेशन रोग नहीं"
+          },
+          "key": "none"
+        },
+        {
+          "max": 9,
+          "severity": {
+            "en": "Mild somatisation disorder",
+            "hi": "हल्का सोमटाइज़ेशन रोग"
+          },
+          "key": "mild"
+        },
+        {
+          "max": 14,
+          "severity": {
+            "en": "Moderate somatisation disorder",
+            "hi": "मध्यम सोमटाइज़ेशन रोग"
+          },
+          "key": "moderate"
+        },
+        {
+          "max": 30,
+          "severity": {
+            "en": "Severe somatisation disorder",
+            "hi": "गंभीर सोमटाइज़ेशन रोग"
+          },
+          "key": "severe"
+        }
+      ],
+      "sourcePages": "PHQ-15 (Kroenke et al.) — 15-item somatic symptom severity scale, printed form supplied",
+      "branching": null
+    },
+    "gcls": {
+      "id": "gcls",
+      "name": {
+        "en": "Gender Congruence and Life Satisfaction Scale (GCLS)",
+        "hi": "लंग-संगति एवं जीवन-संतुष्टि मापनी (GCLS)"
+      },
+      "type": "matrix",
+      "administeredBy": "self-report",
+      "optionalAssessment": true,
+      "sourceInstrument": "GCLS",
+      "targetAge": [
+        "adolescent",
+        "adult"
+      ],
+      "directions": {
+        "en": "Below is a range of statements about how you might feel in relation to your gender, mental well-being, and life satisfaction. Please respond to each statement, thinking about how frequently you have felt like this in the past 6 months. Please note that when talking about 'gender identity' we mean one's internal sense of one's self as a man, a woman, or some other gender. Please rate each statement as: NEVER (N), RARELY (R), SOMETIMES (S), OFTEN (O), or ALWAYS (A).",
+        "hi": "नीचे आपके लिंग, मानसिक सुख-समता एवं जीवन-संतुष्टि से संबंधित कथनों की एक श्रेणी दी गई है। प्रत्येक कथन का उत्तर दें, यह सोचते हुए कि पिछले 6 माह में आपने ऐसा कितनी बार अनुभव किया। कृपया ध्यान दें कि जब 'लिंग-पहचान' की बात की जाती है, तब इसका अर्थ है किसी का अंतर्गत स्व-बोध — पुरुष, महिला या अन्य कोई लिंग के रूप में। प्रत्येक कथन का मूल्यांकन करें: कभी नहीं (N), विरल (R), कभी-कभी (S), अक्सर (O), या सदैव (A)।"
+      },
+      "timeframe": {
+        "en": "Past 6 months.",
+        "hi": "पिछले 6 माह।"
+      },
+      "definition": {
+        "en": "Gender identity",
+        "text": {
+          "en": "One's internal sense of one's self as a man, a woman, or some other gender.",
+          "hi": "किसी का अंतर्गत स्व-बोध — पुरुष, महिला या अन्य कोई लिंग के रूप में।"
+        }
+      },
+      "parts": [
+        {
+          "id": "gcls_part1",
+          "partKey": "past_6_months_distress",
+          "name": {
+            "en": "In the past 6 months, due to the distress about my gender (i.e., the distress caused as the gender I was assigned at birth does not match with my gender identity):",
+            "hi": "पिछले 6 माह में, मेरे लिंग संबंधी कष्ट के कारण (अर्थात् वह कष्ट जो जन्म के समय सौंपे गए लिंग और मेरी लिंग-पहचान के मेल न खाने से होता है):"
+          },
+          "questions": [
+            {
+              "id": "gcls_1",
+              "itemNumber": 1,
+              "text": {
+                "en": "I have avoided social situations and/or social interactions.",
+                "hi": "मैंने सामाजिक परिस्थितियों और/अथवा सामाजिक संपर्कों से परहेज़ किया है।"
+              }
+            },
+            {
+              "id": "gcls_2",
+              "itemNumber": 2,
+              "text": {
+                "en": "I have not gone to school/college/work.",
+                "hi": "मैं स्कूल/महाविद्यालय/कार्यस्थल नहीं गया/गई हूँ।"
+              }
+            },
+            {
+              "id": "gcls_3",
+              "itemNumber": 3,
+              "text": {
+                "en": "I have not been able to have emotional relationships with other people.",
+                "hi": "मैं दूसरे लोगों के साथ भावनात्मक संबंध नहीं बना पाया/पाई।"
+              }
+            },
+            {
+              "id": "gcls_4",
+              "itemNumber": 4,
+              "text": {
+                "en": "I have suffered from anxiety.",
+                "hi": "मुझे चिंता का सामना करना पड़ा है।"
+              }
+            },
+            {
+              "id": "gcls_5",
+              "itemNumber": 5,
+              "text": {
+                "en": "I have not been able to be physically intimate with other people.",
+                "hi": "मैं दूसरे लोगों के साथ शारीरिक रूप से निकट नहीं हो पाया/पाई।"
+              }
+            },
+            {
+              "id": "gcls_6",
+              "itemNumber": 6,
+              "text": {
+                "en": "I have been unable to leave the house.",
+                "hi": "मैं घर से बाहर नहीं जा पाया/पाई।"
+              }
+            },
+            {
+              "id": "gcls_7",
+              "itemNumber": 7,
+              "text": {
+                "en": "I have found it difficult to make friends.",
+                "hi": "मुझे मित्र बनाने में कठिनाई हुई है।"
+              }
+            },
+            {
+              "id": "gcls_8",
+              "itemNumber": 8,
+              "text": {
+                "en": "I have thought about cutting or hurting my chest, genitals, and/or surrounding areas.",
+                "hi": "मुझे अपने वक्ष, जननांगों और/अथवा आस-पास के अंगों को काटने या क्षति पहुँचाने का विचार आया है।"
+              },
+              "safety": true
+            },
+            {
+              "id": "gcls_9",
+              "itemNumber": 9,
+              "text": {
+                "en": "I have felt that life is meaningless.",
+                "hi": "मुझे लगा कि जीवन निरर्थक है।"
+              }
+            },
+            {
+              "id": "gcls_10",
+              "itemNumber": 10,
+              "text": {
+                "en": "I have not enjoyed life.",
+                "hi": "मैं जीवन का आनंद नहीं ले पाया/पाई।"
+              }
+            },
+            {
+              "id": "gcls_11",
+              "itemNumber": 11,
+              "text": {
+                "en": "I have not engaged in leisure activities.",
+                "hi": "मैं अवकाश गतिविधियों में शामिल नहीं हुआ/हुई।"
+              }
+            },
+            {
+              "id": "gcls_12",
+              "itemNumber": 12,
+              "text": {
+                "en": "I have suffered from low mood.",
+                "hi": "मेरा मूद उदासीन रहा है।"
+              }
+            },
+            {
+              "id": "gcls_13",
+              "itemNumber": 13,
+              "text": {
+                "en": "I have thought about hurting myself or taking my own life.",
+                "hi": "मुझे स्वयं को क्षति पहुँचाने या आत्महत्या करने का विचार आया है।"
+              },
+              "safety": true
+            }
+          ]
+        },
+        {
+          "id": "gcls_part2",
+          "partKey": "gender_experience",
+          "name": {
+            "en": "In the past 6 months:",
+            "hi": "पिछले 6 माह में:"
+          },
+          "questions": [
+            {
+              "id": "gcls_14",
+              "itemNumber": 14,
+              "text": {
+                "en": "I have felt distressed when touching my genitals as they do not match my gender identity.",
+                "hi": "जननांगों को स्पर्श करने पर मुझे कष्ट हुआ क्योंकि वे मेरी लिंग-पहचान से मेल नहीं खाते।"
+              }
+            },
+            {
+              "id": "gcls_15",
+              "itemNumber": 15,
+              "text": {
+                "en": "I have felt so distressed about my chest that I have not been able to have a fulfilling life.",
+                "hi": "अपने वक्ष को लेकर इतना कष्ट अनुभव किया कि मैं संतुष्टिपूर्ण जीवन नहीं जी पाया/पाई।"
+              }
+            },
+            {
+              "id": "gcls_16",
+              "itemNumber": 16,
+              "text": {
+                "en": "I have felt comfortable with how others have perceived my gender.",
+                "hi": "मुझे यह सुखद लगा कि दूसरों ने मेरे लिंग को कैसे देखा/पहचाना।"
+              },
+              "reverseScored": true
+            },
+            {
+              "id": "gcls_17",
+              "itemNumber": 17,
+              "text": {
+                "en": "I have felt that my body hair conflicts with my gender identity, either because I have it and do not like it or because I would like to have it.",
+                "hi": "मुझे लगा कि मेरे शरीर के बाल मेरी लिंग-पहचान से टकराते हैं — चाहे वे हों और अप्रिय हों, या मैं उन्हें चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "gcls_18",
+              "itemNumber": 18,
+              "text": {
+                "en": "I have felt like my chest does not match my gender identity.",
+                "hi": "मुझे लगा कि मेरा वक्ष मेरी लिंग-पहचान से मेल नहीं खाता।"
+              }
+            },
+            {
+              "id": "gcls_19",
+              "itemNumber": 19,
+              "text": {
+                "en": "I have found it distressing that others do not address me according to my gender identity.",
+                "hi": "मुझे कष्ट हुआ कि दूसरे मुझे मेरी लिंग-पहचान के अनुसार नहीं संबोधित करते।"
+              }
+            },
+            {
+              "id": "gcls_20",
+              "itemNumber": 20,
+              "text": {
+                "en": "I have felt satisfied with the pronouns that others use when talking about me.",
+                "hi": "मुझे उन सर्वनामों से संतुष्टि महसूस हुई जो दूसरे मेरे बारे में बात करते समय प्रयोग करते हैं।"
+              },
+              "reverseScored": true
+            },
+            {
+              "id": "gcls_21",
+              "itemNumber": 21,
+              "text": {
+                "en": "I have felt unhappy about my genitalia since they do not match my gender identity.",
+                "hi": "मेरे जननांग मेरी लिंग-पहचान से मेल नहीं खाते, इसलिए मैं उनसे असुखी रहा/रही।"
+              }
+            },
+            {
+              "id": "gcls_22",
+              "itemNumber": 22,
+              "text": {
+                "en": "I have felt comfortable with how other people perceive my gender based on my physical appearance.",
+                "hi": "मुझे सुखद लगा कि मेरे बाह्य स्वरूप के आधार पर दूसरे मेरे लिंग को जिस तरह देखते हैं वैसा ठीक है।"
+              },
+              "reverseScored": true
+            },
+            {
+              "id": "gcls_23",
+              "itemNumber": 23,
+              "text": {
+                "en": "I have felt that my voice has affected the way other people have perceived my gender identity which has been distressing for me.",
+                "hi": "मुझे लगा कि मेरी आवाज़ ने दूसरों की मेरी लिंग-पहचान की धारणा को प्रभावित किया, जिससे कष्ट हुआ।"
+              }
+            },
+            {
+              "id": "gcls_24",
+              "itemNumber": 24,
+              "text": {
+                "en": "I have felt that my facial hair conflicts with my gender identity, either because I have it and do not like it or because I would like to have it.",
+                "hi": "मुझे लगा कि मेरे चेहरे के बाल मेरी लिंग-पहचान से टकराते हैं — चाहे वे हों और अप्रिय हों, या मैं उन्हें चाहता/चाहती हूँ।"
+              }
+            },
+            {
+              "id": "gcls_25",
+              "itemNumber": 25,
+              "text": {
+                "en": "I have felt that my genitals do match with my gender identity.",
+                "hi": "मुझे लगा कि मेरे जननांग मेरी लिंग-पहचान से मेल खाते हैं।"
+              },
+              "reverseScored": true
+            },
+            {
+              "id": "gcls_26",
+              "itemNumber": 26,
+              "text": {
+                "en": "I have felt that genital surgery will address the unhappiness I experience in relation to my gender.",
+                "hi": "मुझे लगा कि जननांग-शस्त्रक्रिया मेरे लिंग से जुड़े असुख को दूर कर सकेगी।"
+              }
+            },
+            {
+              "id": "gcls_27",
+              "itemNumber": 27,
+              "text": {
+                "en": "I have been unable to have a fulfilling life because of the distress relating to my genitalia.",
+                "hi": "मेरे जननांगों से जुड़े कष्ट के कारण मैं संतुष्टिपूर्ण जीवन नहीं जी पाया/पाई।"
+              }
+            },
+            {
+              "id": "gcls_28",
+              "itemNumber": 28,
+              "text": {
+                "en": "I have felt extremely distressed when looking at my chest.",
+                "hi": "अपना वक्ष देखकर मुझे अत्यंत कष्ट हुआ।"
+              }
+            },
+            {
+              "id": "gcls_29",
+              "itemNumber": 29,
+              "text": {
+                "en": "I have felt extremely distressed when looking at my genitals.",
+                "hi": "अपने जननांग देखकर मुझे अत्यंत कष्ट हुआ।"
+              }
+            },
+            {
+              "id": "gcls_30",
+              "itemNumber": 30,
+              "text": {
+                "en": "I have felt satisfied with my chest.",
+                "hi": "मुझे अपने वक्ष से संतुष्टि महसूस हुई।"
+              },
+              "reverseScored": true
+            },
+            {
+              "id": "gcls_surgery_tick",
+              "itemNumber": "□",
+              "text": {
+                "en": "Tick here if you have already had genital surgery (unless you feel you need more)",
+                "hi": "यदि आपका पहले ही जननांग-शस्त्रक्रिया हो चुकी है तो यहाँ चिह्नित करें (जब तक कि आपको अधिक की आवश्यकता न लगे)"
+              },
+              "nonScored": true,
+              "tickBox": true,
+              "linkedItem": 26,
+              "note": {
+                "en": "Clinical note — not scored",
+                "hi": "नैदानिक टिप्पणी — अंकित नहीं"
+              }
+            }
+          ]
+        },
+        {
+          "id": "gcls_part3",
+          "partKey": "life_satisfaction",
+          "name": {
+            "en": "Next, we would like to know how satisfied you have been with your life for the last 6 months:",
+            "hi": "इसके बाद, हम जानना चाहते हैं कि पिछले 6 माह में आप अपने जीवन से कितने संतुष्ट रहे:"
+          },
+          "questions": [
+            {
+              "id": "gcls_31",
+              "itemNumber": 31,
+              "text": {
+                "en": "I have felt satisfied at school/college/work.",
+                "hi": "मुझे स्कूल/महाविद्यालय/कार्यस्थल में संतुष्टि महसूस हुई।"
+              }
+            },
+            {
+              "id": "gcls_32",
+              "itemNumber": 32,
+              "text": {
+                "en": "I have felt satisfied with my emotional relationship(s).",
+                "hi": "मुझे अपने भावनात्मक संबंधों/संबंध से संतुष्टि महसूस हुई।"
+              }
+            },
+            {
+              "id": "gcls_33",
+              "itemNumber": 33,
+              "text": {
+                "en": "I have felt satisfied with my sex life.",
+                "hi": "मुझे अपने यौन जीवन से संतुष्टि महसूस हुई।"
+              }
+            },
+            {
+              "id": "gcls_34",
+              "itemNumber": 34,
+              "text": {
+                "en": "I have felt satisfied in my leisure activities and hobbies.",
+                "hi": "मुझे अपनी अवकाश गतिविधियों और शौकों से संतुष्टि महसूस हुई।"
+              }
+            },
+            {
+              "id": "gcls_35",
+              "itemNumber": 35,
+              "text": {
+                "en": "I have not felt satisfied with my friends.",
+                "hi": "मुझे अपने मित्रों से संतुष्टि महसूस नहीं हुई।"
+              },
+              "reverseScored": true
+            },
+            {
+              "id": "gcls_36",
+              "itemNumber": 36,
+              "text": {
+                "en": "I have felt satisfied with the support I have received from other significant people.",
+                "hi": "मुझे अन्य महत्वपूर्ण व्यक्तियों से प्राप्त सहयोग से संतुष्टि महसूस हुई।"
+              }
+            },
+            {
+              "id": "gcls_37",
+              "itemNumber": 37,
+              "text": {
+                "en": "I have not felt satisfied with my health.",
+                "hi": "मुझे अपने स्वास्थ्य से संतुष्टि महसूस नहीं हुई।"
+              },
+              "reverseScored": true
+            },
+            {
+              "id": "gcls_38",
+              "itemNumber": 38,
+              "text": {
+                "en": "I have felt satisfied with life in general.",
+                "hi": "मुझे सामान्यतः जीवन से संतुष्टि महसूस हुई।"
+              }
+            }
+          ]
+        }
+      ],
+      "matrixOptions": [
+        {
+          "v": 0,
+          "label": {
+            "en": "Never",
+            "hi": "कभी नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Rarely",
+            "hi": "विरल"
+          }
+        },
+        {
+          "v": 2,
+          "label": {
+            "en": "Sometimes",
+            "hi": "कभी-कभी"
+          }
+        },
+        {
+          "v": 3,
+          "label": {
+            "en": "Often",
+            "hi": "अक्सर"
+          }
+        },
+        {
+          "v": 4,
+          "label": {
+            "en": "Always",
+            "hi": "सदैव"
+          }
+        }
+      ],
+      "ratingScale": {
+        "min": 0,
+        "max": 4,
+        "note": {
+          "en": "Frequency rating per item: Never = 0 · Rarely = 1 · Sometimes = 2 · Often = 3 · Always = 4. Positively worded congruence/satisfaction items (16, 20, 22, 30, 35, 37) are reverse-scored (4 − response).",
+          "hi": "प्रत्येक आइटम की आवृत्ति: कभी नहीं = 0 · विरल = 1 · कभी-कभी = 2 · अक्सर = 3 · सदैव = 4। सकारात्मक रूप से अभिव्यक्त संगति/संतुष्टि कथनों (16, 20, 22, 30, 35, 37) का व्युक्रम-अंकन होता है (4 − उत्तर)।"
+        }
+      },
+      "subscales": {
+        "functional_impact": {
+          "en": "Functional impact of gender-related distress (items 1-13)",
+          "hi": "लिंग-संबंधी कष्ट का कार्यात्मक प्रभाव (आइटम 1-13)",
+          "note_en": "How much gender-related distress has disrupted social, occupational, emotional, physical-intimacy and home life, and depressed/anxious symptoms.",
+          "note_hi": "लिंग-संबंधी कष्ट ने सामाजिक, व्यावसायिक, भावनात्मक, शारीरिक-नैकट्य और गार्हस्थ्य जीवन तथा उदासीन/चिंत लक्षणों को कितना बाधित किया।",
+          "range": [
+            0,
+            52
+          ],
+          "items": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "reversedItems": [],
+          "minTotal": 0,
+          "maxTotal": 52
+        },
+        "body_preoccupation": {
+          "en": "Body preoccupation and distress (items 14, 15, 17, 18, 19, 21, 23, 24, 26, 27, 28, 29)",
+          "hi": "शारीरिक आसक्ति एवं कष्ट (आइटम 14, 15, 17, 18, 19, 21, 23, 24, 26, 27, 28, 29)",
+          "note_en": "Distress focused on chest, genitals, body/facial hair and voice, and belief that genital surgery would relieve the unhappiness.",
+          "note_hi": "वक्ष, जननांग, शरीर/मुख्य बाल और स्वर पर केंद्रित कष्ट, तथा यह धारणा कि जननांग-शस्त्रक्रिया असुख को हर लेगी।",
+          "range": [
+            0,
+            48
+          ],
+          "items": [
+            14,
+            15,
+            17,
+            18,
+            19,
+            21,
+            23,
+            24,
+            26,
+            27,
+            28,
+            29
+          ],
+          "reversedItems": [],
+          "minTotal": 0,
+          "maxTotal": 48
+        },
+        "social_preoccupation": {
+          "en": "Social preoccupation and distress (items 16, 20, 22, 25, 30 reversed)",
+          "hi": "सामाजिक आसक्ति एवं कष्ट (आइटम 16, 20, 22, 25, 30 — व्युक्रम)",
+          "note_en": "Comfort with how others perceive one's gender, satisfaction with the pronouns used, comfort with being perceived from one's appearance, feeling that the genitals match, and satisfaction with the chest. These five items are worded positively and are REVERSE-scored: the subscale rises as comfort falls.",
+          "note_hi": "दूसरों द्वारा लिंग-धारण से सुख, प्रयुक्त सर्वनामों से संतुष्टि, बाह्य स्वरूप से धारणा से सुख, जननांगों के मेल का बोध और वक्ष से संतुष्टि। ये पाँच कथन सकारात्मक हैं और व्युक्रम-अंकित होते हैं: सुख घटने पर यह उप-पैमाना बढ़ता है।",
+          "range": [
+            0,
+            20
+          ],
+          "items": [
+            16,
+            20,
+            22,
+            25,
+            30
+          ],
+          "reversedItems": [
+            16,
+            20,
+            22,
+            25,
+            30
+          ],
+          "minTotal": 0,
+          "maxTotal": 20
+        },
+        "life_satisfaction": {
+          "en": "Life satisfaction (items 31-38, 35 and 37 reversed)",
+          "hi": "जीवन-संतुष्टि (आइटम 31-38, 35 एवं 37 — व्युक्रम)",
+          "note_en": "Reported separately from the distress subscales: higher = MORE satisfaction. Items 35 and 37 are worded negatively and are reverse-scored so that all eight point the same way.",
+          "note_hi": "कष्ट-उप-पैमानों से पृथक् रिपोर्ट: उच्च = अधिक संतुष्टि। आइटम 35 एवं 37 नकारात्मक हैं और व्युक्रम-अंकित होते ताकि सभी आठ एक ही दिशा में रहें।",
+          "range": [
+            0,
+            32
+          ],
+          "items": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "reversedItems": [
+            35,
+            37
+          ],
+          "minTotal": 0,
+          "maxTotal": 32
+        }
+      },
+      "tickBoxItem": {
+        "id": "gcls_surgery_tick",
+        "linkedItem": 26,
+        "scored": false,
+        "purpose": {
+          "en": "Records whether genital surgery has already been carried out, so that item 26 ('genital surgery will address the unhappiness') can be interpreted correctly. Not included in any subscale total.",
+          "hi": "यह दर्ज करता है कि जननांग-शस्त्रक्रिया पहले हो चुकी है या नहीं, ताकि आइटम 26 ('जननांग-शस्त्रक्रिया असुख को दूर करेगी') की व्याख्या ठीक से की जा सके। किसी उप-पैमाना योग में नहीं जोड़ा जाता।"
+        }
+      },
+      "sumScoring": true,
+      "scoring": {
+        "method": "gcls_reverse_keyed_subscales",
+        "scaleMin": 0,
+        "scaleMax": 4,
+        "rule": {
+          "en": "Score each item Never=0, Rarely=1, Sometimes=2, Often=3, Always=4. Reverse-score the positively worded items 16, 20, 22, 30 (congruence) and 35, 37 (negative satisfaction wording) as 4 minus the response. Sum within each subscale: Functional impact 1-13 (0-52), Body preoccupation 14,15,17,18,19,21,23,24,26,27,28,29 (0-48), Social preoccupation 16,20,22,30 reversed (0-16). Life satisfaction 31-38 with 35 and 37 reversed (0-32) is reported separately — higher means MORE satisfaction. The □ surgery tick-box is not scored.",
+          "hi": "प्रत्येक आइटम: कभी नहीं=0, विरल=1, कभी-कभी=2, अक्सर=3, सदैव=4। सकारात्मक कथनों 16, 20, 22, 30 (संगति) तथा 35, 37 (नकारात्मक संतुष्टि-शब्दावली) का व्युक्रम (4 − उत्तर) करें। प्रत्येक उप-पैमाने का योग: कार्यात्मक प्रभाव 1-13 (0-52), शारीरिक आसक्ति 14,15,17,18,19,21,23,24,26,27,28,29 (0-48), सामाजिक आसक्ति 16,20,22,30 व्युक्रम (0-16)। जीवन-संतुष्टि 31-38 (35 एवं 37 व्युक्रम, 0-32) पृथक् रिपोर्ट — उच्च अर्थ अधिक संतुष्टि। □ शस्त्रक्रिया-चिह्न अंकित नहीं।"
+        },
+        "notDiagnostic": {
+          "en": "The GCLS describes gender-related distress and life satisfaction; it does not diagnose gender incongruence/dysphoria, which rests on the DSM-5-TR / ICD-11 criteria and a clinical assessment. Gender diversity alone is not a mental disorder. Scores also inform treatment planning and follow-up rather than eligibility for any intervention.",
+          "hi": "GCLS लिंग-संबंधी कष्ट एवं जीवन-संतुष्टि का वर्णन करता है; यह लिंग-असंगति/डिस्फोरिया का रोग-निर्णय नहीं करता, जो DSM-5-TR / ICD-11 नियमों एवं नैदानिक मूल्यांकन पर आधारित है। केवल लिंग-विविधता मानसिक विकार नहीं है। स्कोर उपचार-योजना एवं अनुवर्ती हेतु सूचित करते हैं, किसी हस्तक्षेप की पात्रता हेतु नहीं।"
+        },
+        "disorders": [
+          "gender_incongruence"
+        ],
+        "riskItems": {
+          "en": "Items 8 and 13 ask about thoughts of hurting the chest/genitals and of suicide. Any non-zero response opens the crisis pathway; these responses must be followed by a direct risk assessment.",
+          "hi": "आइटम 8 वक्ष/जननांग को क्षति पहुँचाने तथा आइटम 13 आत्महत्या के विचार पूछते हैं। शून्येतर उत्तर पर संकट-पथ खुलता है; ऐसे उत्तरों का सीधा जोखिम-मूल्यांकन आवश्यक।"
+        }
+      },
+      "sourcePages": "Gender Congruence and Life Satisfaction Scale (GCLS) — 38 items, 5-point frequency rating over the past 6 months, plus one non-scored genital-surgery tick-box.",
+      "translationNote": {
+        "en": "English wording is authoritative and reproduced as supplied. Hindi labels are a working translation and must be proofread by a bilingual clinician before clinical use.",
+        "hi": "अंग्रेज़ी पाठ प्रामाणिक है तथा यथा-प्रदत्त प्रतिलिपित किया गया है। हिन्दी अनुवाद कार्य-प्रगति पर है; नैदानिक प्रयोग से पूर्व द्विभाषी चिकित्सक से शुद्धि आवश्यक।"
+      },
+      "licensing": {
+        "en": "Instrument text should be used only with permission of the rights holder; confirm current GCLS licensing terms before clinical or research deployment.",
+        "hi": "मापनी का पाठ केवल अधिकार-वाहक की अनुमति से प्रयोग करें; नैदानिक या शोध-प्रयोग से पूर्व वर्तमान लाइसेंस-शर्तें पुष्टि करें।"
+      },
+      "branching": null
     }
   },
   "sharedScales": {
@@ -8301,7 +11378,7 @@
     ]
   },
   "meta": {
-    "schemaVersion": "2.4.0",
+    "schemaVersion": "2.7.0",
     "updated": "2026-11-04",
     "framework": "DSM-5-TR labels compared with ICD-11 codes; selective comparative index, not an official DSM-to-ICD crosswalk",
     "verification": {
@@ -8326,7 +11403,13 @@
       "Personality instrument item text was transcribed from user-supplied scans; Hindi labels are machine-assisted aids flagged for clinician review. Verify licensing before redistribution.",
       "STAXI-CA implemented as three printed parts (State Anger 1-15, Trait Anger 16-24, Anger Expression 25-57) with Anger-In/Anger-Out/Anger-Control/Denial subscale sums; item stems were transcribed from a user-supplied scan whose duplicated/garbled lines were reconciled against the canonical printed form (see scales.staxi_ca.sourceNotes).",
       "Clinical Anger Scale (CAS) implemented as 21 four-option clusters scored A=0/B=1/C=2/D=3, summed 0-63 with the published interpretive bands (0-13 minimal, 14-19 mild, 20-28 moderate, 29-63 severe).",
-      "Anger instruments are dimensional/severity measures reached through the new 'anger' domain (routing auto:angertable); they gate no diagnostic box. STAXI-CA is a copyrighted PAR instrument — verify licensing before redistribution."
+      "Anger instruments are dimensional/severity measures reached through the new 'anger' domain (routing auto:angertable); they gate no diagnostic box. STAXI-CA is a copyrighted PAR instrument — verify licensing before redistribution.",
+      "Dissociation instruments implemented as scales.mid60 (Multidimensional Inventory of Dissociation 60-item short form; index = mean of 60 ratings x 10 with printed score ranges and 12 subscale clinical cutoffs) and scales.desii (Dissociative Experiences Scale II; 28 percentage items, total = mean, clinical comparison point >= 30). Reached through the new 'dissociation' domain via routing auto:dissociationtable; both are self-report dimensional screening measures and gate no diagnostic box.",
+      "MID-60 short-form reference: Kate, Jamieson, Dorahy & Middleton (2021), Journal of Trauma & Dissociation 22(3), 265-287. Two printed subscale-key anomalies (body-symptom item 21 vs trance item 21 duplication) are documented in scales.mid60.sourceNotes instead of being silently corrected. The full 253-item MID is copyrighted — verify licensing before redistribution.",
+      "MID-60 items 22, 37, 44, 56 and 58 (persecutory/degrading voices, waking with means of self-harm) and DES-II item 27 (command/commentary voices) carry safety flags that open the crisis pathway when rated above zero.",
+      "FAC22-SR: added from the published scale table (Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) Table 7). English wording is authoritative and was repaired from the scan; Hindi labels are a working translation awaiting bilingual-clinician proofreading. Keying verified at build time: Yes to 5, 8, 10, 11, 14-22 and No to 1-4, 6, 7, 9, 12, 13 = 22 items. Screening only - never diagnostic; factitious disorder additionally requires exclusion of malingering (see reference.malingering).",
+      "PHQ-15: 15-item somatic symptom severity index (0-2 each, total 0-30) added as a tier-2 optional screen reached from the `somatic` domain; bands follow the printed cut-points 0-4 / 5-9 / 10-14 / 15+. Severity measure that supplements clinical judgement.",
+      "GCLS implemented as scales.gcls (Gender Congruence and Life Satisfaction Scale; 38 items rated Never=0 to Always=4 over the past 6 months, plus one non-scored genital-surgery tick-box linked to item 26). Four subscales with reverse-keyed positively worded items (16, 20, 22, 30 congruence; 35, 37 negative satisfaction): functional impact 1-13, body preoccupation 14/15/17/18/19/21/23/24/26/27/28/29, social preoccupation 16/20/22/30, life satisfaction 31-38 reported separately (higher = more satisfied). Reached through the new 'gender' domain via routing auto:genderdistress. Items 8 and 13 are safety-flagged (chest/genital self-harm and suicidal ideation) and open the crisis pathway. Dimensional screen only — it never diagnoses gender incongruence, and gender diversity alone is not a disorder."
     ]
   },
   "i18n": {
@@ -8437,6 +11520,194 @@
       "results.clinicianToggle": "चिकित्सक-अभिमुख विवरण (स्कोर एवं विभेदक विचार)",
       "results.handoff": "PDF सहेजें और नियुक्ति में लाएँ, या क्लिनिक के सुरक्षित पोर्टल पर अपलोड करें।",
       "safety.dismissNote": "आप बाद में स्क्रीनिंग जारी रख सकते हैं, लेकिन कृपया आज ही इनमें से एक सेवा से संपर्क करें।"
+    }
+  },
+  "reference": {
+    "malingering": {
+      "id": "malingering_reference",
+      "name": {
+        "en": "Forensic reference: malingering, feigning & suspect effort",
+        "hi": "फॉरेंसिक संदर्भ: मालिंगरिंग, छल-अभिनय एवं संदेहजनक प्रयास"
+      },
+      "nonScored": true,
+      "clinicianOnly": true,
+      "source": "Supplied forensic-handbook extract (res ipsa / malingering evaluation notes)",
+      "sections": [
+        {
+          "id": "definitions",
+          "title": {
+            "en": "Key definitions",
+            "hi": "मुख्य परिभाषाएँ"
+          },
+          "items": [
+            {
+              "en": "Malingering (DSM-5): intentional production of false or grossly exaggerated physical or psychological symptoms motivated by external incentives — avoiding military duty, avoiding work, obtaining financial compensation, evading criminal prosecution, obtaining drugs.",
+              "hi": "मालिंगरिंग (DSM-5): बाह्य प्रलोभन (सैनिक सेवा से बचाव, कार्य से बचाव, आर्थिक क्षतिपूर्ति, दंड से बचाव, मादक द्रव्य प्राप्ति) हेतु शारीरिक/मानसिक लक्षणों का जानबूझकर मिथ्या या अत्यधिक वर्धन।"
+            },
+            {
+              "en": "Feigning: deliberate fabrication or gross exaggeration of symptoms without assumptions about its goals (Rogers & Bender, 2003).",
+              "hi": "छल-अभिनय: लक्ष्य संबंधी पूर्वधारणा के बिना लक्षणों का जानबूझकर निर्माण या अत्यधिक वर्धन (Rogers & Bender, 2003)।"
+            },
+            {
+              "en": "Suspect effort: effort-test performance suggesting the examinee is not applying best effort; may be intentional or non-intentional (also suboptimal/incomplete/submaximal effort).",
+              "hi": "संदेहजनक प्रयास: परीक्षार्थी द्वारा सर्वोत्तम प्रयास न लगाने का संकेत; सचेत या असचेत हो सकता है (उप-इष्टतम/अपूर्ण/उप-अधिकतम प्रयास)।"
+            },
+            {
+              "en": "Factitious disorder: voluntary production of symptoms to assume the patient role, with no other obvious secondary gain.",
+              "hi": "छलरोग: रोगी-भूमिका अपनाने हेतु लक्षणों की स्वेच्छा-उत्पत्ति,अन्य कोई सुगम्य द्वितीयक लाभ के बिना।"
+            },
+            {
+              "en": "Ganser syndrome: approximate answers (2+2=5), clouding of consciousness, somatic conversion (especially sensory), hallucinations.",
+              "hi": "गैंसर सिंड्रोम: अनुमानोत्तर (2+2=5), चेतना की मंदता, शारीरिक कन्वर्ज़न (विशेषतः संवेदी), एवं Hallucination।"
+            }
+          ]
+        },
+        {
+          "id": "depression",
+          "title": {
+            "en": "Evaluating possible malingered depression",
+            "hi": "संभावित वर्धित अवसाद का मूल्यांकन"
+          },
+          "items": [
+            {
+              "en": "Gervais et al. (2001): 25-30% of civil-litigation claimants of major depression probably malingered on forced-choice testing.",
+              "hi": "Gervais आदि (2001): दीवानी वादों में प्रस्तावित प्रमुख अवसाद के 25-30% दाता संभवतः फोर्सड-चॉइस परीक्षण पर मालिंगरिंग कर रहे थे।"
+            },
+            {
+              "en": "Review DSM-5 criteria first; then weigh inconsistency between reported state and observed behaviour: full range of facial expression, normal motor activity, laughing/joking, enjoyment of activities, no verifiable weight change, indiscriminate endorsement of unrelated symptoms, laudatory self-presentation, blame of others, poor performance on very easy personal questions, sudden worsening once told they will be 'tested', mood change when observed vs unobserved.",
+              "hi": "प्रथम DSM-5 मानदंड देखें; फिर वर्णित अवस्था एवं प्रत्यक्ष व्यवहार की विसंगति पर विचार: भाव-अभिव्यक्ति का पूर्ण विस्तार, सामान्य मोटर क्रिया, हँसी-मज़ाक, कार्यों में रूचि, वजन-परिवर्तन का अप्रमाणित, असंबंधित लक्षणों का अंधाधुंध समर्थन, स्व-प्रशंसा, दूसरों पर दोषारोपण, अत्यंत सरल व्यक्तिगत प्रश्नों पर खराब प्रदर्शन, 'परीक्षण' बताते ही स्मरण/एकाग्रता का आकस्मिक अवमदन, प्रेक्षित अप्रत्यक्ष अवस्था में अंतर।"
+            }
+          ]
+        },
+        {
+          "id": "hallucinations",
+          "title": {
+            "en": "Malingered versus true hallucinations",
+            "hi": "छल-अभिनयित एवं वास्तविक Hallucination"
+          },
+          "items": [
+            {
+              "en": "Start open-ended ('Describe what you are hearing. Is there anything else you can describe?'); avoid educating the evaluee about expected signs — 'clinician assisted deception'.",
+              "hi": "प्रथम खुले प्रश्न ('जो सुनाई दे उसका वर्णन करें। और कुछ?'); अपेक्षित लक्षणों की शिक्षा न दें — इसे 'चिकित्सक-सहायताप्राप्त छल' कहते हैं।"
+            },
+            {
+              "en": "Phenomenology to document: content, clarity, loudness, vividness, duration, frequency, continuous/intermittent, single/multiple voices, gender, inside/outside the head, tone, person addressed, insight, belief others can hear, relationship to speaker, other sensory modalities, alone/with others, conversing back, ability to dismiss, mood, relation to delusions, confusion, reaction, commands, consequences of disobeying, effort not to obey, alternative motives, what worsens/improves, number of voices.",
+              "hi": "अभिलिखित घटना-विज्ञान: विषय, स्पष्टता, प्रबलता, व्यक्तता, काल, आवृत्ति, सतत/विविक्त, एक/अनेक स्वर, लिंग, मस्तिष्क के अंतः/बहिः, ध्वनि-स्वर, संबोधन, अंतर्दृष्टि, अन्यको श्रवण-विश्वास, वक्ता-संबंध, अन्य इंद्रिय-द्वारा, एकांत/समूह, उत्तर-दान, निवारण-समर्थता, भाव, भ्रम-संबंध, विषमता, प्रतिक्रिया, आदेश, अवमान्यता के परिणाम, अवमान्य इच्छा, वैकल्पिक प्रेरणा, वर्धन-हेतु, संख्या।"
+            },
+            {
+              "en": "In genuine psychosis voices are usually intermittent; Nayani & David (1996): 49% external, 38% internal, 12% both; abuse the commonest content; 76% identify at least one coping strategy (working, posture change, interpersonal contact, medication); being alone worsens voices in 80%, radio/TV worsen them.",
+              "hi": "वास्तविक मनोविकृति में स्वर प्रायः विविक्त; Nayani और David (1996): 49% बाह्य, 38% आंतरिक, 12% उभय; गाली सबसे सामान्य; 76% कम-से-कम एक सामना-रणनीति बताते हैं (कार्य, मुद्रा-परिवर्तन, संपर्क, औषधि); 80% में एकांत से वृद्धि, रेडियो/टीवी से भी वर्धन।"
+            },
+            {
+              "en": "Suspect auditory hallucinations: continuous rather than intermittent, vague/inaudible, not associated with delusions, stilted language, no strategies to diminish voices, claim that all commands are obeyed.",
+              "hi": "संदेहजनक श्रवण-भ्रम: सतत बजाय विविक्त, अस्पष्ट/अश्रव्य, भ्रम से असंबद्ध, कृत्रिम भाषा, स्वर-निवारण की कोई रणनीति नहीं, समस्त आदेश-पालन का दावा।"
+            },
+            {
+              "en": "Suspect visual hallucinations: visual alone in schizophrenia, black-and-white, dramatic/atypical, changing with eyes closed, miniature or giant figures, visions unrelated to delusions or auditory hallucinations. (Visual hallucinations were found in 46% of malingerers vs 4% of genuinely psychotic individuals; drug-induced visual phenomena are typically formed with eyes closed.)",
+              "hi": "संदेहजनक दृष्टि-भ्रम: स्किज़ोफ्रेनिया में केवल दृष्टि, श्वेत-श्याम, नाटकीय/असामान्य, नेत्र-बंद करने पर परिवर्तन, लीलिपुटियन/विराट आकृतियाँ, भ्रम-असंबद्ध दर्शन। (मालिंगरेटर्स में 46% बनाम वास्तविक मनोविकृतों में 4% दृष्टि-भ्रम; मादक-प्रेरित दृष्टि-घटनाएँ प्रायः नेत्र-बंद अवस्था में।)"
+            }
+          ]
+        },
+        {
+          "id": "delusions",
+          "title": {
+            "en": "Malingered versus true delusions",
+            "hi": "छल-अभिनयित एवं वास्तविक भ्रम"
+          },
+          "items": [
+            {
+              "en": "Delusion: a fixed false belief held in an inappropriate context with inappropriate justification.",
+              "hi": "भ्रम: अपोचित संदर्भ एवं अपोचित उचितकरण के साथ स्थिर मिथ्या विश्वास।"
+            },
+            {
+              "en": "Common themes: disease, nihilism/poverty/sin/guilt, grandiosity, jealousy, erotomania, persecution, reference, religion, poisoning, possession, royal descent, delusional parasitosis, Capgras syndrome.",
+              "hi": "सामान्य विषय: रोग, शून्यता/दरिद्रता/पाप/अपराध-भाव, वैभवंशा, ईर्ष्या, प्रणय-भ्रम, उत्पीड़न, संदर्भ, धर्म, विष-प्रयोग, ग्रहण, राजवंश-वंशज, भ्रामक परजीविता, कैपग्रस।"
+            },
+            {
+              "en": "Clues to malingered delusions: abrupt onset or termination, eagerness to call attention to the delusion, conduct inconsistent with the delusion, bizarre content without disordered thought, delusions paired with exaggerated cognitive deficit.",
+              "hi": "छल-संकेत: आकस्मिक आरंभ/अंत, भ्रम पर ध्यान खींचने की उत्सुकता, भ्रम-असंगत व्यवहार, विचार-विकृति के बिना विचित्र विषय, अतिरंजित संज्ञान-क्षति के साथ भ्रम।"
+            }
+          ]
+        },
+        {
+          "id": "amnesia",
+          "title": {
+            "en": "Claimed amnesia: forensic review",
+            "hi": "दावा-कृत स्मृतिलोप: फॉरेंसिक समीक्षा"
+          },
+          "items": [
+            {
+              "en": "First clarify that the complaint is amnesia rather than dementia/delirium/developmental memory difficulty; a memory evaluation covers orientation, recall of prose, rote learning, visuospatial retention, remote memory/fund of information and autobiographical memory, with medical work-up (labs, neuro exam, imaging) as indicated.",
+              "hi": "प्रथम स्पष्ट करें कि शिकायत स्मृतिलोप है, मूर्छा/डीमेंशिया/विकास-जनित स्मरण-कठिनाई नहीं; मूल्यांकन में दिशा-काल ज्ञान, गद्य-स्मरण, रट-अध्ययन, दृश्य-स्थानिक धारणा, सुदूर स्मरण/सूचना-भंडार एवं आत्मकथात्मक स्मरण, तथा आवश्यक चिकित्सीय जाँच।"
+            },
+            {
+              "en": "Organic causes to consider: substance use, anterior communicating artery aneurysm rupture, anoxia, brain disease/injury, cerebrovascular accident, delirium, dementia, ECT, encephalitis, hypoglycaemia, somnambulism, transient epileptic amnesia, Wernicke-Korsakoff syndrome.",
+              "hi": "कारणात्मक जैविक कारण: मादक द्रव्य, ACoA एनेवरिज्म भंग, अनॉक्सिया, मस्तिष्क रोग/आघात, CVA, delirium, डीमेंशिया, ECT, एन्सेफलाइटिस, हाइपोग्लाइसीमिया, स्लीप-वॉकिंग, क्षणिक मृगवानीय स्मृतिलोप, Wernicke-Korsakoff।"
+            },
+            {
+              "en": "Ribot's law: after head trauma older memories return before recent ones, with the gap limited to the event and seconds beforehand; recovery that does not follow this pattern warrants screening for malingering.",
+              "hi": "राइबोट-नियम: मस्तिष्क-आघात पश्चात् पुरानी स्मृतियाँ नवीन से पूर्व लौटती हैं, अंतराल घटना एवं उसके कुछ क्षण पूर्व तक सीमित; इस पैटर्न से हटने वाली पुनर्प्राप्ति पर मालिंगरिंग-स्क्रीन आवश्यक।"
+            },
+            {
+              "en": "Patterns consistent with malingered amnesia: circumscribed loss for the offence with recall before and after; sharp sudden onset and offset; complete loss for a circumscribed period (complete amnesia for a criminal act is very rare); dogmatic belief that nothing could aid recovery; overly dramatic presentation; implausibly precise time window; attributing amnesia to intoxication contrary to available evidence.",
+              "hi": "मालिंगरिंग-संगत पैटर्न: केवल अपराध-काल की सीमित हानि, पूर्व-पश्चात् स्मरण; आकस्मिक आरंभ-अंत; सीमित काल का पूर्ण लोप (अपराध का पूर्ण अमांसिया अत्यंत दुर्लभ); किसी सहायता से स्मरण-पुनर्प्राप्ति का अडंबरहीन अविश्वास; अत्यंत नाटकीय प्रस्तुति; अविश्वसनीय रूप से सटीक समय-सीमा; प्रमाण-विरुद्ध मतवैषम्य को हेतु बताना।"
+            },
+            {
+              "en": "Alcohol/substance claims: over half (and in some studies >85%) of offenders claiming amnesia were intoxicated near the offence, but intoxication sufficient to produce genuine amnesia is uncommon — do not accept the claim without corroborating levels/evidence.",
+              "hi": "मदिरा/मादक दावे: अमांसिया-दाता अपराधियों में अर्धे से अधिक (कुछ अध्ययनों में >85%) नशे में थे, किंतु वास्तविक अमांसिया उत्पन्न करने योग्य मात्रा दुर्लभ — प्रमाण-राशि के बिना दावा स्वीकार न करें।"
+            },
+            {
+              "en": "Planning matters: instrumental (planned) offences involve elaborative encoding and rehearsal, which improve memory, so genuine amnesia for planned violence is unexpected; impulsive/reactive offences may be followed by partial retrograde gaps.",
+              "hi": "योजना-प्रसंग: सयोजित (योजनाबद्ध) अपराधों में विस्तृत एनकोडिंग-अभ्यास स्मरण बढ़ाता है, अतः योजनाबद्ध हिंसा का वास्तविक अमांसिया अप्रत्याशित; आवेगजनित अपराधों में आंशिक पश्चगामी अंतराल संभव।"
+            },
+            {
+              "en": "Self-report dissociation instruments (DES/DES-II, MID) rely entirely on self-report: a high score does not prove claimed memory loss is genuine (McLeod 2004; Woodworth 2009 — DES tendency correlated with perceived, not objective, memory impairment).",
+              "hi": "स्व-रिपोर्ट वियोजन मापनियाँ (DES/DES-II, MID) पूर्णतः स्व-रिपोर्ट पर निर्भर: उच्च अंक दावा-कृत स्मृतिलोप की प्रामाणिकता सिद्ध नहीं करता (McLeod 2004; Woodworth 2009)।"
+            }
+          ]
+        },
+        {
+          "id": "pathway",
+          "title": {
+            "en": "Pathway to homicidal violence (Calhoun & Weston 2003; steps 7-8 per Christianson et al. 2007)",
+            "hi": "हत्याकांड-हेतु हिंसा की पथ-रेखा (Calhoun और Weston 2003; चरण 7-8 Christianson आदि 2007)"
+          },
+          "items": [
+            {
+              "en": "Step 1 Grievance — anger, revenge, feeling wronged.",
+              "hi": "चरण 1 शिकायत — क्रोध, प्रतिशोध, अन्याय-भाव।"
+            },
+            {
+              "en": "Step 2 Ideation — accepting violence to right the wrong or fulfil violent/sexual fantasies; identifying with other assailants.",
+              "hi": "चरण 2 विचारधारा — अन्याय-सुधार या हिंसक/यौन कल्पना हेतु हिंसा स्वीकार; अन्य आक्रमणकारियों से तादात्म्य।"
+            },
+            {
+              "en": "Step 3 Research and planning — gathering information, inquiring about the target, surveillance.",
+              "hi": "चरण 3 अनुसंधान-योजना — सूचना-संग्रह, लक्ष्य-पूछताछ, निगरानी।"
+            },
+            {
+              "en": "Step 4 Preparations — assembling equipment, practising, choosing clothing, writing messages, making a will.",
+              "hi": "चरण 4 पूर्वतैयारी — उपकरण-संग्रह, अभ्यास, वस्त्र-चयन, संदेश-लेखन, वसीयत।"
+            },
+            {
+              "en": "Step 5 Breach — positioning oneself close to the potential victim.",
+              "hi": "चरण 5 प्रवेश — संभावित शिकार के निकट स्थितिग्रहण।"
+            },
+            {
+              "en": "Step 6 Attack — enacting the plan, requiring commitment and resolve.",
+              "hi": "चरण 6 आक्रमण — योजना-क्रियान्वयन, संकल्प-आवश्यकता।"
+            },
+            {
+              "en": "Step 7 Realisation — actions upon the victim's body, additional violence or sexual acts.",
+              "hi": "चरण 7 साक्षात्कार — शरीर पर क्रियाएँ, अतिरिक्त हिंसा/यौन कृत्य।"
+            },
+            {
+              "en": "Step 8 Post-crime behaviour — behaviours aimed at avoiding discovery or staging the scene.",
+              "hi": "चरण 8 अपराधोत्तर व्यवहार — पकड़े जाने से बचाव अथवा घटना-स्थल की रचना।"
+            }
+          ]
+        }
+      ]
     }
   }
 }
