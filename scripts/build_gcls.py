@@ -531,8 +531,14 @@ def main():
     s = data["scales"]["gcls"]
     scored = [q for p in s["parts"] for q in p["questions"] if not q.get("nonScored")]
     assert len(scored) == 38, len(scored)
-    assert all(("reverseScored" in q) == (q["itemNumber"] in (16, 20, 22, 30, 35, 37))
-               for q in scored), "reverse key mismatch"
+    # Item 25 ("I have felt that my genitals DO match with my gender identity") is
+    # positively worded like 16/20/22/30 and is reverse-keyed too; items 35/37 are the
+    # negatively worded satisfaction stems ("I have NOT felt satisfied...").
+    REVERSED_ITEMS = (16, 20, 22, 25, 30, 35, 37)
+    assert all(("reverseScored" in q) == (q["itemNumber"] in REVERSED_ITEMS)
+               for q in scored), "reverse key mismatch: %s" % [
+                   q["itemNumber"] for q in scored
+                   if ("reverseScored" in q) != (q["itemNumber"] in REVERSED_ITEMS)]
     covered = set()
     for spec in s["subscales"].values():
         covered.update(spec["items"])
