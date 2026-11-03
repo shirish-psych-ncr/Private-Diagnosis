@@ -240,20 +240,23 @@
         const deployed = routeInstruments();
 
         deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
+            const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
+            const isPdScreen = !!(scDef && scDef.keyedScoring);
             const section = document.createElement('section');
-            section.className = 'scale-section' + (ratingTable ? ' clinician-rating-table' : '');
+            section.className = 'scale-section' + (ratingTable ? (isPdScreen ? ' pd-rating-table' : ' clinician-rating-table') : '');
             const secKey = ratingTable ? domain.id + ':' + scaleId : domain.id;
             section.setAttribute('aria-labelledby', 'scale-h-' + secKey);
 
             const h = document.createElement('h3');
             h.id = 'scale-h-' + secKey;
             h.className = 'scale-heading';
-            const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
             h.textContent = (scDef ? L(scDef.name) : L(domain.name) + (instrumentLabel ? ' — ' + instrumentLabel : ''));
             if (ratingTable) {
                 const badge = document.createElement('span');
                 badge.className = 'scale-admin-badge';
-                badge.textContent = state.lang === 'hi' ? 'चिकित्सक-रेटित' : 'Clinician-rated';
+                badge.textContent = isPdScreen
+                    ? (state.lang === 'hi' ? 'स्क्रीनिंग केवल — रोग-निर्णायक नहीं' : 'Screening only — not diagnostic')
+                    : (state.lang === 'hi' ? 'चिकित्सक-रेटित' : 'Clinician-rated');
                 h.appendChild(document.createTextNode(' · '), badge);
             }
             section.appendChild(h);
@@ -320,8 +323,27 @@
             partTitle.textContent = L(part.name);
             section.appendChild(partTitle);
 
+            if (part.clinicianRated) {
+                const badge = document.createElement('p');
+                badge.className = 'matrix-part-note';
+                badge.textContent = state.lang === 'hi'
+                    ? 'चिकित्सक द्वारा पूर्ण धनात्मक स्क्रीन पश्चात् भरें — रोगी से नहीं पूछें।'
+                    : 'Completed by the clinician after a positive screen — not shown to the patient as a self-rating.';
+                section.appendChild(badge);
+            }
+            if (part.linkedItem) {
+                const link = document.createElement('p');
+                link.className = 'matrix-part-note';
+                link.textContent = state.lang === 'hi'
+                    ? 'आइटम ' + part.linkedItem + ' का अनुवर्ती भाग।'
+                    : 'Follow-up to item ' + part.linkedItem + '.';
+                section.appendChild(link);
+            }
+
             const isPerf = !!part.questions[0] && part.questions[0].isPerformance;
-            const cols = isPerf ? scale.performanceOptions : scale.matrixOptions;
+            // Per-part option sets: PDQ-4+ Section B checklists and the clinical-
+            // significance follow-up are Yes/No, while the 99-item block uses True/False.
+            const cols = isPerf ? scale.performanceOptions : (part.options || scale.matrixOptions);
 
             // Clinician-rated severity tables (e.g. MINI optional assessments A/B)
             // print the numeric score column first, then the verbal anchors, exactly
@@ -361,7 +383,17 @@
                 const rowHead = document.createElement('th');
                 rowHead.scope = 'row';
                 rowHead.className = 'sticky-col row-label';
-                rowHead.textContent = (idx + 1) + '. ' + L(q.text);
+                // Printed instrument item numbers (IPDE 1-59 / PDQ-4+ 1-99) take
+                // precedence over the sequential index so answers can be transcribed
+                // straight onto the paper scoring sheet.
+                const shownNumber = q.itemNumber != null ? q.itemNumber : (idx + 1);
+                rowHead.textContent = shownNumber + '. ' + L(q.text);
+                if (q.criterionNote) {
+                    const note = document.createElement('span');
+                    note.className = 'criterion-note';
+                    note.textContent = ' (' + q.criterionNote + ')';
+                    rowHead.appendChild(note);
+                }
                 rowHead.id = 'mrow-' + q.id;
                 tr.appendChild(rowHead);
                 cols.forEach(c => {
@@ -434,6 +466,165 @@
     /** Checklists rendered as Yes/No columns inside a PDQ-4+ deployment. */
     function pdqChecklistParts(scale) {
         return (scale.parts || []).filter(p => p.options && !p.clinicianRated);
+    }
+
+    /** Number of keyed items endorsed on one IPDE module (part). */
+    function ipdeKeyedHits(part, scaleId) {
+        const hits = [];
+        part.questions.forEach(q => {
+            const v = state.responses[scaleId + ':' + q.id];
+            if (v === undefined) return;
+            if ((q.keyedAnswer === 'T') === (v === 1)) hits.push(q.itemNumber || q.id);
+        });
+        return hits;
+    }
+
+    /**
+     * IPDE ICD-10 module screening questionnaire scoring.
+     * Official standard: >=3 keyed items per disorder fails the screen. The
+     * authors explicitly permit a lower standard, which this app applies
+     * (>=1 keyed item) so that no cluster needing the full interview is missed.
+     * No dimensional score is produced and nothing here is diagnostic.
+     */
+    function scoreIpde(scale, addFlag) {
+        const sc = scale.scoring || {};
+        const official = sc.failThreshold != null ? sc.failThreshold : 3;
+        const applied = sc.positiveThreshold != null ? sc.positiveThreshold : 1;
+        const modules = [];
+        let flaggedTotal = 0, anyKeyed = 0;
+        scale.parts.forEach(part => {
+            const hits = ipdeKeyedHits(part, scale.id);
+            anyKeyed += hits.length;
+            const failed = hits.length >= official;
+            const flag = hits.length >= applied;
+            if (flag) {
+                flaggedTotal++;
+                (part.disorders || []).forEach(d => addFlag(d, 'IPDE screen'));
+            }
+            modules.push({
+                id: part.id,
+                code: part.icd10Module,
+                name: L(part.name),
+                disorderName: L(part.disorderName),
+                keyed: hits.length,
+                totalItems: part.questions.length,
+                failedOfficial: failed,
+                flagged: flag,
+                disorders: part.disorders || []
+            });
+        });
+        const hi = state.lang === 'hi';
+        return {
+            name: L(scale.name),
+            score: anyKeyed + ' keyed item(s) · ' + flaggedTotal + '/' + scale.parts.length +
+                ' ' + (hi ? 'मॉड्यूल चिह्नित' : 'modules flagged'),
+            severity: flaggedTotal
+                ? (hi ? 'स्क्रीन असफल — पूर्ण IPDE साक्षात्कार आवश्यक' : 'Screen failed — full IPDE interview indicated')
+                : (hi ? 'चिह्नित नहीं' : 'No module flagged'),
+            aboveCutoff: flaggedTotal > 0,
+            notDiagnostic: true,
+            disorders: [],
+            pdRegister: {
+                kind: 'ipde',
+                heading: hi ? 'IPDE स्क्रीनिंग — मॉड्यूल अनुसार कुंजी-उत्तर' : 'IPDE screen — keyed items by ICD-10 module',
+                note: L(sc.appStandard || sc.note || { en: '', hi: '' }),
+                rows: modules.map(m => ({
+                    label: m.name + ' — ' + m.disorderName,
+                    value: m.keyed + '/' + m.totalItems,
+                    flagged: m.flagged,
+                    detail: m.failedOfficial
+                        ? (hi ? 'औपचारिक मानदंड (≥3) असफल' : 'Meets official ≥3 fail criterion')
+                        : (m.flagged ? (hi ? 'निम्नतर मानदंड से चिह्नित' : 'Flagged under the app\u2019s lower standard') : '')
+                }))
+            }
+        };
+    }
+
+    /**
+     * PDQ-4+ scoring: validity check first, then True-count per scale against its
+     * threshold, Section B gates for Borderline (item 98) and Antisocial (item 99),
+     * and finally the mandatory clinical-significance criteria A-E, which must ALL
+     * be met before a flagged personality disorder enters the differential list.
+     */
+    function scorePdq4(scale, addFlag) {
+        const sc = scale.scoring || {};
+        const hi = state.lang === 'hi';
+        const ans = id => state.responses[scale.id + ':' + id];
+
+        // 1. Validity / infrequency items (pathological response = True)
+        const validityHits = (scale.validity ? scale.validity.items : [])
+            .filter(it => ans(it.id) === 1)
+            .map(it => it.id.replace('pdq_', ''));
+        const profileInvalid = validityHits.length > 0;
+
+        // 2. Section B checklists
+        const sectionB = sc.sectionB || {};
+        const gateCount = partId => {
+            const part = (scale.parts || []).find(p => p.id === partId);
+            if (!part) return 0;
+            return part.questions.filter(q => ans(q.id) === 1).length;
+        };
+        const gatesMet = {};
+        Object.keys(sectionB).forEach(partId => {
+            const g = sectionB[partId];
+            gatesMet[g.gateScale] = gateCount(partId) >= g.minimum;
+        });
+
+        // 3. Clinical significance criteria A-E (clinician-rated follow-up)
+        const csPart = (scale.parts || []).find(p => p.clinicianRated);
+        const csAnswers = csPart ? csPart.questions.map(q => ans(q.id)) : [];
+        const csComplete = csAnswers.length > 0 && csAnswers.every(v => v !== undefined);
+        const csMet = csComplete && csAnswers.every(v => v === 1);
+
+        // 4. Per-scale True counts vs thresholds
+        const rows = [];
+        let flagged = 0;
+        (scale.scales || []).forEach(s => {
+            const n = s.items.filter(num => ans('pdq_' + num) === 1).length;
+            const reached = n >= s.threshold;
+            const needsB = !!s.requiresSectionB;
+            const gateOk = !needsB || gatesMet[s.slug] === true;
+            const positive = reached && gateOk && !profileInvalid;
+            const significant = positive && csMet;
+            if (significant) { flagged++; (s.disorders || []).forEach(d => addFlag(d, 'PDQ-4+')); }
+            rows.push({
+                label: L(s.name) + ' (' + (s.profileColumn || s.slug) + ')',
+                value: n + '/' + s.items.length,
+                flagged: positive,
+                detail: [
+                    reached ? '' : (hi ? 'threshold ' + s.threshold + ' अपूर्ण' : 'below threshold ' + s.threshold),
+                    needsB ? (gateOk ? (hi ? 'खंड-B पूर्त' : 'Section B met') : (hi ? 'खंड-B अपूर्ण' : 'Section B not met')) : '',
+                    positive && !csMet ? (hi ? 'A-E नैदानिक महत्व अपूर्ण' : 'criteria A–E not all met') : '',
+                    significant ? (hi ? 'नैदानिक दृष्ट्या महत्वपूर्ण' : 'clinically significant') : ''
+                ].filter(Boolean).join(' · ')
+            });
+        });
+
+        return {
+            name: L(scale.name),
+            score: flagged + '/' + rows.length + ' ' + (hi ? 'पैमाने धनात्मक' : 'scales flagged'),
+            severity: profileInvalid
+                ? (hi ? 'प्रोफ़ाइल अमान्य — सावधानीपूर्वक व्याख्या' : 'Validity flag — interpret with extreme caution')
+                : (flagged
+                    ? (hi ? 'स्क्रीन धनात्मक — संरचित साक्षात्कार आवश्यक' : 'Positive screen — structured interview indicated')
+                    : (hi ? 'कोई पैमाना धनात्मक नहीं' : 'No scale at threshold')),
+            aboveCutoff: flagged > 0,
+            notDiagnostic: true,
+            disorders: [],
+            pdRegister: {
+                kind: 'pdq4',
+                heading: hi ? 'PDQ-4+ प्रोफ़ाइल (12 पैमाने)' : 'PDQ-4+ profile (12 scales)',
+                note: L(sc.notDiagnosticNote || { en: '', hi: '' }) + ' ' + L(sc.clinicalSignificance || { en: '', hi: '' }),
+                validity: {
+                    message: profileInvalid
+                        ? (hi ? 'वैधता आइटम ' + validityHits.join(', ') + ' सत्य — प्रोफ़ाइल अमान्य मानें।'
+                              : 'Validity item(s) ' + validityHits.join(', ') + ' answered True — consider the profile invalid.')
+                        : (hi ? 'वैधता आइटम (64, 76) मिथ्या — प्रतिविमर्श विश्वसनीय।' : 'Validity items (64, 76) False — responding appears valid.'),
+                    failed: profileInvalid
+                },
+                rows: rows
+            }
+        };
     }
 
     /* ------------------------------------------------------------------ *
@@ -556,6 +747,21 @@
                         disorders: [],
                         ratingRegister: rows.map(r => ({ id: r.id, label: L(r.text), value: state.responses[q.scaleId + ':' + r.id] }))
                     });
+                });
+                return;
+            }
+
+            // Keyed True/False personality screens (IPDE ICD-10 module screen, PDQ-4+).
+            // Neither instrument yields a dimensional score: they flag which cluster or
+            // DSM personality disorder needs the full structured interview.
+            if (domain.instrument === 'auto:pdscreen') {
+                domain.questions.forEach(q => {
+                    if (!q.scaleId) return;
+                    if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
+                    const s = CLINICAL_DATA.scales[q.scaleId];
+                    if (!s || !s.keyedScoring) return;
+                    if (s.keying === 'ipde') instrumentResults.push(scoreIpde(s, addFlag));
+                    else instrumentResults.push(scorePdq4(s, addFlag));
                 });
                 return;
             }
@@ -701,6 +907,46 @@
             rc.appendChild(note);
         });
 
+        // Personality-screen registers (IPDE modules / PDQ-4+ profile)
+        r.instrumentResults.filter(x => x.pdRegister && x.pdRegister.rows.length).forEach(reg => {
+            const h = document.createElement('h4');
+            h.textContent = reg.name + ' — ' + reg.pdRegister.heading;
+            rc.appendChild(h);
+
+            if (reg.pdRegister.validity) {
+                const v = document.createElement('p');
+                v.className = 'pd-validity-note' + (reg.pdRegister.validity.failed ? ' failed' : '');
+                v.textContent = reg.pdRegister.validity.message;
+                rc.appendChild(v);
+            }
+
+            const t = document.createElement('table');
+            t.className = 'clinician-table rating-register pd-register';
+            const trh = document.createElement('tr');
+            [state.lang === 'hi' ? 'मॉड्यूल / पैमाना' : 'Module / scale',
+             state.lang === 'hi' ? 'कुंजी-उत्तर' : 'Keyed items',
+             state.lang === 'hi' ? 'स्थिति' : 'Status'].forEach(x => {
+                const th = document.createElement('th'); th.textContent = x; trh.appendChild(th);
+            });
+            t.appendChild(trh);
+            reg.pdRegister.rows.forEach(row => {
+                const tr = document.createElement('tr');
+                if (row.flagged) tr.className = 'flagged-row';
+                const td1 = document.createElement('td'); td1.textContent = row.label;
+                const td2 = document.createElement('td'); td2.textContent = row.value;
+                const td3 = document.createElement('td');
+                td3.textContent = (row.flagged ? '● ' : '') + (row.detail ||
+                    (state.lang === 'hi' ? 'चिह्नित नहीं' : 'Not flagged'));
+                tr.append(td1, td2, td3);
+                t.appendChild(tr);
+            });
+            rc.appendChild(t);
+            const note = document.createElement('p');
+            note.className = 'rating-register-note';
+            note.textContent = reg.pdRegister.note;
+            rc.appendChild(note);
+        });
+
         const diffH = document.createElement('h4');
         diffH.textContent = state.lang === 'hi' ? 'विभेदक विचार (Differential Considerations)' : 'Differential Considerations';
         rc.appendChild(diffH);
@@ -810,6 +1056,35 @@
             doc.text('Scale: 0 Not present, 1 Mild, 3 Moderate, 6 Severe, 10 Extreme. Each row is rated independently; no composite total is derived and these ratings do not gate any diagnostic box.', 14, y);
             doc.setTextColor(0);
             y += 10;
+        });
+
+        // Personality-disorder screens: reproduce the IPDE scoring summary and the
+        // PDQ-4+ profile sheet (scale, keyed count, status) as tables.
+        const pdRegisters = r.instrumentResults.filter(x => x.pdRegister && x.pdRegister.rows.length);
+        pdRegisters.forEach(reg => {
+            if (y > 230) { doc.addPage(); y = 20; }
+            doc.setFontSize(12);
+            doc.text(reg.name + ' — ' + reg.pdRegister.heading, 14, y); y += 2;
+            if (reg.pdRegister.validity) {
+                doc.setFontSize(8);
+                doc.setTextColor(reg.pdRegister.validity.failed ? 170 : 60, reg.pdRegister.validity.failed ? 40 : 110, reg.pdRegister.validity.failed ? 40 : 60);
+                doc.text(reg.pdRegister.validity.message, 14, y); y += 4;
+                doc.setTextColor(0);
+            }
+            doc.autoTable({
+                startY: y,
+                head: [['Module / scale', 'Keyed items', 'Status']],
+                body: reg.pdRegister.rows.map(row => [row.label, row.value, (row.flagged ? '* ' : '') + (row.detail || 'Not flagged')]),
+                theme: 'grid',
+                styles: { fontSize: 8 },
+                columnStyles: { 1: { cellWidth: 24 }, 2: { cellWidth: 60 } }
+            });
+            y = doc.lastAutoTable.finalY + 4;
+            doc.setFontSize(8);
+            doc.setTextColor(120);
+            doc.text(doc.splitTextToSize('Screening only — not diagnostic and no dimensional score. ' + reg.pdRegister.note, 180), 14, y);
+            doc.setTextColor(0);
+            y += 12;
         });
 
         doc.setFontSize(12);
@@ -967,6 +1242,34 @@
             }
             for (const q of domain.questions)
                 if (state.responses[domain.id + ':' + q.id] === undefined) return false;
+
+            // Deployed keyed personality screens must be fully answered too. The
+            // clinical-significance follow-up is clinician-rated and happens after
+            // the interview, so it is excluded from the completeness gate.
+            if (domain.instrument === 'auto:pdscreen') {
+                for (const q of domain.questions) {
+                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
+                    const s = CLINICAL_DATA.scales[q.scaleId];
+                    if (!s || !s.keyedScoring) continue;
+                    for (const part of s.parts) {
+                        if (part.clinicianRated) continue;
+                        for (const item of part.questions)
+                            if (state.responses[s.id + ':' + item.id] === undefined) return false;
+                    }
+                }
+            }
+
+            // MINI optional rating tables: every row must carry a rating.
+            if (domain.instrument === 'auto:minioptional') {
+                for (const q of domain.questions) {
+                    if (!q.scaleId || (state.responses[domain.id + ':' + q.id] || 0) < 1) continue;
+                    const s = CLINICAL_DATA.scales[q.scaleId];
+                    if (!s) continue;
+                    for (const part of s.parts)
+                        for (const item of part.questions)
+                            if (state.responses[s.id + ':' + item.id] === undefined) return false;
+                }
+            }
         }
         return true;
     }

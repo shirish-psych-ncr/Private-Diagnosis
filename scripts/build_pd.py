@@ -533,6 +533,7 @@ def build_ipde_scale():
                 continue
             q = {
                 "id": "ipde_%d" % num,
+                "itemNumber": num,
                 "text": en_hi(IPDE_ITEMS_TEXT[num], IPDE_HI.get(num, IPDE_ITEMS_TEXT[num])),
                 "keyedAnswer": ans,          # 'T' or 'F' counts toward the screen
                 "screenItems": code,
@@ -565,6 +566,9 @@ def build_ipde_scale():
             "सामान्य स्व का मूल्यांकन करें, इस क्षण की भावना का नहीं।"),
         "parts": parts,
         "matrixOptions": TF,
+        # Machine-readable markers consumed by app.js (renderMatrix / computeResults)
+        "keyedScoring": True,
+        "keying": "ipde",
         "scoring": {
             "method": "ipde_keyed_answer_screen",
             "rule": en_hi(
@@ -651,7 +655,7 @@ def build_pdq_scale():
         "targetAge": ["adult"],
         "directions": en_hi(
             "The purpose of this personality questionnaire is for you to describe the kind of person you are. When answering the questions, think about how you have tended to feel, think, and act over the past several years. Please answer either True or False to each item. T (True) means that the statement is generally true for you. F (False) means that the statement is generally false for you. Even if you are not entirely sure about the answer, indicate T or F for every question. There are no correct answers. You may take as much time as you wish.",
-            "इस व्यक्तित्व प्रश्नावली का उद्देश्य आप द्वारा स्व वर्णन है। उत्तर देते समय गत कुछ वर्षों में अपनी भावना, विचार एवं व्यवहार पर विचार करें। प्रत्येक कथन हेतु सत्य अथवा मिथ्या चुनें। T अर्थ आप हेतु सामान्यतः सत्य; F अर्थ सामान्यतः मिथ्या। पूर्ण निश्चितता न हो तoby प्रत्येक प्रश्न का उत्तर अवश्य दीजिए। कोई सही अथवा गलत उत्तर नहीं है।"),
+            "इस व्यक्तित्व प्रश्नावली का उद्देश्य आप द्वारा स्व वर्णन है। उत्तर देते समय गत कुछ वर्षों में अपनी भावना, विचार एवं व्यवहार पर विचार करें। प्रत्येक कथन हेतु सत्य अथवा मिथ्या चुनें। T अर्थ आप हेतु सामान्यतः सत्य; F अर्थ सामान्यतः मिथ्या। पूर्ण निश्चितता न हो तो भी प्रत्येक प्रश्न का उत्तर अवश्य दीजिए। कोई सही अथवा गलत उत्तर नहीं है।"),
         "timeframe": en_hi(
             "Answer based on long-standing patterns, not temporary states (e.g., mood episodes, substance use).",
             "दीर्घकालिक रूपों पर उत्तर देें, अस्थायी अवस्थाओं पर नहीं (जैसे मूड एपिसोड, पदार्थ सेवन)।"),
@@ -661,6 +665,10 @@ def build_pdq_scale():
             "questions": items,
         }] + sectionB + [cs_part],
         "matrixOptions": TF,
+        # Machine-readable markers consumed by app.js (renderMatrix / computeResults)
+        "keyedScoring": True,
+        "keying": "pdq4",
+        "itemNumberPrefix": True,
         "validity": {
             "items": [
                 {"id": "pdq_64", "statement": en_hi("A nuclear war may not be such a bad idea.", "परमाणु युद्ध इतना बुरा विचार न हो।"),
