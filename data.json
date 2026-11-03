@@ -994,6 +994,20 @@
       },
       "mappingNote": "ICD-11 Generalised anxiety disorder is 6B00; 6B02 is Agoraphobia."
     },
+    "agoraphobia": {
+      "name": {
+        "en": "Agoraphobia",
+        "hi": "एगोराफोबिया"
+      },
+      "tier": 1,
+      "dsm5": "Agoraphobia",
+      "icd11": "6B02",
+      "description": {
+        "en": "Marked fear or anxiety about situations where escape might be difficult or help unavailable",
+        "hi": "ऐसी स्थितियों के प्रति स्पष्ट भय या चिंता जहाँ से निकलना कठिन हो या सहायता उपलब्ध न हो"
+      },
+      "mappingNote": "ICD-11 Agoraphobia is 6B02; DSM Agoraphobia is diagnosed independently of Panic Disorder (MINI Module E)."
+    },
     "panic_disorder": {
       "name": {
         "en": "Panic Disorder",
@@ -1197,6 +1211,34 @@
       "dsm5": "Stimulant Use Disorder",
       "icd11": "6C45 / 6C46",
       "mappingNote": "ICD-11 separates stimulant families: Disorders due to use of cocaine is 6C45; disorders due to use of amphetamines, methamphetamine or methcathinone is 6C46 (Appendix A §14.2.2). DSM Stimulant Use Disorder maps to whichever substance-specific family applies; select the specific code rather than a generic parent."
+    },
+    "psychotic_disorder": {
+      "name": {
+        "en": "Psychotic Disorder",
+        "hi": "मनर्विकार विकार"
+      },
+      "tier": 4,
+      "dsm5": "Psychotic Disorder Not Otherwise Specified (MINI Module K screen)",
+      "icd11": "6A2Z",
+      "description": {
+        "en": "Psychotic symptoms (delusions, hallucinations, disorganized speech/behavior, negative symptoms) not attributable to a mood episode or organic cause",
+        "hi": "मनर्विकारी लक्षण (भ्रम, मतिभ्रम, अव्यवस्थित वाणी/व्यवहार, नकारात्मक लक्षण) जो मूड-एपिसोड या जैविक कारण पर निर्भर नहीं"
+      },
+      "mappingNote": "MINI Module K screens for psychotic disorders generically; the specific ICD-11 category (6A20-6A24 or 6A2Z/6A2Y) is determined by further clinical assessment."
+    },
+    "mood_disorder_with_psychotic_features": {
+      "name": {
+        "en": "Mood Disorder With Psychotic Features",
+        "hi": "मनर्विकारी लक्षणों सहित मूड विकार"
+      },
+      "tier": 4,
+      "dsm5": "Major Depressive or Bipolar Disorder With Psychotic Features",
+      "icd11": "6A7Z / 6A6Z context codes with psychotic features",
+      "description": {
+        "en": "Delusions or hallucinations occurring exclusively during major depressive, manic, or hypomanic episodes",
+        "hi": "प्रमुख अवसादी, मैैनिक या हाइपोमैैनिक एपिसोड के दौरान ही उत्पन्न भ्रम या मतिभ्रम"
+      },
+      "mappingNote": "MINI Module K separates psychosis restricted to mood episodes from primary psychotic disorder; ICD-11 encodes psychotic features within the mood-disorder chapter rather than 6A20-6A24."
     },
     "schizoaffective": {
       "name": {
