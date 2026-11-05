@@ -1,0 +1,220 @@
+[
+  {
+    "id": "pdq_53",
+    "text": {
+      "en": "I want people to like me so much that I volunteer to do things that I'd rather not do.",
+      "hi": "लोग मुझे पसंद करें, इसकी इतनी इच्छा है कि अनचाहे कार्य भी स्वैच्छिक करता/करती हूँ।"
+    },
+    "itemNumber": 53
+  },
+  {
+    "id": "pdq_54",
+    "text": {
+      "en": "I have accumulated lots of things that I don't need but I can't bear to throw out.",
+      "hi": "अनेक अनावश्यक वस्तुएँ जमा कर चुका हूँ पर फेंकने की सहनशक्ति नहीं।"
+    },
+    "itemNumber": 54
+  },
+  {
+    "id": "pdq_55",
+    "text": {
+      "en": "Even though I talk a lot, people say that I have trouble getting to the point.",
+      "hi": "अधिक बोलने के बावजूद लोग कहते हैं कि मैं मुख्य बात तक नहीं पहुँच पाता/पहुँचती।"
+    },
+    "itemNumber": 55
+  },
+  {
+    "id": "pdq_56",
+    "text": {
+      "en": "I worry a lot.",
+      "hi": "मैं बहुत चिंता करता/करती हूँ।"
+    },
+    "itemNumber": 56
+  },
+  {
+    "id": "pdq_57",
+    "text": {
+      "en": "I expect other people to do favors for me even though I do not usually do favors for them.",
+      "hi": "मुझे आशा है कि अन्य मेरे उपकार करेंगे यद्यपि मैं प्रायः उनके नहीं करता/करती।"
+    },
+    "itemNumber": 57
+  },
+  {
+    "id": "pdq_58",
+    "text": {
+      "en": "I am a very moody person.",
+      "hi": "मैं अत्यंत मिजाज़-परिवर्ती व्यक्ति हूँ।"
+    },
+    "itemNumber": 58
+  },
+  {
+    "id": "pdq_59",
+    "text": {
+      "en": "Lying comes easily to me and I often do it.",
+      "hi": "झूठ बोलना मुझे सहज है और मैं प्रायः बोलता/बोलती हूँ।"
+    },
+    "itemNumber": 59
+  },
+  {
+    "id": "pdq_60",
+    "text": {
+      "en": "I am not interested in having close friends.",
+      "hi": "घनिष्ठ मित्रता रखने में मेरी रुचि नहीं है।"
+    },
+    "itemNumber": 60
+  },
+  {
+    "id": "pdq_61",
+    "text": {
+      "en": "I am often on guard against being taken advantage of.",
+      "hi": "दोहन हुए जाय, इससे बचने हेतु मैं प्रायः सतर्क रहता/रहती हूँ।"
+    },
+    "itemNumber": 61
+  },
+  {
+    "id": "pdq_62",
+    "text": {
+      "en": "I never forget, or forgive, those who do me wrong.",
+      "hi": "मुझे अन्याय करने वालों को न भूलता/भूलती हूँ, न क्षमा करता/करती हूँ।"
+    },
+    "itemNumber": 62
+  },
+  {
+    "id": "pdq_63",
+    "text": {
+      "en": "I resent those who have more \"luck\" than I.",
+      "hi": "जिनका भाग्य मुझसे अच्छा है उनपर मुझे कड़वाहट होती है।"
+    },
+    "itemNumber": 63
+  },
+  {
+    "id": "pdq_64",
+    "text": {
+      "en": "A nuclear war may not be such a bad idea.",
+      "hi": "परमाणु युद्ध इतना बुरा विचार न हो।"
+    },
+    "itemNumber": 64,
+    "safety": true
+  },
+  {
+    "id": "pdq_65",
+    "text": {
+      "en": "When alone, I feel helpless and unable to care for myself.",
+      "hi": "अकेले होने पर असहाय व स्वयं की देखभाल में असमर्थ अनुभव करता/करती हूँ।"
+    },
+    "itemNumber": 65
+  },
+  {
+    "id": "pdq_66",
+    "text": {
+      "en": "If others can't do things correctly, I would prefer to do them myself.",
+      "hi": "अन्य सही ढंग से न करें तो मैं कार्य स्वयं करना पसंद करता/करती हूँ।"
+    },
+    "itemNumber": 66
+  },
+  {
+    "id": "pdq_67",
+    "text": {
+      "en": "I have a flair for the dramatic.",
+      "hi": "मुझे नाटकीयता की सहज शैली है।"
+    },
+    "itemNumber": 67
+  },
+  {
+    "id": "pdq_68",
+    "text": {
+      "en": "Some people think that I take advantage of others.",
+      "hi": "कुछ लोग सोचते हैं कि मैं दूसरों का दोहन करता/करती हूँ।"
+    },
+    "itemNumber": 68
+  },
+  {
+    "id": "pdq_69",
+    "text": {
+      "en": "I feel that my life is dull and meaningless.",
+      "hi": "मुझे लगता है मेरा जीवन रसहीन व निरर्थक है।"
+    },
+    "itemNumber": 69
+  },
+  {
+    "id": "pdq_70",
+    "text": {
+      "en": "I am critical of others.",
+      "hi": "मैं दूसरों की आलोचना करता/करती हूँ।"
+    },
+    "itemNumber": 70
+  },
+  {
+    "id": "pdq_71",
+    "text": {
+      "en": "I don't care what others have to say about me.",
+      "hi": "लोग मेरे विषय क्या कहते हैं, इससे मुझे फर्क नहीं पड़ता।"
+    },
+    "itemNumber": 71
+  },
+  {
+    "id": "pdq_72",
+    "text": {
+      "en": "I have difficulties relating to others in a one-to-one situation.",
+      "hi": "एक-से-एक परिस्थिति में संबंध बनाने में कठिनाई होती है।"
+    },
+    "itemNumber": 72
+  },
+  {
+    "id": "pdq_73",
+    "text": {
+      "en": "People have often complained that I did not realize that they were upset.",
+      "hi": "लोग शिकायत करते रहे कि मैं उनकी उद्विग्नाता पहचान नहीं पाता/पाती।"
+    },
+    "itemNumber": 73
+  },
+  {
+    "id": "pdq_74",
+    "text": {
+      "en": "By looking at me, people might think that I'm pretty odd, eccentric or weird.",
+      "hi": "मुझे देखकर लोग सोच सकते हैं कि मैं बहुत अजीब, विचित्र हूँ।"
+    },
+    "itemNumber": 74
+  },
+  {
+    "id": "pdq_75",
+    "text": {
+      "en": "I enjoy doing risky things.",
+      "hi": "जोखिम वाले कार्य करने में मुझे आनंद मिलता है।"
+    },
+    "itemNumber": 75
+  },
+  {
+    "id": "pdq_76",
+    "text": {
+      "en": "I have lied a lot on this questionnaire.",
+      "hi": "इस प्रश्नावली में मैंने बहुत झूठ बोला है।"
+    },
+    "itemNumber": 76,
+    "safety": true
+  },
+  {
+    "id": "pdq_77",
+    "text": {
+      "en": "I complain a lot about my hardships.",
+      "hi": "मैं अपनी कठिनाइयों की बहुत शिकायत करता/करती हूँ।"
+    },
+    "itemNumber": 77
+  },
+  {
+    "id": "pdq_78",
+    "text": {
+      "en": "I have difficulty controlling my anger or temper.",
+      "hi": "क्रोध या प्रकोप पर नियंत्रण में कठिनाई होती है।"
+    },
+    "itemNumber": 78
+  },
+  {
+    "id": "pdq_79",
+    "text": {
+      "en": "Some people are jealous of me.",
+      "hi": "कुछ लोग मुझसे ईर्ष्या करते हैं।"
+    },
+    "itemNumber": 79
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Intermittent Explosive Disorder",
+    "hi": "विविक्त विस्फोटक विकार"
+  },
+  "tier": 3,
+  "dsm5": "Intermittent Explosive Disorder",
+  "icd11": "6B60",
+  "icd10": "F63.81",
+  "mappingNote": {
+    "en": "Anger-screen flag only — severity instruments (STAXI-CA / CAS) quantify anger dimensions and require clinical confirmation before any diagnostic use.",
+    "hi": "केवल क्रोध-स्क्रीन धनात्मक — तीव्रता-पैमाने (STAXI-CA / CAS) क्रोध-आयाम मापते हैं; रोग-निर्णय हेतु नैदानिक पुष्टि आवश्यक।"
+  },
+  "description": {
+    "en": "Recurrent behavioural outbursts representing impulsive aggressive episodes; anger instruments quantify severity but cannot diagnose.",
+    "hi": "Recurrent behavioural outbursts representing impulsive aggressive episodes; anger instruments quantify severity but cannot diagnose."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Agoraphobia",
+    "hi": "एगोराफोबिया"
+  },
+  "tier": 1,
+  "dsm5": "Agoraphobia",
+  "icd11": "6B02",
+  "description": {
+    "en": "Marked fear or anxiety about situations where escape might be difficult or help unavailable",
+    "hi": "ऐसी स्थितियों के प्रति स्पष्ट भय या चिंता जहाँ से निकलना कठिन हो या सहायता उपलब्ध न हो"
+  },
+  "mappingNote": "ICD-11 Agoraphobia is 6B02; DSM Agoraphobia is diagnosed independently of Panic Disorder (MINI Module E)."
+}

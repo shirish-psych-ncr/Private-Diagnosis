@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Major Depressive Disorder",
+    "hi": "प्रमुख अवसादग्रस्तता विकार"
+  },
+  "tier": 1,
+  "dsm5": "Major Depressive Disorder",
+  "icd11": "6A70 / 6A71",
+  "mappingNote": "ICD-11 distinguishes episode count: Single episode depressive disorder is 6A70, Recurrent depressive disorder is 6A71. DSM Major Depressive Disorder maps to whichever applies; the parent block is 6A7Z if unspecified.",
+  "description": {
+    "en": "Persistent sadness, loss of interest, and functional impairment lasting at least 2 weeks",
+    "hi": "कम से कम 2 सप्ताह तक चलने वाली लगातार उदासी, रुचि की हानि, और कार्यात्मक हानि"
+  }
+}

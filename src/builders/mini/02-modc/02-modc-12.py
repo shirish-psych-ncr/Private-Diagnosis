@@ -1,0 +1,30 @@
+  "impairment": {"id": "C6", "perTimeframe": True,
+                 "text": {"en": "Did these symptoms cause significant problems at home, at work, socially, in your relationships, at school or in some other important way?",
+                          "hi": "क्या इन लक्षणों से घर, कार्य, सामाजिक, संबंधों, विद्यालय या अन्य महत्वपूर्ण क्षेत्र में महत्वपूर्ण समस्याएं हुईं?"}},
+  "changeOfFunction": {"id": "C7", "perTimeframe": True,
+                 "text": {"en": "Were these symptoms associated with a clear change in the way that you previously functioned and that was different from the way that you usually are?",
+                          "hi": "क्या इन लक्षणों से पूर्व कार्यशैली में स्पष्ट परिवर्तन हुआ जो आपकी सामान्य प्रकृति से भिन्न था?"}},
+  "psychoticFeaturesRef": {"en": "Any psychotic features in Module K (K1-K8) also satisfy the Manic Episode alternatives.",
+                           "hi": "माड्यूल K (K1-K8) के किसी भ्रामक लक्षण भी मैैनिक एपिसोड के विकल्प पूर्ण करते हैं।"},
+  "diagnosticBoxes": [
+    {"id": "C_diag_manic", "label": {"en": "Manic Episode", "hi": "मैैनिक एपिसोड"},
+     "rule": "C3 SUMMARY AND C7 AND (C4c OR C5 OR C6 OR any psychotic feature K1-K8) coded Yes; AND organic cause ruled out (O2 summary). Specify CURRENT and/or PAST.",
+     "flags": ["CURRENT", "PAST"], "disordersOnPositive": ["bipolar_depressive"]},
+    {"id": "C_diag_hypomanic", "label": {"en": "Hypomanic Episode", "hi": "हाइपोमैैनिक एपिसोड"},
+     "rule": "C3 SUMMARY Yes AND C5 No AND C6 No AND C7 Yes AND (C4b OR C4c) Yes; AND organic cause ruled out; AND all psychotic features K1-K8 No. If CURRENT Manic Yes -> CURRENT Hypomanic No; if PAST Manic Yes -> PAST Hypomanic Not Explored.",
+     "flags": ["CURRENT", "PAST", "NOT EXPLORED"], "disordersOnPositive": ["bipolar_depressive"]},
+    {"id": "C_diag_hypomanic_symptoms", "label": {"en": "Hypomanic Symptoms", "hi": "हाइपोमैैनिक लक्षण"},
+     "rule": "C3 SUMMARY Yes AND C4a Yes AND C5 No. If current Manic/Hypomanic Yes -> current Hypomanic Symptoms No; if past Manic/Hypomanic Yes -> past Not Explored.",
+     "flags": ["CURRENT", "PAST", "NOT EXPLORED"]}],
+  "bipolarFollowUps": [
+    {"id": "C8a", "visibleWhen": "MANIC EPISODE positive (current or past)",
+     "text": {"en": "Did you have 2 or more of these (manic) episodes lasting 7 days or more (C4c) in your lifetime (including the current episode if present)?",
+              "hi": "क्या जीवनभर में ऐसे 2+ मैैनिक एपिसोड हुए जो 7+ दिन रहे (C4c) (वर्तमान सहित)?"}},
+    {"id": "C8b", "visibleWhen": "MANIC or HYPOMANIC EPISODE positive (current or past)",
+     "text": {"en": "Did you have 2 or more of these (hypomanic) episodes lasting 4 days or more (C4b) in your lifetime (including the current episode)?",
+              "hi": "क्या जीवनभर में ऐसे 2+ हाइपोमैैनिक एपिसोड हुए जो 4+ दिन रहे (C4b) (वर्तमान सहित)?"}},
+    {"id": "C8c", "visibleWhen": "past HYPOMANIC SYMPTOMS positive",
+     "text": {"en": "Did you have these hypomanic symptoms lasting only 1 to 3 days (C4a) 2 or more times in your lifetime (including the current episode if present)?",
+              "hi": "क्या ये हाइपोमैैनिक लक्षण केवल 1–3 दिन (C4a) रहकर जीवनभर में 2+ बार हुए (वर्तमान सहित)?"}}]
+}
+

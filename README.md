@@ -1,35 +1,37 @@
 # EPCSS — Ephemeral Pre-Consultation Clinical Screening System
 
-A fully static, zero-backend, zero-persistence mental health intake screening tool.
-All clinical data lives only in volatile browser memory and is destroyed on tab close.
-See `WHITEPAPER.md` for the complete technical and clinical specification.
+A static mental-health intake screening application. Clinical responses remain in browser memory; static definitions are loaded from the same site. The application has no clinical-data backend or persistent response storage.
 
-## Files
-- `index.html` — single-page app shell with strict Content Security Policy (no inline scripts, no third-party trackers)
-- `about.html`, `privacy.html`, `security.html`, `contact.html`, `404.html` — informational pages sharing the same CSP discipline and site chrome
-- `site.css` / `site.js` — styling and progressive enhancements (nav highlight, mobile menu toggle, on-page topic search) for the informational pages only
-- `app.js` — vanilla JS engine: ephemeral state model, adaptive two-stage routing, scoring, safety/crisis override, EN/HI live language switching, client-side PDF generation
-- `data.json` — decoupled clinical logic: 7 symptom domains, 22 validated instruments (PHQ-9, GAD-7, PCL-5, VADRS, ASRS-v1.1, CAARMS...), 31-disorder Tier 1-5 DSM-5-TR / ICD-11 harmonized database, crisis resources, bilingual dictionary
-- `styles.css` — responsive, WCAG 2.1 AA-oriented styling with high-contrast mode
-- `tests/epcss_test.js` — headless jsdom integration test covering the full five-stage journey
+## Edit one scale at a time
 
-## Privacy guarantees
-1. Zero-transmission: no backend, no analytics; only static asset downloads occur over the network.
-2. Zero-persistence: localStorage, sessionStorage, and cookies are strictly prohibited for clinical data.
-3. Safety-first: items flagged `safety:true` (e.g., PHQ-9 item 9) immediately open a non-dismissible localized crisis modal.
+- `data/scales/<id>.json` — one instrument's entry file, with large sections under `data/scales/<id>/`.
+- `src/app/scales/<id>.js` — one instrument's scoring entry point.
+- `data/domains/<id>.json` — domain routing, screen-ins and questionnaire order.
+- `data/core/` — shared translations, instrument metadata and disorders.
+- `src/app/` — small shared UI, safety, state, loading and PDF modules.
+- `src/builders/<instrument>/` — Python builder source sections.
+
+Read [the module map](docs/MODULES.md) and [editor guidance](AGENTS.md) before editing. [The whitepaper](WHITEPAPER.md) links to individual specification chapters.
+
+There is no `data.json` bundle. `app.js` is a tiny native-module entry point. Edits to the per-scale files are used directly without rebuilding large files.
 
 ## Run locally
-Any static file server works, e.g.:
 
-    python3 -m http.server 8000
+Run `python -m http.server 8000`, then open http://localhost:8000. HTTP(S) is required for module imports and JSON fetches.
 
-Then open http://localhost:8000 (fetch of `data.json` requires HTTP, not `file://`).
+## Validate
 
-## Test
-Requires Node.js and `jsdom` (`npm i jsdom`):
+Install test dependencies with `npm ci`, then run:
 
-    node tests/epcss_test.js
+```text
+npm test
+python tests/builders_test.py
+```
+
+`npm run build` checks module linking and clinical-data references without creating bundles. `python scripts/build_data.py` is also a read-only validator. Scoring parity tests compare synthetic cases with results captured from the previous engine; they do not constitute clinical validation.
 
 ## Deploy
-Push to GitHub and enable Pages — the repository's static assets are the entire application.
-Clinical updates require editing only `data.json`; every change is Git-audited.
+
+Deploy the root static assets together with the complete `src/` and `data/` directories. GitHub Pages or another static HTTP(S) host can serve them directly. Do not deploy only `app.js`: its imported modules and data files are required.
+
+The informational pages use `site.css` and `site.js`. The screening app uses `styles.css`, an ordered import list for `src/styles/screening/`. The separate legacy clinic effects have their own module entry point at `src/scripts/main.js`.

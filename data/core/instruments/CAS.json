@@ -1,0 +1,11 @@
+{
+  "name": "Clinical Anger Scale (CAS)",
+  "description": {
+    "en": "21-cluster, four-option (A-D) self-report measure of clinical anger; A=0, B=1, C=2, D=3 summed across clusters for a total range of 0-63. Interpretive ranges: 0-13 minimal, 14-19 mild, 20-28 moderate, 29-63 severe clinical anger (Snell et al., 1995). Screens severity only — not diagnostic.",
+    "hi": "नैदानिक क्रोध का 21-समूह, चार-विकल्प (A-D) स्व-वर्णित माप; A=0, B=1, C=2, D=3 समूहों में जोड़कर शीर्घ 0-63। व्याख्या-परिसर: 0-13 न्यूनतम, 14-19 हल्का, 20-28 मध्यम, 29-63 गंभीर नैदानिक क्रोध (Snell et al., 1995)। केवल तीव्रता स्क्रीन — रोग-निर्णायक नहीं।"
+  },
+  "domain": "anger",
+  "format": "self-report forced-choice cluster matrix with banded total",
+  "duration": "8-12 minutes",
+  "optionalAssessment": true
+}

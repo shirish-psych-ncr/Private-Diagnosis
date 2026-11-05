@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Generalized Anxiety Disorder",
+    "hi": "सामान्यीकृत चिंता विकार"
+  },
+  "tier": 1,
+  "dsm5": "Generalized Anxiety Disorder",
+  "icd11": "6B00",
+  "description": {
+    "en": "Excessive worry about multiple things for at least 6 months",
+    "hi": "कम से कम 6 महीने तक कई चीजों के बारे में अत्यधिक चिंता"
+  },
+  "mappingNote": "ICD-11 Generalised anxiety disorder is 6B00; 6B02 is Agoraphobia."
+}

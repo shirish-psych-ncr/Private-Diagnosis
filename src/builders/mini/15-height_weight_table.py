@@ -1,0 +1,25 @@
+HEIGHT_WEIGHT_TABLE = {
+  "bmiThreshold": 17.0,
+  "columns": [
+    {"ftin": "4'9\"",  "cm": 145, "lb": 79,  "kg": 36},
+    {"ftin": "4'10\"", "cm": 147, "lb": 82,  "kg": 37},
+    {"ftin": "4'11\"", "cm": 150, "lb": 84,  "kg": 38.5},
+    {"ftin": "5'0\"",  "cm": 152, "lb": 87,  "kg": 39.5},
+    {"ftin": "5'1\"",  "cm": 155, "lb": 90,  "kg": 41},
+    {"ftin": "5'2\"",  "cm": 158, "lb": 93,  "kg": 42.5},
+    {"ftin": "5'3\"",  "cm": 160, "lb": 96,  "kg": 43.5},
+    {"ftin": "5'4\"",  "cm": 163, "lb": 99,  "kg": 45.5},
+    {"ftin": "5'5\"",  "cm": 165, "lb": 102, "kg": 46.5},
+    {"ftin": "5'6\"",  "cm": 168, "lb": 106, "kg": 48},
+    {"ftin": "5'7\"",  "cm": 170, "lb": 109, "kg": 49},
+    {"ftin": "5'8\"",  "cm": 173, "lb": 112, "kg": 51},
+    {"ftin": "5'9\"",  "cm": 175, "lb": 115, "kg": 52},
+    {"ftin": "5'10\"", "cm": 178, "lb": 119, "kg": 54},
+    {"ftin": "5'11\"", "cm": 180, "lb": 122, "kg": 55},
+    {"ftin": "6'0\"",  "cm": 183, "lb": 125, "kg": 57},
+    {"ftin": "6'1\"",  "cm": 185, "lb": 129, "kg": 58.5},
+    {"ftin": "6'2\"",  "cm": 188, "lb": 133, "kg": 60},
+    {"ftin": "6'3\"",  "cm": 191, "lb": 136, "kg": 62}],
+  "note": {"en": "The weight thresholds above are calculated using a body mass index (BMI) equal to or below 17.0 kg/m2 for the patient's height using the Center of Disease Control & Prevention BMI Calculator. This is the threshold guideline below which a person is deemed underweight by the DSM-5 for Anorexia Nervosa.",
+            "hi": "उपरोक्त भार-सीमाएँ रोगी की ऊँचाई हेतु CDC BMI कैलकुलेटर का उपयोग कर BMI 17.0 किग्रा/मी² या उससे कम पर गणना की गई हैं। यह वह सीमा-निर्देश है जिसके नीचे व्यक्ति को DSM-5 द्वारा एनोरेक्सिया नर्वोसा हेतु अल्पभारी माना जाता है।"}}
+

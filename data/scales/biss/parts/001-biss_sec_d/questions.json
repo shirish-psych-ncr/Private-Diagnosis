@@ -1,0 +1,8 @@
+{
+  "$concat": [
+    "data/scales/biss/parts/001-biss_sec_d/questions/questions-001.json",
+    "data/scales/biss/parts/001-biss_sec_d/questions/questions-002.json",
+    "data/scales/biss/parts/001-biss_sec_d/questions/questions-003.json",
+    "data/scales/biss/parts/001-biss_sec_d/questions/questions-004.json"
+  ]
+}

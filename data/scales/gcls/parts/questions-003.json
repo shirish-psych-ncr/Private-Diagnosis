@@ -1,0 +1,78 @@
+[
+  {
+    "id": "gcls_part3",
+    "partKey": "life_satisfaction",
+    "name": {
+      "en": "Next, we would like to know how satisfied you have been with your life for the last 6 months:",
+      "hi": "इसके बाद, हम जानना चाहते हैं कि पिछले 6 माह में आप अपने जीवन से कितने संतुष्ट रहे:"
+    },
+    "questions": [
+      {
+        "id": "gcls_31",
+        "itemNumber": 31,
+        "text": {
+          "en": "I have felt satisfied at school/college/work.",
+          "hi": "मुझे स्कूल/महाविद्यालय/कार्यस्थल में संतुष्टि महसूस हुई।"
+        }
+      },
+      {
+        "id": "gcls_32",
+        "itemNumber": 32,
+        "text": {
+          "en": "I have felt satisfied with my emotional relationship(s).",
+          "hi": "मुझे अपने भावनात्मक संबंधों/संबंध से संतुष्टि महसूस हुई।"
+        }
+      },
+      {
+        "id": "gcls_33",
+        "itemNumber": 33,
+        "text": {
+          "en": "I have felt satisfied with my sex life.",
+          "hi": "मुझे अपने यौन जीवन से संतुष्टि महसूस हुई।"
+        }
+      },
+      {
+        "id": "gcls_34",
+        "itemNumber": 34,
+        "text": {
+          "en": "I have felt satisfied in my leisure activities and hobbies.",
+          "hi": "मुझे अपनी अवकाश गतिविधियों और शौकों से संतुष्टि महसूस हुई।"
+        }
+      },
+      {
+        "id": "gcls_35",
+        "itemNumber": 35,
+        "text": {
+          "en": "I have not felt satisfied with my friends.",
+          "hi": "मुझे अपने मित्रों से संतुष्टि महसूस नहीं हुई।"
+        },
+        "reverseScored": true
+      },
+      {
+        "id": "gcls_36",
+        "itemNumber": 36,
+        "text": {
+          "en": "I have felt satisfied with the support I have received from other significant people.",
+          "hi": "मुझे अन्य महत्वपूर्ण व्यक्तियों से प्राप्त सहयोग से संतुष्टि महसूस हुई।"
+        }
+      },
+      {
+        "id": "gcls_37",
+        "itemNumber": 37,
+        "text": {
+          "en": "I have not felt satisfied with my health.",
+          "hi": "मुझे अपने स्वास्थ्य से संतुष्टि महसूस नहीं हुई।"
+        },
+        "reverseScored": true
+      },
+      {
+        "id": "gcls_38",
+        "itemNumber": 38,
+        "text": {
+          "en": "I have felt satisfied with life in general.",
+          "hi": "मुझे सामान्यतः जीवन से संतुष्टि महसूस हुई।"
+        }
+      }
+    ]
+  }
+]

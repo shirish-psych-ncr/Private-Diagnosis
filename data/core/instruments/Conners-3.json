@@ -1,0 +1,15 @@
+{
+  "name": "Conners 3 Rating Scales",
+  "description": {
+    "en": "ADHD and behavior assessment",
+    "hi": "ADHD और व्यवहार मूल्यांकन"
+  },
+  "domains": [
+    "neurodevelopmental"
+  ],
+  "duration": "10-15 minutes",
+  "targetAge": [
+    "pediatric",
+    "adolescent"
+  ]
+}

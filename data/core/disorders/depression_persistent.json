@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Persistent Depressive Disorder",
+    "hi": "लगातार अवसादग्रस्तता विकार"
+  },
+  "tier": 1,
+  "dsm5": "Persistent Depressive Disorder (Dysthymia)",
+  "icd11": "6A72",
+  "description": {
+    "en": "Chronic depressed mood lasting at least 2 years",
+    "hi": "कम से कम 2 साल तक चलने वाला पुराना अवसादग्रस्त मूड"
+  },
+  "mappingNote": "ICD-11 Dysthymic disorder is 6A72; 6A80 is the symptomatic/course presentations block for mood episodes, not a persistent mood-disorder family."
+}

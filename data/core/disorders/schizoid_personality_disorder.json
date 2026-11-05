@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Schizoid Personality Disorder",
+    "hi": "स्किज़ॉइड व्यक्तित्व विकार"
+  },
+  "tier": 2,
+  "dsm5": "Schizoid Personality Disorder",
+  "icd11": "6D11",
+  "icd10": "F60.1",
+  "mappingNote": {
+    "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+    "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+  },
+  "description": {
+    "en": "Detachment from social relationships and a restricted range of emotional expression.",
+    "hi": "Detachment from social relationships and a restricted range of emotional expression."
+  }
+}

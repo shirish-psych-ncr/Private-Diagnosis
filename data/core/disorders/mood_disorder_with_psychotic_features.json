@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Mood Disorder With Psychotic Features",
+    "hi": "मनर्विकारी लक्षणों सहित मूड विकार"
+  },
+  "tier": 4,
+  "dsm5": "Major Depressive or Bipolar Disorder With Psychotic Features",
+  "icd11": "6A7Z / 6A6Z context codes with psychotic features",
+  "description": {
+    "en": "Delusions or hallucinations occurring exclusively during major depressive, manic, or hypomanic episodes",
+    "hi": "प्रमुख अवसादी, मैैनिक या हाइपोमैैनिक एपिसोड के दौरान ही उत्पन्न भ्रम या मतिभ्रम"
+  },
+  "mappingNote": "MINI Module K separates psychosis restricted to mood episodes from primary psychotic disorder; ICD-11 encodes psychotic features within the mood-disorder chapter rather than 6A20-6A24."
+}

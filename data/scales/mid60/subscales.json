@@ -1,0 +1,202 @@
+{
+  "did_amnesia_recent": {
+    "name": {
+      "en": "DID: Amnesia (for recent events)",
+      "hi": "DID: क्षतिस्मृति (हाल की घटनाओं की)"
+    },
+    "items": [
+      42,
+      45,
+      48,
+      58
+    ],
+    "cutoff": 10,
+    "note": {
+      "en": "Sudden unexplained changes in appearance, finding yourself in odd places at home, finding yourself somewhere with no memory of how you got there, and waking with something dangerous in your hand.",
+      "hi": "अचानक अपरिवर्तित रूप, घर में विचित्र स्थान पर पाए जाना, बिना स्मरण के किसी स्थान पर पहुँचना, और हाथ में हानिकारक वस्तु लेकर होश में आना।"
+    }
+  },
+  "did_alt_awareness": {
+    "name": {
+      "en": "DID / OSDD-1: Subjective awareness of alter personalities and self-states",
+      "hi": "DID / OSDD-1: अंश-व्यक्तित्वों एवं स्व-अवस्थाओं का आंतरिक बोध"
+    },
+    "items": [
+      3,
+      36,
+      39,
+      49,
+      57
+    ],
+    "cutoff": 20,
+    "note": {
+      "en": "Hearing a child's voice internally, feeling that you have multiple personalities, named parts inside you, another person inside who could come out and speak, and a part with different memories, behaviours and feelings.",
+      "hi": "भीतर बच्चे की आवाज़, अनेक व्यक्तित्वों का अनुभव, नाम वाले अंश, भीतर अन्य व्यक्ति जो बाहर आकर बोल सके, एवं भिन्न स्मृतियों/व्यवहार/भावनाओं वाला अंश।"
+    }
+  },
+  "did_angry_intrusions": {
+    "name": {
+      "en": "DID / OSDD-1: Angry intrusions",
+      "hi": "DID / OSDD-1: क्रोधित प्रवेश"
+    },
+    "items": [
+      28,
+      33,
+      35,
+      46,
+      60
+    ],
+    "cutoff": 18,
+    "note": {
+      "en": "Words flowing uncontrollably, words you did not say, angry behaviour you cannot remember afterwards, possession-like control of behaviour and speech, and an angry part that says and does things you never would.",
+      "hi": "अनियंत्रित शब्द, आपके न कहे शब्द, क्रोध में किए कार्य जो बाद में याद नहीं, व्यवहार-वाणी पर नियंत्रण, एवं क्रोधित अंश जो आप कभी न करें सो करता है।"
+    }
+  },
+  "did_persecutory_intrusions": {
+    "name": {
+      "en": "DID / OSDD-1: Persecutory intrusions",
+      "hi": "DID / OSDD-1: उत्पीड़नकारी प्रवेश"
+    },
+    "items": [
+      22,
+      37,
+      44,
+      56,
+      59
+    ],
+    "cutoff": 18,
+    "note": {
+      "en": "Internal voices telling you to hurt yourself, calling you names, wanting you to die, telling you to \"shut up\", and calling you no good, worthless or a failure. These items are self-harm and suicide related - always follow them up.",
+      "hi": "भीतर की आवाज़ें जो स्वयं को क्षति पहुँचाने को कहे, गालियाँ दें, मरने को कहे, \"चुप रहो\" कहे, तथा बेकार/असफल कहे। ये आइटम स्व-क्षति/आत्महत्या से जुड़े हैं — सदैव अनुवर्ती मूल्यांकन करें।"
+    }
+  },
+  "drdepersonalisation": {
+    "name": {
+      "en": "Derealization / Depersonalization",
+      "hi": "वास्तविकता-विचलन / स्व-विलगता"
+    },
+    "items": [
+      2,
+      7,
+      9,
+      13,
+      25,
+      47,
+      50,
+      53
+    ],
+    "cutoff": 20,
+    "note": {
+      "en": "Emotions that do not feel like yours, no memory of recent actions, things feeling unreal, reduced interest/enjoyment, the world seen through a fog, forgetting a well-learned skill, \"coming to\" after having done something, and your body not feeling yours.",
+      "hi": "अपनी न लगने वाली भावनाएँ, हाल के कार्यों का स्मरण न होना, वस्तुओं का अवास्तविक लगना, रुचि/आनंद में हानि, कोहरे के पार संसार, सुगम कार्य की स्मृति-हानि, कुछ करने के बाद \"होश\" में आना, शरीर का अपना न लगना।"
+    }
+  },
+  "amnesia_memory_distress": {
+    "name": {
+      "en": "Dissociative Amnesia: Distress about severe memory problems",
+      "hi": "वियोजीय क्षतिस्मृति: गंभीर स्मृति-समस्याओं से कष्ट"
+    },
+    "items": [
+      1,
+      8,
+      20,
+      38,
+      43,
+      52
+    ],
+    "cutoff": 30,
+    "note": {
+      "en": "Forgetting what you did earlier in the day, not remembering your last meal, immediately forgetting what people tell you, poor memory causing serious difficulty, being upset by how much you forget, and suddenly not knowing how to do your job.",
+      "hi": "दिन के पूर्व कार्य भूलना, पिछला भोजन याद न होना, लोगों की बात तुरंत भूलना, खराब स्मृति से गंभीर कठिनाई, भूलने की मात्रा से कष्ट, तथा अचानक कार्य विधि न जानना।"
+    }
+  },
+  "amnesia_autobiographical": {
+    "name": {
+      "en": "Dissociative Amnesia: Loss of autobiographical memory",
+      "hi": "वियोजीय क्षतिस्मृति: आत्मकथात्मक स्मृति की हानि"
+    },
+    "items": [
+      16,
+      19,
+      24,
+      29,
+      34
+    ],
+    "cutoff": 34,
+    "note": {
+      "en": "Not remembering large parts of childhood after age 5, feeling pieces of your past are missing, important earlier events you cannot recall, large gaps in memory, and remembering very little of your past.",
+      "hi": "पाँच वर्ष के बाद बचपन के बड़े हिस्से याद न होना, अतीत के टुकड़े गुम लगना, पूर्व की महत्वपूर्ण घटनाओं का अभाव, स्मृति में बड़े अंतराल, तथा अतीत का अत्यल्प स्मरण।"
+    }
+  },
+  "ptsd_flashbacks": {
+    "name": {
+      "en": "PTSD: Flashbacks",
+      "hi": "PTSD: फ्लैशबैक"
+    },
+    "items": [
+      4,
+      15,
+      31,
+      40,
+      54
+    ],
+    "cutoff": 16,
+    "note": {
+      "en": "Reliving trauma with loss of contact with the present, flashbacks so distressing you cannot face the day, intrusive bad memories, re-living a part such as a past trauma, and flashbacks for several days in a row.",
+      "hi": "वर्तमान संपर्क खोकर आघात को दोबारा जीना, इतने कष्टदायी फ्लैशबैक कि दिन भरना कठिन, अवांछित बुरी यादें, पूर्व आघात जैसे अंश को पुनर्जीवित करना, तथा कई दिनों तक लगातार फ्लैशबैक।"
+    }
+  },
+  "conversion_body": {
+    "name": {
+      "en": "Conversion Disorder: Body symptoms",
+      "hi": "परिवर्तन विकार: शारीरिक लक्षण"
+    },
+    "items": [
+      5,
+      10,
+      14,
+      18
+    ],
+    "cutoff": 10,
+    "note": {
+      "en": "Difficulty swallowing, temporary blindness (as if blind), paralysis or inability to move and temporary deafness (as if deaf), all for no known medical reason. Items exactly as printed on the supplied score sheet.",
+      "hi": "निगलने में कठिनाई, क्षणिक अंधता (मानो अंधा हों), लकवा/हिलने में असमर्थता तथा क्षणिक बहरापन (मानो बहरा हों), सब कोई ज्ञात चिकित्सीय कारण विना। आइटम यथावत् मुद्रित स्कोर-शीट के अनुसार।"
+    }
+  },
+  "conversion_seizures": {
+    "name": {
+      "en": "Conversion Disorder: Pseudo-seizures (psychogenic non-epileptic seizures)",
+      "hi": "परिवर्तन विकार: छद्म-दौरे (मनोजन्य गैर-मिर्गी दौरे)"
+    },
+    "items": [
+      26
+    ],
+    "cutoff": 10,
+    "note": {
+      "en": "Seizures for which your doctor can find no reason. Single-item subscale; requires medical evaluation before any interpretation.",
+      "hi": "दौरे जिनका कारण चिकित्सक नहीं पा सकतें। एकल-आइटम उप-पैमाना; किसी व्याख्या से पूर्व चिकित्सीय मूल्यांकन आवश्यक।"
+    }
+  },
+  "general_trance": {
+    "$file": "data/scales/mid60/subscales/general_trance.json"
+  },
+  "general_self_confusion": {
+    "name": {
+      "en": "General subscale: Self-confusion",
+      "hi": "सामान्य उप-पैमाना: स्व-विभ्रम"
+    },
+    "items": [
+      6,
+      11,
+      12,
+      17,
+      23,
+      55
+    ],
+    "cutoff": 33.3,
+    "note": {
+      "en": "Trance-like episodes with loss of awareness, feeling detached from your behaviour, uncertainty about who you really are, disconnection from everything around you, strong confusion about identity, and being puzzled by your own emotions.",
+      "hi": "ट्रांस-सदृश अवस्थाएँ, अपने व्यवहार से विलगता, वास्तविक पहचान के बारे में अनिश्चितता, चारों ओर की हर वस्तु से कटाव, पहचान में गहरा विभ्रम, तथा अपनी भावनाओं से हैरानी।"
+    }
+  }
+}

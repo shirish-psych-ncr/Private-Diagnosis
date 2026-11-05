@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Other Specified Personality Disorder",
+    "hi": "अन्य निर्दिष्ट व्यक्तित्व विकार"
+  },
+  "tier": 2,
+  "dsm5": "Other Specified Personality Disorder",
+  "icd11": "6D1Z",
+  "icd10": "F60.8 / F60.9",
+  "mappingNote": {
+    "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+    "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+  },
+  "description": {
+    "en": "Clinically significant personality pattern causing distress or impairment that does not meet full criteria for a specific cluster-C/A/B disorder.",
+    "hi": "Clinically significant personality pattern causing distress or impairment that does not meet full criteria for a specific cluster-C/A/B disorder."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Generalized Anxiety Disorder-7",
+  "description": {
+    "en": "Anxiety severity screening",
+    "hi": "चिंता गंभीरता स्क्रीनिंग"
+  },
+  "domains": [
+    "anxiety"
+  ],
+  "duration": "2-3 minutes"
+}

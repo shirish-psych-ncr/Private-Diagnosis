@@ -1,0 +1,11 @@
+{
+  "name": {
+    "en": "Obstructive Sleep Apnea",
+    "hi": "अवरोधी नींद अपनिया"
+  },
+  "tier": 3,
+  "dsm5": "Obstructive Sleep Apnea Hypopnea",
+  "icd11": "7A41",
+  "icd11Chapter": "Chapter 07: Sleep-wake disorders",
+  "mappingNote": "ICD-11 Obstructive sleep apnoea is 7A41; central sleep apnoeas are 7A40 and sleep-related hypoventilation or hypoxemia disorders 7A42, all in Chapter 07 (index 11.2.2)."
+}

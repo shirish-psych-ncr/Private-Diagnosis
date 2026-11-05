@@ -1,0 +1,15 @@
+{
+  "name": {
+    "en": "Insomnia Disorder",
+    "hi": "अनिद्रा विकार"
+  },
+  "tier": 2,
+  "dsm5": "Insomnia Disorder",
+  "icd11": "7A00",
+  "description": {
+    "en": "Difficulty initiating or maintaining sleep",
+    "hi": "नींद शुरू करने या बनाए रखने में कठिनाई"
+  },
+  "icd11Chapter": "Chapter 07: Sleep-wake disorders",
+  "mappingNote": "ICD-11 chronic insomnia is 7A00 and short-term insomnia 7A01 (Chapter 07, Sleep-wake disorders); DSM Insomnia Disorder spans both. Select by duration per ICD requirements (index 11.1.2)."
+}

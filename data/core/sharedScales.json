@@ -1,0 +1,122 @@
+{
+  "freq4": [
+    {
+      "v": 0,
+      "label": {
+        "en": "Not at all",
+        "hi": "बिल्कुल नहीं"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "Several days",
+        "hi": "कई दिन"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "More than half the days",
+        "hi": "आधे से अधिक दिन"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "Nearly every day",
+        "hi": "लगभग हर दिन"
+      }
+    }
+  ],
+  "frequency5": [
+    {
+      "v": 0,
+      "label": {
+        "en": "Never",
+        "hi": "कभी नहीं"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "Rarely",
+        "hi": "शायद ही कभी"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "Sometimes",
+        "hi": "कभी-कभी"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "Often",
+        "hi": "अक्सर"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "Very often",
+        "hi": "बहुत अक्सर"
+      }
+    }
+  ],
+  "pcl5scale": [
+    {
+      "v": 0,
+      "label": {
+        "en": "Not at all",
+        "hi": "बिल्कुल नहीं"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "A little bit",
+        "hi": "थोड़ा सा"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "Moderately",
+        "hi": "मध्यम रूप से"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "Quite a bit",
+        "hi": "काफी हद तक"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "Extremely",
+        "hi": "बहुत अधिक"
+      }
+    }
+  ],
+  "yesno": [
+    {
+      "v": 0,
+      "label": {
+        "en": "No",
+        "hi": "नहीं"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "Yes",
+        "hi": "हाँ"
+      }
+    }
+  ]
+}

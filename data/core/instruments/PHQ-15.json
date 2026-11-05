@@ -1,0 +1,25 @@
+{
+  "name": "PHQ-15 (Patient Health Questionnaire — Somatic Symptoms)",
+  "construct": {
+    "en": "Somatic symptom severity",
+    "hi": "शारीरिक लक्षण तीव्रता"
+  },
+  "format": {
+    "en": "15 items scored 0-2 over 4 weeks (0-30)",
+    "hi": "15 आइटम, 4 सप्ताह, 0-2 अंकन (0-30)"
+  },
+  "duration": "~3 min",
+  "language": {
+    "en": "English, Hindi",
+    "hi": "अंग्रेज़ी, हिन्दी"
+  },
+  "purpose": {
+    "en": "Quantify somatic symptom burden; supplements clinical judgement (cut-points 5 / 10 / 15).",
+    "hi": "शारीरिक लक्षण-भार का परिमाणीकरण; चिकित्सकीय निर्णय की सहायता (सीमा 5 / 10 / 15)।"
+  },
+  "source": "PHQ-15 (Kroenke, Spitzer & Williams); free to use, no permission required",
+  "licensing": {
+    "en": "Public-domain PHQ family instrument.",
+    "hi": "PHQ परिवार की सार्वजनिक-उपयोग मापनी।"
+  }
+}

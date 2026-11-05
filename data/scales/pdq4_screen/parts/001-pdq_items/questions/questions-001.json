@@ -1,0 +1,202 @@
+[
+  {
+    "id": "pdq_1",
+    "text": {
+      "en": "I avoid working with others who may criticize me.",
+      "hi": "मैं उन लोगों के साथ काम करने से परहेज करता/करती हूँ जो मुझे आलोचित कर सकते हैं।"
+    },
+    "itemNumber": 1
+  },
+  {
+    "id": "pdq_2",
+    "text": {
+      "en": "I can't make decisions without the advice, or reassurance, of others.",
+      "hi": "दूसरों की सलाह या आश्वासन के बिना मैं निर्णय नहीं ले सकता/सकती।"
+    },
+    "itemNumber": 2
+  },
+  {
+    "id": "pdq_3",
+    "text": {
+      "en": "I often get lost in details and lose sight of the \"big picture\".",
+      "hi": "मैं प्रायः विवरणों में खो जाता/जाती हूँ और 'पूरी तस्वीर' देखना भूल जाता/जाती हूँ।"
+    },
+    "itemNumber": 3
+  },
+  {
+    "id": "pdq_4",
+    "text": {
+      "en": "I need to be the center of attention.",
+      "hi": "मुझे ध्यान का केंद्र बनने की आवश्यकता होती है।"
+    },
+    "itemNumber": 4
+  },
+  {
+    "id": "pdq_5",
+    "text": {
+      "en": "I have accomplished far more than others give me credit.",
+      "hi": "मैंने इतनी अधिक सफलता अर्जित की है जितना लोग मुझे श्रेय देते हैं।"
+    },
+    "itemNumber": 5
+  },
+  {
+    "id": "pdq_6",
+    "text": {
+      "en": "I'll go to extremes to prevent those whom I love from ever leaving me.",
+      "hi": "प्रियजनों को मुझसे दूर जाने से रोकने हेतु मैं अति में जाता/जाती हूँ।"
+    },
+    "itemNumber": 6
+  },
+  {
+    "id": "pdq_7",
+    "text": {
+      "en": "Others have complained that I do not keep up with my work or commitments.",
+      "hi": "लोग शिकायत करते हैं कि मैं अपना कार्य या प्रतिबद्धताएँ पूरी नहीं करता/करती।"
+    },
+    "itemNumber": 7
+  },
+  {
+    "id": "pdq_8",
+    "text": {
+      "en": "I've been in trouble with the law several times (or would have been if I had been caught).",
+      "hi": "कानून से मेरे कई बार झंझट रहे हैं (अथवा होते यदि पकड़ा जाता)।"
+    },
+    "itemNumber": 8
+  },
+  {
+    "id": "pdq_9",
+    "text": {
+      "en": "Spending time with family or friends just doesn't interest me.",
+      "hi": "परिवार या मित्रों के साथ समय बिताने में मुझे रुचि नहीं है।"
+    },
+    "itemNumber": 9
+  },
+  {
+    "id": "pdq_10",
+    "text": {
+      "en": "I get special messages from things happening around me.",
+      "hi": "चारों ओर घटित होने वाली बातों से मुझे विशेष संदेश मिलते हैं।"
+    },
+    "itemNumber": 10
+  },
+  {
+    "id": "pdq_11",
+    "text": {
+      "en": "I know that people will take advantage of me, or try to cheat me, if I let them.",
+      "hi": "मुझे ज्ञात है कि लोग मुझे ठगा करेंगे अथवा दोहन करेंगे यदि मैं अनुमति दूँ।"
+    },
+    "itemNumber": 11
+  },
+  {
+    "id": "pdq_12",
+    "text": {
+      "en": "Sometimes I get upset.",
+      "hi": "कभी-कभी मैं परेशान हो जाता/जाती हूँ।"
+    },
+    "itemNumber": 12
+  },
+  {
+    "id": "pdq_13",
+    "text": {
+      "en": "I make friends with people only when I am sure they like me.",
+      "hi": "मैं लोगों से मित्रता तभी करता/करती हूँ जब निश्चित होऊँ कि वे मुझे पसंद करते हैं।"
+    },
+    "itemNumber": 13
+  },
+  {
+    "id": "pdq_14",
+    "text": {
+      "en": "I am usually depressed.",
+      "hi": "मैं प्रायः अवसादग्रस्त रहता/रहती हूँ।"
+    },
+    "itemNumber": 14
+  },
+  {
+    "id": "pdq_15",
+    "text": {
+      "en": "I prefer that other people assume responsibility for me.",
+      "hi": "मैं चाहता/चाहती हूँ कि अन्य लोग मेरे लिए उत्तरदायित्व लें।"
+    },
+    "itemNumber": 15
+  },
+  {
+    "id": "pdq_16",
+    "text": {
+      "en": "I waste time trying to make things too perfect.",
+      "hi": "चीज़ों को अत्यंत पूर्ण बनाने के प्रयास में मैं समय बर्बाद करता/करती हूँ।"
+    },
+    "itemNumber": 16
+  },
+  {
+    "id": "pdq_17",
+    "text": {
+      "en": "I am \"sexier\" than most people.",
+      "hi": "मैं अधिकतर लोगों की तुलना में अधिक आकर्षक/आकर्षी हूँ।"
+    },
+    "itemNumber": 17
+  },
+  {
+    "id": "pdq_18",
+    "text": {
+      "en": "I often find myself thinking about how great a person I am, or will be.",
+      "hi": "मैं प्रायः स्वयं को यह सोचते पाता/पाती हूँ कि मैं कितना महान व्यक्ति हूँ अथवा हूँगा।"
+    },
+    "itemNumber": 18
+  },
+  {
+    "id": "pdq_19",
+    "text": {
+      "en": "I either love someone or hate them, with nothing in between.",
+      "hi": "मैं किसी से या तो प्रेम करता/करती हूँ या घृणा, बीच का कुछ नहीं।"
+    },
+    "itemNumber": 19
+  },
+  {
+    "id": "pdq_20",
+    "text": {
+      "en": "I get into a lot of physical fights.",
+      "hi": "मेरे कई शारीरिक झगड़े होते हैं।"
+    },
+    "itemNumber": 20
+  },
+  {
+    "id": "pdq_21",
+    "text": {
+      "en": "I feel that others don't understand or appreciate me.",
+      "hi": "मुझे लगता है कि अन्य लोग मुझे समझते नहीं या सराहते नहीं।"
+    },
+    "itemNumber": 21
+  },
+  {
+    "id": "pdq_22",
+    "text": {
+      "en": "I would rather do things by myself than with other people.",
+      "hi": "मैं अन्य लोगों के साथ करने की बजाय कार्य स्वयं करना पसंद करता/करती हूँ।"
+    },
+    "itemNumber": 22
+  },
+  {
+    "id": "pdq_23",
+    "text": {
+      "en": "I have the ability to know that some things will happen before they actually do.",
+      "hi": "कुछ घटनाएँ घटने से पूर्व ही जानने की क्षमता मुझमें है।"
+    },
+    "itemNumber": 23
+  },
+  {
+    "id": "pdq_24",
+    "text": {
+      "en": "I often wonder whether the people I know can really be trusted.",
+      "hi": "मैं प्रायः सोचता/सोचती हूँ कि क्या मेरे परिचित सच में विश्वसनीय हैं।"
+    },
+    "itemNumber": 24
+  },
+  {
+    "id": "pdq_25",
+    "text": {
+      "en": "Occasionally I talk about people behind their backs.",
+      "hi": "कभी-कभी मैं पीठ पीछे लोगों की बात करता/करती हूँ।"
+    },
+    "itemNumber": 25
+  }
+]

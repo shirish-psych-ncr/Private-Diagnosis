@@ -5,147 +5,18 @@
     "hi": "पदार्थ उपयोग"
   },
   "tier": 1,
-  "questions": [
-    {
-      "id": "substance_1",
-      "text": {
-        "en": "How often do you have a drink containing alcohol?",
-        "hi": "आप कितनी बार शराब पीते हैं?"
-      },
-      "scale": [
-        {
-          "value": 0,
-          "label": {
-            "en": "Never",
-            "hi": "कभी नहीं"
-          }
-        },
-        {
-          "value": 1,
-          "label": {
-            "en": "Monthly or less",
-            "hi": "महीने में एक बार या कम"
-          }
-        },
-        {
-          "value": 2,
-          "label": {
-            "en": "2-4 times a month",
-            "hi": "महीने में 2-4 बार"
-          }
-        },
-        {
-          "value": 3,
-          "label": {
-            "en": "2-3 times a week",
-            "hi": "हफ्ते में 2-3 बार"
-          }
-        },
-        {
-          "value": 4,
-          "label": {
-            "en": "4 or more times a week",
-            "hi": "हफ्ते में 4 या अधिक बार"
-          }
-        }
-      ],
-      "disorders": [
-        "alcohol_use_disorder"
-      ]
-    },
-    {
-      "id": "substance_2",
-      "text": {
-        "en": "Have you used drugs other than those required for medical reasons?",
-        "hi": "क्या आपने चिकित्सा कारणों के अलावा अन्य ड्रग्स का उपयोग किया है?"
-      },
-      "scale": [
-        {
-          "value": 0,
-          "label": {
-            "en": "No",
-            "hi": "नहीं"
-          }
-        },
-        {
-          "value": 1,
-          "label": {
-            "en": "Yes, but not in the past year",
-            "hi": "हां, लेकिन पिछले साल नहीं"
-          }
-        },
-        {
-          "value": 2,
-          "label": {
-            "en": "Yes, in the past year",
-            "hi": "हां, पिछले साल"
-          }
-        },
-        {
-          "value": 3,
-          "label": {
-            "en": "Yes, in the past month",
-            "hi": "हां, पिछले महीने"
-          }
-        }
-      ],
-      "disorders": [
-        "substance_use_disorder"
-      ]
-    },
-    {
-      "id": "substance_3",
-      "text": {
-        "en": "How many standard drinks containing alcohol do you have on a typical day?",
-        "hi": "आदर्श दिन में आप कितने पेमाने वाली शराब पीते हैं?"
-      },
-      "scale": [
-        {
-          "v": 0,
-          "label": {
-            "en": "1 or 2",
-            "hi": "1 या 2"
-          }
-        },
-        {
-          "v": 1,
-          "label": {
-            "en": "3 or 4",
-            "hi": "3 या 4"
-          }
-        },
-        {
-          "v": 2,
-          "label": {
-            "en": "5 or 6",
-            "hi": "5 या 6"
-          }
-        },
-        {
-          "v": 3,
-          "label": {
-            "en": "7 to 9",
-            "hi": "7 से 9"
-          }
-        },
-        {
-          "v": 4,
-          "label": {
-            "en": "10 or more",
-            "hi": "10 या अधिक"
-          }
-        }
-      ],
-      "disorders": [
-        "alcohol_use_disorder"
-      ]
-    }
-  ],
+  "questions": [],
   "cutoff": 8,
   "instruments": [
     "AUDIT-C",
     "DAST-10",
     "CAGE-AID"
   ],
-  "instrument": "auditc"
+  "instrument": "auditc",
+  "questionSource": "data/scales/auditc.json",
+  "questionOrder": [
+    "substance_1",
+    "substance_2",
+    "substance_3"
+  ]
 }

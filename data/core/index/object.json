@@ -1,0 +1,321 @@
+[
+  [
+    "meta",
+    {
+      "source": "data/core/meta.json"
+    }
+  ],
+  [
+    "i18n",
+    {
+      "source": "data/core/i18n.json"
+    }
+  ],
+  [
+    "reference",
+    {
+      "object": [
+        [
+          "malingering",
+          {
+            "object": [
+              [
+                "id",
+                {
+                  "source": "data/core/reference/malingering/id.json"
+                }
+              ],
+              [
+                "name",
+                {
+                  "source": "data/core/reference/malingering/name.json"
+                }
+              ],
+              [
+                "nonScored",
+                {
+                  "source": "data/core/reference/malingering/nonScored.json"
+                }
+              ],
+              [
+                "clinicianOnly",
+                {
+                  "source": "data/core/reference/malingering/clinicianOnly.json"
+                }
+              ],
+              [
+                "source",
+                {
+                  "source": "data/core/reference/malingering/source.json"
+                }
+              ],
+              [
+                "sections",
+                {
+                  "array": [
+                    {
+                      "source": "data/core/reference/malingering/sections/0.json"
+                    },
+                    {
+                      "source": "data/core/reference/malingering/sections/1.json"
+                    },
+                    {
+                      "source": "data/core/reference/malingering/sections/2.json"
+                    },
+                    {
+                      "source": "data/core/reference/malingering/sections/3.json"
+                    },
+                    {
+                      "source": "data/core/reference/malingering/sections/4.json"
+                    },
+                    {
+                      "source": "data/core/reference/malingering/sections/5.json"
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  [
+    "tiers",
+    {
+      "source": "data/core/tiers.json"
+    }
+  ],
+  [
+    "crisisResources",
+    {
+      "source": "data/core/crisisResources.json"
+    }
+  ],
+  [
+    "sharedScales",
+    {
+      "source": "data/core/sharedScales.json"
+    }
+  ],
+  [
+    "instruments",
+    {
+      "object": [
+        [
+          "PHQ-9",
+          {
+            "source": "data/core/instruments/PHQ-9.json"
+          }
+        ],
+        [
+          "GAD-7",
+          {
+            "source": "data/core/instruments/GAD-7.json"
+          }
+        ],
+        [
+          "PCL-5",
+          {
+            "source": "data/core/instruments/PCL-5.json"
+          }
+        ],
+        [
+          "ISI",
+          {
+            "source": "data/core/instruments/ISI.json"
+          }
+        ],
+        [
+          "AUDIT-C",
+          {
+            "source": "data/core/instruments/AUDIT-C.json"
+          }
+        ],
+        [
+          "ASRS-v1.1",
+          {
+            "source": "data/core/instruments/ASRS-v1.1.json"
+          }
+        ],
+        [
+          "MDQ",
+          {
+            "source": "data/core/instruments/MDQ.json"
+          }
+        ],
+        [
+          "BDI-II",
+          {
+            "source": "data/core/instruments/BDI-II.json"
+          }
+        ],
+        [
+          "BAI",
+          {
+            "source": "data/core/instruments/BAI.json"
+          }
+        ],
+        [
+          "STAI",
+          {
+            "source": "data/core/instruments/STAI.json"
+          }
+        ],
+        [
+          "IES-R",
+          {
+            "source": "data/core/instruments/IES-R.json"
+          }
+        ],
+        [
+          "CAPS-5",
+          {
+            "source": "data/core/instruments/CAPS-5.json"
+          }
+        ],
+        [
+          "PSQI",
+          {
+            "source": "data/core/instruments/PSQI.json"
+          }
+        ],
+        [
+          "ESS",
+          {
+            "source": "data/core/instruments/ESS.json"
+          }
+        ],
+        [
+          "DAST-10",
+          {
+            "source": "data/core/instruments/DAST-10.json"
+          }
+        ],
+        [
+          "CAGE-AID",
+          {
+            "source": "data/core/instruments/CAGE-AID.json"
+          }
+        ],
+        [
+          "AQ-10",
+          {
+            "source": "data/core/instruments/AQ-10.json"
+          }
+        ],
+        [
+          "Conners-3",
+          {
+            "source": "data/core/instruments/Conners-3.json"
+          }
+        ],
+        [
+          "PANSS",
+          {
+            "source": "data/core/instruments/PANSS.json"
+          }
+        ],
+        [
+          "BPRS",
+          {
+            "source": "data/core/instruments/BPRS.json"
+          }
+        ],
+        [
+          "CAARMS",
+          {
+            "source": "data/core/instruments/CAARMS.json"
+          }
+        ],
+        [
+          "MINI 7.0.2",
+          {
+            "source": "data/core/instruments/MINI 7.0.2.json"
+          }
+        ],
+        [
+          "VADRS",
+          {
+            "source": "data/core/instruments/VADRS.json"
+          }
+        ],
+        [
+          "IPDE",
+          {
+            "source": "data/core/instruments/IPDE.json"
+          }
+        ],
+        [
+          "PDQ-4+",
+          {
+            "source": "data/core/instruments/PDQ-4+.json"
+          }
+        ],
+        [
+          "STAXI-CA",
+          {
+            "source": "data/core/instruments/STAXI-CA.json"
+          }
+        ],
+        [
+          "CAS",
+          {
+            "source": "data/core/instruments/CAS.json"
+          }
+        ],
+        [
+          "MID-60",
+          {
+            "source": "data/core/instruments/MID-60.json"
+          }
+        ],
+        [
+          "DES-II",
+          {
+            "source": "data/core/instruments/DES-II.json"
+          }
+        ],
+        [
+          "FAC22-SR",
+          {
+            "source": "data/core/instruments/FAC22-SR.json"
+          }
+        ],
+        [
+          "PHQ-15",
+          {
+            "source": "data/core/instruments/PHQ-15.json"
+          }
+        ],
+        [
+          "GCLS",
+          {
+            "source": "data/core/instruments/GCLS.json"
+          }
+        ],
+        [
+          "BISS",
+          {
+            "source": "data/core/instruments/BISS.json"
+          }
+        ],
+        [
+          "HEXACO-PI-R (Observer)",
+          {
+            "source": "data/core/instruments/HEXACO-PI-R (Observer).json"
+          }
+        ]
+      ]
+    }
+  ],
+  {
+    "$file": "data/core/index/object/008-8.json"
+  },
+  [
+    "schemaVersion",
+    {
+      "source": "data/core/schemaVersion.json"
+    }
+  ]
+]

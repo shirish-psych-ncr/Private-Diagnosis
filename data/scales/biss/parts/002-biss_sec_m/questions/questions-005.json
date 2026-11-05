@@ -1,0 +1,176 @@
+[
+  {
+    "id": "biss_40",
+    "itemNumber": 40,
+    "text": {
+      "en": "Affective lability: Reported and observed spontaneous sharp shifts of affective or mood states lasting from minutes to hours. Lability may or may not be influenced by circumstances. Often described metaphorically: \"I am on a roller coaster, I am like a yo yo.\" Affects can be sad, giddy, angry, or over confident. Do not rate on basis of what affective states are expressed. Rate on proportion of time with lability, degree of inability to control affective shifts."
+    },
+    "itemName": {
+      "en": "Affective lability"
+    },
+    "definition": {
+      "en": "Reported and observed spontaneous sharp shifts of affective or mood states lasting from minutes to hours. Lability may or may not be influenced by circumstances. Often described metaphorically: \"I am on a roller coaster, I am like a yo yo.\" Affects can be sad, giddy, angry, or over confident. Do not rate on basis of what affective states are expressed. Rate on proportion of time with lability, degree of inability to control affective shifts."
+    },
+    "probes": [
+      {
+        "en": "How steady has your mood been?"
+      },
+      {
+        "en": "Do your emotions shift fairly suddenly at times?"
+      },
+      {
+        "en": "How much of the time are you this way? When this happens can you put a halt to it? Does it interfere in your daily life?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional periods of fluctuating mood, affects, generally within a day, of questionable clinical significance"
+      },
+      {
+        "en": "Mild; e.g., frequent mild, mood instability or lability which family, close associates see as dysfunctional"
+      },
+      {
+        "en": "Moderate; e.g., definite impairment in social, work role function from frequent mood instability"
+      },
+      {
+        "en": "Serious impairment from mood lability. Persists most of day, most days, interferes with most social, work, role functions"
+      }
+    ]
+  },
+  {
+    "id": "biss_41",
+    "itemNumber": 41,
+    "text": {
+      "en": "Persecutory ideas: From slight distrustfulness through suspiciousness and delusions of persecution. Does not include feelings or beliefs which are completely justified by the situation."
+    },
+    "itemName": {
+      "en": "Persecutory ideas"
+    },
+    "definition": {
+      "en": "From slight distrustfulness through suspiciousness and delusions of persecution. Does not include feelings or beliefs which are completely justified by the situation."
+    },
+    "probes": [
+      {
+        "en": "Have people been making life hard or deliberately causing you trouble or trying to hurt you?"
+      },
+      {
+        "en": "Have you had to be on guard with people?"
+      },
+      {
+        "en": "Have you felt distrustful of others, or afraid that they would take advantage of you? Have you felt that you have been singled out, or targeted for their actions against you?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight feelings of distrustfulness which may be realistically based and are of doubtful clinical significance"
+      },
+      {
+        "en": "Mild; suspiciousness definitely not warranted by the situation, but only occasional and of mild intensity, e.g., often feels taken advantage of"
+      },
+      {
+        "en": "Moderate; often suspicious or distrustful, but clearly ideas of reference that are recognized as the imagination"
+      },
+      {
+        "en": "Severe; pervasive suspiciousness, or persecutory feelings of delusional intensity, e.g., plot may exist against him/her"
+      }
+    ]
+  },
+  {
+    "id": "biss_42",
+    "itemNumber": 42,
+    "text": {
+      "en": "Delusions: Severity of delusions of any type - consider conviction in delusion, preoccupation, and effect on actions. Ask questions appropriate to eliciting delusional ideation."
+    },
+    "itemName": {
+      "en": "Delusions"
+    },
+    "definition": {
+      "en": "Severity of delusions of any type - consider conviction in delusion, preoccupation, and effect on actions. Ask questions appropriate to eliciting delusional ideation."
+    },
+    "probes": [
+      {
+        "en": "Has your imagination been playing tricks on you in any way?"
+      },
+      {
+        "en": "Have you had any ideas that other people might not understand?"
+      },
+      {
+        "en": "Did you think this was your imagination?"
+      },
+      {
+        "en": "Have you felt controlled by an outside power?"
+      },
+      {
+        "en": "What did you do about it?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; suspected or likely, but not impairing"
+      },
+      {
+        "en": "Mild; delusion definitely present, but at times subject questions it as a false belief"
+      },
+      {
+        "en": "Moderate; delusion has a significant effect on thoughts, feelings, actions, e.g., asks family to forgive sins, preoccupied with belief that he or she has special power."
+      },
+      {
+        "en": "Severe; delusions have major impact on patient or others, e.g., has delusions of control, calls emergency number about space invaders"
+      }
+    ]
+  },
+  {
+    "id": "biss_43",
+    "itemNumber": 43,
+    "text": {
+      "en": "Hallucinations: Severity of hallucinations of any type. Consider conviction in reality of hallucination, preoccupation, and effects on behaviors. Ask questions appropriate to eliciting hallucinations."
+    },
+    "itemName": {
+      "en": "Hallucinations"
+    },
+    "definition": {
+      "en": "Severity of hallucinations of any type. Consider conviction in reality of hallucination, preoccupation, and effects on behaviors. Ask questions appropriate to eliciting hallucinations."
+    },
+    "probes": [
+      {
+        "en": "Have you heard voices or other things that weren't there or that other people couldn't hear?"
+      },
+      {
+        "en": "Has there been anything unusual about the way things looked or sounded or smelled?"
+      },
+      {
+        "en": "Do you think this was your imagination?"
+      },
+      {
+        "en": "What did you do about it?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; occasional altered perception of doubtful clinical significance"
+      },
+      {
+        "en": "Mild; definitely present, but is generally aware that it is imagination and is usually able to ignore it"
+      },
+      {
+        "en": "Moderate; generally believes in the reality of the hallucination, but it has little influence on behavior"
+      },
+      {
+        "en": "Severe; convinced the hallucination is real and it has significant effects on actions, e.g., locks doors to keep heard pursuers away"
+      }
+    ],
+    "safety": true
+  }
+]

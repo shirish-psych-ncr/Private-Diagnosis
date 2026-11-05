@@ -1,0 +1,31 @@
+modF = {
+  "id": "F",
+  "name": {"en": "Module F — Social Anxiety Disorder (Social Phobia)",
+           "hi": "माड्यूल F — सामाजिक आतंक विकार (सोशल फ़ोबिया)"},
+  "screen": {"intro": {"en": "Screen-in question (past month)", "hi": "स्क्रीन-इन प्रश्न (पिछले माह)"},
+             "examples": {"en": "Examples of such social situations typically include: initiating or maintaining a conversation, participating in small groups, dating, speaking to authority figures, attending parties, public speaking, eating in front of others, performing in front of others, urinating in a public washroom, etc.",
+                          "hi": "ऐसी सामाजिक स्थितियों के उदाहरण: बातचीत शुरू/जारी रखना, छोटे समूहों में भाग लेना, डेटिंग, अधिकार-स्थान व्यक्तियों से बोलना, पार्टियों में जाना, सार्वजनिक भाषण, दूसरों के सामने खाना, मंच पर प्रदर्शन, सार्वजनिक शौचालय में पेशाब करना आदि।"},
+             "questions": [
+      q("F1", "In the past month, did you have persistent fear and significant anxiety at being watched, being the focus of attention, or of being humiliated or embarrassed or rejected? This includes things like speaking in public, eating in public or with others, writing while someone watches, performing in front of others or being in social situations.",
+        "पिछले माह में क्या देखा जाने, ध्यान का केंद्र बनने, या अपमानित/शर्मिंदा/अस्वीकृत होने का लगातार भय और महत्वपूर्ण आतंक रहा? इसमें सार्वजनिक भाषण, सार्वजनिक रूप से/दूसरों संग खाना, किसी के देखते हुए लिखना, दूसरों के सामने प्रदर्शन या सामाजिक स्थितियाँ शामिल हैं।")],
+             "gateRule": "IF F1 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO AND MOVE TO THE NEXT MODULE.",
+             "gateNote": {"en": "If F1 is No, Module F terminates (Social Anxiety Disorder coded No).",
+                          "hi": "यदि F1 'नहीं' है, माड्यूल F समाप्त (सामाजिक आतंक विकार 'नहीं' कोड)।"}},
+  "questions": [
+      q("F2", "Do these social situations almost always bring on fear or anxiety?", "क्या ये सामाजिक स्थितियाँ लगभग सदा भय या आतंक उत्पन्न करती हैं?"),
+      q("F3", "Do you fear these social situations so much that you avoid them, or suffer through them, or need a companion to face them?",
+        "क्या आप इतना डरते हैं कि इन स्थितियों से बचते हैं, झेलते हैं, या सामना हेतु साथी चाहते हैं?"),
+      q("F4", "Is this social fear or anxiety excessive or unreasonable in these social situations?", "क्या यह सामाजिक भय/आतंक अत्यधिक या अनुचित है?"),
+      q("F5", "Did this social avoidance, fear or anxiety persist for at least 6 months?", "क्या यह सामाजिक परहेज़/भय/आतंक कम से कम 6 माह जारी रहा?"),
+      q("F6", "Did these social fears cause significant distress or interfere with your ability to function at work, at school or socially or in your relationships or in some other important way?",
+        "क्या इन सामाजिक भयों से महत्वपूर्ण कष्ट हुआ या कार्य/विद्यालय/सामाजिक/संबंध/अन्य महत्वपूर्ण क्षेत्रों में कार्यक्षमता बाधित हुई?")],
+  "terminateRules": {"en": "Each of F2-F6: if No, go to the diagnostic box, circle No and move to the next module.",
+                     "hi": "F2-F6 में से प्रत्येक: यदि 'नहीं', तो नैदानिक बॉक्स पर जाएँ, 'नहीं' घेरें और अगले माड्यूल पर बढ़ें।"},
+  "clinicianNote": {"en": "Note to clinician: please specify if the subject's fears are restricted to speaking or performing in public.",
+                    "hi": "चिकित्सक हेतु सूचना: यदि भय केवल सार्वजनिक बोलने/प्रदर्शन तक सीमित हो तो निर्दिष्ट करें।"},
+  "diagnosticBoxes": [
+    {"id": "F_diag", "label": {"en": "Social Anxiety Disorder (Social Phobia) — Current", "hi": "सामाजिक आतंक विकार — वर्तमान"},
+     "rule": "F1-F6 all Yes AND organic cause ruled out (O2 summary). Specifier: RESTRICTED TO PERFORMANCE (social) only.",
+     "flags": ["CURRENT", "RESTRICTED TO PERFORMANCE"], "disordersOnPositive": ["social_anxiety"]}]
+}
+

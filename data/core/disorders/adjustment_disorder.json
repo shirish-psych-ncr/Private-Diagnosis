@@ -1,0 +1,10 @@
+{
+  "name": {
+    "en": "Adjustment Disorder",
+    "hi": "अनुकूलन विकार"
+  },
+  "tier": 2,
+  "dsm5": "Adjustment Disorder",
+  "icd11": "6B43",
+  "mappingNote": "ICD-11 Adjustment disorder is 6B43, within the 6B42-6B45 trauma/stressor block together with prolonged grief disorder 6B42, reactive attachment disorder 6B44 and disinhibited social engagement disorder 6B45 (index 6.2.2)."
+}

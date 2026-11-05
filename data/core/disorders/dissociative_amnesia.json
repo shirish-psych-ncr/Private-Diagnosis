@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Dissociative Amnesia",
+    "hi": "वियोजीय क्षतिस्मृति"
+  },
+  "tier": 5,
+  "dsm5": "Dissociative Amnesia",
+  "icd11": "6B60",
+  "description": {
+    "en": "Inability to recall important autobiographical information, inconsistent with ordinary forgetting; may include dissociative fugue.",
+    "hi": "महत्वपूर्ण आत्मकथात्मक सूचना का स्मरण-असमर्थता, साधारण विस्मरण से असंगत; वियोजीय फ्यूग सम्मिलित हो सकती है।"
+  },
+  "mappingNote": "ICD-11 6B60; DSM-5-TR Dissociative Amnesia. Flagged by MID-60 amnesia subscales."
+}

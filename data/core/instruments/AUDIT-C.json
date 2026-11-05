@@ -1,0 +1,11 @@
+{
+  "name": "Alcohol Use Disorders Identification Test",
+  "description": {
+    "en": "Alcohol use screening",
+    "hi": "शराब उपयोग स्क्रीनिंग"
+  },
+  "domains": [
+    "substance"
+  ],
+  "duration": "1-2 minutes"
+}

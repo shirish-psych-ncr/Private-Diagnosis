@@ -1,0 +1,194 @@
+[
+  {
+    "id": "cas_cluster_18",
+    "name": {
+      "en": "18. Anger cluster 18",
+      "hi": "18. क्रोध समूह 18"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. My feelings of anger don't interfere with my health.",
+          "hi": "स्वास्थ्य पर क्रोध का प्रभाव नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. My feelings of anger are beginning to interfere with my health.",
+          "hi": "क्रोध स्वास्थ्य को बाधित करने लगा है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. My anger prevents me from devoting much time and attention to my health.",
+          "hi": "क्रोध से स्वास्थ्य हेतु समय/ध्यान नहीं दे पाता/पाती।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I'm so angry at everything these days that I pay no attention to my health and well-being.",
+          "hi": "इन दिनों सब पर क्रोध — स्वास्थ्य एवं सुस्थिति प्रति ध्यान शून्य।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_18",
+        "itemNumber": 18,
+        "cluster": true,
+        "text": {
+          "en": "18. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "18. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_19",
+    "name": {
+      "en": "19. Anger cluster 19",
+      "hi": "19. क्रोध समूह 19"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. My appetite does not suffer because of my feelings of anger.",
+          "hi": "क्रोध से भूख प्रभावित नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. My feelings of anger are beginning to affect my appetite.",
+          "hi": "क्रोध भूख को प्रभावित करने लगा है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. My feelings of anger leave me without much of an appetite.",
+          "hi": "क्रोध से भूख khá कम रहती है।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. My anger is so intense that it has taken away my appetite.",
+          "hi": "क्रोध इतना तीव्र कि भूख पूरी समाप्त।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_19",
+        "itemNumber": 19,
+        "cluster": true,
+        "text": {
+          "en": "19. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "19. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_20",
+    "name": {
+      "en": "20. Anger cluster 20",
+      "hi": "20. क्रोध समूह 20"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. My ability to think clearly is unaffected by my feelings of anger.",
+          "hi": "स्पष्ट चिंतन पर क्रोध का प्रभाव नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. Sometimes my feelings of anger prevent me from thinking in a clear-headed way.",
+          "hi": "क्रोध से कभी-कभी स्पष्ट चिंतन बाधित।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. My anger makes it hard for me to think of anything else.",
+          "hi": "क्रोध से अन्य कुछ सोचना कठिन।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I'm so intensely angry and hostile that it completely interferes with my thinking.",
+          "hi": "प्रचंड क्रोध/शत्रुभाव से चिंतन पूर्णतः बाधित।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_20",
+        "itemNumber": 20,
+        "cluster": true,
+        "text": {
+          "en": "20. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "20. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_21",
+    "name": {
+      "en": "21. Anger cluster 21",
+      "hi": "21. क्रोध समूह 21"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I don't feel so angry that it interferes with my interest in sex.",
+          "hi": "क्रोध से यौन-रुचि बाधित नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. My feelings of anger leave me less interested in sex than I used to be.",
+          "hi": "क्रोध से यौन-रुचि पूर्व अपेक्षा कम।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. My current feelings of anger undermine my interest in sex.",
+          "hi": "वर्तमान क्रोध यौन-रुचि कमजोर करता है।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I'm so angry about my life that I've completely lost interest in sex.",
+          "hi": "जीवन के क्रोध से यौन-रुचि पूर्णतः लुप्त।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_21",
+        "itemNumber": 21,
+        "cluster": true,
+        "text": {
+          "en": "21. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "21. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  }
+]

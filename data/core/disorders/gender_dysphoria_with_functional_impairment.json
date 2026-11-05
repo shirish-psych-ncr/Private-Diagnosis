@@ -1,0 +1,15 @@
+{
+  "name": {
+    "en": "Gender-related functional impairment & low life satisfaction",
+    "hi": "लिंग-संबंधी कार्य-बाधा एवं निम्न जीवन-संतुष्टि"
+  },
+  "tier": 2,
+  "dsm5": "Contextual specifier (functioning)",
+  "icd11": "QA2x / contextual",
+  "description": {
+    "en": "High functional-impact and low life-satisfaction scores on the GCLS — a treatment-planning and follow-up marker rather than a diagnosis.",
+    "hi": "GCLS पर उच्च कार्यात्मक-प्रभाव एवं निम्न जीवन-संतुष्टि स्कोर — रोग-निर्णय नहीं, वرن उपचार-योजना एवं अनुवर्ती का सूचक।"
+  },
+  "icd11Chapter": "Contextual codes (not a Chapter 06 mental disorder)",
+  "mappingNote": "Contextual modifier only; never a primary diagnosis. Use it to record that distress about gender is disrupting school/work, relationships, intimacy or home life, and to justify psychosocial support, referral to a gender service and repeat measurement of satisfaction over time."
+}

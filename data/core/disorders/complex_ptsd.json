@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Complex PTSD",
+    "hi": "जटिल आघात के बाद तनाव विकार"
+  },
+  "tier": 2,
+  "dsm5": "No separately named DSM-5-TR diagnosis (compared with PTSD with dissociative or delayed expression)",
+  "icd11": "6B41",
+  "description": {
+    "en": "PTSD with additional emotional regulation and self-concept disturbances",
+    "hi": "अतिरिक्त भावनात्मक नियमन और आत्म-अवधारणा गड़बड़ी के साथ PTSD"
+  },
+  "mappingNote": "ICD-11 Complex PTSD (6B41) has no identically named DSM-5-TR diagnosis; assess each system's criteria independently (index 6.1.3)."
+}

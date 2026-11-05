@@ -1,0 +1,278 @@
+{
+  "sincerity": {
+    "name": {
+      "en": "Sincerity",
+      "hi": "आंतरिकता/निष्ठा"
+    },
+    "domain": "h_h",
+    "items": [
+      6,
+      30,
+      54
+    ]
+  },
+  "fairness": {
+    "name": {
+      "en": "Fairness",
+      "hi": "न्यायपरायणता"
+    },
+    "domain": "h_h",
+    "items": [
+      12,
+      36,
+      60
+    ]
+  },
+  "greed_avoidance": {
+    "name": {
+      "en": "Greed Avoidance",
+      "hi": "लालच-परिहार"
+    },
+    "domain": "h_h",
+    "items": [
+      18,
+      42
+    ]
+  },
+  "modesty": {
+    "name": {
+      "en": "Modesty",
+      "hi": "विनम्रता"
+    },
+    "domain": "h_h",
+    "items": [
+      24,
+      48
+    ]
+  },
+  "fearfulness": {
+    "name": {
+      "en": "Fearfulness",
+      "hi": "भयाकुलता"
+    },
+    "domain": "e",
+    "items": [
+      5,
+      29,
+      53
+    ]
+  },
+  "anxiety": {
+    "name": {
+      "en": "Anxiety",
+      "hi": "चिंता"
+    },
+    "domain": "e",
+    "items": [
+      11,
+      35
+    ]
+  },
+  "dependence": {
+    "name": {
+      "en": "Dependence",
+      "hi": "निर्भरता"
+    },
+    "domain": "e",
+    "items": [
+      17,
+      41
+    ]
+  },
+  "sentimentality": {
+    "name": {
+      "en": "Sentimentality",
+      "hi": "संवेदनशीलता"
+    },
+    "domain": "e",
+    "items": [
+      23,
+      47,
+      59
+    ]
+  },
+  "social_self_esteem": {
+    "name": {
+      "en": "Social Self-Esteem",
+      "hi": "सामाजिक आत्मसम्मान"
+    },
+    "domain": "x",
+    "items": [
+      4,
+      28,
+      52
+    ]
+  },
+  "social_boldness": {
+    "name": {
+      "en": "Social Boldness",
+      "hi": "सामाजिक साहस"
+    },
+    "domain": "x",
+    "items": [
+      10,
+      34,
+      58
+    ]
+  },
+  "sociability": {
+    "name": {
+      "en": "Sociability",
+      "hi": "सामाजिकता"
+    },
+    "domain": "x",
+    "items": [
+      16,
+      40
+    ]
+  },
+  "liveliness": {
+    "name": {
+      "en": "Liveliness",
+      "hi": "प्राणोद्वलन"
+    },
+    "domain": "x",
+    "items": [
+      22,
+      46
+    ]
+  },
+  "forgiveness": {
+    "name": {
+      "en": "Forgiveness",
+      "hi": "क्षमाशीलता"
+    },
+    "domain": "a",
+    "items": [
+      3,
+      27
+    ]
+  },
+  "gentleness": {
+    "name": {
+      "en": "Gentleness",
+      "hi": "कोमलता"
+    },
+    "domain": "a",
+    "items": [
+      9,
+      33,
+      51
+    ]
+  },
+  "flexibility": {
+    "name": {
+      "en": "Flexibility",
+      "hi": "लचीलापन"
+    },
+    "domain": "a",
+    "items": [
+      15,
+      39,
+      57
+    ]
+  },
+  "patience": {
+    "name": {
+      "en": "Patience",
+      "hi": "धैर्य"
+    },
+    "domain": "a",
+    "items": [
+      21,
+      45
+    ]
+  },
+  "organization": {
+    "name": {
+      "en": "Organization",
+      "hi": "सुव्यवस्था"
+    },
+    "domain": "c",
+    "items": [
+      2,
+      26
+    ]
+  },
+  "diligence": {
+    "name": {
+      "en": "Diligence",
+      "hi": "परिश्रमिता"
+    },
+    "domain": "c",
+    "items": [
+      8,
+      32
+    ]
+  },
+  "perfectionism": {
+    "name": {
+      "en": "Perfectionism",
+      "hi": "परिपूर्णता"
+    },
+    "domain": "c",
+    "items": [
+      14,
+      38,
+      50
+    ]
+  },
+  "prudence": {
+    "name": {
+      "en": "Prudence",
+      "hi": "सावधानता"
+    },
+    "domain": "c",
+    "items": [
+      20,
+      44,
+      56
+    ]
+  },
+  "aesthetic_appreciation": {
+    "name": {
+      "en": "Aesthetic Appreciation",
+      "hi": "सौंदर्य-साहाध्यता"
+    },
+    "domain": "o",
+    "items": [
+      1,
+      25
+    ]
+  },
+  "inquisitiveness": {
+    "name": {
+      "en": "Inquisitiveness",
+      "hi": "जिज्ञासा"
+    },
+    "domain": "o",
+    "items": [
+      7,
+      31
+    ]
+  },
+  "creativity": {
+    "name": {
+      "en": "Creativity",
+      "hi": "रचनात्मकता"
+    },
+    "domain": "o",
+    "items": [
+      13,
+      37,
+      49
+    ]
+  },
+  "unconventionality": {
+    "name": {
+      "en": "Unconventionality",
+      "hi": "अपरंपरिकता"
+    },
+    "domain": "o",
+    "items": [
+      19,
+      43,
+      55
+    ]
+  }
+}

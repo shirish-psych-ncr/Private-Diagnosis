@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Dissociative Identity Disorder",
+    "hi": "वियोजीय पहचान विकार"
+  },
+  "tier": 5,
+  "dsm5": "Dissociative Identity Disorder",
+  "icd11": "6B64",
+  "description": {
+    "en": "Two or more distinct personality states",
+    "hi": "दो या अधिक भिन्न व्यक्तित्व-अवस्थाएँ"
+  },
+  "mappingNote": "ICD-11 Dissociative identity disorder is 6B64; 6B11 does not exist in the dissociative block (6B60-6B66)."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "hallucinations",
+  "title": {
+    "en": "Malingered versus true hallucinations",
+    "hi": "छल-अभिनयित एवं वास्तविक Hallucination"
+  },
+  "items": [
+    {
+      "en": "Start open-ended ('Describe what you are hearing. Is there anything else you can describe?'); avoid educating the evaluee about expected signs — 'clinician assisted deception'.",
+      "hi": "प्रथम खुले प्रश्न ('जो सुनाई दे उसका वर्णन करें। और कुछ?'); अपेक्षित लक्षणों की शिक्षा न दें — इसे 'चिकित्सक-सहायताप्राप्त छल' कहते हैं।"
+    },
+    {
+      "en": "Phenomenology to document: content, clarity, loudness, vividness, duration, frequency, continuous/intermittent, single/multiple voices, gender, inside/outside the head, tone, person addressed, insight, belief others can hear, relationship to speaker, other sensory modalities, alone/with others, conversing back, ability to dismiss, mood, relation to delusions, confusion, reaction, commands, consequences of disobeying, effort not to obey, alternative motives, what worsens/improves, number of voices.",
+      "hi": "अभिलिखित घटना-विज्ञान: विषय, स्पष्टता, प्रबलता, व्यक्तता, काल, आवृत्ति, सतत/विविक्त, एक/अनेक स्वर, लिंग, मस्तिष्क के अंतः/बहिः, ध्वनि-स्वर, संबोधन, अंतर्दृष्टि, अन्यको श्रवण-विश्वास, वक्ता-संबंध, अन्य इंद्रिय-द्वारा, एकांत/समूह, उत्तर-दान, निवारण-समर्थता, भाव, भ्रम-संबंध, विषमता, प्रतिक्रिया, आदेश, अवमान्यता के परिणाम, अवमान्य इच्छा, वैकल्पिक प्रेरणा, वर्धन-हेतु, संख्या।"
+    },
+    {
+      "en": "In genuine psychosis voices are usually intermittent; Nayani & David (1996): 49% external, 38% internal, 12% both; abuse the commonest content; 76% identify at least one coping strategy (working, posture change, interpersonal contact, medication); being alone worsens voices in 80%, radio/TV worsen them.",
+      "hi": "वास्तविक मनोविकृति में स्वर प्रायः विविक्त; Nayani और David (1996): 49% बाह्य, 38% आंतरिक, 12% उभय; गाली सबसे सामान्य; 76% कम-से-कम एक सामना-रणनीति बताते हैं (कार्य, मुद्रा-परिवर्तन, संपर्क, औषधि); 80% में एकांत से वृद्धि, रेडियो/टीवी से भी वर्धन।"
+    },
+    {
+      "en": "Suspect auditory hallucinations: continuous rather than intermittent, vague/inaudible, not associated with delusions, stilted language, no strategies to diminish voices, claim that all commands are obeyed.",
+      "hi": "संदेहजनक श्रवण-भ्रम: सतत बजाय विविक्त, अस्पष्ट/अश्रव्य, भ्रम से असंबद्ध, कृत्रिम भाषा, स्वर-निवारण की कोई रणनीति नहीं, समस्त आदेश-पालन का दावा।"
+    },
+    {
+      "en": "Suspect visual hallucinations: visual alone in schizophrenia, black-and-white, dramatic/atypical, changing with eyes closed, miniature or giant figures, visions unrelated to delusions or auditory hallucinations. (Visual hallucinations were found in 46% of malingerers vs 4% of genuinely psychotic individuals; drug-induced visual phenomena are typically formed with eyes closed.)",
+      "hi": "संदेहजनक दृष्टि-भ्रम: स्किज़ोफ्रेनिया में केवल दृष्टि, श्वेत-श्याम, नाटकीय/असामान्य, नेत्र-बंद करने पर परिवर्तन, लीलिपुटियन/विराट आकृतियाँ, भ्रम-असंबद्ध दर्शन। (मालिंगरेटर्स में 46% बनाम वास्तविक मनोविकृतों में 4% दृष्टि-भ्रम; मादक-प्रेरित दृष्टि-घटनाएँ प्रायः नेत्र-बंद अवस्था में।)"
+    }
+  ]
+}

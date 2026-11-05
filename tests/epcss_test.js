@@ -2,48 +2,44 @@
 const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
+const { loadModule, localFetch } = require('./module_loader');
+let ready;
+const scrollCalls = [];
 
 const ROOT = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8')
   .replace(/<script[^>]*src="https:[^"]*"[^>]*><\/script>/g, '')
   .replace(/<meta http-equiv="Content-Security-Policy"[^>]*>[\s\S]*?content="[^"]*">/m, '');
 
-const dom = new JSDOM(html, { url: 'http://localhost/', runScripts: 'outside-only', pretendToBeVisual: true });
-const { window } = dom;
-const { document } = window;
-
-window.fetch = (url) => {
-  if (String(url).includes('data.json')) {
-    return Promise.resolve({ ok: true, json: () => Promise.resolve(JSON.parse(fs.readFileSync(path.join(ROOT, 'data.json'), 'utf8'))) });
-  }
-  return Promise.reject(new Error('unexpected fetch ' + url));
-};
+let dom, window, document;
 const pdfCalls = [];
+function initializeApp() {
+dom = new JSDOM(html, { url: 'http://localhost/', runScripts: 'outside-only', pretendToBeVisual: true });
+({ window } = dom);
+({ document } = window);
+
+window.fetch = localFetch;
+window.scrollTo = (...args) => scrollCalls.push(args);
+
 window.jspdf = { jsPDF: function () {
   this.text = (s) => pdfCalls.push(String(s).slice(0, 60));
   this.save = (name) => pdfCalls.push('SAVED:' + name);
   this.autoTable = (opts) => { pdfCalls.push('AUTOTABLE:' + JSON.stringify((opts && opts.head) || '')); this.lastAutoTable = { finalY: 100 }; };
+  this.splitTextToSize = (text) => String(text).split('\n');
   this.setFontSize = () => {}; this.setFont = () => {}; this.addPage = () => {};
   this.setTextColor = () => {}; this.setDrawColor = () => {}; this.setLineWidth = () => {};
   this.line = () => {}; this.rect = () => {}; this.internal = { pageSize: { getWidth: () => 200, getHeight: () => 290 } };
 }};
 
-window.eval(fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8'));
+ready = loadModule(dom.getInternalVMContext(), 'app.js');
+}
+initializeApp();
 
 
-// In-place reset equivalent to app's location.reload() (unsupported in jsdom)
+// Reload into a fresh DOM so private in-memory answers cannot leak between journeys.
 function resetApp() {
-  document.getElementById('consent-check').checked = false;
-  document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
-  document.getElementById('age-group').value = '';
-  document.getElementById('visit-reason').value = '';
-  document.getElementById('medications').value = '';
-  document.getElementById('prior-diagnoses').value = '';
-  document.querySelectorAll('#domain-list input[type=\"checkbox\"]').forEach(cb => { cb.checked = false; cb.dispatchEvent(new window.Event('change', { bubbles: true })); });
-  document.getElementById('scale-container').replaceChildren();
-  document.getElementById('patient-view').replaceChildren();
-  document.getElementById('report-content').replaceChildren();
-  document.querySelectorAll('.stage').forEach((s, i) => s.classList.toggle('active', i === 0));
+  window.close();
+  initializeApp();
 }
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
@@ -51,11 +47,10 @@ let failures = 0;
 function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name); if (!cond) failures++; }
 
 // jsdom does not implement window.scrollTo; stub it so we can assert calls.
-const scrollCalls = [];
-window.scrollTo = (...args) => scrollCalls.push(args);
+
 
 (async () => {
-  await sleep(300);
+  await ready; await sleep(300);
   check('stage0 active on load', document.getElementById('stage-0').classList.contains('active'));
 
   // --- Sequential gating: next states must NOT load before Continue ---
@@ -70,7 +65,7 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   const ctxForm = document.getElementById('context-form');
   document.getElementById('age-group').value = '';
   ctxForm.dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
-  await sleep(50);
+  await ready; await sleep(50);
   const ageErr = document.getElementById('context-age-error');
   check('missing age group shows inline error', ageErr && !ageErr.classList.contains('hidden'));
   check('failed gate keeps stage 2 hidden', !document.getElementById('stage-2').classList.contains('active'));
@@ -83,7 +78,7 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   // stage 1 hidden — the next state does not load before Continue passes.
   consentBtn.disabled = false;
   consentBtn.click();
-  await sleep(50);
+  await ready; await sleep(50);
   const consentErr = document.getElementById('consent-error');
   check('unchecked consent shows inline error', consentErr && !consentErr.classList.contains('hidden'));
   check('failed consent gate keeps stage 1 hidden', !document.getElementById('stage-1').classList.contains('active'));
@@ -92,7 +87,7 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
   check('consent button enabled after check', consentBtn.disabled === false);
   consentBtn.click();
-  await sleep(50);
+  await ready; await sleep(50);
   check('consent error cleared after valid Continue', consentErr && consentErr.classList.contains('hidden'));
   check('advanced to stage 1 (context)', document.getElementById('stage-1').classList.contains('active'));
   check('scroll-to-top fired on consent Continue', scrollCalls.length >= 1 && scrollCalls[scrollCalls.length - 1][0] === 0 && scrollCalls[scrollCalls.length - 1][1] === 0);
@@ -100,7 +95,7 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   document.getElementById('age-group').value = 'adult';
   document.getElementById('visit-reason').value = 'feeling low lately';
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
-  await sleep(50);
+  await ready; await sleep(50);
   check('advanced to stage 2 (domains)', document.getElementById('stage-2').classList.contains('active'));
 
   const domainOpts = document.querySelectorAll('#domain-list .domain-option');
@@ -112,7 +107,7 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   };
   pickDomain('mood'); pickDomain('anxiety');
   document.getElementById('domains-next').click();
-  await sleep(50);
+  await ready; await sleep(50);
   check('advanced to stage 3 (scales)', document.getElementById('stage-3').classList.contains('active'));
 
   const scaleSections = document.querySelectorAll('#scale-container .scale-section');
@@ -123,7 +118,7 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   allRadios.forEach(r => { (groups[r.name] = groups[r.name] || []).push(r); });
   Object.values(groups).forEach(list => { list[0].checked = true; list[0].dispatchEvent(new window.Event('change', { bubbles: true })); });
   document.getElementById('scales-finish').click();
-  await sleep(50);
+  await ready; await sleep(50);
   check('advanced to stage 4 (results)', document.getElementById('stage-4').classList.contains('active'));
 
   const pv = document.getElementById('patient-view').textContent;
@@ -136,81 +131,81 @@ window.scrollTo = (...args) => scrollCalls.push(args);
 
   // Positive-screen path: redo flow answering the LAST option of each group (high severity)
   resetApp();
-  await sleep(50);
+  await ready; await sleep(50);
   document.getElementById('consent-check').checked = true;
   document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
   document.getElementById('consent-btn').click();
   document.getElementById('age-group').value = 'adult';
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
-  await sleep(50);
+  await ready; await sleep(50);
   pickDomain('mood');
   document.getElementById('domains-next').click();
-  await sleep(50);
+  await ready; await sleep(50);
   const g2 = {};
   Array.from(document.querySelectorAll('#scale-container input[type=\"radio\"]')).forEach(r => { (g2[r.name] = g2[r.name] || []).push(r); });
   Object.values(g2).forEach(list => { list[list.length - 1].checked = true; list[list.length - 1].dispatchEvent(new window.Event('change', { bubbles: true })); });
   // safety modal will fire on last option of item 9 — acknowledge it
-  await sleep(50);
+  await ready; await sleep(50);
   if (!document.getElementById('safety-modal').classList.contains('hidden')) {
     document.getElementById('safety-close').click();
-    await sleep(50);
+    await ready; await sleep(50);
   }
   document.getElementById('scales-finish').click();
-  await sleep(50);
+  await ready; await sleep(50);
   const rc2 = document.getElementById('report-content').textContent;
   check('positive screen yields tiered differentials with DSM/ICD codes', /Tier \d/.test(rc2) && /6A\d\d/.test(rc2));
 
   document.getElementById('lang-hi').click();
-  await sleep(50);
+  await ready; await sleep(50);
   check('hindi applied after toggle', /[ऀ-ॿ]/.test(document.body.textContent));
   check('still on stage 4 after language switch', document.getElementById('stage-4').classList.contains('active'));
   document.getElementById('lang-en').click();
-  await sleep(50);
+  await ready; await sleep(50);
 
   pdfCalls.length = 0;
   document.getElementById('pdf-btn').click();
-  await sleep(100);
+  await ready; await sleep(100);
   check('PDF generated via jsPDF mock', pdfCalls.some(c => String(c).startsWith('SAVED:')));
 
   // Pediatric routing -> VADRS matrix
   resetApp();
-  await sleep(50);
+  await ready; await sleep(50);
   check('reset returns to stage 0', document.getElementById('stage-0').classList.contains('active'));
   document.getElementById('consent-check').checked = true;
   document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
   document.getElementById('consent-btn').click();
   document.getElementById('age-group').value = 'pediatric';
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
-  await sleep(50);
+  await ready; await sleep(50);
   pickDomain('neurodevelopmental');
   document.getElementById('domains-next').click();
-  await sleep(50);
+  await ready; await sleep(50);
   const scaleText = document.getElementById('scale-container').textContent;
   check('pediatric ADHD routing renders VADRS', /VADRS|Vanderbilt/i.test(scaleText));
   check('sticky-column matrix table rendered', document.querySelectorAll('#scale-container .matrix-table').length >= 1);
 
   // Safety override: adult mood, endorse highest option on safety item
   resetApp();
-  await sleep(50);
+  await ready; await sleep(50);
   document.getElementById('consent-check').checked = true;
   document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
   document.getElementById('consent-btn').click();
   document.getElementById('age-group').value = 'adult';
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
-  await sleep(50);
+  await ready; await sleep(50);
   pickDomain('mood');
   document.getElementById('domains-next').click();
-  await sleep(50);
+  await ready; await sleep(50);
   const safetyRadio = Array.from(document.querySelectorAll('#scale-container .safety-item input[type="radio"]')).pop();
   check('safety item flagged in DOM', !!safetyRadio);
   if (safetyRadio) {
     safetyRadio.checked = true;
     safetyRadio.dispatchEvent(new window.Event('change', { bubbles: true }));
-    await sleep(50);
+    await ready; await sleep(50);
     check('crisis modal opens on safety endorsement', !document.getElementById('safety-modal').classList.contains('hidden'));
     check('crisis resources listed', document.getElementById('crisis-resources').textContent.trim().length > 10);
     document.getElementById('safety-close').click();
-    await sleep(50);
+    await ready; await sleep(50);
     check('modal closes via acknowledge button', document.getElementById('safety-modal').classList.contains('hidden'));
   }
 
@@ -222,28 +217,28 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   // 12, 13) with bands 9-14 possible / 15+ probable factitious disorder.
   // ---------------------------------------------------------------------
   resetApp();
-  await sleep(50);
+  await ready; await sleep(50);
   document.getElementById('consent-check').checked = true;
   document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
   document.getElementById('consent-btn').click();
   document.getElementById('age-group').value = 'adult';
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
-  await sleep(50);
+  await ready; await sleep(50);
   check('somatic domain present in grid', pickDomain('somatic'));
   document.getElementById('domains-next').click();
-  await sleep(50);
+  await ready; await sleep(50);
 
   const somScreens = Array.from(
     document.querySelectorAll('#scale-container input[name^="somatic:"][value="1"]'));
   check('somatic domain deploys both screen-in items', somScreens.length >= 2);
   somScreens.forEach(r => { r.checked = true; r.dispatchEvent(new window.Event('change', { bubbles: true })); });
-  await sleep(80);
+  await ready; await sleep(80);
 
   const scaleText2 = document.getElementById('scale-container').textContent;
   check('FAC22-SR instrument deployed after screen-in', /FAC22/i.test(scaleText2));
   check('PHQ-15 instrument deployed after screen-in', /PHQ-?15/i.test(scaleText2));
 
-  const DATA2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data.json'), 'utf8'));
+  const DATA2 = (await ready).modules.get(path.join(ROOT, 'src/app/state.js')).namespace.CLINICAL_DATA;
   const facItems = DATA2.scales.fac22_sr.parts[0].questions;
   const phqItems = DATA2.scales.phq15.parts[0].questions;
 
@@ -258,14 +253,14 @@ window.scrollTo = (...args) => scrollCalls.push(args);
   }
   const nFac = answerScale('fac22_sr', it => (it.keyedAnswer === 'T' ? 1 : 0));   // every item keyed-positive
   const nPhq = answerScale('phq15', () => 2);                                     // "bothered a lot" throughout
-  await sleep(80);
+  await ready; await sleep(80);
   check('FAC22-SR rendered all 22 items', nFac === 22 && /name="fac22_sr:fac_22"/.test(document.getElementById('scale-container').innerHTML));
   check('PHQ-15 rendered all 15 items with 0-2 anchors', nPhq === 15 && /Bothered a lot/.test(document.getElementById('scale-container').textContent));
 
   document.getElementById('scales-finish').click();
-  await sleep(120);
+  await ready; await sleep(120);
   const report2 = document.getElementById('report-content').textContent;
-  check('results reached once somatic instruments complete', document.getElementById('stage-3').classList.contains('active'));
+  check('results reached once somatic instruments complete', document.getElementById('stage-4').classList.contains('active'));
   check('clinician report shows FAC22-SR keyed score 22', /FAC22[\s\S]{0,160}?22\s*\/\s*22/.test(report2));
   check('FAC22 max keying reported as probable factitious disorder', /Probable factitious disorder/i.test(report2));
   check('factitious disorder appears in clinician differential', /factitious/i.test(report2));
@@ -275,23 +270,23 @@ window.scrollTo = (...args) => scrollCalls.push(args);
 
   // Partial completion must be blocked (no silent scoring of an incomplete table).
   resetApp();
-  await sleep(50);
+  await ready; await sleep(50);
   document.getElementById('consent-check').checked = true;
   document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
   document.getElementById('consent-btn').click();
   document.getElementById('age-group').value = 'adult';
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
-  await sleep(50);
+  await ready; await sleep(50);
   check('somatic domain present in grid', pickDomain('somatic'));
   document.getElementById('domains-next').click();
-  await sleep(50);
+  await ready; await sleep(50);
   Array.from(document.querySelectorAll('#scale-container input[name^="somatic:"][value="1"]'))
     .forEach(r => { r.checked = true; r.dispatchEvent(new window.Event('change', { bubbles: true })); });
-  await sleep(80);
+  await ready; await sleep(80);
   answerScale('phq15', () => 1);   // leave all 22 FAC22 items blank
   document.getElementById('scales-finish').click();
-  await sleep(120);
-  check('incomplete FAC22-SR blocks results', !document.getElementById('stage-3').classList.contains('active'));
+  await ready; await sleep(120);
+  check('incomplete FAC22-SR blocks results', !document.getElementById('stage-4').classList.contains('active'));
 
   console.log('\n' + (failures === 0 ? 'ALL TESTS PASSED' : failures + ' FAILURES'));
   process.exit(failures === 0 ? 0 : 1);

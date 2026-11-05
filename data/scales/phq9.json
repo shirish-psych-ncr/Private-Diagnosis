@@ -1,0 +1,122 @@
+{
+  "id": "phq9",
+  "questions": [
+    {
+      "id": "mood_1",
+      "text": {
+        "en": "Little interest or pleasure in doing things",
+        "hi": "चीजों को करने में थोड़ी रुचि या आनंद न होना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_2",
+      "text": {
+        "en": "Feeling down, depressed, or hopeless",
+        "hi": "उदास, अवसादग्रस्त, या निराश महसूस करना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_3",
+      "text": {
+        "en": "Trouble falling or staying asleep, or sleeping too much",
+        "hi": "नींद आने में या नींद बने रहने में कठिनाई, या बहुत ज़्यादा सोना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_4",
+      "text": {
+        "en": "Feeling tired or having little energy",
+        "hi": "थकान महसूस करना या ऊर्जा का अभाव"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_5",
+      "text": {
+        "en": "Poor appetite or overeating",
+        "hi": "भूख कम लगना या ज़्यादा खाना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_6",
+      "text": {
+        "en": "Feeling bad about yourself, or that you are a failure or have let yourself or your family down",
+        "hi": "अपने बारे में बुरा महसूस करना, या कि आप विफल हैं या अपने और परिवार को निराश किया"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_7",
+      "text": {
+        "en": "Trouble concentrating on things, such as reading the newspaper or watching television",
+        "hi": "चीज़ों पर ध्यान केंद्रित करने में कठिनाई, जैसे अखबार पढ़ना या टीवी देखना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_8",
+      "text": {
+        "en": "Moving or speaking so slowly that other people noticed, or being fidgety and restless",
+        "hi": "इतना धीमा चलना या बोलना कि दूसरों ने नोटिस किया, या बेचैन और अशांत होना"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "depression_persistent",
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "mood_9",
+      "text": {
+        "en": "Thoughts that you would be better off dead, or of hurting yourself",
+        "hi": "विचार कि आप मर जाएँ तो बेहतर होगा, या खुद को नुकसान पहुँचाने के"
+      },
+      "sharedScale": "freq4",
+      "disorders": [
+        "depression_mdd",
+        "bipolar_depressive"
+      ],
+      "safety": true
+    }
+  ]
+}

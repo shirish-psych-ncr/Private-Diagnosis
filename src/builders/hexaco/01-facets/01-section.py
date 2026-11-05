@@ -1,0 +1,51 @@
+        "type": "matrix",
+        "administeredBy": "informant",
+        "optionalAssessment": True,
+        "sourceInstrument": "HEXACO-PI-R / HEXACO-60",
+        "targetAge": ["adolescent", "adult"],
+        "directions": bi(
+            "निम्न पृष्ठों में उन व्यक्ति के बारे में कथनों की एक श्रृंखला दी गई है जिसे आप अभी रेट कर रहे हैं। प्रत्येक कथन पढ़ें और निर्णय करें कि आप उससे कितना सहमत या असहमत हैं। फिर निम्न पैमाने का उपयोग कर उत्तर दें: 5 = पूर्णतः सहमत, 4 = सहमत, 3 = तटस्थ (न सहमत न असहमत), 2 = असहमत, 1 = पूर्णतः असहमत। प्रत्येक कथन का उत्तर दें, भले ही आप पूर्णतः निश्चित न हों।\n\nमूल्यांकन से पूर्व रेट किए जा रहे व्यक्ति के बारे में ये जानकारी दें: परिचय की संवत्सर-संख्या, लिंग, आयु।",
+            "On the following pages you will find a series of statements about the person that you are rating now. Please read each statement and decide how much you agree or disagree with that statement. Then write your response in the space next to the statement using the following scale: 5 = strongly agree, 4 = agree, 3 = neutral (neither agree nor disagree), 2 = disagree, 1 = strongly disagree. Please answer every statement, even if you are not completely sure of your response.\n\nPlease provide the following information about the person that you will be rating: number of years you have been acquainted with this person, sex of the person being rated, and age of the person being rated."),
+        "timeframe": bi(
+            "सामान्यतः — स्थायी व्यवहार-पैटर्न (अस्थायी अवस्थाएँ नहीं)।",
+            "General, long-standing pattern as observed by the informant (not a temporary state)."),
+        "informantFields": [
+            {"id": "hx_years_acquainted", "label": bi("परिचय की अवधि (वर्ष)",
+                                                     "Number of years that you have been acquainted with this person")},
+            {"id": "hx_subject_sex", "label": bi("मूल्यांकन-विषय का लिंग",
+                                                "Sex of the person that you will be rating"),
+             "options": [{"v": "female", "label": bi("स्त्री", "Female")},
+                         {"v": "male", "label": bi("पुरुष", "Male")}]},
+            {"id": "hx_subject_age", "label": bi("मूल्यांकन-विषय की आयु (वर्ष)",
+                                                "Age of the person that you will be rating")},
+        ],
+        "parts": [{
+            "id": "hx_items",
+            "partKey": "observer_items",
+            "name": bi("पर्यवेक्षक-रेटिंग — 60 कथन (1 = पूर्णतः असहमत … 5 = पूर्णतः सहमत)",
+                       "Observer ratings — 60 statements (1 = strongly disagree … 5 = strongly agree)"),
+            "questions": questions,
+        }],
+        "matrixOptions": [
+            {"v": 1, "label": bi("1 पूर्णतः असहमत", "1 Strongly disagree")},
+            {"v": 2, "label": bi("2 असहमत", "2 Disagree")},
+            {"v": 3, "label": bi("3 तटस्थ", "3 Neutral")},
+            {"v": 4, "label": bi("4 सहमत", "4 Agree")},
+            {"v": 5, "label": bi("5 पूर्णतः सहमत", "5 Strongly agree")},
+        ],
+        "ratingScale": {
+            "min": 1, "max": 5,
+            "note": bi(
+                "1 = पूर्णतः असहमत · 2 = असहमत · 3 = तटस्थ · 4 = सहमत · 5 = पूर्णतः सहमत। 'R' चिह्नित आइटम व्युक्रम-अंकित होते हैं।",
+                "1 = strongly disagree, 2 = disagree, 3 = neutral (neither agree nor disagree), 4 = agree, 5 = strongly agree. Items marked R are reverse-scored."),
+        },
+        "facets": facets,
+        "domains": domains,
+        "sumScoring": True,
+        "scoring": {
+            "method": "hexaco_observer_facet_domain_means",
+            "scaleMin": 1,
+            "scaleMax": 5,
+            "rule": bi(
+                "प्रत्येक आइटम 1-5 पर रेट होता है। पहले व्युक्रम-आइटम (R) के लिए 6 − उत्तर निकालें। प्रत्येक फलक (facet) का अंक = उसके (व्युक्रम-अंकित) आइटमों का माध्य; प्रत्येक डोमेन का अंक = अपने चार फलक-अंकों का माध्य। सभी अंक 1-5 पर रिपोर्ट हों।",
+                "Rate each item 1-5. For every item marked R in the scoring guide, use 6 minus the response. A facet score is the MEAN of its (reversed where keyed) raw items; a domain score is the MEAN of its four facet scores. Report all scores on the 1-5 metric."),

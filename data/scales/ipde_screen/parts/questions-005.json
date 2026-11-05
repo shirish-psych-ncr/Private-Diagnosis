@@ -1,0 +1,123 @@
+[
+  {
+    "id": "ipde_F60_7",
+    "name": {
+      "en": "F60.7 Dependent",
+      "hi": "F60.7 Dependent"
+    },
+    "icd10Module": "F60.7",
+    "disorderName": {
+      "en": "Dependent Personality Disorder",
+      "hi": "Dependent Personality Disorder"
+    },
+    "disorders": [
+      "dependent_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_6",
+        "itemNumber": 6,
+        "text": {
+          "en": "I let others make my big decisions for me.",
+          "hi": "मैं अपने बड़े निर्णय दूसरों को करने देता/करने देती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_15",
+        "itemNumber": 15,
+        "text": {
+          "en": "I find it hard to disagree with people if I depend on them a lot.",
+          "hi": "जिन पर मैं बहुत निर्भर हूँ उनसे असहमत होना मुझे कठिन लगता है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_22",
+        "itemNumber": 22,
+        "text": {
+          "en": "I've held grudges against people for years.",
+          "hi": "मैं वर्षों तक लोगों के प्रति द्বেष रखता/रखती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_33",
+        "itemNumber": 33,
+        "text": {
+          "en": "I usually feel uncomfortable or helpless when I am alone.",
+          "hi": "अकेले होने पर मुझे सहज नहीं या असहाय महसूस होता है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_42",
+        "itemNumber": 42,
+        "text": {
+          "en": "I worry about being left alone and having to care for myself.",
+          "hi": "अकेले रह जाने और स्वयं की देखभाल करने की चिंता सताती है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_45",
+        "itemNumber": 45,
+        "text": {
+          "en": "I don't ask favors from people I depend on a lot.",
+          "hi": "जिन पर बहुत निर्भर हूँ उनसे मैं सहायता नहीं माँगता/माँगती।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_49",
+        "itemNumber": 49,
+        "text": {
+          "en": "I often seek advice or reassurance about everyday decisions.",
+          "hi": "रोज़मर्रा के निर्णय हेतु मैं प्रायः सलाह या आश्वासन माँगता/माँगती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_57",
+        "itemNumber": 57,
+        "text": {
+          "en": "Everyone needs a friend or two to be happy.",
+          "hi": "सुखी रहने हेतु प्रत्येक को एक-दो मित्रों की आवश्यकता होती है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.7",
+        "disorders": [
+          "dependent_personality_disorder"
+        ]
+      }
+    ]
+  }
+]

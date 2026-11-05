@@ -1,0 +1,15 @@
+{
+  "name": {
+    "en": "Gender Incongruence",
+    "hi": "लिंग असंगति"
+  },
+  "tier": 4,
+  "dsm5": "Gender Dysphoria",
+  "icd11": "HA60",
+  "description": {
+    "en": "Marked incongruence between experienced and assigned gender",
+    "hi": "अनुभव किए गए और सौंपे गए लिंग के बीच स्पष्ट असंगति"
+  },
+  "icd11Chapter": "Chapter 17: Conditions related to sexual health",
+  "mappingNote": "ICD-11 codes by life stage: Gender incongruence of adolescence or adulthood is HA60; gender incongruence of childhood is HA61; unspecified is HA6Z (Appendix A §12.2). ICD gender incongruence is a different construct from DSM gender dysphoria and does not require the same distress/impairment criterion; it sits outside Chapter 06. Gender diversity alone is not a mental disorder."
+}

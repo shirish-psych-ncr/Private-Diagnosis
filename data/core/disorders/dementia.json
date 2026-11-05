@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Mild Neurocognitive Disorder",
+    "hi": "हल्का स्नायु-संज्ञानात्मक विकार"
+  },
+  "tier": 4,
+  "dsm5": "Mild Neurocognitive Disorder",
+  "icd11": "6D71",
+  "description": {
+    "en": "Modest cognitive decline beyond normal ageing",
+    "hi": "सामान्य वृद्धावस्था से परे विनम्र संज्ञानात्मक गिरावट"
+  },
+  "mappingNote": "ICD-11 Mild neurocognitive disorder is 6D71; 6D40 is Parkinson disease (Chapter 08). Dementia categories 6D80-6D85 are the principal comparison for DSM major neurocognitive disorder."
+}

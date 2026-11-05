@@ -1,0 +1,11 @@
+{
+  "name": "Beck Anxiety Inventory",
+  "description": {
+    "en": "Anxiety severity assessment",
+    "hi": "चिंता गंभीरता मूल्यांकन"
+  },
+  "domains": [
+    "anxiety"
+  ],
+  "duration": "5-10 minutes"
+}

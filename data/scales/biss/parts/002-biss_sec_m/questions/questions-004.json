@@ -1,0 +1,176 @@
+[
+  {
+    "id": "biss_36",
+    "itemNumber": 36,
+    "text": {
+      "en": "Elevated evening energy, interests: Increases in energy, activity, or interests in evening/night period."
+    },
+    "itemName": {
+      "en": "Elevated evening energy, interests"
+    },
+    "definition": {
+      "en": "Increases in energy, activity, or interests in evening/night period."
+    },
+    "probes": [
+      {
+        "en": "Has your energy, activity or interests been about the same throughout the day?"
+      },
+      {
+        "en": "Have you had any tendency to be particularly active or take on projects in the evening or at night?"
+      },
+      {
+        "en": "Have you had more energy during the evening or nighttime?"
+      },
+      {
+        "en": "Have these kept you up past your usual hour of going to bed, or beyond midnight?"
+      },
+      {
+        "en": "Has it ever been difficult to stop what you are doing, e.g., reading, TV, project at night?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., frequently has more energy, interests in evening that delay time of getting to bed by up to 1 hour"
+      },
+      {
+        "en": "Mild; e.g., most evenings takes on activities that delay time getting to sleep by up to 2 hours, feels more energized most evenings/nights with difficulty calming down. Has difficulty discontinuing activities at night."
+      },
+      {
+        "en": "Moderate; e.g., definite impairment from increased diurnal energy, interests in evenings. Stays up, active beyond midnight. Sleep delayed by over 2 hours."
+      },
+      {
+        "en": "Severe; e.g., marked interference with time that sleep period starts, and interference with ordinary daytime activities due to elevated energy, activity, or interests in the evening/night"
+      }
+    ]
+  },
+  {
+    "id": "biss_37",
+    "itemNumber": 37,
+    "text": {
+      "en": "Impulsive: Makes decisions, starts actions without considering consequences. Impulsivity may be associated with intrusiveness, spending, criticism of others, sexual behavior."
+    },
+    "itemName": {
+      "en": "Impulsive"
+    },
+    "definition": {
+      "en": "Makes decisions, starts actions without considering consequences. Impulsivity may be associated with intrusiveness, spending, criticism of others, sexual behavior."
+    },
+    "probes": [
+      {
+        "en": "Have you made any decisions without thinking the situation through?"
+      },
+      {
+        "en": "Have you made any snap judgments? Have you talked when you should have kept quiet or taken on a project without thinking it through?"
+      },
+      {
+        "en": "Have you been able to control your responses when placed in a situation where a decision or choice is needed? Have you been patient or impatient when you have had to stand in line, say at a check out counter? Have you cut in line?"
+      },
+      {
+        "en": "Have you bought things that you did not need?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional impulsive action with little or no adverse consequences"
+      },
+      {
+        "en": "Mild; e.g., frequent mildly impulsive actions with some adverse consequences, e.g., mild speeding, cutting in line"
+      },
+      {
+        "en": "Moderate; e.g., frequent impulsive actions, with actual or realistic potential for adverse consequences such as firing, legal charge, traffic ticket. Impulsivity is evident during the interview"
+      },
+      {
+        "en": "Severe; serious impairment from impulsivity; e.g., accident with medical consequences, ticketed by the police"
+      }
+    ]
+  },
+  {
+    "id": "biss_38",
+    "itemNumber": 38,
+    "text": {
+      "en": "Distractible: Attention easily diverted by external stimuli. Rate principally on observed behavior."
+    },
+    "itemName": {
+      "en": "Distractible"
+    },
+    "definition": {
+      "en": "Attention easily diverted by external stimuli. Rate principally on observed behavior."
+    },
+    "probes": [
+      {
+        "en": "Do you notice that your attention shifts to other things taking place around you?"
+      },
+      {
+        "en": "Have you been easily distracted by your surroundings?"
+      },
+      {
+        "en": "Have you found this causing you to have difficulty in staying on a subject in conversation, or to concentrate?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., attention occasionally distracted by irrelevant stimuli, such as background noises"
+      },
+      {
+        "en": "Mild; e.g., easily distracted, but returns to primary theme without prompting"
+      },
+      {
+        "en": "Moderate; e.g., relatively frequent distraction, has difficulty getting back on track, even with prompting"
+      },
+      {
+        "en": "Severe; e.g., continually distracted by incidental events and objects, which makes interviewing difficult"
+      }
+    ]
+  },
+  {
+    "id": "biss_39",
+    "itemNumber": 39,
+    "text": {
+      "en": "Risky behavior: Involvement in activities with high potential for adverse consequences socially, legally, financially or sexually."
+    },
+    "itemName": {
+      "en": "Risky behavior"
+    },
+    "definition": {
+      "en": "Involvement in activities with high potential for adverse consequences socially, legally, financially or sexually."
+    },
+    "probes": [
+      {
+        "en": "Have you done anything that was risky or got you in trouble?"
+      },
+      {
+        "en": "Have spent more than you can afford? Have you told someone off unnecessarily, driven too fast, or done any other things that could have gotten you into trouble? Have you used any drugs that could be harmful to you?"
+      },
+      {
+        "en": "How often has this occurred over the past week? Can you give an example?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., thoughts of promiscuous behavior, moderately aggressive driving"
+      },
+      {
+        "en": "Mild; e.g., places self in situations with some risk for injury, attention by police, contracting communicable disease"
+      },
+      {
+        "en": "Moderate; e.g., frequent risk taking, with at least one serious risk taking action"
+      },
+      {
+        "en": "Severe; e.g., argues with officials without provocation, runs red lights, solicits sex"
+      }
+    ],
+    "safety": true
+  }
+]

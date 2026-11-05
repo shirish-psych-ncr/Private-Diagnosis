@@ -1,0 +1,234 @@
+[
+  {
+    "id": "biss_16",
+    "itemNumber": 16,
+    "text": {
+      "en": "Fearfulness: Alerting response associated with perceived unfamiliar or threatening sound, visualization, event or smell, coupled with autonomic arousal (increased pulse, heavy breathing), impulse to retreat or attack."
+    },
+    "itemName": {
+      "en": "Fearfulness"
+    },
+    "definition": {
+      "en": "Alerting response associated with perceived unfamiliar or threatening sound, visualization, event or smell, coupled with autonomic arousal (increased pulse, heavy breathing), impulse to retreat or attack."
+    },
+    "probes": [
+      {
+        "en": "Some people feel frightened easily when unpleasant events take place around them. Has that happened to you in the past week?"
+      },
+      {
+        "en": "What about feeling frightened unexpectedly?"
+      },
+      {
+        "en": "Has the degree that you have been frightened been more than when you are feeling well?"
+      },
+      {
+        "en": "How have you felt inside when this has happened?"
+      },
+      {
+        "en": "How well have you been able to control the fear?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight, occasional feelings of fear that quickly abate"
+      },
+      {
+        "en": "Mild, e.g.; occasional fear that persists despite efforts to control"
+      },
+      {
+        "en": "Moderate, e.g., fearful most days, sometimes associated with retreating or hostile reaction"
+      },
+      {
+        "en": "Severe, e.g.; quite fearful most days, much of day. Unable to control fear, or at least one intensely fearful experience."
+      }
+    ]
+  },
+  {
+    "id": "biss_17",
+    "itemNumber": 17,
+    "text": {
+      "en": "Insomnia: Sleep disturbance, including initial, middle and terminal difficulty in getting to sleep or staying asleep or waking up earlier than usual. Take into account the estimated number of hours slept and subjective sense of lost sleep. Do not rate decreased need for sleep."
+    },
+    "itemName": {
+      "en": "Insomnia"
+    },
+    "definition": {
+      "en": "Sleep disturbance, including initial, middle and terminal difficulty in getting to sleep or staying asleep or waking up earlier than usual. Take into account the estimated number of hours slept and subjective sense of lost sleep. Do not rate decreased need for sleep."
+    },
+    "probes": [
+      {
+        "en": "Are you taking any medication to help you sleep?"
+      },
+      {
+        "en": "How has your sleep been this last week?"
+      },
+      {
+        "en": "Did you have any difficulty getting to sleep? How many hours a night were you able to sleep even when tired?"
+      },
+      {
+        "en": "How many days did you have difficulty sleeping?"
+      },
+      {
+        "en": "How does that compare with a usual full night of sleep for you?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "No experience of insomnia during rating period"
+      },
+      {
+        "en": "Slight; e.g., occasional difficulty with insomnia."
+      },
+      {
+        "en": "Mild; e.g., often has some significant difficulty"
+      },
+      {
+        "en": "Moderate; e.g., usually has considerable difficulty"
+      },
+      {
+        "en": "Severe; e.g., almost always has great difficulty"
+      }
+    ]
+  },
+  {
+    "id": "biss_18",
+    "itemNumber": 18,
+    "text": {
+      "en": "Excessive sleep: Increased duration of sleep, compared to the subject's own normal pattern when well. The questions for item 17 will aid in rating this item. It is possible that a patient could receive a positive score for both item 17 and 18. Rate independent of whether person is taking a drug that might alter sleep."
+    },
+    "itemName": {
+      "en": "Excessive sleep"
+    },
+    "definition": {
+      "en": "Increased duration of sleep, compared to the subject's own normal pattern when well. The questions for item 17 will aid in rating this item. It is possible that a patient could receive a positive score for both item 17 and 18. Rate independent of whether person is taking a drug that might alter sleep."
+    },
+    "probes": [
+      {
+        "en": "During the past week, have you overslept in the morning?"
+      },
+      {
+        "en": "Do you take naps during the day?"
+      },
+      {
+        "en": "Do you ever have difficulty getting out of bed?"
+      },
+      {
+        "en": "How many more hours sleep have you been getting than usual?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "No excessive sleep during this period"
+      },
+      {
+        "en": "Slight; sleeps longer than usual 1-2 nights/week"
+      },
+      {
+        "en": "Mild; sleeps 2-3 hours extra most days"
+      },
+      {
+        "en": "Moderate; e.g., spends part of day asleep in spite of normal or increased sleep at night"
+      },
+      {
+        "en": "Severe; sleep increased by 4 or more hours, difficulty getting out of bed, despite excessive duration of sleep"
+      }
+    ]
+  },
+  {
+    "id": "biss_19",
+    "itemNumber": 19,
+    "text": {
+      "en": "Reduced appetite: Appetite compared to usual."
+    },
+    "itemName": {
+      "en": "Reduced appetite"
+    },
+    "definition": {
+      "en": "Appetite compared to usual."
+    },
+    "probes": [
+      {
+        "en": "Has your appetite for food changed in the last week compared to the way it usually is?"
+      },
+      {
+        "en": "Have you eaten less than you usually do?"
+      },
+      {
+        "en": "Do you have to force yourself to eat?"
+      },
+      {
+        "en": "Do other people have to urge you to eat?"
+      },
+      {
+        "en": "Over the past month, has your weight changed? By how much?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "No change at all"
+      },
+      {
+        "en": "Slight decrease, questionable clinical significance"
+      },
+      {
+        "en": "Mild decrease in appetite"
+      },
+      {
+        "en": "Moderate decrease in appetite associated with change in weight"
+      },
+      {
+        "en": "Severe loss of appetite, e.g., no appetite, significant weight loss"
+      }
+    ]
+  },
+  {
+    "id": "biss_20",
+    "itemNumber": 20,
+    "text": {
+      "en": "Increased appetite: Increase in appetite and/or binge eating."
+    },
+    "itemName": {
+      "en": "Increased appetite"
+    },
+    "definition": {
+      "en": "Increase in appetite and/or binge eating."
+    },
+    "probes": [
+      {
+        "en": "Have you eaten more than you usually do?"
+      },
+      {
+        "en": "Are you able to control how much you eat?"
+      },
+      {
+        "en": "Have you binged on any foods?"
+      },
+      {
+        "en": "Have you eaten snacks between regular meals? Appetite associated with change in weight?"
+      },
+      {
+        "en": "How much of the time have you binged, eaten snacks, etc?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight increase, questionable clinical significance"
+      },
+      {
+        "en": "Mild increase in appetite"
+      },
+      {
+        "en": "Moderate loss of control over eating and/or increase in appetite associated with change in weight"
+      },
+      {
+        "en": "Severe increase (loss of control over eating or significant weight gain)"
+      }
+    ]
+  }
+]

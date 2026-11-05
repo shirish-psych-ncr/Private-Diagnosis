@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Autism Spectrum Disorder",
+    "hi": "ऑटिज़्म स्पेक्ट्रम विकार"
+  },
+  "tier": 2,
+  "dsm5": "Autism Spectrum Disorder",
+  "icd11": "6A02",
+  "description": {
+    "en": "Persistent deficits in social communication and restricted interests",
+    "hi": "सामाजिक संचार में निरंतर कमी और सीमित रुचियाँ"
+  },
+  "mappingNote": "ICD-11 Autism spectrum disorder is 6A02, subdivided by intellectual-development and functional-language status (6A02.0/.1/.2/.3/.5; 6A02.Y other specified, 6A02.Z unspecified). Do not infer a continuous .0-.5 sequence: 6A02.4 is absent from this MMS release (index 1.3.2)."
+}

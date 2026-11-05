@@ -1,0 +1,212 @@
+[
+  {
+    "id": "biss_1",
+    "itemNumber": 1,
+    "text": {
+      "en": "Sadness - reported: Subjective feeling of depression based on verbal complaints of feeling depressed, sad, blue, gloomy, down in the dumps, empty, \"don't care.\" Do not include such ideational aspects as discouragement, pessimism, or worthlessness; suicide attempts or depressed appearance."
+    },
+    "itemName": {
+      "en": "Sadness - reported"
+    },
+    "definition": {
+      "en": "Subjective feeling of depression based on verbal complaints of feeling depressed, sad, blue, gloomy, down in the dumps, empty, \"don't care.\" Do not include such ideational aspects as discouragement, pessimism, or worthlessness; suicide attempts or depressed appearance."
+    },
+    "probes": [
+      {
+        "en": "During the past 7 days, how have you been feeling? Describe your mood?"
+      },
+      {
+        "en": "Have you felt depressed (sad, blue, moody, down, empty, as if you didn't care)?"
+      },
+      {
+        "en": "Have you cried or been tearful? How often? Does it come and go? How long does it last? How bad is the feeling? Can you stand it?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., only occasionally feels \"sad\" or \"down\""
+      },
+      {
+        "en": "Mild; e.g., often feels somewhat \"depressed,\" \"blue\" or \"downhearted,\" and/or appears sad and is less responsive to positive stimulus"
+      },
+      {
+        "en": "Moderate; e.g., most of the time feels \"depressed,\" and/or several manifestations of sadness with limited ability to brighten up"
+      },
+      {
+        "en": "Severe; e.g., most of the time feels \"wretched,\" sustained gloomy appearance"
+      }
+    ],
+    "safety": true
+  },
+  {
+    "id": "biss_2",
+    "itemNumber": 2,
+    "text": {
+      "en": "Sadness - observed: Appears despondent, gloomy, despairing, as reflected in speech, facial expression, and posture. Rate also by inability to brighten up."
+    },
+    "itemName": {
+      "en": "Sadness - observed"
+    },
+    "definition": {
+      "en": "Appears despondent, gloomy, despairing, as reflected in speech, facial expression, and posture. Rate also by inability to brighten up."
+    },
+    "probes": [
+      {
+        "en": "Have others commented that you appeared sad, blue, or unhappy?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., looks dispirited, but brightens up easily"
+      },
+      {
+        "en": "Mild; e.g., more physical manifestations of sadness, and less response to positive stimulus"
+      },
+      {
+        "en": "Moderate; e.g., often appears sad and unhappy"
+      },
+      {
+        "en": "Severe; e.g., extreme and continuous gloom and despondency"
+      }
+    ]
+  },
+  {
+    "id": "biss_3",
+    "itemNumber": 3,
+    "text": {
+      "en": "Pessimism: Discouragement, pessimism and hopelessness."
+    },
+    "itemName": {
+      "en": "Pessimism"
+    },
+    "definition": {
+      "en": "Discouragement, pessimism and hopelessness."
+    },
+    "probes": [
+      {
+        "en": "Have you been discouraged (pessimistic, felt hopeless)?"
+      },
+      {
+        "en": "What kind of future do you see for yourself?"
+      },
+      {
+        "en": "How do you think things will work out?"
+      },
+      {
+        "en": "Can you see yourself or your situation getting any better?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional feelings of discouragement about future"
+      },
+      {
+        "en": "Mild; e.g., often somewhat discouraged"
+      },
+      {
+        "en": "Moderate; e.g., very often feels quite pessimistic about the future"
+      },
+      {
+        "en": "Severe; e.g., pervasive feelings of intense pessimism"
+      }
+    ]
+  },
+  {
+    "id": "biss_4",
+    "itemNumber": 4,
+    "text": {
+      "en": "Suicidality: Suicidal tendencies, including preoccupation with thoughts of death or suicide. Do not include mere fears of dying."
+    },
+    "itemName": {
+      "en": "Suicidality"
+    },
+    "definition": {
+      "en": "Suicidal tendencies, including preoccupation with thoughts of death or suicide. Do not include mere fears of dying."
+    },
+    "probes": [
+      {
+        "en": "When a person gets upset, depressed, or feels hopeless, he or she may think about dying or even killing themselves. Have you had any such thoughts?"
+      },
+      {
+        "en": "Have you thought about how you would do it?"
+      },
+      {
+        "en": "Have you told anybody about suicidal thoughts?"
+      },
+      {
+        "en": "Have you actually done anything?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional thoughts of death (without suicidal thoughts), \"I would be better off dead\" or \"I wish I were dead.\""
+      },
+      {
+        "en": "Mild; e.g., frequent thoughts of being better off dead or occasional thoughts of suicide but has no plan or intent"
+      },
+      {
+        "en": "Moderate; e.g. often thinks of suicide or has thought of a specific method"
+      },
+      {
+        "en": "Severe; e.g. often thinks of suicide and has thought of a specific plan or has made a suicidal gesture or attempt"
+      }
+    ],
+    "safety": true
+  },
+  {
+    "id": "biss_5",
+    "itemNumber": 5,
+    "text": {
+      "en": "Worry: Worrying, brooding, painful preoccupation and inability to get mind off unpleasant thoughts (may or may not be accompanied by depressive mood)."
+    },
+    "itemName": {
+      "en": "Worry"
+    },
+    "definition": {
+      "en": "Worrying, brooding, painful preoccupation and inability to get mind off unpleasant thoughts (may or may not be accompanied by depressive mood)."
+    },
+    "probes": [
+      {
+        "en": "Have you been worrying a lot?"
+      },
+      {
+        "en": "How much do you worry? What kinds of things have you been worrying about?"
+      },
+      {
+        "en": "How much of your time is spent in this?"
+      },
+      {
+        "en": "Are you able to get your mind off it?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasionally worries about some realistic or trivial problem"
+      },
+      {
+        "en": "Mild; e.g., often worries excessively about a problem"
+      },
+      {
+        "en": "Moderate; e.g., very often worries excessively about a realistic or trivial problem"
+      },
+      {
+        "en": "Severe; e.g., most of the time is spent in worrying or brooding about problems which he/she cannot dispel"
+      }
+    ]
+  }
+]

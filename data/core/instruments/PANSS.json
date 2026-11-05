@@ -1,0 +1,11 @@
+{
+  "name": "Positive and Negative Syndrome Scale",
+  "description": {
+    "en": "Psychotic symptom assessment",
+    "hi": "मनोवैज्ञानिक लक्षण मूल्यांकन"
+  },
+  "domains": [
+    "psychosis"
+  ],
+  "duration": "30-45 minutes"
+}

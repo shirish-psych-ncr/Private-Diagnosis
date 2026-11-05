@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Other Specified Dissociative Disorder",
+    "hi": "अन्य निर्दिष्ट वियोजीय विकार"
+  },
+  "tier": 5,
+  "dsm5": "Other Specified Dissociative Disorder",
+  "icd11": "6B6Y",
+  "description": {
+    "en": "Clinically significant dissociative symptoms that do not meet criteria for a specific dissociative disorder (e.g. OSDD-1: identity disruption with less distinct parts, or without amnesia).",
+    "hi": "नैदानिक रूप से महत्वपूर्ण वियोजीय लक्षण जो किसी निश्चित वियोजीय विकार के मानदंड पूर्ण नहीं करते (जैसे OSDD-1: कम भिन्न अंशों के साथ पहचान-विचलन, अथवा क्षतिस्मृति विना)।"
+  },
+  "mappingNote": "ICD-11 6B6Y Other specified dissociative disorder; DSM-5-TR OSDD. Screen flags only."
+}

@@ -1,0 +1,10 @@
+{
+  "name": {
+    "en": "Schizoaffective Disorder",
+    "hi": "सिज़ोआफेक्टिव विकार"
+  },
+  "tier": 4,
+  "dsm5": "Schizoaffective Disorder",
+  "icd11": "6A21",
+  "mappingNote": "ICD-11 Schizoaffective disorder is 6A21; 6A22 is Schizotypal disorder."
+}

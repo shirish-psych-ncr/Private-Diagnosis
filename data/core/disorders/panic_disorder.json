@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Panic Disorder",
+    "hi": "घबराहट विकार"
+  },
+  "tier": 1,
+  "dsm5": "Panic Disorder",
+  "icd11": "6B01",
+  "description": {
+    "en": "Recurrent unexpected panic attacks",
+    "hi": "बार-बार अप्रत्याशित घबराहट के दौरे"
+  },
+  "mappingNote": "ICD-11 Panic disorder is 6B01."
+}

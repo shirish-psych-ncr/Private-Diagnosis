@@ -1,0 +1,11 @@
+{
+  "name": "State-Trait Anxiety Inventory",
+  "description": {
+    "en": "State and trait anxiety measurement",
+    "hi": "अवस्था और लक्षण चिंता माप"
+  },
+  "domains": [
+    "anxiety"
+  ],
+  "duration": "10 minutes"
+}

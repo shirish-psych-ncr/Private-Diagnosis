@@ -1,0 +1,11 @@
+{
+  "name": "Clinician-Administered PTSD Scale",
+  "description": {
+    "en": "Comprehensive PTSD assessment",
+    "hi": "व्यापक PTSD मूल्यांकन"
+  },
+  "domains": [
+    "trauma"
+  ],
+  "duration": "15-20 minutes"
+}

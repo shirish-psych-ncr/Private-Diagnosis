@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Schizophrenia",
+    "hi": "सिज़ोफ्रेनिया"
+  },
+  "tier": 4,
+  "dsm5": "Schizophrenia",
+  "icd11": "6A20",
+  "description": {
+    "en": "Persistent psychotic symptoms including delusions and hallucinations",
+    "hi": "भ्रम और मतिभ्रम सहित लगातार मनोवैज्ञानिक लक्षण"
+  },
+  "mappingNote": "ICD-11 Schizophrenia is 6A20 within the 6A20-6A24 primary psychotic grouping (6A21 schizoaffective, 6A22 schizotypal, 6A23 acute and transient psychotic, 6A24 delusional). DSM schizophreniform and brief psychotic disorders do not map automatically to 6A23 (index 2.1.2-2.1.3)."
+}

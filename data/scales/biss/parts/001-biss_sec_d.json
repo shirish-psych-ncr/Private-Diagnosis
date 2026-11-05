@@ -1,0 +1,10 @@
+{
+  "id": "biss_sec_d",
+  "partKey": "D",
+  "name": {
+    "en": "I. Depression (items 1-20)"
+  },
+  "questions": {
+    "$file": "data/scales/biss/parts/001-biss_sec_d/questions.json"
+  }
+}

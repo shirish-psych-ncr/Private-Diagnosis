@@ -1,0 +1,427 @@
+[
+  "disorders",
+  {
+    "object": [
+      [
+        "depression_mdd",
+        {
+          "source": "data/core/disorders/depression_mdd.json"
+        }
+      ],
+      [
+        "depression_persistent",
+        {
+          "source": "data/core/disorders/depression_persistent.json"
+        }
+      ],
+      [
+        "gad",
+        {
+          "source": "data/core/disorders/gad.json"
+        }
+      ],
+      [
+        "agoraphobia",
+        {
+          "source": "data/core/disorders/agoraphobia.json"
+        }
+      ],
+      [
+        "panic_disorder",
+        {
+          "source": "data/core/disorders/panic_disorder.json"
+        }
+      ],
+      [
+        "social_anxiety",
+        {
+          "source": "data/core/disorders/social_anxiety.json"
+        }
+      ],
+      [
+        "ptsd",
+        {
+          "source": "data/core/disorders/ptsd.json"
+        }
+      ],
+      [
+        "complex_ptsd",
+        {
+          "source": "data/core/disorders/complex_ptsd.json"
+        }
+      ],
+      [
+        "insomnia",
+        {
+          "source": "data/core/disorders/insomnia.json"
+        }
+      ],
+      [
+        "adhd",
+        {
+          "source": "data/core/disorders/adhd.json"
+        }
+      ],
+      [
+        "oppositional_defiant_disorder",
+        {
+          "source": "data/core/disorders/oppositional_defiant_disorder.json"
+        }
+      ],
+      [
+        "conduct_disorder",
+        {
+          "source": "data/core/disorders/conduct_disorder.json"
+        }
+      ],
+      [
+        "alcohol_use_disorder",
+        {
+          "source": "data/core/disorders/alcohol_use_disorder.json"
+        }
+      ],
+      [
+        "schizophrenia",
+        {
+          "source": "data/core/disorders/schizophrenia.json"
+        }
+      ],
+      [
+        "bipolar_depressive",
+        {
+          "source": "data/core/disorders/bipolar_depressive.json"
+        }
+      ],
+      [
+        "adjustment_disorder",
+        {
+          "source": "data/core/disorders/adjustment_disorder.json"
+        }
+      ],
+      [
+        "hypersomnolence",
+        {
+          "source": "data/core/disorders/hypersomnolence.json"
+        }
+      ],
+      [
+        "sleep_apnea",
+        {
+          "source": "data/core/disorders/sleep_apnea.json"
+        }
+      ],
+      [
+        "circadian_rhythm",
+        {
+          "source": "data/core/disorders/circadian_rhythm.json"
+        }
+      ],
+      [
+        "substance_use_disorder",
+        {
+          "source": "data/core/disorders/substance_use_disorder.json"
+        }
+      ],
+      [
+        "psychotic_disorder",
+        {
+          "source": "data/core/disorders/psychotic_disorder.json"
+        }
+      ],
+      [
+        "mood_disorder_with_psychotic_features",
+        {
+          "source": "data/core/disorders/mood_disorder_with_psychotic_features.json"
+        }
+      ],
+      [
+        "schizoaffective",
+        {
+          "source": "data/core/disorders/schizoaffective.json"
+        }
+      ],
+      [
+        "brief_psychotic",
+        {
+          "source": "data/core/disorders/brief_psychotic.json"
+        }
+      ],
+      [
+        "delusional_disorder",
+        {
+          "source": "data/core/disorders/delusional_disorder.json"
+        }
+      ],
+      [
+        "ocd",
+        {
+          "source": "data/core/disorders/ocd.json"
+        }
+      ],
+      [
+        "eating_anorexia",
+        {
+          "source": "data/core/disorders/eating_anorexia.json"
+        }
+      ],
+      [
+        "eating_bulimia",
+        {
+          "source": "data/core/disorders/eating_bulimia.json"
+        }
+      ],
+      [
+        "eating_binge_eating",
+        {
+          "source": "data/core/disorders/eating_binge_eating.json"
+        }
+      ],
+      [
+        "antisocial_personality_disorder",
+        {
+          "source": "data/core/disorders/antisocial_personality_disorder.json"
+        }
+      ],
+      [
+        "bipolar_i_disorder",
+        {
+          "source": "data/core/disorders/bipolar_i_disorder.json"
+        }
+      ],
+      [
+        "bipolar_ii_disorder",
+        {
+          "source": "data/core/disorders/bipolar_ii_disorder.json"
+        }
+      ],
+      [
+        "other_specified_bipolar",
+        {
+          "source": "data/core/disorders/other_specified_bipolar.json"
+        }
+      ],
+      [
+        "personality_borderline",
+        {
+          "source": "data/core/disorders/personality_borderline.json"
+        }
+      ],
+      [
+        "schizophrenia_spectrum",
+        {
+          "source": "data/core/disorders/schizophrenia_spectrum.json"
+        }
+      ],
+      [
+        "dementia",
+        {
+          "source": "data/core/disorders/dementia.json"
+        }
+      ],
+      [
+        "gender_incongruence",
+        {
+          "source": "data/core/disorders/gender_incongruence.json"
+        }
+      ],
+      [
+        "dissociative",
+        {
+          "source": "data/core/disorders/dissociative.json"
+        }
+      ],
+      [
+        "paraphilic",
+        {
+          "source": "data/core/disorders/paraphilic.json"
+        }
+      ],
+      [
+        "factitious",
+        {
+          "source": "data/core/disorders/factitious.json"
+        }
+      ],
+      [
+        "somatic",
+        {
+          "source": "data/core/disorders/somatic.json"
+        }
+      ],
+      [
+        "autism",
+        {
+          "source": "data/core/disorders/autism.json"
+        }
+      ],
+      [
+        "paranoid_personality_disorder",
+        {
+          "source": "data/core/disorders/paranoid_personality_disorder.json"
+        }
+      ],
+      [
+        "schizoid_personality_disorder",
+        {
+          "source": "data/core/disorders/schizoid_personality_disorder.json"
+        }
+      ],
+      [
+        "schizotypal_personality_disorder",
+        {
+          "source": "data/core/disorders/schizotypal_personality_disorder.json"
+        }
+      ],
+      [
+        "borderline_personality_disorder",
+        {
+          "source": "data/core/disorders/borderline_personality_disorder.json"
+        }
+      ],
+      [
+        "impulsive_control_features",
+        {
+          "source": "data/core/disorders/impulsive_control_features.json"
+        }
+      ],
+      [
+        "histrionic_personality_disorder",
+        {
+          "source": "data/core/disorders/histrionic_personality_disorder.json"
+        }
+      ],
+      [
+        "narcissistic_personality_disorder",
+        {
+          "source": "data/core/disorders/narcissistic_personality_disorder.json"
+        }
+      ],
+      [
+        "avoidant_personality_disorder",
+        {
+          "source": "data/core/disorders/avoidant_personality_disorder.json"
+        }
+      ],
+      [
+        "dependent_personality_disorder",
+        {
+          "source": "data/core/disorders/dependent_personality_disorder.json"
+        }
+      ],
+      [
+        "obsessive_compulsive_personality_disorder",
+        {
+          "source": "data/core/disorders/obsessive_compulsive_personality_disorder.json"
+        }
+      ],
+      [
+        "passive_aggressive_personality_disorder",
+        {
+          "source": "data/core/disorders/passive_aggressive_personality_disorder.json"
+        }
+      ],
+      [
+        "depressive_personality_disorder",
+        {
+          "source": "data/core/disorders/depressive_personality_disorder.json"
+        }
+      ],
+      [
+        "other_specified_personality_disorder",
+        {
+          "source": "data/core/disorders/other_specified_personality_disorder.json"
+        }
+      ],
+      [
+        "unspecified_personality_disorder",
+        {
+          "source": "data/core/disorders/unspecified_personality_disorder.json"
+        }
+      ],
+      [
+        "intermittent_explosive_disorder",
+        {
+          "source": "data/core/disorders/intermittent_explosive_disorder.json"
+        }
+      ],
+      [
+        "disruptive_mood_dysregulation_disorder",
+        {
+          "source": "data/core/disorders/disruptive_mood_dysregulation_disorder.json"
+        }
+      ],
+      [
+        "other_specified_disruptive_impulse_control_behaviour_disorder",
+        {
+          "source": "data/core/disorders/other_specified_disruptive_impulse_control_behaviour_disorder.json"
+        }
+      ],
+      [
+        "unspecified_disruptive_impulse_control_behaviour_disorder",
+        {
+          "source": "data/core/disorders/unspecified_disruptive_impulse_control_behaviour_disorder.json"
+        }
+      ],
+      [
+        "dissociative_identity_disorder",
+        {
+          "source": "data/core/disorders/dissociative_identity_disorder.json"
+        }
+      ],
+      [
+        "other_specified_dissociative_disorder",
+        {
+          "source": "data/core/disorders/other_specified_dissociative_disorder.json"
+        }
+      ],
+      [
+        "unspecified_dissociative_disorder",
+        {
+          "source": "data/core/disorders/unspecified_dissociative_disorder.json"
+        }
+      ],
+      [
+        "dissociative_amnesia",
+        {
+          "source": "data/core/disorders/dissociative_amnesia.json"
+        }
+      ],
+      [
+        "depersonalisation_derealisation_disorder",
+        {
+          "source": "data/core/disorders/depersonalisation_derealisation_disorder.json"
+        }
+      ],
+      [
+        "somatic_symptom_disorder",
+        {
+          "source": "data/core/disorders/somatic_symptom_disorder.json"
+        }
+      ],
+      [
+        "conversion_disorder",
+        {
+          "source": "data/core/disorders/conversion_disorder.json"
+        }
+      ],
+      [
+        "factitious_disorder",
+        {
+          "source": "data/core/disorders/factitious_disorder.json"
+        }
+      ],
+      [
+        "gender_incongruence_distress",
+        {
+          "source": "data/core/disorders/gender_incongruence_distress.json"
+        }
+      ],
+      [
+        "gender_dysphoria_with_functional_impairment",
+        {
+          "source": "data/core/disorders/gender_dysphoria_with_functional_impairment.json"
+        }
+      ]
+    ]
+  }
+]

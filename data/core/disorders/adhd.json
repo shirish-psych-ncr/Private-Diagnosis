@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Attention-Deficit/Hyperactivity Disorder",
+    "hi": "ध्यान-घाता/अतिसक्रियता विकार"
+  },
+  "tier": 2,
+  "dsm5": "Attention-Deficit/Hyperactivity Disorder",
+  "icd11": "6A05",
+  "description": {
+    "en": "Persistent pattern of inattention and/or hyperactivity-impulsivity",
+    "hi": "ध्यान की कमी और/या अतिसक्रियता-आवेगशीलता का लगातार पैटर्न"
+  },
+  "mappingNote": "ICD-11 ADHD is 6A05 with presentation subdivisions: predominantly inattentive 6A05.0, predominantly hyperactive-impulsive 6A05.1, combined 6A05.2 (index 1.4.2)."
+}

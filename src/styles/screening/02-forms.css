@@ -1,0 +1,92 @@
+.stage {
+    display: none;
+}
+
+.stage.active {
+    display: block;
+}
+
+h2 {
+    color: #2c5aa0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.consent-content p {
+    margin-bottom: 1rem;
+}
+
+.consent-checkbox {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.consent-checkbox input {
+    width: 20px;
+    height: 20px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-primary {
+    background: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #1e4a7f;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: white;
+    color: #2c5aa0;
+    border: 2px solid #2c5aa0;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #2c5aa0;
+    color: white;
+}
+

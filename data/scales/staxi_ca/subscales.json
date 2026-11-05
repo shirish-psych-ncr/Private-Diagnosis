@@ -1,0 +1,136 @@
+{
+  "state": {
+    "name": {
+      "en": "State Anger (SA)",
+      "hi": "अवस्था क्रोध (SA)"
+    },
+    "note": {
+      "en": "Sum of items 1-15 (15-60). How you feel right now.",
+      "hi": "आइटम 1-15 का योग (15-60)। वर्तमान भावना।"
+    },
+    "part": 1,
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "trait": {
+    "name": {
+      "en": "Trait Anger (TA)",
+      "hi": "लक्षण क्रोध (TA)"
+    },
+    "note": {
+      "en": "Sum of items 16-24 (16-36). Angry temperament plus anger-referenced other.",
+      "hi": "आइटम 16-24 का योग (16-36)। क्रोड-स्वभाव तथा अन्य-संदर्भित क्रोध।"
+    },
+    "part": 2,
+    "items": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "in": {
+    "name": {
+      "en": "Anger Expression-In (Anger-In)",
+      "hi": "क्रोध-अभिव्यक्ति-अंतः (Anger-In)"
+    },
+    "note": {
+      "en": "Sum of the nine keyed items (9-36): 29, 33, 37, 43, 48, 53, 54, 56, 57. Anger held or suppressed inside.",
+      "hi": "नौ कुंजी-आइटम का योग (9-36): 29, 33, 37, 43, 48, 53, 54, 56, 57। भीतर संचित/दबा हुआ क्रोध।"
+    },
+    "part": 3,
+    "items": [
+      29,
+      33,
+      37,
+      43,
+      48,
+      53,
+      54,
+      56,
+      57
+    ]
+  },
+  "out": {
+    "name": {
+      "en": "Anger Expression-Out (Anger-Out)",
+      "hi": "क्रोध-अभिव्यक्ति-बहिः (Anger-Out)"
+    },
+    "note": {
+      "en": "Sum of the eight keyed items (8-32): 27, 31, 35, 39, 45, 47, 50, 52. Anger expressed outwardly.",
+      "hi": "आठ कुंजी-आइटम का योग (8-32): 27, 31, 35, 39, 45, 47, 50, 52। बाह्य व्यक्त क्रोध।"
+    },
+    "part": 3,
+    "items": [
+      27,
+      31,
+      35,
+      39,
+      45,
+      47,
+      50,
+      52
+    ]
+  },
+  "control": {
+    "name": {
+      "en": "Anger Control",
+      "hi": "क्रोध-नियंत्रण"
+    },
+    "note": {
+      "en": "Sum of the twelve keyed items (12-48): 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49. Higher is better control.",
+      "hi": "बारह कुंजी-आइटम का योग (12-48): 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49। उच्च स्कोर = बेहतर नियंत्रण।"
+    },
+    "part": 3,
+    "items": [
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      49
+    ]
+  },
+  "denial": {
+    "name": {
+      "en": "Anger Expression Denial",
+      "hi": "क्रोध-अभिव्यक्ति-अस्वीकरण"
+    },
+    "note": {
+      "en": "Sum of items 41, 51 and 55 (3-12): 'I control my behaviour', 'I strike out at whatever infuriates me' (reverse-keyed) and 'I control my angry feelings' - the respondent reports no difficulty controlling or no outward anger at all. Denial of anger expression.",
+      "hi": "आइटम 41, 51 एवं 55 का योग (3-12): 'मैं अपना व्यवहार नियंत्रित करता हूँ', 'जो भी प्रकोपित करे उस पर आक्रमण' एवं 'क्रोधित भावनाओं पर नियंत्रण'। क्रोध-अभिव्यक्ति का अस्वीकरण।"
+    },
+    "part": 3,
+    "items": [
+      41,
+      51,
+      55
+    ]
+  }
+}

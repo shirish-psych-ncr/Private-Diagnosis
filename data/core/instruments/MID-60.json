@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Multidimensional Inventory of Dissociation — MID-60 (short form)",
+    "hi": "बहुआयामी वियोजन सूची — MID-60 (लघु संस्करण)"
+  },
+  "description": {
+    "en": "60-item dissociative-experience inventory rated 0-10 (never → always) when not intoxicated. Index = mean of all 60 responses x 10 (0-100) with printed score ranges (0-7 none; 7-14 few; 15-20 mild; 21-30 may have DD/PTSD; 31-40 may have DD such as OSDD-1/DID; 41-64 probably DID or severe DD; 64+ severe). Twelve subscales carry individual clinical cutoffs (DID amnesia 10; alter awareness 20; angry intrusions 18; persecutory intrusions 18; D/DD 20; amnesia distress 30; autobiographical amnesia 34; PTSD flashbacks 16; conversion body symptoms 10; pseudo-seizures 10; trance 11.7; self-confusion 33.3). Screening/severity only — not diagnostic.",
+    "hi": "60-आइटम वियोजीय-अनुभव सूची, नशे में न रहते हुए 0-10 (कभी नहीं → सदैव) रेटेड। सूचकांक = सभी 60 उत्तरों का माध्य × 10 (0-100), मुद्रित स्कोर-परिसर सहित। बारह उप-पैमानों पर पृथक नैदानिक कटऑफ (DID क्षतिस्मृति 10; अंश-बोध 20; क्रोधित प्रवेश 18; उत्पीड़नकारी प्रवेश 18; D/DD 20; क्षतिस्मृति-कष्ट 30; आत्मकथात्मक क्षतिस्मृति 34; PTSD फ्लैशबैक 16; परिवर्तन शारीरिक लक्षण 10; छद्म-दौरे 10; ट्रांस 11.7; स्व-विभ्रम 33.3)। केवल स्क्रीनिंग/तीव्रता — रोग-निर्णायक नहीं।"
+  },
+  "domain": "dissociation",
+  "format": "self-report 0-10 frequency matrix with index and subscale cutoffs",
+  "duration": "10-15 minutes",
+  "optionalAssessment": true
+}

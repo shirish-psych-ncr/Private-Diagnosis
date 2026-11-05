@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Unspecified Dissociative Disorder",
+    "hi": "अनिर्दिष्ट वियोजीय विकार"
+  },
+  "tier": 5,
+  "dsm5": "Unspecified Dissociative Disorder",
+  "icd11": "6B6Z",
+  "description": {
+    "en": "Dissociative symptoms of clinical significance where criteria are not met or information is insufficient for a specific diagnosis.",
+    "hi": "नैदानिक महत्व वाले वियोजीय लक्षण जहाँ मानदंड पूर्ण नहीं हैं अथवा विशिष्ट निदान हेतु सूचना अपर्याप्त है।"
+  },
+  "mappingNote": "ICD-11 6B6Z Unspecified dissociative disorder; DSM-5-TR unspecified. Screen flags only."
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "cas_cluster_14",
+    "name": {
+      "en": "14. Anger cluster 14",
+      "hi": "14. क्रोध समूह 14"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I'm not so angry and hostile that others dislike me.",
+          "hi": "क्रोध से अन्य मुझे पसंद न करना — ऐसा नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. People sometimes dislike being around me since I become angry.",
+          "hi": "क्रोध के कारण लोग कभी-कभी दूर रहते हैं।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. More often than not, people stay away from me because I'm so hostile and angry.",
+          "hi": "अधिकतर लोग शत्रुभाव/क्रोध से मुझसे दूर रहते हैं।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. People don't like me anymore because I'm constantly angry all the time.",
+          "hi": "सतत क्रोध के कारण लोग अब मुझे पसंद नहीं करते।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_14",
+        "itemNumber": 14,
+        "cluster": true,
+        "text": {
+          "en": "14. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "14. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_15",
+    "name": {
+      "en": "15. Anger cluster 15",
+      "hi": "15. क्रोध समूह 15"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. My feelings of anger do not interfere with my work.",
+          "hi": "कार्य में क्रोध बाधा नहीं डालता।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. From time to time my feelings of anger interfere with my work.",
+          "hi": "कभी-कभी कार्य में क्रोध बाधा डालता है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I feel so angry that it interferes with my capacity to work.",
+          "hi": "इतना क्रोध कि कार्य-क्षमता बाधित।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. My feelings of anger prevent me from doing any work at all.",
+          "hi": "क्रोध से कोई कार्य ही नहीं हो पाता।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_15",
+        "itemNumber": 15,
+        "cluster": true,
+        "text": {
+          "en": "15. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "15. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_16",
+    "name": {
+      "en": "16. Anger cluster 16",
+      "hi": "16. क्रोध समूह 16"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. My anger does not interfere with my sleep.",
+          "hi": "नींद में क्रोध बाधा नहीं डालता।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. Sometimes I don't sleep very well because I'm feeling angry.",
+          "hi": "क्रोध के कारण कभी-कभी नींद अच्छी नहीं।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. My anger is so great that I stay awake 1-2 hours later than usual.",
+          "hi": "इतना क्रोध कि पूर्वाह्न 1-2 घंटे अधिक जागता/जागती।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I am so intensely angry that I can't get much sleep during the night.",
+          "hi": "प्रचंड क्रोध से रात्रि में अल्प नींद।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_16",
+        "itemNumber": 16,
+        "cluster": true,
+        "text": {
+          "en": "16. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "16. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_17",
+    "name": {
+      "en": "17. Anger cluster 17",
+      "hi": "17. क्रोध समूह 17"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. My anger does not make me feel anymore tired than usual.",
+          "hi": "क्रोध से पूर्व अपेक्षा अधिक थकान नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. My feelings of anger are beginning to tire me out.",
+          "hi": "क्रोध थकाने लगा है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. My anger is intense enough that it makes me feel very tired.",
+          "hi": "क्रोध इतना तीव्र कि बहुत थकान होती है।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. My feelings of anger leave me too tired to do anything.",
+          "hi": "क्रोध से इतनी थकान कि कुछ भी नहीं कर पाता/पाती।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_17",
+        "itemNumber": 17,
+        "cluster": true,
+        "text": {
+          "en": "17. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "17. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  }
+]

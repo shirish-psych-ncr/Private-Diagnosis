@@ -1,0 +1,155 @@
+[
+  {
+    "id": "hx_44",
+    "itemNumber": 44,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she makes a lot of mistakes because he/she doesn't think before he/she acts.",
+      "hi": "विचार किए बिना कार्य करने से वह/वो अनेक त्रुटियाँ करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_45",
+    "itemNumber": 45,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she rarely feels anger, even when people treat him/her quite badly.",
+      "hi": "लोग बुरा व्यवहार करें तब भी वह/वो क्रोध बहुत कम महसूस करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_46",
+    "itemNumber": 46,
+    "reverseScored": false,
+    "text": {
+      "en": "On most days, he/she feels cheerful and optimistic.",
+      "hi": "अधिकतर दिनों वह/वो प्रसन्न एवं आशावादी महसूस करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_47",
+    "itemNumber": 47,
+    "reverseScored": false,
+    "text": {
+      "en": "When someone he/she knows well is unhappy, he/she can almost feel that person's pain himself/herself.",
+      "hi": "निकट परिचित दुखी हो तो वह/वो लगभग उसका दर्द स्वयं महसूस कर सकता/सकती है।"
+    }
+  },
+  {
+    "id": "hx_48",
+    "itemNumber": 48,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she wouldn't want people to treat him/her as though he/she were superior to them.",
+      "hi": "लोग उसे/उसे स्वयं से श्रेष्ठ मानकर व्यवहार करें — यह वह/वो नहीं चाहेगा/चाहेगी।"
+    }
+  },
+  {
+    "id": "hx_49",
+    "itemNumber": 49,
+    "reverseScored": false,
+    "text": {
+      "en": "If he/she had the opportunity, he/she would like to attend a classical music concert.",
+      "hi": "अवसर मिले तो वह/वो शास्त्रीय संगीत कार्यक्रम में जाना चाहेगा/चाहेगी।"
+    }
+  },
+  {
+    "id": "hx_50",
+    "itemNumber": 50,
+    "reverseScored": true,
+    "text": {
+      "en": "People often joke with him/her about the messiness of his/her room or desk.",
+      "hi": "लोग उसके/उसके कमरे या मेज़ की अव्यवस्था का अक्सर मज़ाक उड़ाते हैं।"
+    }
+  },
+  {
+    "id": "hx_51",
+    "itemNumber": 51,
+    "reverseScored": true,
+    "text": {
+      "en": "If someone has cheated him/her once, he/she will always feel suspicious of that person.",
+      "hi": "एक बार धोखा हुआ हो तो वह/वो उस व्यक्ति के प्रति सदैव संदेहशील रहेगा/रहेगी।"
+    }
+  },
+  {
+    "id": "hx_52",
+    "itemNumber": 52,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she feels that he/she is an unpopular person.",
+      "hi": "वह/वो स्वयं को अप्रिय/अलोकप्रिय व्यक्ति मानता/मानती है।"
+    }
+  },
+  {
+    "id": "hx_53",
+    "itemNumber": 53,
+    "reverseScored": false,
+    "text": {
+      "en": "When it comes to physical danger, he/she is very fearful.",
+      "hi": "शारीरिक खतरे के मामले में वह/वो अत्यंत भयाकुल होता/होती है।"
+    }
+  },
+  {
+    "id": "hx_54",
+    "itemNumber": 54,
+    "reverseScored": true,
+    "text": {
+      "en": "If he/she wants something from someone, he/she will laugh at that person's worst jokes.",
+      "hi": "किसी से कुछ चाहिए हो तो उसकी सबसे बुरी चुटकुलों पर भी वह/वो हँसेगा/हँसेगी।"
+    }
+  },
+  {
+    "id": "hx_55",
+    "itemNumber": 55,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she would be very bored by a book about the history of science and technology.",
+      "hi": "विज्ञान एवं तकनीकी के इतिहास की पुस्तक से वह/वो बहुत बोर होगा/होगी।"
+    }
+  },
+  {
+    "id": "hx_56",
+    "itemNumber": 56,
+    "reverseScored": true,
+    "text": {
+      "en": "Often when he/she sets a goal, he/she ends up quitting without having reached it.",
+      "hi": "अक्सर लक्ष्य निर्धारित करने पर उसे पाए बिना ही वह/वो बीच में छोड़ देता/छोड़ देती है।"
+    }
+  },
+  {
+    "id": "hx_57",
+    "itemNumber": 57,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she tends to be lenient in judging other people.",
+      "hi": "दूसरों का मूल्यांकन करते समय वह/वो उदार/शिथिल रहने की प्रवृत्ति रखता/रखती है।"
+    }
+  },
+  {
+    "id": "hx_58",
+    "itemNumber": 58,
+    "reverseScored": false,
+    "text": {
+      "en": "When he/she is in a group of people, he/she is often the one who speaks on behalf of the group.",
+      "hi": "समूह में वह/वो अक्सर समूह की ओर से बोलता/बोलती है।"
+    }
+  },
+  {
+    "id": "hx_59",
+    "itemNumber": 59,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she rarely, if ever, has trouble sleeping due to stress or anxiety.",
+      "hi": "तनाव या चिंता के कारण नींद में कठिनाई वह/वो बहुत कम, यदि कभी, अनुभव करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_60",
+    "itemNumber": 60,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she would never accept a bribe, even if it were very large.",
+      "hi": "अत्यधिक बड़ा हो तब भी वह/वो कभी रिश्वत स्वीकार नहीं करेगा/करेगी।"
+    }
+  }
+]

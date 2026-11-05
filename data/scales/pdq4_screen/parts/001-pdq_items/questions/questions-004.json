@@ -1,0 +1,164 @@
+[
+  {
+    "id": "pdq_80",
+    "text": {
+      "en": "I am easily influenced by others.",
+      "hi": "मैं दूसरों से सहजता से प्रभावित हो जाता/जाती हूँ।"
+    },
+    "itemNumber": 80
+  },
+  {
+    "id": "pdq_81",
+    "text": {
+      "en": "I see myself as thrifty, but others see me as being cheap.",
+      "hi": "मैं स्वयं को मितव्ययी मानता/मानती हूँ पर लोग कंजूस मानते हैं।"
+    },
+    "itemNumber": 81
+  },
+  {
+    "id": "pdq_82",
+    "text": {
+      "en": "I am terrified of being left to care for myself.",
+      "hi": "स्वयं की देखभाल हेतु अकेले छोड़े जाने का भय सताता है।"
+    },
+    "itemNumber": 82
+  },
+  {
+    "id": "pdq_83",
+    "text": {
+      "en": "I suffer from low self-esteem.",
+      "hi": "मैं निम्न आत्म-सम्मान से पीड़ित हूँ।"
+    },
+    "itemNumber": 83
+  },
+  {
+    "id": "pdq_84",
+    "text": {
+      "en": "I am a pessimist.",
+      "hi": "मैं निराशावादी हूँ।"
+    },
+    "itemNumber": 84
+  },
+  {
+    "id": "pdq_85",
+    "text": {
+      "en": "I waste no time in getting back at people who insult me.",
+      "hi": "अपमान करने वालों से बदला लेने में देर नहीं लगाता/लगाती।"
+    },
+    "itemNumber": 85
+  },
+  {
+    "id": "pdq_86",
+    "text": {
+      "en": "Being around other people makes me nervous.",
+      "hi": "लोगों के बीच रहने पर घबराहट होती है।"
+    },
+    "itemNumber": 86
+  },
+  {
+    "id": "pdq_87",
+    "text": {
+      "en": "In new situations, I fear being embarrassed.",
+      "hi": "नई परिस्थितियों में अपमानित होने का भय लगता है।"
+    },
+    "itemNumber": 87
+  },
+  {
+    "id": "pdq_88",
+    "text": {
+      "en": "I take relationships more seriously than do those who I'm involved with.",
+      "hi": "मैं संबंधों को अपने सहभागियों की अपेक्षा अधिक गंभीरता से लेता/लेती हूँ।"
+    },
+    "itemNumber": 88
+  },
+  {
+    "id": "pdq_89",
+    "text": {
+      "en": "People complain that I'm \"stubborn as a mule\".",
+      "hi": "लोग शिकायत करते हैं कि मैं अत्यंत ज़िद्दी हूँ।"
+    },
+    "itemNumber": 89
+  },
+  {
+    "id": "pdq_90",
+    "text": {
+      "en": "When a close relationship ends, I need to get involved with someone else immediately.",
+      "hi": "घनिष्ठ संबंध समाप्त होते ही तुरंत किसी अन्य से जुड़ना आवश्यक लगता है।"
+    },
+    "itemNumber": 90
+  },
+  {
+    "id": "pdq_91",
+    "text": {
+      "en": "I can be nasty with someone one minute, then find myself apologizing to them the next minute.",
+      "hi": "एक पल किसी पर नाराज़, अगले पल क्षमायाचना — ऐसा होता है।"
+    },
+    "itemNumber": 91
+  },
+  {
+    "id": "pdq_92",
+    "text": {
+      "en": "Others consider me to be stuck up.",
+      "hi": "लोग मुझे घमंडी मानते हैं।"
+    },
+    "itemNumber": 92
+  },
+  {
+    "id": "pdq_93",
+    "text": {
+      "en": "When stressed, things happen, like I get paranoid or just \"black out\".",
+      "hi": "तनाव में ऐसी बातें होती हैं जैसे अत्यधिक संदेहवाद अथवा स्मृति-छाया (black out)।"
+    },
+    "itemNumber": 93
+  },
+  {
+    "id": "pdq_94",
+    "text": {
+      "en": "I don't care if others get hurt so long as I get what I want.",
+      "hi": "अपना काम निकलने तक दूसरों को क्षति हो तो मुझे परवाह नहीं।"
+    },
+    "itemNumber": 94
+  },
+  {
+    "id": "pdq_95",
+    "text": {
+      "en": "I keep my distance from others.",
+      "hi": "मैं दूसरों से दूरी बनाए रखता/रखती हूँ।"
+    },
+    "itemNumber": 95
+  },
+  {
+    "id": "pdq_96",
+    "text": {
+      "en": "I often wonder whether my wife (husband, girlfriend or boyfriend) has been unfaithful to me.",
+      "hi": "मैं प्रायः सोचता/सोचती हूँ कि क्या मेरे जीवनसाथी ने विश्वासघात किया।"
+    },
+    "itemNumber": 96
+  },
+  {
+    "id": "pdq_97",
+    "text": {
+      "en": "I often feel guilty.",
+      "hi": "मुझे प्रायः अपराधबोध होता है।"
+    },
+    "itemNumber": 97
+  },
+  {
+    "id": "pdq_98",
+    "text": {
+      "en": "When I was an adult, I have done things on impulse that could have gotten me into trouble.",
+      "hi": "वयस्क होने पर आवेगी कार्य किए जो मुझे मुसीबत में डाल सकते थे।"
+    },
+    "itemNumber": 98,
+    "isSectionB": true
+  },
+  {
+    "id": "pdq_99",
+    "text": {
+      "en": "When I was a kid (before age 15), I was somewhat of a juvenile delinquent, doing some of the things below.",
+      "hi": "15 वर्ष से पूर्व बचपन में मैं कुछ हद तक किशोर-अपराधी था; नीचे दी गई कुछ बातें करता था।"
+    },
+    "itemNumber": 99,
+    "isSectionB": true
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "name": "Patient Health Questionnaire-9",
+  "description": {
+    "en": "Depression severity screening",
+    "hi": "अवसाद गंभीरता स्क्रीनिंग"
+  },
+  "domains": [
+    "mood"
+  ],
+  "duration": "3-5 minutes"
+}

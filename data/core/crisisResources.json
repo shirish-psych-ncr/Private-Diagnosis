@@ -1,0 +1,38 @@
+{
+  "en": [
+    {
+      "label": "Emergency Services",
+      "value": "Call 112 (India) or your local emergency number"
+    },
+    {
+      "label": "Tele-MANAS (Govt. of India Mental Health Helpline)",
+      "value": "14416 / 1800-891-4416"
+    },
+    {
+      "label": "KIRAN Mental Health Helpline",
+      "value": "1800-599-0019"
+    },
+    {
+      "label": "iCALL (TISS Helpline)",
+      "value": "9152987821"
+    }
+  ],
+  "hi": [
+    {
+      "label": "आपातकालीन सेवाएँ",
+      "value": "112 (भारत) या अपने स्थानीय आपातकालीन नंबर पर कॉल करें"
+    },
+    {
+      "label": "टेली-मानस (भारत सरकार मानसिक स्वास्थ्य हेल्पलाइन)",
+      "value": "14416 / 1800-891-4416"
+    },
+    {
+      "label": "किरण मानसिक स्वास्थ्य हेल्पलाइन",
+      "value": "1800-599-0019"
+    },
+    {
+      "label": "आइकॉल (TISS हेल्पलाइन)",
+      "value": "9152987821"
+    }
+  ]
+}

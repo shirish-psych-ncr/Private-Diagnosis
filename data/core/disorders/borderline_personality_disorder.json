@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Borderline Personality Disorder",
+    "hi": "सीमांत व्यक्तित्व विकार"
+  },
+  "tier": 2,
+  "dsm5": "Borderline Personality Disorder",
+  "icd11": "6D110",
+  "icd10": "F60.31",
+  "mappingNote": {
+    "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+    "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+  },
+  "description": {
+    "en": "Instability of interpersonal relationships, self-image and affects, and marked impulsivity.",
+    "hi": "Instability of interpersonal relationships, self-image and affects, and marked impulsivity."
+  }
+}

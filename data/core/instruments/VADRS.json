@@ -1,0 +1,15 @@
+{
+  "name": "Vanderbilt ADHD Diagnostic Rating Scale",
+  "description": {
+    "en": "Pediatric ADHD, performance and behavior screening",
+    "hi": "बाल ADHD, प्रदर्शन और व्यवहार स्क्रीनिंग"
+  },
+  "domains": [
+    "neurodevelopmental"
+  ],
+  "duration": "10-15 minutes",
+  "targetAge": [
+    "pediatric",
+    "adolescent"
+  ]
+}

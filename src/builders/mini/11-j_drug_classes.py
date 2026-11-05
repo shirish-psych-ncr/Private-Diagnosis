@@ -1,0 +1,21 @@
+J_DRUG_CLASSES = [
+  {"label": {"en": "Stimulants: amphetamines, 'speed', crystal meth, 'crank', Dexedrine, Ritalin, diet pills",
+             "hi": "उत्तेजक: एम्फ़ैटामाइन, स्पीड, क्रिस्टल मेथ, डेक्सेड्रीन, रिटालिन, डाइट पिल्स"}},
+  {"label": {"en": "Cocaine: snorting, IV, freebase, crack, 'speedball'", "hi": "कोकीन: नाक से, IV, फ्रीबेस, क्रैक, स्पीडबॉल"}},
+  {"label": {"en": "Opiates: heroin, morphine, Dilaudid, opium, Demerol, methadone, Darvon, codeine, Percodan, Vicodin, OxyContin",
+             "hi": "ओपिएट: हेरोइन, मॉर्फीन, ओपियम, डीमेरॉल, मेथैडोन, कोडीन, Percodan, Vicodin, OxyContin"}},
+  {"label": {"en": "Hallucinogens: LSD ('acid'), mescaline, peyote, psilocybin, STP, 'mushrooms', 'ecstasy', MDA, MDMA",
+             "hi": "मूत्र्छाकारक: LSD (एसिड), मेस्कालीन, पेयोटे, साइलोसाइबिन, STP, मशरूम, ایکस्टसी, MDA, MDMA"}},
+  {"label": {"en": "Dissociative drugs: PCP ('Angel Dust', 'Peace Pill', 'Hog'), ketamine ('Special K')",
+             "hi": "वियोजक द्रव्य: PCP (एंजेल डस्ट, पीस पिल), केटामाइन (स्पेशल के)"}},
+  {"label": {"en": "Inhalants: 'glue', ethyl chloride, 'rush', nitrous oxide ('laughing gas'), amyl or butyl nitrate ('poppers')",
+             "hi": "श्वसन-द्रव्य: गोंद, एथिल क्लोराइड, rush, नाइट्रस ऑक्साइड (हँसी गैस), poppers"}},
+  {"label": {"en": "Cannabis: marijuana, hashish ('hash'), THC, 'pot', 'grass', 'weed', 'reefer'",
+             "hi": "कैंनाबिस: गाँजा, चरस, THC, pot, grass, weed"}},
+  {"label": {"en": "Sedatives, hypnotics or anxiolytics: Quaalude, Seconal ('reds'), Valium, Xanax, Librium, Ativan, Dalmane, Halcion, barbiturates, Miltown, GHB, Roofinol, 'Roofies'",
+             "hi": "शांतक/निद्राकारक/आतंक-नाशक: वैलियम, ज़ैनैक्स, लिब्रियम, एटिवैन, डालमैन, हाल्शियन, बारबिट्यूरेट, GHB, 'रूफीज़'"}},
+  {"label": {"en": "Miscellaneous: steroids, nonprescription sleep or diet pills, cough medicine, any others",
+             "hi": "विविध: स्टेरॉइड, बिना-पर्चे नींद/डाइट गोलियाँ, खाँसी की दवा, अन्य"}},
+  {"label": {"en": "Prescription medications taken to get high (not as prescribed)",
+             "hi": "पर्चे-विरोधी उद्देश्य से ली गई पर्ची-दवाइयाँ"}}]
+

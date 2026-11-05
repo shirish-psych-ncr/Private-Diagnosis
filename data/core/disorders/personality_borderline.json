@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Borderline Personality Disorder",
+    "hi": "सीमांत व्यक्तित्व विकार"
+  },
+  "tier": 3,
+  "dsm5": "Borderline Personality Disorder",
+  "icd11": "6D10.1",
+  "description": {
+    "en": "Instability in relationships, self-image, and affect",
+    "hi": "संबंधों, आत्म-छवि और भावनाओं में अस्थिरता"
+  },
+  "mappingNote": "Personality disorder must be established with severity before trait/pattern qualifiers (Rule 5). Moderate personality disorder 6D10.1 with Borderline pattern qualifier 6D11.5; 6D11 alone is not an assignable diagnosis and 6D11.0 denotes Negative affectivity."
+}

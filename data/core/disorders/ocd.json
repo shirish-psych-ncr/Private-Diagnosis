@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Obsessive-Compulsive Disorder",
+    "hi": "अवसाद-विचार बाध्यकारी विकार"
+  },
+  "tier": 3,
+  "dsm5": "Obsessive-Compulsive Disorder",
+  "icd11": "6B20",
+  "description": {
+    "en": "Obsessions and compulsions consuming more than one hour per day",
+    "hi": "प्रतिदिन एक घंटे से अधिक समय लेने वाले द्वेष-विचार और बाध्यताएँ"
+  },
+  "mappingNote": "ICD-11 OCD is 6B20, the parent of the 6B20-6B25 obsessive-compulsive-related family (body dysmorphic 6B21, olfactory reference 6B22, hypochondriasis 6B23, hoarding 6B24, body-focused repetitive behaviour 6B25) (index 5.1.2)."
+}

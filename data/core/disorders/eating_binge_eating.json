@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Binge-Eating Disorder",
+    "hi": "अतिभक्षण (बिंज-ईटिंग) विकार"
+  },
+  "tier": 3,
+  "dsm5": "Binge-Eating Disorder",
+  "icd11": "6B82",
+  "description": {
+    "en": "Recurrent binge eating without regular compensatory behaviours, with marked distress",
+    "hi": "नियमित क्षतिपूर्ति-व्यवहार के बिना बार-बार अतिभक्षण, महत्वपूर्ण कष्ट सहित"
+  },
+  "mappingNote": "ICD-11 Binge-eating disorder is 6B82 within the 6B80-6B85 feeding/eating family (index 9.1.2, 9.2.2). DSM requires weekly binges for 3 months; ICD-11 frequency/duration requirements differ - assess each system independently."
+}

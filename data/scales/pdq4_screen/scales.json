@@ -1,0 +1,264 @@
+[
+  {
+    "slug": "Paranoid",
+    "profileColumn": "Par",
+    "name": {
+      "en": "Paranoid",
+      "hi": "Paranoid"
+    },
+    "threshold": 4,
+    "items": [
+      11,
+      24,
+      37,
+      50,
+      62,
+      85,
+      96
+    ],
+    "disorders": [
+      "paranoid_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Schizoid",
+    "profileColumn": "Szid",
+    "name": {
+      "en": "Schizoid",
+      "hi": "Schizoid"
+    },
+    "threshold": 4,
+    "items": [
+      9,
+      22,
+      34,
+      47,
+      60,
+      71,
+      95
+    ],
+    "disorders": [
+      "schizoid_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Schizotypal",
+    "profileColumn": "Sztp",
+    "name": {
+      "en": "Schizotypal",
+      "hi": "Schizotypal"
+    },
+    "threshold": 5,
+    "items": [
+      1,
+      10,
+      23,
+      31,
+      36,
+      48,
+      61,
+      72,
+      74,
+      86
+    ],
+    "disorders": [
+      "schizotypal_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Antisocial",
+    "profileColumn": "Ant",
+    "name": {
+      "en": "Antisocial",
+      "hi": "Antisocial"
+    },
+    "threshold": 3,
+    "items": [
+      8,
+      20,
+      33,
+      46,
+      59,
+      75,
+      94
+    ],
+    "disorders": [
+      "antisocial_personality_disorder"
+    ],
+    "requiresSectionB": "sectionB_99"
+  },
+  {
+    "slug": "Borderline",
+    "profileColumn": "Bor",
+    "name": {
+      "en": "Borderline",
+      "hi": "Borderline"
+    },
+    "threshold": 5,
+    "items": [
+      6,
+      19,
+      32,
+      45,
+      58,
+      69,
+      78,
+      93
+    ],
+    "disorders": [
+      "borderline_personality_disorder"
+    ],
+    "requiresSectionB": "sectionB_98"
+  },
+  {
+    "slug": "Histrionic",
+    "profileColumn": "His",
+    "name": {
+      "en": "Histrionic",
+      "hi": "Histrionic"
+    },
+    "threshold": 4,
+    "items": [
+      4,
+      17,
+      30,
+      43,
+      55,
+      67,
+      80,
+      90
+    ],
+    "disorders": [
+      "histrionic_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Narcissistic",
+    "profileColumn": "Nar",
+    "name": {
+      "en": "Narcissistic",
+      "hi": "Narcissistic"
+    },
+    "threshold": 5,
+    "items": [
+      5,
+      18,
+      31,
+      44,
+      57,
+      68,
+      73,
+      79,
+      92
+    ],
+    "disorders": [
+      "narcissistic_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Avoidant",
+    "profileColumn": "Av",
+    "name": {
+      "en": "Avoidant",
+      "hi": "Avoidant"
+    },
+    "threshold": 4,
+    "items": [
+      1,
+      13,
+      26,
+      39,
+      52,
+      83,
+      87
+    ],
+    "disorders": [
+      "avoidant_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Dependent",
+    "profileColumn": "Dep",
+    "name": {
+      "en": "Dependent",
+      "hi": "Dependent"
+    },
+    "threshold": 5,
+    "items": [
+      2,
+      15,
+      27,
+      40,
+      53,
+      65,
+      82
+    ],
+    "disorders": [
+      "dependent_personality_disorder"
+    ]
+  },
+  {
+    "slug": "OC",
+    "profileColumn": "OC",
+    "name": {
+      "en": "Obsessive-Compulsive",
+      "hi": "Obsessive-Compulsive"
+    },
+    "threshold": 4,
+    "items": [
+      3,
+      16,
+      29,
+      41,
+      54,
+      66,
+      81,
+      89
+    ],
+    "disorders": [
+      "obsessive_compulsive_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Negativistic",
+    "profileColumn": "Neg",
+    "name": {
+      "en": "Passive-Aggressive (Negativistic)",
+      "hi": "Passive-Aggressive (Negativistic)"
+    },
+    "threshold": 4,
+    "items": [
+      7,
+      21,
+      35,
+      49,
+      63,
+      77,
+      91
+    ],
+    "disorders": [
+      "passive_aggressive_personality_disorder"
+    ]
+  },
+  {
+    "slug": "Depressive",
+    "profileColumn": "Dpt",
+    "name": {
+      "en": "Depressive",
+      "hi": "Depressive"
+    },
+    "threshold": 5,
+    "items": [
+      14,
+      28,
+      42,
+      56,
+      70,
+      84,
+      97
+    ],
+    "disorders": [
+      "depressive_personality_disorder"
+    ]
+  }
+]

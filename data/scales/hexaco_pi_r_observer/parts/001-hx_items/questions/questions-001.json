@@ -1,0 +1,200 @@
+[
+  {
+    "id": "hx_1",
+    "itemNumber": 1,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she would be quite bored by a visit to an art gallery.",
+      "hi": "वह/वो कला-दीर्घा देखने से बिल्कुल ऊब जाएगा/जाएगी।"
+    }
+  },
+  {
+    "id": "hx_2",
+    "itemNumber": 2,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she cleans his/her office or home quite frequently.",
+      "hi": "वह/वो अपना कार्यालय या घर बहुत अक्सर साफ़ करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_3",
+    "itemNumber": 3,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she rarely holds a grudge, even against people who have badly wronged him/her.",
+      "hi": "वह/वो बुरी तरह ठगा गया हो तब भी शिकायत/द्वेष बहुत कम रखता/रखती है।"
+    }
+  },
+  {
+    "id": "hx_4",
+    "itemNumber": 4,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she feels reasonably satisfied with himself/herself overall.",
+      "hi": "वह/वो समग्र रूप से स्वयं से यथेष्ट संतुष्ट महसूस करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_5",
+    "itemNumber": 5,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she would feel afraid if he/she had to travel in bad weather conditions.",
+      "hi": "वह/वो खराब मौसम में यात्रा करनी हो तो डरेगा/डरेगी।"
+    }
+  },
+  {
+    "id": "hx_6",
+    "itemNumber": 6,
+    "reverseScored": false,
+    "text": {
+      "en": "If he/she wants something from a person he/she dislikes, he/she will act very nicely toward that person in order to get it.",
+      "hi": "जिस व्यक्ति को वह/वो पसंद नहीं करता/करती, उससे कुछ चाहिए हो तो पाने हेतु उसके साथ बड़ा मिलनसार व्यवहार करेगा/करेगी।"
+    }
+  },
+  {
+    "id": "hx_7",
+    "itemNumber": 7,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she is interested in learning about the history and politics of other countries.",
+      "hi": "वह/वो अन्य देशों के इतिहास एवं राजनीति जानने में रुचि रखता/रखती है।"
+    }
+  },
+  {
+    "id": "hx_8",
+    "itemNumber": 8,
+    "reverseScored": false,
+    "text": {
+      "en": "When working, he/she often sets ambitious goals for himself/herself.",
+      "hi": "कार्य करते समय वह/वो अक्सर स्वयं के लिए महत्वाकांक्षी लक्ष्य निर्धारित करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_9",
+    "itemNumber": 9,
+    "reverseScored": true,
+    "text": {
+      "en": "People sometimes say that he/she is too critical of others.",
+      "hi": "लोग कभी-कभी कहते हैं कि वह/वो दूसरों की अधिक आलोचना करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_10",
+    "itemNumber": 10,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she rarely expresses his/her opinions in group meetings.",
+      "hi": "वह/वो सामूहिक बैठकों में अपना मत बहुत कम व्यक्त करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_11",
+    "itemNumber": 11,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she worries about little things.",
+      "hi": "वह/वो छोटी-छोटी बातों की चिंता करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_12",
+    "itemNumber": 12,
+    "reverseScored": true,
+    "text": {
+      "en": "If he/she knew that he/she could never get caught, he/she would be willing to steal a million dollars.",
+      "hi": "पकड़े जाने की सम्भावना न हो तो वह/वो दस लाख रुपये चुराने को तैयार होगा/होगी।"
+    }
+  },
+  {
+    "id": "hx_13",
+    "itemNumber": 13,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she would like a job that requires following a routine rather than being creative.",
+      "hi": "वह/वो रचनात्मकता के बजाय दिनचर्या-पालन वाली नौकरी पसंद करेगा/करेगी।"
+    }
+  },
+  {
+    "id": "hx_14",
+    "itemNumber": 14,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she often checks his/her work over repeatedly to find any mistakes.",
+      "hi": "वह/वो त्रुटियाँ खोजने हेतु अपना कार्य बार-बार जाँचता/जाँचती है।"
+    }
+  },
+  {
+    "id": "hx_15",
+    "itemNumber": 15,
+    "reverseScored": true,
+    "text": {
+      "en": "People sometimes think that he/she is too stubborn.",
+      "hi": "लोग कभी-कभी सोचते हैं कि वह/वो अत्यधिक ज़िद्दी है।"
+    }
+  },
+  {
+    "id": "hx_16",
+    "itemNumber": 16,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she avoids making \"small talk\" with people.",
+      "hi": "वह/वो लोगों से अनौपचारिक गप्पें (small talk) करने से बचता/बचती है।"
+    }
+  },
+  {
+    "id": "hx_17",
+    "itemNumber": 17,
+    "reverseScored": false,
+    "text": {
+      "en": "When he/she suffers from a painful experience, he/she needs someone to make him/her feel comfortable.",
+      "hi": "कष्टदायक अनुभव में वह/वो किसी को स्वयं को सांत्वना देने वाला चाहता/चाहती है।"
+    }
+  },
+  {
+    "id": "hx_18",
+    "itemNumber": 18,
+    "reverseScored": true,
+    "text": {
+      "en": "Having a lot of money is not especially important to him/her.",
+      "hi": "अधिक धन होना उसके/उसके लिए विशेष महत्वपूर्ण नहीं है।"
+    }
+  },
+  {
+    "id": "hx_19",
+    "itemNumber": 19,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she thinks that paying attention to radical ideas is a waste of time.",
+      "hi": "वह/वो उग्र/कट्टर विचारों पर ध्यान देना समय की बर्बादी मानता/मानती है।"
+    }
+  },
+  {
+    "id": "hx_20",
+    "itemNumber": 20,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she makes decisions based on the feeling of the moment rather than on careful thought.",
+      "hi": "वह/वो सूझबूझ के बजाय क्षणिक भावनाओं पर निर्णय लेता/लेती है।"
+    }
+  },
+  {
+    "id": "hx_21",
+    "itemNumber": 21,
+    "reverseScored": true,
+    "text": {
+      "en": "People think of him/her as someone who has a quick temper.",
+      "hi": "लोग उसे/उसे तेज़ गुस्से वाला मानते हैं।"
+    }
+  },
+  {
+    "id": "hx_22",
+    "itemNumber": 22,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she is energetic nearly all the time.",
+      "hi": "वह/वो लगभग सदैव ऊर्जावान रहता/रहती है।"
+    }
+  }
+]

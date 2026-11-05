@@ -1,0 +1,26 @@
+{
+  "id": "fac22_items",
+  "name": {
+    "en": "FAC22-SR items 1-22",
+    "hi": "FAC22-SR आइटम 1-22"
+  },
+  "options": [
+    {
+      "v": 1,
+      "label": {
+        "en": "True",
+        "hi": "सत्य"
+      }
+    },
+    {
+      "v": 0,
+      "label": {
+        "en": "False",
+        "hi": "मिथ्या"
+      }
+    }
+  ],
+  "questions": {
+    "$file": "data/scales/fac22_sr/parts/001-fac22_items/questions.json"
+  }
+}

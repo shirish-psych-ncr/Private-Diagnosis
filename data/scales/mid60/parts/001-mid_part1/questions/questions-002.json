@@ -1,0 +1,175 @@
+[
+  {
+    "id": "mid_23",
+    "itemNumber": 23,
+    "text": {
+      "en": "Feeling very confused about who you really are.",
+      "hi": "आप वास्तव में कौन हैं, इसे लेकर अत्यंत विभ्रम महसूस करना।"
+    }
+  },
+  {
+    "id": "mid_24",
+    "itemNumber": 24,
+    "text": {
+      "en": "Feeling that important things happened to you earlier in your life, but you cannot remember them.",
+      "hi": "लगता है जीवन के पूर्व में महत्वपूर्ण घटनाएँ घटीं, पर उन्हें याद नहीं कर सकते।"
+    }
+  },
+  {
+    "id": "mid_25",
+    "itemNumber": 25,
+    "text": {
+      "en": "Feeling as if you were looking at the world through a fog so that people and objects felt far away or unclear.",
+      "hi": "मानो कोहरे के पार से संसार देख रहे हों; लोग एवं वस्तुएँ दूर या अस्पष्ट लगें।"
+    }
+  },
+  {
+    "id": "mid_26",
+    "itemNumber": 26,
+    "text": {
+      "en": "Having seizures for which your doctor can find no reason.",
+      "hi": "मिर्गी-जैसे दौरे जिनका कारण चिकित्सक नहीं पा सकतें।"
+    }
+  },
+  {
+    "id": "mid_27",
+    "itemNumber": 27,
+    "text": {
+      "en": "Going into trance so much (or for so long) that it interferes with your daily activities and responsibilities.",
+      "hi": "इतनी बार/इतनी देर ट्रांस में जाना कि दैनिक कार्य एवं ज़िम्मेदारियाँ प्रभावित हों।"
+    }
+  },
+  {
+    "id": "mid_28",
+    "itemNumber": 28,
+    "text": {
+      "en": "Words just flowing from your mouth as if they were not in your control.",
+      "hi": "शब्द मुँह से ऐसे बहते जाना मानो वे आपके नियंत्रण में न हों।"
+    }
+  },
+  {
+    "id": "mid_29",
+    "itemNumber": 29,
+    "text": {
+      "en": "Feeling that there are large gaps in your memory.",
+      "hi": "स्मृति में बड़े-बड़े अंतराल दिखना।"
+    }
+  },
+  {
+    "id": "mid_30",
+    "itemNumber": 30,
+    "text": {
+      "en": "Going into trance for hours.",
+      "hi": "घंटों तक ट्रांस में रहना।"
+    }
+  },
+  {
+    "id": "mid_31",
+    "itemNumber": 31,
+    "text": {
+      "en": "Bad memories coming into your mind and you can't get rid of them.",
+      "hi": "बुरी यादें मन में आना और उन्हें हटा न पाना।"
+    }
+  },
+  {
+    "id": "mid_32",
+    "itemNumber": 32,
+    "text": {
+      "en": "Drifting into trance without even realizing that it is happening.",
+      "hi": "ट्रांस में चले जाना, यह एहसास भी हुए बिना कि वह हो रहा है।"
+    }
+  },
+  {
+    "id": "mid_33",
+    "itemNumber": 33,
+    "text": {
+      "en": "Words come out of your mouth, but you didn't say them; you don't know where those words came from.",
+      "hi": "मुँह से शब्द निकलना पर आपने वे नहीं कहे; वे कहाँ से आए, पता नहीं।"
+    }
+  },
+  {
+    "id": "mid_34",
+    "itemNumber": 34,
+    "text": {
+      "en": "Being able to remember very little of your past.",
+      "hi": "अतीत का बहुत थोड़ा ही याद रहना।"
+    }
+  },
+  {
+    "id": "mid_35",
+    "itemNumber": 35,
+    "text": {
+      "en": "When you are angry, doing or saying things that you don't remember (after you calm down).",
+      "hi": "क्रोध में ऐसे कार्य/वचन करना जो शांत होने के बाद याद न हो।"
+    }
+  },
+  {
+    "id": "mid_36",
+    "itemNumber": 36,
+    "text": {
+      "en": "Feeling that you have multiple personalities.",
+      "hi": "ऐसा लगना कि आपके भीतर अनेक व्यक्तित्व हैं।"
+    }
+  },
+  {
+    "id": "mid_37",
+    "itemNumber": 37,
+    "text": {
+      "en": "Hearing a voice in your head that calls you names (e.g., wimp, stupid, whore, slut, bitch, etc.).",
+      "hi": "सिर के भीतर ऐसी आवाज़ जो आपको गालियाँ/नाम देती है (कायर, मूर्ख आदि)।"
+    },
+    "safety": true,
+    "safetyNote": {
+      "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+      "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+    }
+  },
+  {
+    "id": "mid_38",
+    "itemNumber": 38,
+    "text": {
+      "en": "Poor memory causing serious difficulty for you.",
+      "hi": "खराब स्मृति से आपको गंभीर कठिनाई होना।"
+    }
+  },
+  {
+    "id": "mid_39",
+    "itemNumber": 39,
+    "text": {
+      "en": "Having other people (or parts) inside you who have their own names.",
+      "hi": "आपके भीतर अन्य व्यक्ति/अंश जिनके अपने नाम हैं।"
+    }
+  },
+  {
+    "id": "mid_40",
+    "itemNumber": 40,
+    "text": {
+      "en": "Re-living a part, such as a past trauma, so vividly that you temporarily lose touch with the present.",
+      "hi": "किसी अंश (जैसे पूर्व आघात) को इतनी जीवंतता से दोबारा जीना कि वर्तमान का संपर्क क्षणिक टूट जाए।"
+    }
+  },
+  {
+    "id": "mid_41",
+    "itemNumber": 41,
+    "text": {
+      "en": "Going into trance several days in a row.",
+      "hi": "लगातार कई दिनों तक ट्रांस में जाना।"
+    }
+  },
+  {
+    "id": "mid_42",
+    "itemNumber": 42,
+    "text": {
+      "en": "Suddenly finding yourself somewhere odd at home (e.g., inside the closet, under a bed, curled up on the floor, etc.) with no knowledge of how you got there.",
+      "hi": "अचानक घर में कोई अजीब स्थान (अलमारी के भीतर, बिस्तर के नीचे, फर्श पर कुड़कर) पर पाए जाना, यह जाने बिना कि वहाँ कैसे पहुँचे।"
+    }
+  },
+  {
+    "id": "mid_43",
+    "itemNumber": 43,
+    "text": {
+      "en": "Discovering that you have changed your appearance (e.g., cut your hair, changed your hairstyle, changed what you are wearing, put on cosmetics, etc.) with no memory of having done so.",
+      "hi": "पता चलना कि आपने रूप बदल लिया (बाल काटना, हेयरस्टाइल, वस्त्र, मेकअप आदि) पर ऐसा करने का स्मरण नहीं।"
+    }
+  }
+]

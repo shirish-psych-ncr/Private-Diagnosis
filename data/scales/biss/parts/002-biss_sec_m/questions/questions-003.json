@@ -1,0 +1,201 @@
+[
+  {
+    "id": "biss_31",
+    "itemNumber": 31,
+    "text": {
+      "en": "Increased sexuality: Stronger sexual interest than usual. May be reflected in an increase in sexual activities or fantasies. Judge in comparison with subject's usual sexual habits when well."
+    },
+    "itemName": {
+      "en": "Increased sexuality"
+    },
+    "definition": {
+      "en": "Stronger sexual interest than usual. May be reflected in an increase in sexual activities or fantasies. Judge in comparison with subject's usual sexual habits when well."
+    },
+    "probes": [
+      {
+        "en": "How has your interest in sexual activities been the past week?"
+      },
+      {
+        "en": "Have you thought about, or talked about sexual matters more than usual?"
+      },
+      {
+        "en": "What has your level of sexual activity been?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight increase in sexual interest"
+      },
+      {
+        "en": "Mild increase in sexual interest, e.g., fantasies that at times preoccupy patient"
+      },
+      {
+        "en": "Moderate; e.g., definite increase in sexual interest or activities, or intrusive sexual fantasies"
+      },
+      {
+        "en": "Severe; e.g., preoccupied with sexual fantasies. Marked increase in sexual activities"
+      }
+    ]
+  },
+  {
+    "id": "biss_32",
+    "itemNumber": 32,
+    "text": {
+      "en": "Less need for sleep: Less need for sleep during the past week. A patient could be scored positive on this item as well as items 17 and 18 for impaired sleep."
+    },
+    "itemName": {
+      "en": "Less need for sleep"
+    },
+    "definition": {
+      "en": "Less need for sleep during the past week. A patient could be scored positive on this item as well as items 17 and 18 for impaired sleep."
+    },
+    "probes": [
+      {
+        "en": "Have you needed less sleep than usual to feel rested?"
+      },
+      {
+        "en": "How many hours did you sleep? How many days in the last week did you have a reduced need for sleep? How much sleep do you ordinarily need?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "No reduced need for sleep in past week"
+      },
+      {
+        "en": "Slight; up to 1 hour less than usual"
+      },
+      {
+        "en": "Mild; up to 2 hours less than usual"
+      },
+      {
+        "en": "Moderate; up to 3 hours less than usual"
+      },
+      {
+        "en": "Severe; 4 or more hours less than usual"
+      }
+    ]
+  },
+  {
+    "id": "biss_33",
+    "itemNumber": 33,
+    "text": {
+      "en": "Grandiose: Increased self-esteem and appraisal of his/her worth, contacts, power or knowledge (up to grandiose delusions) as compared with usual level. Persecutory delusions should not be considered evidence of grandiosity unless the subject feels the persecution is due to some special attributes of his/hers (e.g., power, contacts.)"
+    },
+    "itemName": {
+      "en": "Grandiose"
+    },
+    "definition": {
+      "en": "Increased self-esteem and appraisal of his/her worth, contacts, power or knowledge (up to grandiose delusions) as compared with usual level. Persecutory delusions should not be considered evidence of grandiosity unless the subject feels the persecution is due to some special attributes of his/hers (e.g., power, contacts.)"
+    },
+    "probes": [
+      {
+        "en": "Have you felt more self-confident than usual?"
+      },
+      {
+        "en": "Have you felt that you are a particularly important person, or that you have special talents, abilities?"
+      },
+      {
+        "en": "What about special plans?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., is more expansive, confident than most people in similar circumstances"
+      },
+      {
+        "en": "Mild; e.g., definitely inflated self-esteem or exaggerates talents somewhat out of proportion to circumstances"
+      },
+      {
+        "en": "Moderate; e.g., inflated self-esteem clearly out of proportion to circumstances"
+      },
+      {
+        "en": "Severe; e.g., grandiosity also may have delusional component"
+      }
+    ]
+  },
+  {
+    "id": "biss_34",
+    "itemNumber": 34,
+    "text": {
+      "en": "Elated: Elevated mood and/or optimistic attitude toward the future, out of proportion to the circumstances."
+    },
+    "itemName": {
+      "en": "Elated"
+    },
+    "definition": {
+      "en": "Elevated mood and/or optimistic attitude toward the future, out of proportion to the circumstances."
+    },
+    "probes": [
+      {
+        "en": "Have there been times when you felt very good or too cheerful or high - not just your normal self?"
+      },
+      {
+        "en": "Did you feel on top of the world or as if there was nothing you couldn't do?"
+      },
+      {
+        "en": "Have you felt that everything would work out just the way you wanted?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., good spirits more cheerful than most people in similar circumstances, but of only doubtful clinical significance"
+      },
+      {
+        "en": "Mild; e.g., definitely elevated mood and optimistic outlook that is somewhat out of proportion to the circumstances"
+      },
+      {
+        "en": "Moderate; e.g., mood and outlook are clearly out of proportion to circumstances"
+      },
+      {
+        "en": "Severe; e.g., quality of euphoric, exalted mood"
+      }
+    ]
+  },
+  {
+    "id": "biss_35",
+    "itemNumber": 35,
+    "text": {
+      "en": "Sharpened thinking: Has experienced unusually sharp and clear thinking, associated with creativity, problem solving capabilities."
+    },
+    "itemName": {
+      "en": "Sharpened thinking"
+    },
+    "definition": {
+      "en": "Has experienced unusually sharp and clear thinking, associated with creativity, problem solving capabilities."
+    },
+    "probes": [
+      {
+        "en": "Have there been periods when your thinking seemed especially clear during the week?"
+      },
+      {
+        "en": "Do you recall having had any unusually creative ideas or approaches to problems?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., brief periods of thinking more clearly or creatively"
+      },
+      {
+        "en": "Mild increase in clarity or creativity of thought"
+      },
+      {
+        "en": "Moderate increase; e.g., believes that has important insight into personal or external affairs but, with real evidence for this"
+      },
+      {
+        "en": "Marked; e.g., most of time thinking seems exceptionally clear, creative, may be associated with some adverse consequence, e.g., acts on basis of belief in plans, but without reasonable chance of success in action taken"
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "id": "pathway",
+  "title": {
+    "en": "Pathway to homicidal violence (Calhoun & Weston 2003; steps 7-8 per Christianson et al. 2007)",
+    "hi": "हत्याकांड-हेतु हिंसा की पथ-रेखा (Calhoun और Weston 2003; चरण 7-8 Christianson आदि 2007)"
+  },
+  "items": [
+    {
+      "en": "Step 1 Grievance — anger, revenge, feeling wronged.",
+      "hi": "चरण 1 शिकायत — क्रोध, प्रतिशोध, अन्याय-भाव।"
+    },
+    {
+      "en": "Step 2 Ideation — accepting violence to right the wrong or fulfil violent/sexual fantasies; identifying with other assailants.",
+      "hi": "चरण 2 विचारधारा — अन्याय-सुधार या हिंसक/यौन कल्पना हेतु हिंसा स्वीकार; अन्य आक्रमणकारियों से तादात्म्य।"
+    },
+    {
+      "en": "Step 3 Research and planning — gathering information, inquiring about the target, surveillance.",
+      "hi": "चरण 3 अनुसंधान-योजना — सूचना-संग्रह, लक्ष्य-पूछताछ, निगरानी।"
+    },
+    {
+      "en": "Step 4 Preparations — assembling equipment, practising, choosing clothing, writing messages, making a will.",
+      "hi": "चरण 4 पूर्वतैयारी — उपकरण-संग्रह, अभ्यास, वस्त्र-चयन, संदेश-लेखन, वसीयत।"
+    },
+    {
+      "en": "Step 5 Breach — positioning oneself close to the potential victim.",
+      "hi": "चरण 5 प्रवेश — संभावित शिकार के निकट स्थितिग्रहण।"
+    },
+    {
+      "en": "Step 6 Attack — enacting the plan, requiring commitment and resolve.",
+      "hi": "चरण 6 आक्रमण — योजना-क्रियान्वयन, संकल्प-आवश्यकता।"
+    },
+    {
+      "en": "Step 7 Realisation — actions upon the victim's body, additional violence or sexual acts.",
+      "hi": "चरण 7 साक्षात्कार — शरीर पर क्रियाएँ, अतिरिक्त हिंसा/यौन कृत्य।"
+    },
+    {
+      "en": "Step 8 Post-crime behaviour — behaviours aimed at avoiding discovery or staging the scene.",
+      "hi": "चरण 8 अपराधोत्तर व्यवहार — पकड़े जाने से बचाव अथवा घटना-स्थल की रचना।"
+    }
+  ]
+}

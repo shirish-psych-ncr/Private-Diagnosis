@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Bulimia Nervosa",
+    "hi": "बुलिमिया नर्वोसा"
+  },
+  "tier": 3,
+  "dsm5": "Bulimia Nervosa",
+  "icd11": "6B81",
+  "description": {
+    "en": "Recurrent binge eating with compensatory behaviours to prevent weight gain",
+    "hi": "बार-बार अतिभक्षण और वजन बढ़ने रोकने हेतु क्षतिपूर्ति व्यवहार"
+  },
+  "mappingNote": "ICD-11 Bulimia nervosa is 6B81 within the 6B80-6B85 feeding/eating family (anorexia 6B80, binge eating 6B82, ARFID 6B83, pica 6B84, rumination-regurgitation 6B85) (index 9.1.2, 9.2.2); severity and remission qualifiers are selected separately."
+}

@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Dissociative Identity Disorder",
+    "hi": "वियोजीय पहचान विकार"
+  },
+  "tier": 5,
+  "dsm5": "Dissociative Identity Disorder",
+  "icd11": "6B64",
+  "description": {
+    "en": "Two or more distinct personality states with recurrent amnesia; disruption of identity characterized by marked discontinuity of sense of self and sense of agency.",
+    "hi": "दो या अधिक भिन्न व्यक्तित्व-अवस्थाएँ एवं बार-बार क्षतिस्मृति; स्व-बोध एवं कर्तृत्व-बोध में स्पष्ट असंततता।"
+  },
+  "mappingNote": "ICD-11 6B64 corresponds to DSM-5-TR Dissociative Identity Disorder; the pre-existing 'dissociative' key holds the same label and is retained for backward compatibility. Flagged by MID-60/DES-II screens only — diagnosis requires the full structured interview."
+}

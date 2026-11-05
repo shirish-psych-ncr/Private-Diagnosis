@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Antisocial Personality Disorder",
+    "hi": "प्रतिसामाजिक व्यक्तित्व विकार"
+  },
+  "tier": 3,
+  "dsm5": "Antisocial Personality Disorder",
+  "icd11": "6D12.2",
+  "description": {
+    "en": "Pervasive disregard for and violation of the rights of others since age 15",
+    "hi": "15 वर्ष की आयु से दूसरों के अधिकारों की व्यापक अवहेलना एवं उल्लंघन"
+  },
+  "mappingNote": "ICD-11 does not carry a distinct Antisocial Personality Disorder category; the closest comparison is 6D12 Dissociality pattern qualifier within personality disorder diagnosis (severity must be established first, Rule 5). DSM conduct-disorder history before age 15 has no automatic ICD equivalent - assess each system independently."
+}

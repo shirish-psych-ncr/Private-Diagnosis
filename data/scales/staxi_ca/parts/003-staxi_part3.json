@@ -1,0 +1,337 @@
+{
+  "id": "staxi_part3",
+  "name": {
+    "en": "Part 3 — Anger Expression: How I Generally React or Behave When Angry or Furious",
+    "hi": "भाग 3 — क्रोध अभिव्यक्ति: क्रोधित अथवा प्रकोपित होने पर मैं सामान्यतः कैसे प्रतिक्रिया देता/देती हूँ"
+  },
+  "questions": [
+    {
+      "id": "staxi_25",
+      "itemNumber": 25,
+      "text": {
+        "en": "I feel infuriated when I do a good job and get a poor evaluation.",
+        "hi": "उत्तम कार्य करते हुए निम्न मूल्यांकन मिलने पर मुझे प्रकोप महसूस होता है।"
+      }
+    },
+    {
+      "id": "staxi_26",
+      "itemNumber": 26,
+      "text": {
+        "en": "I control my temper.",
+        "hi": "मैं अपने स्वयं को नियंत्रित रखता/रखती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_27",
+      "itemNumber": 27,
+      "text": {
+        "en": "I express my anger.",
+        "hi": "मैं अपना क्रोध व्यक्त करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_28",
+      "itemNumber": 28,
+      "text": {
+        "en": "I take a deep breath and relax.",
+        "hi": "मैं गहरी श्वास लेकर शिथिल होता/होती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_29",
+      "itemNumber": 29,
+      "text": {
+        "en": "I keep things in.",
+        "hi": "मैं बातें मन में दबाए रखता/रखती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_30",
+      "itemNumber": 30,
+      "text": {
+        "en": "I am patient with others.",
+        "hi": "मैं अन्यों के प्रति धैर्यवान हूँ।"
+      }
+    },
+    {
+      "id": "staxi_31",
+      "itemNumber": 31,
+      "text": {
+        "en": "If someone annoys me, I'm apt to tell him or her how I feel.",
+        "hi": "कोई क्षुब्ध करे तो मैं उसे अपनी भावना बता देता/बताती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_32",
+      "itemNumber": 32,
+      "text": {
+        "en": "I try to calm myself as soon as possible.",
+        "hi": "मैं यथाशीघ्र स्वयं को शांत करने का प्रयास करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_33",
+      "itemNumber": 33,
+      "text": {
+        "en": "I pout or sulk.",
+        "hi": "मैं नाराज़ होकर मुँह बनाता/बनाती हूँ या एकांत में रहता/रहती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_34",
+      "itemNumber": 34,
+      "text": {
+        "en": "I control my urge to express my angry feelings.",
+        "hi": "क्रोधावेश व्यक्त करने की प्रवृत्ति पर मैं नियंत्रण रखता/रखती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_35",
+      "itemNumber": 35,
+      "text": {
+        "en": "I lose my temper.",
+        "hi": "मैं स्वभाव खो देता/खो देती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_36",
+      "itemNumber": 36,
+      "text": {
+        "en": "I try to simmer down.",
+        "hi": "मैं उत्ताप शान्त करने का प्रयास करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_37",
+      "itemNumber": 37,
+      "text": {
+        "en": "I withdraw from people.",
+        "hi": "मैं लोगों से दूर हो जाता/जाती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_38",
+      "itemNumber": 38,
+      "text": {
+        "en": "I keep my cool.",
+        "hi": "मैं शीतलता बनाए रखता/रखती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_39",
+      "itemNumber": 39,
+      "text": {
+        "en": "I make sarcastic remarks to others.",
+        "hi": "मैं अन्यों से व्यंग्यात्मक टिप्पणी करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_40",
+      "itemNumber": 40,
+      "text": {
+        "en": "I try to soothe my angry feelings.",
+        "hi": "मैं क्रोधित भावनाओं को शान्त करने का प्रयास करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_41",
+      "itemNumber": 41,
+      "text": {
+        "en": "I control my behaviour.",
+        "hi": "मैं अपना व्यवहार नियंत्रित करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_42",
+      "itemNumber": 42,
+      "text": {
+        "en": "I endeavour to become calm again.",
+        "hi": "मैं पुनः शांत होने का प्रयत्न करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_43",
+      "itemNumber": 43,
+      "text": {
+        "en": "I tend to harbour grudges that I don't tell anyone.",
+        "hi": "मैं दिल में तिरस्कार/नाराज़गी लिए रखता/रखती हूँ और वह किसी को नहीं बताता/बताती।"
+      }
+    },
+    {
+      "id": "staxi_44",
+      "itemNumber": 44,
+      "text": {
+        "en": "I can stop myself from losing my temper.",
+        "hi": "मैं स्वभाव खोने से स्वयं को रोक सकता/सकती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_45",
+      "itemNumber": 45,
+      "text": {
+        "en": "I argue with others.",
+        "hi": "मैं अन्यों से वाद-विवाद करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_46",
+      "itemNumber": 46,
+      "text": {
+        "en": "I reduce my anger as soon as possible.",
+        "hi": "मैं यथाशीघ्र क्रोध कम करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_47",
+      "itemNumber": 47,
+      "text": {
+        "en": "I do things like slam doors.",
+        "hi": "मैं दरवाज़े ज़ोर से बंद करने जैसे कार्य करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_48",
+      "itemNumber": 48,
+      "text": {
+        "en": "I am secretly quite critical of others.",
+        "hi": "मैं मन में अन्यों की काफी आलोचना करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_49",
+      "itemNumber": 49,
+      "text": {
+        "en": "I try to be tolerant.",
+        "hi": "मैं सहिष्णु बनने का प्रयास करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_50",
+      "itemNumber": 50,
+      "text": {
+        "en": "I get calm faster than others do.",
+        "hi": "मैं अन्यों की अपेक्षा शीघ्र शांत हो जाता/जाती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_51",
+      "itemNumber": 51,
+      "text": {
+        "en": "I strike out at whatever infuriates me.",
+        "hi": "जो भी मुझे प्रकोपित करता है, मैं उस पर आक्रमण करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_52",
+      "itemNumber": 52,
+      "text": {
+        "en": "I say nasty things.",
+        "hi": "मैं कुरूप बातें कहता/कहती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_53",
+      "itemNumber": 53,
+      "text": {
+        "en": "I try to be tolerant and understanding.",
+        "hi": "मैं सहिष्णु एवं समझदार बनने का प्रयास करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_54",
+      "itemNumber": 54,
+      "text": {
+        "en": "I am angrier than I am willing to admit.",
+        "hi": "मैं स्वीकार करने से अधिक क्रोधित हूँ।"
+      }
+    },
+    {
+      "id": "staxi_55",
+      "itemNumber": 55,
+      "text": {
+        "en": "I control my angry feelings.",
+        "hi": "मैं क्रोधित भावनाओं को नियंत्रित करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_56",
+      "itemNumber": 56,
+      "text": {
+        "en": "I try to relax.",
+        "hi": "मैं शिथिल होने का प्रयास करता/करती हूँ।"
+      }
+    },
+    {
+      "id": "staxi_57",
+      "itemNumber": 57,
+      "text": {
+        "en": "I'm irritated a great deal more than people are aware of.",
+        "hi": "मैं लोगों की अपेक्षा से बहुत अधिक चिड़चिड़ा हूँ।"
+      }
+    }
+  ],
+  "options": [
+    {
+      "v": 1,
+      "label": {
+        "en": "1",
+        "hi": "1"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "2",
+        "hi": "2"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "3",
+        "hi": "3"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "4",
+        "hi": "4"
+      }
+    }
+  ],
+  "anchors": [
+    {
+      "v": 1,
+      "label": {
+        "en": "1 Almost never",
+        "hi": "1 लगभग कभी नहीं"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "2 Sometimes",
+        "hi": "2 कभी-कभी"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "3 Often",
+        "hi": "3 अक्सर"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "4 Almost always",
+        "hi": "4 लगभग सदैव"
+      }
+    }
+  ],
+  "timeframe": {
+    "en": "How often you generally react or behave this way when angry or furious.",
+    "hi": "क्रोधित/प्रकोपित अवस्था में आप सामान्यतः कितनी बार इस प्रकार व्यवहार करते/करती हैं।"
+  }
+}

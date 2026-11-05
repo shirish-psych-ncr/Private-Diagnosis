@@ -1,0 +1,11 @@
+{
+  "name": "Epworth Sleepiness Scale",
+  "description": {
+    "en": "Daytime sleepiness assessment",
+    "hi": "दिन की नींद मूल्यांकन"
+  },
+  "domains": [
+    "sleep"
+  ],
+  "duration": "2-3 minutes"
+}

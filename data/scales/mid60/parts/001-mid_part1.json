@@ -1,0 +1,105 @@
+{
+  "id": "mid_part1",
+  "name": {
+    "en": "Experiences (rate 0 = never to 10 = always)",
+    "hi": "अनुभव (0 = कभी नहीं से 10 = सदैव तक अंकित करें)"
+  },
+  "options": [
+    {
+      "v": 0,
+      "label": {
+        "en": "0",
+        "hi": "0"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "1",
+        "hi": "1"
+      }
+    },
+    {
+      "v": 2,
+      "label": {
+        "en": "2",
+        "hi": "2"
+      }
+    },
+    {
+      "v": 3,
+      "label": {
+        "en": "3",
+        "hi": "3"
+      }
+    },
+    {
+      "v": 4,
+      "label": {
+        "en": "4",
+        "hi": "4"
+      }
+    },
+    {
+      "v": 5,
+      "label": {
+        "en": "5",
+        "hi": "5"
+      }
+    },
+    {
+      "v": 6,
+      "label": {
+        "en": "6",
+        "hi": "6"
+      }
+    },
+    {
+      "v": 7,
+      "label": {
+        "en": "7",
+        "hi": "7"
+      }
+    },
+    {
+      "v": 8,
+      "label": {
+        "en": "8",
+        "hi": "8"
+      }
+    },
+    {
+      "v": 9,
+      "label": {
+        "en": "9",
+        "hi": "9"
+      }
+    },
+    {
+      "v": 10,
+      "label": {
+        "en": "10",
+        "hi": "10"
+      }
+    }
+  ],
+  "anchors": [
+    {
+      "v": 0,
+      "label": {
+        "en": "0 Never happens to you",
+        "hi": "0 आपको कभी नहीं होता"
+      }
+    },
+    {
+      "v": 10,
+      "label": {
+        "en": "10 Always happening to you",
+        "hi": "10 सदैव हो रहा है"
+      }
+    }
+  ],
+  "questions": {
+    "$file": "data/scales/mid60/parts/001-mid_part1/questions.json"
+  }
+}

@@ -1,0 +1,183 @@
+[
+  {
+    "id": "mid_1",
+    "itemNumber": 1,
+    "text": {
+      "en": "Forgetting what you did earlier in the day.",
+      "hi": "दिन में पहले क्या किया, उसे भूल जाना।"
+    }
+  },
+  {
+    "id": "mid_2",
+    "itemNumber": 2,
+    "text": {
+      "en": "Having an emotion (e.g., fear, sadness, anger, happiness) that doesn't feel like it is \"yours\".",
+      "hi": "कोई भावना (भय, दुख, क्रोध, सुख) जो आपकी \"अपनी\" नहीं लगती।"
+    }
+  },
+  {
+    "id": "mid_3",
+    "itemNumber": 3,
+    "text": {
+      "en": "Hearing the voice of a child in your head.",
+      "hi": "सिर के भीतर एक बच्चे की आवाज़ सुनाई देना।"
+    }
+  },
+  {
+    "id": "mid_4",
+    "itemNumber": 4,
+    "text": {
+      "en": "Reliving a traumatic event so vividly that you totally lose contact with where you actually are (that is, you think that you are \"back there and then\").",
+      "hi": "आघातजनक घटना इतनी जीवंतता से दोबारा जीना कि आप वास्तव में कहाँ हैं, इसका संपर्क पूरी तरह खो जाता है (आपको लगता है आप \"वहाँ और तब\" हैं)।"
+    }
+  },
+  {
+    "id": "mid_5",
+    "itemNumber": 5,
+    "text": {
+      "en": "Having difficulty swallowing (for no known medical reason).",
+      "hi": "निगलने में कठिनाई (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+    }
+  },
+  {
+    "id": "mid_6",
+    "itemNumber": 6,
+    "text": {
+      "en": "Having trance-like episodes where you stare off into space and lose awareness of what is going on around you.",
+      "hi": "ट्रांस-सदृश अवस्थाएँ जिनमें आप शून्य में टकटकी लगाकर चारों ओर की घटनाओं की जागरूकता खो देते हैं।"
+    }
+  },
+  {
+    "id": "mid_7",
+    "itemNumber": 7,
+    "text": {
+      "en": "Being told of things that you had recently done, but with absolutely no memory of having done those things.",
+      "hi": "दूसरों द्वारा बताई गई हाल की की गई बातों का बिल्कुल भी स्मरण न होना।"
+    }
+  },
+  {
+    "id": "mid_8",
+    "itemNumber": 8,
+    "text": {
+      "en": "Not remembering what you ate at your last meal - or even whether you ate.",
+      "hi": "पिछले भोजन में क्या खाया - या यह भी कि भोजन किया अथवा नहीं, याद न होना।"
+    }
+  },
+  {
+    "id": "mid_9",
+    "itemNumber": 9,
+    "text": {
+      "en": "Things around you feeling unreal.",
+      "hi": "चारों ओर की वस्तुएँ अवास्तविक लगना।"
+    }
+  },
+  {
+    "id": "mid_10",
+    "itemNumber": 10,
+    "text": {
+      "en": "Not being able to see for a while (as if you are blind) for no known medical reason.",
+      "hi": "कुछ समय के लिए देख न पाना (मानो अंधा हों), कोई ज्ञात चिकित्सीय कारण नहीं।"
+    }
+  },
+  {
+    "id": "mid_11",
+    "itemNumber": 11,
+    "text": {
+      "en": "Feeling very detached from your behavior as you \"go through the motions\" of daily life.",
+      "hi": "दैनिक जीवन के \"कार्य\" करते समय अपने व्यवहार से अत्यंत विलग महसूस करना।"
+    }
+  },
+  {
+    "id": "mid_12",
+    "itemNumber": 12,
+    "text": {
+      "en": "Feeling uncertain about who you really are.",
+      "hi": "आप वास्तव में कौन हैं, इसके बारे में अनिश्चितता महसूस करना।"
+    }
+  },
+  {
+    "id": "mid_13",
+    "itemNumber": 13,
+    "text": {
+      "en": "Feeling less interested in things than you used to be, or finding that you don't enjoy activities or hobbies the way you once did.",
+      "hi": "पहले की तुलना में चीज़ों में कम रुचि होना, या गतिविधियाँ/शौक पहले जैसे आनंद न देना।"
+    }
+  },
+  {
+    "id": "mid_14",
+    "itemNumber": 14,
+    "text": {
+      "en": "Being paralyzed or unable to move (for no known medical reason).",
+      "hi": "लकवाग्रस्त होना या हिल न पाना (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+    }
+  },
+  {
+    "id": "mid_15",
+    "itemNumber": 15,
+    "text": {
+      "en": "Being so bothered by flashbacks that it was hard to get out of bed and face the day.",
+      "hi": "फ्लैशबैक इतने कष्टदायी कि बिस्तर से उठकर दिन का सामना करना कठिन हो।"
+    }
+  },
+  {
+    "id": "mid_16",
+    "itemNumber": 16,
+    "text": {
+      "en": "Not remembering large parts of your childhood after age 5.",
+      "hi": "पाँच वर्ष के बाद के बचपन के बड़े हिस्से याद न होना।"
+    }
+  },
+  {
+    "id": "mid_17",
+    "itemNumber": 17,
+    "text": {
+      "en": "Feeling disconnected from everything around you.",
+      "hi": "चारों ओर की हर वस्तु से कटा हुआ महसूस करना।"
+    }
+  },
+  {
+    "id": "mid_18",
+    "itemNumber": 18,
+    "text": {
+      "en": "Not being able to hear for a while (as if you are deaf) for no known medical reason.",
+      "hi": "कुछ समय के लिए सुन न पाना (मानो बहरा हों), कोई ज्ञात चिकित्सीय कारण नहीं।"
+    }
+  },
+  {
+    "id": "mid_19",
+    "itemNumber": 19,
+    "text": {
+      "en": "Feeling that pieces of your past are missing.",
+      "hi": "अतीत के कुछ टुकड़े गुम लगना।"
+    }
+  },
+  {
+    "id": "mid_20",
+    "itemNumber": 20,
+    "text": {
+      "en": "Immediately forgetting what other people tell you.",
+      "hi": "दूसरे जो बताते हैं, तुरंत भूल जाना।"
+    }
+  },
+  {
+    "id": "mid_21",
+    "itemNumber": 21,
+    "text": {
+      "en": "Having difficulty walking (for no known medical reason).",
+      "hi": "चलने में कठिनाई (कोई ज्ञात चिकित्सीय कारण नहीं)।"
+    }
+  },
+  {
+    "id": "mid_22",
+    "itemNumber": 22,
+    "text": {
+      "en": "Hearing a voice in your head that wants you to hurt yourself.",
+      "hi": "सिर के भीतर ऐसी आवाज़ जो आपको स्वयं को क्षति पहुँचाने को कहे।"
+    },
+    "safety": true,
+    "safetyNote": {
+      "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+      "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+    }
+  }
+]

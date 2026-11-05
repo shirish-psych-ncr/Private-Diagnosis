@@ -1,0 +1,168 @@
+[
+  {
+    "id": "gcls_part2",
+    "partKey": "gender_experience",
+    "name": {
+      "en": "In the past 6 months:",
+      "hi": "पिछले 6 माह में:"
+    },
+    "questions": [
+      {
+        "id": "gcls_14",
+        "itemNumber": 14,
+        "text": {
+          "en": "I have felt distressed when touching my genitals as they do not match my gender identity.",
+          "hi": "जननांगों को स्पर्श करने पर मुझे कष्ट हुआ क्योंकि वे मेरी लिंग-पहचान से मेल नहीं खाते।"
+        }
+      },
+      {
+        "id": "gcls_15",
+        "itemNumber": 15,
+        "text": {
+          "en": "I have felt so distressed about my chest that I have not been able to have a fulfilling life.",
+          "hi": "अपने वक्ष को लेकर इतना कष्ट अनुभव किया कि मैं संतुष्टिपूर्ण जीवन नहीं जी पाया/पाई।"
+        }
+      },
+      {
+        "id": "gcls_16",
+        "itemNumber": 16,
+        "text": {
+          "en": "I have felt comfortable with how others have perceived my gender.",
+          "hi": "मुझे यह सुखद लगा कि दूसरों ने मेरे लिंग को कैसे देखा/पहचाना।"
+        },
+        "reverseScored": true
+      },
+      {
+        "id": "gcls_17",
+        "itemNumber": 17,
+        "text": {
+          "en": "I have felt that my body hair conflicts with my gender identity, either because I have it and do not like it or because I would like to have it.",
+          "hi": "मुझे लगा कि मेरे शरीर के बाल मेरी लिंग-पहचान से टकराते हैं — चाहे वे हों और अप्रिय हों, या मैं उन्हें चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "gcls_18",
+        "itemNumber": 18,
+        "text": {
+          "en": "I have felt like my chest does not match my gender identity.",
+          "hi": "मुझे लगा कि मेरा वक्ष मेरी लिंग-पहचान से मेल नहीं खाता।"
+        }
+      },
+      {
+        "id": "gcls_19",
+        "itemNumber": 19,
+        "text": {
+          "en": "I have found it distressing that others do not address me according to my gender identity.",
+          "hi": "मुझे कष्ट हुआ कि दूसरे मुझे मेरी लिंग-पहचान के अनुसार नहीं संबोधित करते।"
+        }
+      },
+      {
+        "id": "gcls_20",
+        "itemNumber": 20,
+        "text": {
+          "en": "I have felt satisfied with the pronouns that others use when talking about me.",
+          "hi": "मुझे उन सर्वनामों से संतुष्टि महसूस हुई जो दूसरे मेरे बारे में बात करते समय प्रयोग करते हैं।"
+        },
+        "reverseScored": true
+      },
+      {
+        "id": "gcls_21",
+        "itemNumber": 21,
+        "text": {
+          "en": "I have felt unhappy about my genitalia since they do not match my gender identity.",
+          "hi": "मेरे जननांग मेरी लिंग-पहचान से मेल नहीं खाते, इसलिए मैं उनसे असुखी रहा/रही।"
+        }
+      },
+      {
+        "id": "gcls_22",
+        "itemNumber": 22,
+        "text": {
+          "en": "I have felt comfortable with how other people perceive my gender based on my physical appearance.",
+          "hi": "मुझे सुखद लगा कि मेरे बाह्य स्वरूप के आधार पर दूसरे मेरे लिंग को जिस तरह देखते हैं वैसा ठीक है।"
+        },
+        "reverseScored": true
+      },
+      {
+        "id": "gcls_23",
+        "itemNumber": 23,
+        "text": {
+          "en": "I have felt that my voice has affected the way other people have perceived my gender identity which has been distressing for me.",
+          "hi": "मुझे लगा कि मेरी आवाज़ ने दूसरों की मेरी लिंग-पहचान की धारणा को प्रभावित किया, जिससे कष्ट हुआ।"
+        }
+      },
+      {
+        "id": "gcls_24",
+        "itemNumber": 24,
+        "text": {
+          "en": "I have felt that my facial hair conflicts with my gender identity, either because I have it and do not like it or because I would like to have it.",
+          "hi": "मुझे लगा कि मेरे चेहरे के बाल मेरी लिंग-पहचान से टकराते हैं — चाहे वे हों और अप्रिय हों, या मैं उन्हें चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "gcls_25",
+        "itemNumber": 25,
+        "text": {
+          "en": "I have felt that my genitals do match with my gender identity.",
+          "hi": "मुझे लगा कि मेरे जननांग मेरी लिंग-पहचान से मेल खाते हैं।"
+        },
+        "reverseScored": true
+      },
+      {
+        "id": "gcls_26",
+        "itemNumber": 26,
+        "text": {
+          "en": "I have felt that genital surgery will address the unhappiness I experience in relation to my gender.",
+          "hi": "मुझे लगा कि जननांग-शस्त्रक्रिया मेरे लिंग से जुड़े असुख को दूर कर सकेगी।"
+        }
+      },
+      {
+        "id": "gcls_27",
+        "itemNumber": 27,
+        "text": {
+          "en": "I have been unable to have a fulfilling life because of the distress relating to my genitalia.",
+          "hi": "मेरे जननांगों से जुड़े कष्ट के कारण मैं संतुष्टिपूर्ण जीवन नहीं जी पाया/पाई।"
+        }
+      },
+      {
+        "id": "gcls_28",
+        "itemNumber": 28,
+        "text": {
+          "en": "I have felt extremely distressed when looking at my chest.",
+          "hi": "अपना वक्ष देखकर मुझे अत्यंत कष्ट हुआ।"
+        }
+      },
+      {
+        "id": "gcls_29",
+        "itemNumber": 29,
+        "text": {
+          "en": "I have felt extremely distressed when looking at my genitals.",
+          "hi": "अपने जननांग देखकर मुझे अत्यंत कष्ट हुआ।"
+        }
+      },
+      {
+        "id": "gcls_30",
+        "itemNumber": 30,
+        "text": {
+          "en": "I have felt satisfied with my chest.",
+          "hi": "मुझे अपने वक्ष से संतुष्टि महसूस हुई।"
+        },
+        "reverseScored": true
+      },
+      {
+        "id": "gcls_surgery_tick",
+        "itemNumber": "□",
+        "text": {
+          "en": "Tick here if you have already had genital surgery (unless you feel you need more)",
+          "hi": "यदि आपका पहले ही जननांग-शस्त्रक्रिया हो चुकी है तो यहाँ चिह्नित करें (जब तक कि आपको अधिक की आवश्यकता न लगे)"
+        },
+        "nonScored": true,
+        "tickBox": true,
+        "linkedItem": 26,
+        "note": {
+          "en": "Clinical note — not scored",
+          "hi": "नैदानिक टिप्पणी — अंकित नहीं"
+        }
+      }
+    ]
+  }
+]

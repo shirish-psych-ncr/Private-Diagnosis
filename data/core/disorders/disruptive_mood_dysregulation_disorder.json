@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Disruptive Mood Dysregulation Disorder",
+    "hi": "विघ्नकारी मूड-अनियमन विकार"
+  },
+  "tier": 3,
+  "dsm5": "Disruptive Mood Dysregulation Disorder",
+  "icd11": "6A00.1 (paediatric-onset mood dysregulation)",
+  "icd10": "F67.8 / 6A60",
+  "mappingNote": {
+    "en": "Anger-screen flag only — severity instruments (STAXI-CA / CAS) quantify anger dimensions and require clinical confirmation before any diagnostic use.",
+    "hi": "केवल क्रोध-स्क्रीन धनात्मक — तीव्रता-पैमाने (STAXI-CA / CAS) क्रोध-आयाम मापते हैं; रोग-निर्णय हेतु नैदानिक पुष्टि आवश्यक।"
+  },
+  "description": {
+    "en": "Severe persistent irritability with frequent temper outbursts in children/adolescents; STAXI-CA informs severity only.",
+    "hi": "Severe persistent irritability with frequent temper outbursts in children/adolescents; STAXI-CA informs severity only."
+  }
+}

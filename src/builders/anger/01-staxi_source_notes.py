@@ -1,0 +1,47 @@
+STAXI_SOURCE_NOTES = {
+    "itemNumbers": "Items are numbered 1-57 continuously across the three parts, matching the printed form.",
+    "deviations": [
+        "Numbering convention used by this build (continuous across the three parts, matching the printed STAXI-CA answer sheet): Part 1 State Anger = items 1-15; Part 2 Trait Anger = items 16-24; Part 3 Anger Expression = items 25-57.",
+        "Item 25 'I feel infuriated when I do a good job and get a poor evaluation' appears last in the packet's State-Anger cluster but is part of the Anger-Expression reaction set in this build; Part 1 is scored from items 1-15 and Part 3 covers items 25-57 (item 25 is not keyed to any subscale because the packet did not include the printed key).",
+        "The supplied list is an unnumbered OCR dump that mixes the two forms and contains duplicated transcriptions. Packet stems were resolved against the printed answer sheet: 'I get angry very quickly' -> printed item 15/16 family; 'I get angry when I have to wait because of other\'s mistakes' -> printed item 19; 'feel annoyed when I am not given recognition...' -> printed item 20; 'When I get bad, I say nasty things' -> 'When I get mad, I say nasty things' (item 22); 'I am angry, but I don\'t show it' -> printed item 41 family; 'I do things like slamming doors' -> printed item 47; 'I argue with others' -> printed item 45; 'I attack whatever it is that annoys me' / 'I attack whatever makes me angry' -> printed item 50; 'I hold my anger in' -> printed item 29; 'I can stop myself from loosing' -> corrected to 'losing' (printed item 44); 'I get calm faster than others' -> printed item 50 family; 'I try to get calm' / 'I try to relax' -> printed items 32/56; 'I try to be tolerant' and 'I try to be tolerant and understanding' -> printed items 49/53. 'I feel like crying' is not a STAXI-CA stem and was dropped.",
+        "Packet items 10 and 11 were both transcribed as 'I want to smash something'; the printed stems are used (10 'I feel annoyed', 11 'I feel like kicking somebody').",
+        "Packet items 30 and 31 were both transcribed as 'I can stop myself from loosing'; the printed stems are used (30 'I am patient with others', 31 'If someone annoys me, I\'m apt to tell him or her how I feel').",
+        "Packet items 42 and 43 were both transcribed as 'I reduce my anger as soon as possible'; the printed stems are used (42 'I endeavour to become calm again', 43 'I tend to harbour grudges that I don\'t tell anyone').",
+        "'loosing' corrected to 'losing'; 'I have a bad temper' rendered as the printed 'I have a fiery temper' (item 17); 'I get angry when I\'m told I\'m wrong in front of the others' rendered as the printed 'It makes me furious when I am criticized in front of others' (item 23).",
+        "Part 3 subscale assignment as implemented here: Anger-In 29, 33, 37, 43, 48, 53, 54, 56, 57 (9 items); Anger-Out 27, 31, 35, 39, 45, 47, 50, 52 (8 items); Anger Control 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49 (12 items); Denial 41, 51, 55 (3 items). These four scales partition items 26-57 exactly, with item 25 belonging to Part 1/Part 3 as printed on the packet (verified at build time). NOTE: the supplied packet did not include the printed subscale key, so this partition was reconstructed from the content of each stem; it will differ from the licensed PAR manual - confirm against the manual before clinical scoring.",
+    ],
+    "licensing": "STAXI-CA is a copyrighted Psychological Assessment Resources (PAR) instrument. This implementation is for internal/clinical-workflow prototyping; verify licence permission before redistribution.",
+}
+
+STAXI_SUBSCALES = {
+    "state": {"name": en_hi("State Anger (SA)", "अवस्था क्रोध (SA)"),
+              "range": [1, 15], "part": 1,
+              "note": en_hi("Sum of items 1-15 (15-60). How you feel right now.",
+                            "आइटम 1-15 का योग (15-60)। वर्तमान भावना।")},
+    "trait": {"name": en_hi("Trait Anger (TA)", "लक्षण क्रोध (TA)"),
+              "range": [16, 24], "part": 2,
+              "note": en_hi("Sum of items 16-24 (16-36). Angry temperament plus anger-referenced other.",
+                            "आइटम 16-24 का योग (16-36)। क्रोड-स्वभाव तथा अन्य-संदर्भित क्रोध।")},
+    "in": {"name": en_hi("Anger Expression-In (Anger-In)", "क्रोध-अभिव्यक्ति-अंतः (Anger-In)"),
+           "range": None, "part": 3,
+           "items": [29, 33, 37, 43, 48, 53, 54, 56, 57],
+           "note": en_hi("Sum of the nine keyed items (9-36): 29, 33, 37, 43, 48, 53, 54, 56, 57. Anger held or suppressed inside.",
+                         "नौ कुंजी-आइटम का योग (9-36): 29, 33, 37, 43, 48, 53, 54, 56, 57। भीतर संचित/दबा हुआ क्रोध।")},
+    "out": {"name": en_hi("Anger Expression-Out (Anger-Out)", "क्रोध-अभिव्यक्ति-बहिः (Anger-Out)"),
+            "range": None, "part": 3,
+            "items": [27, 31, 35, 39, 45, 47, 50, 52],
+            "note": en_hi("Sum of the eight keyed items (8-32): 27, 31, 35, 39, 45, 47, 50, 52. Anger expressed outwardly.",
+                          "आठ कुंजी-आइटम का योग (8-32): 27, 31, 35, 39, 45, 47, 50, 52। बाह्य व्यक्त क्रोध।")},
+    "control": {"name": en_hi("Anger Control", "क्रोध-नियंत्रण"),
+                "range": None, "part": 3,
+                "items": [26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49],
+                "note": en_hi("Sum of the twelve keyed items (12-48): 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49. Higher is better control.",
+                              "बारह कुंजी-आइटम का योग (12-48): 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49। उच्च स्कोर = बेहतर नियंत्रण।")},
+    "denial": {"name": en_hi("Anger Expression Denial", "क्रोध-अभिव्यक्ति-अस्वीकरण"),
+               "range": None, "part": 3,
+               "items": [41, 51, 55],
+               "note": en_hi("Sum of items 41, 51 and 55 (3-12): 'I control my behaviour', 'I strike out at whatever infuriates me' (reverse-keyed) and 'I control my angry feelings' - the respondent reports no difficulty controlling or no outward anger at all. Denial of anger expression.",
+                             "आइटम 41, 51 एवं 55 का योग (3-12): 'मैं अपना व्यवहार नियंत्रित करता हूँ', 'जो भी प्रकोपित करे उस पर आक्रमण' एवं 'क्रोधित भावनाओं पर नियंत्रण'। क्रोध-अभिव्यक्ति का अस्वीकरण।")},
+}
+
+

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "cas_cluster_1",
+    "name": {
+      "en": "1. Anger cluster 1",
+      "hi": "1. क्रोध समूह 1"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I do not feel angry.",
+          "hi": "मैं क्रोधित नहीं महसूस करता/करती।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. I feel angry.",
+          "hi": "मुझे क्रोध महसूस होता है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I am angry most of the time now.",
+          "hi": "अभी मैं अधिकांश समय क्रोधित रहता/रहती हूँ।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I am so angry and hostile all the time that I can't stand it.",
+          "hi": "मैं सदैव इतना क्रोधित एवं शत्रुभावपूर्ण हूँ कि सह नहीं पाता/पाती।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_1",
+        "itemNumber": 1,
+        "cluster": true,
+        "text": {
+          "en": "1. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "1. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_2",
+    "name": {
+      "en": "2. Anger cluster 2",
+      "hi": "2. क्रोध समूह 2"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I am not particularly angry about my future.",
+          "hi": "भविष्य को लेकर विशेष क्रोध नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. When I think about my future, I feel angry.",
+          "hi": "भविष्य का चिंतन कर क्रोध महसूस करता/करती हूँ।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I feel angry about what I have to look forward to.",
+          "hi": "जो प्रतीक्षित है, उससे क्रोध होता है।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I feel intensely angry about my future, since it cannot be improved.",
+          "hi": "भविष्य सुधरने योग्य न जानकर प्रचंड क्रोध होता है।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_2",
+        "itemNumber": 2,
+        "cluster": true,
+        "text": {
+          "en": "2. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "2. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_3",
+    "name": {
+      "en": "3. Anger cluster 3",
+      "hi": "3. क्रोध समूह 3"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. It makes me angry that I feel like such a failure.",
+          "hi": "विफल-भावना से क्रोध होता है।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. It makes me angry that I have failed more than the average person.",
+          "hi": "औसत से अधिक विफलताओं से क्रोध होता है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. As I look back on my life, I feel angry about my failures.",
+          "hi": "जीवन पीछे देखकर विफलताओं पर क्रोध होता है।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. It makes me angry to feel like a complete failure as a person.",
+          "hi": "पूर्णतः विफल होने की भावना पर प्रचंड क्रोध होता है।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_3",
+        "itemNumber": 3,
+        "cluster": true,
+        "text": {
+          "en": "3. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "3. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_4",
+    "name": {
+      "en": "4. Anger cluster 4",
+      "hi": "4. क्रोध समूह 4"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I am not all that angry about things.",
+          "hi": "बातों को लेकर अधिक क्रोध नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. I am becoming more hostile about things than I used to be.",
+          "hi": "पूर्व अपेक्षा अधिक शत्रुभाव होता जा रहा है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I am pretty angry about things these days.",
+          "hi": "इन दिनों काफी क्रोधित रहता/रहती हूँ।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I am angry and hostile about everything.",
+          "hi": "सबके प्रति क्रोधित एवं शत्रुभावपूर्ण हूँ।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_4",
+        "itemNumber": 4,
+        "cluster": true,
+        "text": {
+          "en": "4. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "4. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_5",
+    "name": {
+      "en": "5. Anger cluster 5",
+      "hi": "5. क्रोध समूह 5"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I don't feel particularly hostile at others.",
+          "hi": "अन्यों के प्रति विशेष शत्रुभाव नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. I feel hostile a good deal of the time.",
+          "hi": "अधिकतर समय थोड़ा शत्रुभाव रहता है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I feel quite hostile most of the time.",
+          "hi": "अधिकांश समय पर्याप्त शत्रुभाव।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I feel hostile all of the time.",
+          "hi": "सदैव शत्रुभाव महसूस करता/करती हूँ।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_5",
+        "itemNumber": 5,
+        "cluster": true,
+        "text": {
+          "en": "5. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "5. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  }
+]

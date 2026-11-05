@@ -1,0 +1,193 @@
+[
+  {
+    "id": "ipde_F60_31",
+    "name": {
+      "en": "F60.31 Borderline",
+      "hi": "F60.31 Borderline"
+    },
+    "icd10Module": "F60.31",
+    "disorderName": {
+      "en": "Borderline Personality Disorder",
+      "hi": "Borderline Personality Disorder"
+    },
+    "disorders": [
+      "borderline_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_4",
+        "itemNumber": 4,
+        "text": {
+          "en": "I can't decide what kind of person I want to be.",
+          "hi": "मैं यह तय नहीं कर सकता/सकती कि मैं कैसा व्यक्ति बनना चाहता/चाहती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.31",
+        "disorders": [
+          "borderline_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_9",
+        "itemNumber": 9,
+        "text": {
+          "en": "I go to extremes to try to keep people from leaving me.",
+          "hi": "लोगों को खोने से रोकने हेतु मैं अति में जाता/जाती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.31",
+        "disorders": [
+          "borderline_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_13",
+        "itemNumber": 13,
+        "text": {
+          "en": "I get into very intense relationships that don't last.",
+          "hi": "मैं बहुत तीव्र संबंधों में उलझता/उलझती हूँ जो टिकते नहीं।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.31",
+        "disorders": [
+          "borderline_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_25",
+        "itemNumber": 25,
+        "text": {
+          "en": "I have never threatened suicide or injured myself on purpose.",
+          "hi": "मैंने कभी आत्महत्या की धमकी नहीं दी या जान-बूझकर स्वयं को क्षति नहीं पहुँचाई।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.31",
+        "disorders": [
+          "borderline_personality_disorder"
+        ],
+        "safety": true
+      },
+      {
+        "id": "ipde_26",
+        "itemNumber": 26,
+        "text": {
+          "en": "My feelings are like the weather; they are always changing.",
+          "hi": "मेरी भावनाएँ मौसम की तरह हैं; ये सदैव बदलती रहती हैं।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.31",
+        "disorders": [
+          "borderline_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_40",
+        "itemNumber": 40,
+        "text": {
+          "en": "I often feel 'empty' inside.",
+          "hi": "अक्सर भीतर से खालीपन महसूस करता/करती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.31",
+        "disorders": [
+          "borderline_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_53",
+        "itemNumber": 53,
+        "text": {
+          "en": "I'm very moody.",
+          "hi": "मैं बहुत मिजाज़-परिवर्ती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.31",
+        "disorders": [
+          "borderline_personality_disorder"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ipde_F60_4",
+    "name": {
+      "en": "F60.4 Histrionic",
+      "hi": "F60.4 Histrionic"
+    },
+    "icd10Module": "F60.4",
+    "disorderName": {
+      "en": "Histrionic Personality Disorder",
+      "hi": "Histrionic Personality Disorder"
+    },
+    "disorders": [
+      "histrionic_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_5",
+        "itemNumber": 5,
+        "text": {
+          "en": "I show my feelings for everyone to see.",
+          "hi": "मैं अपने भाव सबको दिखाने देता/दिखाती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.4",
+        "disorders": [
+          "histrionic_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_17",
+        "itemNumber": 17,
+        "text": {
+          "en": "I am too easily influenced by what goes on around me.",
+          "hi": "मैं चारों ओर होने वाली बातों से बहुत सहजता से प्रभावित हो जाता/जाती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.4",
+        "disorders": [
+          "histrionic_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_28",
+        "itemNumber": 28,
+        "text": {
+          "en": "I like to dress so I stand out in a crowd.",
+          "hi": "मुझे ऐसा पोशाक पहनना पसंद है जिससे भीड़ में मैं दिखूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.4",
+        "disorders": [
+          "histrionic_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_35",
+        "itemNumber": 35,
+        "text": {
+          "en": "I would rather not be the centre of attention.",
+          "hi": "मैं ध्यान का केंद्र नहीं बनना चाहता/चाहती।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.4",
+        "disorders": [
+          "histrionic_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_44",
+        "itemNumber": 44,
+        "text": {
+          "en": "I have a reputation for being a flirt.",
+          "hi": "मुछल्लद होने की मेरी साख है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.4",
+        "disorders": [
+          "histrionic_personality_disorder"
+        ]
+      }
+    ]
+  }
+]

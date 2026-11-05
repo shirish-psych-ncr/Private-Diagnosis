@@ -1,0 +1,25 @@
+{
+  "name": "GCLS (Gender Congruence and Life Satisfaction Scale)",
+  "construct": {
+    "en": "Gender congruence, gender-related distress & life satisfaction",
+    "hi": "लंग-संगति, लिंग-संबंधी कष्ट एवं जीवन-संतुष्टि"
+  },
+  "format": {
+    "en": "38 items rated Never-Rarely-Sometimes-Often-Always (0-4) over 6 months, + 1 non-scored genital-surgery tick-box; 4 subscales",
+    "hi": "38 आइटम, कभी नहीं–सदैव (0-4), 6 माह, + 1 अ-अंकित जननांग-शस्त्रक्रिया चिह्न; 4 उप-पैमाने"
+  },
+  "duration": "~10 min",
+  "language": {
+    "en": "English, Hindi",
+    "hi": "अंग्रेज़ी, हिन्दी"
+  },
+  "purpose": {
+    "en": "Quantify gender-related distress, body and social preoccupation and life satisfaction; supports assessment and outcome monitoring.",
+    "hi": "लिंग-संबंधी कष्ट, शारीरिक व सामाजिक आसक्ति तथा जीवन-संतुष्टि का परिमाणीकरण; मूल्यांकन एवं परिणाम-निगरानी में सहायक।"
+  },
+  "source": "Gender Congruence and Life Satisfaction Scale (GCLS)",
+  "licensing": {
+    "en": "Confirm permission terms with the rights holder before clinical or research use.",
+    "hi": "नैदानिक/शोध-प्रयोग से पूर्व अधिकार-वाहक से अनुमति-शर्तें पुष्टि करें।"
+  }
+}

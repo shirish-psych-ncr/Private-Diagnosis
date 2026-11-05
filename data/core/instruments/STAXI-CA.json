@@ -1,0 +1,11 @@
+{
+  "name": "State-Trait Anger Expression Inventory for Children and Adolescents (STAXI-CA)",
+  "description": {
+    "en": "57-item anger inventory in three printed parts: State Anger (items 1-15, 'how you feel right now'), Trait Anger (items 16-24, 'how you generally feel') and Anger Expression (items 25-57, split into Anger-In, Anger-Out, Anger Control and Denial). Each item is rated 1-4; raw sums are reported per subscale (State 15-60, Trait 16-36, each expression/control scale 10-40, Denial 2-8). Dimensional only — not diagnostic.",
+    "hi": "तीन-भाग 57-आइटम क्रोध-सूची: अवस्था क्रोध (1-15, 'अभी कैसे महसूस'), लक्षण क्रोध (16-24, 'सामान्यतः कैसे महसूस') एवं क्रोध-अभिव्यक्ति (25-57; Anger-In, Anger-Out, क्रोध-नियंत्रण, अस्वीकरण)। प्रत्येक आइटम 1-4 रेटेड; उप-पैमाने अनुसार कच्चे योग (अवस्था 15-60, लक्षण 16-36, प्रत्येक अभिव्यक्ति/नियंत्रण 10-40, अस्वीकरण 2-8)। केवल आयामात्मक — रोग-निर्णायक नहीं।"
+  },
+  "domain": "anger",
+  "format": "self-report 1-4 rating matrix with subscale sums",
+  "duration": "10-15 minutes",
+  "optionalAssessment": true
+}

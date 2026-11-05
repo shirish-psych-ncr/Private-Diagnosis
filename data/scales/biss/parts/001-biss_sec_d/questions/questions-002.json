@@ -1,0 +1,219 @@
+[
+  {
+    "id": "biss_6",
+    "itemNumber": 6,
+    "text": {
+      "en": "Guilt: Feelings of self-reproach or excessive, inappropriate guilt for things done or not done."
+    },
+    "itemName": {
+      "en": "Guilt"
+    },
+    "definition": {
+      "en": "Feelings of self-reproach or excessive, inappropriate guilt for things done or not done."
+    },
+    "probes": [
+      {
+        "en": "Do you blame yourself for anything you have done or not done?"
+      },
+      {
+        "en": "What about feeling guilty?"
+      },
+      {
+        "en": "Do you feel you have done anything wrong?"
+      },
+      {
+        "en": "Do you deserve punishment?"
+      },
+      {
+        "en": "Do you feel you have brought this on yourself?"
+      },
+      {
+        "en": "Have you been critical of yourself?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional feelings of mild self-blame"
+      },
+      {
+        "en": "Mild; e.g., often feels somewhat guilty about past actions, the significance of which are exaggerated, such as consequences of the illness"
+      },
+      {
+        "en": "Moderate; e.g., often feels quite guilty about past actions or feelings of guilt that cannot be explained"
+      },
+      {
+        "en": "Severe; e.g., pervasive feelings of intense guilt, self-reproach or generalizes feelings of self-blame"
+      }
+    ]
+  },
+  {
+    "id": "biss_7",
+    "itemNumber": 7,
+    "text": {
+      "en": "Feelings of inadequacy: Negative evaluation of him or herself, including feelings of inadequacy, failure, worthlessness."
+    },
+    "itemName": {
+      "en": "Feelings of inadequacy"
+    },
+    "definition": {
+      "en": "Negative evaluation of him or herself, including feelings of inadequacy, failure, worthlessness."
+    },
+    "probes": [
+      {
+        "en": "How has your self-esteem been this past week?"
+      },
+      {
+        "en": "Are you down on yourself?"
+      },
+      {
+        "en": "What is your opinion of yourself compared to other people?"
+      },
+      {
+        "en": "Worthless? A failure? How often do you feel this way about yourself?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional feelings of inadequacy"
+      },
+      {
+        "en": "Mild; e.g., often feels somewhat inadequate"
+      },
+      {
+        "en": "Moderate; e.g., often feels like a failure"
+      },
+      {
+        "en": "Severe; e.g., pervasive feelings of worthlessness"
+      }
+    ]
+  },
+  {
+    "id": "biss_8",
+    "itemNumber": 8,
+    "text": {
+      "en": "Low energy: Difficulty getting started, or slowness initiating and performing everyday activities. Subjective feeling of lack of energy or fatigue. Do not rate lack of interest."
+    },
+    "itemName": {
+      "en": "Low energy"
+    },
+    "definition": {
+      "en": "Difficulty getting started, or slowness initiating and performing everyday activities. Subjective feeling of lack of energy or fatigue. Do not rate lack of interest."
+    },
+    "probes": [
+      {
+        "en": "Have you had less energy than usual to do things? Have you been getting tired easily? I am not talking about your interest in things, but your physical energy to do things."
+      },
+      {
+        "en": "Has this interfered with your accomplishing tasks that you ordinarily need to do? Have you needed help in getting started?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional less energy than usual"
+      },
+      {
+        "en": "Mild; e.g., at times definitely more tired, or less energy than usual"
+      },
+      {
+        "en": "Moderate; e.g., most of time is very tired, lacking energy"
+      },
+      {
+        "en": "Severe; e.g., spends most of time resting, nearly always feels fatigued"
+      }
+    ]
+  },
+  {
+    "id": "biss_9",
+    "itemNumber": 9,
+    "text": {
+      "en": "Psychomotor slowing: Generalized slowing down of physical reactions, movements, and speech, including latency in speech. Rate both on observed and reported information."
+    },
+    "itemName": {
+      "en": "Psychomotor slowing"
+    },
+    "definition": {
+      "en": "Generalized slowing down of physical reactions, movements, and speech, including latency in speech. Rate both on observed and reported information."
+    },
+    "probes": [
+      {
+        "en": "Have you been slowed down, not able to move as quickly as usual?"
+      },
+      {
+        "en": "Did you find it hard to start talking?"
+      },
+      {
+        "en": "Did you talk a lot less than usual?"
+      },
+      {
+        "en": "Did you feel like you were moving in slow motion?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight, of doubtful clinical significance, only subjective feeling of being slowed"
+      },
+      {
+        "en": "Mild; e.g., conversation is noticeably retarded but not strained"
+      },
+      {
+        "en": "Moderate; e.g., conversation is strained, or moves very slowly"
+      },
+      {
+        "en": "Severe; e.g., conversation is difficult to maintain, or hardly moves at all"
+      }
+    ]
+  },
+  {
+    "id": "biss_10",
+    "itemNumber": 10,
+    "text": {
+      "en": "Loss of interest: Subjective experience of reduced interest in the surroundings, or activities that normally give pleasure. Reduced ability to react with adequate emotion to circumstances or people."
+    },
+    "itemName": {
+      "en": "Loss of interest"
+    },
+    "definition": {
+      "en": "Subjective experience of reduced interest in the surroundings, or activities that normally give pleasure. Reduced ability to react with adequate emotion to circumstances or people."
+    },
+    "probes": [
+      {
+        "en": "When you participated in activities that you usually enjoy, were they pleasurable for you?"
+      },
+      {
+        "en": "If you did not do any of your usual activities, was this because you did not have the opportunity? (If the answer is opportunity, do not rate towards loss of interest.)"
+      },
+      {
+        "en": "Can you experience your usual feelings for your loved ones?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slightly reduced ability to enjoy usual interests. Reduced ability to feel anger"
+      },
+      {
+        "en": "Mild; e.g., loss of interest in the surroundings/activities, loss of feelings for friends and acquaintances"
+      },
+      {
+        "en": "Moderate; e.g., most of the time has moderately reduced interest in most pleasurable activities"
+      },
+      {
+        "en": "Severe; e.g., feels emotionally paralyzed, inability to feel anger or grief, and a complete or even painful failure to feel for close relatives and friends"
+      }
+    ]
+  }
+]

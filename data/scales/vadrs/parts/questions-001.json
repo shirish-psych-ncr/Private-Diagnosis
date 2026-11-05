@@ -1,0 +1,146 @@
+[
+  {
+    "id": "attention",
+    "name": {
+      "en": "Part IA: Inattention",
+      "hi": "भाग I-A: ध्यान की कमी"
+    },
+    "questions": [
+      {
+        "id": "v1",
+        "text": {
+          "en": "Does not pay attention to details or makes careless mistakes with, for example, homework",
+          "hi": "विवरणों पर ध्यान नहीं देता या लापरवाही से गलतियां करता है"
+        }
+      },
+      {
+        "id": "v2",
+        "text": {
+          "en": "Has difficulty keeping attention to what needs to be done",
+          "hi": "जो करने की आवश्यकता है उस पर ध्यान रखने में कठिनाई होती है"
+        }
+      },
+      {
+        "id": "v3",
+        "text": {
+          "en": "Does not seem to listen when spoken to directly",
+          "hi": "सीधे बात करने पर सुनता नहीं प्रतीत होता"
+        }
+      },
+      {
+        "id": "v4",
+        "text": {
+          "en": "Does not follow through when given directions and fails to finish activities (not due to refusal or failure to understand)",
+          "hi": "निर्देशों का पालन नहीं करता और गतिविधियों को पूरा करने में विफल रहता है"
+        }
+      },
+      {
+        "id": "v5",
+        "text": {
+          "en": "Has difficulty organizing tasks and activities",
+          "hi": "कार्यों और गतिविधियों को व्यवस्थित करने में कठिनाई होती है"
+        }
+      },
+      {
+        "id": "v6",
+        "text": {
+          "en": "Avoids, dislikes, or does not want to start tasks that require ongoing mental effort",
+          "hi": "ऐसे कार्यों से बचता है जिनमें निरंतर मानसिक प्रयास की आवश्यकता होती है"
+        }
+      },
+      {
+        "id": "v7",
+        "text": {
+          "en": "Loses things necessary for tasks or activities (toys, assignments, pencils, or books)",
+          "hi": "कार्यों या गतिविधियों के लिए आवश्यक चीजें खो देता है"
+        }
+      },
+      {
+        "id": "v8",
+        "text": {
+          "en": "Is easily distracted by noises or other stimuli",
+          "hi": "बाहरी उत्तेजनाओं से आसानी से विचलित हो जाता है"
+        }
+      },
+      {
+        "id": "v9",
+        "text": {
+          "en": "Is forgetful in daily activities",
+          "hi": "दैनिक गतिविधियों में भूलक्कड़ है"
+        }
+      }
+    ]
+  },
+  {
+    "id": "hyperactivity",
+    "name": {
+      "en": "Part IB: Hyperactivity / Impulsivity",
+      "hi": "भाग I-B: अतिसक्रियता / आवेगशीलता"
+    },
+    "questions": [
+      {
+        "id": "v10",
+        "text": {
+          "en": "Fidgets with hands or feet or squirms in seat",
+          "hi": "हाथ या पैर हिलाता है, या कुर्सी पर तड़पता है"
+        }
+      },
+      {
+        "id": "v11",
+        "text": {
+          "en": "Leaves seat when remaining seated is expected",
+          "hi": "ऐसी स्थितियों में सीट छोड़ देता है जब बैठे रहने की अपेक्षा होती है"
+        }
+      },
+      {
+        "id": "v12",
+        "text": {
+          "en": "Runs about or climbs too much when remaining seated is expected",
+          "hi": "अनुचित स्थितियों में दौड़ता है या चढ़ता है"
+        }
+      },
+      {
+        "id": "v13",
+        "text": {
+          "en": "Has difficulty playing or beginning quiet play activities",
+          "hi": "शांति से खेलने या अवकाश गतिविधियों में शामिल नहीं हो पाता"
+        }
+      },
+      {
+        "id": "v14",
+        "text": {
+          "en": "Is \"on the go,\" acts as if \"driven by a motor\"",
+          "hi": "लगातार गति में रहता है, मानो \"मोटर से संचालित\" हो"
+        }
+      },
+      {
+        "id": "v15",
+        "text": {
+          "en": "Talks too much",
+          "hi": "बहुत ज़्यादा बोलता है"
+        }
+      },
+      {
+        "id": "v16",
+        "text": {
+          "en": "Blurts out answers before questions have been completed",
+          "hi": "प्रश्न पूरे होने से पहले ही उत्तर दे देता है"
+        }
+      },
+      {
+        "id": "v17",
+        "text": {
+          "en": "Has difficulty waiting his or her turn",
+          "hi": "बारी की प्रतीक्षा करने में कठिनाई होती है"
+        }
+      },
+      {
+        "id": "v18",
+        "text": {
+          "en": "Interrupts or intrudes on others' conversations and/or activities",
+          "hi": "दूसरों की बातचीत और/या गतिविधियों में बीच में टोकता है या हस्तक्षेप करता है"
+        }
+      }
+    ]
+  }
+]

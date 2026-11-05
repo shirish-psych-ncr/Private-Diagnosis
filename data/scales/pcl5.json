@@ -1,0 +1,246 @@
+{
+  "id": "pcl5",
+  "questions": [
+    {
+      "id": "trauma_1",
+      "text": {
+        "en": "Repeated, disturbing and unwanted memories of the stressful experience",
+        "hi": "तनावपूर्ण अनुभव की बार-बार होने वाली, परेशान करने वाली और अवांछित यादें"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_2",
+      "text": {
+        "en": "Repeated, disturbing dreams of the stressful experience",
+        "hi": "तनावपूर्ण अनुभव के बार-बार आने वाले दुःस्वप्न"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_3",
+      "text": {
+        "en": "Feeling as if the stressful experience were happening again (flashbacks)",
+        "hi": "ऐसा महसूस करना मानो तनावपूर्ण अनुभव फिर से घट रहा हो (फ्लैशबैक)"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_4",
+      "text": {
+        "en": "Feeling very upset when something reminded you of the stressful experience",
+        "hi": "जब कोई चीज़ तनावपूर्ण अनुभव की याद दिलाए तो अत्यंत दुखी महसूस करना"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_5",
+      "text": {
+        "en": "Strong physical reactions when reminded of the experience (heart pounding, trembling, sweating)",
+        "hi": "याद दिलाने पर तीव्र शारीरिक प्रतिक्रियाएँ (दिल जोर से धड़कना, काँपना, पसीना आना)"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_6",
+      "text": {
+        "en": "Avoiding memories, thoughts, or feelings related to the experience",
+        "hi": "अनुभव से जुड़ी यादों, विचारों या भावनाओं से बचाव"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_7",
+      "text": {
+        "en": "Avoiding external reminders (people, places, conversations, activities)",
+        "hi": "बाहरी स्मरण-चिह्नों से बचाव (लोग, स्थान, बातचीत, गतिविधियाँ)"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd",
+        "adjustment_disorder"
+      ]
+    },
+    {
+      "id": "trauma_8",
+      "text": {
+        "en": "Trouble remembering important parts of the experience",
+        "hi": "अनुभव के महत्वपूर्ण हिस्सों को याद रखने में कठिनाई"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_9",
+      "text": {
+        "en": "Strong beliefs that you, others, or the world are to blame",
+        "hi": "मज़बूत विश्वास कि आप, अन्य लोग, या संसार दोषी हैं"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_10",
+      "text": {
+        "en": "Distorted blame of self or others for causing the experience",
+        "hi": "अनुभव कराने हेतु स्वयं या दूसरों की विकृत आलोचना"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_11",
+      "text": {
+        "en": "Upset emotions such as guilt, shame, or humiliation",
+        "hi": "दुखद भावनाएँ जैसे अपराध-बोध, शर्म या अपमान"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_12",
+      "text": {
+        "en": "Loss of interest in significant activities",
+        "hi": "महत्वपूर्ण गतिविधियों में रुचि की हानि"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_13",
+      "text": {
+        "en": "Feeling detached or cut off from others",
+        "hi": "दूसरों से कटा हुआ या अलग महसूस करना"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_14",
+      "text": {
+        "en": "Difficulty experiencing positive emotions",
+        "hi": "सकारात्मक भावनाओं को अनुभव करने में कठिनाई"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_15",
+      "text": {
+        "en": "Irritable behaviour or angry outbursts",
+        "hi": "चिड़चिड़ा व्यवहार या क्रोध के विस्फोट"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_16",
+      "text": {
+        "en": "Reckless or self-destructive behaviour",
+        "hi": "लापरवाह या आत्म-विनाशी व्यवहार"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_17",
+      "text": {
+        "en": "Being overly watchful or on guard",
+        "hi": "अत्यधिक सतर्क रहना या पहरे पर होना"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_18",
+      "text": {
+        "en": "Being easily startled or frightened",
+        "hi": "आसानी से चौंकना या डर जाना"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_19",
+      "text": {
+        "en": "Trouble concentrating",
+        "hi": "ध्यान केंद्रित करने में कठिनाई"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    },
+    {
+      "id": "trauma_20",
+      "text": {
+        "en": "Trouble falling or staying asleep",
+        "hi": "नींद आने या बने रहने में कठिनाई"
+      },
+      "sharedScale": "pcl5scale",
+      "disorders": [
+        "ptsd",
+        "complex_ptsd"
+      ]
+    }
+  ]
+}

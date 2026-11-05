@@ -1,0 +1,16 @@
+{
+  "name": {
+    "en": "Somatic Symptom Disorder",
+    "hi": "सोमेटिक लक्षण विकार"
+  },
+  "category": "somatic",
+  "dsm5Code": "300.82 (F45.1)",
+  "icd11Code": "6B41",
+  "notes": {
+    "en": "PHQ-15 ≥ 10 (moderate-severe somatisation) supports the differential; the diagnosis requires distressing somatic symptoms plus excessive thoughts, feelings or behaviours about them.",
+    "hi": "PHQ-15 ≥ 10 (मध्यम-गंभीर सोमटाइज़ेशन) विभेदी-सूची का समर्थन करता है; निर्णय के लिए क्लेशजनक शारीरिक लक्षण तथा उनके प्रति अत्यधिक विचार/भाव/व्यवहार आवश्यक।"
+  },
+  "instruments": [
+    "PHQ-15"
+  ]
+}

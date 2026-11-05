@@ -1,0 +1,11 @@
+{
+  "name": "Insomnia Severity Index",
+  "description": {
+    "en": "Sleep difficulty assessment",
+    "hi": "नींद कठिनाई मूल्यांकन"
+  },
+  "domains": [
+    "sleep"
+  ],
+  "duration": "2-3 minutes"
+}

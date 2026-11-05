@@ -1,0 +1,25 @@
+{
+  "name": "FAC22-SR (Factitious Disorder Symptom Scale, self-report)",
+  "construct": {
+    "en": "Factitious disorder screening",
+    "hi": "छलरोग स्क्रीनिंग"
+  },
+  "format": {
+    "en": "22 Yes/No items, keyed; 9-14 possible, 15+ probable",
+    "hi": "22 हाँ/नहीं आइटम, keyed; 9-14 संभव, 15+ संभावित"
+  },
+  "duration": "~5 min",
+  "language": {
+    "en": "English (authoritative), Hindi working translation",
+    "hi": "अंग्रेज़ी (प्रामाणिक), हिन्दी कार्य-अनुवाद"
+  },
+  "purpose": {
+    "en": "Screen for factitious disorder in patients with medically unexplained symptoms. Not diagnostic; must be combined with record review and exclusion of malingering.",
+    "hi": "अस्पष्टीकृत शारीरिक लक्षण वाले रोगियों में छलरोग की स्क्रीनिंग। रोग-निर्णायक नहीं; रिकॉर्ड-समीक्षा एवं मालिंगरिंग-विवर्जन के साथ उपयोग।"
+  },
+  "source": "Senthil & Prabhakar, J Evid Based Med Healthc 2019;6(21) Table 7",
+  "licensing": {
+    "en": "Published research instrument (open-access journal article); verify reuse terms.",
+    "hi": "प्रकाशित अनुसंधान-मापनी (open-access); पुनरुपयोग-शर्ताएँ सत्यापित करें।"
+  }
+}

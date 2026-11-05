@@ -1,0 +1,11 @@
+{
+  "name": "CAGE-AID",
+  "description": {
+    "en": "Substance use screening",
+    "hi": "पदार्थ उपयोग स्क्रीनिंग"
+  },
+  "domains": [
+    "substance"
+  ],
+  "duration": "2 minutes"
+}

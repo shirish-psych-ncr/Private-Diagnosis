@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Schizophrenia Spectrum Disorder",
+    "hi": "सिज़ोफ्रेनिया स्पेक्ट्रम विकार"
+  },
+  "tier": 4,
+  "dsm5": "Schizophrenia Spectrum",
+  "icd11": "6A2Z",
+  "description": {
+    "en": "Delusions, hallucinations, disorganised speech or behaviour",
+    "hi": "भ्रम, मतिभ्रम, अव्यवस्थित भाषा या व्यवहार"
+  },
+  "mappingNote": "ICD-11 uses .Z for unspecified categories (Schizophrenia spectrum and other primary psychotic disorders, unspecified = 6A2Z); there is no 6A2Y in this block."
+}

@@ -1,0 +1,7 @@
+{
+  "$concat": [
+    "data/scales/hexaco_pi_r_observer/parts/001-hx_items/questions/questions-001.json",
+    "data/scales/hexaco_pi_r_observer/parts/001-hx_items/questions/questions-002.json",
+    "data/scales/hexaco_pi_r_observer/parts/001-hx_items/questions/questions-003.json"
+  ]
+}

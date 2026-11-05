@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Somatic Symptom Disorder",
+    "hi": "सोमैटिक लक्षण विकार"
+  },
+  "tier": 2,
+  "dsm5": "Somatic Symptom Disorder",
+  "icd11": "6C20",
+  "description": {
+    "en": "Distressing somatic symptoms with excessive health-related thoughts",
+    "hi": "स्वास्थ्य-संबंधी अत्यधिक विचारों के साथ कष्टकारी शारीरिक लक्षण"
+  },
+  "mappingNote": "ICD-11 Bodily distress disorder is 6C20; 6B42 is Prolonged grief disorder. Related construct, not identical criteria set (index 8.1.2)."
+}

@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Bipolar II Disorder",
+    "hi": "द्विध्रुवी II विकार"
+  },
+  "tier": 3,
+  "dsm5": "Bipolar II Disorder",
+  "icd11": "6A61",
+  "description": {
+    "en": "At least one hypomanic episode and one major depressive episode, never manic",
+    "hi": "कम से कम एक हाइपोमैैनिक एवं एक प्रमुख अवसादी एपिसोड, कभी मैैनिक नहीं"
+  },
+  "mappingNote": "ICD-11 Bipolar type II disorder is 6A61; episode, psychosis and remission subdivisions are selected separately (index 3.1.2)."
+}

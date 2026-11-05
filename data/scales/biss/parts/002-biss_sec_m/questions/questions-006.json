@@ -1,0 +1,46 @@
+[
+  {
+    "id": "biss_44",
+    "itemNumber": 44,
+    "text": {
+      "en": "Impaired insight: Awareness, understanding of his/her emotional illness, aberrant behavior, and corresponding need for psychiatric treatments."
+    },
+    "itemName": {
+      "en": "Impaired insight"
+    },
+    "definition": {
+      "en": "Awareness, understanding of his/her emotional illness, aberrant behavior, and corresponding need for psychiatric treatments."
+    },
+    "probes": [
+      {
+        "en": "Why are you coming for psychiatric treatment?"
+      },
+      {
+        "en": "Do you feel that you currently have an emotional problem, or mental illness?"
+      },
+      {
+        "en": "Do you believe that you need psychiatric treatment?"
+      },
+      {
+        "en": "How would you explain your (behavior, symptoms, etc)?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all; insight is present, patient admits, understands illness and need for treatment"
+      },
+      {
+        "en": "Slight impairment; patient feels he/she is ill, or needs treatment, but has little insight into history of illness or what characterizes the illness."
+      },
+      {
+        "en": "Mild; admits behavior is changed, or need for treatment, but attributes it to a nonpsychiatric external factor (i.e., marital conflict, stress). Factors are plausible and non-delusional."
+      },
+      {
+        "en": "Moderate impairment; admits behavior is changed, or need for treatment, but gives implausible or delusional explanations"
+      },
+      {
+        "en": "Severe; denies behavior change, illness, or need for treatment"
+      }
+    ]
+  }
+]

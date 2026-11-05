@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Paraphilic Disorder",
+    "hi": "लिंग-विकृतिजनक विकार"
+  },
+  "tier": 5,
+  "dsm5": "Paraphilic Disorder",
+  "icd11": "6D30",
+  "description": {
+    "en": "Atypical sexual interests causing distress or harm",
+    "hi": "कष्ट या हानि उत्पन्न करने वाली असामान्य यौन रुचियाँ"
+  },
+  "mappingNote": "ICD-11 paraphilic disorders are 6D30-6D36 plus 6D3Z; there are no separately named MMS categories for fetishistic disorder, transvestic disorder or sexual masochism disorder - consider 6D36 only when its requirements are met (index 17.1.2)."
+}

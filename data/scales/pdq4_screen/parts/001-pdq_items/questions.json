@@ -1,0 +1,8 @@
+{
+  "$concat": [
+    "data/scales/pdq4_screen/parts/001-pdq_items/questions/questions-001.json",
+    "data/scales/pdq4_screen/parts/001-pdq_items/questions/questions-002.json",
+    "data/scales/pdq4_screen/parts/001-pdq_items/questions/questions-003.json",
+    "data/scales/pdq4_screen/parts/001-pdq_items/questions/questions-004.json"
+  ]
+}

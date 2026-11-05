@@ -1,0 +1,363 @@
+[
+  {
+    "id": "staxi_part1",
+    "name": {
+      "en": "Part 1 — State Anger: How I Feel Right Now",
+      "hi": "भाग 1 — अवस्था क्रोध: अभी मैं कैसा महसूस करता/करती हूँ"
+    },
+    "questions": [
+      {
+        "id": "staxi_1",
+        "itemNumber": 1,
+        "text": {
+          "en": "I am furious.",
+          "hi": "मैं प्रचंड क्रोधित हूँ।"
+        }
+      },
+      {
+        "id": "staxi_2",
+        "itemNumber": 2,
+        "text": {
+          "en": "I feel irritated.",
+          "hi": "मुझे चिड़चिड़ापन महसूस होता है।"
+        }
+      },
+      {
+        "id": "staxi_3",
+        "itemNumber": 3,
+        "text": {
+          "en": "I feel angry.",
+          "hi": "मुझे क्रोध महसूस होता है।"
+        }
+      },
+      {
+        "id": "staxi_4",
+        "itemNumber": 4,
+        "text": {
+          "en": "I feel like yelling at somebody.",
+          "hi": "मैं किसी पर चिल्लाना चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_5",
+        "itemNumber": 5,
+        "text": {
+          "en": "I feel like breaking things.",
+          "hi": "मैं चीज़ें तोड़ना चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_6",
+        "itemNumber": 6,
+        "text": {
+          "en": "I am mad.",
+          "hi": "मैं नाराज़/क्रोधित हूँ।"
+        }
+      },
+      {
+        "id": "staxi_7",
+        "itemNumber": 7,
+        "text": {
+          "en": "I feel like banging on the table.",
+          "hi": "मैं मेज़ पर प्रहार करना चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_8",
+        "itemNumber": 8,
+        "text": {
+          "en": "I feel like hitting someone.",
+          "hi": "मैं किसी को मारना चाहता/चाहती हूँ।"
+        },
+        "safety": true,
+        "safetyNote": {
+          "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+          "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+        }
+      },
+      {
+        "id": "staxi_9",
+        "itemNumber": 9,
+        "text": {
+          "en": "I feel like swearing.",
+          "hi": "मैं गाली देना चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_10",
+        "itemNumber": 10,
+        "text": {
+          "en": "I feel annoyed.",
+          "hi": "मुझे क्षुब्धता महसूस होती है।"
+        }
+      },
+      {
+        "id": "staxi_11",
+        "itemNumber": 11,
+        "text": {
+          "en": "I feel like kicking somebody.",
+          "hi": "मैं किसी को लात मारना चाहता/चाहती हूँ।"
+        },
+        "safety": true,
+        "safetyNote": {
+          "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+          "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+        }
+      },
+      {
+        "id": "staxi_12",
+        "itemNumber": 12,
+        "text": {
+          "en": "I feel like cursing out loud.",
+          "hi": "मैं ज़ोर से शपथ लेना/गाली देना चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_13",
+        "itemNumber": 13,
+        "text": {
+          "en": "I feel like screaming.",
+          "hi": "मैं चीखना चाहता/चाहती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_14",
+        "itemNumber": 14,
+        "text": {
+          "en": "I feel like pounding somebody.",
+          "hi": "मैं किसी को पीटना चाहता/चाहती हूँ।"
+        },
+        "safety": true,
+        "safetyNote": {
+          "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+          "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+        }
+      },
+      {
+        "id": "staxi_15",
+        "itemNumber": 15,
+        "text": {
+          "en": "I feel like shouting out loud.",
+          "hi": "मैं ज़ोर से चिल्लाना चाहता/चाहती हूँ।"
+        }
+      }
+    ],
+    "options": [
+      {
+        "v": 1,
+        "label": {
+          "en": "1",
+          "hi": "1"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "2",
+          "hi": "2"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "3",
+          "hi": "3"
+        }
+      },
+      {
+        "v": 4,
+        "label": {
+          "en": "4",
+          "hi": "4"
+        }
+      }
+    ],
+    "anchors": [
+      {
+        "v": 1,
+        "label": {
+          "en": "1 Not at all",
+          "hi": "1 बिल्कुल नहीं"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "2 Somewhat",
+          "hi": "2 कुछ हद तक"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "3 Moderately so",
+          "hi": "3 मध्यम रूप से"
+        }
+      },
+      {
+        "v": 4,
+        "label": {
+          "en": "4 Very much so",
+          "hi": "4 अत्यधिक"
+        }
+      }
+    ],
+    "timeframe": {
+      "en": "Right now, at this moment.",
+      "hi": "इसी क्षण, अभी।"
+    }
+  },
+  {
+    "id": "staxi_part2",
+    "name": {
+      "en": "Part 2 — Trait Anger: How I Generally Feel",
+      "hi": "भाग 2 — लक्षण क्रोध: मैं सामान्यतः कैसा महसूस करता/करती हूँ"
+    },
+    "questions": [
+      {
+        "id": "staxi_16",
+        "itemNumber": 16,
+        "text": {
+          "en": "I am quick tempered.",
+          "hi": "मेरा स्वभाव त्वरित-क्रोध वाला है।"
+        }
+      },
+      {
+        "id": "staxi_17",
+        "itemNumber": 17,
+        "text": {
+          "en": "I have a fiery temper.",
+          "hi": "मेरा स्वभाव अग्निश/प्रचंड है।"
+        }
+      },
+      {
+        "id": "staxi_18",
+        "itemNumber": 18,
+        "text": {
+          "en": "I am a hot-headed person.",
+          "hi": "मैं उग्र-स्वभाव व्यक्ति हूँ।"
+        }
+      },
+      {
+        "id": "staxi_19",
+        "itemNumber": 19,
+        "text": {
+          "en": "I get angry when I'm slowed down by others' mistakes.",
+          "hi": "अन्यों की भूलों से विलंब होने पर मुझे क्रोध आता है।"
+        }
+      },
+      {
+        "id": "staxi_20",
+        "itemNumber": 20,
+        "text": {
+          "en": "I feel annoyed when I am not given recognition for doing good work.",
+          "hi": "उत्तम कार्य हेतु प्रशंसा न मिलने पर मुझे क्षुब्धता होती है।"
+        }
+      },
+      {
+        "id": "staxi_21",
+        "itemNumber": 21,
+        "text": {
+          "en": "I fly off the handle.",
+          "hi": "मैं एकदम से फट पड़ता/फट पड़ती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_22",
+        "itemNumber": 22,
+        "text": {
+          "en": "When I get mad, I say nasty things.",
+          "hi": "नाराज़ होने पर मैं कुरूप बातें कहता/कहती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_23",
+        "itemNumber": 23,
+        "text": {
+          "en": "It makes me furious when I am criticized in front of others.",
+          "hi": "अन्यों के सामने आलोचना होने पर मैं प्रचंड क्रोधित हो जाता/जाती हूँ।"
+        }
+      },
+      {
+        "id": "staxi_24",
+        "itemNumber": 24,
+        "text": {
+          "en": "When I get frustrated, I feel like hitting someone.",
+          "hi": "व्यर्थता अनुभव करने पर मैं किसी को मारना चाहता/चाहती हूँ।"
+        },
+        "safety": true,
+        "safetyNote": {
+          "en": "Physical aggression impulse endorsed — discuss safety and aggression management.",
+          "hi": "शारीरिक आक्रामकता की इच्छा — सुरक्षा एवं क्रोध-प्रबंधन पर चर्चा करें।"
+        }
+      }
+    ],
+    "options": [
+      {
+        "v": 1,
+        "label": {
+          "en": "1",
+          "hi": "1"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "2",
+          "hi": "2"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "3",
+          "hi": "3"
+        }
+      },
+      {
+        "v": 4,
+        "label": {
+          "en": "4",
+          "hi": "4"
+        }
+      }
+    ],
+    "anchors": [
+      {
+        "v": 1,
+        "label": {
+          "en": "1 Almost never",
+          "hi": "1 लगभग कभी नहीं"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "2 Sometimes",
+          "hi": "2 कभी-कभी"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "3 Often",
+          "hi": "3 अक्सर"
+        }
+      },
+      {
+        "v": 4,
+        "label": {
+          "en": "4 Almost always",
+          "hi": "4 लगभग सदैव"
+        }
+      }
+    ],
+    "timeframe": {
+      "en": "In general, how you usually feel or react.",
+      "hi": "सामान्यतः आप कैसे महसूस करते/करती हैं अथवा प्रतिक्रिया देते/देती हैं।"
+    }
+  },
+  {
+    "$file": "data/scales/staxi_ca/parts/003-staxi_part3.json"
+  }
+]

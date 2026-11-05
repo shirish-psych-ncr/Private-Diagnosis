@@ -1,0 +1,11 @@
+{
+  "name": "Pittsburgh Sleep Quality Index",
+  "description": {
+    "en": "Sleep quality assessment",
+    "hi": "नींद गुणवत्ता मूल्यांकन"
+  },
+  "domains": [
+    "sleep"
+  ],
+  "duration": "5-10 minutes"
+}

@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Other Specified Disruptive, Impulse-Control and Conduct Disorder",
+    "hi": "अन्य निर्दिष्ट विघ्नकारी, आवेग-नियंत्रण एवं आचरण विकार"
+  },
+  "tier": 3,
+  "dsm5": "Other Specified Disruptive, Impulse-Control and Conduct Disorder",
+  "icd11": "6B90",
+  "icd10": "F63.8",
+  "mappingNote": {
+    "en": "Anger-screen flag only — severity instruments (STAXI-CA / CAS) quantify anger dimensions and require clinical confirmation before any diagnostic use.",
+    "hi": "केवल क्रोध-स्क्रीन धनात्मक — तीव्रता-पैमाने (STAXI-CA / CAS) क्रोध-आयाम मापते हैं; रोग-निर्णय हेतु नैदानिक पुष्टि आवश्यक।"
+  },
+  "description": {
+    "en": "Clinician-specified anger/impulse-control problem that does not meet full criteria for a named disorder.",
+    "hi": "Clinician-specified anger/impulse-control problem that does not meet full criteria for a named disorder."
+  }
+}

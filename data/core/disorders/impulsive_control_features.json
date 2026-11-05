@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Impulsive control features (ICD-10 F60.30 dissocial, impulsive subtype)",
+    "hi": "आवेगी नियंत्रण लक्षण (ICD-10 F60.30)"
+  },
+  "tier": 2,
+  "dsm5": "Impulsive control features (ICD-10 F60.30 dissocial, impulsive subtype)",
+  "icd11": "6D11",
+  "icd10": "F60.30",
+  "mappingNote": {
+    "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+    "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+  },
+  "description": {
+    "en": "Emotional instability and impulsive tendency without the full borderline pattern.",
+    "hi": "Emotional instability and impulsive tendency without the full borderline pattern."
+  }
+}

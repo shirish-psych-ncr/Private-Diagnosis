@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Dissociative Experiences Scale (DES-II)",
+    "hi": "वियोजीय अनुभव पैमाना (DES-II)"
+  },
+  "description": {
+    "en": "28-item self-report measure; each item is scored as the percentage of time the experience occurs (0-100%) and the total is the mean of the 28 percentages. A mean of 30 or higher is the clinical comparison point indicating a need for a structured dissociative interview (Eve Bernstein Carlson, Ph.D. & Frank W. Putnam, M.D.). Not diagnostic on its own.",
+    "hi": "28-आइटम स्व-वर्णित माप; प्रत्येक आइटम अनुभव के प्रतिशत समय (0-100%) से अंकित और कुल 28 प्रतिशतों का माध्य है। 30 या अधिक का माध्य नैदानिक-तुलना बिंदु है जो संरचित वियोजीय साक्षात्कार हेतु निर्देशित करता है (Carlson & Putnam)। स्वयं में रोग-निर्णायक नहीं।"
+  },
+  "domain": "dissociation",
+  "format": "self-report percentage matrix with mean total",
+  "duration": "5-10 minutes",
+  "optionalAssessment": true
+}

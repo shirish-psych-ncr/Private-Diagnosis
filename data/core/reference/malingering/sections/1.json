@@ -1,0 +1,17 @@
+{
+  "id": "depression",
+  "title": {
+    "en": "Evaluating possible malingered depression",
+    "hi": "संभावित वर्धित अवसाद का मूल्यांकन"
+  },
+  "items": [
+    {
+      "en": "Gervais et al. (2001): 25-30% of civil-litigation claimants of major depression probably malingered on forced-choice testing.",
+      "hi": "Gervais आदि (2001): दीवानी वादों में प्रस्तावित प्रमुख अवसाद के 25-30% दाता संभवतः फोर्सड-चॉइस परीक्षण पर मालिंगरिंग कर रहे थे।"
+    },
+    {
+      "en": "Review DSM-5 criteria first; then weigh inconsistency between reported state and observed behaviour: full range of facial expression, normal motor activity, laughing/joking, enjoyment of activities, no verifiable weight change, indiscriminate endorsement of unrelated symptoms, laudatory self-presentation, blame of others, poor performance on very easy personal questions, sudden worsening once told they will be 'tested', mood change when observed vs unobserved.",
+      "hi": "प्रथम DSM-5 मानदंड देखें; फिर वर्णित अवस्था एवं प्रत्यक्ष व्यवहार की विसंगति पर विचार: भाव-अभिव्यक्ति का पूर्ण विस्तार, सामान्य मोटर क्रिया, हँसी-मज़ाक, कार्यों में रूचि, वजन-परिवर्तन का अप्रमाणित, असंबंधित लक्षणों का अंधाधुंध समर्थन, स्व-प्रशंसा, दूसरों पर दोषारोपण, अत्यंत सरल व्यक्तिगत प्रश्नों पर खराब प्रदर्शन, 'परीक्षण' बताते ही स्मरण/एकाग्रता का आकस्मिक अवमदन, प्रेक्षित अप्रत्यक्ष अवस्था में अंतर।"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+/* ========================================
+   Mental Health Clinic - Main Stylesheet
+   ======================================== */
+
+/* CSS Variables - CLASSIFIED PHYSICS ENGINE PARAMETERS */
+:root {
+    --primary-color: #4a90a4;
+    --primary-dark: #3a7d8f;
+    --primary-light: #6ab0c3;
+    --secondary-color: #7eb8a3;
+    --accent-color: #f4a261;
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --text-muted: #b2bec3;
+    --bg-white: #ffffff;
+    --bg-off-white: #f8f9fa;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --transition: all 0.3s ease;
+    
+    /* Physics Engine Constants - Spring-Damper Arrays for linear() Easing */
+    --spring-gentle: linear(0, 0.0033, 0.0131, 0.0296, 0.0529, 0.0831, 0.1202, 0.1642, 0.2152, 0.2732, 0.3382, 0.4102, 0.4892, 0.5752, 0.6682, 0.7682, 0.8752, 1.0102, 1.1532, 1.2842, 1.3832, 1.4502, 1.4852, 1.5, 1.4852, 1.4502, 1.3832, 1.2842, 1.1532, 1.0102, 0.8752, 0.7682, 0.6682, 0.5752, 0.4892, 0.4102, 0.3382, 0.2732, 0.2152, 0.1642, 0.1202, 0.0831, 0.0529, 0.0296, 0.0131, 0.0033, 0);
+    --spring-bouncy: linear(0, 0.0016, 0.0066, 0.0149, 0.0266, 0.0416, 0.06, 0.0816, 0.1066, 0.1349, 0.1666, 0.2016, 0.24, 0.2816, 0.3266, 0.3749, 0.4266, 0.4816, 0.54, 0.6016, 0.6666, 0.7349, 0.8066, 0.8816, 0.96, 1.0416, 1.1266, 1.2149, 1.3066, 1.4016, 1.5, 1.5816, 1.6466, 1.6949, 1.7266, 1.7416, 1.74, 1.7216, 1.6866, 1.6349, 1.5666, 1.4816, 1.38, 1.2616, 1.1266, 0.9749, 0.8066, 0.6216, 0.42, 0.2016, 0);
+    --viscous-drag: linear(0, 0.02, 0.06, 0.12, 0.2, 0.3, 0.42, 0.56, 0.72, 0.9, 1.1, 1.32, 1.56, 1.82, 2.1, 2.4, 2.72, 3.06, 3.42, 3.8, 4.2, 4.62, 5.06, 5.52, 6, 6.5, 7.02, 7.56, 8.12, 8.7, 9.3, 9.92, 10.56, 11.22, 11.9, 12.6, 13.32, 14.06, 14.82, 15.6, 16.4, 17.22, 18.06, 18.92, 19.8, 20.7, 21.62, 22.56, 23.52, 24.5, 25.5, 26.52, 27.56, 28.62, 29.7, 30.8, 31.92, 33.06, 34.22, 35.4, 36.6, 37.82, 39.06, 40.32, 41.6, 42.9, 44.22, 45.56, 46.92, 48.3, 49.7, 51.12, 52.56, 54.02, 55.5, 57, 58.52, 60.06, 61.62, 63.2, 64.8, 66.42, 68.06, 69.72, 71.4, 73.1, 74.82, 76.56, 78.32, 80.1, 81.9, 83.72, 85.56, 87.42, 89.3, 91.2, 93.12, 95.06, 97.02, 99, 100);
+    
+    /* Temporal Control Variables */
+    --bullet-time-rate: 1;
+    --micro-interaction-duration: 0.3s;
+    --macro-animation-duration: 3s;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: var(--bg-white);
+}
+
+/* WebGL Canvas */
+#webgl-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* ========================================
+   CLASSIFIED CSS PHYSICS ENGINE
+   Advanced Temporal, Relational & Physics Rendering
+   ======================================== */
+

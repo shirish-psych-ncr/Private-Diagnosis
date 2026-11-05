@@ -1,0 +1,10 @@
+{
+  "name": {
+    "en": "Brief Psychotic Disorder",
+    "hi": "लघु मनर्विकार"
+  },
+  "tier": 4,
+  "dsm5": "Brief Psychotic Disorder",
+  "icd11": "6A23.Y",
+  "mappingNote": "DSM brief psychotic disorder has no automatic ICD equivalent (see index 2.1.3); 6A23 Acute and transient psychotic disorder is a comparison only, and 6A23.Y is used as the other-specified comparator."
+}

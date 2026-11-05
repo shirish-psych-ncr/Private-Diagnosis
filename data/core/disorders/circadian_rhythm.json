@@ -1,0 +1,11 @@
+{
+  "name": {
+    "en": "Circadian Rhythm Sleep-Wake Disorder",
+    "hi": "सर्केडियन लय नींद-जागृति विकार"
+  },
+  "tier": 3,
+  "dsm5": "Circadian Rhythm Sleep-Wake Disorder",
+  "icd11": "7A60",
+  "mappingNote": "ICD-11 circadian rhythm sleep-wake disorders are 7A60-7A65 (7A60 delayed sleep-wake phase disorder shown as the representative child); 7A02 does not exist.",
+  "icd11Chapter": "Chapter 07: Sleep-wake disorders"
+}

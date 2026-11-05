@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Depersonalization/Derealization Disorder",
+    "hi": "विलगता/वास्तविकता-विचलन विकार"
+  },
+  "tier": 5,
+  "dsm5": "Depersonalization/Derealization Disorder",
+  "icd11": "6B61",
+  "description": {
+    "en": "Persistent or recurrent episodes of depersonalization, derealization or both, with intact reality testing.",
+    "hi": "विलगता, वास्तविकता-विचलन अथवा दोनों की निरंतर/पुनरावृत्त घटनाएँ, वास्तविकता-परीक्षण सुरक्षित।"
+  },
+  "mappingNote": "ICD-11 6B61; DSM-5-TR DDD. Flagged by the MID-60 D/DD subscale."
+}

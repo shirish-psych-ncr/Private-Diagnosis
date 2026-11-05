@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Bipolar I Disorder",
+    "hi": "द्विध्रुवी I विकार"
+  },
+  "tier": 3,
+  "dsm5": "Bipolar I Disorder",
+  "icd11": "6A60",
+  "description": {
+    "en": "At least one manic episode, with or without depressive episodes",
+    "hi": "कम से कम एक मैैनिक एपिसोड, अवसादी एपिसोड सहित या विना"
+  },
+  "mappingNote": "ICD-11 Bipolar type I disorder is 6A60; current episode, psychosis and remission subdivisions are selected separately (index 3.1.2) and do not denote generic mixed/remission states."
+}

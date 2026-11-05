@@ -1,0 +1,25 @@
+{
+  "name": "HEXACO-PI-R Observer Report Form (60 items)",
+  "construct": {
+    "en": "पर्यवेक्षक द्वारा रेटित छह-डोमेन व्यक्तित्व-संरचना",
+    "hi": "Six-domain personality structure rated by an informant"
+  },
+  "format": {
+    "en": "60 कथन, मूल्यांकन-विषय के विषय में 1 (पूर्णतः असहमत) से 5 (पूर्णतः सहमत) पर रेटित; 6 डोमेनों में 24 फलक-पैमाने; R-कुंजी आइटम व्युक्रम-अंकित; फलक = उसके आइटमों का माध्य, डोमेन = उसके फलकों का माध्य",
+    "hi": "60 statements rated 1 (strongly disagree) to 5 (strongly agree) about the person being described; 24 facet scales across 6 domains; R-keyed items reverse-scored; facet = mean of its items, domain = mean of its facets"
+  },
+  "duration": "~10-15 min",
+  "language": {
+    "en": "Hindi working translation; English original authoritative",
+    "hi": "हिन्दी कार्यशील अनुवाद; अंग्रेज़ी मूल प्राधिकृत"
+  },
+  "purpose": {
+    "en": "व्यक्ति को अच्छी तरह जानने वाले से व्यक्ति-ता-प्रोफाइल प्राप्त करना — आत्म-रिपोर्ट की पुष्टि/चुनौती एवं रूपरेखा में पर्यवेक्षक-स्तर की सूचना जोड़ना। केवल वर्णनात्मक — कोई नैदानिक कटऑफ नहीं।",
+    "hi": "Obtain a personality profile from someone who knows the person well, to corroborate or challenge self-report and add observer-level information to the formulation. Descriptive only - it carries no diagnostic cut-offs."
+  },
+  "source": "HEXACO-PI-R / HEXACO-60 (Lee & Ashton)",
+  "licensing": {
+    "en": "Item wording and scoring key published freely by the authors; commercial or redistributed use requires their permission.",
+    "hi": "मूल रूप व स्कोरिंग-कुंजी लेखकों द्वारा मुक्त-उपयोग हेतु प्रकाशित; व्यावसायिक/पुनर्विक्रय उपयोग हेतु अनुमति आवश्यक।"
+  }
+}

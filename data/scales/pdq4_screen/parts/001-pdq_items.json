@@ -1,0 +1,10 @@
+{
+  "id": "pdq_items",
+  "name": {
+    "en": "Personality Questionnaire Items",
+    "hi": "व्यक्तित्व प्रश्नावली आइटम"
+  },
+  "questions": {
+    "$file": "data/scales/pdq4_screen/parts/001-pdq_items/questions.json"
+  }
+}

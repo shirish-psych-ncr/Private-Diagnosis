@@ -1,0 +1,118 @@
+[
+  {
+    "id": "gcls_part1",
+    "partKey": "past_6_months_distress",
+    "name": {
+      "en": "In the past 6 months, due to the distress about my gender (i.e., the distress caused as the gender I was assigned at birth does not match with my gender identity):",
+      "hi": "पिछले 6 माह में, मेरे लिंग संबंधी कष्ट के कारण (अर्थात् वह कष्ट जो जन्म के समय सौंपे गए लिंग और मेरी लिंग-पहचान के मेल न खाने से होता है):"
+    },
+    "questions": [
+      {
+        "id": "gcls_1",
+        "itemNumber": 1,
+        "text": {
+          "en": "I have avoided social situations and/or social interactions.",
+          "hi": "मैंने सामाजिक परिस्थितियों और/अथवा सामाजिक संपर्कों से परहेज़ किया है।"
+        }
+      },
+      {
+        "id": "gcls_2",
+        "itemNumber": 2,
+        "text": {
+          "en": "I have not gone to school/college/work.",
+          "hi": "मैं स्कूल/महाविद्यालय/कार्यस्थल नहीं गया/गई हूँ।"
+        }
+      },
+      {
+        "id": "gcls_3",
+        "itemNumber": 3,
+        "text": {
+          "en": "I have not been able to have emotional relationships with other people.",
+          "hi": "मैं दूसरे लोगों के साथ भावनात्मक संबंध नहीं बना पाया/पाई।"
+        }
+      },
+      {
+        "id": "gcls_4",
+        "itemNumber": 4,
+        "text": {
+          "en": "I have suffered from anxiety.",
+          "hi": "मुझे चिंता का सामना करना पड़ा है।"
+        }
+      },
+      {
+        "id": "gcls_5",
+        "itemNumber": 5,
+        "text": {
+          "en": "I have not been able to be physically intimate with other people.",
+          "hi": "मैं दूसरे लोगों के साथ शारीरिक रूप से निकट नहीं हो पाया/पाई।"
+        }
+      },
+      {
+        "id": "gcls_6",
+        "itemNumber": 6,
+        "text": {
+          "en": "I have been unable to leave the house.",
+          "hi": "मैं घर से बाहर नहीं जा पाया/पाई।"
+        }
+      },
+      {
+        "id": "gcls_7",
+        "itemNumber": 7,
+        "text": {
+          "en": "I have found it difficult to make friends.",
+          "hi": "मुझे मित्र बनाने में कठिनाई हुई है।"
+        }
+      },
+      {
+        "id": "gcls_8",
+        "itemNumber": 8,
+        "text": {
+          "en": "I have thought about cutting or hurting my chest, genitals, and/or surrounding areas.",
+          "hi": "मुझे अपने वक्ष, जननांगों और/अथवा आस-पास के अंगों को काटने या क्षति पहुँचाने का विचार आया है।"
+        },
+        "safety": true
+      },
+      {
+        "id": "gcls_9",
+        "itemNumber": 9,
+        "text": {
+          "en": "I have felt that life is meaningless.",
+          "hi": "मुझे लगा कि जीवन निरर्थक है।"
+        }
+      },
+      {
+        "id": "gcls_10",
+        "itemNumber": 10,
+        "text": {
+          "en": "I have not enjoyed life.",
+          "hi": "मैं जीवन का आनंद नहीं ले पाया/पाई।"
+        }
+      },
+      {
+        "id": "gcls_11",
+        "itemNumber": 11,
+        "text": {
+          "en": "I have not engaged in leisure activities.",
+          "hi": "मैं अवकाश गतिविधियों में शामिल नहीं हुआ/हुई।"
+        }
+      },
+      {
+        "id": "gcls_12",
+        "itemNumber": 12,
+        "text": {
+          "en": "I have suffered from low mood.",
+          "hi": "मेरा मूद उदासीन रहा है।"
+        }
+      },
+      {
+        "id": "gcls_13",
+        "itemNumber": 13,
+        "text": {
+          "en": "I have thought about hurting myself or taking my own life.",
+          "hi": "मुझे स्वयं को क्षति पहुँचाने या आत्महत्या करने का विचार आया है।"
+        },
+        "safety": true
+      }
+    ]
+  }
+]

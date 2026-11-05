@@ -1,0 +1,11 @@
+{
+  "name": "Comprehensive Assessment of At-Risk Mental States",
+  "description": {
+    "en": "Psychosis risk assessment",
+    "hi": "मनोवैज्ञानिक जोखिम मूल्यांकन"
+  },
+  "domains": [
+    "psychosis"
+  ],
+  "duration": "30-60 minutes"
+}

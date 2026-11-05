@@ -1,0 +1,16 @@
+{
+  "name": {
+    "en": "Factitious Disorder (imposed on self)",
+    "hi": "छलरोग (स्व-आरोपित)"
+  },
+  "category": "somatic",
+  "dsm5Code": "300.19 (F45.81)",
+  "icd11Code": "6B42",
+  "notes": {
+    "en": "FAC22-SR is a screen only. Diagnosis requires evidence of falsification/induction of symptoms with an identified deception motive of assuming the patient role, AND exclusion of external incentives (malingering). Never confront based on a score alone.",
+    "hi": "FAC22-SR केवल स्क्रीन है। निर्णय हेतु लक्षण-रोपण/छल का प्रमाण एवं रोगी-भूमिका अपनाने की प्रेरणा आवश्यक, साथ ही बाह्य लाभ (मालिंगरिंग) का विवर्जन। केवल अंक के आधार पर कभी अभियुक्त न करें।"
+  },
+  "instruments": [
+    "FAC22-SR"
+  ]
+}

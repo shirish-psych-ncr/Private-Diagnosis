@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Depressive Personality Features",
+    "hi": "अवसादी व्यक्तित्व लक्षण"
+  },
+  "tier": 2,
+  "dsm5": "Depressive Personality Features",
+  "icd11": "6D1Z",
+  "icd10": "F60.89",
+  "mappingNote": {
+    "en": "Personality-disorder screen flag only — requires confirmation with the full IPDE/PDQ-4+ interview before any diagnostic use.",
+    "hi": "केवल व्यक्तित्व स्क्रीन धनात्मक — रोग-निर्णय हेतु पूर्ण साक्षात्कार आवश्यक।"
+  },
+  "description": {
+    "en": "Chronic gloomy, self-critical, pessimistic disposition; not an official DSM-5 disorder.",
+    "hi": "Chronic gloomy, self-critical, pessimistic disposition; not an official DSM-5 disorder."
+  }
+}

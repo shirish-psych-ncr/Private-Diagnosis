@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Other Specified Bipolar and Related Disorder",
+    "hi": "अन्य निर्दिष्ट द्विध्रुवी एवं संबंधित विकार"
+  },
+  "tier": 3,
+  "dsm5": "Other Specified Bipolar and Related Disorder",
+  "icd11": "6A6Y",
+  "description": {
+    "en": "Bipolar-spectrum presentations causing impairment that do not meet full criteria",
+    "hi": "द्विध्रुवी-स्पेक्ट्रम प्रस्तुतियाँ जो पूर्ण मानदंड पूरे किए बिना हानि जनती हैं"
+  },
+  "mappingNote": "DSM other specified bipolar categories map to ICD-11 6A6Y Other specified bipolar or related disorder; short-duration hypomanic/manic episodes and cyclothymia have different thresholds across systems - assess each independently (index 3.1.2)."
+}

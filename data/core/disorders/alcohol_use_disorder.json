@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Alcohol Use Disorder",
+    "hi": "शराब उपयोग विकार"
+  },
+  "tier": 1,
+  "dsm5": "Alcohol Use Disorder",
+  "icd11": "6C40",
+  "description": {
+    "en": "Problematic pattern of alcohol use leading to impairment",
+    "hi": "शराब के उपयोग की समस्याग्रस्त पैटर्न जिससे हानि होती है"
+  },
+  "mappingNote": "ICD-11 Disorders due to use of alcohol is the 6C40 family (harmful use 6C40.0, dependence 6C40.2, intoxication 6C40.3, withdrawal 6C40.4, psychotic disorder 6C40.6); DSM Alcohol Use Disorder is a single graded diagnosis. Assess each system independently; 'use disorder' is not automatically equivalent to ICD dependence (index 14.1.2, operational rule on coding specificity)."
+}

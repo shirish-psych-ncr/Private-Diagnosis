@@ -1,0 +1,11 @@
+{
+  "name": {
+    "en": "Hypersomnolence Disorder",
+    "hi": "अतिनिद्रा विकार"
+  },
+  "tier": 3,
+  "dsm5": "Hypersomnolence Disorder",
+  "icd11": "7A23",
+  "mappingNote": "ICD-11 Chapter 07 has no 7A10; the closest group is chronic hypersomnolence (7A20 Narcolepsy, 7A21 Idiopathic hypersomnia, 7A23 Other hypersomnia, 7A24 hypersomnia due to medication/substance). Assessed independently per index 11.1.2.",
+  "icd11Chapter": "Chapter 07: Sleep-wake disorders"
+}

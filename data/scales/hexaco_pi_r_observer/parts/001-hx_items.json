@@ -1,0 +1,11 @@
+{
+  "id": "hx_items",
+  "partKey": "observer_items",
+  "name": {
+    "en": "Observer ratings — 60 statements (1 = strongly disagree … 5 = strongly agree)",
+    "hi": "पर्यवेक्षक-रेटिंग — 60 कथन (1 = पूर्णतः असहमत … 5 = पूर्णतः सहमत)"
+  },
+  "questions": {
+    "$file": "data/scales/hexaco_pi_r_observer/parts/001-hx_items/questions.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "International Personality Disorder Examination (IPDE) — ICD-10 module screening questionnaire",
+  "description": {
+    "en": "Loranger's structured interview; the brief screening form covers the nine ICD-10 F60 personality categories (paranoid, schizoid, dissocial, impulsive, borderline, histrionic, anankastic, anxious, dependent) with keyed True/False items. Three or more keyed items fail the screen for that disorder (this app flags at one, per the authors' lower-standard option); the screen is never diagnostic.",
+    "hi": "loranger_का_संरचित_साक्षात्कार;_संक्षिप्त_स्क्रीनिंग_पत्रक_ICD-10 की_nौं_F60 श्रेणियों_को_कुंजी-उत्तर T/F आइटम_से_कवर_करता_है। तीन_अथवा_अधिक_कुंजी_आइटम_उस_विकार_की_स्क्रीन_असफल_करते_हैं (यह_ऐप_लेखकों_के_निम्नतर_मानदंड_अनुसार_एक_पर_धनात्मक_करता_है);_स्क्रीन_कभी_रोग-निर्णायक_नहीं।"
+  },
+  "domain": "personality",
+  "format": "clinician/self-administered keyed True-False screen",
+  "optionalAssessment": true
+}

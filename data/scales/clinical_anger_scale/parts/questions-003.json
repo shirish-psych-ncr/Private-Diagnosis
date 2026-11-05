@@ -1,0 +1,194 @@
+[
+  {
+    "id": "cas_cluster_10",
+    "name": {
+      "en": "10. Anger cluster 10",
+      "hi": "10. क्रोध समूह 10"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I don't shout at people any more than usual.",
+          "hi": "पूर्ववत् ही चिलाता/चिलाती हूँ।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. I shout at others more now than I used to.",
+          "hi": "पूर्व अपेक्षा अब अधिक चिल्लाता/चिल्लाती हूँ।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I shout at people all the time now.",
+          "hi": "अब सदैव लोगों पर चिल्लाता/चिल्लाती हूँ।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I shout at others so often that sometimes I just can't stop.",
+          "hi": "इतनी बार चिल्लाता/चिल्लाती हूँ कि कभी रुक नहीं पाता/पाती।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_10",
+        "itemNumber": 10,
+        "cluster": true,
+        "text": {
+          "en": "10. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "10. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_11",
+    "name": {
+      "en": "11. Anger cluster 11",
+      "hi": "11. क्रोध समूह 11"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. Things are not more irritating to me now than usual.",
+          "hi": "बातें पूर्ववत् ही खटकती हैं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. I feel slightly more irritated now than usual.",
+          "hi": "थोड़ी अधिक खटकने लगी हैं।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I feel irritated a good deal of the time.",
+          "hi": "अधिकतर समय चिड़चिड़ापन।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I'm irritated all the time now.",
+          "hi": "अब सदैव चिड़चिड़ापन महसूस होता है।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_11",
+        "itemNumber": 11,
+        "cluster": true,
+        "text": {
+          "en": "11. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "11. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_12",
+    "name": {
+      "en": "12. Anger cluster 12",
+      "hi": "12. क्रोध समूह 12"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. My anger does not interfere with my interest in other people.",
+          "hi": "क्रोध से अन्य-रुचि बाधित नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. My anger sometimes interferes with my interest in others.",
+          "hi": "क्रोध कभी-कभी अन्य-रुचि बाधित करता है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I am becoming so angry that I don't want to be around others.",
+          "hi": "इतना क्रोध कि अन्यों के पास नहीं रहना चाहता/चाहती।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I'm so angry that I can't stand being around people.",
+          "hi": "इतना क्रोध कि लोगों के साथ रहना दुष्कर।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_12",
+        "itemNumber": 12,
+        "cluster": true,
+        "text": {
+          "en": "12. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "12. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cas_cluster_13",
+    "name": {
+      "en": "13. Anger cluster 13",
+      "hi": "13. क्रोध समूह 13"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "A. I don't have any persistent angry feelings that influence my ability to make decisions.",
+          "hi": "निर्णय-क्षमता पर सतत क्रोध का प्रभाव नहीं।"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "B. My feelings of anger occasionally undermine my ability to make decisions.",
+          "hi": "क्रोध कभी-कभी निर्णय-क्षमता कमजोर करता है।"
+        }
+      },
+      {
+        "v": 2,
+        "label": {
+          "en": "C. I am angry to the extent that it interferes with my making good decisions.",
+          "hi": "क्रोध इतना कि अच्छे निर्णय बाधित होते हैं।"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "D. I'm so angry that I can't make good decisions anymore.",
+          "hi": "अब तो क्रोध से अच्छे निर्णय हो ही नहीं पाते।"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cas_13",
+        "itemNumber": 13,
+        "cluster": true,
+        "text": {
+          "en": "13. Choose the ONE statement below that best reflects how you feel.",
+          "hi": "13. नीचे दिया वह एकमात्र कथन चुनें जो आपकी भावना सर्वोत्तम दर्शाता है।"
+        }
+      }
+    ]
+  }
+]

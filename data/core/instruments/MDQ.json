@@ -1,0 +1,11 @@
+{
+  "name": "Mood Disorder Questionnaire",
+  "description": {
+    "en": "Bipolar disorder screening",
+    "hi": "द्विध्रुवीय विकार स्क्रीनिंग"
+  },
+  "domains": [
+    "mood"
+  ],
+  "duration": "5 minutes"
+}

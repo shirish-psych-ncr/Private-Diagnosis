@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Factitious Disorder",
+    "hi": "कृत्रिम विकार"
+  },
+  "tier": 5,
+  "dsm5": "Factitious Disorder",
+  "icd11": "6D50",
+  "description": {
+    "en": "Falsification of symptoms without external incentive",
+    "hi": "बाह्य प्रोत्साहन के बिना लक्षणों का झूठा प्रस्तुतीकरण"
+  },
+  "mappingNote": "ICD-11 Factitious disorder imposed on self is 6D50 (6D51 imposed on another, 6D5Z unspecified); 6E61 is Secondary psychotic syndrome."
+}

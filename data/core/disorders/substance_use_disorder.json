@@ -1,0 +1,10 @@
+{
+  "name": {
+    "en": "Other Substance Use Disorder",
+    "hi": "अन्य पदार्थ उपयोग विकार"
+  },
+  "tier": 1,
+  "dsm5": "Stimulant Use Disorder",
+  "icd11": "6C45 / 6C46",
+  "mappingNote": "ICD-11 separates stimulant families: Disorders due to use of cocaine is 6C45; disorders due to use of amphetamines, methamphetamine or methcathinone is 6C46 (Appendix A §14.2.2). DSM Stimulant Use Disorder maps to whichever substance-specific family applies; select the specific code rather than a generic parent."
+}

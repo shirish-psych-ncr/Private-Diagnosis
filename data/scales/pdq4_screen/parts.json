@@ -1,0 +1,270 @@
+[
+  {
+    "$file": "data/scales/pdq4_screen/parts/001-pdq_items.json"
+  },
+  {
+    "id": "pdq_98_impulsivity",
+    "linkedItem": 98,
+    "name": {
+      "en": "Item 98 — Impulsive activities (check those that apply)",
+      "hi": "आइटम 98 — आवेगी गतिविधियाँ (लागू होने पर चिह्नित करें)"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "i98_spend",
+        "text": {
+          "en": "Spend more money than I have.",
+          "hi": "मेरे पास से अधिक धन व्यय करना।"
+        }
+      },
+      {
+        "id": "i98_sex",
+        "text": {
+          "en": "Having sex with people I hardly know.",
+          "hi": "परिचित न लोगों के साथ यौन संबंध।"
+        }
+      },
+      {
+        "id": "i98_drink",
+        "text": {
+          "en": "Drinking too much.",
+          "hi": "अधिक शराब सेवन।"
+        }
+      },
+      {
+        "id": "i98_drugs",
+        "text": {
+          "en": "Taking drugs.",
+          "hi": "मादक द्रव्य लेना।"
+        }
+      },
+      {
+        "id": "i98_binge",
+        "text": {
+          "en": "Eating binges.",
+          "hi": "अतिभोजन के एपिसोड।"
+        }
+      },
+      {
+        "id": "i98_drive",
+        "text": {
+          "en": "Reckless driving.",
+          "hi": "बेपरवाह ड्राइविंग।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pdq_99_conduct",
+    "linkedItem": 99,
+    "name": {
+      "en": "Item 99 — Juvenile conduct problems before age 15 (check those that apply)",
+      "hi": "आइटम 99 — 15 वर्ष से पूर्व किशोरावस्था की आचरण समस्याएँ (लागू होने पर चिह्नित करें)"
+    },
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cd99_bully",
+        "text": {
+          "en": "I was considered a bully.",
+          "hi": "मुझे दुर्व्यवहारकारी माना जाता था।"
+        }
+      },
+      {
+        "id": "cd99_fights",
+        "text": {
+          "en": "I used to start fights with other kids.",
+          "hi": "मैं अन्य बच्चों से झगड़े आरंभ करता था।"
+        }
+      },
+      {
+        "id": "cd99_weapon",
+        "text": {
+          "en": "I used a weapon in fights that I had.",
+          "hi": "झगड़ों में मैंने अस्त्र प्रयोग किया।"
+        }
+      },
+      {
+        "id": "cd99_rob",
+        "text": {
+          "en": "I robbed or mugged other people.",
+          "hi": "मैं लोगों को लूटता था।"
+        }
+      },
+      {
+        "id": "cd99_cruel_people",
+        "text": {
+          "en": "I was physically cruel to other people.",
+          "hi": "मैं लोगों के प्रति शारीरिक रूप से क्रूर था।"
+        }
+      },
+      {
+        "id": "cd99_cruel_animals",
+        "text": {
+          "en": "I was physically cruel to animals.",
+          "hi": "मैं पशुओं के प्रति शारीरिक रूप से क्रूर था।"
+        }
+      },
+      {
+        "id": "cd99_sex",
+        "text": {
+          "en": "I forced someone to have sex with me.",
+          "hi": "मैंने किसी को बलपूर्वक संबंध बनाने को बाध्य किया।"
+        }
+      },
+      {
+        "id": "cd99_lie",
+        "text": {
+          "en": "I lied a lot.",
+          "hi": "मैं बहुत झूठ बोलता था।"
+        }
+      },
+      {
+        "id": "cd99_stay_out",
+        "text": {
+          "en": "I stayed out at night without permission.",
+          "hi": "अनुमति बिना रात भर बाहर रहता था।"
+        }
+      },
+      {
+        "id": "cd99_steal",
+        "text": {
+          "en": "I stole things from others.",
+          "hi": "मैं दूसरों की वस्तुएँ चुराता था।"
+        }
+      },
+      {
+        "id": "cd99_fire",
+        "text": {
+          "en": "I set fires.",
+          "hi": "मैं आग लगाता था।"
+        }
+      },
+      {
+        "id": "cd99_property",
+        "text": {
+          "en": "I broke windows or destroyed property.",
+          "hi": "मैं खिड़कियाँ तोड़ता या संपत्ति नष्ट करता था।"
+        }
+      },
+      {
+        "id": "cd99_runaway",
+        "text": {
+          "en": "I ran away from home overnight more than once.",
+          "hi": "एक से अधिक बार घर से रात भर गायब हुआ।"
+        }
+      },
+      {
+        "id": "cd99_truancy",
+        "text": {
+          "en": "I began skipping school a lot before age 13.",
+          "hi": "13 वर्ष से पूर्व मैं विद्यालय प्रायः छूटता था।"
+        }
+      },
+      {
+        "id": "cd99_break_in",
+        "text": {
+          "en": "I broke into someone's house, building, or car.",
+          "hi": "मैं किसी के घर, भवन या वाहन में सेंध लगाता था।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pdq_clinical_significance",
+    "name": {
+      "en": "Clinical Significance Evaluation (mandatory follow-up for each flagged scale)",
+      "hi": "नैदानिक महत्व मूल्यांकन (चिह्नित प्रत्येक पैमाने हेतु अनिवार्य अनुवर्ती)"
+    },
+    "clinicianRated": true,
+    "options": [
+      {
+        "v": 0,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cs_a",
+        "text": {
+          "en": "Are all these items totally true for you?",
+          "hi": "क्या ये सभी आइटम आपके लिए पूर्णतः सत्य हैं?"
+        },
+        "criterionNote": "Accuracy — client must confirm (or remove false positives)"
+      },
+      {
+        "id": "cs_b",
+        "text": {
+          "en": "How long have these traits been part of your personality?",
+          "hi": "ये लक्षण कब से आपके व्यक्तित्व का अंग हैं?"
+        },
+        "criterionNote": "Duration — most of life / since before age 18"
+      },
+      {
+        "id": "cs_c",
+        "text": {
+          "en": "Are these traits present even when you're NOT depressed, anxious, using substances, or physically ill?",
+          "hi": "क्या ये लक्षण तब भी विद्यमान हैं जब आप अवसादग्रस्त, चिंतित, पदार्थाधीन अथवा शारीरिक रूप से रोगी नहीं हैं?"
+        },
+        "criterionNote": "Pervasiveness — not limited to transient states"
+      },
+      {
+        "id": "cs_d",
+        "text": {
+          "en": "Have these traits caused problems in work, relationships, or home life?",
+          "hi": "क्या इन लक्षणों ने कार्य, संबंध या गृह-जीवन में समस्याएँ उत्पन्न की हैं?"
+        },
+        "criterionNote": "Impairment — yes in at least one area"
+      },
+      {
+        "id": "cs_e",
+        "text": {
+          "en": "Do these traits bother you or cause you distress?",
+          "hi": "क्या ये लक्षण आपको परेशान करते हैं अथवा पीड़ा देते हैं?"
+        },
+        "criterionNote": "Distress — yes"
+      }
+    ]
+  }
+]

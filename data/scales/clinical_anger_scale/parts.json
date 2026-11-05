@@ -1,0 +1,9 @@
+{
+  "$concat": [
+    "data/scales/clinical_anger_scale/parts/questions-001.json",
+    "data/scales/clinical_anger_scale/parts/questions-002.json",
+    "data/scales/clinical_anger_scale/parts/questions-003.json",
+    "data/scales/clinical_anger_scale/parts/questions-004.json",
+    "data/scales/clinical_anger_scale/parts/questions-005.json"
+  ]
+}

@@ -1,0 +1,153 @@
+[
+  {
+    "id": "mid_44",
+    "itemNumber": 44,
+    "text": {
+      "en": "Being bothered or upset by how much you forget.",
+      "hi": "कितना कुछ भूल जाते हैं, इससे परेशान या व्याकुल होना।"
+    },
+    "safety": true,
+    "safetyNote": {
+      "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+      "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+    }
+  },
+  {
+    "id": "mid_45",
+    "itemNumber": 45,
+    "text": {
+      "en": "Hearing a voice in your head that wants you to die.",
+      "hi": "सिर के भीतर ऐसी आवाज़ जो आपको मरने को कहे।"
+    }
+  },
+  {
+    "id": "mid_46",
+    "itemNumber": 46,
+    "text": {
+      "en": "Feeling as if there is something inside you that takes control of your behavior and speech.",
+      "hi": "ऐसा लगना कि आपके भीतर कुछ है जो आपके व्यवहार और वाणी पर नियंत्रण ले लेता है।"
+    }
+  },
+  {
+    "id": "mid_47",
+    "itemNumber": 47,
+    "text": {
+      "en": "Totally forgetting how to do something that you know very well how to do (e.g., how to drive, how to read, how to use the computer, how to play the piano, etc.).",
+      "hi": "किसी कार्य को करना पूर्णतः भूल जाना जिसे आप बहुत अच्छी तरह करना जानते हैं (ड्राइविंग, पढ़ना, कंप्यूटर, पियानो आदि)।"
+    }
+  },
+  {
+    "id": "mid_48",
+    "itemNumber": 48,
+    "text": {
+      "en": "Suddenly finding yourself somewhere (e.g., at the beach, at work, in a nightclub, in your car, etc.) with no memory of how you got there.",
+      "hi": "अचानक किसी स्थान पर (समुद्र तट, कार्यस्थल, नाइटक्लब, कार में) पाए जाना, वहाँ पहुँचने का स्मरण नहीं।"
+    }
+  },
+  {
+    "id": "mid_49",
+    "itemNumber": 49,
+    "text": {
+      "en": "Feeling that there is another person inside who can come out and speak if it wants.",
+      "hi": "ऐसा लगना कि भीतर एक अन्य व्यक्ति है जो चाहे तो बाहर आकर बोल सकता है।"
+    }
+  },
+  {
+    "id": "mid_50",
+    "itemNumber": 50,
+    "text": {
+      "en": "\"Coming to\" and finding that you have done something you don't remember doing (e.g., smashed something, cut yourself, cleaned the whole house, etc.).",
+      "hi": "\"होश में\" आने पर पता चलना कि कोई कार्य कर डाला जो याद नहीं (चीज़ तोड़ना, स्वयं को घायल करना, पूरा घर साफ करना आदि)।"
+    }
+  },
+  {
+    "id": "mid_51",
+    "itemNumber": 51,
+    "text": {
+      "en": "Having difficulty staying out of trance.",
+      "hi": "ट्रांस से बाहर बने रहने में कठिनाई।"
+    }
+  },
+  {
+    "id": "mid_52",
+    "itemNumber": 52,
+    "text": {
+      "en": "Suddenly not knowing how to do your job.",
+      "hi": "अचानक काम कैसे करना है, यह न जानना।"
+    }
+  },
+  {
+    "id": "mid_53",
+    "itemNumber": 53,
+    "text": {
+      "en": "Your body suddenly feeling as if it isn't really yours.",
+      "hi": "अचानक शरीर ऐसा लगना जैसे वास्तव में आपका नहीं है।"
+    }
+  },
+  {
+    "id": "mid_54",
+    "itemNumber": 54,
+    "text": {
+      "en": "Being bothered by flashbacks for several days in a row.",
+      "hi": "लगातार कई दिनों तक फ्लैशबैक से कष्ट होना।"
+    }
+  },
+  {
+    "id": "mid_55",
+    "itemNumber": 55,
+    "text": {
+      "en": "Being confused or puzzled by your emotions.",
+      "hi": "अपनी भावनाओं को लेकर विभ्रम या हैरान होना।"
+    }
+  },
+  {
+    "id": "mid_56",
+    "itemNumber": 56,
+    "text": {
+      "en": "Hearing a voice in your head that tells you to \"shut up\".",
+      "hi": "सिर के भीतर ऐसी आवाज़ जो कहती है \"चुप रहो\"।"
+    },
+    "safety": true,
+    "safetyNote": {
+      "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+      "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+    }
+  },
+  {
+    "id": "mid_57",
+    "itemNumber": 57,
+    "text": {
+      "en": "Having another part inside that has different memories, behaviors, and feelings than you do.",
+      "hi": "भीतर एक अन्य अंश जिसकी स्मृतियाँ, व्यवहार एवं भावनाएँ आपसे भिन्न हैं।"
+    }
+  },
+  {
+    "id": "mid_58",
+    "itemNumber": 58,
+    "text": {
+      "en": "There were times when you \"woke up\" and found pills or a razor blade (or something else to hurt yourself with) in your hand.",
+      "hi": "ऐसे अवसर जब \"होश में\" आने पर हाथ में गोलियाँ या रेज़र ब्लेड (या स्वयं को क्षति का अन्य साधन) मिला।"
+    },
+    "safety": true,
+    "safetyNote": {
+      "en": "Self-harm or suicide-related internal voice / finding means of self-harm — complete a suicide-risk assessment.",
+      "hi": "स्व-क्षति/आत्महत्या से जुड़ी भीतरी आवाज़ या हथियार-साधन मिलना — आत्महत्या-जोखिम मूल्यांकन पूर्ण करें।"
+    }
+  },
+  {
+    "id": "mid_59",
+    "itemNumber": 59,
+    "text": {
+      "en": "Hearing a voice in your head that calls you no good, worthless, or a failure.",
+      "hi": "सिर के भीतर ऐसी आवाज़ जो आपको बेकार, निरर्थक या असफल कहे।"
+    }
+  },
+  {
+    "id": "mid_60",
+    "itemNumber": 60,
+    "text": {
+      "en": "Having a very angry part that \"comes out\" and says and does things that you would never do or say.",
+      "hi": "अत्यंत क्रोधित अंश का \"बाहर आकर\" वे कार्य/वचन करना जो आप कभी नहीं करते।"
+    }
+  }
+]

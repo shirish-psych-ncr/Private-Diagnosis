@@ -1,0 +1,191 @@
+[
+  {
+    "id": "hx_23",
+    "itemNumber": 23,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she feels like crying when he/she sees other people crying.",
+      "hi": "दूसरों को रोते देख वह/वो स्वयं भी रोने जैसा महसूस करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_24",
+    "itemNumber": 24,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she thinks that he/she is an ordinary person who is no better than others.",
+      "hi": "वह/वो स्वयं को साधारण और दूसरों से श्रेष्ठ नहीं मानता/मानती।"
+    }
+  },
+  {
+    "id": "hx_25",
+    "itemNumber": 25,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she wouldn't spend his/her time reading a book of poetry.",
+      "hi": "वह/वो काव्य-पुस्तक पढ़ने में समय नहीं बिताएगा/बिताएगी।"
+    }
+  },
+  {
+    "id": "hx_26",
+    "itemNumber": 26,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she plans ahead and organizes things, to avoid scrambling at the last minute.",
+      "hi": "अंतिम क्षण की हड़बड़ी से बचने हेतु वह/वो पूर्व-नियोजन एवं संगठन करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_27",
+    "itemNumber": 27,
+    "reverseScored": false,
+    "text": {
+      "en": "His/her attitude toward people who have treated him/her badly is \"forgive and forget\".",
+      "hi": "बुरा करने वालों के प्रति उसका/उसके मनभाव — “क्षमा करो और भूल जाओ”।"
+    }
+  },
+  {
+    "id": "hx_28",
+    "itemNumber": 28,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she thinks that most people like some aspects of his/her personality.",
+      "hi": "वह/वो सोचता/सोचती है कि अधिकतर लोग उसकी/उसके व्यक्तित्व के कुछ पहलू पसंद करते हैं।"
+    }
+  },
+  {
+    "id": "hx_29",
+    "itemNumber": 29,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she doesn't mind doing jobs that involve dangerous work.",
+      "hi": "वह/वो खतरनाक काम वाली नौकरियों में कोई आपत्ति नहीं करता/करती।"
+    }
+  },
+  {
+    "id": "hx_30",
+    "itemNumber": 30,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she wouldn't use flattery to get a raise or promotion at work, even if he/she thought it would succeed.",
+      "hi": "वेतन-वृद्धि या पदोन्नति हेतु चापलूसी उपयोग नहीं करेगा/करेगी, भले सफलता का विश्वास हो।"
+    }
+  },
+  {
+    "id": "hx_31",
+    "itemNumber": 31,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she enjoys looking at maps of different places.",
+      "hi": "वह/वो विभिन्न स्थानों के नक्शे देखने में आनंद लेता/लेती है।"
+    }
+  },
+  {
+    "id": "hx_32",
+    "itemNumber": 32,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she often pushes himself/herself very hard when trying to achieve a goal.",
+      "hi": "लक्ष्य प्राप्ति हेतु वह/वो स्वयं को अक्सर अत्यधिक कठिन परिश्रम के लिए प्रेरित करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_33",
+    "itemNumber": 33,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she generally accepts people's faults without complaining about them.",
+      "hi": "वह/वो सामान्यतः लोगों की कमियाँ शिकायत किए बिना स्वीकार करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_34",
+    "itemNumber": 34,
+    "reverseScored": false,
+    "text": {
+      "en": "In social situations, he/she is usually the one who makes the first move.",
+      "hi": "सामाजिक परिस्थितियों में अक्सर पहल वह/वो करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_35",
+    "itemNumber": 35,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she worries a lot less than most people do.",
+      "hi": "वह/वो अधिकतर लोगों की तुलना में बहुत कम चिंता करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_36",
+    "itemNumber": 36,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she would be tempted to buy stolen property if he/she were financially tight.",
+      "hi": "आर्थिक तंगी में चोरी का माल खरीदने के लिए प्रलोभित होगा/होगी।"
+    }
+  },
+  {
+    "id": "hx_37",
+    "itemNumber": 37,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she would enjoy creating a work of art, such as a novel, a song, or a painting.",
+      "hi": "वह/वो उपन्यास, गीत या चित्रकला जैसे कला-कर्म रचने में आनंद लेगा/लेगी।"
+    }
+  },
+  {
+    "id": "hx_38",
+    "itemNumber": 38,
+    "reverseScored": true,
+    "text": {
+      "en": "When working on something, he/she doesn't pay much attention to small details.",
+      "hi": "कार्य करते समय वह/वो छोटे-छोटे विवरणों पर अधिक ध्यान नहीं देता/देती।"
+    }
+  },
+  {
+    "id": "hx_39",
+    "itemNumber": 39,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she is usually quite flexible in his/her opinions when people disagree with him/her.",
+      "hi": "मतभेद होने पर वह/वो सामान्यतः अपने मतों में काफ़ी लचीला रहता/रहती है।"
+    }
+  },
+  {
+    "id": "hx_40",
+    "itemNumber": 40,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she enjoys having lots of people around to talk with.",
+      "hi": "वह/वो बातचीत हेतु बहुत से लोगों के बीच रहना पसंद करता/करती है।"
+    }
+  },
+  {
+    "id": "hx_41",
+    "itemNumber": 41,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she can handle difficult situations without needing emotional support from anyone else.",
+      "hi": "कठिन परिस्थितियों का सामना वह/वो अन्य किसी के भावनात्मक सहारे के बिना कर सकता/सकती है।"
+    }
+  },
+  {
+    "id": "hx_42",
+    "itemNumber": 42,
+    "reverseScored": true,
+    "text": {
+      "en": "He/she would like to live in a very expensive, high-class neighborhood.",
+      "hi": "वह/वो अत्यंत महँगे, उच्च-वर्गीय पड़ोस में रहना चाहेगा/चाहेगी।"
+    }
+  },
+  {
+    "id": "hx_43",
+    "itemNumber": 43,
+    "reverseScored": false,
+    "text": {
+      "en": "He/she likes people who have unconventional views.",
+      "hi": "वह/वो असम्प्रदायिक/अपरंपरिक विचारों वाले लोगों को पसंद करता/करती है।"
+    }
+  }
+]

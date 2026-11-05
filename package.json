@@ -4,7 +4,9 @@
   "private": true,
   "description": "EPCSS - Ephemeral Pre-Consultation Clinical Screening System (static app + headless tests)",
   "scripts": {
-    "test": "node tests/epcss_test.js && node tests/pages_test.js"
+    "build": "node --experimental-vm-modules scripts/check_modules.js",
+    "test": "node --experimental-vm-modules tests/json_resources_test.js && node --experimental-vm-modules tests/scoring_test.js && node --experimental-vm-modules tests/epcss_test.js && node tests/pages_test.js",
+    "pretest": "npm run build"
   },
   "dependencies": {
     "jsdom": "^29.1.1"

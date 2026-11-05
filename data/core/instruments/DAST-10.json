@@ -1,0 +1,11 @@
+{
+  "name": "Drug Abuse Screening Test-10",
+  "description": {
+    "en": "Drug use screening",
+    "hi": "ड्रग उपयोग स्क्रीनिंग"
+  },
+  "domains": [
+    "substance"
+  ],
+  "duration": "5 minutes"
+}

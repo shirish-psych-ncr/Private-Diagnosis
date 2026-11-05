@@ -1,0 +1,11 @@
+{
+  "name": "PTSD Checklist for DSM-5",
+  "description": {
+    "en": "PTSD symptom screening",
+    "hi": "PTSD लक्षण स्क्रीनिंग"
+  },
+  "domains": [
+    "trauma"
+  ],
+  "duration": "5-10 minutes"
+}

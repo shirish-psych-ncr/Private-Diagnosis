@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Posttraumatic Stress Disorder",
+    "hi": "आघात के बाद तनाव विकार"
+  },
+  "tier": 2,
+  "dsm5": "Posttraumatic Stress Disorder",
+  "icd11": "6B40",
+  "description": {
+    "en": "Symptoms following exposure to traumatic event",
+    "hi": "आघातजनक घटना के संपर्क में आने के बाद लक्षण"
+  },
+  "mappingNote": "ICD-11 PTSD is 6B40; Complex PTSD (6B41) has no separately named DSM-5-TR diagnosis. DSM acute stress disorder is not equivalent to ICD acute stress reaction (QE84), which sits outside Chapter 06 (index 6.1.2-6.1.3)."
+}

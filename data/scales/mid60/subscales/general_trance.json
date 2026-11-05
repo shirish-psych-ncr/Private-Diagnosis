@@ -1,0 +1,19 @@
+{
+  "name": {
+    "en": "General subscale: Trance",
+    "hi": "सामान्य उप-पैमाना: ट्रांस"
+  },
+  "items": [
+    21,
+    27,
+    30,
+    32,
+    41,
+    51
+  ],
+  "cutoff": 11.7,
+  "note": {
+    "en": "Difficulty walking, trance that interferes with daily activities and responsibilities, trance for hours, drifting into trance unawares, trance several days in a row, and difficulty staying out of trance. Items exactly as printed on the supplied score sheet (item 21 also carries the functional-body-symptom stem - see sourceNotes).",
+    "hi": "चलने में कठिनाई, दैनिक कार्य एवं ज़िम्मेदारियों को प्रभावित करने वाला ट्रांस, घंटों ट्रांस, बिना जानें ट्रांस में जाना, लगातार कई दिनों तक ट्रांस, तथा ट्रांस से बाहर रहने में कठिनाई। आइटम यथावत् मुद्रित स्कोर-शीट के अनुसार (आइटम 21 शारीरिक-लक्षण कथन भी वहन करता है — sourceNotes देखें।"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "biss_sec_m",
+  "partKey": "M",
+  "name": {
+    "en": "II. Mania (items 21-44)"
+  },
+  "questions": {
+    "$file": "data/scales/biss/parts/002-biss_sec_m/questions.json"
+  }
+}

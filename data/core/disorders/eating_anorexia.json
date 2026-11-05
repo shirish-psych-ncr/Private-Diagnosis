@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Anorexia Nervosa",
+    "hi": "एनोरेक्सिया नर्वोसा"
+  },
+  "tier": 3,
+  "dsm5": "Anorexia Nervosa",
+  "icd11": "6B80",
+  "description": {
+    "en": "Restriction of energy intake with intense fear of weight gain",
+    "hi": "वजन बढ़ने के तीव्र डर के साथ ऊर्जा-सेवन का प्रतिबंध"
+  },
+  "mappingNote": "ICD-11 Anorexia nervosa is 6B80 within the 6B80-6B85 feeding/eating family (bulimia 6B81, binge eating 6B82, ARFID 6B83, pica 6B84, rumination-regurgitation 6B85) (index 9.1.2, 9.2.2)."
+}

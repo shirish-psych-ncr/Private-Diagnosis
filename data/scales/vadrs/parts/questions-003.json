@@ -1,0 +1,133 @@
+[
+  {
+    "id": "anxietyDepression",
+    "name": {
+      "en": "Part IE: Anxiety/Depression Symptoms",
+      "hi": "भाग I-E: चिंता/अवसाद लक्षण"
+    },
+    "questions": [
+      {
+        "id": "v41",
+        "text": {
+          "en": "Is fearful, anxious, or worried",
+          "hi": "डरा, व्याकुल या चिंतित रहता है"
+        }
+      },
+      {
+        "id": "v42",
+        "text": {
+          "en": "Is afraid to try new things for fear of making mistakes",
+          "hi": "गलती करने के डर से नई चीज़ें आज़माने से डरता है"
+        }
+      },
+      {
+        "id": "v43",
+        "text": {
+          "en": "Feels worthless or inferior",
+          "hi": "अपने आपको बेकार या हीन महसूस करता है"
+        }
+      },
+      {
+        "id": "v44",
+        "text": {
+          "en": "Blames self for problems, feels guilty",
+          "hi": "समस्याओं के लिए खुद को दोष देता है, अपराधबोध महसूस करता है"
+        }
+      },
+      {
+        "id": "v45",
+        "text": {
+          "en": "Feels lonely, unwanted, or unloved; complains that \"no one loves him or her\"",
+          "hi": "अकेला, अवांछित या निरपेक्ष महसूस करता है; शिकायत करता है कि 'कोई उसे प्यार नहीं करता'"
+        }
+      },
+      {
+        "id": "v46",
+        "text": {
+          "en": "Is sad, unhappy, or depressed",
+          "hi": "उदास, अप्रसन्न या अवसादग्रस्त रहता है"
+        }
+      },
+      {
+        "id": "v47",
+        "text": {
+          "en": "Is self-conscious or easily embarrassed",
+          "hi": "अत्यधिक स्व-चेतना वाला है या आसानी से शर्मा जाता है"
+        }
+      }
+    ]
+  },
+  {
+    "id": "performance",
+    "name": {
+      "en": "Part II: Performance",
+      "hi": "भाग II: प्रदर्शन"
+    },
+    "questions": [
+      {
+        "id": "v48",
+        "text": {
+          "en": "Overall school performance",
+          "hi": "समग्र स्कूल प्रदर्शन"
+        },
+        "isPerformance": true
+      },
+      {
+        "id": "v49",
+        "text": {
+          "en": "Reading",
+          "hi": "पठन"
+        },
+        "isPerformance": true
+      },
+      {
+        "id": "v50",
+        "text": {
+          "en": "Mathematics",
+          "hi": "गणित"
+        },
+        "isPerformance": true
+      },
+      {
+        "id": "v51",
+        "text": {
+          "en": "Writing",
+          "hi": "लेखन"
+        },
+        "isPerformance": true
+      },
+      {
+        "id": "v52",
+        "text": {
+          "en": "Relationship with parents",
+          "hi": "माता-पिता के साथ संबंध"
+        },
+        "isPerformance": true
+      },
+      {
+        "id": "v53",
+        "text": {
+          "en": "Relationship with siblings",
+          "hi": "भाई-बहनों के साथ संबंध"
+        },
+        "isPerformance": true
+      },
+      {
+        "id": "v54",
+        "text": {
+          "en": "Relationship with peers",
+          "hi": "समकक्षों के साथ संबंध"
+        },
+        "isPerformance": true
+      },
+      {
+        "id": "v55",
+        "text": {
+          "en": "Participation in organized activities (e.g., teams)",
+          "hi": "संगठित गतिविधियों (जैसे खेल टीमें) में भागीदारी"
+        },
+        "isPerformance": true
+      }
+    ]
+  }
+]

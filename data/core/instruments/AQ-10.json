@@ -1,0 +1,17 @@
+{
+  "name": "Autism Spectrum Quotient-10",
+  "description": {
+    "en": "Autism screening",
+    "hi": "ऑटिज्म स्क्रीनिंग"
+  },
+  "domains": [
+    "neurodevelopmental"
+  ],
+  "duration": "5 minutes",
+  "targetAge": [
+    "pediatric",
+    "adolescent",
+    "adult",
+    "older"
+  ]
+}

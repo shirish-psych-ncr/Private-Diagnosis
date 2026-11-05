@@ -1,0 +1,56 @@
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text .section-title {
+    text-align: left;
+}
+
+.about-intro {
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.about-features {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+}
+
+.feature-icon {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.about-image-placeholder {
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+    border-radius: var(--border-radius-lg);
+    padding: 60px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.about-image-placeholder span {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.about-image-placeholder p {
+    color: white;
+    font-weight: 500;
+}
+

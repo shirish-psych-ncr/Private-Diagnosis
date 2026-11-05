@@ -1,0 +1,10 @@
+{
+  "name": {
+    "en": "Bipolar Disorder, Current Depressive Episode",
+    "hi": "द्विध्रुवीय विकार, वर्तमान अवसादग्रस्त प्रसंग"
+  },
+  "tier": 3,
+  "dsm5": "Bipolar II Disorder, current episode depressed",
+  "icd11": "6A61",
+  "mappingNote": "ICD-11 Bipolar type II disorder is 6A61; episode, psychosis and remission subdivisions are selected separately (e.g. 6A60.x series for type I) and do not denote generic mixed/remission states (index 3.1.2)."
+}

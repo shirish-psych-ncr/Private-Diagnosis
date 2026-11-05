@@ -1,0 +1,11 @@
+{
+  "name": "Beck Depression Inventory-II",
+  "description": {
+    "en": "Depression severity assessment",
+    "hi": "अवसाद गंभीरता मूल्यांकन"
+  },
+  "domains": [
+    "mood"
+  ],
+  "duration": "5-10 minutes"
+}

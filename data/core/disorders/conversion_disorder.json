@@ -1,0 +1,17 @@
+{
+  "name": {
+    "en": "Functional Neurological Symptom Disorder (Conversion)",
+    "hi": "क्रियात्मक तंत्रिका-लक्षण विकार (कन्वर्ज़न)"
+  },
+  "category": "somatic",
+  "dsm5Code": "300.11 (F44)",
+  "icd11Code": "6B40",
+  "notes": {
+    "en": "Neutral symptom description only — do not tell the patient the symptoms are 'not real'. MID-60 conversion subscales (body symptoms, pseudo-seizures) and PHQ-15 inform the differential.",
+    "hi": "तटस्थ लक्षण-वर्णन करें — रोगी से कहें नहीं कि लक्षण 'असली' नहीं हैं। MID-60 कन्वर्ज़न उप-पैमाने एवं PHQ-15 विभेदी-सूची में सहायक।"
+  },
+  "instruments": [
+    "PHQ-15",
+    "MID-60"
+  ]
+}

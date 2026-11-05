@@ -5,110 +5,17 @@
     "hi": "नींद"
   },
   "tier": 2,
-  "questions": [
-    {
-      "id": "sleep_1",
-      "text": {
-        "en": "How satisfied are you with your sleep?",
-        "hi": "आप अपनी नींद से कितने संतुष्ट हैं?"
-      },
-      "scale": [
-        {
-          "value": 0,
-          "label": {
-            "en": "Very satisfied",
-            "hi": "बहुत संतुष्ट"
-          }
-        },
-        {
-          "value": 1,
-          "label": {
-            "en": "Satisfied",
-            "hi": "संतुष्ट"
-          }
-        },
-        {
-          "value": 2,
-          "label": {
-            "en": "Neutral",
-            "hi": "तटस्थ"
-          }
-        },
-        {
-          "value": 3,
-          "label": {
-            "en": "Dissatisfied",
-            "hi": "असंतुष्ट"
-          }
-        },
-        {
-          "value": 4,
-          "label": {
-            "en": "Very dissatisfied",
-            "hi": "बहुत असंतुष्ट"
-          }
-        }
-      ],
-      "disorders": [
-        "insomnia",
-        "hypersomnolence",
-        "sleep_apnea"
-      ]
-    },
-    {
-      "id": "sleep_2",
-      "text": {
-        "en": "How much difficulty do you have falling asleep?",
-        "hi": "आपको नींद आने में कितनी कठिनाई होती है?"
-      },
-      "scale": [
-        {
-          "value": 0,
-          "label": {
-            "en": "No difficulty",
-            "hi": "कोई कठिनाई नहीं"
-          }
-        },
-        {
-          "value": 1,
-          "label": {
-            "en": "Mild",
-            "hi": "हल्की"
-          }
-        },
-        {
-          "value": 2,
-          "label": {
-            "en": "Moderate",
-            "hi": "मध्यम"
-          }
-        },
-        {
-          "value": 3,
-          "label": {
-            "en": "Severe",
-            "hi": "गंभीर"
-          }
-        },
-        {
-          "value": 4,
-          "label": {
-            "en": "Very severe",
-            "hi": "बहुत गंभीर"
-          }
-        }
-      ],
-      "disorders": [
-        "insomnia",
-        "circadian_rhythm"
-      ]
-    }
-  ],
+  "questions": [],
   "cutoff": 15,
   "instruments": [
     "ISI",
     "PSQI",
     "ESS"
   ],
-  "instrument": "isi"
+  "instrument": "isi",
+  "questionSource": "data/scales/isi.json",
+  "questionOrder": [
+    "sleep_1",
+    "sleep_2"
+  ]
 }

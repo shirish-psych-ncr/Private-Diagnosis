@@ -1,0 +1,179 @@
+[
+  {
+    "id": "ipde_F60_0",
+    "name": {
+      "en": "F60.0 Paranoid",
+      "hi": "F60.0 Paranoid"
+    },
+    "icd10Module": "F60.0",
+    "disorderName": {
+      "en": "Paranoid Personality Disorder",
+      "hi": "Paranoid Personality Disorder"
+    },
+    "disorders": [
+      "paranoid_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_2",
+        "itemNumber": 2,
+        "text": {
+          "en": "I don't react well when someone offends me.",
+          "hi": "जब कोई मुझे अपमानित करे तो मैं अच्छी तरह प्रतिक्रिया नहीं करता/करती।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.0",
+        "disorders": [
+          "paranoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_14",
+        "itemNumber": 14,
+        "text": {
+          "en": "Most people are fair and honest with me.",
+          "hi": "अधिकतर लोग मेरे साथ न्यायपूर्ण और ईमानदार होते हैं।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.0",
+        "disorders": [
+          "paranoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_24",
+        "itemNumber": 24,
+        "text": {
+          "en": "People often make fun of me behind my back.",
+          "hi": "लोग अक्सर पीठ पीछे मेरा मज़ाक उड़ाते हैं।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.0",
+        "disorders": [
+          "paranoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_36",
+        "itemNumber": 36,
+        "text": {
+          "en": "I think my spouse (lover) may be unfaithful to me.",
+          "hi": "मुझे लगता है कि मेरे जीवनसाथी (प्रेमी/प्रेमिका) ने मेरे साथ विश्वासघात किया होगा।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.0",
+        "disorders": [
+          "paranoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_52",
+        "itemNumber": 52,
+        "text": {
+          "en": "I am convinced there is a conspiracy behind many things in the world.",
+          "hi": "मुझे विश्वास है कि संसार की कई घटनाओं के पीछे षड्यंत्र है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.0",
+        "disorders": [
+          "paranoid_personality_disorder"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ipde_F60_1",
+    "name": {
+      "en": "F60.1 Schizoid",
+      "hi": "F60.1 Schizoid"
+    },
+    "icd10Module": "F60.1",
+    "disorderName": {
+      "en": "Schizoid Personality Disorder",
+      "hi": "Schizoid Personality Disorder"
+    },
+    "disorders": [
+      "schizoid_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_1",
+        "itemNumber": 1,
+        "text": {
+          "en": "I usually get fun and enjoyment out of life.",
+          "hi": "मैं आमतौर पर जीवन से मज़ा और आनंद प्राप्त करता/करती हूँ।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.1",
+        "disorders": [
+          "schizoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_8",
+        "itemNumber": 8,
+        "text": {
+          "en": "I almost never get angry about anything.",
+          "hi": "मैं लगभग किसी भी चीज़ पर कभी क्रोधित नहीं होता/होती।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.1",
+        "disorders": [
+          "schizoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_12",
+        "itemNumber": 12,
+        "text": {
+          "en": "People think I am cold and detached.",
+          "hi": "लोग मुझे ठंडा और विरक्त मानते हैं।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.1",
+        "disorders": [
+          "schizoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_31",
+        "itemNumber": 31,
+        "text": {
+          "en": "I have little or no desire to have sex with anyone.",
+          "hi": "किसी के साथ यौन संबंध की मेरी इच्छा कम या शून्य है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.1",
+        "disorders": [
+          "schizoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_46",
+        "itemNumber": 46,
+        "text": {
+          "en": "मुझे वे गतिविधियाँ पसंद हैं जो मैं अकेले कर सकूँ।",
+          "hi": "मुझे वे गतिविधियाँ पसंद हैं जो मैं अकेले कर सकूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.1",
+        "disorders": [
+          "schizoid_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_58",
+        "itemNumber": 58,
+        "text": {
+          "en": "I am more interested in my own thoughts than what goes on around me.",
+          "hi": "चारों ओर घटित होने वाली बातों की तुलना में मैं स्वयं के विचारों में अधिक रुचि रखता/रखती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.1",
+        "disorders": [
+          "schizoid_personality_disorder"
+        ]
+      }
+    ]
+  }
+]

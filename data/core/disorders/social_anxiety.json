@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Social Anxiety Disorder",
+    "hi": "सामाजिक चिंता विकार"
+  },
+  "tier": 1,
+  "dsm5": "Social Anxiety Disorder",
+  "icd11": "6B04",
+  "description": {
+    "en": "Intense fear of social situations and being judged",
+    "hi": "सामाजिक स्थितियों और आंके जाने का तीव्र डर"
+  },
+  "mappingNote": "ICD-11 Social anxiety disorder is 6B04; 6B00.1 is GAD with mild/moderate somatic symptoms."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "definitions",
+  "title": {
+    "en": "Key definitions",
+    "hi": "मुख्य परिभाषाएँ"
+  },
+  "items": [
+    {
+      "en": "Malingering (DSM-5): intentional production of false or grossly exaggerated physical or psychological symptoms motivated by external incentives — avoiding military duty, avoiding work, obtaining financial compensation, evading criminal prosecution, obtaining drugs.",
+      "hi": "मालिंगरिंग (DSM-5): बाह्य प्रलोभन (सैनिक सेवा से बचाव, कार्य से बचाव, आर्थिक क्षतिपूर्ति, दंड से बचाव, मादक द्रव्य प्राप्ति) हेतु शारीरिक/मानसिक लक्षणों का जानबूझकर मिथ्या या अत्यधिक वर्धन।"
+    },
+    {
+      "en": "Feigning: deliberate fabrication or gross exaggeration of symptoms without assumptions about its goals (Rogers & Bender, 2003).",
+      "hi": "छल-अभिनय: लक्ष्य संबंधी पूर्वधारणा के बिना लक्षणों का जानबूझकर निर्माण या अत्यधिक वर्धन (Rogers & Bender, 2003)।"
+    },
+    {
+      "en": "Suspect effort: effort-test performance suggesting the examinee is not applying best effort; may be intentional or non-intentional (also suboptimal/incomplete/submaximal effort).",
+      "hi": "संदेहजनक प्रयास: परीक्षार्थी द्वारा सर्वोत्तम प्रयास न लगाने का संकेत; सचेत या असचेत हो सकता है (उप-इष्टतम/अपूर्ण/उप-अधिकतम प्रयास)।"
+    },
+    {
+      "en": "Factitious disorder: voluntary production of symptoms to assume the patient role, with no other obvious secondary gain.",
+      "hi": "छलरोग: रोगी-भूमिका अपनाने हेतु लक्षणों की स्वेच्छा-उत्पत्ति,अन्य कोई सुगम्य द्वितीयक लाभ के बिना।"
+    },
+    {
+      "en": "Ganser syndrome: approximate answers (2+2=5), clouding of consciousness, somatic conversion (especially sensory), hallucinations.",
+      "hi": "गैंसर सिंड्रोम: अनुमानोत्तर (2+2=5), चेतना की मंदता, शारीरिक कन्वर्ज़न (विशेषतः संवेदी), एवं Hallucination।"
+    }
+  ]
+}

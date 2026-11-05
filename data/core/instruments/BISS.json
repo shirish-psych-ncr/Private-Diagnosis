@@ -1,0 +1,25 @@
+{
+  "name": "BISS (Bipolar Inventory of Signs and Symptoms Scale)",
+  "construct": {
+    "en": "Bipolar signs and symptoms - dimensional severity over 7 days",
+    "hi": "द्विध्रुवी लक्षण — 7 दिनों की विमात्मक तीव्रता"
+  },
+  "format": {
+    "en": "44 items rated 0-4 by the clinician from self-report, family and interview observation; two sections (Depression 1-20, Mania 21-44)",
+    "hi": "44 आइटम, चिकित्सक द्वारा 0-4; दो विभाग (अवसाद 1-20, उन्माद 21-44)"
+  },
+  "duration": "~20 min interview",
+  "language": {
+    "en": "English",
+    "hi": "अंग्रेज़ी (हिन्दी शीर्षक)"
+  },
+  "purpose": {
+    "en": "Quantify severity of bipolar signs and symptoms and track change; supports staging of an episode and treatment monitoring. Not diagnostic.",
+    "hi": "द्विध्रुवी लक्षणों की तीव्रता मापना एवं परिवर्तन-निगरानी; अवस्था-प्रबंधन व चिकित्सा-निगरानी में सहायक। रोग-निर्णायक नहीं।"
+  },
+  "source": "BISS, version 1.5 (4/1/08), Charles L. Bowden et al.",
+  "licensing": {
+    "en": "Copyright 2005 Charles L. Bowden, MD. Single copies permitted for researchers/clinicians in nonprofit or publicly owned settings; otherwise written permission required.",
+    "hi": "प्रतिलिप्याधिकार 2005 चार्ल्स एल. बोडेन; गैर-लाभकारी/सार्वजनिक संस्थाओं हेतु एक-प्रति छूट, अन्यथा लिखित अनुमति आवश्यक।"
+  }
+}

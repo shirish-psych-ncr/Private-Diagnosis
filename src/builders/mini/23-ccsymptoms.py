@@ -1,0 +1,22 @@
+ccSymptoms = [
+    ("CCS1", "Depression", "अवसाद"),
+    ("CCS2", "Anger", "क्रोध"),
+    ("CCS3", "Mania (feeling up or high or hyper or full of energy with racing thoughts)",
+     "मैैनिया (उत्फुल्ल/हाई/अति-सक्रिय, दौड़ते विचारों के साथ)"),
+    ("CCS4", "Anxiety", "आतंक/चिंता"),
+    ("CCS5", "Physical (somatic) symptoms", "शारीरिक (देहज) लक्षण"),
+    ("CCS6", "Suicidal thoughts, impulses, plans, intent, (ANY thoughts of killing yourself), or any preparations to kill yourself or ANY attempt to kill yourself",
+     "आत्मघाती विचार, प्रेरणाएँ, योजनाएँ, अभिप्राय (स्वयं को मारने का कोई भी विचार), या आत्महत्या की कोई तैयारी अथवा कोई प्रयास"),
+    ("CCS7", "Hearing sounds or voices others can't hear or fearing someone can hear or read your thoughts or believing things others don't accept as true e.g. that people are spying on you or plotting against you or talking about you (Psychosis)",
+     "ऐसी ध्वनियाँ/आवाज़ें सुनना जो अन्य नहीं सुन सकते, भय कि कोई आपके विचार सुन/पढ़ सकता है, या ऐसी बातें मानना जिन्हें अन्य सत्य नहीं मानते — जैसे लोग आपकी जासूसी/साज़िश कर रहे हैं या आपके बारे में बात करते हैं (मनर्विकार)"),
+    ("CCS8", "Sleep problems", "नींद की समस्याएँ"),
+    ("CCS9", "Memory problems", "स्मृति समस्याएँ"),
+    ("CCS10", "Repetitive or obsessive thoughts or compulsive behaviors",
+     "पुनरावृत्त या विचारग्रस्त (obsessive) विचार या विवशतापूर्ण (compulsive) व्यवहार"),
+    ("CCS11", "Feeling things around you are strange, unreal, detached or unfamiliar, or feeling outside or detached from part or all of your body (Dissociation)",
+     "आसपास की चीज़ें अजीब/अवास्तविक/परिचित-नहीं लगना, या शरीर के कुछ/सभी भाग से विलग/बाहर महसूस करना (वियोजन/Dissociation)"),
+    ("CCS12", "Ability to function at work, at home, in your life, or in your relationships",
+     "कार्य, घर, जीवन या संबंधों में कार्य करने की क्षमता"),
+    ("CCS13", "Overusing alcohol or drugs", "शराब या दवाओं का अत्यधिक सेवन"),
+]
+

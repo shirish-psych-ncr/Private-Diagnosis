@@ -1,0 +1,11 @@
+{
+  "name": "Brief Psychiatric Rating Scale",
+  "description": {
+    "en": "Psychiatric symptom severity",
+    "hi": "मनोचिकित्सा लक्षण गंभीरता"
+  },
+  "domains": [
+    "psychosis"
+  ],
+  "duration": "15-20 minutes"
+}

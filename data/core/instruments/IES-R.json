@@ -1,0 +1,11 @@
+{
+  "name": "Impact of Event Scale-Revised",
+  "description": {
+    "en": "Trauma impact assessment",
+    "hi": "आघात प्रभाव मूल्यांकन"
+  },
+  "domains": [
+    "trauma"
+  ],
+  "duration": "5 minutes"
+}

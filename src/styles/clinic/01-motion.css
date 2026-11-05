@@ -1,0 +1,227 @@
+/* SECTION 1: THE GHOSTS - View Transition Pseudo-Elements for Spatial Flux */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.6s;
+    animation-timing-function: var(--spring-gentle);
+}
+
+::view-transition-group(root) {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* SECTION 2: THE SHARDS - Fragmentation for Text Shattering Effects */
+.shard-container {
+    column-count: 3;
+    column-gap: 20px;
+    transform-style: preserve-3d;
+}
+
+.shard-text {
+    break-inside: avoid-column;
+    transition: transform 0.6s var(--spring-bouncy), opacity 0.4s ease;
+}
+
+.shard-text:hover {
+    transform: translateZ(50px) rotateX(10deg) rotateY(-10deg);
+}
+
+/* Target individual fragments for 3D particle system simulation */
+.service-card:nth-fragment(1) { transform: translate3d(0, 0, 0); }
+.service-card:nth-fragment(2) { transform: translate3d(10px, 5px, 20px); }
+.service-card:nth-fragment(3) { transform: translate3d(-10px, -5px, 30px); }
+
+/* SECTION 3: THE PHANTOMS - Custom Highlight API for Optical Scanning */
+::highlight(scanner-beam) {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(74, 144, 164, 0.3) 45%, 
+        rgba(74, 144, 164, 0.8) 50%, 
+        rgba(74, 144, 164, 0.3) 55%, 
+        transparent 100%);
+    mask-image: linear-gradient(90deg, transparent, black 45%, black 55%, transparent);
+}
+
+::highlight(decryption-field) {
+    background: radial-gradient(ellipse at center, 
+        rgba(126, 184, 163, 0.4) 0%, 
+        transparent 70%);
+    filter: blur(2px);
+}
+
+/* SECTION 4: VOLUMETRIC LIGHTING via Compositing Contexts */
+.volumetric-light-source {
+    isolation: isolate;
+    mix-blend-mode: plus-lighter;
+    background: radial-gradient(circle at center, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(74, 144, 164, 0.4) 30%, 
+        transparent 70%);
+    filter: blur(20px);
+}
+
+.light-beam {
+    isolation: isolate;
+    mix-blend-mode: screen;
+    background: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.6) 0%, 
+        rgba(74, 144, 164, 0.2) 100%);
+    transform-origin: top center;
+}
+
+/* SECTION 5: MATRIX STACKERS - Additive Animation Composition */
+.orbiting-element {
+    animation: 
+        orbit-macro 3s linear infinite,
+        orbit-micro 0.5s var(--spring-gentle) infinite;
+    animation-composition: add;
+    transform-style: preserve-3d;
+}
+
+@keyframes orbit-macro {
+    0% { transform: rotate3d(0, 1, 0, 0deg) translate3d(100px, 0, 0); }
+    100% { transform: rotate3d(0, 1, 0, 360deg) translate3d(100px, 0, 0); }
+}
+
+@keyframes orbit-micro {
+    0%, 100% { transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+    50% { transform: translate3d(5px, 3px, 10px) scale3d(1.05, 1.05, 1.05); }
+}
+
+/* SECTION 6: SPACE-TIME CONVERTERS - Scroll & Pointer Driven Animations */
+.scroll-scrubbed-exploder {
+    animation-timeline: view();
+    animation-name: scroll-explode;
+    animation-range: entry 0% cover 100%;
+    animation-fill-mode: both;
+}
+
+@keyframes scroll-explode {
+    0% { 
+        transform: scale3d(0.8, 0.8, 0.8) translateZ(-200px);
+        opacity: 0;
+    }
+    100% { 
+        transform: scale3d(1, 1, 1) translateZ(0);
+        opacity: 1;
+    }
+}
+
+.pointer-driven-hologram {
+    animation-timeline: pointer(x) pointer(y);
+    animation-name: pointer-tilt;
+    animation-range: 0px 100vw, 0px 100vh;
+}
+
+@keyframes pointer-tilt {
+    0%, 100% { 
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+    50% { 
+        transform: perspective(1000px) rotateX(15deg) rotateY(-15deg);
+    }
+}
+
+/* SECTION 7: DISCRETE STATE MACHINES - Animating Display Property */
+.modal-unfolding {
+    display: none;
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 0.8) translateZ(-100px);
+    transition: 
+        display 0.6s allow-discrete,
+        opacity 0.6s ease,
+        transform 0.6s var(--spring-gentle);
+}
+
+.modal-unfolding.open {
+    display: block;
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translateZ(0);
+}
+
+@starting-style {
+    .modal-unfolding.open {
+        opacity: 0;
+        transform: scale3d(0.8, 0.8, 0.8) translateZ(-100px);
+    }
+}
+
+/* SECTION 8: VISCOUS INERTIA - Reversing Shortening Factor Hack */
+.viscous-cursor {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+/* When constantly interrupted by pointermove, browser calculates natural momentum */
+
+/* SECTION 9: TEMPORAL ECHO RIG - Ghost Trail Effect */
+.temporal-echo-parent {
+    isolation: isolate;
+    transform-style: preserve-3d;
+}
+
+.temporal-echo {
+    mix-blend-mode: screen;
+    opacity: 0.4;
+    animation: echo-fade 2s linear infinite;
+}
+
+.temporal-echo.echo-1 { animation-delay: -0.2s; }
+.temporal-echo.echo-2 { animation-delay: -0.4s; }
+.temporal-echo.echo-3 { animation-delay: -0.6s; }
+
+@keyframes echo-fade {
+    0% { opacity: 0.6; transform: translate3d(0, 0, 0); }
+    100% { opacity: 0; transform: translate3d(-20px, -20px, -50px); }
+}
+
+/* SECTION 10: 3D KINEMATIC RIGGING - Hierarchical Coordinate Systems */
+.kinematic-rig {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.kinematic-parent {
+    transform: rotate3d(0, 1, 0, 45deg);
+    transform-style: preserve-3d;
+}
+
+.kinematic-child {
+    transform: rotate3d(1, 0, 0, 30deg) translate3d(50px, 0, 0);
+    transform-style: preserve-3d;
+}
+
+/* Nested transforms create robotic arm / solar system effects */
+.kinematic-grandchild {
+    transform: rotate3d(0, 0, 1, 60deg) scale3d(0.8, 0.8, 0.8);
+}
+
+/* SECTION 11: TEXT SHATTERING via Fragmentation */
+.shattered-text {
+    columns: 5 100px;
+    column-fill: balance;
+    transform-style: preserve-3d;
+}
+
+.shattered-text span {
+    display: inline-block;
+    break-inside: avoid-column;
+    transition: transform 0.5s var(--spring-bouncy);
+}
+
+.shattered-text span:hover {
+    transform: translate3d(0, -10px, 30px) rotate3d(1, 1, 0, 15deg);
+}
+
+/* SECTION 12: BULLET TIME - Global Temporal Dilation */
+.bullet-time-active {
+    /* Applied via JS: document.timeline.playbackRate = 0.2 */
+    animation-playback-rate: var(--bullet-time-rate);
+}
+
+/* All animations slow down proportionally while maintaining sync */
+

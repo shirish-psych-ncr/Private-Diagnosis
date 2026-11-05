@@ -1,0 +1,32 @@
+{
+  "1": {
+    "label": {
+      "en": "Tier 1: Core Screening Presentations",
+      "hi": "श्रेणी 1: प्राथमिक स्क्रीनिंग प्रस्तुतियाँ"
+    }
+  },
+  "2": {
+    "label": {
+      "en": "Tier 2: Common Associated and Demographic-Specific Presentations",
+      "hi": "श्रेणी 2: सामान्य सहसंबद्ध और जनसांख्यिकी-विशिष्ट प्रस्तुतियाँ"
+    }
+  },
+  "3": {
+    "label": {
+      "en": "Tier 3: Less Prevalent, High Chronicity",
+      "hi": "श्रेणी 3: कम प्रचलित, उच्च पुराद्वंद्विता"
+    }
+  },
+  "4": {
+    "label": {
+      "en": "Tier 4: Low Prevalence, High Severity",
+      "hi": "श्रेणी 4: कम प्रचलन, उच्च गंभीरता"
+    }
+  },
+  "5": {
+    "label": {
+      "en": "Tier 5: Rare or Specialized Conditions",
+      "hi": "श्रेणी 5: दुर्लभ या विशेषज्ञ स्थितियाँ"
+    }
+  }
+}

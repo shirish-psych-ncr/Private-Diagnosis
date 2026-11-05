@@ -1,0 +1,10 @@
+{
+  "name": {
+    "en": "Delusional Disorder",
+    "hi": "भ्रामक विकार"
+  },
+  "tier": 4,
+  "dsm5": "Delusional Disorder",
+  "icd11": "6A24",
+  "mappingNote": "ICD-11 Delusional disorder is 6A24 within the 6A20-6A24 primary psychotic grouping; DSM delusional disorder and ICD 6A24 share a label but duration, symptom and exclusion requirements differ - assess each system independently (index 2.1.1-2.1.3)."
+}

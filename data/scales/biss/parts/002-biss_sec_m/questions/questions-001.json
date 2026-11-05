@@ -1,0 +1,196 @@
+[
+  {
+    "id": "biss_21",
+    "itemNumber": 21,
+    "text": {
+      "en": "Impaired concentration: Difficulty in collecting one's thoughts, mounting to incapacitating lack of concentration. Rate frequency, intensity and degree of incapacity produced."
+    },
+    "itemName": {
+      "en": "Impaired concentration"
+    },
+    "definition": {
+      "en": "Difficulty in collecting one's thoughts, mounting to incapacitating lack of concentration. Rate frequency, intensity and degree of incapacity produced."
+    },
+    "probes": [
+      {
+        "en": "How well have you been able to concentrate?"
+      },
+      {
+        "en": "Are there any times when your concentration has been below your normal level?"
+      },
+      {
+        "en": "Has this interfered with your reading, work, making conversation with others?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., occasional difficulties in collecting one's thoughts"
+      },
+      {
+        "en": "Mild; e.g., difficulties in concentrating and sustaining thought, which at times interferes with reading or conversation"
+      },
+      {
+        "en": "Moderate; e.g., most of time has impaired concentration, and usual responsibilities and actions are hampered by this"
+      },
+      {
+        "en": "Severe; e.g., incapacitating lack of concentration"
+      }
+    ]
+  },
+  {
+    "id": "biss_22",
+    "itemNumber": 22,
+    "text": {
+      "en": "Agitation: Purposeless motor activity. Inability to sit still, pacing, fidgeting, wringing hands, pulling at clothes, movement of lips or fingers. Do not include feeling of tension or restlessness. Rate observed and reported behavior."
+    },
+    "itemName": {
+      "en": "Agitation"
+    },
+    "definition": {
+      "en": "Purposeless motor activity. Inability to sit still, pacing, fidgeting, wringing hands, pulling at clothes, movement of lips or fingers. Do not include feeling of tension or restlessness. Rate observed and reported behavior."
+    },
+    "probes": [
+      {
+        "en": "Were there times when you were unable to sit still? Did you feel like you had to be constantly pacing up and down?"
+      },
+      {
+        "en": "Did you notice that you were pulling on your clothing, hair, or skin? Did you wring your hands? How frequently did you do this? Did it cause you any difficulties in the way you functioned?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight, and of doubtful clinical significance"
+      },
+      {
+        "en": "Mild; e.g., occasionally fidgety or unable to sit quietly in a chair"
+      },
+      {
+        "en": "Moderate; e.g., often pulling at hair, clothing, etc or having to move"
+      },
+      {
+        "en": "Severe; e.g., constantly fidgety or pulling at hair, clothing, etc or pacing up and down"
+      }
+    ]
+  },
+  {
+    "id": "biss_23",
+    "itemNumber": 23,
+    "text": {
+      "en": "Irritability - reported: Subjective feeling of anger, resentment, or annoyance (directed externally) whether expressed overtly or not. Rate only the intensity and duration of the subjective sense of irritability."
+    },
+    "itemName": {
+      "en": "Irritability - reported"
+    },
+    "definition": {
+      "en": "Subjective feeling of anger, resentment, or annoyance (directed externally) whether expressed overtly or not. Rate only the intensity and duration of the subjective sense of irritability."
+    },
+    "probes": [
+      {
+        "en": "How irritated, angry, or resentful have you felt - whether you showed it or not?"
+      },
+      {
+        "en": "How strongly did you feel this way? How much of the time did you feel this way? How did you show your (anger, annoyance, irritability)?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight and of doubtful clinical significance"
+      },
+      {
+        "en": "Mild; e.g., definitely more irritable than called for by the situation but only occasional and not intense"
+      },
+      {
+        "en": "Moderate; e.g., often feelings quite angry or occasionally feels very angry"
+      },
+      {
+        "en": "Severe; e.g., most of the time quite angry or often feels very angry"
+      }
+    ]
+  },
+  {
+    "id": "biss_24",
+    "itemNumber": 24,
+    "text": {
+      "en": "Irritability - observed: Overt expression of irritability, annoyance and anger. Do not rate subjective feelings of annoyance, anger, or irritability on this item, no matter how intense, unless it is expressed overtly. Include any irritability observed by others."
+    },
+    "itemName": {
+      "en": "Irritability - observed"
+    },
+    "definition": {
+      "en": "Overt expression of irritability, annoyance and anger. Do not rate subjective feelings of annoyance, anger, or irritability on this item, no matter how intense, unless it is expressed overtly. Include any irritability observed by others."
+    },
+    "probes": [
+      {
+        "en": "Over the past week, have you expressed your irritation or anger to others? How often did that occur?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight and of doubtful clinical significance"
+      },
+      {
+        "en": "Mild; e.g., definitely more irritable than called for by the situation but only occasional and not intense"
+      },
+      {
+        "en": "Moderate; e.g., often displays anger"
+      },
+      {
+        "en": "Severe; e.g., most of the time displays intense anger"
+      }
+    ]
+  },
+  {
+    "id": "biss_25",
+    "itemNumber": 25,
+    "text": {
+      "en": "Aggressive behavior: Confrontational, argumentative behavior."
+    },
+    "itemName": {
+      "en": "Aggressive behavior"
+    },
+    "definition": {
+      "en": "Confrontational, argumentative behavior."
+    },
+    "probes": [
+      {
+        "en": "During the past week, have there been any times when you were loud, demanding, or sarcastic?"
+      },
+      {
+        "en": "Did you have any arguments or confrontations with people?"
+      },
+      {
+        "en": "Did you lose your temper when the above occurred? Did you throw or break anything? Did you push or hit anyone?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight and of doubtful clinical significance"
+      },
+      {
+        "en": "Mild; e.g., loud, sarcastic, at times, but only occasionally"
+      },
+      {
+        "en": "Moderate; e.g., often demanding or loud"
+      },
+      {
+        "en": "Severe; e.g., most of time somewhat demanding, loud, or any episode of shouting, hitting, breaking"
+      }
+    ],
+    "safety": true
+  }
+]

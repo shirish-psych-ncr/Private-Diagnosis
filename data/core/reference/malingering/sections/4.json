@@ -1,0 +1,37 @@
+{
+  "id": "amnesia",
+  "title": {
+    "en": "Claimed amnesia: forensic review",
+    "hi": "दावा-कृत स्मृतिलोप: फॉरेंसिक समीक्षा"
+  },
+  "items": [
+    {
+      "en": "First clarify that the complaint is amnesia rather than dementia/delirium/developmental memory difficulty; a memory evaluation covers orientation, recall of prose, rote learning, visuospatial retention, remote memory/fund of information and autobiographical memory, with medical work-up (labs, neuro exam, imaging) as indicated.",
+      "hi": "प्रथम स्पष्ट करें कि शिकायत स्मृतिलोप है, मूर्छा/डीमेंशिया/विकास-जनित स्मरण-कठिनाई नहीं; मूल्यांकन में दिशा-काल ज्ञान, गद्य-स्मरण, रट-अध्ययन, दृश्य-स्थानिक धारणा, सुदूर स्मरण/सूचना-भंडार एवं आत्मकथात्मक स्मरण, तथा आवश्यक चिकित्सीय जाँच।"
+    },
+    {
+      "en": "Organic causes to consider: substance use, anterior communicating artery aneurysm rupture, anoxia, brain disease/injury, cerebrovascular accident, delirium, dementia, ECT, encephalitis, hypoglycaemia, somnambulism, transient epileptic amnesia, Wernicke-Korsakoff syndrome.",
+      "hi": "कारणात्मक जैविक कारण: मादक द्रव्य, ACoA एनेवरिज्म भंग, अनॉक्सिया, मस्तिष्क रोग/आघात, CVA, delirium, डीमेंशिया, ECT, एन्सेफलाइटिस, हाइपोग्लाइसीमिया, स्लीप-वॉकिंग, क्षणिक मृगवानीय स्मृतिलोप, Wernicke-Korsakoff।"
+    },
+    {
+      "en": "Ribot's law: after head trauma older memories return before recent ones, with the gap limited to the event and seconds beforehand; recovery that does not follow this pattern warrants screening for malingering.",
+      "hi": "राइबोट-नियम: मस्तिष्क-आघात पश्चात् पुरानी स्मृतियाँ नवीन से पूर्व लौटती हैं, अंतराल घटना एवं उसके कुछ क्षण पूर्व तक सीमित; इस पैटर्न से हटने वाली पुनर्प्राप्ति पर मालिंगरिंग-स्क्रीन आवश्यक।"
+    },
+    {
+      "en": "Patterns consistent with malingered amnesia: circumscribed loss for the offence with recall before and after; sharp sudden onset and offset; complete loss for a circumscribed period (complete amnesia for a criminal act is very rare); dogmatic belief that nothing could aid recovery; overly dramatic presentation; implausibly precise time window; attributing amnesia to intoxication contrary to available evidence.",
+      "hi": "मालिंगरिंग-संगत पैटर्न: केवल अपराध-काल की सीमित हानि, पूर्व-पश्चात् स्मरण; आकस्मिक आरंभ-अंत; सीमित काल का पूर्ण लोप (अपराध का पूर्ण अमांसिया अत्यंत दुर्लभ); किसी सहायता से स्मरण-पुनर्प्राप्ति का अडंबरहीन अविश्वास; अत्यंत नाटकीय प्रस्तुति; अविश्वसनीय रूप से सटीक समय-सीमा; प्रमाण-विरुद्ध मतवैषम्य को हेतु बताना।"
+    },
+    {
+      "en": "Alcohol/substance claims: over half (and in some studies >85%) of offenders claiming amnesia were intoxicated near the offence, but intoxication sufficient to produce genuine amnesia is uncommon — do not accept the claim without corroborating levels/evidence.",
+      "hi": "मदिरा/मादक दावे: अमांसिया-दाता अपराधियों में अर्धे से अधिक (कुछ अध्ययनों में >85%) नशे में थे, किंतु वास्तविक अमांसिया उत्पन्न करने योग्य मात्रा दुर्लभ — प्रमाण-राशि के बिना दावा स्वीकार न करें।"
+    },
+    {
+      "en": "Planning matters: instrumental (planned) offences involve elaborative encoding and rehearsal, which improve memory, so genuine amnesia for planned violence is unexpected; impulsive/reactive offences may be followed by partial retrograde gaps.",
+      "hi": "योजना-प्रसंग: सयोजित (योजनाबद्ध) अपराधों में विस्तृत एनकोडिंग-अभ्यास स्मरण बढ़ाता है, अतः योजनाबद्ध हिंसा का वास्तविक अमांसिया अप्रत्याशित; आवेगजनित अपराधों में आंशिक पश्चगामी अंतराल संभव।"
+    },
+    {
+      "en": "Self-report dissociation instruments (DES/DES-II, MID) rely entirely on self-report: a high score does not prove claimed memory loss is genuine (McLeod 2004; Woodworth 2009 — DES tendency correlated with perceived, not objective, memory impairment).",
+      "hi": "स्व-रिपोर्ट वियोजन मापनियाँ (DES/DES-II, MID) पूर्णतः स्व-रिपोर्ट पर निर्भर: उच्च अंक दावा-कृत स्मृतिलोप की प्रामाणिकता सिद्ध नहीं करता (McLeod 2004; Woodworth 2009)।"
+    }
+  ]
+}

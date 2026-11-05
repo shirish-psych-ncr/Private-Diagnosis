@@ -1,0 +1,213 @@
+[
+  {
+    "id": "biss_26",
+    "itemNumber": 26,
+    "text": {
+      "en": "Hyperactive: Increase in goal-directed activity as compared with usual level. Consider changes in involvement or activity level associated with work, family, friends, sex drive, projects, interests or activities (e.g., telephone calls, letter writing). Note that this item rates behaviour that may not have associated impairment of function or adverse consequences."
+    },
+    "itemName": {
+      "en": "Hyperactive"
+    },
+    "definition": {
+      "en": "Increase in goal-directed activity as compared with usual level. Consider changes in involvement or activity level associated with work, family, friends, sex drive, projects, interests or activities (e.g., telephone calls, letter writing). Note that this item rates behaviour that may not have associated impairment of function or adverse consequences."
+    },
+    "probes": [
+      {
+        "en": "Have you been more active or involved in things than usual?"
+      },
+      {
+        "en": "What about your work, housekeeping, family, friends, sex, hobbies, new projects or interests? How much of your day has been spent on this?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slightly more interest in activities, but of questionable significance"
+      },
+      {
+        "en": "Mild increase in activity level"
+      },
+      {
+        "en": "Moderate increase in activity"
+      },
+      {
+        "en": "Marked increase, almost constantly involved in numerous activities in many areas"
+      }
+    ]
+  },
+  {
+    "id": "biss_27",
+    "itemNumber": 27,
+    "text": {
+      "en": "Energetic: Unusually energetic, more active than the usual level without expected fatigue."
+    },
+    "itemName": {
+      "en": "Energetic"
+    },
+    "definition": {
+      "en": "Unusually energetic, more active than the usual level without expected fatigue."
+    },
+    "probes": [
+      {
+        "en": "Have you had more energy than usual to do things?"
+      },
+      {
+        "en": "More than just a return to normal or usual level?"
+      },
+      {
+        "en": "Did it seem like too much energy?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slightly more energetic but of questionable significance"
+      },
+      {
+        "en": "Mild increase in energy. Less fatigued than usual."
+      },
+      {
+        "en": "Moderate increase in energy compared to usual, with little or no fatigue"
+      },
+      {
+        "en": "Markedly more energetic than usual, all or nearly all of time, with little or no fatigue"
+      }
+    ]
+  },
+  {
+    "id": "biss_28",
+    "itemNumber": 28,
+    "text": {
+      "en": "Increased social interest: Increased interest in, attention to others. Associated with increased social interactions and time spent with others."
+    },
+    "itemName": {
+      "en": "Increased social interest"
+    },
+    "definition": {
+      "en": "Increased interest in, attention to others. Associated with increased social interactions and time spent with others."
+    },
+    "probes": [
+      {
+        "en": "Have you had more interest than usual in spending time with other people, including church, family, friends, co-workers?"
+      },
+      {
+        "en": "Did you actually spend more time interacting with others?"
+      },
+      {
+        "en": "How much more time than usual for you does this represent?"
+      },
+      {
+        "en": "Did you make social contact with people whom you do not know or have not seen in a long time? What about talking on the phone, or using the internet for conversations?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight increase in interest in social interaction."
+      },
+      {
+        "en": "Mild; actual increase in social interaction, associated with actively seeking out others"
+      },
+      {
+        "en": "Moderate; substantially increased time spent with others, causing minor impairment, e.g., inappropriate renewing of old acquaintances"
+      },
+      {
+        "en": "Marked increase in social interactions, associated with intrusive, unwanted interactions, contacts strangers"
+      }
+    ]
+  },
+  {
+    "id": "biss_29",
+    "itemNumber": 29,
+    "text": {
+      "en": "Racing thoughts - reported: Rapid flow of ideas, which may be observable in speech. There is continuity of thought, although it may be difficult or impossible to stay on track with the content. Rate on subjective report."
+    },
+    "itemName": {
+      "en": "Racing thoughts - reported"
+    },
+    "definition": {
+      "en": "Rapid flow of ideas, which may be observable in speech. There is continuity of thought, although it may be difficult or impossible to stay on track with the content. Rate on subjective report."
+    },
+    "probes": [
+      {
+        "en": "Have you been bothered by having too many thoughts at once?"
+      },
+      {
+        "en": "Have your thoughts been speeded up?"
+      },
+      {
+        "en": "Has this caused any difficulties in staying on track?"
+      },
+      {
+        "en": "How much of the time has this happened? Is it moderate or severe over the past week?"
+      },
+      {
+        "en": "How different was that from when you are feeling normal?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., feels talkative"
+      },
+      {
+        "en": "Mild; e.g., free, lively associations, not interfering with person's staying on track"
+      },
+      {
+        "en": "Moderate; e.g., rapid flow of ideas, with difficulty returning to primary theme of thoughts"
+      },
+      {
+        "en": "Severe; e.g., constantly feels thoughts racing, has great difficulty collecting thoughts and returning to main focus"
+      }
+    ]
+  },
+  {
+    "id": "biss_30",
+    "itemNumber": 30,
+    "text": {
+      "en": "Pressured speech: Pressure of talk, increased flow of speech, overly loquacious. Rate both observed and reported behavior."
+    },
+    "itemName": {
+      "en": "Pressured speech"
+    },
+    "definition": {
+      "en": "Pressure of talk, increased flow of speech, overly loquacious. Rate both observed and reported behavior."
+    },
+    "probes": [
+      {
+        "en": "Have you experienced yourself talking too fast, saying too much in conversations?"
+      },
+      {
+        "en": "Did others have to interrupt to get a word in?"
+      },
+      {
+        "en": "Has this interfered with your effectiveness in conversations?"
+      }
+    ],
+    "anchors": [
+      {
+        "en": "Not at all"
+      },
+      {
+        "en": "Slight; e.g., tendency to talk excessively, not impairing"
+      },
+      {
+        "en": "Mild; e.g., rapid, verbose speech. Gives detailed answers"
+      },
+      {
+        "en": "Moderate; e.g., garrulous, difficult to interrupt"
+      },
+      {
+        "en": "Severe; e.g., speaking almost constantly. Words come tumbling out. Cannot be interrupted most of time."
+      }
+    ]
+  }
+]

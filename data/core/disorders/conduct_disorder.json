@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Conduct Disorder",
+    "hi": "आचार विकार"
+  },
+  "tier": 3,
+  "dsm5": "Conduct Disorder",
+  "icd11": "6C91",
+  "description": {
+    "en": "Repetitive pattern violating the rights of others or age-appropriate societal norms",
+    "hi": "दूसरों के अधिकारों या आयु-उपयोज्य सामाजिक मानदंडों का उल्लंघन करने का पुनरावृत्ति पैटर्न"
+  },
+  "mappingNote": "ICD-11 Conduct-dissocial disorder is 6C91."
+}

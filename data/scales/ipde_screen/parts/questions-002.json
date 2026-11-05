@@ -1,0 +1,192 @@
+[
+  {
+    "id": "ipde_F60_2",
+    "name": {
+      "en": "F60.2 Dissocial",
+      "hi": "F60.2 Dissocial"
+    },
+    "icd10Module": "F60.2",
+    "disorderName": {
+      "en": "Antisocial Personality Disorder",
+      "hi": "Antisocial Personality Disorder"
+    },
+    "disorders": [
+      "antisocial_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_11",
+        "itemNumber": 11,
+        "text": {
+          "en": "I've never been arrested.",
+          "hi": "मुझे कभी गिरफ्तार नहीं किया गया।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_18",
+        "itemNumber": 18,
+        "text": {
+          "en": "I usually feel bad when I hurt or mistreat someone.",
+          "hi": "जब मैं किसी को ठेस पहुँचाता/पहुँचाती हूँ तो आमतौर पर बुरा महसूस करता/करती हूँ।"
+        },
+        "keyedAnswer": "F",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_20",
+        "itemNumber": 20,
+        "text": {
+          "en": "At times I've refused to hold a job, even when I was expected to.",
+          "hi": "कभी-कभी मैंने नौकरी पकड़ने से इनकार किया है, भले अपेक्षा थी।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_27",
+        "itemNumber": 27,
+        "text": {
+          "en": "I fight for my rights even when it annoys people.",
+          "hi": "मैं अपने अधिकारों हेतु लड़ता/लड़ती हूँ भले लोगों को बुरा लगे।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_29",
+        "itemNumber": 29,
+        "text": {
+          "en": "I will lie or con someone if it serves my purpose.",
+          "hi": "अपने काम निकालने हेतु मैं झूठ बोल सकता/सकती हूँ या किसी को ठगा सकता/सकती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_51",
+        "itemNumber": 51,
+        "text": {
+          "en": "It's hard for me to stay out of trouble.",
+          "hi": "मुसीबत से दूर रहना मेरे लिए कठिन है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_56",
+        "itemNumber": 56,
+        "text": {
+          "en": "I take chances and do reckless things.",
+          "hi": "मैं जोखिम उठाता/उठाती और बेपरवाह कार्य करता/करती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_59",
+        "itemNumber": 59,
+        "text": {
+          "en": "I usually try to get people to do things my way.",
+          "hi": "मैं आमतौर पर लोगों को अपनी बात मनवाने का प्रयत्न करता/करती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.2",
+        "disorders": [
+          "antisocial_personality_disorder"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ipde_F60_30",
+    "name": {
+      "en": "F60.30 Impulsive",
+      "hi": "F60.30 Impulsive"
+    },
+    "icd10Module": "F60.30",
+    "disorderName": {
+      "en": "Impulsive subtype / intermittent explosive features",
+      "hi": "Impulsive subtype / intermittent explosive features"
+    },
+    "disorders": [
+      "impulsive_control_features"
+    ],
+    "questions": [
+      {
+        "id": "ipde_19",
+        "itemNumber": 19,
+        "text": {
+          "en": "I argue or fight when people try to stop me from doing what I want.",
+          "hi": "जब लोग मेरी मनचाही चीज़ रोकने की कोशिश करते हैं तो मैं बहस या लड़ाई करता/करती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.30",
+        "disorders": [
+          "impulsive_control_features"
+        ]
+      },
+      {
+        "id": "ipde_30",
+        "itemNumber": 30,
+        "text": {
+          "en": "I don't stick with a plan if I don't get results right away.",
+          "hi": "जल्दी परिणाम न मिले तो मैं योजना पर टिकता/टिकती नहीं।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.30",
+        "disorders": [
+          "impulsive_control_features"
+        ]
+      },
+      {
+        "id": "ipde_37",
+        "itemNumber": 37,
+        "text": {
+          "en": "Sometimes I get so angry I break or smash things.",
+          "hi": "कभी-कभी इतना क्रोध आता है कि मैं चीज़ें तोड़ता/तोड़ती या फेंकता/फेंकती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.30",
+        "disorders": [
+          "impulsive_control_features"
+        ]
+      },
+      {
+        "id": "ipde_47",
+        "itemNumber": 47,
+        "text": {
+          "en": "I lose my temper and get into physical fights.",
+          "hi": "मैं आत्म-नियंत्रण खोकर शारीरिक झगड़ों में उलझ जाता/जाती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.30",
+        "disorders": [
+          "impulsive_control_features"
+        ]
+      }
+    ]
+  }
+]

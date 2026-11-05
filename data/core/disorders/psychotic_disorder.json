@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Psychotic Disorder",
+    "hi": "मनर्विकार विकार"
+  },
+  "tier": 4,
+  "dsm5": "Psychotic Disorder Not Otherwise Specified (MINI Module K screen)",
+  "icd11": "6A2Z",
+  "description": {
+    "en": "Psychotic symptoms (delusions, hallucinations, disorganized speech/behavior, negative symptoms) not attributable to a mood episode or organic cause",
+    "hi": "मनर्विकारी लक्षण (भ्रम, मतिभ्रम, अव्यवस्थित वाणी/व्यवहार, नकारात्मक लक्षण) जो मूड-एपिसोड या जैविक कारण पर निर्भर नहीं"
+  },
+  "mappingNote": "MINI Module K screens for psychotic disorders generically; the specific ICD-11 category (6A20-6A24 or 6A2Z/6A2Y) is determined by further clinical assessment."
+}

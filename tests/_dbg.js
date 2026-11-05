@@ -1,17 +1,18 @@
 const fs=require('fs'),path=require('path'),{JSDOM}=require('jsdom');
-const ROOT='/workspace';
+const ROOT=path.resolve(__dirname,'..');
+const {loadModule,localFetch}=require('./module_loader');
 const html=fs.readFileSync(path.join(ROOT,'index.html'),'utf8')
  .replace(/<script[^>]*src="https:[^"]*"[^>]*><\/script>/g,'')
  .replace(/<meta http-equiv="Content-Security-Policy"[^>]*>[\s\S]*?content="[^"]*">/m,'');
 const dom=new JSDOM(html,{url:'http://localhost/',runScripts:'outside-only',pretendToBeVisual:true});
 const {window}=dom,{document}=window;
-window.fetch=(u)=>String(u).includes('data.json')?Promise.resolve({ok:true,json:()=>Promise.resolve(JSON.parse(fs.readFileSync(path.join(ROOT,'data.json'),'utf8')))}):Promise.reject(new Error('x'));
+window.fetch=localFetch;
 window.jspdf={jsPDF:function(){this.text=()=>{};this.save=()=>{};this.autoTable=()=>{};this.setFontSize=()=>{};this.setFont=()=>{};this.addPage=()=>{};this.setTextColor=()=>{};this.setDrawColor=()=>{};this.setLineWidth=()=>{};this.line=()=>{};this.rect=()=>{};this.internal={pageSize:{getWidth:()=>200,getHeight:()=>290}};}};
 window.scrollTo=()=>{};
-window.eval(fs.readFileSync(path.join(ROOT,'app.js'),'utf8'));
+const ready=loadModule(dom.getInternalVMContext(),'app.js');
 const sleep=(ms)=>new Promise(r=>setTimeout(r,ms));
 (async()=>{
- await sleep(300);
+ await ready;
  document.getElementById('consent-check').checked=true;
  document.getElementById('consent-check').dispatchEvent(new window.Event('change',{bubbles:true}));
  document.getElementById('consent-btn').click();

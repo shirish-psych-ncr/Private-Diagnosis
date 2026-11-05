@@ -1,0 +1,192 @@
+[
+  {
+    "id": "ipde_F60_5",
+    "name": {
+      "en": "F60.5 Anankastic",
+      "hi": "F60.5 Anankastic"
+    },
+    "icd10Module": "F60.5",
+    "disorderName": {
+      "en": "Obsessive-Compulsive Personality Disorder",
+      "hi": "Obsessive-Compulsive Personality Disorder"
+    },
+    "disorders": [
+      "obsessive_compulsive_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_10",
+        "itemNumber": 10,
+        "text": {
+          "en": "I am a very cautious person.",
+          "hi": "मैं अत्यंत सावधान व्यक्ति हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.5",
+        "disorders": [
+          "obsessive_compulsive_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_23",
+        "itemNumber": 23,
+        "text": {
+          "en": "I spend too much time trying to do things perfectly.",
+          "hi": "चीज़ें पूर्ण करने के लिए मैं बहुत अधिक समय लगाता/लगाती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.5",
+        "disorders": [
+          "obsessive_compulsive_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_32",
+        "itemNumber": 32,
+        "text": {
+          "en": "People think I am too strict about rules and regulations.",
+          "hi": "लोग मानते हैं कि मैं नियम-कानूनों के बारे में बहुत कठोर हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.5",
+        "disorders": [
+          "obsessive_compulsive_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_41",
+        "itemNumber": 41,
+        "text": {
+          "en": "I work so hard I don't have time left for anything else.",
+          "hi": "इतना कार्य करता/करती हूँ कि अन्य किसी चीज़ हेतु समय नहीं बचता।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.5",
+        "disorders": [
+          "obsessive_compulsive_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_48",
+        "itemNumber": 48,
+        "text": {
+          "en": "People think I am too stiff or formal.",
+          "hi": "लोग मुझे बहुत रूढ़/कठोर मानते हैं।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.5",
+        "disorders": [
+          "obsessive_compulsive_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_54",
+        "itemNumber": 54,
+        "text": {
+          "en": "It's hard for me to get used to a new way of doing things.",
+          "hi": "किसी नए तरीके से कार्य करने का अभ्यस्त होना मेरे लिए कठिन है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.5",
+        "disorders": [
+          "obsessive_compulsive_personality_disorder"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ipde_F60_6",
+    "name": {
+      "en": "F60.6 Anxious (Avoidant)",
+      "hi": "F60.6 Anxious (Avoidant)"
+    },
+    "icd10Module": "F60.6",
+    "disorderName": {
+      "en": "Avoidant Personality Disorder",
+      "hi": "Avoidant Personality Disorder"
+    },
+    "disorders": [
+      "avoidant_personality_disorder"
+    ],
+    "questions": [
+      {
+        "id": "ipde_7",
+        "itemNumber": 7,
+        "text": {
+          "en": "I usually feel tense or nervous.",
+          "hi": "मुझे आमतौर पर तनाव या घबराहट महसूस होती है।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.6",
+        "disorders": [
+          "avoidant_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_16",
+        "itemNumber": 16,
+        "text": {
+          "en": "I feel awkward or out of place in social situations.",
+          "hi": "सामाजिक परिस्थितियों में मैं अजीब या बेढंगा महसूस करता/करती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.6",
+        "disorders": [
+          "avoidant_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_34",
+        "itemNumber": 34,
+        "text": {
+          "en": "I won't get involved with people until I am certain they like me.",
+          "hi": "लोगों से जुड़ने से पहले निश्चित होना चाहता/चाहती हूँ कि वे मुझे पसंद करते हैं।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.6",
+        "disorders": [
+          "avoidant_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_39",
+        "itemNumber": 39,
+        "text": {
+          "en": "I worry a lot that people may not like me.",
+          "hi": "लोग मुझे पसंद न करें, इसका बहुत चिंता करता/करती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.6",
+        "disorders": [
+          "avoidant_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_43",
+        "itemNumber": 43,
+        "text": {
+          "en": "A lot of things seem dangerous to me that don't bother most people.",
+          "hi": "कई चीज़ें मुझे खतरनाक लगती हैं जिनसे सामान्य लोग प्रभावित नहीं होते।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.6",
+        "disorders": [
+          "avoidant_personality_disorder"
+        ]
+      },
+      {
+        "id": "ipde_50",
+        "itemNumber": 50,
+        "text": {
+          "en": "I keep to myself even when there are other people around.",
+          "hi": "आसपास लोग होने पर भी मैं स्वयं को अलग रखता/रखती हूँ।"
+        },
+        "keyedAnswer": "T",
+        "screenItems": "F60.6",
+        "disorders": [
+          "avoidant_personality_disorder"
+        ]
+      }
+    ]
+  }
+]

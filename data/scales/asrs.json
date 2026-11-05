@@ -1,0 +1,71 @@
+{
+  "id": "asrs",
+  "questions": [
+    {
+      "id": "neuro_1",
+      "text": {
+        "en": "How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?",
+        "hi": "चुनौतीपूर्ण हिस्से पूरे होने के बाद परियोजना के अंतिम विवरण पूरे करने में कितनी बार परेशानी होती है?"
+      },
+      "sharedScale": "frequency5",
+      "disorders": [
+        "adhd"
+      ]
+    },
+    {
+      "id": "neuro_2",
+      "text": {
+        "en": "How often do you have difficulty getting things in order when you have to do a task that requires organization?",
+        "hi": "व्यवस्था की माँग वाले कार्य में चीज़ों को क्रम में रखने में कितनी बार कठिनाई होती है?"
+      },
+      "sharedScale": "frequency5",
+      "disorders": [
+        "adhd"
+      ]
+    },
+    {
+      "id": "neuro_3",
+      "text": {
+        "en": "How often do you have problems remembering appointments or obligations?",
+        "hi": "नियुक्तियों या कर्तव्यों को याद रखने में कितनी बार समस्या होती है?"
+      },
+      "sharedScale": "frequency5",
+      "disorders": [
+        "adhd"
+      ]
+    },
+    {
+      "id": "neuro_4",
+      "text": {
+        "en": "When you have a task that requires a lot of thought, how often do you avoid or delay getting started?",
+        "hi": "अधिक चिंतन वाले कार्य को शुरू करने से कितनी बार बचाते या टालते हैं?"
+      },
+      "sharedScale": "frequency5",
+      "disorders": [
+        "adhd"
+      ]
+    },
+    {
+      "id": "neuro_5",
+      "text": {
+        "en": "How often do you fidget or squirm with your hands or feet when you have to sit down for a long time?",
+        "hi": "लंबे समय तक बैठने पर कितनी बार हाथ या पैर हिलाते हैं?"
+      },
+      "sharedScale": "frequency5",
+      "disorders": [
+        "adhd"
+      ]
+    },
+    {
+      "id": "neuro_6",
+      "text": {
+        "en": "How often do you feel overly active and compelled to do things, like you were driven by a motor?",
+        "hi": "कितनी बार अत्यधिक सक्रिय महसूस करते हैं, मानो मोटर से संचालित हों?"
+      },
+      "sharedScale": "frequency5",
+      "disorders": [
+        "adhd"
+      ]
+    }
+  ]
+}
