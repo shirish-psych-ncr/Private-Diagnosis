@@ -23,7 +23,7 @@
                     <p class="subtitle" data-i18n="app.subtitle">Mental health screening</p>
                 </div>
                 <div class="header-controls">
-                    <button id="contrast-toggle" class="btn-icon" type="button" aria-pressed="false" data-i18n="app.contrast" title="Toggle high-contrast mode">Toggle high-contrast mode</button>
+                    <button id="contrast-toggle" class="btn-icon" type="button" aria-pressed="false" data-i18n="app.contrast" title="Toggle high-contrast mode">High contrast</button>
                     <div class="language-switcher" role="group" aria-label="Language">
                         <button id="lang-en" class="active" type="button" aria-pressed="true">English</button>
                         <button id="lang-hi" type="button" aria-pressed="false">हिंदी</button>
@@ -54,9 +54,9 @@
                         <p data-i18n="consent.limitations">Screening helps guide a conversation. Only a clinician can make a diagnosis.</p>
                         <div class="consent-checkbox">
                             <input type="checkbox" id="consent-check">
-                            <label for="consent-check" data-i18n="consent.agree">I understand and agree to proceed</label>
+                            <label for="consent-check" data-i18n="consent.agree">I agree to begin</label>
                         </div>
-                        <p id="consent-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="consent.error">Please confirm the consent checkbox to continue.</p>
+                        <p id="consent-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="consent.error">Select the consent box to begin.</p>
                         <button id="consent-btn" class="btn-primary" type="button" disabled data-i18n="consent.continue">Continue</button>
                     </div>
                 </section>
@@ -67,15 +67,15 @@
                     <p class="subtitle" data-i18n="context.note">Only age group is required. Leave out names and contact details.</p>
                     <form id="context-form">
                         <div class="form-group">
-                            <label for="age-group" data-i18n="context.age">Age Group</label>
+                            <label for="age-group" data-i18n="context.age">Age group</label>
                             <select id="age-group" required>
-                                <option value="" data-i18n="context.select">Select...</option>
+                                <option value="" data-i18n="context.select">Choose age group</option>
                                 <option value="pediatric" data-i18n="context.age.pediatric">Child (under 12)</option>
                                 <option value="adolescent" data-i18n="context.age.adolescent">Adolescent (12-17)</option>
                                 <option value="adult" data-i18n="context.age.adult">Adult (18-64)</option>
                                 <option value="older" data-i18n="context.age.older">Older Adult (65+)</option>
                             </select>
-                            <p id="context-age-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="context.age.error">Please select an age group to continue.</p>
+                            <p id="context-age-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="context.age.error">Choose an age group.</p>
                         </div>
                         <div class="form-group">
                             <label for="visit-reason" data-i18n="context.reason">Reason for visit (optional)</label>
@@ -109,7 +109,7 @@
                     <h2 id="scales-heading" data-i18n="scales.title">Your questions</h2>
                     <p class="subtitle" data-i18n="scales.instruction">Answer the required questions for each form.</p>
                     <div id="scale-container"></div>
-                    <p id="scales-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="scales.incomplete">Please complete all questions before continuing.</p>
+                    <p id="scales-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="scales.incomplete">Answer the remaining required questions.</p>
                     <button class="btn-secondary" type="button" data-back="2" data-i18n="nav.back">Back</button>
                         <button id="scales-finish" class="btn-primary" type="button" data-i18n="scales.finish">View summary</button>
                 </section>
@@ -123,10 +123,10 @@
                         <div id="report-content"></div>
                     </details>
                     <div class="action-buttons">
-                        <button id="pdf-btn" class="btn-primary" type="button" data-i18n="results.print">Download PDF Report</button>
-                        <button id="clear-btn" class="btn-secondary" type="button" data-i18n="results.clear">Clear All Data &amp; Restart</button>
+                        <button id="pdf-btn" class="btn-primary" type="button" data-i18n="results.print">Download summary (PDF)</button>
+                        <button id="clear-btn" class="btn-secondary" type="button" data-i18n="results.clear">Clear answers and restart</button>
                     </div>
-                    <p class="handoff-note" data-i18n="results.handoff">To share your summary, save the PDF and bring it to your visit.</p>
+                    <p class="handoff-note" data-i18n="results.handoff">Bring your summary to your appointment.</p>
                 </section>
             </div>
 
@@ -145,6 +145,7 @@
         <footer role="contentinfo">
             <p data-i18n="footer.text">Answers clear when you close this tab.</p>
             <nav class="app-footer-nav" aria-label="Site information">
+                <a href="library.html">Assessment library</a>
                 <a href="about.html">About</a>
                 <a href="privacy.html">Privacy</a>
                 <a href="security.html">Security</a>

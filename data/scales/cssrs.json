@@ -1,0 +1,68 @@
+{
+  "id": "cssrs",
+  "name": "C-SSRS · Since last contact",
+  "directions": "For a follow-up interview with a clinician. Ask about the period since the last contact.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "No"
+    },
+    {
+      "v": 1,
+      "label": "Yes"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Suicidal thoughts and behavior",
+      "questions": [
+        {
+          "id": "s1",
+          "text": "Have you wished you were dead or wished you could go to sleep and not wake up?",
+          "safety": true,
+          "itemNumber": 1
+        },
+        {
+          "id": "s2",
+          "text": "Have you actually had any thoughts of killing yourself?",
+          "safety": true,
+          "itemNumber": 2
+        },
+        {
+          "id": "s3",
+          "text": "Have you been thinking about how you might do this?",
+          "safety": true,
+          "requires": "s2",
+          "itemNumber": 3,
+          "hint": "For example: “I thought about taking an overdose, but I never made a specific plan as to when, where or how I would actually do it … and I would never go through with it.”"
+        },
+        {
+          "id": "s4",
+          "text": "Have you had these thoughts and had some intention on acting on them?",
+          "safety": true,
+          "requires": "s2",
+          "itemNumber": 4,
+          "hint": "As opposed to “I have thoughts, but I definitely will not do anything about them.”"
+        },
+        {
+          "id": "s5",
+          "text": "Have you started to work or worked out the details of how to kill yourself and do you intend to carry out this plan?",
+          "safety": true,
+          "requires": "s2",
+          "itemNumber": 5
+        },
+        {
+          "id": "s6",
+          "text": "Have you done anything, started to do anything, or prepared to do anything to end your life?",
+          "safety": true,
+          "itemNumber": 6,
+          "hint": "Examples include preparing for an attempt, starting an attempt and stopping or being stopped, or making an attempt."
+        }
+      ]
+    }
+  ],
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

@@ -15,7 +15,9 @@
     "functional_impairment",
     "personality",
     "anger",
-    "gender"
+    "gender",
+    "wellbeing",
+    "suicide_followup"
   ],
   "scales": [
     "biss",
@@ -31,6 +33,28 @@
     "pdq4_screen",
     "phq15",
     "staxi_ca",
-    "vadrs"
+    "vadrs",
+    "ugds_gs",
+    "itq",
+    "maas",
+    "cssrs",
+    "ryff",
+    "ders",
+    "ees",
+    "sseit",
+    "aaq2",
+    "flourishing",
+    "vq",
+    "mcq30",
+    "dass21",
+    "spin",
+    "msibpd",
+    "rgpts",
+    "asi",
+    "tcq",
+    "ffoci_sf",
+    "cfi",
+    "ius",
+    "dmqr"
   ]
 }

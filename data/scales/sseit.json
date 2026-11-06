@@ -1,0 +1,178 @@
+{
+  "id": "sseit",
+  "name": "Schutte Self-Report Emotional Intelligence Test (SSEIT)",
+  "directions": "Indicate the extent to which each item applies to you.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Disagree"
+    },
+    {
+      "v": 3,
+      "label": "Neither agree nor disagree"
+    },
+    {
+      "v": 4,
+      "label": "Agree"
+    },
+    {
+      "v": 5,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Schutte Self-Report Emotional Intelligence Test",
+      "questions": [
+        {
+          "id": "sseit_1",
+          "text": "I know when to speak about my personal problems to others"
+        },
+        {
+          "id": "sseit_2",
+          "text": "When I am faced with obstacles, I remember times I faced similar obstacles and overcame them"
+        },
+        {
+          "id": "sseit_3",
+          "text": "I expect that I will do well on most things I try"
+        },
+        {
+          "id": "sseit_4",
+          "text": "Other people find it easy to confide in me"
+        },
+        {
+          "id": "sseit_5",
+          "text": "I find it hard to understand the non-verbal messages of other people",
+          "reverse": true
+        },
+        {
+          "id": "sseit_6",
+          "text": "Some of the major events of my life have led me to re-evaluate what is important and not important"
+        },
+        {
+          "id": "sseit_7",
+          "text": "When my mood changes, I see new possibilities"
+        },
+        {
+          "id": "sseit_8",
+          "text": "Emotions are one of the things that make my life worth living"
+        },
+        {
+          "id": "sseit_9",
+          "text": "I am aware of my emotions as I experience them"
+        },
+        {
+          "id": "sseit_10",
+          "text": "I expect good things to happen"
+        },
+        {
+          "id": "sseit_11",
+          "text": "I like to share my emotions with others"
+        },
+        {
+          "id": "sseit_12",
+          "text": "When I experience a positive emotion, I know how to make it last"
+        },
+        {
+          "id": "sseit_13",
+          "text": "I arrange events others enjoy"
+        },
+        {
+          "id": "sseit_14",
+          "text": "I seek out activities that make me happy"
+        },
+        {
+          "id": "sseit_15",
+          "text": "I am aware of the non-verbal messages I send to others"
+        },
+        {
+          "id": "sseit_16",
+          "text": "I present myself in a way that makes a good impression on others"
+        },
+        {
+          "id": "sseit_17",
+          "text": "When I am in a positive mood, solving problems is easy for me"
+        },
+        {
+          "id": "sseit_18",
+          "text": "By looking at their facial expressions, I recognize the emotions people are experiencing"
+        },
+        {
+          "id": "sseit_19",
+          "text": "I know why my emotions change"
+        },
+        {
+          "id": "sseit_20",
+          "text": "When I am in a positive mood, I am able to come up with new ideas"
+        },
+        {
+          "id": "sseit_21",
+          "text": "I have control over my emotions"
+        },
+        {
+          "id": "sseit_22",
+          "text": "I easily recognize my emotions as I experience them"
+        },
+        {
+          "id": "sseit_23",
+          "text": "I motivate myself by imagining a good outcome to tasks I take on"
+        },
+        {
+          "id": "sseit_24",
+          "text": "I compliment others when they have done something well"
+        },
+        {
+          "id": "sseit_25",
+          "text": "I am aware of the non-verbal messages other people send"
+        },
+        {
+          "id": "sseit_26",
+          "text": "When another person tells me about an important event in his or her life, I almost feel as though I have experienced this event myself"
+        },
+        {
+          "id": "sseit_27",
+          "text": "When I feel a change in emotions, I tend to come up with new ideas"
+        },
+        {
+          "id": "sseit_28",
+          "text": "When I am faced with a challenge, I give up because I believe I will fail",
+          "reverse": true
+        },
+        {
+          "id": "sseit_29",
+          "text": "I know what other people are feeling just by looking at them"
+        },
+        {
+          "id": "sseit_30",
+          "text": "I help other people feel better when they are down"
+        },
+        {
+          "id": "sseit_31",
+          "text": "I use good moods to help myself keep trying in the face of obstacles"
+        },
+        {
+          "id": "sseit_32",
+          "text": "I can tell how people are feeling by listening to the tone of their voice"
+        },
+        {
+          "id": "sseit_33",
+          "text": "It is difficult for me to understand why people feel the way they do",
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  }
+}

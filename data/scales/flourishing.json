@@ -1,0 +1,83 @@
+{
+  "id": "flourishing",
+  "name": "Flourishing Scale (FS)",
+  "directions": "Indicate your agreement with each statement.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Disagree"
+    },
+    {
+      "v": 3,
+      "label": "Slightly disagree"
+    },
+    {
+      "v": 4,
+      "label": "Mixed or neither agree nor disagree"
+    },
+    {
+      "v": 5,
+      "label": "Slightly agree"
+    },
+    {
+      "v": 6,
+      "label": "Agree"
+    },
+    {
+      "v": 7,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Flourishing Scale",
+      "questions": [
+        {
+          "id": "flourishing_1",
+          "text": "I lead a purposeful and meaningful life."
+        },
+        {
+          "id": "flourishing_2",
+          "text": "My social relationships are supportive and rewarding."
+        },
+        {
+          "id": "flourishing_3",
+          "text": "I am engaged and interested in my daily activities."
+        },
+        {
+          "id": "flourishing_4",
+          "text": "I actively contribute to the happiness and well-being of others."
+        },
+        {
+          "id": "flourishing_5",
+          "text": "I am competent and capable in the activities that are important to me."
+        },
+        {
+          "id": "flourishing_6",
+          "text": "I am a good person and live a good life."
+        },
+        {
+          "id": "flourishing_7",
+          "text": "I am optimistic about my future."
+        },
+        {
+          "id": "flourishing_8",
+          "text": "People respect me."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  }
+}

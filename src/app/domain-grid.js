@@ -18,7 +18,17 @@ function renderDomainGrid() {
         cb.checked = state.selectedDomains.has(domain.id);
         const ids = [...new Set(domain.questions.map(q => q.scaleId).filter(Boolean))];
         const choices = document.createElement('label');
-        const hasChoices = ids.length + Number(Boolean(domain.baseInstrument)) > 1;
+        const forms = (domain.forms || []).filter(id =>
+            CLINICAL_DATA.scales[id].ageGroups.includes(state.context.ageGroup));
+        if (domain.defaultForm && !forms.length) {
+            state.selectedDomains.delete(domain.id);
+            state.scaleChoices.delete(domain.id);
+            return;
+        }
+        if (domain.forms?.includes(state.scaleChoices.get(domain.id)) && !forms.includes(state.scaleChoices.get(domain.id))) {
+            state.scaleChoices.delete(domain.id);
+        }
+        const hasChoices = ids.length + forms.length + Number(Boolean(domain.baseInstrument || domain.originalLabel)) > 1;
         if (hasChoices) {
             choices.className = 'scale-choice';
             choices.hidden = !cb.checked;
@@ -31,12 +41,14 @@ function renderDomainGrid() {
                 option.textContent = name;
                 select.append(option);
             };
+            if (domain.originalLabel) add('original', domain.originalLabel);
             if (domain.baseInstrument) add('base', domain.baseInstrument);
             for (const id of ids) {
                 const prefix = domain.baseInstrument ? domain.baseInstrument + ' + ' : '';
                 add(id, prefix + t('form.' + id, L(CLINICAL_DATA.scales[id].name)));
             }
             if (ids.length > 1) add('all', state.lang === 'hi' ? 'सभी प्रश्नावलियाँ' : 'All questionnaires');
+            for (const id of forms) add(id, L(CLINICAL_DATA.scales[id].name));
             select.value = state.scaleChoices.get(domain.id) || select.options[0].value;
             state.scaleChoices.set(domain.id, select.value);
             select.addEventListener('change', () => state.scaleChoices.set(domain.id, select.value));

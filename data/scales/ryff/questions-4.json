@@ -1,0 +1,128 @@
+[
+  {
+    "id": "r4_11",
+    "text": "I often feel like I'm on the outside looking in when it comes to friendships.",
+    "dimension": "Positive relations with others",
+    "reverse": true
+  },
+  {
+    "id": "r5_11",
+    "text": "I sometimes feel as if I've done all there is to do in life.",
+    "dimension": "Purpose in life",
+    "reverse": true
+  },
+  {
+    "id": "r6_11",
+    "text": "Many days I wake up feeling discouraged about how I have lived my life.",
+    "dimension": "Self-acceptance",
+    "reverse": true
+  },
+  {
+    "id": "r1_12",
+    "text": "I am not the kind of person who gives in to social pressures to think or act in certain ways.",
+    "dimension": "Autonomy",
+    "reverse": false
+  },
+  {
+    "id": "r2_12",
+    "text": "My efforts to find the kinds of activities and relationships that I need have been quite successful.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_12",
+    "text": "I enjoy seeing how my views have changed and matured over the years.",
+    "dimension": "Personal growth",
+    "reverse": false
+  },
+  {
+    "id": "r4_12",
+    "text": "I know that I can trust my friends, and they know they can trust me.",
+    "dimension": "Positive relations with others",
+    "reverse": false
+  },
+  {
+    "id": "r5_12",
+    "text": "My aims in life have been more a source of satisfaction than frustration to me.",
+    "dimension": "Purpose in life",
+    "reverse": false
+  },
+  {
+    "id": "r6_12",
+    "text": "The past had its ups and downs, but in general, I wouldn't want to change it.",
+    "dimension": "Self-acceptance",
+    "reverse": false
+  },
+  {
+    "id": "r1_13",
+    "text": "I am concerned about how other people evaluate the choices I have made in my life.",
+    "dimension": "Autonomy",
+    "reverse": true
+  },
+  {
+    "id": "r2_13",
+    "text": "I have difficulty arranging my life in a way that is satisfying to me.",
+    "dimension": "Environmental mastery",
+    "reverse": true
+  },
+  {
+    "id": "r3_13",
+    "text": "I gave up trying to make big improvements or changes in my life a long time ago.",
+    "dimension": "Personal growth",
+    "reverse": true
+  },
+  {
+    "id": "r4_13",
+    "text": "I find it difficult to really open up when I talk with others.",
+    "dimension": "Positive relations with others",
+    "reverse": true
+  },
+  {
+    "id": "r5_13",
+    "text": "I find it satisfying to think about what I have accomplished in life.",
+    "dimension": "Purpose in life",
+    "reverse": false
+  },
+  {
+    "id": "r6_13",
+    "text": "When I compare myself to friends and acquaintances, it makes me feel good about who I am.",
+    "dimension": "Self-acceptance",
+    "reverse": false
+  },
+  {
+    "id": "r1_14",
+    "text": "I judge myself by what I think is important, not by the values of what others think is important.",
+    "dimension": "Autonomy",
+    "reverse": false
+  },
+  {
+    "id": "r2_14",
+    "text": "I have been able to build a home and a lifestyle for myself that is much to my liking.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_14",
+    "text": "There is truth to the saying you can't teach an old dog new tricks.",
+    "dimension": "Personal growth",
+    "reverse": true
+  },
+  {
+    "id": "r4_14",
+    "text": "My friends and I sympathize with each other's problems.",
+    "dimension": "Positive relations with others",
+    "reverse": false
+  },
+  {
+    "id": "r5_14",
+    "text": "In the final analysis, I'm not so sure that my life adds up to much.",
+    "dimension": "Purpose in life",
+    "reverse": true
+  },
+  {
+    "id": "r6_14",
+    "text": "Everyone has their weaknesses, but I seem to have more than my share.",
+    "dimension": "Self-acceptance",
+    "reverse": true
+  }
+]

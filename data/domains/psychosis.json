@@ -18,5 +18,10 @@
     "psychosis_1",
     "psychosis_2",
     "psychosis_3"
-  ]
+  ],
+  "forms": [
+    "rgpts",
+    "asi"
+  ],
+  "originalLabel": "CAARMS"
 }

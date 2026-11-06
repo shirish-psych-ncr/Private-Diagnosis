@@ -22,5 +22,12 @@
     "anxiety_5",
     "anxiety_6",
     "anxiety_7"
-  ]
+  ],
+  "forms": [
+    "mcq30",
+    "spin",
+    "tcq",
+    "ius"
+  ],
+  "originalLabel": "GAD7"
 }

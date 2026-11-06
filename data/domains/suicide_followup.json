@@ -1,0 +1,12 @@
+{
+  "id": "suicide_followup",
+  "name": {
+    "en": "Suicide safety follow-up (with clinician)",
+    "hi": "आत्महत्या सुरक्षा की अनुवर्ती समीक्षा (चिकित्सक के साथ)"
+  },
+  "questions": [],
+  "forms": [
+    "cssrs"
+  ],
+  "defaultForm": "cssrs"
+}

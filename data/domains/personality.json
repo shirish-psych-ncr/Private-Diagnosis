@@ -63,5 +63,9 @@
       "scaleId": "hexaco_pi_r_observer",
       "disorders": []
     }
+  ],
+  "forms": [
+    "msibpd",
+    "ffoci_sf"
   ]
 }

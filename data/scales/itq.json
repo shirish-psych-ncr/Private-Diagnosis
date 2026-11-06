@@ -1,0 +1,143 @@
+{
+  "id": "itq",
+  "name": "International Trauma Questionnaire (ITQ)",
+  "directions": "Think of the experience that troubles you most. Answer in relation to that experience.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Not at all"
+    },
+    {
+      "v": 1,
+      "label": "A little bit"
+    },
+    {
+      "v": 2,
+      "label": "Moderately"
+    },
+    {
+      "v": 3,
+      "label": "Quite a bit"
+    },
+    {
+      "v": 4,
+      "label": "Extremely"
+    }
+  ],
+  "parts": [
+    {
+      "name": "In the past month, how much have you been bothered by these problems?",
+      "questions": [
+        {
+          "id": "p1",
+          "text": "Having upsetting dreams that replay part of the experience or are clearly related to the experience?"
+        },
+        {
+          "id": "p2",
+          "text": "Having powerful images or memories that sometimes come into your mind in which you feel the experience is happening again in the here and now?"
+        },
+        {
+          "id": "p3",
+          "text": "Avoiding internal reminders of the experience (for example, thoughts, feelings, or physical sensations)?"
+        },
+        {
+          "id": "p4",
+          "text": "Avoiding external reminders of the experience (for example, people, places, conversations, objects, activities, or situations)?"
+        },
+        {
+          "id": "p5",
+          "text": "Being “super-alert”, watchful, or on guard?"
+        },
+        {
+          "id": "p6",
+          "text": "Feeling jumpy or easily startled?"
+        }
+      ]
+    },
+    {
+      "name": "In the past month, have the above problems:",
+      "questions": [
+        {
+          "id": "p7",
+          "text": "Affected your relationships or social life?"
+        },
+        {
+          "id": "p8",
+          "text": "Affected your work or ability to work?"
+        },
+        {
+          "id": "p9",
+          "text": "Affected any other important part of your life such as parenting, or school or college work, or other important activities?"
+        }
+      ]
+    },
+    {
+      "name": "Think about how you typically feel, think about yourself and relate to others. How true is this of you?",
+      "questions": [
+        {
+          "id": "c1",
+          "text": "When I am upset, it takes me a long time to calm down."
+        },
+        {
+          "id": "c2",
+          "text": "I feel numb or emotionally shut down."
+        },
+        {
+          "id": "c3",
+          "text": "I feel like a failure."
+        },
+        {
+          "id": "c4",
+          "text": "I feel worthless."
+        },
+        {
+          "id": "c5",
+          "text": "I feel distant or cut off from people."
+        },
+        {
+          "id": "c6",
+          "text": "I find it hard to stay emotionally close to people."
+        }
+      ]
+    },
+    {
+      "name": "In the past month, have the above problems in emotions, in beliefs about yourself and in relationships:",
+      "questions": [
+        {
+          "id": "c7",
+          "text": "Created concern or distress about your relationships or social life?"
+        },
+        {
+          "id": "c8",
+          "text": "Affected your work or ability to work?"
+        },
+        {
+          "id": "c9",
+          "text": "Affected any other important parts of your life such as parenting, or school or college work, or other important activities?"
+        }
+      ]
+    }
+  ],
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "contextFields": [
+    {
+      "id": "experience",
+      "label": "Brief description of the experience (optional)"
+    },
+    {
+      "id": "timing",
+      "label": "When did it happen? (optional)",
+      "options": [
+        "Less than 6 months ago",
+        "6 to 12 months ago",
+        "1 to 5 years ago",
+        "5 to 10 years ago",
+        "10 to 20 years ago",
+        "More than 20 years ago"
+      ]
+    }
+  ]
+}

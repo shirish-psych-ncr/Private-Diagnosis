@@ -1,0 +1,311 @@
+{
+  "id": "ffoci_sf",
+  "name": "Five Factor Obsessive-Compulsive Inventory (FFOCI-SF)",
+  "directions": "Describe yourself honestly. Choose the response that best reflects your agreement.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Disagree"
+    },
+    {
+      "v": 3,
+      "label": "Neutral"
+    },
+    {
+      "v": 4,
+      "label": "Agree"
+    },
+    {
+      "v": 5,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Five Factor Obsessive-Compulsive Inventory (FFOCI-SF)",
+      "questions": [
+        {
+          "id": "ffoci_sf_1",
+          "text": "I often worry about the future."
+        },
+        {
+          "id": "ffoci_sf_2",
+          "text": "I am a warm and engaging person",
+          "reverse": true
+        },
+        {
+          "id": "ffoci_sf_3",
+          "text": "I love the excitement of making risky decisions.",
+          "reverse": true
+        },
+        {
+          "id": "ffoci_sf_4",
+          "text": "I am not a person who is into how people feel about things."
+        },
+        {
+          "id": "ffoci_sf_5",
+          "text": "My life is on such a schedule that others do find me a bit dull at times."
+        },
+        {
+          "id": "ffoci_sf_6",
+          "text": "I live my life by a set of tough, unyielding moral principles."
+        },
+        {
+          "id": "ffoci_sf_7",
+          "text": "I take great pride in the quality of my work."
+        },
+        {
+          "id": "ffoci_sf_8",
+          "text": "I need to consider every little detail."
+        },
+        {
+          "id": "ffoci_sf_9",
+          "text": "I firmly believe that you should always play strictly by the rules."
+        },
+        {
+          "id": "ffoci_sf_10",
+          "text": "I get so caught up in my work that I lose time for other things."
+        },
+        {
+          "id": "ffoci_sf_11",
+          "text": "I'm fanatical about getting things done when they need to be."
+        },
+        {
+          "id": "ffoci_sf_12",
+          "text": "No decision is too small for me not to think through all the consequences."
+        },
+        {
+          "id": "ffoci_sf_13",
+          "text": "I ruminate and worry over lots of different things."
+        },
+        {
+          "id": "ffoci_sf_14",
+          "text": "I enjoy getting to know people on a personal level.",
+          "reverse": true
+        },
+        {
+          "id": "ffoci_sf_15",
+          "text": "I much prefer playing it safe, even if miss out on something."
+        },
+        {
+          "id": "ffoci_sf_16",
+          "text": "I find it difficult to feel what other people are feeling."
+        },
+        {
+          "id": "ffoci_sf_17",
+          "text": "I like to keep to the \"tried and true\" rather than try new things."
+        },
+        {
+          "id": "ffoci_sf_18",
+          "text": "There is never an excuse for deviating from a moral code."
+        },
+        {
+          "id": "ffoci_sf_19",
+          "text": "I'm something of a perfectionist."
+        },
+        {
+          "id": "ffoci_sf_20",
+          "text": "Other people have said that I'm extremely detail oriented, almost to a fault."
+        },
+        {
+          "id": "ffoci_sf_21",
+          "text": "Following the rules is always important, even if I'm playing a game by myself."
+        },
+        {
+          "id": "ffoci_sf_22",
+          "text": "I am known as something of a \"workaholic.\""
+        },
+        {
+          "id": "ffoci_sf_23",
+          "text": "If I start something I work until it is complete."
+        },
+        {
+          "id": "ffoci_sf_24",
+          "text": "I examine every detail of an issue before coming to a decision."
+        },
+        {
+          "id": "ffoci_sf_25",
+          "text": "I am a worrier."
+        },
+        {
+          "id": "ffoci_sf_26",
+          "text": "I must admit that I am not a particularly warm person."
+        },
+        {
+          "id": "ffoci_sf_27",
+          "text": "I believe that safe and predictable beats exciting and dangerous every time."
+        },
+        {
+          "id": "ffoci_sf_28",
+          "text": "Strong emotions are not that important in my life."
+        },
+        {
+          "id": "ffoci_sf_29",
+          "text": "My life is pretty much the same every week, and that's how I like it."
+        },
+        {
+          "id": "ffoci_sf_30",
+          "text": "Permissiveness is essentially a break down in morality."
+        },
+        {
+          "id": "ffoci_sf_31",
+          "text": "I take great pride in being efficient and effective."
+        },
+        {
+          "id": "ffoci_sf_32",
+          "text": "I probably spend more time than is needed organizing and ordering things."
+        },
+        {
+          "id": "ffoci_sf_33",
+          "text": "People often suggest I take my responsibilities too seriously."
+        },
+        {
+          "id": "ffoci_sf_34",
+          "text": "I don't regret working real hard because, for me, work is my pleasure."
+        },
+        {
+          "id": "ffoci_sf_35",
+          "text": "I have an extremely strong sense of self-discipline."
+        },
+        {
+          "id": "ffoci_sf_36",
+          "text": "I like to be really sure about things before I act."
+        },
+        {
+          "id": "ffoci_sf_37",
+          "text": "I am often concerned, even nervous, about things going wrong."
+        },
+        {
+          "id": "ffoci_sf_38",
+          "text": "Warmth and intimacy are not my strengths."
+        },
+        {
+          "id": "ffoci_sf_39",
+          "text": "My way of life might be dull to others, but at least it is safe and secure."
+        },
+        {
+          "id": "ffoci_sf_40",
+          "text": "I don't experience a particularly wide range of emotions or feelings."
+        },
+        {
+          "id": "ffoci_sf_41",
+          "text": "I much prefer predictability than exploring the unknown."
+        },
+        {
+          "id": "ffoci_sf_42",
+          "text": "I don't believe in excuses for violating an ethical, moral code."
+        },
+        {
+          "id": "ffoci_sf_43",
+          "text": "I like my work to be flawless and unblemished."
+        },
+        {
+          "id": "ffoci_sf_44",
+          "text": "I always make sure that my work is very well planned and organized."
+        },
+        {
+          "id": "ffoci_sf_45",
+          "text": "Some persons suggest I can be excessive in my emphasis on being proper and moral"
+        },
+        {
+          "id": "ffoci_sf_46",
+          "text": "While others are playing, I'm getting ahead."
+        },
+        {
+          "id": "ffoci_sf_47",
+          "text": "I am to the maximum dogged, determined, and disciplined."
+        },
+        {
+          "id": "ffoci_sf_48",
+          "text": "I think things over and over and over before I make a decision."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Excessive worry": [
+        1,
+        13,
+        25,
+        37
+      ],
+      "Detached coldness": [
+        2,
+        14,
+        26,
+        38
+      ],
+      "Risk aversion": [
+        3,
+        15,
+        27,
+        39
+      ],
+      "Constricted": [
+        4,
+        16,
+        28,
+        40
+      ],
+      "Inflexible": [
+        5,
+        17,
+        29,
+        41
+      ],
+      "Dogmatism": [
+        6,
+        18,
+        30,
+        42
+      ],
+      "Perfectionism": [
+        7,
+        19,
+        31,
+        43
+      ],
+      "Fastidiousness": [
+        8,
+        20,
+        32,
+        44
+      ],
+      "Punctiliousness": [
+        9,
+        21,
+        33,
+        45
+      ],
+      "Workaholism": [
+        10,
+        22,
+        34,
+        46
+      ],
+      "Doggedness": [
+        11,
+        23,
+        35,
+        47
+      ],
+      "Ruminative deliberation": [
+        12,
+        24,
+        36,
+        48
+      ]
+    },
+    "multiplier": 1
+  }
+}

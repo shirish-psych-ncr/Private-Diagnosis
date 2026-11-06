@@ -1,0 +1,183 @@
+{
+  "id": "ius",
+  "name": "Intolerance of Uncertainty Scale (IUS-27)",
+  "directions": "How characteristic of you is each statement?",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "1 · Not at all characteristic"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3 · Somewhat characteristic"
+    },
+    {
+      "v": 4,
+      "label": "4"
+    },
+    {
+      "v": 5,
+      "label": "5 · Entirely characteristic"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Intolerance of Uncertainty Scale (IUS-27)",
+      "questions": [
+        {
+          "id": "ius_1",
+          "text": "Uncertainty stops me from having a firm opinion."
+        },
+        {
+          "id": "ius_2",
+          "text": "Being uncertain means that a person is disorganized."
+        },
+        {
+          "id": "ius_3",
+          "text": "Uncertainty makes life intolerable."
+        },
+        {
+          "id": "ius_4",
+          "text": "It's unfair not having any guarantees in life."
+        },
+        {
+          "id": "ius_5",
+          "text": "My mind can't be relaxed if I don't know what will happen tomorrow."
+        },
+        {
+          "id": "ius_6",
+          "text": "Uncertainty makes me uneasy, anxious, or stressed."
+        },
+        {
+          "id": "ius_7",
+          "text": "Unforeseen events upset me greatly."
+        },
+        {
+          "id": "ius_8",
+          "text": "It frustrates me not having all the information  need."
+        },
+        {
+          "id": "ius_9",
+          "text": "Uncertainty keeps me from living a full life."
+        },
+        {
+          "id": "ius_10",
+          "text": "One should always look ahead so as to avoid surprises."
+        },
+        {
+          "id": "ius_11",
+          "text": "A small unforeseen event can spoil everything, even with the best of planning."
+        },
+        {
+          "id": "ius_12",
+          "text": "When it's time to act, uncertainty paralyses me."
+        },
+        {
+          "id": "ius_13",
+          "text": "Being uncertain means that I am not first rate."
+        },
+        {
+          "id": "ius_14",
+          "text": "When I am uncertain, I can't go forward."
+        },
+        {
+          "id": "ius_15",
+          "text": "When I am uncertain I can't function very well."
+        },
+        {
+          "id": "ius_16",
+          "text": "Unlike me, others always seem to know where they are going with their lives."
+        },
+        {
+          "id": "ius_17",
+          "text": "Uncertainty makes me vulnerable, unhappy, or sad."
+        },
+        {
+          "id": "ius_18",
+          "text": "I always want to know what the future has in store for me."
+        },
+        {
+          "id": "ius_19",
+          "text": "I can't stand being taken by surprise."
+        },
+        {
+          "id": "ius_20",
+          "text": "The smallest doubt can stop me from acting."
+        },
+        {
+          "id": "ius_21",
+          "text": "I should be able to organize everything in advance."
+        },
+        {
+          "id": "ius_22",
+          "text": "Being uncertain means that I lack confidence."
+        },
+        {
+          "id": "ius_23",
+          "text": "I think it's unfair that other people seem sure about their future."
+        },
+        {
+          "id": "ius_24",
+          "text": "Uncertainty keeps me from sleeping soundly."
+        },
+        {
+          "id": "ius_25",
+          "text": "I must get away from all uncertain situations."
+        },
+        {
+          "id": "ius_26",
+          "text": "The ambiguities in life stress me."
+        },
+        {
+          "id": "ius_27",
+          "text": "I can't stand being undecided about my future."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Behaviour and self-perception": [
+        1,
+        2,
+        3,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20,
+        22,
+        23,
+        24,
+        25
+      ],
+      "Unfairness and disruption": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        18,
+        19,
+        21,
+        26,
+        27
+      ]
+    },
+    "multiplier": 1
+  }
+}

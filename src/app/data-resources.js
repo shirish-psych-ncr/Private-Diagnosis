@@ -1,8 +1,34 @@
-/** Resolve explicit JSON sections without changing question order or clinical values. */
+// Limit concurrent downloads on mobile connections and static hosts.
+const waiting = [];
+let active = 0;
+const maxDownloads = 8;
+
+async function download(file) {
+    if (active >= maxDownloads) await new Promise(resolve => waiting.push(resolve));
+    else active++;
+    try {
+        const response = await fetch(file, { cache: 'no-cache' });
+        if (!response.ok) {
+            const error = new Error(file + ': HTTP ' + response.status);
+            error.status = response.status;
+            throw error;
+        }
+        return await response.json();
+    } finally {
+        if (waiting.length) waiting.shift()();
+        else active--;
+    }
+}
+
 export async function fetchJSON(file) {
-    const response = await fetch(file, { cache: 'no-store' });
-    if (!response.ok) throw new Error(file + ': HTTP ' + response.status);
-    return response.json();
+    try {
+        return await download(file);
+    } catch (error) {
+        if (!(error instanceof TypeError || error.name === 'TypeError' ||
+              error.status === 408 || error.status === 429 || error.status >= 500)) throw error;
+        await new Promise(resolve => setTimeout(resolve, 500));
+        return download(file);
+    }
 }
 
 export async function loadResource(file, ancestors = []) {

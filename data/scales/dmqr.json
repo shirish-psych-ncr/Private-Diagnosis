@@ -1,0 +1,152 @@
+{
+  "id": "dmqr",
+  "name": "Drinking Motives Questionnaire – Revised (DMQ-R)",
+  "directions": "How often do you drink for each of these reasons?",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Almost never / never"
+    },
+    {
+      "v": 2,
+      "label": "Some of the time"
+    },
+    {
+      "v": 3,
+      "label": "Half of the time"
+    },
+    {
+      "v": 4,
+      "label": "Most of the time"
+    },
+    {
+      "v": 5,
+      "label": "Almost always / always"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Drinking Motives Questionnaire – Revised (DMQ-R)",
+      "questions": [
+        {
+          "id": "dmqr_1",
+          "text": "To forget your worries."
+        },
+        {
+          "id": "dmqr_2",
+          "text": "Because your friends pressure you to drink."
+        },
+        {
+          "id": "dmqr_3",
+          "text": "Because it helps you enjoy a party."
+        },
+        {
+          "id": "dmqr_4",
+          "text": "Because it helps you when you feel depressed or nervous."
+        },
+        {
+          "id": "dmqr_5",
+          "text": "To be sociable."
+        },
+        {
+          "id": "dmqr_6",
+          "text": "To cheer up when you are in a bad mood."
+        },
+        {
+          "id": "dmqr_7",
+          "text": "Because you like the feeling."
+        },
+        {
+          "id": "dmqr_8",
+          "text": "So that others won't kid you about not drinking."
+        },
+        {
+          "id": "dmqr_9",
+          "text": "Because it's exciting."
+        },
+        {
+          "id": "dmqr_10",
+          "text": "To get high."
+        },
+        {
+          "id": "dmqr_11",
+          "text": "Because it makes social gatherings more fun."
+        },
+        {
+          "id": "dmqr_12",
+          "text": "To fit in with a group you like."
+        },
+        {
+          "id": "dmqr_13",
+          "text": "Because it gives you a pleasant feeling."
+        },
+        {
+          "id": "dmqr_14",
+          "text": "Because it improves parties and celebrations."
+        },
+        {
+          "id": "dmqr_15",
+          "text": "Because you feel more self-confident and sure of yourself."
+        },
+        {
+          "id": "dmqr_16",
+          "text": "To celebrate a special occasion with friends."
+        },
+        {
+          "id": "dmqr_17",
+          "text": "To forget about your problems."
+        },
+        {
+          "id": "dmqr_18",
+          "text": "Because it's fun."
+        },
+        {
+          "id": "dmqr_19",
+          "text": "To be liked."
+        },
+        {
+          "id": "dmqr_20",
+          "text": "So you won't feel left out."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": false,
+    "groups": {
+      "Social": [
+        3,
+        5,
+        11,
+        14,
+        16
+      ],
+      "Coping": [
+        1,
+        4,
+        6,
+        15,
+        17
+      ],
+      "Enhancement": [
+        7,
+        9,
+        10,
+        13,
+        18
+      ],
+      "Conformity": [
+        2,
+        8,
+        12,
+        19,
+        20
+      ]
+    },
+    "multiplier": 1
+  }
+}

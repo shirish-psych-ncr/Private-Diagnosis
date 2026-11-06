@@ -1,0 +1,20 @@
+{
+  "id": "wellbeing",
+  "name": {
+    "en": "Psychological well-being",
+    "hi": "मनोवैज्ञानिक कल्याण"
+  },
+  "questions": [],
+  "forms": [
+    "ryff",
+    "maas",
+    "ders",
+    "ees",
+    "sseit",
+    "aaq2",
+    "flourishing",
+    "vq",
+    "cfi"
+  ],
+  "defaultForm": "ryff"
+}

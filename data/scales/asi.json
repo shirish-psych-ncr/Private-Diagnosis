@@ -1,0 +1,147 @@
+{
+  "id": "asi",
+  "name": "Aberrant Salience Inventory (ASI)",
+  "directions": "Answer based on your lifetime experiences.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "No"
+    },
+    {
+      "v": 1,
+      "label": "Yes"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Aberrant Salience Inventory (ASI)",
+      "questions": [
+        {
+          "id": "asi_1",
+          "text": "Do certain trivial things ever suddenly seem especially important or significant to you?"
+        },
+        {
+          "id": "asi_2",
+          "text": "Do you sometimes feel like you are on the verge of something really big, but you're not sure what it is?"
+        },
+        {
+          "id": "asi_3",
+          "text": "Do your senses sometimes seem sharpened?"
+        },
+        {
+          "id": "asi_4",
+          "text": "Do you ever feel like you are rapidly approaching the height of your intellectual powers?"
+        },
+        {
+          "id": "asi_5",
+          "text": "Do you sometimes notice small details that you have not noticed before that seem important?"
+        },
+        {
+          "id": "asi_6",
+          "text": "Do you sometimes feel like it is important for you to figure something out, but you're not sure what it is?"
+        },
+        {
+          "id": "asi_7",
+          "text": "Do you ever go through periods where you feel especially religious or mystical?"
+        },
+        {
+          "id": "asi_8",
+          "text": "Do you ever have difficulty telling if you are thrilled, frightened, pained, or anxious?"
+        },
+        {
+          "id": "asi_9",
+          "text": "Do you ever go through periods of heightened awareness?"
+        },
+        {
+          "id": "asi_10",
+          "text": "Do you ever feel the need to make sense of seemingly random situations or occurrences?"
+        },
+        {
+          "id": "asi_11",
+          "text": "Do you sometimes feel like you are finding the missing piece to a puzzle?"
+        },
+        {
+          "id": "asi_12",
+          "text": "Do you sometimes feel that you can hear with a greater clarity?"
+        },
+        {
+          "id": "asi_13",
+          "text": "Do you sometimes feel like you are an especially spiritually evolved person?"
+        },
+        {
+          "id": "asi_14",
+          "text": "Do normally trivial observations sometimes take on an ominous significance?"
+        },
+        {
+          "id": "asi_15",
+          "text": "Do you go through periods in which songs sometimes seem to have an important meaning for your life?"
+        },
+        {
+          "id": "asi_16",
+          "text": "Do you sometimes attribute importance to objects which you normally would not?"
+        },
+        {
+          "id": "asi_17",
+          "text": "Do you sometimes feel like you are on the verge of figuring out something really big or important, but you aren't sure what it is?"
+        },
+        {
+          "id": "asi_18",
+          "text": "Has your sense of taste ever seemed more acute?"
+        },
+        {
+          "id": "asi_19",
+          "text": "Do you ever feel like the mysteries of the universe are revealing themselves to you?"
+        },
+        {
+          "id": "asi_20",
+          "text": "Do you go through periods in which you feel overstimulated by things or experiences that are normally manageable?"
+        },
+        {
+          "id": "asi_21",
+          "text": "Do you often become fascinated by the little things around you?"
+        },
+        {
+          "id": "asi_22",
+          "text": "Do your senses ever seem extremely strong or clear?"
+        },
+        {
+          "id": "asi_23",
+          "text": "Do you ever feel like a whole world is opening up to you?"
+        },
+        {
+          "id": "asi_24",
+          "text": "Do you ever feel that your boundaries between inner and outer sensations have been removed?"
+        },
+        {
+          "id": "asi_25",
+          "text": "Do you sometimes feel like the world is changing and you are searching for an explanation?"
+        },
+        {
+          "id": "asi_26",
+          "text": "Do you ever have a feeling of inexpressible urgency, and you are not sure what to do?"
+        },
+        {
+          "id": "asi_27",
+          "text": "Have you sometimes become interested in people, events, places, or ideas that normally would not make an impression on you?"
+        },
+        {
+          "id": "asi_28",
+          "text": "Do your thoughts and perceptions ever come faster than can be assimilated?"
+        },
+        {
+          "id": "asi_29",
+          "text": "Do you sometimes notice things that you haven't noticed before that take on a special significance?"
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  }
+}

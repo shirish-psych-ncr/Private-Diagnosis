@@ -7,3 +7,43 @@ body.high-contrast a,body.high-contrast .btn-secondary{text-decoration:underline
   .matrix-table .sticky-col{min-width:160px;max-width:200px;font-size:.8rem}
   .scale-section{padding:1rem}
 }
+
+.radio-row label, .matrix-answer {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: .35rem .6rem;
+    cursor: pointer;
+}
+.radio-row label { flex: 1; }
+.matrix-answer { justify-content: center; gap: .7rem; }
+.matrix-answer span { display: none; }
+.matrix-table .matrix-cell { padding: 0; }
+.radio-row:has(:checked), .matrix-answer:has(:checked) {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+    border-radius: .35rem;
+}
+.needs-answer { outline: 2px dashed currentColor; outline-offset: 2px; }
+
+@media screen and (max-width: 768px) {
+    .matrix-scroll { overflow: visible; border: 0; }
+    .matrix-table, .matrix-table tbody { display: block; min-width: 0; }
+    .matrix-table thead { display: none; }
+    .matrix-table tbody tr {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+        margin-bottom: 1.25rem;
+    }
+    .matrix-table tbody tr > th.sticky-col, .matrix-table .probe-cell {
+        position: static;
+        grid-column: 1 / -1;
+        min-width: 0;
+        max-width: none;
+        border-right: 0;
+        font-size: 1rem;
+    }
+    .matrix-answer { justify-content: flex-start; }
+    .matrix-answer span { display: inline; }
+    .matrix-cell .matrix-answer input { flex: none; margin: 0 .25rem; }
+}

@@ -1,0 +1,162 @@
+{
+  "id": "cfi",
+  "name": "Cognitive Flexibility Inventory (CFI)",
+  "directions": "Indicate how much you agree with each statement.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Disagree"
+    },
+    {
+      "v": 3,
+      "label": "Somewhat disagree"
+    },
+    {
+      "v": 4,
+      "label": "Neutral"
+    },
+    {
+      "v": 5,
+      "label": "Somewhat agree"
+    },
+    {
+      "v": 6,
+      "label": "Agree"
+    },
+    {
+      "v": 7,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Cognitive Flexibility Inventory (CFI)",
+      "questions": [
+        {
+          "id": "cfi_1",
+          "text": "I am good at “sizing up” situations."
+        },
+        {
+          "id": "cfi_2",
+          "text": "I have a hard time making decisions when faced with difficult situations.",
+          "reverse": true
+        },
+        {
+          "id": "cfi_3",
+          "text": "I consider multiple options before making a decision."
+        },
+        {
+          "id": "cfi_4",
+          "text": "When I encounter difficult situations, I feel like I am losing control.",
+          "reverse": true
+        },
+        {
+          "id": "cfi_5",
+          "text": "I like to look at difficult situations from many different angles."
+        },
+        {
+          "id": "cfi_6",
+          "text": "I seek additional information not immediately available before attributing causes to behaviour."
+        },
+        {
+          "id": "cfi_7",
+          "text": "When encountering difficult situations, I become so stressed that I cannot think of a way to resolve the situation.",
+          "reverse": true
+        },
+        {
+          "id": "cfi_8",
+          "text": "I try to think about things from another person's point of view."
+        },
+        {
+          "id": "cfi_9",
+          "text": "I find it troublesome that there are so many different ways to deal with difficult situations.",
+          "reverse": true
+        },
+        {
+          "id": "cfi_10",
+          "text": "I am good at putting myself in others’ shoes."
+        },
+        {
+          "id": "cfi_11",
+          "text": "When I encounter difficult situations, I just don't know what to do.",
+          "reverse": true
+        },
+        {
+          "id": "cfi_12",
+          "text": "It is important to look at difficult situations from many angles."
+        },
+        {
+          "id": "cfi_13",
+          "text": "When in difficult situations, I consider multiple options before deciding how to behave."
+        },
+        {
+          "id": "cfi_14",
+          "text": "I often look at a situation from different viewpoints."
+        },
+        {
+          "id": "cfi_15",
+          "text": "I am capable of overcoming the difficulties in life that I face."
+        },
+        {
+          "id": "cfi_16",
+          "text": "I consider all the available facts and information when attributing causes to behaviour."
+        },
+        {
+          "id": "cfi_17",
+          "text": "I feel I have no power to change things in difficult situations.",
+          "reverse": true
+        },
+        {
+          "id": "cfi_18",
+          "text": "When I encounter difficult situations, I stop and try to think of several ways to resolve it."
+        },
+        {
+          "id": "cfi_19",
+          "text": "I can think of more than one way to resolve a difficult situation I'm confronted with."
+        },
+        {
+          "id": "cfi_20",
+          "text": "I consider multiple options before responding to difficult situations."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Alternatives": [
+        1,
+        3,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "Control": [
+        2,
+        4,
+        7,
+        9,
+        11,
+        15,
+        17
+      ]
+    },
+    "multiplier": 1
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "id": "rgpts",
+  "name": "Revised Green et al. Paranoid Thoughts Scale (R-GPTS)",
+  "directions": "Think about the last month. Rate the extent of these feelings. Exclude experiences under the influence of drugs.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 · Not at all"
+    },
+    {
+      "v": 1,
+      "label": "1"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3"
+    },
+    {
+      "v": 4,
+      "label": "4 · Totally"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Revised Green et al. Paranoid Thoughts Scale (R-GPTS)",
+      "questions": [
+        {
+          "id": "rgpts_1",
+          "text": "I spent time thinking about friends gossiping about me."
+        },
+        {
+          "id": "rgpts_2",
+          "text": "I often heard people referring to me."
+        },
+        {
+          "id": "rgpts_3",
+          "text": "I have been upset by friends and colleagues judging me critically."
+        },
+        {
+          "id": "rgpts_4",
+          "text": "People definitely laughed at me behind my back."
+        },
+        {
+          "id": "rgpts_5",
+          "text": "I have been thinking a lot about people avoiding me."
+        },
+        {
+          "id": "rgpts_6",
+          "text": "People have been dropping hints for me."
+        },
+        {
+          "id": "rgpts_7",
+          "text": "I believed that certain people were not what they seemed."
+        },
+        {
+          "id": "rgpts_8",
+          "text": "People talking about me behind my back upset me."
+        },
+        {
+          "id": "rgpts_9",
+          "text": "Certain individuals have had it in for me."
+        },
+        {
+          "id": "rgpts_10",
+          "text": "People wanted me to feel threatened, so they stared at me."
+        },
+        {
+          "id": "rgpts_11",
+          "text": "I was certain people did things in order to annoy me."
+        },
+        {
+          "id": "rgpts_12",
+          "text": "I was convinced there was a conspiracy against me."
+        },
+        {
+          "id": "rgpts_13",
+          "text": "I was sure someone wanted to hurt me."
+        },
+        {
+          "id": "rgpts_14",
+          "text": "I couldn't stop thinking about people wanting to confuse me."
+        },
+        {
+          "id": "rgpts_15",
+          "text": "I was distressed by being persecuted."
+        },
+        {
+          "id": "rgpts_16",
+          "text": "It was difficult to stop thinking about people wanting to make me feel bad."
+        },
+        {
+          "id": "rgpts_17",
+          "text": "People have been hostile towards me on purpose."
+        },
+        {
+          "id": "rgpts_18",
+          "text": "I was angry that someone wanted to hurt me."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": false,
+    "groups": {
+      "Reference": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "Persecution": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "multiplier": 1
+  }
+}

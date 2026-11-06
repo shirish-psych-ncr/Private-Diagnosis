@@ -1,0 +1,128 @@
+[
+  {
+    "id": "r1_1",
+    "text": "Sometimes I change the way I act or think to be more like those around me.",
+    "dimension": "Autonomy",
+    "reverse": true
+  },
+  {
+    "id": "r2_1",
+    "text": "In general, I feel I am in charge of the situation in which I live.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_1",
+    "text": "I am not interested in activities that will expand my horizons.",
+    "dimension": "Personal growth",
+    "reverse": true
+  },
+  {
+    "id": "r4_1",
+    "text": "Most people see me as loving and affectionate.",
+    "dimension": "Positive relations with others",
+    "reverse": false
+  },
+  {
+    "id": "r5_1",
+    "text": "I feel good when I think of what I've done in the past and what I hope to do in the future.",
+    "dimension": "Purpose in life",
+    "reverse": false
+  },
+  {
+    "id": "r6_1",
+    "text": "When I look at the story of my life, I am pleased with how things have turned out.",
+    "dimension": "Self-acceptance",
+    "reverse": false
+  },
+  {
+    "id": "r1_2",
+    "text": "I am not afraid to voice my opinions, even when they are in opposition to the opinions of most people.",
+    "dimension": "Autonomy",
+    "reverse": false
+  },
+  {
+    "id": "r2_2",
+    "text": "The demands of everyday life often get me down.",
+    "dimension": "Environmental mastery",
+    "reverse": true
+  },
+  {
+    "id": "r3_2",
+    "text": "In general, I feel that I continue to learn more about myself as time goes by.",
+    "dimension": "Personal growth",
+    "reverse": false
+  },
+  {
+    "id": "r4_2",
+    "text": "Maintaining close relationships has been difficult and frustrating for me.",
+    "dimension": "Positive relations with others",
+    "reverse": true
+  },
+  {
+    "id": "r5_2",
+    "text": "I live life one day at a time and don't really think about the future.",
+    "dimension": "Purpose in life",
+    "reverse": true
+  },
+  {
+    "id": "r6_2",
+    "text": "In general, I feel confident and positive about myself.",
+    "dimension": "Self-acceptance",
+    "reverse": false
+  },
+  {
+    "id": "r1_3",
+    "text": "My decisions are not usually influenced by what everyone else is doing.",
+    "dimension": "Autonomy",
+    "reverse": false
+  },
+  {
+    "id": "r2_3",
+    "text": "I do not fit very well with the people and the community around me.",
+    "dimension": "Environmental mastery",
+    "reverse": true
+  },
+  {
+    "id": "r3_3",
+    "text": "I am the kind of person who likes to give new things a try.",
+    "dimension": "Personal growth",
+    "reverse": false
+  },
+  {
+    "id": "r4_3",
+    "text": "I often feel lonely because I have few close friends with whom to share my concerns.",
+    "dimension": "Positive relations with others",
+    "reverse": true
+  },
+  {
+    "id": "r5_3",
+    "text": "I tend to focus on the present, because the future nearly always brings me problems.",
+    "dimension": "Purpose in life",
+    "reverse": true
+  },
+  {
+    "id": "r6_3",
+    "text": "I feel like many of the people I know have gotten more out of life than I have.",
+    "dimension": "Self-acceptance",
+    "reverse": true
+  },
+  {
+    "id": "r1_4",
+    "text": "I tend to worry about what other people think of me.",
+    "dimension": "Autonomy",
+    "reverse": true
+  },
+  {
+    "id": "r2_4",
+    "text": "I am quite good at managing the many responsibilities of my daily life.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_4",
+    "text": "I don't want to try new ways of doing things--my life is fine the way it is.",
+    "dimension": "Personal growth",
+    "reverse": true
+  }
+]

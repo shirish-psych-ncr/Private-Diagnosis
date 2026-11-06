@@ -3,7 +3,7 @@ import { onAnswer } from './answers.js';
 import { state, CLINICAL_DATA } from './state.js';
 
 function optionsForQuestion(q) {
-    if (q.scale) return q.scale;
+    if (q.scale) return q.scale.map(option => ({ ...option, v: option.v ?? option.value }));
     // Normalise the shared-scale key so small OCR/typing slips in the data
     // (e.g. "yes_no" vs "yesno") cannot silently drop a question's options.
     const norm = String(q.sharedScale || '').toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -61,3 +61,4 @@ function renderDomainScreenIns(container, domain) {
 }
 
 export { optionsForQuestion, renderDomainScreenIns };
+

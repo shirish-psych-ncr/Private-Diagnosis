@@ -1,0 +1,203 @@
+{
+  "id": "tcq",
+  "name": "Thought Control Questionnaire (TCQ)",
+  "directions": "When you experience an unpleasant or unwanted thought, how often do you use each technique?",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Never"
+    },
+    {
+      "v": 2,
+      "label": "Sometimes"
+    },
+    {
+      "v": 3,
+      "label": "Often"
+    },
+    {
+      "v": 4,
+      "label": "Almost always"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Thought Control Questionnaire (TCQ)",
+      "questions": [
+        {
+          "id": "tcq_1",
+          "text": "I call to mind positive images instead"
+        },
+        {
+          "id": "tcq_2",
+          "text": "I tell myself not to be so stupid"
+        },
+        {
+          "id": "tcq_3",
+          "text": "I focus on the thought"
+        },
+        {
+          "id": "tcq_4",
+          "text": "I replace the thought with a more trivial bad thought"
+        },
+        {
+          "id": "tcq_5",
+          "text": "I don't talk about the thought to anyone",
+          "reverse": true
+        },
+        {
+          "id": "tcq_6",
+          "text": "I punish myself for thinking the thought"
+        },
+        {
+          "id": "tcq_7",
+          "text": "I dwell on other worries"
+        },
+        {
+          "id": "tcq_8",
+          "text": "I keep the thought to myself",
+          "reverse": true
+        },
+        {
+          "id": "tcq_9",
+          "text": "I occupy myself with work instead"
+        },
+        {
+          "id": "tcq_10",
+          "text": "I challenge the thought's validity"
+        },
+        {
+          "id": "tcq_11",
+          "text": "I get angry at myself for having the thought"
+        },
+        {
+          "id": "tcq_12",
+          "text": "I avoid discussing the thought",
+          "reverse": true
+        },
+        {
+          "id": "tcq_13",
+          "text": "I shout at myself for having the thought"
+        },
+        {
+          "id": "tcq_14",
+          "text": "I analyse the thought rationally"
+        },
+        {
+          "id": "tcq_15",
+          "text": "I slap or pinch myself to stop the thought"
+        },
+        {
+          "id": "tcq_16",
+          "text": "I think pleasant thoughts instead"
+        },
+        {
+          "id": "tcq_17",
+          "text": "I find out how my friends deal with these thoughts"
+        },
+        {
+          "id": "tcq_18",
+          "text": "I worry about more minor things instead"
+        },
+        {
+          "id": "tcq_19",
+          "text": "I do something that I enjoy"
+        },
+        {
+          "id": "tcq_20",
+          "text": "I try to reinterpret the thought"
+        },
+        {
+          "id": "tcq_21",
+          "text": "I think about something else"
+        },
+        {
+          "id": "tcq_22",
+          "text": "I think more about the more minor problems I have"
+        },
+        {
+          "id": "tcq_23",
+          "text": "I try a different way of thinking about it"
+        },
+        {
+          "id": "tcq_24",
+          "text": "I think about past worries instead"
+        },
+        {
+          "id": "tcq_25",
+          "text": "I ask my friends if they have similar thoughts"
+        },
+        {
+          "id": "tcq_26",
+          "text": "I focus on different negative thoughts"
+        },
+        {
+          "id": "tcq_27",
+          "text": "I question the reasons for having the thought"
+        },
+        {
+          "id": "tcq_28",
+          "text": "I tell myself that something bad will happen if I think the thought"
+        },
+        {
+          "id": "tcq_29",
+          "text": "I talk to a friend about the thought"
+        },
+        {
+          "id": "tcq_30",
+          "text": "I keep myself busy"
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Distraction": [
+        1,
+        9,
+        16,
+        19,
+        21,
+        30
+      ],
+      "Social control": [
+        5,
+        8,
+        12,
+        17,
+        25,
+        29
+      ],
+      "Worry": [
+        4,
+        7,
+        18,
+        22,
+        24,
+        26
+      ],
+      "Punishment": [
+        2,
+        6,
+        11,
+        13,
+        15,
+        28
+      ],
+      "Reappraisal": [
+        3,
+        10,
+        14,
+        20,
+        23,
+        27
+      ]
+    },
+    "multiplier": 1
+  }
+}

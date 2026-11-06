@@ -1,3 +1,4 @@
+import { scoreItemSums } from './scoring/item-sums.js';
 import { score as scoreDisability } from './scales/mini_disability.js';
 import { score as scoreCrossCutting } from './scales/mini_cross_cutting.js';
 import { scoreDomain } from './scoring/domain-registry.js';
@@ -16,6 +17,14 @@ import { scoreVadrs } from './scales/vadrs.js';
 import { deployedScreenInstruments } from './scoring/shared.js';
 import { selectedDomainForms, state, CLINICAL_DATA, setFlagSink } from './state.js';
 
+import { score as scoreUGDS } from './scales/ugds_gs.js';
+import { score as scoreITQ } from './scales/itq.js';
+import { score as scoreRyff } from './scales/ryff.js';
+import { score as scoreMAAS } from './scales/maas.js';
+import { score as scoreCSSRS } from './scales/cssrs.js';
+
+const directScorers = { ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS };
+
 function computeResults() {
     const instrumentResults = [];
     const flaggedDisorders = new Map(); // disorderKey -> {sources:Set, bestScore}
@@ -29,6 +38,15 @@ function computeResults() {
     setFlagSink(addFlag);
 
     selectedDomainForms().forEach(domain => {
+        if (domain.directForm) {
+            const values = domain.questions.map(q => state.responses[domain.id + ':' + q.id]);
+            if (values.every(Number.isFinite)) {
+                const form = CLINICAL_DATA.scales[domain.id];
+                const rows = form.sumScores ? scoreItemSums(values, form) : directScorers[domain.id](values, domain.questions);
+                instrumentResults.push(...rows);
+            }
+            return;
+        }
 
         // Deployed VADRS matrix (pediatric ADHD routing)
         if (domain.instrument === 'auto:adhd' && ['pediatric', 'adolescent'].includes(state.context.ageGroup)) {

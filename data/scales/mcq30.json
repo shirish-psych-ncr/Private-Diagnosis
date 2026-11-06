@@ -1,0 +1,200 @@
+{
+  "id": "mcq30",
+  "name": "Metacognitions Questionnaire (MCQ-30)",
+  "directions": "How much do you generally agree with each belief?",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Do not agree"
+    },
+    {
+      "v": 2,
+      "label": "Agree slightly"
+    },
+    {
+      "v": 3,
+      "label": "Agree moderately"
+    },
+    {
+      "v": 4,
+      "label": "Agree very much"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Metacognitions Questionnaire (MCQ-30)",
+      "questions": [
+        {
+          "id": "mcq30_1",
+          "text": "Worrying helps me to avoid problems in the future"
+        },
+        {
+          "id": "mcq30_2",
+          "text": "My worrying is dangerous for me"
+        },
+        {
+          "id": "mcq30_3",
+          "text": "I think a lot about my thoughts"
+        },
+        {
+          "id": "mcq30_4",
+          "text": "I could make myself sick with worrying"
+        },
+        {
+          "id": "mcq30_5",
+          "text": "I am aware of the way my mind works when I am thinking through a problem"
+        },
+        {
+          "id": "mcq30_6",
+          "text": "If I did not control a worrying thought, and then it happened, it would be my fault"
+        },
+        {
+          "id": "mcq30_7",
+          "text": "I need to worry in order to remain organized"
+        },
+        {
+          "id": "mcq30_8",
+          "text": "I have little confidence in my memory for words and names"
+        },
+        {
+          "id": "mcq30_9",
+          "text": "My worrying thoughts persist, no matter how I try to stop them"
+        },
+        {
+          "id": "mcq30_10",
+          "text": "Worrying helps me to get things sorted out in my mind"
+        },
+        {
+          "id": "mcq30_11",
+          "text": "I cannot ignore my worrying thoughts"
+        },
+        {
+          "id": "mcq30_12",
+          "text": "I monitor my thoughts"
+        },
+        {
+          "id": "mcq30_13",
+          "text": "I should be in control of my thoughts all of the time"
+        },
+        {
+          "id": "mcq30_14",
+          "text": "My memory can mislead me at times"
+        },
+        {
+          "id": "mcq30_15",
+          "text": "My worrying could make me go mad"
+        },
+        {
+          "id": "mcq30_16",
+          "text": "I am constantly aware of my thinking"
+        },
+        {
+          "id": "mcq30_17",
+          "text": "I have a poor memory"
+        },
+        {
+          "id": "mcq30_18",
+          "text": "I pay close attention to the way my mind works"
+        },
+        {
+          "id": "mcq30_19",
+          "text": "Worrying helps me cope"
+        },
+        {
+          "id": "mcq30_20",
+          "text": "Not being able to control my thoughts is a sign of weakness"
+        },
+        {
+          "id": "mcq30_21",
+          "text": "When I start worrying, I cannot stop"
+        },
+        {
+          "id": "mcq30_22",
+          "text": "I will be punished for not controlling certain thoughts"
+        },
+        {
+          "id": "mcq30_23",
+          "text": "Worrying helps me to solve problems"
+        },
+        {
+          "id": "mcq30_24",
+          "text": "I have little confidence in my memory for places"
+        },
+        {
+          "id": "mcq30_25",
+          "text": "It is bad to think certain thoughts"
+        },
+        {
+          "id": "mcq30_26",
+          "text": "I do not trust my memory"
+        },
+        {
+          "id": "mcq30_27",
+          "text": "If I could not control my thoughts, I would not be able to function"
+        },
+        {
+          "id": "mcq30_28",
+          "text": "I need to worry, in order to work well"
+        },
+        {
+          "id": "mcq30_29",
+          "text": "I have little confidence in my memory for actions"
+        },
+        {
+          "id": "mcq30_30",
+          "text": "I constantly examine my thoughts"
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Cognitive confidence": [
+        8,
+        14,
+        17,
+        24,
+        26,
+        29
+      ],
+      "Positive beliefs about worry": [
+        1,
+        7,
+        10,
+        19,
+        23,
+        28
+      ],
+      "Cognitive self-consciousness": [
+        3,
+        5,
+        12,
+        16,
+        18,
+        30
+      ],
+      "Uncontrollability and danger": [
+        2,
+        4,
+        9,
+        11,
+        15,
+        21
+      ],
+      "Need to control thoughts": [
+        6,
+        13,
+        20,
+        22,
+        25,
+        27
+      ]
+    },
+    "multiplier": 1
+  }
+}

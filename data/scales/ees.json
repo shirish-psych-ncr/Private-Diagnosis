@@ -1,0 +1,126 @@
+{
+  "id": "ees",
+  "name": "Emotional Expressivity Scale (EES)",
+  "directions": "Choose how true each statement is of you.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Never true"
+    },
+    {
+      "v": 2,
+      "label": "Rarely true"
+    },
+    {
+      "v": 3,
+      "label": "Occasionally true"
+    },
+    {
+      "v": 4,
+      "label": "Usually true"
+    },
+    {
+      "v": 5,
+      "label": "Almost always true"
+    },
+    {
+      "v": 6,
+      "label": "Always true"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Emotional Expressivity Scale",
+      "questions": [
+        {
+          "id": "ees_1",
+          "text": "I don't express my emotions to other people.",
+          "reverse": true
+        },
+        {
+          "id": "ees_2",
+          "text": "Even when I'm experiencing strong feelings, I don't express them outwardly.",
+          "reverse": true
+        },
+        {
+          "id": "ees_3",
+          "text": "Other people believe me to be very emotional."
+        },
+        {
+          "id": "ees_4",
+          "text": "People can \"read\" my emotions."
+        },
+        {
+          "id": "ees_5",
+          "text": "I keep my feelings to myself.",
+          "reverse": true
+        },
+        {
+          "id": "ees_6",
+          "text": "Other people aren't easily able to observe what I'm feeling.",
+          "reverse": true
+        },
+        {
+          "id": "ees_7",
+          "text": "I display my emotions to other people."
+        },
+        {
+          "id": "ees_8",
+          "text": "People think of me as an unemotional person.",
+          "reverse": true
+        },
+        {
+          "id": "ees_9",
+          "text": "I don't like to let other people see how I am feeling.",
+          "reverse": true
+        },
+        {
+          "id": "ees_10",
+          "text": "I can't hide the way I am feeling."
+        },
+        {
+          "id": "ees_11",
+          "text": "I am not very emotionally expressive.",
+          "reverse": true
+        },
+        {
+          "id": "ees_12",
+          "text": "I am often considered indifferent by others.",
+          "reverse": true
+        },
+        {
+          "id": "ees_13",
+          "text": "I am able to cry in front of other people."
+        },
+        {
+          "id": "ees_14",
+          "text": "Even if I am feeling very emotional, I don't let others see my feelings.",
+          "reverse": true
+        },
+        {
+          "id": "ees_15",
+          "text": "I think of myself as emotionally expressive."
+        },
+        {
+          "id": "ees_16",
+          "text": "The way I feel is different from how others think I feel.",
+          "reverse": true
+        },
+        {
+          "id": "ees_17",
+          "text": "I hold my feelings in.",
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  }
+}

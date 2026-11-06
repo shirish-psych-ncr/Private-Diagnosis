@@ -1,0 +1,48 @@
+{
+  "id": "ryff",
+  "name": "Ryff Scales of Psychological Well-Being (84 items)",
+  "directions": "Choose how strongly you agree or disagree with each statement.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Moderately disagree"
+    },
+    {
+      "v": 3,
+      "label": "Slightly disagree"
+    },
+    {
+      "v": 4,
+      "label": "Slightly agree"
+    },
+    {
+      "v": 5,
+      "label": "Moderately agree"
+    },
+    {
+      "v": 6,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Psychological well-being",
+      "questions": {
+        "$concat": [
+          "data/scales/ryff/questions-1.json",
+          "data/scales/ryff/questions-2.json",
+          "data/scales/ryff/questions-3.json",
+          "data/scales/ryff/questions-4.json"
+        ]
+      }
+    }
+  ],
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

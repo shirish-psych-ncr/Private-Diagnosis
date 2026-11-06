@@ -1,0 +1,106 @@
+{
+  "id": "vq",
+  "name": "Valuing Questionnaire (VQ)",
+  "directions": "How true was each statement during the past week, including today?",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 · Not at all true"
+    },
+    {
+      "v": 1,
+      "label": "1"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3"
+    },
+    {
+      "v": 4,
+      "label": "4"
+    },
+    {
+      "v": 5,
+      "label": "5"
+    },
+    {
+      "v": 6,
+      "label": "6 · Completely true"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Valuing Questionnaire",
+      "questions": [
+        {
+          "id": "vq_1",
+          "text": "I spent a lot of time thinking about the past or future, rather than being engaged in activities that mattered to me."
+        },
+        {
+          "id": "vq_2",
+          "text": "I was basically on “auto-pilot” most of the time."
+        },
+        {
+          "id": "vq_3",
+          "text": "I worked toward my goals even if I didn't feel motivated to."
+        },
+        {
+          "id": "vq_4",
+          "text": "I was proud about how I lived my life."
+        },
+        {
+          "id": "vq_5",
+          "text": "I made progress in the areas of my life I care most about."
+        },
+        {
+          "id": "vq_6",
+          "text": "Difficult thoughts, feelings or memories got in the way of what I really wanted to do."
+        },
+        {
+          "id": "vq_7",
+          "text": "I continued to get better at being the kind of person I want to be."
+        },
+        {
+          "id": "vq_8",
+          "text": "When things didn't go according to plan, I gave up easily."
+        },
+        {
+          "id": "vq_9",
+          "text": "I felt like I had a purpose in life."
+        },
+        {
+          "id": "vq_10",
+          "text": "It seemed like I was just ‘going through the motions’, rather than focusing on what was important to me."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": false,
+    "groups": {
+      "Progress": [
+        3,
+        4,
+        5,
+        7,
+        9
+      ],
+      "Obstruction": [
+        1,
+        2,
+        6,
+        8,
+        10
+      ]
+    },
+    "multiplier": 1
+  }
+}

@@ -59,7 +59,26 @@ function renderScales() {
         const help = document.createElement('p');
         help.className = 'scale-timeframe';
         help.textContent = L(domain.timeframe);
+        if (domain.directForm && state.lang === 'hi') help.textContent = 'यह प्रश्नावली अंग्रेज़ी में है। ' + help.textContent;
         section.appendChild(help);
+        for (const field of domain.contextFields || []) {
+            const group = document.createElement('div');
+            group.className = 'form-group';
+            const label = document.createElement('label');
+            const key = domain.id + ':' + field.id;
+            label.htmlFor = key;
+            label.textContent = field.label;
+            const control = document.createElement(field.options ? 'select' : 'textarea');
+            control.id = key;
+            if (field.options) {
+                control.add(new Option('Choose…', ''));
+                for (const option of field.options) control.add(new Option(option, option));
+            }
+            control.value = state.formContext[key] || '';
+            control.addEventListener('input', () => { state.formContext[key] = control.value; });
+            group.append(label, control);
+            section.appendChild(group);
+        }
 
         if (scaleId && CLINICAL_DATA.scales[scaleId]) {
             const scale = CLINICAL_DATA.scales[scaleId];
@@ -80,12 +99,22 @@ function renderScales() {
 /** Standard vertical radio list (PHQ-9 / GAD-7 / PCL-5 style items). */
 function renderList(section, domain) {
     domain.questions.filter(q => !q.scaleId).forEach((q, idx) => {
+        if (q.section) {
+            const heading = document.createElement('h4');
+            heading.textContent = L(q.section);
+            section.appendChild(heading);
+        }
         const fieldset = document.createElement('fieldset');
         fieldset.className = 'question-block' + (q.safety ? ' safety-item' : '');
         const legend = document.createElement('legend');
-        legend.textContent = (idx + 1) + '. ' + L(q.text);
+        legend.textContent = (q.itemNumber ?? idx + 1) + '. ' + L(q.text);
         legend.id = 'lbl-' + q.id;
         fieldset.appendChild(legend);
+        if (q.hint) {
+            const hint = document.createElement('p');
+            hint.textContent = q.hint;
+            fieldset.appendChild(hint);
+        }
         const opts = optionsForQuestion(q);
         opts.forEach(opt => {
             const key = domain.id + ':' + q.id;

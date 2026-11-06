@@ -1,6 +1,5 @@
 import { loadClinicalData } from './data.js';
 
-import { renderDomainGrid } from './domain-grid.js';
 import { bindStaticUI } from './events.js';
 import { applyLanguage } from './i18n.js';
 import { revealStage } from './navigation.js';
@@ -19,7 +18,7 @@ async function boot() {
     }
     bindStaticUI();
     applyLanguage(state.lang);
-    renderDomainGrid();
+
     // Only the consent stage is revealed on load. Stages 1-4 remain hidden
     // until their Continue controls validate and reveal them in sequence.
     revealStage(0);
@@ -30,10 +29,19 @@ function showError(err) {
     const div = document.createElement('div');
     div.className = 'load-error';
     div.setAttribute('role', 'alert');
-    div.textContent = (state.lang === 'hi')
-        ? 'डेटा लोड नहीं हो सका। कृपया इस पृष्ठ को HTTP(S) सर्वर (जैसे GitHub Pages) पर चलाएँ।'
-        : 'Could not load clinical data (data/). Please serve this page over HTTP(S), e.g. via GitHub Pages.';
-    document.getElementById('stage-0').after(div);
+    const localFile = location.protocol === 'file:';
+    div.textContent = localFile
+        ? 'Open the hosted screening site to load the questionnaires.'
+        : 'The questionnaires could not load. Check your connection and try again.';
+    if (!localFile) {
+        const retry = document.createElement('button');
+        retry.type = 'button';
+        retry.className = 'btn-primary';
+        retry.textContent = 'Try again';
+        retry.addEventListener('click', () => location.reload());
+        div.append(document.createElement('br'), retry);
+    }
+    document.getElementById('stage-0').replaceChildren(div);
     console.error('EPCSS bootstrap failure:', err);
 }
 

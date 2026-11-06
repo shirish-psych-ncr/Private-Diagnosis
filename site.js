@@ -35,6 +35,11 @@
                 var text = el.textContent.toLowerCase();
                 el.classList.toggle('search-hidden', q !== '' && text.indexOf(q) === -1);
             });
+            document.querySelectorAll('.measure-group').forEach(function (section) {
+                section.hidden = !section.querySelector('[data-searchable]:not(.search-hidden)');
+            });
+            var empty = document.getElementById('library-empty');
+            if (empty) empty.hidden = !!document.querySelector('[data-searchable]:not(.search-hidden)');
         });
     }
 

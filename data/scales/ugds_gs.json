@@ -1,0 +1,113 @@
+{
+  "id": "ugds_gs",
+  "name": "UGDS-GS",
+  "directions": "For each question, select the response that best describes how much you agree with each statement. Assigned sex means the sex you were assigned at birth. Affirmed gender is the gender you currently identify with.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Disagree completely"
+    },
+    {
+      "v": 2,
+      "label": "Disagree"
+    },
+    {
+      "v": 3,
+      "label": "Neither agree nor disagree"
+    },
+    {
+      "v": 4,
+      "label": "Agree"
+    },
+    {
+      "v": 5,
+      "label": "Agree completely"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Utrecht Gender Dysphoria Scale – Gender Spectrum",
+      "questions": [
+        {
+          "id": "u1",
+          "text": "I prefer to behave like my affirmed gender"
+        },
+        {
+          "id": "u2",
+          "text": "Every time someone treats me like my assigned sex I feel hurt."
+        },
+        {
+          "id": "u3",
+          "text": "It feels good to live as my affirmed gender."
+        },
+        {
+          "id": "u4",
+          "text": "I always want to be treated like my affirmed gender."
+        },
+        {
+          "id": "u5",
+          "text": "A life in my affirmed gender is more attractive for me than a life in my assigned sex."
+        },
+        {
+          "id": "u6",
+          "text": "I feel unhappy when I have to behave like my assigned sex."
+        },
+        {
+          "id": "u7",
+          "text": "It is uncomfortable to be sexual in my assigned sex."
+        },
+        {
+          "id": "u8",
+          "text": "Puberty felt like a betrayal."
+        },
+        {
+          "id": "u9",
+          "text": "Physical sexual development was stressful."
+        },
+        {
+          "id": "u10",
+          "text": "I wish I have been born as my affirmed gender."
+        },
+        {
+          "id": "u11",
+          "text": "The bodily functions of my assigned sex are distressing for me (I.e. erection, menstruation)."
+        },
+        {
+          "id": "u12",
+          "text": "My life would be meaningless if I would have to live as my assigned sex."
+        },
+        {
+          "id": "u13",
+          "text": "I feel hopeless if I have to stay in my assigned sex."
+        },
+        {
+          "id": "u14",
+          "text": "I feel unhappy when someone misgenders me."
+        },
+        {
+          "id": "u15",
+          "text": "I feel unhappy because I have the physical characteristics of my assigned sex."
+        },
+        {
+          "id": "u16",
+          "text": "I hate my birth assigned sex."
+        },
+        {
+          "id": "u17",
+          "text": "I feel uncomfortable behaving like my assigned sex."
+        },
+        {
+          "id": "u18",
+          "text": "It would be better not to live, than to live as my assigned sex.",
+          "safety": true,
+          "safetyMin": 4
+        }
+      ]
+    }
+  ],
+  "ageGroups": [
+    "adolescent",
+    "adult",
+    "older"
+  ]
+}

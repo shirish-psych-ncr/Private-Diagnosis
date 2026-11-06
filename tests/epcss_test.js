@@ -105,7 +105,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
     if (cb) { cb.checked = true; cb.dispatchEvent(new window.Event('change', { bubbles: true })); return true; }
     return false;
   };
-  pickDomain('mood'); pickDomain('anxiety');
+  pickDomain('sleep'); pickDomain('mood'); pickDomain('anxiety');
   document.getElementById('domains-next').click();
   await ready; await sleep(50);
   check('advanced to stage 3 (scales)', document.getElementById('stage-3').classList.contains('active'));
@@ -117,6 +117,8 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   const groups = {};
   allRadios.forEach(r => { (groups[r.name] = groups[r.name] || []).push(r); });
   Object.values(groups).forEach(list => { list[0].checked = true; list[0].dispatchEvent(new window.Event('change', { bubbles: true })); });
+  const sleepAnswer = document.querySelector('input[name="sleep:sleep_1"][value="0"]');
+  check('sleep answer has a numeric score and is selected', sleepAnswer?.checked);
   document.getElementById('scales-finish').click();
   await ready; await sleep(50);
   check('advanced to stage 4 (results)', document.getElementById('stage-4').classList.contains('active'));
@@ -296,6 +298,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   answerScale('phq15', () => 1);   // leave all 22 FAC22 items blank
   document.getElementById('scales-finish').click();
   await ready; await sleep(120);
+  check('finish focuses the first missing FAC22 answer', document.activeElement.name.startsWith('fac22_sr:'));
   check('incomplete FAC22-SR blocks results', !document.getElementById('stage-4').classList.contains('active'));
 
   document.querySelector('[data-back="2"]').click();

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "r4_4",
+    "text": "I enjoy personal and mutual conversations with family members or friends.",
+    "dimension": "Positive relations with others",
+    "reverse": false
+  },
+  {
+    "id": "r5_4",
+    "text": "I have a sense of direction and purpose in life.",
+    "dimension": "Purpose in life",
+    "reverse": false
+  },
+  {
+    "id": "r6_4",
+    "text": "Given the opportunity, there are many things about myself that I would change.",
+    "dimension": "Self-acceptance",
+    "reverse": true
+  },
+  {
+    "id": "r1_5",
+    "text": "Being happy with myself is more important to me than having others approve of me.",
+    "dimension": "Autonomy",
+    "reverse": false
+  },
+  {
+    "id": "r2_5",
+    "text": "I often feel overwhelmed by my responsibilities.",
+    "dimension": "Environmental mastery",
+    "reverse": true
+  },
+  {
+    "id": "r3_5",
+    "text": "I think it is important to have new experiences that challenge how you think about yourself and the world.",
+    "dimension": "Personal growth",
+    "reverse": false
+  },
+  {
+    "id": "r4_5",
+    "text": "It is important to me to be a good listener when close friends talk to me about their problems.",
+    "dimension": "Positive relations with others",
+    "reverse": false
+  },
+  {
+    "id": "r5_5",
+    "text": "My daily activities often seem trivial and unimportant to me.",
+    "dimension": "Purpose in life",
+    "reverse": true
+  },
+  {
+    "id": "r6_5",
+    "text": "I like most aspects of my personality.",
+    "dimension": "Self-acceptance",
+    "reverse": false
+  },
+  {
+    "id": "r1_6",
+    "text": "I tend to be influenced by people with strong opinions.",
+    "dimension": "Autonomy",
+    "reverse": true
+  },
+  {
+    "id": "r2_6",
+    "text": "If I were unhappy with my living situation, I would take effective steps to change it.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_6",
+    "text": "When I think about it, I haven't really improved much as a person over the years.",
+    "dimension": "Personal growth",
+    "reverse": true
+  },
+  {
+    "id": "r4_6",
+    "text": "I don't have many people who want to listen when I need to talk.",
+    "dimension": "Positive relations with others",
+    "reverse": true
+  },
+  {
+    "id": "r5_6",
+    "text": "I don't have a good sense of what it is I'm trying to accomplish in life.",
+    "dimension": "Purpose in life",
+    "reverse": true
+  },
+  {
+    "id": "r6_6",
+    "text": "I made some mistakes in the past, but I feel that all in all everything has worked out for the best.",
+    "dimension": "Self-acceptance",
+    "reverse": false
+  },
+  {
+    "id": "r1_7",
+    "text": "People rarely talk me into doing things I don't want to do.",
+    "dimension": "Autonomy",
+    "reverse": false
+  },
+  {
+    "id": "r2_7",
+    "text": "I generally do a good job of taking care of my personal finances and affairs.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_7",
+    "text": "In my view, people of every age are able to continue growing and developing.",
+    "dimension": "Personal growth",
+    "reverse": false
+  },
+  {
+    "id": "r4_7",
+    "text": "I feel like I get a lot out of my friendships.",
+    "dimension": "Positive relations with others",
+    "reverse": false
+  },
+  {
+    "id": "r5_7",
+    "text": "I used to set goals for myself, but that now seems like a waste of time.",
+    "dimension": "Purpose in life",
+    "reverse": true
+  },
+  {
+    "id": "r6_7",
+    "text": "In many ways, I feel disappointed about my achievements in life.",
+    "dimension": "Self-acceptance",
+    "reverse": true
+  }
+]

@@ -40,5 +40,8 @@
         "gender_incongruence"
       ]
     }
+  ],
+  "forms": [
+    "ugds_gs"
   ]
 }

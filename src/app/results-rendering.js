@@ -16,7 +16,7 @@ function renderResults() {
     para.className = 'patient-summary';
     para.textContent = concernedAreas.length
         ? (state.lang === 'hi'
-            ? 'आपके उत्तरों में चिंता के क्षेत्र परिलक्षित होते हैं। कृपया इन निष्कर्षों को अपने चिकित्सक के साथ चर्चा करें। यह कोई रोग-निर्णय नहीं है।'
+            ? 'कुछ उत्तरों पर आगे बात करना मददगार हो सकता है। अपनी मुलाकात में इन पर चर्चा करें।'
             : 'Some answers may need follow-up. Discuss them with your clinician.')
         : (state.lang === 'hi'
             ? 'मुलाकात में अपनी चिंताओं पर बात करें, भले ही उनके बारे में यहाँ कोई प्रश्न न पूछा गया हो।'

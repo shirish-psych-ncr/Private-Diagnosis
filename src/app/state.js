@@ -10,6 +10,7 @@ const state = {
     selectedDomains: new Set(),
     scaleChoices: new Map(),
     responses: {},            // key: `${domainId}:${questionId}` or `vadrs:${id}` -> number
+    formContext: {},
     safetyFlags: [],          // [{ questionId, domainId }]
     results: null             // computed at finish
 };
@@ -29,7 +30,14 @@ export { state, CLINICAL_DATA, I18N, addFlagGlobal, setFlagSink, setClinicalData
 
 export function selectedDomainForms() {
     return CLINICAL_DATA.domains.filter(domain => state.selectedDomains.has(domain.id)).map(domain => {
-        const choice = state.scaleChoices.get(domain.id);
+        const choice = state.scaleChoices.get(domain.id) || domain.defaultForm;
+        if (domain.forms?.includes(choice)) {
+            const form = CLINICAL_DATA.scales[choice];
+            const questions = form.parts.flatMap(part => part.questions
+                .filter(q => !q.requires || state.responses[choice + ':' + q.requires] === 1)
+                .map((q, i) => ({ ...q, scale: form.matrixOptions, section: i === 0 ? part.name : null })));
+            return { id: choice, directForm: true, name: form.name, timeframe: form.directions, contextFields: form.contextFields, questions };
+        }
         if (!choice || choice === 'all') return domain;
         return { ...domain, questions: domain.questions.filter(q => !q.scaleId || q.scaleId === choice) };
     });

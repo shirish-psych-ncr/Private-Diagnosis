@@ -1,0 +1,128 @@
+[
+  {
+    "id": "r1_8",
+    "text": "It is more important to me to \"fit in\" with others than to stand alone on my principles.",
+    "dimension": "Autonomy",
+    "reverse": true
+  },
+  {
+    "id": "r2_8",
+    "text": "I find it stressful that I can't keep up with all of the things I have to do each day.",
+    "dimension": "Environmental mastery",
+    "reverse": true
+  },
+  {
+    "id": "r3_8",
+    "text": "With time, I have gained a lot of insight about life that has made me a stronger, more capable person.",
+    "dimension": "Personal growth",
+    "reverse": false
+  },
+  {
+    "id": "r4_8",
+    "text": "It seems to me that most other people have more friends than I do.",
+    "dimension": "Positive relations with others",
+    "reverse": true
+  },
+  {
+    "id": "r5_8",
+    "text": "I enjoy making plans for the future and working to make them a reality.",
+    "dimension": "Purpose in life",
+    "reverse": false
+  },
+  {
+    "id": "r6_8",
+    "text": "For the most part, I am proud of who I am and the life I lead.",
+    "dimension": "Self-acceptance",
+    "reverse": false
+  },
+  {
+    "id": "r1_9",
+    "text": "I have confidence in my opinions, even if they are contrary to the general consensus.",
+    "dimension": "Autonomy",
+    "reverse": false
+  },
+  {
+    "id": "r2_9",
+    "text": "I am good at juggling my time so that I can fit everything in that needs to get done.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_9",
+    "text": "I have the sense that I have developed a lot as a person over time.",
+    "dimension": "Personal growth",
+    "reverse": false
+  },
+  {
+    "id": "r4_9",
+    "text": "People would describe me as a giving person, willing to share my time with others.",
+    "dimension": "Positive relations with others",
+    "reverse": false
+  },
+  {
+    "id": "r5_9",
+    "text": "I am an active person in carrying out the plans I set for myself.",
+    "dimension": "Purpose in life",
+    "reverse": false
+  },
+  {
+    "id": "r6_9",
+    "text": "I envy many people for the lives they lead.",
+    "dimension": "Self-acceptance",
+    "reverse": true
+  },
+  {
+    "id": "r1_10",
+    "text": "It's difficult for me to voice my own opinions on controversial matters.",
+    "dimension": "Autonomy",
+    "reverse": true
+  },
+  {
+    "id": "r2_10",
+    "text": "My daily life is busy, but I derive a sense of satisfaction from keeping up with everything.",
+    "dimension": "Environmental mastery",
+    "reverse": false
+  },
+  {
+    "id": "r3_10",
+    "text": "I do not enjoy being in new situations that require me to change my old familiar ways of doing things.",
+    "dimension": "Personal growth",
+    "reverse": true
+  },
+  {
+    "id": "r4_10",
+    "text": "I have not experienced many warm and trusting relationships with others.",
+    "dimension": "Positive relations with others",
+    "reverse": true
+  },
+  {
+    "id": "r5_10",
+    "text": "Some people wander aimlessly through life, but I am not one of them.",
+    "dimension": "Purpose in life",
+    "reverse": false
+  },
+  {
+    "id": "r6_10",
+    "text": "My attitude about myself is probably not as positive as most people feel about themselves.",
+    "dimension": "Self-acceptance",
+    "reverse": true
+  },
+  {
+    "id": "r1_11",
+    "text": "I often change my mind about decisions if my friends or family disagree.",
+    "dimension": "Autonomy",
+    "reverse": true
+  },
+  {
+    "id": "r2_11",
+    "text": "I get frustrated when trying to plan my daily activities because I never accomplish the things I set out to do.",
+    "dimension": "Environmental mastery",
+    "reverse": true
+  },
+  {
+    "id": "r3_11",
+    "text": "For me, life has been a continuous process of learning, changing, and growth.",
+    "dimension": "Personal growth",
+    "reverse": false
+  }
+]

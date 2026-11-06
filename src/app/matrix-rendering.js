@@ -49,7 +49,6 @@ function renderMatrix(section, scale, scaleId) {
         wrap.className = 'matrix-scroll';
         const table = document.createElement('table');
         table.className = 'matrix-table';
-        table.setAttribute('role', 'grid');
         table.setAttribute('aria-label', L(scale.name) + ' — ' + L(part.name));
 
         const thead = document.createElement('tr');
@@ -65,7 +64,8 @@ function renderMatrix(section, scale, scaleId) {
             th.textContent = L(c.label);
             thead.appendChild(th);
         });
-        table.appendChild(thead);
+        table.createTHead().appendChild(thead);
+        const body = table.createTBody();
 
         part.questions.forEach((q, idx) => {
             // Non-scored single tick-box note printed on the form (e.g. the GCLS
@@ -94,7 +94,7 @@ function renderMatrix(section, scale, scaleId) {
                 label.textContent = state.lang === 'hi' ? 'लागू होता है (अंकित नहीं)' : 'Applies (not scored)';
                 td.append(input, label);
                 tr.appendChild(td);
-                table.appendChild(tr);
+                body.appendChild(tr);
                 return;
             }
             const tr = document.createElement('tr');
@@ -139,11 +139,15 @@ function renderMatrix(section, scale, scaleId) {
                 input.name = key;
                 input.value = c.v;
                 input.id = key + '_' + c.v;
-                input.setAttribute('aria-labelledby', 'mrow-' + q.id);
-                input.setAttribute('aria-label', L(q.text) + ': ' + L(c.label));
+                input.setAttribute('aria-label', L(q.itemName || q.text) + ' — ' + L(c.label));
                 if (state.responses[key] === c.v) input.checked = true;
                 input.addEventListener('change', () => onAnswer(key, c.v, { id: q.id, safety: !!q.safety }, { id: scaleId }));
-                td.appendChild(input);
+                const label = document.createElement('label');
+                label.className = 'matrix-answer';
+                const caption = document.createElement('span');
+                caption.textContent = L(c.label);
+                label.append(input, caption);
+                td.appendChild(label);
                 tr.appendChild(td);
             });
             if (q.probes && q.probes.length) {
@@ -164,7 +168,7 @@ function renderMatrix(section, scale, scaleId) {
                 td.append(cap, ul);
                 tr.appendChild(td);
             }
-            table.appendChild(tr);
+            body.appendChild(tr);
         });
         wrap.appendChild(table);
         section.appendChild(wrap);

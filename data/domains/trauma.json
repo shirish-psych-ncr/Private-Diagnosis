@@ -35,5 +35,9 @@
     "trauma_18",
     "trauma_19",
     "trauma_20"
-  ]
+  ],
+  "forms": [
+    "itq"
+  ],
+  "originalLabel": "PCL-5"
 }

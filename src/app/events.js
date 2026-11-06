@@ -1,4 +1,5 @@
-import { allAnswered } from './completion.js';
+import { renderDomainGrid } from './domain-grid.js';
+import { firstUnanswered } from './completion.js';
 import { applyLanguage } from './i18n.js';
 import { revealStage, continueTo } from './navigation.js';
 import { generatePDF } from './pdf.js';
@@ -63,6 +64,7 @@ function bindStaticUI() {
             state.context.reason = document.getElementById('visit-reason').value.trim();
             state.context.medications = document.getElementById('medications').value.trim();
             state.context.priorDiagnoses = document.getElementById('prior-diagnoses').value.trim();
+            renderDomainGrid();
             revealStage(2);
         });
     });
@@ -86,18 +88,25 @@ function bindStaticUI() {
     // Stage 3 -> 4 gate: every deployed item must be answered before results
     // are computed and revealed.
     const scalesError = document.getElementById('scales-error');
-    const validateScales = () => {
-        const ok = allAnswered();
-        scalesError.classList.toggle('hidden', ok);
-        return ok;
-    };
-    validateScales.alertEl = scalesError;
     document.getElementById('scales-finish').addEventListener('click', () => {
-        continueTo(validateScales, () => {
-            computeResults();
-            renderResults();
-            revealStage(4);
-        });
+        const missing = firstUnanswered();
+        if (missing) {
+            const input = document.getElementsByName(missing)[0];
+            scalesError.classList.remove('hidden');
+            if (input) {
+                const question = input.closest('fieldset, tr');
+                question.classList.add('needs-answer');
+                input.setAttribute('aria-describedby', scalesError.id);
+                input.focus({ preventScroll: true });
+                question.scrollIntoView?.({ block: 'center' });
+            } else {
+                scalesError.focus();
+            }
+            return;
+        }
+        computeResults();
+        renderResults();
+        revealStage(4);
     });
 
     document.getElementById('pdf-btn').addEventListener('click', generatePDF);

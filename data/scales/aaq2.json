@@ -1,0 +1,79 @@
+{
+  "id": "aaq2",
+  "name": "Acceptance and Action Questionnaire (AAQ-II)",
+  "directions": "Rate how true each statement is for you.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Never true"
+    },
+    {
+      "v": 2,
+      "label": "Very seldom true"
+    },
+    {
+      "v": 3,
+      "label": "Seldom true"
+    },
+    {
+      "v": 4,
+      "label": "Sometimes true"
+    },
+    {
+      "v": 5,
+      "label": "Frequently true"
+    },
+    {
+      "v": 6,
+      "label": "Almost always true"
+    },
+    {
+      "v": 7,
+      "label": "Always true"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Acceptance and Action Questionnaire",
+      "questions": [
+        {
+          "id": "aaq2_1",
+          "text": "My painful experiences and memories make it difficult for me to live a life that I would value."
+        },
+        {
+          "id": "aaq2_2",
+          "text": "I'm afraid of my feelings."
+        },
+        {
+          "id": "aaq2_3",
+          "text": "I worry about not being able to control my worries and feelings."
+        },
+        {
+          "id": "aaq2_4",
+          "text": "My painful memories prevent me from having a fulfilling life."
+        },
+        {
+          "id": "aaq2_5",
+          "text": "Emotions cause problems in my life."
+        },
+        {
+          "id": "aaq2_6",
+          "text": "It seems like most people are handling their lives better than I am."
+        },
+        {
+          "id": "aaq2_7",
+          "text": "Worries get in the way of my success."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  }
+}

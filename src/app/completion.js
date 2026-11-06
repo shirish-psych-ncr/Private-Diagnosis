@@ -1,17 +1,17 @@
 import { OPTIONAL_TABLE_ROUTES } from './routing.js';
 import { selectedDomainForms, state, CLINICAL_DATA } from './state.js';
 
-function allAnswered() {
+function firstUnanswered() {
     for (const domain of selectedDomainForms()) {
         if (domain.instrument === 'auto:adhd' && ['pediatric', 'adolescent'].includes(state.context.ageGroup)) {
             const vadrs = CLINICAL_DATA.scales.vadrs;
             for (const part of vadrs.parts)
                 for (const q of part.questions)
-                    if (state.responses['vadrs:' + q.id] === undefined) return false;
+                    if (state.responses['vadrs:' + q.id] === undefined) return 'vadrs:' + q.id;
             continue;
         }
         for (const q of domain.questions)
-            if (state.responses[domain.id + ':' + q.id] === undefined) return false;
+            if (state.responses[domain.id + ':' + q.id] === undefined) return domain.id + ':' + q.id;
 
         // Every optional instrument attached to a screen-in item of this domain
         // must be fully answered before results are shown — scoring a partially
@@ -28,13 +28,16 @@ function allAnswered() {
                     if (part.clinicianRated) continue;
                     for (const item of part.questions) {
                         if (item.nonScored) continue;   // optional clinical tick-box
-                        if (state.responses[s.id + ':' + item.id] === undefined) return false;
+                        if (state.responses[s.id + ':' + item.id] === undefined) return s.id + ':' + item.id;
                     }
                 }
             }
         }
     }
-    return true;
+    return null;
 }
 
-export { allAnswered };
+function allAnswered() { return firstUnanswered() === null; }
+
+export { allAnswered, firstUnanswered };
+
