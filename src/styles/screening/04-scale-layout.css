@@ -37,8 +37,7 @@ footer { background: #f0f4f8; padding: 1.5rem; text-align: center; color: #666; 
 
 @media print {
     #app { max-width: 100%; box-shadow: none; }
-    .stage { display: block !important; }
-    #stage-4 { display: block !important; }
+    .stage:not(.active), .action-buttons, .progress-bar, .header-controls { display: none !important; }
     .report-section { page-break-inside: avoid; border: 1px solid #ccc; }
     body { background: white; }
 }

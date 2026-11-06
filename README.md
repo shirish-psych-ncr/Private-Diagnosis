@@ -35,3 +35,5 @@ python tests/builders_test.py
 Deploy the root static assets together with the complete `src/` and `data/` directories. GitHub Pages or another static HTTP(S) host can serve them directly. Do not deploy only `app.js`: its imported modules and data files are required.
 
 The informational pages use `site.css` and `site.js`. The screening app uses `styles.css`, an ordered import list for `src/styles/screening/`. The separate legacy clinic effects have their own module entry point at `src/scripts/main.js`.
+
+For GitHub Free, use a public repository. Under **Settings → Pages**, choose **GitHub Actions**. Push to main or run **Publish screening site** manually. The workflow publishes the static pages, native modules, styles, questionnaire data and local PDF libraries. No API keys or server setup are needed.

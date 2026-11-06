@@ -14,7 +14,7 @@ import { scorePhq15 } from './scales/phq15.js';
 import { scoreStaxi } from './scales/staxi_ca.js';
 import { scoreVadrs } from './scales/vadrs.js';
 import { deployedScreenInstruments } from './scoring/shared.js';
-import { state, CLINICAL_DATA, setFlagSink } from './state.js';
+import { selectedDomainForms, state, CLINICAL_DATA, setFlagSink } from './state.js';
 
 function computeResults() {
     const instrumentResults = [];
@@ -28,8 +28,7 @@ function computeResults() {
     // Standalone scorers (MID-60 / DES-II) raise flags through this sink.
     setFlagSink(addFlag);
 
-    CLINICAL_DATA.domains.forEach(domain => {
-        if (!state.selectedDomains.has(domain.id)) return;
+    selectedDomainForms().forEach(domain => {
 
         // Deployed VADRS matrix (pediatric ADHD routing)
         if (domain.instrument === 'auto:adhd' && ['pediatric', 'adolescent'].includes(state.context.ageGroup)) {
@@ -71,8 +70,7 @@ function computeResults() {
         // report severity, never a diagnosis - but a positive screen-in item
         // still flags the impulse-control categories.
         if (domain.instrument === 'auto:angertable') {
-            if ((state.responses[domain.id + ':ang_1'] || 0) >= 1 ||
-                (state.responses[domain.id + ':ang_2'] || 0) >= 1) {
+            if (domain.questions.some(q => (state.responses[domain.id + ':' + q.id] || 0) >= 1)) {
                 (domain.questions[0].disorders || []).forEach(d => addFlag(d, 'Anger screen'));
             }
             deployedScreenInstruments(domain, s => !!s.sumScoring).forEach(({ scale }) => {

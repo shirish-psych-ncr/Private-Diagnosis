@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+          content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Privacy — EPCSS</title>
     <meta name="description" content="EPCSS privacy policy: zero-collection, zero-transmission, zero-persistence by architecture.">
     <link rel="stylesheet" href="site.css">
@@ -30,25 +30,18 @@
 
     <main id="main" class="page">
         <h1>Privacy Policy</h1>
-        <p class="lede">EPCSS has no personal data to protect because it never collects any. Privacy here is an architectural property, not a promise.</p>
+        <p class="lede">Your screening answers stay in this browser tab.</p>
 
         <label for="page-search">Search topics on this page</label>
         <input id="page-search" type="search" autocomplete="off">
 
         <ul class="topic-list">
-            <li data-searchable><strong>Zero collection</strong> We do not ask for your name, contact details, government ID, location, or any identifying information. The screening collects only symptom responses and coarse context (age group, reason for visit).</li>
-            <li data-searchable><strong>Zero transmission</strong> There is no backend, no API, no analytics, and no telemetry. Your browser only ever downloads static files. A strict Content Security Policy (<code>connect-src 'self'</code>) blocks any cross-origin data requests.</li>
-            <li data-searchable><strong>Zero persistence</strong> Responses live in volatile memory only. localStorage, sessionStorage, cookies, IndexedDB, and service workers are not used. Closing the tab destroys all clinical data irreversibly.</li>
-            <li data-searchable><strong>Your exports are yours</strong> The PDF report is generated entirely on your device. Where you save or share it is entirely your choice; we never see it.</li>
-            <li data-searchable><strong>No tracking</strong> No third-party scripts other than the vetted jsPDF CDN libraries used solely for offline-capable PDF generation, which receive no user data.</li>
-            <li data-searchable><strong>Data subject rights</strong> Because nothing is stored anywhere, there is nothing for us to access, correct, disclose, or delete. You can verify this with your browser's network panel.</li>
-            <li data-searchable><strong>Crisis resources</strong> Safety-related information shown by the app is static, localized text; contacting a helpline is done by you, directly, and is invisible to this application.</li>
-            <li data-searchable><strong>Changes</strong> Any change to this architecture would require a visible code change in the public repository, auditable via version control.</li>
+            <li data-searchable><strong>What you enter</strong> Age group is required. Keep names and contact details out of optional notes.</li>
+            <li data-searchable><strong>What the host sees</strong> GitHub Pages logs visitor IP addresses for security. The app sends no screening answers.</li>
+            <li data-searchable><strong>Clearing answers</strong> Refresh or close the tab to clear the session.</li>
+            <li data-searchable><strong>Saved reports</strong> A downloaded PDF stays on your device until you delete it. You choose who sees it.</li>
         </ul>
 
-        <div class="callout">
-            If you use a shared or public computer, close the tab after finishing your session to destroy all answers from memory.
-        </div>
 
         <div class="cta-row">
             <a class="btn-primary" href="index.html">Start screening</a>

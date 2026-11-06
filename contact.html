@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+          content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Contact — EPCSS</title>
     <meta name="description" content="How to reach the EPCSS maintainers and report vulnerabilities responsibly.">
     <link rel="stylesheet" href="site.css">
@@ -30,22 +30,17 @@
 
     <main id="main" class="page">
         <h1>Contact &amp; Disclosure</h1>
-        <p class="lede">This site intentionally hosts no contact forms (forms would imply a backend that does not exist). Reach us through these out-of-band channels instead.</p>
+        <p class="lede">Choose the right place for your question.</p>
 
         <label for="page-search">Search topics on this page</label>
         <input id="page-search" type="search" autocomplete="off">
 
         <ul class="topic-list">
-            <li data-searchable><strong>Repository issues</strong> For bugs, feature requests, and clinical-content corrections, open an issue in the project's public source repository. Every fix is reviewed as a version-controlled change.</li>
-            <li data-searchable><strong>Vulnerability disclosure</strong> Report security issues privately via the repository's security advisory channel. Please do not file them as public issues until a patch is available.</li>
-            <li data-searchable><strong>Clinical questions</strong> Scale selection, scoring bands, and differential mappings are documented in <code>WHITEPAPER.md</code>. Clinicians reviewing patient-exported PDFs should treat results as intake context only, never as diagnoses.</li>
-            <li data-searchable><strong>Not an emergency channel</strong> EPCSS staff cannot monitor any inbox in real time and this tool cannot call services for you. If you are in immediate danger or crisis, contact your local emergency number or a crisis helpline right now — the screening app lists localized options when safety items are endorsed.</li>
-            <li data-searchable><strong>Data requests</strong> There are none to fulfill: no user data is collected, transmitted, or stored anywhere by this application.</li>
+            <li data-searchable><strong>Screening results</strong> Discuss your answers with your clinician.</li>
+            <li data-searchable><strong>Website problems</strong> Report a technical problem in the <a href="https://github.com/shirish-psych-ncr/Private-Diagnosis/issues">project issue tracker</a>. Leave out personal and health details.</li>
+            <li data-searchable><strong>Urgent help</strong> If you are in immediate danger, contact local emergency services. This site cannot call for you.</li>
         </ul>
 
-        <div class="callout">
-            In crisis? Use the helplines shown inside the screening flow, or your country's emergency services. Do not wait for an email reply.
-        </div>
 
         <div class="cta-row">
             <a class="btn-primary" href="index.html">Start screening</a>

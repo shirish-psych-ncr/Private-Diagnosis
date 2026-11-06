@@ -15,6 +15,10 @@ function bindStaticUI() {
     document.getElementById('lang-en').addEventListener('click', () => applyLanguage('en'));
     document.getElementById('lang-hi').addEventListener('click', () => applyLanguage('hi'));
 
+    document.querySelectorAll('[data-back]').forEach(button => {
+        button.addEventListener('click', () => revealStage(Number(button.dataset.back)));
+    });
+
     const contrastBtn = document.getElementById('contrast-toggle');
     contrastBtn.addEventListener('click', () => {
         const on = document.body.classList.toggle('high-contrast');

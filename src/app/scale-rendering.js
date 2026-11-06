@@ -31,8 +31,6 @@ function renderScales() {
         // which scoring algorithm applies: keyed T/F screens such as FAC22-SR
         // are patient-completed even though they score like the IPDE/PDQ block.
         const isSelfReport = !!(scDef && scDef.administeredBy === 'self-report');
-        const isPdScreen = !!(scDef && scDef.keyedScoring);
-        const isSummed = !!(scDef && scDef.sumScoring);
         const section = document.createElement('section');
         section.className = 'scale-section' + (ratingTable
             ? (isSelfReport ? ' anger-rating-table' : ' clinician-rating-table')
@@ -47,15 +45,18 @@ function renderScales() {
         if (ratingTable) {
             const badge = document.createElement('span');
             badge.className = 'scale-admin-badge';
-            badge.textContent = isPdScreen || isSummed
-                ? (state.lang === 'hi' ? 'स्क्रीनिंग केवल — रोग-निर्णायक नहीं' : 'Screening only — not diagnostic')
-                : (state.lang === 'hi' ? 'चिकित्सक-रेटित' : 'Clinician-rated');
+            const roles = {
+                'self-report': { en: 'Self-report', hi: 'स्वयं भरें' },
+                'self-or-clinician': { en: 'Self or clinician', hi: 'स्वयं या चिकित्सक भरें' },
+                clinician: { en: 'Clinician-rated', hi: 'चिकित्सक भरें' },
+                informant: { en: 'Observer report', hi: 'पर्यवेक्षक भरें' }
+            };
+            badge.textContent = L(roles[scDef.administeredBy]);
             h.appendChild(document.createTextNode(' · '), badge);
         }
         section.appendChild(h);
 
         const help = document.createElement('p');
-        help.id = 'domains-help';
         help.className = 'scale-timeframe';
         help.textContent = L(domain.timeframe);
         section.appendChild(help);
@@ -78,7 +79,7 @@ function renderScales() {
 
 /** Standard vertical radio list (PHQ-9 / GAD-7 / PCL-5 style items). */
 function renderList(section, domain) {
-    domain.questions.forEach((q, idx) => {
+    domain.questions.filter(q => !q.scaleId).forEach((q, idx) => {
         const fieldset = document.createElement('fieldset');
         fieldset.className = 'question-block' + (q.safety ? ' safety-item' : '');
         const legend = document.createElement('legend');

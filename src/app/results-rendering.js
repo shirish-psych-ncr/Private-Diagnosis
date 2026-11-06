@@ -17,10 +17,10 @@ function renderResults() {
     para.textContent = concernedAreas.length
         ? (state.lang === 'hi'
             ? 'आपके उत्तरों में चिंता के क्षेत्र परिलक्षित होते हैं। कृपया इन निष्कर्षों को अपने चिकित्सक के साथ चर्चा करें। यह कोई रोग-निर्णय नहीं है।'
-            : 'Your responses indicate areas of concern that merit discussion. Please review these findings with your clinician. This screening does not constitute a diagnosis.')
+            : 'Some answers may need follow-up. Discuss them with your clinician.')
         : (state.lang === 'hi'
-            ? 'आपके उत्तर वर्तमान में कोई महत्वपूर्ण चिंता का संकेत नहीं देते हैं। फिर भी अपनी सामान्य देखभाल जारी रखें।'
-            : 'Your responses do not currently indicate significant areas of concern. Continue with your routine care.');
+            ? 'मुलाकात में अपनी चिंताओं पर बात करें, भले ही उनके बारे में यहाँ कोई प्रश्न न पूछा गया हो।'
+            : 'Bring up anything that concerns you at your visit, even if it was outside these questions.');
     pv.appendChild(para);
 
     if (r.safetyTriggered) {

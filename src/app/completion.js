@@ -1,9 +1,8 @@
 import { OPTIONAL_TABLE_ROUTES } from './routing.js';
-import { state, CLINICAL_DATA } from './state.js';
+import { selectedDomainForms, state, CLINICAL_DATA } from './state.js';
 
 function allAnswered() {
-    for (const domain of CLINICAL_DATA.domains) {
-        if (!state.selectedDomains.has(domain.id)) continue;
+    for (const domain of selectedDomainForms()) {
         if (domain.instrument === 'auto:adhd' && ['pediatric', 'adolescent'].includes(state.context.ageGroup)) {
             const vadrs = CLINICAL_DATA.scales.vadrs;
             for (const part of vadrs.parts)

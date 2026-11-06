@@ -16,13 +16,13 @@ function generatePDF() {
     doc.text('Pre-Consultation Clinical Screening Summary', 14, y); y += 8;
     doc.setFontSize(10);
     doc.setTextColor(120);
-    doc.text('Generated client-side by EPCSS. No PHI was transmitted or stored.', 14, y); y += 4;
+    doc.text('Prepared on this device for clinician review.', 14, y); y += 4;
     doc.text('Date: ' + new Date().toISOString().slice(0, 10) +
              '  |  Schema: ' + (CLINICAL_DATA.meta ? CLINICAL_DATA.meta.schemaVersion : 'n/a'), 14, y); y += 10;
 
     doc.setTextColor(0);
     doc.setFontSize(12);
-    doc.text('Patient Context (de-identified)', 14, y); y += 6;
+    doc.text('Visit details', 14, y); y += 6;
     doc.setFontSize(10);
     doc.text('Age group: ' + (state.context.ageGroup || '—'), 14, y); y += 5;
     doc.text('Reason for visit: ' + (state.context.reason || '—').substring(0, 180), 14, y); y += 5;

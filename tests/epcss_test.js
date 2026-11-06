@@ -225,6 +225,11 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
   await ready; await sleep(50);
   check('somatic domain present in grid', pickDomain('somatic'));
+  {
+    const choice = document.querySelector('input[value="somatic"]').closest('div').querySelector('select');
+    choice.value = 'all';
+    choice.dispatchEvent(new window.Event('change'));
+  }
   document.getElementById('domains-next').click();
   await ready; await sleep(50);
 
@@ -278,6 +283,11 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
   await ready; await sleep(50);
   check('somatic domain present in grid', pickDomain('somatic'));
+  {
+    const choice = document.querySelector('input[value="somatic"]').closest('div').querySelector('select');
+    choice.value = 'all';
+    choice.dispatchEvent(new window.Event('change'));
+  }
   document.getElementById('domains-next').click();
   await ready; await sleep(50);
   Array.from(document.querySelectorAll('#scale-container input[name^="somatic:"][value="1"]'))
@@ -287,6 +297,16 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   document.getElementById('scales-finish').click();
   await ready; await sleep(120);
   check('incomplete FAC22-SR blocks results', !document.getElementById('stage-4').classList.contains('active'));
+
+  document.querySelector('[data-back="2"]').click();
+  const single = document.querySelector('input[value="somatic"]').closest('div').querySelector('select');
+  single.value = 'phq15';
+  single.dispatchEvent(new window.Event('change'));
+  document.getElementById('domains-next').click();
+  check('unselected FAC22 is hidden', !document.querySelector('input[name^="fac22_sr:"]'));
+  document.getElementById('scales-finish').click();
+  check('chosen PHQ-15 alone can finish', document.getElementById('stage-4').classList.contains('active'));
+  check('report excludes unselected form', !/FAC22/i.test(document.getElementById('report-content').textContent));
 
   console.log('\n' + (failures === 0 ? 'ALL TESTS PASSED' : failures + ' FAILURES'));
   process.exit(failures === 0 ? 0 : 1);

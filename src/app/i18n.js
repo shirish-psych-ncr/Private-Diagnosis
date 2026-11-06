@@ -6,9 +6,9 @@ import { state, I18N } from './state.js';
 /* ------------------------------------------------------------------ *
  * 3. i18n HELPERS
  * ------------------------------------------------------------------ */
-function t(key) {
+function t(key, fallback = key) {
     const dict = I18N[state.lang] || I18N.en || {};
-    return dict[key] !== undefined ? dict[key] : (I18N.en && I18N.en[key]) || key;
+    return dict[key] !== undefined ? dict[key] : (I18N.en && I18N.en[key]) || fallback;
 }
 
 /** Resolve a bilingual {en,hi} object or plain string. */
