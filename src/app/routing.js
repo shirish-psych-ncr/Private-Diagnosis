@@ -1,4 +1,4 @@
-import { selectedDomainForms, state } from './state.js';
+import { selectedDomainForms, selectedFormsForDomain, state } from './state.js';
 
 /* ------------------------------------------------------------------ *
  * 6. STAGE 3 — ADAPTIVE INSTRUMENT DEPLOYMENT (routing engine)
@@ -32,11 +32,19 @@ function routeInstruments() {
             }
             // Several prompts can refer to the same questionnaire.
             domain.questions.forEach(q => {
+                if (!selectedFormsForDomain(domain).includes(q.scaleId)) return;
                 if (!q.scaleId || deployed.some(entry => entry.domain === domain && entry.scaleId === q.scaleId)) return;
                 deployed.push({ domain, scaleId: q.scaleId, instrumentLabel: null, ratingTable: true });
             });
         } else {
-            deployed.push({ domain, scaleId: null, instrumentLabel: instName });
+            const chosen = domain.selectedForms || [];
+            if (chosen.length && (domain.forms || []).length) {
+                chosen.filter(id => domain.forms.includes(id)).forEach(id => deployed.push({
+                    domain: { ...domain, id, directForm: true }, scaleId: id, instrumentLabel: null
+                }));
+                if (chosen.includes('base') || !chosen.some(id => domain.forms.includes(id)))
+                    deployed.push({ domain: { ...domain, questions: domain.questions.filter(q => !q.scaleId || chosen.includes(q.scaleId)) }, scaleId: null, instrumentLabel: instName });
+            } else deployed.push({ domain, scaleId: null, instrumentLabel: instName });
         }
     });
     return deployed;

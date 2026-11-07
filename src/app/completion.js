@@ -1,8 +1,15 @@
 import { OPTIONAL_TABLE_ROUTES } from './routing.js';
-import { selectedDomainForms, state, CLINICAL_DATA } from './state.js';
+import { selectedDomainForms, selectedFormsForDomain, state, CLINICAL_DATA } from './state.js';
 
 function firstUnanswered() {
     for (const domain of selectedDomainForms()) {
+        if (domain.forms?.length) {
+            for (const id of selectedFormsForDomain(domain).filter(id => domain.forms.includes(id))) {
+                const form = CLINICAL_DATA.scales[id];
+                for (const q of form.parts.flatMap(part => part.questions))
+                    if (state.responses[id + ':' + q.id] === undefined) return id + ':' + q.id;
+            }
+        }
         if (domain.instrument === 'auto:adhd' && ['pediatric', 'schoolage', 'adolescent'].includes(state.context.ageGroup)) {
             const vadrs = CLINICAL_DATA.scales.vadrs;
             for (const part of vadrs.parts)

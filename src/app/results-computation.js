@@ -15,7 +15,7 @@ import { scorePhq15 } from './scales/phq15.js';
 import { scoreStaxi } from './scales/staxi_ca.js';
 import { scoreVadrs } from './scales/vadrs.js';
 import { deployedScreenInstruments } from './scoring/shared.js';
-import { selectedDomainForms, state, CLINICAL_DATA, setFlagSink } from './state.js';
+import { selectedDomainForms, selectedFormsForDomain, state, CLINICAL_DATA, setFlagSink } from './state.js';
 
 import { score as scoreUGDS } from './scales/ugds_gs.js';
 import { score as scoreITQ } from './scales/itq.js';
@@ -85,6 +85,21 @@ function computeResults() {
     setFlagSink(addFlag);
 
     selectedDomainForms().forEach(domain => {
+        if (domain.forms?.length) {
+            selectedFormsForDomain(domain).filter(id => domain.forms.includes(id)).forEach(id => {
+                const form = CLINICAL_DATA.scales[id];
+                const questions = form.parts.flatMap(part => part.questions);
+                const values = questions.map(q => state.responses[id + ':' + q.id]);
+                if (!values.every(Number.isFinite)) return;
+                let rows;
+                if (directScorers[id]) rows = directScorers[id](values, questions, form);
+                else if (form.sumScores) rows = scoreItemSums(values, form);
+                else if (form.meanScores) rows = scoreMeans(values, form);
+                else return;
+                if (form.attribution) rows.forEach(row => { row.sourceNote = form.attribution; });
+                instrumentResults.push(...rows);
+            });
+        }
         if (domain.directForm) {
             const values = domain.questions.map(q => state.responses[domain.id + ':' + q.id]);
             if (values.every(Number.isFinite)) {

@@ -43,7 +43,16 @@ export function selectedDomainForms() {
                 .map((q, i) => ({ ...q, scale: q.scale ?? form.matrixOptions, section: i === 0 ? part.name : null })));
             return { id: choice, directForm: true, name: form.name, timeframe: form.directions, contextFields: form.contextFields, durationOptions: form.durationOptions, attribution: form.attribution, questions };
         }
+        if (Array.isArray(choice)) return { ...domain, selectedForms: choice, questions: domain.questions.filter(q => !q.scaleId || choice.includes(q.scaleId)) };
         if (!choice || choice === 'all') return domain;
         return { ...domain, questions: domain.questions.filter(q => !q.scaleId || q.scaleId === choice) };
     });
+}
+
+export function selectedFormsForDomain(domain) {
+    const choice = state.scaleChoices.get(domain.id);
+    if (Array.isArray(choice)) return choice.filter(id => id !== 'base');
+    if (domain.forms?.includes(choice)) return [choice];
+    if (choice === 'all') return [...new Set(domain.questions.map(q => q.scaleId).filter(Boolean))];
+    return domain.questions.map(q => q.scaleId).filter(id => id && (!choice || id === choice));
 }

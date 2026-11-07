@@ -112,7 +112,7 @@ function renderMatrix(section, scale, scaleId) {
             // precedence over the sequential index so answers can be transcribed
             // straight onto the paper scoring sheet.
             const shownNumber = q.itemNumber != null ? q.itemNumber : (idx + 1);
-            rowHead.textContent = shownNumber + '. ' +
+                rowHead.textContent = (q.__scaleName ? L(q.__scaleName) + ' · ' : '') + shownNumber + '. ' +
                 L(q.itemName || q.text);
             if (q.reverseScored) {
                 const rev = document.createElement('span');
@@ -171,7 +171,8 @@ function renderMatrix(section, scale, scaleId) {
             rowCols.forEach(c => {
                 const td = document.createElement('td');
                 td.className = 'matrix-cell';
-                const key = scaleId + ':' + q.id;
+                const responseScaleId = q.__scaleId || scaleId;
+                const key = responseScaleId + ':' + q.id;
                 const input = document.createElement('input');
                 input.type = 'radio';
                 input.name = key;
@@ -180,7 +181,7 @@ function renderMatrix(section, scale, scaleId) {
                 input.setAttribute('aria-label', L(q.itemName || q.text) + ' — ' + L(c.label));
                 if (state.responses[key] === c.v) input.checked = true;
                 input.addEventListener('change', () => onAnswer(key, c.v,
-                    { id: q.id, safety: !!q.safety, safetyMin: q.safetyMin }, { id: scaleId }));
+                    { id: q.id, safety: !!q.safety, safetyMin: q.safetyMin }, { id: responseScaleId }));
                 const label = document.createElement('label');
                 label.className = 'matrix-answer';
                 const caption = document.createElement('span');

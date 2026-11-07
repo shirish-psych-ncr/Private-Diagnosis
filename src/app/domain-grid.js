@@ -17,7 +17,7 @@ function renderDomainGrid() {
         cb.value = domain.id;
         cb.checked = state.selectedDomains.has(domain.id);
         const ids = [...new Set(domain.questions.map(q => q.scaleId).filter(Boolean))];
-        const choices = document.createElement('label');
+        const choices = document.createElement('div');
         const forms = (domain.forms || []).filter(id =>
             CLINICAL_DATA.scales[id].ageGroups.includes(state.context.ageGroup));
         if (domain.defaultForm && !forms.length) {
@@ -32,27 +32,36 @@ function renderDomainGrid() {
         if (hasChoices) {
             choices.className = 'scale-choice';
             choices.hidden = !cb.checked;
-            choices.append(state.lang === 'hi' ? 'प्रश्नावली' : 'Questionnaire');
-            const select = document.createElement('select');
-            select.setAttribute('aria-label', topic + (state.lang === 'hi' ? ' — प्रश्नावली' : ' questionnaire'));
-            const add = (value, name) => {
-                const option = document.createElement('option');
-                option.value = value;
-                option.textContent = name;
-                select.append(option);
-            };
-            if (domain.originalLabel) add('original', domain.originalLabel);
-            if (domain.baseInstrument) add('base', domain.baseInstrument);
+            const savedChoice = state.scaleChoices.get(domain.id);
+            const selected = new Set(Array.isArray(savedChoice)
+                ? savedChoice
+                : savedChoice === 'all' ? [...ids, ...forms]
+                    : [savedChoice].filter(Boolean));
+            const choicesLabel = document.createElement('span');
+            choicesLabel.textContent = state.lang === 'hi' ? 'प्रश्नावलियाँ चुनें' : 'Choose scales';
+            choices.append(choicesLabel);
+            const available = [];
+            if (domain.baseInstrument || domain.originalLabel) available.push(['base', domain.baseInstrument || domain.originalLabel, null]);
             for (const id of ids) {
                 const prefix = domain.baseInstrument ? domain.baseInstrument + ' + ' : '';
-                add(id, prefix + t('form.' + id, L(CLINICAL_DATA.scales[id].name)));
+                available.push([id, prefix + t('form.' + id, L(CLINICAL_DATA.scales[id].name)), CLINICAL_DATA.scales[id]]);
             }
-            if (ids.length > 1) add('all', state.lang === 'hi' ? 'सभी प्रश्नावलियाँ' : 'All questionnaires');
-            for (const id of forms) add(id, L(CLINICAL_DATA.scales[id].name));
-            select.value = state.scaleChoices.get(domain.id) || select.options[0].value;
-            state.scaleChoices.set(domain.id, select.value);
-            select.addEventListener('change', () => state.scaleChoices.set(domain.id, select.value));
-            choices.append(select);
+            for (const id of forms) available.push([id, L(CLINICAL_DATA.scales[id].name), CLINICAL_DATA.scales[id]]);
+            available.forEach(([id, name, scale]) => {
+                const label = document.createElement('label');
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.value = id;
+                input.checked = selected.has(id);
+                input.addEventListener('change', () => {
+                    if (input.checked) selected.add(id); else selected.delete(id);
+                    if (selected.size) state.scaleChoices.set(domain.id, [...selected]);
+                    else state.scaleChoices.delete(domain.id);
+                });
+                const count = scale ? scale.parts.flatMap(part => part.questions).length : null;
+                label.append(input, document.createTextNode(' ' + name + (count == null ? '' : ' (' + count + ' items)')));
+                choices.append(label);
+            });
         }
         cb.addEventListener('change', () => {
             if (cb.checked) state.selectedDomains.add(domain.id);

@@ -48,6 +48,7 @@ function renderScales() {
         renderDomainScreenIns(container, domain);
     });
 
+    const renderGroups = new Set();
     deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
         const scDef = (ratingTable || domain.directForm) && CLINICAL_DATA.scales[scaleId || domain.id];
         // The badge describes who completes the form (administeredBy), not
@@ -55,6 +56,29 @@ function renderScales() {
         // are patient-completed even though they score like the IPDE/PDQ block.
         const isSelfReport = !!(scDef && scDef.administeredBy === 'self-report');
         const isClinicianForm = !!(scDef && scDef.administeredBy === 'clinician');
+        if (ratingTable && !renderGroups.has(domain.id + ':' + scaleId)) {
+            const form = CLINICAL_DATA.scales[scaleId];
+            form.parts.forEach(part => {
+                const key = JSON.stringify(part.options || form.matrixOptions || CLINICAL_DATA.sharedScales.nrsota);
+                const groupKey = domain.id + ':' + key;
+                if (renderGroups.has(groupKey)) return;
+                const matching = deployed.filter(entry => entry.domain === domain && entry.ratingTable)
+                    .flatMap(entry => CLINICAL_DATA.scales[entry.scaleId].parts
+                        .filter(p => JSON.stringify(p.options || CLINICAL_DATA.scales[entry.scaleId].matrixOptions || CLINICAL_DATA.sharedScales.nrsota) === key)
+                        .map(p => ({ scaleId: entry.scaleId, scale: CLINICAL_DATA.scales[entry.scaleId], part: p })));
+                if (matching.length < 2) return;
+                matching.forEach(m => renderGroups.add(domain.id + ':' + m.scaleId));
+                const grouped = document.createElement('section');
+                grouped.className = 'scale-section';
+                const title = document.createElement('h3'); title.className = 'scale-heading';
+                title.textContent = matching.map(m => L(m.scale.name) + ' (' + m.part.questions.length + ' items)').join(' + ');
+                grouped.appendChild(title);
+                const synthetic = { ...form, name: { en: title.textContent, hi: title.textContent }, parts: matching.map(m => ({ ...m.part, questions: m.part.questions.map(q => ({ ...q, __scaleId: m.scaleId, __scaleName: m.scale.name })) })) };
+                renderMatrix(grouped, synthetic, scaleId);
+                container.appendChild(grouped);
+            });
+            if (renderGroups.has(domain.id + ':' + scaleId)) return;
+        }
         const section = document.createElement('section');
         section.className = 'scale-section' + (ratingTable
             ? (isSelfReport ? ' anger-rating-table' : ' clinician-rating-table')
@@ -65,7 +89,8 @@ function renderScales() {
         const h = document.createElement('h3');
         h.id = 'scale-h-' + secKey;
         h.className = 'scale-heading';
-        h.textContent = (scDef ? L(scDef.name) : L(domain.name) + (instrumentLabel ? ' — ' + instrumentLabel : ''));
+        const itemCount = scDef ? scDef.parts.flatMap(part => part.questions).length : null;
+        h.textContent = (scDef ? L(scDef.name) + ' (' + itemCount + ' items)' : L(domain.name) + (instrumentLabel ? ' - ' + instrumentLabel : ''));
         if (ratingTable || scDef?.administeredBy) {
             const badge = document.createElement('span');
             badge.className = 'scale-admin-badge';
