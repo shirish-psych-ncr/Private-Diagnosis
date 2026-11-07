@@ -1,0 +1,187 @@
+{
+  "id": "adnm20",
+  "name": "Adjustment Disorder – New Module (ADNM-20)",
+  "directions": "Think about the life events that are a burden now or have been in the past six months. For each reaction, rate how often it occurred in the last week.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Never"
+    },
+    {
+      "v": 2,
+      "label": "Rarely"
+    },
+    {
+      "v": 3,
+      "label": "Sometimes"
+    },
+    {
+      "v": 4,
+      "label": "Often"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Adjustment Disorder – New Module (ADNM-20)",
+      "questions": [
+        {
+          "id": "adnm20_1",
+          "text": "Since the stressful problem, I feel low and sad."
+        },
+        {
+          "id": "adnm20_2",
+          "text": "I have to think about the stressful situation repeatedly."
+        },
+        {
+          "id": "adnm20_3",
+          "text": "I try to avoid talking about the stressful situation wherever possible."
+        },
+        {
+          "id": "adnm20_4",
+          "text": "I keep having to think about the stressful situation and this is a great burden to me."
+        },
+        {
+          "id": "adnm20_5",
+          "text": "Nowadays, I do those activities which I used to enjoy much more rarely."
+        },
+        {
+          "id": "adnm20_6",
+          "text": "If I think about the stressful situation, I find myself in a real state of anxiety."
+        },
+        {
+          "id": "adnm20_7",
+          "text": "I avoid certain things that might remind me of the stressful situation."
+        },
+        {
+          "id": "adnm20_8",
+          "text": "I am nervous and restless since the stressful situation."
+        },
+        {
+          "id": "adnm20_9",
+          "text": "Since the stressful situation, I am much quicker to lose my temper, even over small things."
+        },
+        {
+          "id": "adnm20_10",
+          "text": "Since the stressful situation, I can only concentrate on certain things with difficulty."
+        },
+        {
+          "id": "adnm20_11",
+          "text": "I try to abolish the stressful situation from my memory."
+        },
+        {
+          "id": "adnm20_12",
+          "text": "I have noticed that I am becoming more irritable due to the stressful situation."
+        },
+        {
+          "id": "adnm20_13",
+          "text": "I get constant memories of the stressful situation and can't do anything to stop them."
+        },
+        {
+          "id": "adnm20_14",
+          "text": "I try to suppress my feelings because they are a burden to me."
+        },
+        {
+          "id": "adnm20_15",
+          "text": "My thoughts revolve around anything to do with the stressful situation."
+        },
+        {
+          "id": "adnm20_16",
+          "text": "Since the stressful situation, I am scared of doing certain things or of getting into certain situations."
+        },
+        {
+          "id": "adnm20_17",
+          "text": "Since the stressful situation, I don't like going to work or carrying out the necessary tasks in everyday life."
+        },
+        {
+          "id": "adnm20_18",
+          "text": "I have been feeling dispirited since the stressful situation and have little hope for the future."
+        },
+        {
+          "id": "adnm20_19",
+          "text": "Since the stressful situation, I can no longer sleep properly."
+        },
+        {
+          "id": "adnm20_20",
+          "text": "Overall, the situation affected me strongly in my personal relationships, my leisure activities, or other important areas of life"
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Preoccupation": [
+        2,
+        4,
+        13,
+        15
+      ],
+      "Failure to adapt": [
+        10,
+        17,
+        19,
+        20
+      ],
+      "Avoidance": [
+        3,
+        7,
+        11,
+        14
+      ],
+      "Depressed mood": [
+        1,
+        5,
+        18
+      ],
+      "Anxiety": [
+        6,
+        16
+      ],
+      "Impulse disturbance": [
+        8,
+        9,
+        12
+      ]
+    },
+    "multiplier": 1
+  },
+  "contextFields": [
+    {
+      "id": "events",
+      "label": "Which events have been stressful? Select all that apply.",
+      "multiple": true,
+      "options": [
+        "Divorce/separation",
+        "Family conflicts",
+        "Conflicts in working life",
+        "Conflicts with neighbors",
+        "Illness of a loved one",
+        "Death of a loved one",
+        "Adjustment due to retirement",
+        "Unemployment",
+        "Too much / too little work",
+        "Pressure to meet deadlines / time pressure",
+        "Moving to a new home",
+        "Financial problems",
+        "Own serious illness",
+        "Serious accident",
+        "Assault",
+        "Termination of an important leisure activity",
+        "Other stressful event"
+      ]
+    },
+    {
+      "id": "main_event",
+      "label": "Most stressful event or events (optional)"
+    }
+  ],
+  "durationOptions": [
+    "Less than 1 month",
+    "1–6 months",
+    "More than 6 months"
+  ]
+}

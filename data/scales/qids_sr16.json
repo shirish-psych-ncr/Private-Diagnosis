@@ -1,0 +1,387 @@
+{
+  "id": "qids_sr16",
+  "name": "Quick Inventory of Depressive Symptomatology (QIDS-SR16)",
+  "directions": "Choose the statement that best describes the past seven days. Weight questions cover the past two weeks.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0"
+    },
+    {
+      "v": 1,
+      "label": "1"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Quick Inventory of Depressive Symptomatology (QIDS-SR16)",
+      "questions": [
+        {
+          "id": "qids_sr16_1",
+          "text": "Falling Asleep",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I never take longer than 30 minutes to fall asleep."
+            },
+            {
+              "v": 1,
+              "label": "I take at least 30 minutes to fall asleep, less than half the time."
+            },
+            {
+              "v": 2,
+              "label": "I take at least 30 minutes to fall asleep, more than half the time."
+            },
+            {
+              "v": 3,
+              "label": "I take more than 60 minutes to fall asleep, more than half the time."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_2",
+          "text": "Sleep During the Night",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not wake up at night."
+            },
+            {
+              "v": 1,
+              "label": "I have a restless, light sleep with a few brief awakenings each night."
+            },
+            {
+              "v": 2,
+              "label": "I wake up at least once a night, but I go back to sleep easily."
+            },
+            {
+              "v": 3,
+              "label": "I awaken more than once a night and stay awake for 20 minutes or more, more than half the time."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_3",
+          "text": "Waking Up Too Early",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Most of the time, I awaken no more than 30 minutes before I need to get up."
+            },
+            {
+              "v": 1,
+              "label": "More than half the time, I awaken more than 30 minutes before I need to get up."
+            },
+            {
+              "v": 2,
+              "label": "I almost always awaken at least one hour or so before I need to, but I go back to sleep eventually."
+            },
+            {
+              "v": 3,
+              "label": "I awaken at least one hour before I need to, and can't go back to sleep."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_4",
+          "text": "Sleeping Too Much",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I sleep no longer than 7-8 hours/night, without napping during the day."
+            },
+            {
+              "v": 1,
+              "label": "I sleep no longer than 10 hours in a 24-hour period including naps."
+            },
+            {
+              "v": 2,
+              "label": "I sleep no longer than 12 hours in a 24-hour period including naps."
+            },
+            {
+              "v": 3,
+              "label": "I sleep longer than 12 hours in a 24-hour period including naps."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_5",
+          "text": "Feeling Sad",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not feel sad"
+            },
+            {
+              "v": 1,
+              "label": "I feel sad less than half the time."
+            },
+            {
+              "v": 2,
+              "label": "I feel sad more than half the time."
+            },
+            {
+              "v": 3,
+              "label": "I feel sad nearly all of the time."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_6",
+          "text": "Decreased Appetite",
+          "scale": [
+            {
+              "v": 0,
+              "label": "There is no change in my usual appetite."
+            },
+            {
+              "v": 1,
+              "label": "I eat somewhat less often or lesser amounts of food than usual."
+            },
+            {
+              "v": 2,
+              "label": "I eat much less than usual and only with personal effort."
+            },
+            {
+              "v": 3,
+              "label": "I rarely eat within a 24-hour period, and only with extreme personal effort or when others persuade me to eat."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_7",
+          "text": "Increased Appetite",
+          "scale": [
+            {
+              "v": 0,
+              "label": "There is no change from my usual appetite."
+            },
+            {
+              "v": 1,
+              "label": "I feel a need to eat more frequently than usual."
+            },
+            {
+              "v": 2,
+              "label": "I regularly eat more often and/or greater amounts of food than usual."
+            },
+            {
+              "v": 3,
+              "label": "I feel driven to overeat both at mealtime and between meals."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_8",
+          "text": "Decreased Weight (Within the Last Two Weeks)",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I have not had a change in my weight."
+            },
+            {
+              "v": 1,
+              "label": "I feel as if I've had a slight weight loss."
+            },
+            {
+              "v": 2,
+              "label": "I have lost 2 pounds or more."
+            },
+            {
+              "v": 3,
+              "label": "I have lost 5 pounds or more."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_9",
+          "text": "Increased Weight (Within the Last Two Weeks)",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I have not had a change in my weight."
+            },
+            {
+              "v": 1,
+              "label": "I feel as if I've had a slight weight gain."
+            },
+            {
+              "v": 2,
+              "label": "I have gained 2 pounds or more."
+            },
+            {
+              "v": 3,
+              "label": "I have gained 5 pounds or more."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_10",
+          "text": "Concentration/Decision Making",
+          "scale": [
+            {
+              "v": 0,
+              "label": "There is no change in my usual capacity to concentrate or make decisions."
+            },
+            {
+              "v": 1,
+              "label": "I occasionally feel indecisive or find that my attention wanders."
+            },
+            {
+              "v": 2,
+              "label": "Most of the time, I struggle to focus my attention or to make decisions."
+            },
+            {
+              "v": 3,
+              "label": "I cannot concentrate well enough to read or cannot make even minor decisions."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_11",
+          "text": "View of Myself",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I see myself as equally worthwhile and deserving as other people."
+            },
+            {
+              "v": 1,
+              "label": "I am more self-blaming than usual."
+            },
+            {
+              "v": 2,
+              "label": "I largely believe that I cause problems for others."
+            },
+            {
+              "v": 3,
+              "label": "I think almost constantly about major and minor defects in myself."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_12",
+          "text": "Thoughts of Death or Suicide",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not think of suicide or death."
+            },
+            {
+              "v": 1,
+              "label": "I feel that life is empty or wonder if it's worth living."
+            },
+            {
+              "v": 2,
+              "label": "I think of suicide or death several times a week for several minutes."
+            },
+            {
+              "v": 3,
+              "label": "I think of suicide or death several times a day in some detail, or I have made specific plans for suicide or have actually tried to take my life."
+            }
+          ],
+          "safety": true
+        },
+        {
+          "id": "qids_sr16_13",
+          "text": "General Interest",
+          "scale": [
+            {
+              "v": 0,
+              "label": "There is no change from usual in how interested I am in other people or activities."
+            },
+            {
+              "v": 1,
+              "label": "I notice that I am less interested in people or activities."
+            },
+            {
+              "v": 2,
+              "label": "I find I have interest in only one or two of my formerly pursued activities."
+            },
+            {
+              "v": 3,
+              "label": "I have virtually no interest in formerly pursued activities."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_14",
+          "text": "Energy Level",
+          "scale": [
+            {
+              "v": 0,
+              "label": "There is no change in my usual level of energy."
+            },
+            {
+              "v": 1,
+              "label": "I get tired more easily than usual."
+            },
+            {
+              "v": 2,
+              "label": "I have to make a big effort to start or finish my usual daily activities (for example, shopping, homework, cooking or going to work)."
+            },
+            {
+              "v": 3,
+              "label": "I really cannot carry out most of my usual daily activities because I just don't have the energy."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_15",
+          "text": "Feeling Slowed Down",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I think, speak, and move at my usual rate of speed."
+            },
+            {
+              "v": 1,
+              "label": "I find that my thinking is slowed down or my voice sounds dull or flat"
+            },
+            {
+              "v": 2,
+              "label": "It takes me several seconds to respond to most questions and I'm sure my thinking is slowed."
+            },
+            {
+              "v": 3,
+              "label": "I am often unable to respond to questions without extreme effort."
+            }
+          ]
+        },
+        {
+          "id": "qids_sr16_16",
+          "text": "Feeling Restless",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not feel restless."
+            },
+            {
+              "v": 1,
+              "label": "I'm often fidgety, wringing my hands, or need to shift how I am sitting."
+            },
+            {
+              "v": 2,
+              "label": "I have impulses to move about and am quite restless."
+            },
+            {
+              "v": 3,
+              "label": "At times, I am unable to stay seated and need to pace around."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

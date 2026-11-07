@@ -1,0 +1,126 @@
+{
+  "id": "mood_mdq",
+  "name": "Mood Disorder Questionnaire (MDQ)",
+  "directions": "Think of periods when you were not your usual self. Answer each symptom question about any such period.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "No"
+    },
+    {
+      "v": 1,
+      "label": "Yes"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Mood Disorder Questionnaire (MDQ)",
+      "questions": [
+        {
+          "id": "mood_mdq_1",
+          "text": "Has there ever been a period of time when you were not your usual self and you felt so good or so hyper that other people thought you were not your normal self or you were so hyper that you got into trouble?"
+        },
+        {
+          "id": "mood_mdq_2",
+          "text": "Has there ever been a period of time when you were not your usual self and you were so irritable that you shouted at people or started fights or arguments?"
+        },
+        {
+          "id": "mood_mdq_3",
+          "text": "Has there ever been a period of time when you were not your usual self and you felt much more self-confident than usual?"
+        },
+        {
+          "id": "mood_mdq_4",
+          "text": "Has there ever been a period of time when you were not your usual self and you got much less sleep than usual and found you didn't really miss it?"
+        },
+        {
+          "id": "mood_mdq_5",
+          "text": "Has there ever been a period of time when you were not your usual self and you were much more talkative or spoke faster than usual?"
+        },
+        {
+          "id": "mood_mdq_6",
+          "text": "Has there ever been a period of time when you were not your usual self and thoughts raced through your head or you couldn't slow your mind down?"
+        },
+        {
+          "id": "mood_mdq_7",
+          "text": "Has there ever been a period of time when you were not your usual self and you were so easily distracted by things around you that you had trouble concentrating or staying on track?"
+        },
+        {
+          "id": "mood_mdq_8",
+          "text": "Has there ever been a period of time when you were not your usual self and you had much more energy than usual?"
+        },
+        {
+          "id": "mood_mdq_9",
+          "text": "Has there ever been a period of time when you were not your usual self and you were much more active or did many more things than usual?"
+        },
+        {
+          "id": "mood_mdq_10",
+          "text": "Has there ever been a period of time when you were not your usual self and you were much more social or outgoing than usual, for example, you telephoned friends in the middle of the night?"
+        },
+        {
+          "id": "mood_mdq_11",
+          "text": "Has there ever been a period of time when you were not your usual self and you were much more interested in sex than usual?"
+        },
+        {
+          "id": "mood_mdq_12",
+          "text": "Has there ever been a period of time when you were not your usual self and you did things that were unusual for you or that other people might have thought were excessive, foolish, or risky?"
+        },
+        {
+          "id": "mood_mdq_13",
+          "text": "Has there ever been a period of time when you were not your usual self and spending money got you or your family in trouble?"
+        },
+        {
+          "id": "mood_mdq_14",
+          "text": "Have several of these symptoms ever happened during the same period of time?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 2,
+              "label": "Not applicable (fewer than two symptoms)"
+            }
+          ]
+        },
+        {
+          "id": "mood_mdq_15",
+          "text": "How much of a problem did any of these cause you, such as being unable to work, having family, money or legal troubles, or getting into arguments or fights?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No problem"
+            },
+            {
+              "v": 1,
+              "label": "Minor problem"
+            },
+            {
+              "v": 2,
+              "label": "Moderate problem"
+            },
+            {
+              "v": 3,
+              "label": "Serious problem"
+            }
+          ]
+        },
+        {
+          "id": "mood_mdq_16",
+          "text": "Have any of your blood relatives had manic-depressive illness or bipolar disorder?"
+        },
+        {
+          "id": "mood_mdq_17",
+          "text": "Has a health professional ever told you that you have manic-depressive illness or bipolar disorder?"
+        }
+      ]
+    }
+  ]
+}

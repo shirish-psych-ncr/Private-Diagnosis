@@ -37,7 +37,8 @@
     "trauma_20"
   ],
   "forms": [
-    "itq"
+    "itq",
+    "adnm20"
   ],
-  "originalLabel": "PCL-5"
+  "originalLabel": "PCL5"
 }

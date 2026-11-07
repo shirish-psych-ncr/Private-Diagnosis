@@ -3,7 +3,7 @@ import { selectedDomainForms, state, CLINICAL_DATA } from './state.js';
 
 function firstUnanswered() {
     for (const domain of selectedDomainForms()) {
-        if (domain.instrument === 'auto:adhd' && ['pediatric', 'adolescent'].includes(state.context.ageGroup)) {
+        if (domain.instrument === 'auto:adhd' && ['pediatric', 'schoolage', 'adolescent'].includes(state.context.ageGroup)) {
             const vadrs = CLINICAL_DATA.scales.vadrs;
             for (const part of vadrs.parts)
                 for (const q of part.questions)

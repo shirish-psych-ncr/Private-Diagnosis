@@ -1,0 +1,142 @@
+{
+  "id": "dts",
+  "name": "Distress Tolerance Scale (DTS)",
+  "directions": "Think about how you generally feel when distressed or upset. Rate your agreement.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Mildly disagree"
+    },
+    {
+      "v": 3,
+      "label": "Agree and disagree equally"
+    },
+    {
+      "v": 4,
+      "label": "Mildly agree"
+    },
+    {
+      "v": 5,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Distress Tolerance Scale (DTS)",
+      "questions": [
+        {
+          "id": "dts_1",
+          "text": "Feeling distressed or upset is unbearable to me."
+        },
+        {
+          "id": "dts_2",
+          "text": "When I feel distressed or upset, all I can think about is how bad I feel."
+        },
+        {
+          "id": "dts_3",
+          "text": "I can't handle feeling distressed or upset."
+        },
+        {
+          "id": "dts_4",
+          "text": "My feelings of distress are so intense that they completely take over."
+        },
+        {
+          "id": "dts_5",
+          "text": "There's nothing worse than feeling distressed or upset."
+        },
+        {
+          "id": "dts_6",
+          "text": "I can tolerate being distressed or upset as well as most people."
+        },
+        {
+          "id": "dts_7",
+          "text": "My feelings of distress or being upset are not acceptable"
+        },
+        {
+          "id": "dts_8",
+          "text": "I'll do anything to avoid feeling distressed or upset."
+        },
+        {
+          "id": "dts_9",
+          "text": "Other people seem to be able to tolerate feeling distressed or upset better than I can."
+        },
+        {
+          "id": "dts_10",
+          "text": "Being distressed or upset is always a major ordeal for me."
+        },
+        {
+          "id": "dts_11",
+          "text": "I am ashamed of myself when I feel distressed or upset."
+        },
+        {
+          "id": "dts_12",
+          "text": "My feelings of distress or being upset scare me."
+        },
+        {
+          "id": "dts_13",
+          "text": "I'll do anything to stop feeling distressed or upset."
+        },
+        {
+          "id": "dts_14",
+          "text": "When I feel distressed or upset, I must do something about it immediately"
+        },
+        {
+          "id": "dts_15",
+          "text": "When I feel distressed or upset, I cannot help but concentrate on how bad the distress actually feels."
+        }
+      ]
+    }
+  ],
+  "meanScores": {
+    "overall": "subscales",
+    "reverse": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "groups": {
+      "Tolerance": [
+        1,
+        3,
+        5
+      ],
+      "Absorption": [
+        2,
+        4,
+        15
+      ],
+      "Appraisal": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        12
+      ],
+      "Regulation": [
+        8,
+        13,
+        14
+      ]
+    }
+  }
+}

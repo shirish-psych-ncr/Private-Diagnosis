@@ -23,7 +23,11 @@ import { score as scoreRyff } from './scales/ryff.js';
 import { score as scoreMAAS } from './scales/maas.js';
 import { score as scoreCSSRS } from './scales/cssrs.js';
 
-const directScorers = { ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS };
+import { score as scoreQids } from './scales/qids_sr16.js';
+import { score as scoreMoodMdq } from './scales/mood_mdq.js';
+import { scoreMeans } from './scoring/item-means.js';
+
+const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS };
 
 function computeResults() {
     const instrumentResults = [];
@@ -42,14 +46,29 @@ function computeResults() {
             const values = domain.questions.map(q => state.responses[domain.id + ':' + q.id]);
             if (values.every(Number.isFinite)) {
                 const form = CLINICAL_DATA.scales[domain.id];
-                const rows = form.sumScores ? scoreItemSums(values, form) : directScorers[domain.id](values, domain.questions);
+                let rows;
+                if (form.sumScores) rows = scoreItemSums(values, form);
+                else if (form.meanScores) rows = scoreMeans(values, form);
+                else rows = directScorers[domain.id](values, domain.questions);
                 instrumentResults.push(...rows);
+                if (form.durationOptions) {
+                    for (const field of form.contextFields) {
+                        const value = state.formContext[form.id + ':' + field.id];
+                        if (value?.length) instrumentResults.push({ name: form.name, score: field.id === 'events' ? 'Stressors' : 'Index event',
+                            severity: Array.isArray(value) ? value.join(', ') : value });
+                    }
+                    const durations = domain.questions.flatMap((q, i) => {
+                        const duration = state.formContext[domain.id + ':' + q.id];
+                        return values[i] > 1 && duration ? ['Item ' + (i + 1) + ': ' + duration] : [];
+                    });
+                    if (durations.length) instrumentResults.push({ name: form.name, score: 'Duration', severity: durations.join('; ') });
+                }
             }
             return;
         }
 
         // Deployed VADRS matrix (pediatric ADHD routing)
-        if (domain.instrument === 'auto:adhd' && ['pediatric', 'adolescent'].includes(state.context.ageGroup)) {
+        if (domain.instrument === 'auto:adhd' && ['pediatric', 'schoolage', 'adolescent'].includes(state.context.ageGroup)) {
             instrumentResults.push(scoreVadrs(addFlag));
             return;
         }

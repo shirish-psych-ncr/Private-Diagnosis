@@ -1,7 +1,7 @@
 const { JSDOM } = require('jsdom');
 const fs = require('fs');
 const siteJs = fs.readFileSync('site.js', 'utf8');
-const pages = ['index.html','about.html','privacy.html','security.html','contact.html','404.html'];
+const pages = ['index.html','library.html','about.html','privacy.html','security.html','contact.html','404.html'];
 let fail = 0;
 
 function load(p) {

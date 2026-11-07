@@ -1,0 +1,152 @@
+{
+  "id": "aase_confidence",
+  "name": "Alcohol Abstinence Self-Efficacy · Confidence",
+  "directions": "How confident are you that you would not drink in each situation at the present time?",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Not at all"
+    },
+    {
+      "v": 1,
+      "label": "Not very"
+    },
+    {
+      "v": 2,
+      "label": "Moderately"
+    },
+    {
+      "v": 3,
+      "label": "Very"
+    },
+    {
+      "v": 4,
+      "label": "Extremely"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Alcohol Abstinence Self-Efficacy · Confidence",
+      "questions": [
+        {
+          "id": "aase_confidence_1",
+          "text": "When I am in agony because of stopping or withdrawing from alcohol use"
+        },
+        {
+          "id": "aase_confidence_2",
+          "text": "When I have a headache"
+        },
+        {
+          "id": "aase_confidence_3",
+          "text": "When I am feeling depressed"
+        },
+        {
+          "id": "aase_confidence_4",
+          "text": "When I am on vacation and want to relax"
+        },
+        {
+          "id": "aase_confidence_5",
+          "text": "When I am concerned about someone"
+        },
+        {
+          "id": "aase_confidence_6",
+          "text": "When I am very worried"
+        },
+        {
+          "id": "aase_confidence_7",
+          "text": "When I have the urge to try just one drink to see what happens"
+        },
+        {
+          "id": "aase_confidence_8",
+          "text": "When I am being offered a drink in a social situation"
+        },
+        {
+          "id": "aase_confidence_9",
+          "text": "When I dream about taking a drink"
+        },
+        {
+          "id": "aase_confidence_10",
+          "text": "When I want to test my willpower over drinking"
+        },
+        {
+          "id": "aase_confidence_11",
+          "text": "When I am feeling a physical need or craving for alcohol"
+        },
+        {
+          "id": "aase_confidence_12",
+          "text": "When I am physically tired"
+        },
+        {
+          "id": "aase_confidence_13",
+          "text": "When I am experiencing some physical pain or injury"
+        },
+        {
+          "id": "aase_confidence_14",
+          "text": "When I feel like blowing up because of frustration"
+        },
+        {
+          "id": "aase_confidence_15",
+          "text": "When I see others drinking at a bar or at a party"
+        },
+        {
+          "id": "aase_confidence_16",
+          "text": "When I sense everything is going wrong for me"
+        },
+        {
+          "id": "aase_confidence_17",
+          "text": "When people I used to drink with encourage me to drink"
+        },
+        {
+          "id": "aase_confidence_18",
+          "text": "When I am feeling angry inside"
+        },
+        {
+          "id": "aase_confidence_19",
+          "text": "When I experience an urge or impulse to take a drink that catches me unprepared"
+        },
+        {
+          "id": "aase_confidence_20",
+          "text": "When I am excited or celebrating with others"
+        }
+      ]
+    }
+  ],
+  "meanScores": {
+    "overall": "items",
+    "reverse": [],
+    "groups": {
+      "Negative affect": [
+        18,
+        16,
+        3,
+        14,
+        6
+      ],
+      "Social or positive situations": [
+        15,
+        20,
+        4,
+        17,
+        8
+      ],
+      "Physical and other concerns": [
+        2,
+        12,
+        5,
+        13,
+        9
+      ],
+      "Craving and urges": [
+        1,
+        7,
+        11,
+        10,
+        19
+      ]
+    }
+  }
+}

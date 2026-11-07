@@ -17,7 +17,7 @@ function routeInstruments() {
     selectedDomainForms().forEach(domain => {
         const instName = domain.instrument || null;
         if (instName === 'auto:adhd') {
-            const peds = ['pediatric', 'adolescent'].includes(state.context.ageGroup);
+            const peds = ['pediatric', 'schoolage', 'adolescent'].includes(state.context.ageGroup);
             deployed.push({
                 domain,
                 scaleId: peds ? 'vadrs' : null,

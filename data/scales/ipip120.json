@@ -1,0 +1,361 @@
+{
+  "id": "ipip120",
+  "name": "IPIP-NEO-120 (Johnson)",
+  "directions": "Rate how accurately each statement describes you as you generally are now.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Very inaccurate"
+    },
+    {
+      "v": 2,
+      "label": "Moderately inaccurate"
+    },
+    {
+      "v": 3,
+      "label": "Neither accurate nor inaccurate"
+    },
+    {
+      "v": 4,
+      "label": "Moderately accurate"
+    },
+    {
+      "v": 5,
+      "label": "Very accurate"
+    }
+  ],
+  "parts": [
+    {
+      "name": "IPIP-NEO-120 (Johnson)",
+      "questions": {
+        "$concat": [
+          "data/scales/ipip120/questions-1.json",
+          "data/scales/ipip120/questions-2.json",
+          "data/scales/ipip120/questions-3.json",
+          "data/scales/ipip120/questions-4.json",
+          "data/scales/ipip120/questions-5.json"
+        ]
+      }
+    }
+  ],
+  "sumScores": {
+    "total": false,
+    "groups": {
+      "Neuroticism": [
+        1,
+        6,
+        11,
+        16,
+        21,
+        26,
+        31,
+        36,
+        41,
+        46,
+        51,
+        56,
+        61,
+        66,
+        71,
+        76,
+        81,
+        86,
+        91,
+        96,
+        101,
+        106,
+        111,
+        116
+      ],
+      "N1 · Anxiety": [
+        1,
+        31,
+        61,
+        91
+      ],
+      "Extraversion": [
+        2,
+        7,
+        12,
+        17,
+        22,
+        27,
+        32,
+        37,
+        42,
+        47,
+        52,
+        57,
+        62,
+        67,
+        72,
+        77,
+        82,
+        87,
+        92,
+        97,
+        102,
+        107,
+        112,
+        117
+      ],
+      "E1 · Friendliness": [
+        2,
+        32,
+        62,
+        92
+      ],
+      "Openness": [
+        3,
+        8,
+        13,
+        18,
+        23,
+        28,
+        33,
+        38,
+        43,
+        48,
+        53,
+        58,
+        63,
+        68,
+        73,
+        78,
+        83,
+        88,
+        93,
+        98,
+        103,
+        108,
+        113,
+        118
+      ],
+      "O1 · Imagination": [
+        3,
+        33,
+        63,
+        93
+      ],
+      "Agreeableness": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44,
+        49,
+        54,
+        59,
+        64,
+        69,
+        74,
+        79,
+        84,
+        89,
+        94,
+        99,
+        104,
+        109,
+        114,
+        119
+      ],
+      "A1 · Trust": [
+        4,
+        34,
+        64,
+        94
+      ],
+      "Conscientiousness": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55,
+        60,
+        65,
+        70,
+        75,
+        80,
+        85,
+        90,
+        95,
+        100,
+        105,
+        110,
+        115,
+        120
+      ],
+      "C1 · Self-Efficacy": [
+        5,
+        35,
+        65,
+        95
+      ],
+      "N2 · Anger": [
+        6,
+        36,
+        66,
+        96
+      ],
+      "E2 · Gregariousness": [
+        7,
+        37,
+        67,
+        97
+      ],
+      "O2 · Artistic Interests": [
+        8,
+        38,
+        68,
+        98
+      ],
+      "A2 · Morality": [
+        9,
+        39,
+        69,
+        99
+      ],
+      "C2 · Orderliness": [
+        10,
+        40,
+        70,
+        100
+      ],
+      "N3 · Depression": [
+        11,
+        41,
+        71,
+        101
+      ],
+      "E3 · Assertiveness": [
+        12,
+        42,
+        72,
+        102
+      ],
+      "O3 · Emotionality": [
+        13,
+        43,
+        73,
+        103
+      ],
+      "A3 · Altruism": [
+        14,
+        44,
+        74,
+        104
+      ],
+      "C3 · Dutifulness": [
+        15,
+        45,
+        75,
+        105
+      ],
+      "N4 · Self-Consciousness": [
+        16,
+        46,
+        76,
+        106
+      ],
+      "E4 · Activity Level": [
+        17,
+        47,
+        77,
+        107
+      ],
+      "O4 · Adventurousness": [
+        18,
+        48,
+        78,
+        108
+      ],
+      "A4 · Cooperation": [
+        19,
+        49,
+        79,
+        109
+      ],
+      "C4 · Achievement-Striving": [
+        20,
+        50,
+        80,
+        110
+      ],
+      "N5 · Immoderation": [
+        21,
+        51,
+        81,
+        111
+      ],
+      "E5 · Excitement-Seeking": [
+        22,
+        52,
+        82,
+        112
+      ],
+      "O5 · Intellect": [
+        23,
+        53,
+        83,
+        113
+      ],
+      "A5 · Modesty": [
+        24,
+        54,
+        84,
+        114
+      ],
+      "C5 · Self-Discipline": [
+        25,
+        55,
+        85,
+        115
+      ],
+      "N6 · Vulnerability": [
+        26,
+        56,
+        86,
+        116
+      ],
+      "E6 · Cheerfulness": [
+        27,
+        57,
+        87,
+        117
+      ],
+      "O6 · Liberalism": [
+        28,
+        58,
+        88,
+        118
+      ],
+      "A6 · Sympathy": [
+        29,
+        59,
+        89,
+        119
+      ],
+      "C6 · Cautiousness": [
+        30,
+        60,
+        90,
+        120
+      ]
+    },
+    "multiplier": 1
+  }
+}

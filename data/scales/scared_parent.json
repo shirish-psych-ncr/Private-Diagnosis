@@ -1,0 +1,251 @@
+{
+  "id": "scared_parent",
+  "name": "SCARED · Parent form",
+  "directions": "Choose how well each statement describes your child over the last three months. Answer from your own observations.",
+  "ageGroups": [
+    "schoolage",
+    "adolescent"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Not true or hardly ever true"
+    },
+    {
+      "v": 1,
+      "label": "Somewhat true or sometimes true"
+    },
+    {
+      "v": 2,
+      "label": "Very true or often true"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Screen for Child Anxiety Related Emotional Disorders",
+      "questions": [
+        {
+          "id": "scared_parent_1",
+          "text": "When my child feels frightened, it is hard for him/her to breathe"
+        },
+        {
+          "id": "scared_parent_2",
+          "text": "My child gets headaches when he/she is at school"
+        },
+        {
+          "id": "scared_parent_3",
+          "text": "My child doesn't like to be with people he/she doesn't know well"
+        },
+        {
+          "id": "scared_parent_4",
+          "text": "My child gets scared if he/she sleeps away from home"
+        },
+        {
+          "id": "scared_parent_5",
+          "text": "My child worries about other people liking him/her"
+        },
+        {
+          "id": "scared_parent_6",
+          "text": "When my child gets frightened, he/she feels like passing out"
+        },
+        {
+          "id": "scared_parent_7",
+          "text": "My child is nervous"
+        },
+        {
+          "id": "scared_parent_8",
+          "text": "My child follows me wherever I go"
+        },
+        {
+          "id": "scared_parent_9",
+          "text": "People tell me that my child looks nervous"
+        },
+        {
+          "id": "scared_parent_10",
+          "text": "My child feels nervous with people he/she doesn't know well"
+        },
+        {
+          "id": "scared_parent_11",
+          "text": "My child gets stomachaches at school"
+        },
+        {
+          "id": "scared_parent_12",
+          "text": "When my child gets frightened, he/she feels like he/she is going crazy"
+        },
+        {
+          "id": "scared_parent_13",
+          "text": "My child worries about sleeping alone"
+        },
+        {
+          "id": "scared_parent_14",
+          "text": "My child worries about being as good as other kids"
+        },
+        {
+          "id": "scared_parent_15",
+          "text": "When he/she gets frightened, he/she feels like things are not real"
+        },
+        {
+          "id": "scared_parent_16",
+          "text": "My child has nightmares about something bad happening to his/her parents"
+        },
+        {
+          "id": "scared_parent_17",
+          "text": "My child worries about going to school"
+        },
+        {
+          "id": "scared_parent_18",
+          "text": "When my child gets frightened, his/her heart beats fast"
+        },
+        {
+          "id": "scared_parent_19",
+          "text": "He/she gets shaky"
+        },
+        {
+          "id": "scared_parent_20",
+          "text": "My child has nightmares about something bad happening to him/her"
+        },
+        {
+          "id": "scared_parent_21",
+          "text": "My child worries about things working out for him/her"
+        },
+        {
+          "id": "scared_parent_22",
+          "text": "When my child gets frightened, he/she sweats a lot"
+        },
+        {
+          "id": "scared_parent_23",
+          "text": "My child is a worrier"
+        },
+        {
+          "id": "scared_parent_24",
+          "text": "My child gets really frightened for no reason at all"
+        },
+        {
+          "id": "scared_parent_25",
+          "text": "My child is afraid to be alone in the house"
+        },
+        {
+          "id": "scared_parent_26",
+          "text": "It is hard for my child to talk with people he/she doesn't know well"
+        },
+        {
+          "id": "scared_parent_27",
+          "text": "When my child gets frightened, he/she feels like he/she is choking"
+        },
+        {
+          "id": "scared_parent_28",
+          "text": "People tell me that my child worries too much"
+        },
+        {
+          "id": "scared_parent_29",
+          "text": "My child doesn't like to be away from his/her family"
+        },
+        {
+          "id": "scared_parent_30",
+          "text": "My child is afraid of having anxiety (or panic) attacks"
+        },
+        {
+          "id": "scared_parent_31",
+          "text": "My child worries that something bad might happen to his/her parents"
+        },
+        {
+          "id": "scared_parent_32",
+          "text": "My child feels shy with people he/she doesn't know well"
+        },
+        {
+          "id": "scared_parent_33",
+          "text": "My child worries about what is going to happen in the future"
+        },
+        {
+          "id": "scared_parent_34",
+          "text": "When my child gets frightened, he/she feels like throwing up"
+        },
+        {
+          "id": "scared_parent_35",
+          "text": "My child worries about how well he/she does things."
+        },
+        {
+          "id": "scared_parent_36",
+          "text": "My child is scared to go to school"
+        },
+        {
+          "id": "scared_parent_37",
+          "text": "My child worries about things that have already happened"
+        },
+        {
+          "id": "scared_parent_38",
+          "text": "When my child gets frightened, he/she feels dizzy"
+        },
+        {
+          "id": "scared_parent_39",
+          "text": "My child feels nervous when he/she is with other children or adults and he/she has to do something while they watch him/her (for example: read aloud, speak, play a game, play a sport)"
+        },
+        {
+          "id": "scared_parent_40",
+          "text": "My child feels nervous when he/she is going to parties, dances, or any place where there will be people that he/she doesn't know well"
+        },
+        {
+          "id": "scared_parent_41",
+          "text": "My child is shy"
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Panic or somatic symptoms": [
+        1,
+        6,
+        9,
+        12,
+        15,
+        18,
+        19,
+        22,
+        24,
+        27,
+        30,
+        34,
+        38
+      ],
+      "Generalized anxiety": [
+        5,
+        7,
+        14,
+        21,
+        23,
+        28,
+        33,
+        35,
+        37
+      ],
+      "Separation anxiety": [
+        4,
+        8,
+        13,
+        16,
+        20,
+        25,
+        29,
+        31
+      ],
+      "Social anxiety": [
+        3,
+        10,
+        26,
+        32,
+        39,
+        40,
+        41
+      ],
+      "School avoidance": [
+        2,
+        11,
+        17,
+        36
+      ]
+    },
+    "multiplier": 1
+  }
+}

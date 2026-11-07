@@ -1,0 +1,173 @@
+{
+  "id": "asrm",
+  "name": "Altman Self-Rating Mania Scale (ASRM)",
+  "directions": "For each area, choose the statement that best describes the past seven days.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0"
+    },
+    {
+      "v": 1,
+      "label": "1"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3"
+    },
+    {
+      "v": 4,
+      "label": "4"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Altman Self-Rating Mania Scale (ASRM)",
+      "questions": [
+        {
+          "id": "asrm_1",
+          "text": "Positive Mood",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not feel happier or more cheerful than usual."
+            },
+            {
+              "v": 1,
+              "label": "I occasionally feel happier or more cheerful than usual."
+            },
+            {
+              "v": 2,
+              "label": "I often feel happier or more cheerful than usual."
+            },
+            {
+              "v": 3,
+              "label": "I feel happier or more cheerful than usual most of the time."
+            },
+            {
+              "v": 4,
+              "label": "I feel happier or more cheerful than usual all of the time."
+            }
+          ]
+        },
+        {
+          "id": "asrm_2",
+          "text": "Self-Confidence",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not feel more self-confident than usual."
+            },
+            {
+              "v": 1,
+              "label": "I occasionally feel more self-confident than usual."
+            },
+            {
+              "v": 2,
+              "label": "I often feel more self-confident than usual."
+            },
+            {
+              "v": 3,
+              "label": "I feel more self-confident than usual."
+            },
+            {
+              "v": 4,
+              "label": "I feel extremely self-confident all of the time."
+            }
+          ]
+        },
+        {
+          "id": "asrm_3",
+          "text": "Sleep Patterns",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not need less sleep than usual."
+            },
+            {
+              "v": 1,
+              "label": "I occasionally need less sleep than usual."
+            },
+            {
+              "v": 2,
+              "label": "I often need less sleep than usual."
+            },
+            {
+              "v": 3,
+              "label": "I frequently need less sleep than usual."
+            },
+            {
+              "v": 4,
+              "label": "I can go all day and night without any sleep and still not feel tired."
+            }
+          ]
+        },
+        {
+          "id": "asrm_4",
+          "text": "Speech",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I do not talk more than usual."
+            },
+            {
+              "v": 1,
+              "label": "I occasionally talk more than usual."
+            },
+            {
+              "v": 2,
+              "label": "I often talk more than usual."
+            },
+            {
+              "v": 3,
+              "label": "I frequently talk more than usual."
+            },
+            {
+              "v": 4,
+              "label": "I talk constantly and cannot be interrupted."
+            }
+          ]
+        },
+        {
+          "id": "asrm_5",
+          "text": "Activity Level",
+          "scale": [
+            {
+              "v": 0,
+              "label": "I have not been more active (either socially, sexually, at work, home or school) than usual."
+            },
+            {
+              "v": 1,
+              "label": "I have occasionally been more active than usual."
+            },
+            {
+              "v": 2,
+              "label": "I have often been more active than usual."
+            },
+            {
+              "v": 3,
+              "label": "I have frequently been more active than usual."
+            },
+            {
+              "v": 4,
+              "label": "I am constantly active or on the go all the time."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  }
+}

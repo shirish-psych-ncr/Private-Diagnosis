@@ -1,3 +1,4 @@
+import { scoreReading } from './score-reading.js';
 
 import { t } from './i18n.js';
 import { state, CLINICAL_DATA } from './state.js';
@@ -31,8 +32,8 @@ function generatePDF() {
 
     doc.autoTable({
         startY: y,
-        head: [['Instrument', 'Raw Score', 'Severity']],
-        body: r.instrumentResults.map(x => [x.name, x.score, x.severity]),
+        head: [['Instrument', 'Score', 'How to read this score']],
+        body: r.instrumentResults.map(x => [x.name, x.score, scoreReading(x)]),
         theme: 'striped',
         styles: { fontSize: 9 }
     });
@@ -119,12 +120,17 @@ function generatePDF() {
         y = doc.lastAutoTable.finalY + 4;
         doc.setFontSize(8);
         doc.setTextColor(120);
-        doc.text(doc.splitTextToSize('Screening only — not diagnostic and no dimensional score. ' + reg.pdRegister.note, 180), 14, y);
+        for (const line of doc.splitTextToSize(reg.pdRegister.note || '', 180)) {
+            if (y > 277) { doc.addPage(); y = 20; }
+            doc.text(line, 14, y);
+            y += 4;
+        }
         doc.setTextColor(0);
         y += 12;
     });
 
     doc.setFontSize(12);
+    if (y > 255) { doc.addPage(); y = 20; }
     doc.text('Differential Considerations (hypothesis-generating only)', 14, y); y += 2;
     doc.autoTable({
         startY: y,
@@ -137,6 +143,7 @@ function generatePDF() {
     });
     y = doc.lastAutoTable.finalY + 6;
 
+    if (y > 255) { doc.addPage(); y = 20; }
     // Classification governance note (see WHITEPAPER.md Appendix A: Comparative Nosological Index)
     doc.setFontSize(8);
     doc.setTextColor(120);

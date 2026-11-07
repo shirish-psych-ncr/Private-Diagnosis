@@ -66,6 +66,29 @@ function renderScales() {
             group.className = 'form-group';
             const label = document.createElement('label');
             const key = domain.id + ':' + field.id;
+            if (field.multiple) {
+                const choices = document.createElement('fieldset');
+                const legend = document.createElement('legend');
+                legend.textContent = field.label;
+                choices.append(legend);
+                for (const option of field.options) {
+                    const row = document.createElement('label');
+                    const input = document.createElement('input');
+                    input.type = 'checkbox';
+                    input.checked = (state.formContext[key] || []).includes(option);
+                    input.addEventListener('change', () => {
+                        const selected = new Set(state.formContext[key] || []);
+                        if (input.checked) selected.add(option);
+                        else selected.delete(option);
+                        state.formContext[key] = [...selected];
+                    });
+                    row.append(input, ' ' + option);
+                    choices.append(row);
+                }
+                group.append(choices);
+                section.append(group);
+                continue;
+            }
             label.htmlFor = key;
             label.textContent = field.label;
             const control = document.createElement(field.options ? 'select' : 'textarea');
@@ -133,6 +156,27 @@ function renderList(section, domain) {
             wrap.append(input, label);
             fieldset.appendChild(wrap);
         });
+        if (domain.durationOptions) {
+            const key = domain.id + ':' + q.id;
+            const label = document.createElement('label');
+            label.textContent = 'How long has this reaction lasted? ';
+            const select = document.createElement('select');
+            select.add(new Option('Choose duration', ''));
+            for (const duration of domain.durationOptions) select.add(new Option(duration, duration));
+            select.value = state.formContext[key] || '';
+            select.addEventListener('change', () => { state.formContext[key] = select.value; });
+            label.append(select);
+            const updateDuration = () => {
+                label.hidden = !(state.responses[key] > 1);
+                if (label.hidden) {
+                    select.value = '';
+                    delete state.formContext[key];
+                }
+            };
+            fieldset.addEventListener('change', updateDuration);
+            updateDuration();
+            fieldset.append(label);
+        }
         section.appendChild(fieldset);
     });
 }

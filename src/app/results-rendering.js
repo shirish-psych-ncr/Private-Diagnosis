@@ -1,3 +1,4 @@
+import { scoreReading } from './score-reading.js';
 import { t, L } from './i18n.js';
 import { state } from './state.js';
 
@@ -39,14 +40,14 @@ function renderResults() {
     tbl.className = 'clinician-table';
     const thead = document.createElement('thead');
     const hr = document.createElement('tr');
-    [state.lang === 'hi' ? 'उपकरण' : 'Instrument', state.lang === 'hi' ? 'स्कोर' : 'Score', state.lang === 'hi' ? 'तीव्रता' : 'Severity'].forEach(x => {
+    [state.lang === 'hi' ? 'उपकरण' : 'Instrument', state.lang === 'hi' ? 'स्कोर' : 'Score', state.lang === 'hi' ? 'स्कोर का अर्थ' : 'How to read this score'].forEach(x => {
         const th = document.createElement('th'); th.textContent = x; hr.appendChild(th);
     });
     thead.appendChild(hr); tbl.appendChild(thead);
     const tbody = document.createElement('tbody');
     r.instrumentResults.forEach(x => {
         const tr = document.createElement('tr');
-        [x.name, x.score, x.severity].forEach(v => {
+        [x.name, x.score, scoreReading(x)].forEach(v => {
             const td = document.createElement('td'); td.textContent = v; tr.appendChild(td);
         });
         tbody.appendChild(tr);

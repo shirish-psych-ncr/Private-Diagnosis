@@ -43,9 +43,43 @@ const { casesFor, setCase } = require('./scoring_cases');
     assert.equal(report('trauma', 'itq', q => q.id.startsWith('p') ? 2 : 0)[0].severity, 'PTSD screening pattern');
     assert.equal(report('trauma', 'itq', q => ['p7','p8','p9'].includes(q.id) ? 0 : 4)[0].aboveCutoff, false);
     assert.equal(report('wellbeing', 'maas', () => 3)[0].score, '3.00/6');
+    assert.equal(report('mood', 'qids_sr16', () => 3)[0].score, '27/27');
+    assert.equal(report('mood', 'qids_sr16', q => Number(q.id.split('_').at(-1)) <= 4 ? 3 : 0)[0].score, '3/27');
+    for (const symptoms of [6, 7]) {
+        const rows = report('mood', 'mood_mdq', q => {
+            const item = Number(q.id.split('_').at(-1));
+            return item === 15 ? 2 : Number(item <= symptoms || item >= 14);
+        });
+        assert.equal(rows[0].aboveCutoff, symptoms === 7);
+    }
+    for (const id of ['aase_confidence', 'aase_temptation']) {
+        assert.ok(report('substance', id, () => 3).every(row => row.score === '3.00/4'));
+    }
+    assert.equal(report('wellbeing', 'dts', () => 3)[0].score, '3.00/5');
     const ryff = report('wellbeing', 'ryff', q => q.reverse ? 1 : 6);
     assert.equal(ryff.length, 6);
     assert.ok(ryff.every(r => r.score === '84/84'));
     assert.equal(report('suicide_followup', 'cssrs', q => q.id === 's6' ? 1 : 0)[0].score, '1: No, 2: No, 6: Yes');
+    for (const topic of data.domains) {
+        for (const id of topic.forms || []) {
+            const form = data.scales[id];
+            if (!form.sumScores) continue;
+            const n = form.parts.flatMap(part => part.questions).length;
+            for (const indexes of Object.values(form.sumScores.groups)) {
+                assert.equal(new Set(indexes).size, indexes.length, id);
+                assert.ok(indexes.every(i => Number.isInteger(i) && i >= 1 && i <= n), id);
+            }
+            const low = form.matrixOptions[0].v;
+            const high = form.matrixOptions.at(-1).v;
+            const lengths = Object.values(form.sumScores.groups).map(items => items.length);
+            if (form.sumScores.total) lengths.unshift(n);
+            for (const value of [low, high]) {
+                const rows = report(topic.id, id, q => q.reverse ? low + high - value : value);
+                assert.deepEqual(Array.from(rows, row => row.score), lengths.map(length =>
+                    (value * length * form.sumScores.multiplier) + '/' + (high * length * form.sumScores.multiplier)), id);
+            }
+        }
+    }
+    assert.equal(report('wellbeing', 'ders', () => 1)[0].score, '80/180');
     console.log('Scoring parity:', count, 'cases match reviewed scoring fixtures.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

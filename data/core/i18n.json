@@ -17,7 +17,7 @@
     "context.age": "Age group",
     "context.age.error": "Choose an age group.",
     "context.select": "Choose age group",
-    "context.age.pediatric": "Child (under 12)",
+    "context.age.pediatric": "Child (under 8)",
     "context.age.adolescent": "Adolescent (12-17)",
     "context.age.adult": "Adult (18-64)",
     "context.age.older": "Older Adult (65+)",
@@ -71,7 +71,8 @@
     "form.pdq4_screen": "PDQ-4+",
     "form.mid60": "MID-60 (60 items)",
     "form.desii": "DES-II (28 items)",
-    "form.biss": "BISS (clinician-rated)"
+    "form.biss": "BISS (clinician-rated)",
+    "context.age.schoolage": "Child (8–11)"
   },
   "hi": {
     "app.title": "आपकी मुलाकात से पहले",
@@ -91,7 +92,7 @@
     "context.age": "आयु वर्ग",
     "context.age.error": "आयु वर्ग चुनें।",
     "context.select": "आयु वर्ग चुनें",
-    "context.age.pediatric": "बच्चा (12 वर्ष से कम)",
+    "context.age.pediatric": "बच्चा (8 वर्ष से कम)",
     "context.age.adolescent": "किशोर (12-17)",
     "context.age.adult": "वयस्क (18-64)",
     "context.age.older": "वृद्ध वयस्क (65+)",
@@ -145,6 +146,7 @@
     "form.pdq4_screen": "PDQ-4+",
     "form.mid60": "MID-60 (60 प्रश्न)",
     "form.desii": "DES-II (28 प्रश्न)",
-    "form.biss": "BISS (चिकित्सक भरें)"
+    "form.biss": "BISS (चिकित्सक भरें)",
+    "context.age.schoolage": "बच्चा (8–11 वर्ष)"
   }
 }
