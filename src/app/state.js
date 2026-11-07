@@ -12,6 +12,9 @@ const state = {
     responses: {},            // key: `${domainId}:${questionId}` or `vadrs:${id}` -> number
     formContext: {},
     safetyFlags: [],          // [{ questionId, domainId }]
+    selectedICD11Codes: new Set(), // optional clinician-reviewed reference choices
+    icd11BoundaryOptions: [],
+    touchedQuestions: new Set(),
     results: null             // computed at finish
 };
 
@@ -22,8 +25,10 @@ let I18N = null;              // populated from the modular data tree
 let addFlagGlobal = () => {};
 function setFlagSink(sink) { addFlagGlobal = sink; }
 function setClinicalData(payload) {
-    CLINICAL_DATA = payload.clinical || payload;
-    I18N = payload.i18n || {};
+    const { icd11BoundaryOptions = [], ...clinical } = payload;
+    CLINICAL_DATA = clinical;
+    state.icd11BoundaryOptions = icd11BoundaryOptions;
+    I18N = clinical.i18n || {};
 }
 
 export { state, CLINICAL_DATA, I18N, addFlagGlobal, setFlagSink, setClinicalData };

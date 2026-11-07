@@ -1,4 +1,4 @@
-import { L } from './i18n.js';
+import { L, t } from './i18n.js';
 import { renderMatrix } from './matrix-rendering.js';
 import { onAnswer } from './answers.js';
 import { routeInstruments } from './routing.js';
@@ -9,6 +9,29 @@ function renderScales() {
     const container = document.getElementById('scale-container');
     container.replaceChildren();
     const deployed = routeInstruments();
+    const answered = new Set();
+    const total = new Set();
+    deployed.forEach(({ domain, scaleId, ratingTable }) => {
+        const scale = ratingTable && CLINICAL_DATA.scales[scaleId];
+        const questions = scale ? scale.parts.flatMap(part => part.questions)
+            .filter(question => !question.requires || state.responses[scaleId + ':' + question.requires] === 1)
+            : domain.questions.filter(question => !question.scaleId);
+        questions.forEach(question => {
+            if (question.nonScored || question.tickBox) return;
+            const key = (scale ? scaleId : domain.id) + ':' + question.id;
+            total.add(key);
+            if (state.responses[key] !== undefined) answered.add(key);
+        });
+        if (!ratingTable) domain.questions.filter(question => question.scaleId).forEach(question => {
+            const key = domain.id + ':' + question.id;
+            total.add(key);
+            if (state.responses[key] !== undefined) answered.add(key);
+        });
+    });
+    const estimate = document.getElementById('assessment-estimate');
+    const progress = document.getElementById('assessment-progress');
+    if (estimate) estimate.textContent = t('scales.timeEstimate').replace('{count}', String(total.size));
+    if (progress) progress.textContent = t('scales.progress').replace('{answered}', String(answered.size)).replace('{total}', String(total.size));
 
     // Screen-in questions for the optional rating-table routes are rendered
     // first, as one compact block per domain. Those instruments are always
@@ -56,11 +79,22 @@ function renderScales() {
         }
         section.appendChild(h);
 
-        const help = document.createElement('p');
-        help.className = 'scale-timeframe';
-        help.textContent = L(domain.timeframe);
-        if (domain.directForm && state.lang === 'hi') help.textContent = 'यह प्रश्नावली अंग्रेज़ी में है। ' + help.textContent;
-        section.appendChild(help);
+        if (domain.timeframe) {
+            const help = document.createElement('p');
+            help.className = 'scale-timeframe';
+            help.textContent = L(domain.timeframe);
+            section.appendChild(help);
+        }
+        if (domain.help) {
+            const help = document.createElement('details');
+            help.className = 'assessment-help';
+            const summary = document.createElement('summary');
+            summary.textContent = t('assessment.about');
+            const text = document.createElement('p');
+            text.textContent = L(domain.help);
+            help.append(summary, text);
+            section.appendChild(help);
+        }
         for (const field of domain.contextFields || []) {
             const group = document.createElement('div');
             group.className = 'form-group';
@@ -109,7 +143,12 @@ function renderScales() {
                 const dir = document.createElement('p');
                 dir.className = 'scale-directions';
                 dir.textContent = L(scale.directions);
-                section.appendChild(dir);
+                const details = document.createElement('details');
+                details.className = 'assessment-directions';
+                const summary = document.createElement('summary');
+                summary.textContent = t('assessment.instructions');
+                details.append(summary, dir);
+                section.appendChild(details);
             }
             renderMatrix(section, scale, scaleId);
         } else {

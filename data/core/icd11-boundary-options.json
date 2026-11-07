@@ -1,0 +1,32 @@
+[
+  {
+    "code": "AB52",
+    "label": "Deafness, not otherwise specified",
+    "context": {"en": "Sensory/hearing boundary reference mentioned with developmental speech or language disorders.", "hi": "विकासात्मक वाणी या भाषा विकारों के साथ उल्लिखित श्रवण-संबंधी सीमा संदर्भ।"},
+    "related": ["6A01"]
+  },
+  {
+    "code": "MG24.0",
+    "label": "Fear of cancer",
+    "context": {"en": "Specific health concern boundary reference mentioned with hypochondriasis.", "hi": "हाइपोकॉन्ड्रियासिस के साथ उल्लिखित विशिष्ट स्वास्थ्य-चिंता सीमा संदर्भ।"},
+    "related": ["6B23"]
+  },
+  {
+    "code": "ME62.9",
+    "label": "Acute excoriation of skin",
+    "context": {"en": "Dermatological boundary reference mentioned with excoriation disorder.", "hi": "एक्सकोरिएशन विकार के साथ उल्लिखित त्वचा-संबंधी सीमा संदर्भ।"},
+    "related": ["6B25.1"]
+  },
+  {
+    "code": "ME63.7",
+    "label": "Chronic excoriation of skin",
+    "context": {"en": "Dermatological boundary reference mentioned with excoriation disorder.", "hi": "एक्सकोरिएशन विकार के साथ उल्लिखित त्वचा-संबंधी सीमा संदर्भ।"},
+    "related": ["6B25.1"]
+  },
+  {
+    "code": "8D44",
+    "label": "Korsakoff syndrome, alcohol-induced or unspecified",
+    "context": {"en": "Neurological boundary reference mentioned with amnestic disorder due to diseases classified elsewhere.", "hi": "अन्यत्र वर्गीकृत रोगों के कारण एम्नेस्टिक विकार के साथ उल्लिखित तंत्रिका-संबंधी सीमा संदर्भ।"},
+    "related": ["6D72.0", "5B5A.1", "5B5A.11"]
+  }
+]

@@ -27,6 +27,14 @@ function applyLanguage(lang) {
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
     });
+    const progressCaption = document.getElementById('progress-caption');
+    if (progressCaption) {
+        const stageKeys = ['stage.consent', 'stage.context', 'stage.domains', 'stage.scales', 'stage.results'];
+        progressCaption.textContent = t('progress.step', 'Step {current} of {total} · {stage}')
+            .replace('{current}', String(state.stage + 1))
+            .replace('{total}', '5')
+            .replace('{stage}', t(stageKeys[state.stage]));
+    }
     // Re-render dynamic content in the new language WITHOUT touching inputs' values.
     renderDomainGrid();
     if (state.stage === 3) renderScales();

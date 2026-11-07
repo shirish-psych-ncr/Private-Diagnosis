@@ -65,6 +65,8 @@ function bindStaticUI() {
             state.context.medications = document.getElementById('medications').value.trim();
             state.context.priorDiagnoses = document.getElementById('prior-diagnoses').value.trim();
             renderDomainGrid();
+            const contextDetails = document.querySelector('.optional-context');
+            if (contextDetails) contextDetails.open = false;
             revealStage(2);
         });
     });
@@ -104,6 +106,7 @@ function bindStaticUI() {
             }
             return;
         }
+        scalesError.classList.add('hidden');
         computeResults();
         renderResults();
         revealStage(4);
@@ -117,6 +120,12 @@ function bindStaticUI() {
     });
 
     document.getElementById('safety-close').addEventListener('click', closeSafetyModal);
+
+    document.getElementById('safety-modal').addEventListener('keydown', e => {
+        if (e.key !== 'Tab') return;
+        e.preventDefault();
+        document.getElementById('safety-close').focus();
+    });
 
     // Non-dismissible: ignore backdrop clicks & Escape while open.
     document.getElementById('safety-modal').addEventListener('click', e => {

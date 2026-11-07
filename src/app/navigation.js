@@ -1,5 +1,5 @@
-import { boot } from './bootstrap.js';
 import { state } from './state.js';
+import { t } from './i18n.js';
 
 /* ------------------------------------------------------------------ *
  * 4. STAGE NAVIGATION
@@ -15,10 +15,15 @@ function revealStage(n) {
     document.querySelectorAll('.stage').forEach((sec, i) => {
         sec.classList.toggle('active', i === n);
     });
-    document.querySelectorAll('.progress-step').forEach((step, i) => {
-        step.classList.toggle('completed', i < n);
-        step.classList.toggle('active', i === n);
-    });
+    const progress = document.getElementById('progress-meter');
+    if (progress) {
+        progress.setAttribute('aria-valuenow', String(n + 1));
+        const caption = document.getElementById('progress-caption');
+        if (caption) caption.textContent = t('progress.step', `Step {current} of {total} · {stage}`)
+            .replace('{current}', String(n + 1)).replace('{total}', '5').replace('{stage}', t(['stage.consent', 'stage.context', 'stage.domains', 'stage.scales', 'stage.results'][n]));
+        const fill = document.querySelector('.progress-fill');
+        if (fill) fill.style.width = ((n + 1) / 5 * 100) + '%';
+    }
     // Every newly revealed state starts at the top of the page. The next
     // statement runs synchronously while the new stage is still display:none
     // (the stylesheet repaints only after this script yields), so scrollTo
@@ -43,4 +48,15 @@ function continueTo(validate, onPass) {
     onPass();
 }
 
-export { revealStage, continueTo };
+function syncAssessmentProgress() {
+    const progress = document.getElementById('assessment-progress');
+    if (!progress) return;
+    const groups = new Map();
+    document.querySelectorAll('#scale-container input[type="radio"]').forEach(input => {
+        groups.set(input.name, (groups.get(input.name) || false) || input.checked);
+    });
+    const answered = [...groups.values()].filter(Boolean).length;
+    progress.textContent = t('scales.progress').replace('{answered}', String(answered)).replace('{total}', String(groups.size));
+}
+
+export { revealStage, continueTo, syncAssessmentProgress };

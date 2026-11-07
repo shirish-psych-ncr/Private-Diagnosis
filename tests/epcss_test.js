@@ -126,6 +126,8 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   const pv = document.getElementById('patient-view').textContent;
   check('patient summary non-empty', pv.trim().length > 20);
   check('patient view withholds diagnostic labels', !/\bDSM-5\b|6A\d\d/.test(pv));
+  const codeOptions = Array.from(document.querySelectorAll('#coding-options input[type="checkbox"]'));
+  check('five optional ICD-11 boundary references rendered and initially unselected', codeOptions.length === 5 && codeOptions.every(input => !input.checked));
   const rc = document.getElementById('report-content').textContent;
   check('clinician detail includes PHQ-9 score', /PHQ-9/.test(rc));
   check('clinician detail shows no-flag message when all answers minimal',
@@ -164,10 +166,15 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   document.getElementById('lang-en').click();
   await ready; await sleep(50);
 
+  codeOptions[0].click();
+  codeOptions[0].dispatchEvent(new window.Event('change', { bubbles: true }));
+  const stateModule = (await ready).modules.get(path.join(ROOT, 'src/app/state.js')).namespace.state;
+  stateModule.selectedICD11Codes.add('AB52');
+
   pdfCalls.length = 0;
   document.getElementById('pdf-btn').click();
   await ready; await sleep(100);
-  check('PDF generated via jsPDF mock', pdfCalls.some(c => String(c).startsWith('SAVED:')));
+  check('selected ICD-11 references included in PDF', pdfCalls.some(c => String(c).includes('Reference label')));
 
   // Pediatric routing -> VADRS matrix
   resetApp();
@@ -201,14 +208,18 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   const safetyRadio = Array.from(document.querySelectorAll('#scale-container .safety-item input[type="radio"]')).pop();
   check('safety item flagged in DOM', !!safetyRadio);
   if (safetyRadio) {
+    safetyRadio.focus();
     safetyRadio.checked = true;
     safetyRadio.dispatchEvent(new window.Event('change', { bubbles: true }));
     await ready; await sleep(50);
     check('crisis modal opens on safety endorsement', !document.getElementById('safety-modal').classList.contains('hidden'));
     check('crisis resources listed', document.getElementById('crisis-resources').textContent.trim().length > 10);
+    document.getElementById('safety-modal').dispatchEvent(new window.KeyboardEvent('keydown', { key: 'Tab', bubbles: true, cancelable: true }));
+    check('keyboard focus stays within safety alert', document.activeElement === document.getElementById('safety-close'));
     document.getElementById('safety-close').click();
     await ready; await sleep(50);
     check('modal closes via acknowledge button', document.getElementById('safety-modal').classList.contains('hidden'));
+    check('focus returns to the endorsed item', document.activeElement === safetyRadio);
   }
 
   // ---------------------------------------------------------------------

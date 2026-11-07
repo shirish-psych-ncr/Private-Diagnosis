@@ -3,8 +3,11 @@ import { state, CLINICAL_DATA } from './state.js';
 /* ------------------------------------------------------------------ *
  * 7. SAFETY MODAL (non-dismissible except explicit acknowledgement)
  * ------------------------------------------------------------------ */
+let returnFocus = null;
+
 function openSafetyModal() {
     const modal = document.getElementById('safety-modal');
+    if (modal.classList.contains('hidden')) returnFocus = document.activeElement;
     const resources = document.getElementById('crisis-resources');
     resources.replaceChildren();
     (CLINICAL_DATA.crisisResources[state.lang] || CLINICAL_DATA.crisisResources.en).forEach(r => {
@@ -28,6 +31,8 @@ function closeSafetyModal() {
     modal.classList.add('hidden');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+    returnFocus = null;
 }
 
 export { openSafetyModal, closeSafetyModal };

@@ -36,13 +36,10 @@
         </header>
 
         <main>
-            <nav class="progress-bar" aria-label="Screening stages">
-                <div class="progress-step active" data-step="0"><span class="step-number">1</span><span class="step-label" data-i18n="stage.consent">Consent</span></div>
-                <div class="progress-step" data-step="1"><span class="step-number">2</span><span class="step-label" data-i18n="stage.context">About you</span></div>
-                <div class="progress-step" data-step="2"><span class="step-number">3</span><span class="step-label" data-i18n="stage.domains">Topics</span></div>
-                <div class="progress-step" data-step="3"><span class="step-number">4</span><span class="step-label" data-i18n="stage.scales">Questions</span></div>
-                <div class="progress-step" data-step="4"><span class="step-number">5</span><span class="step-label" data-i18n="stage.results">Results</span></div>
-            </nav>
+            <div class="progress-bar" aria-label="Screening progress">
+                <span id="progress-caption" class="progress-caption" role="status" aria-live="polite">Step 1 of 5 · Consent</span>
+                <div id="progress-meter" class="progress-track" role="progressbar" aria-label="Progress" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1"><span class="progress-fill"></span></div>
+            </div>
 
             <div id="stage-container">
                 <!-- Stage 0: Informed Consent -->
@@ -65,7 +62,10 @@
                 <section id="stage-1" class="stage" aria-labelledby="context-heading">
                     <h2 id="context-heading" data-i18n="context.title">About you</h2>
                     <p class="subtitle" data-i18n="context.note">Only age group is required. Leave out names and contact details.</p>
+                    <p class="privacy-reminder" data-i18n="context.privacy">Only the age group is needed to choose suitable forms. Other details are optional and remain on this device.</p>
                     <form id="context-form">
+                        <details class="optional-context">
+                        <summary data-i18n="context.optional">Add optional notes for your visit</summary>
                         <div class="form-group">
                             <label for="age-group" data-i18n="context.age">Age group</label>
                             <select id="age-group" required>
@@ -90,6 +90,7 @@
                             <label for="prior-diagnoses" data-i18n="context.prior">Prior Diagnoses (optional)</label>
                             <textarea id="prior-diagnoses" rows="2"></textarea>
                         </div>
+                        </details>
                         <button class="btn-secondary" type="button" data-back="0" data-i18n="nav.back">Back</button>
                         <button type="submit" class="btn-primary" data-i18n="context.continue">Continue</button>
                     </form>
@@ -109,6 +110,10 @@
                 <section id="stage-3" class="stage" aria-labelledby="scales-heading">
                     <h2 id="scales-heading" data-i18n="scales.title">Your questions</h2>
                     <p class="subtitle" data-i18n="scales.instruction">Answer the required questions for each form.</p>
+                    <div class="assessment-status" aria-live="polite">
+                        <span id="assessment-estimate"></span>
+                        <span id="assessment-progress"></span>
+                    </div>
                     <div id="scale-container"></div>
                     <p id="scales-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="scales.incomplete">Answer the remaining required questions.</p>
                     <button class="btn-secondary" type="button" data-back="2" data-i18n="nav.back">Back</button>
@@ -119,6 +124,11 @@
                 <section id="stage-4" class="stage" aria-labelledby="results-heading">
                     <h2 id="results-heading" data-i18n="results.title">Your summary</h2>
                     <div id="patient-view"></div>
+                    <details id="coding-reference" class="coding-reference">
+                        <summary id="coding-reference-title" data-i18n="coding.referencesTitle">Clinician-reviewed ICD-11 references (optional)</summary>
+                        <p data-i18n="coding.referencesHelp">A clinician or care team member can record relevant references after reviewing the source classification. These are not generated from questionnaire answers and do not establish a diagnosis.</p>
+                        <ol id="coding-options" class="coding-options"></ol>
+                    </details>
                     <details id="clinician-details">
                         <summary data-i18n="results.clinicianToggle">Scores and clinical details</summary>
                         <div id="report-content"></div>

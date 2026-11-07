@@ -33,6 +33,41 @@ function renderResults() {
         pv.appendChild(alertBox);
     }
 
+    // Optional ICD-11 boundary references. They are never inferred from
+    // questionnaire scores; clinician confirmation is required for selection.
+    const codingList = document.getElementById('coding-options');
+    if (codingList) {
+        codingList.replaceChildren();
+        const options = state.icd11BoundaryOptions || [];
+        const chooser = document.getElementById('coding-reference');
+        if (chooser) chooser.hidden = !options.length;
+        options.forEach(option => {
+            const li = document.createElement('li');
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+            input.type = 'checkbox';
+            input.name = 'icd11-boundary-code';
+            input.setAttribute('aria-label', option.code + ' ' + option.label);
+            input.value = option.code;
+            input.checked = (state.selectedICD11Codes || new Set()).has(option.code);
+            const updateSelection = () => {
+                state.selectedICD11Codes ||= new Set();
+                if (input.checked) state.selectedICD11Codes.add(option.code);
+                else state.selectedICD11Codes.delete(option.code);
+            };
+            input.addEventListener('change', updateSelection);
+            const title = document.createElement('span');
+            title.className = 'coding-option-title';
+            title.textContent = option.code + ' · ' + option.label;
+            label.append(input, title);
+            const context = document.createElement('p');
+            context.className = 'coding-option-context';
+            context.textContent = L(option.context) + ' ' + t('coding.related', 'Related references:') + ' ' + option.related.join(', ');
+            li.append(label, context);
+            codingList.appendChild(li);
+        });
+    }
+
     // Clinician detail (on-screen mirror of the PDF)
     const rc = document.getElementById('report-content');
     rc.replaceChildren();

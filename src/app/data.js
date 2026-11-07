@@ -21,10 +21,11 @@ export async function loadDomain(id) {
 }
 export async function loadClinicalData() {
     const index = await loadResource('data/index.json');
-    const [core, domains, scales] = await Promise.all([
+    const [core, domains, scales, icd11BoundaryOptions] = await Promise.all([
         loadResource(index.core).then(loadTree),
         Promise.all(index.domains.map(loadDomain)),
-        Promise.all(index.scales.map(async id => [id, await loadResource('data/scales/' + id + '.json')]))
+        Promise.all(index.scales.map(async id => [id, await loadResource('data/scales/' + id + '.json')])),
+        loadResource('data/core/icd11-boundary-options.json')
     ]);
-    return { ...core, domains, scales: Object.fromEntries(scales) };
+    return { ...core, domains, scales: Object.fromEntries(scales), icd11BoundaryOptions };
 }

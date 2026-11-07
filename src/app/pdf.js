@@ -143,6 +143,22 @@ function generatePDF() {
     });
     y = doc.lastAutoTable.finalY + 6;
 
+    const selectedCodeOptions = (state.icd11BoundaryOptions || [])
+        .filter(option => state.selectedICD11Codes?.has(option.code));
+    if (selectedCodeOptions.length) {
+        if (y > 250) { doc.addPage(); y = 20; }
+        doc.setFontSize(11);
+        doc.text('Optional ICD-11 discussion references selected for review', 14, y); y += 2;
+        doc.autoTable({
+            startY: y,
+            head: [['Code', 'Reference label', 'Context']],
+            body: selectedCodeOptions.map(option => [option.code, option.label, option.context]),
+            theme: 'grid',
+            styles: { fontSize: 8 }
+        });
+        y = doc.lastAutoTable.finalY + 6;
+    }
+
     if (y > 255) { doc.addPage(); y = 20; }
     // Classification governance note (see WHITEPAPER.md Appendix A: Comparative Nosological Index)
     doc.setFontSize(8);
