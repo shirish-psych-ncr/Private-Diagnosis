@@ -85,6 +85,11 @@ function computeResults() {
     setFlagSink(addFlag);
 
     selectedDomainForms().forEach(domain => {
+        if (domain.selectedForms?.includes('base') && domain.baseInstrument && domain.instrument !== 'auto:bipolartable') {
+            const questions = domain.questions.filter(q => !q.scaleId);
+            const values = questions.map(q => state.responses[domain.id + ':' + q.id]);
+            if (values.every(Number.isFinite)) instrumentResults.push(...scoreDomain({ ...domain, questions }, addFlag));
+        }
         if (domain.forms?.length) {
             selectedFormsForDomain(domain).filter(id => domain.forms.includes(id)).forEach(id => {
                 const form = CLINICAL_DATA.scales[id];
@@ -126,6 +131,33 @@ function computeResults() {
                     if (durations.length) instrumentResults.push({ name: form.name, score: 'Duration', severity: durations.join('; ') });
                 }
             }
+            return;
+        }
+
+        if (domain.forms?.length) {
+            if (domain.baseInstrument && domain.selectedForms?.includes('base')) {
+                const baseQuestions = domain.questions.filter(q => !q.scaleId);
+                const values = baseQuestions.map(q => state.responses[domain.id + ':' + q.id]);
+                if (values.every(Number.isFinite)) instrumentResults.push(scoreDomain({ ...domain, questions: baseQuestions }, addFlag));
+            }
+            const chosen = domain.selectedForms || [];
+            if (chosen.includes('base') && domain.baseInstrument) {
+                const baseQuestions = domain.questions.filter(q => !q.scaleId);
+                const values = baseQuestions.map(q => state.responses[domain.id + ':' + q.id]);
+                if (values.every(Number.isFinite)) instrumentResults.push(scoreDomain({ ...domain, questions: baseQuestions }, addFlag));
+            }
+            chosen.filter(id => domain.forms.includes(id)).forEach(id => {
+                const form = CLINICAL_DATA.scales[id];
+                const questions = form.parts.flatMap(part => part.questions);
+                const values = questions.map(q => state.responses[id + ':' + q.id]);
+                if (!values.every(Number.isFinite)) return;
+                let rows;
+                if (directScorers[id]) rows = directScorers[id](values, questions, form);
+                else if (form.sumScores) rows = scoreItemSums(values, form);
+                else if (form.meanScores) rows = scoreMeans(values, form);
+                else return;
+                instrumentResults.push(...rows);
+            });
             return;
         }
 

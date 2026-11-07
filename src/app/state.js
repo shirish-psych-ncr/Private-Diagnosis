@@ -44,6 +44,8 @@ export function selectedDomainForms() {
             return { id: choice, directForm: true, name: form.name, timeframe: form.directions, contextFields: form.contextFields, durationOptions: form.durationOptions, attribution: form.attribution, questions };
         }
         if (Array.isArray(choice)) return { ...domain, selectedForms: choice, questions: domain.questions.filter(q => !q.scaleId || choice.includes(q.scaleId)) };
+        if (domain.forms?.length && !choice) return { ...domain, selectedForms: [], questions: domain.questions.filter(q => !q.scaleId) };
+        if (domain.forms?.length && choice === 'base') return { ...domain, selectedForms: ['base'], questions: domain.questions.filter(q => !q.scaleId) };
         if (!choice || choice === 'all') return domain;
         return { ...domain, questions: domain.questions.filter(q => !q.scaleId || q.scaleId === choice) };
     });

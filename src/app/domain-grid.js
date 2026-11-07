@@ -33,19 +33,20 @@ function renderDomainGrid() {
             choices.className = 'scale-choice';
             choices.hidden = !cb.checked;
             const savedChoice = state.scaleChoices.get(domain.id);
+            const defaultIds = forms.length ? [] : [...ids];
+            if (domain.baseInstrument || domain.originalLabel) defaultIds.push('base');
+            else defaultIds.push(...ids);
             const selected = new Set(Array.isArray(savedChoice)
                 ? savedChoice
-                : savedChoice === 'all' ? [...ids, ...forms]
-                    : [savedChoice].filter(Boolean));
+                : savedChoice === 'all' ? defaultIds
+                    : savedChoice ? [savedChoice] : defaultIds);
             const choicesLabel = document.createElement('span');
             choicesLabel.textContent = state.lang === 'hi' ? 'प्रश्नावलियाँ चुनें' : 'Choose scales';
             choices.append(choicesLabel);
             const available = [];
             if (domain.baseInstrument || domain.originalLabel) available.push(['base', domain.baseInstrument || domain.originalLabel, null]);
-            for (const id of ids) {
-                const prefix = domain.baseInstrument ? domain.baseInstrument + ' + ' : '';
-                available.push([id, prefix + t('form.' + id, L(CLINICAL_DATA.scales[id].name)), CLINICAL_DATA.scales[id]]);
-            }
+            if (!domain.baseInstrument && !domain.originalLabel) for (const id of ids)
+                available.push([id, t('form.' + id, L(CLINICAL_DATA.scales[id].name)), CLINICAL_DATA.scales[id]]);
             for (const id of forms) available.push([id, L(CLINICAL_DATA.scales[id].name), CLINICAL_DATA.scales[id]]);
             available.forEach(([id, name, scale]) => {
                 const label = document.createElement('label');
@@ -59,7 +60,7 @@ function renderDomainGrid() {
                     else state.scaleChoices.delete(domain.id);
                 });
                 const count = scale ? scale.parts.flatMap(part => part.questions).length : null;
-                label.append(input, document.createTextNode(' ' + name + (count == null ? '' : ' (' + count + ' items)')));
+                label.append(input, document.createTextNode(' ' + name + (count == null ? '' : ' (' + count + (state.lang === 'hi' ? ' प्रश्न' : ' items') + ')')));
                 choices.append(label);
             });
         }

@@ -26,29 +26,6 @@ function bindStaticUI() {
         contrastBtn.setAttribute('aria-pressed', String(on));
     });
 
-    const consentCheck = document.getElementById('consent-check');
-    consentCheck.addEventListener('change', () => {
-        document.getElementById('consent-btn').disabled = !consentCheck.checked;
-    });
-
-    // Stage 0 -> 1 gate: consent must be actively granted first. The button
-    // is normally disabled until the box is checked, but keyboard/AT users
-    // (and any future layout where the button stays enabled) get the same
-    // standard inline-alert treatment as every other Continue gate.
-    const consentError = document.getElementById('consent-error');
-    const validateConsent = () => {
-        const ok = Boolean(consentCheck.checked);
-        if (consentError) consentError.classList.toggle('hidden', ok);
-        return ok;
-    };
-    validateConsent.alertEl = consentError;
-    document.getElementById('consent-btn').addEventListener('click', () => {
-        continueTo(validateConsent, () => {
-            state.consent = true;
-            revealStage(1);
-        });
-    });
-
     // Stage 1 -> 2 gate: age group is required for adaptive instrument routing.
     const contextAgeError = document.getElementById('context-age-error');
     const validateContext = () => {

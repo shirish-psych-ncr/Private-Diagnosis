@@ -106,6 +106,12 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
     return false;
   };
   pickDomain('sleep'); pickDomain('mood'); pickDomain('anxiety');
+  document.querySelectorAll('#domain-list .scale-choice input[type="checkbox"]').forEach(input => {
+    if (input.value === 'isi' || input.value === 'base' || input.value === 'biss') { input.checked = true; input.dispatchEvent(new window.Event('change', { bubbles: true })); }
+  });
+  document.querySelectorAll('#domain-list .scale-choice input[type="checkbox"]').forEach(input => {
+    if (input.value === 'base' || input.value === 'biss') { input.checked = true; input.dispatchEvent(new window.Event('change', { bubbles: true })); }
+  });
   document.getElementById('domains-next').click();
   await ready; await sleep(50);
   check('advanced to stage 3 (scales)', document.getElementById('stage-3').classList.contains('active'));
@@ -239,9 +245,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   await ready; await sleep(50);
   check('somatic domain present in grid', pickDomain('somatic'));
   {
-    const choice = document.querySelector('input[value="somatic"]').closest('div').querySelector('select');
-    choice.value = 'all';
-    choice.dispatchEvent(new window.Event('change'));
+    document.querySelectorAll('.scale-choice input[type="checkbox"]').forEach(input => { input.checked = true; input.dispatchEvent(new window.Event('change', { bubbles: true })); });
   }
   document.getElementById('domains-next').click();
   await ready; await sleep(50);
@@ -297,9 +301,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   await ready; await sleep(50);
   check('somatic domain present in grid', pickDomain('somatic'));
   {
-    const choice = document.querySelector('input[value="somatic"]').closest('div').querySelector('select');
-    choice.value = 'all';
-    choice.dispatchEvent(new window.Event('change'));
+    document.querySelectorAll('.scale-choice input[type="checkbox"]').forEach(input => { input.checked = true; input.dispatchEvent(new window.Event('change', { bubbles: true })); });
   }
   document.getElementById('domains-next').click();
   await ready; await sleep(50);
@@ -313,9 +315,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   check('incomplete FAC22-SR blocks results', !document.getElementById('stage-4').classList.contains('active'));
 
   document.querySelector('[data-back="2"]').click();
-  const single = document.querySelector('input[value="somatic"]').closest('div').querySelector('select');
-  single.value = 'phq15';
-  single.dispatchEvent(new window.Event('change'));
+  document.querySelectorAll('.scale-choice input[type="checkbox"]').forEach(input => { input.checked = input.value === 'phq15'; input.dispatchEvent(new window.Event('change', { bubbles: true })); });
   document.getElementById('domains-next').click();
   check('unselected FAC22 is hidden', !document.querySelector('input[name^="fac22_sr:"]'));
   document.getElementById('scales-finish').click();
@@ -333,9 +333,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   await ready; await sleep(50);
   check('wellbeing domain available for K10', pickDomain('wellbeing'));
   {
-    const select = document.querySelector('input[value="wellbeing"]').closest('div').querySelector('select');
-    select.value = 'k10';
-    select.dispatchEvent(new window.Event('change', { bubbles: true }));
+    document.querySelectorAll('.scale-choice input[type="checkbox"]').forEach(input => { input.checked = input.value === 'k10'; input.dispatchEvent(new window.Event('change', { bubbles: true })); });
   }
   document.getElementById('domains-next').click();
   await ready; await sleep(70);
@@ -358,9 +356,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   await ready; await sleep(50);
   pickDomain('mood');
   {
-    const select = document.querySelector('input[value="mood"]').closest('div').querySelector('select');
-    select.value = 'hcl32';
-    select.dispatchEvent(new window.Event('change', { bubbles: true }));
+    document.querySelectorAll('.scale-choice input[type="checkbox"]').forEach(input => { input.checked = input.value === 'hcl32'; input.dispatchEvent(new window.Event('change', { bubbles: true })); });
   }
   document.getElementById('domains-next').click();
   await ready; await sleep(70);
@@ -387,8 +383,7 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
     document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
     await ready; await sleep(40);
     pickDomain('mood');
-    const choice = document.querySelector('input[value="mood"]').closest('div').querySelector('select');
-    choice.value = id; choice.dispatchEvent(new window.Event('change', { bubbles: true }));
+    document.querySelectorAll('.scale-choice input[type="checkbox"]').forEach(input => { input.checked = input.value === id; input.dispatchEvent(new window.Event('change', { bubbles: true })); });
     document.getElementById('domains-next').click();
     await ready; await sleep(60);
     const promptCount = new Set(Array.from(document.querySelectorAll('#scale-container input[name^="' + id + ':"]')).map(input => input.name)).size;

@@ -9,6 +9,7 @@ import { state, setClinicalData } from './state.js';
  * 2. BOOTSTRAP — load clinical logic JSON, then render.
  * ------------------------------------------------------------------ */
 async function boot() {
+    bindConsentUI();
     try {
         setClinicalData(await loadClinicalData());
     } catch (err) {
@@ -22,6 +23,25 @@ async function boot() {
     // Only the consent stage is revealed on load. Stages 1-4 remain hidden
     // until their Continue controls validate and reveal them in sequence.
     revealStage(0);
+}
+
+function bindConsentUI() {
+    const consentCheck = document.getElementById('consent-check');
+    const consentButton = document.getElementById('consent-btn');
+    const consentError = document.getElementById('consent-error');
+    consentCheck.addEventListener('change', () => {
+        consentButton.disabled = !consentCheck.checked;
+        consentError?.classList.add('hidden');
+    });
+    consentButton.addEventListener('click', () => {
+        if (!consentCheck.checked) {
+            consentError?.classList.remove('hidden');
+            consentError?.focus();
+            return;
+        }
+        state.consent = true;
+        revealStage(1);
+    });
 }
 
 function showError(err) {

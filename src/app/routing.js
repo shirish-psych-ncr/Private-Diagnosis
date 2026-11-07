@@ -24,7 +24,7 @@ function routeInstruments() {
                 instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
             });
         } else if (OPTIONAL_TABLE_ROUTES.includes(instName)) {
-            if (instName === 'auto:bipolartable' && domain.baseInstrument) {
+            if (instName === 'auto:bipolartable' && domain.baseInstrument && (domain.selectedForms || []).includes('base')) {
                 // The mood domain keeps its own PHQ-9 item set as the primary
                 // instrument; the BISS rides along underneath as an optional
                 // clinician-rated table.
@@ -32,19 +32,36 @@ function routeInstruments() {
             }
             // Several prompts can refer to the same questionnaire.
             domain.questions.forEach(q => {
+                if (instName === 'auto:bipolartable' && q.scaleId === 'biss') {
+                    if ((domain.selectedForms || []).includes('biss') && !deployed.some(entry => entry.domain === domain && entry.scaleId === q.scaleId))
+                        deployed.push({ domain, scaleId: q.scaleId, instrumentLabel: null, ratingTable: true });
+                    return;
+                }
                 if (!selectedFormsForDomain(domain).includes(q.scaleId)) return;
                 if (!q.scaleId || deployed.some(entry => entry.domain === domain && entry.scaleId === q.scaleId)) return;
                 deployed.push({ domain, scaleId: q.scaleId, instrumentLabel: null, ratingTable: true });
             });
+            if (instName === 'auto:bipolartable' && (domain.selectedForms || []).includes('base') && !deployed.some(entry => entry.domain === domain && !entry.scaleId))
+                deployed.push({ domain, scaleId: null, instrumentLabel: domain.baseInstrument });
         } else {
             const chosen = domain.selectedForms || [];
-            if (chosen.length && (domain.forms || []).length) {
-                chosen.filter(id => domain.forms.includes(id)).forEach(id => deployed.push({
+            if (!chosen.length && domain.forms?.length) return;
+            if (domain.forms?.length && !chosen.includes('base') && domain.baseInstrument) {
+                chosen.filter(id => domain.questions.some(q => q.scaleId === id)).forEach(id => {
+                    if (deployed.some(entry => entry.domain === domain && entry.scaleId === id)) return;
+                    deployed.push({ domain, scaleId: id, ratingTable: true, instrumentLabel: null });
+                });
+            }
+            if (chosen.includes('base') && domain.baseInstrument) {
+                deployed.push({ domain: { ...domain, questions: domain.questions.filter(q => !q.scaleId || chosen.includes(q.scaleId)) }, scaleId: null, instrumentLabel: domain.baseInstrument });
+            }
+            const chosenForms = chosen.filter(id => (domain.forms || []).includes(id));
+            if (chosenForms.length) {
+                chosenForms.forEach(id => deployed.push({
                     domain: { ...domain, id, directForm: true }, scaleId: id, instrumentLabel: null
                 }));
-                if (chosen.includes('base') || !chosen.some(id => domain.forms.includes(id)))
-                    deployed.push({ domain: { ...domain, questions: domain.questions.filter(q => !q.scaleId || chosen.includes(q.scaleId)) }, scaleId: null, instrumentLabel: instName });
-            } else deployed.push({ domain, scaleId: null, instrumentLabel: instName });
+            }
+            if (!chosen.includes('base') && !chosenForms.length && !domain.forms?.length) deployed.push({ domain, scaleId: null, instrumentLabel: instName });
         }
     });
     return deployed;

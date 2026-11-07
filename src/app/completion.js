@@ -4,11 +4,24 @@ import { selectedDomainForms, selectedFormsForDomain, state, CLINICAL_DATA } fro
 function firstUnanswered() {
     for (const domain of selectedDomainForms()) {
         if (domain.forms?.length) {
+            if (domain.baseInstrument && domain.selectedForms?.includes('base')) {
+                for (const q of domain.questions.filter(q => !q.scaleId))
+                    if (state.responses[domain.id + ':' + q.id] === undefined) return domain.id + ':' + q.id;
+            }
+            if ((domain.selectedForms || []).includes('base') && domain.baseInstrument) {
+                for (const q of domain.questions.filter(q => !q.scaleId))
+                    if (state.responses[domain.id + ':' + q.id] === undefined) return domain.id + ':' + q.id;
+            }
             for (const id of selectedFormsForDomain(domain).filter(id => domain.forms.includes(id))) {
                 const form = CLINICAL_DATA.scales[id];
                 for (const q of form.parts.flatMap(part => part.questions))
                     if (state.responses[id + ':' + q.id] === undefined) return id + ':' + q.id;
             }
+            continue;
+        }
+        if (domain.selectedForms?.includes('base') && domain.baseInstrument === 'phq9') {
+            for (const q of domain.questions.filter(q => !q.scaleId))
+                if (state.responses[domain.id + ':' + q.id] === undefined) return domain.id + ':' + q.id;
         }
         if (domain.instrument === 'auto:adhd' && ['pediatric', 'schoolage', 'adolescent'].includes(state.context.ageGroup)) {
             const vadrs = CLINICAL_DATA.scales.vadrs;
