@@ -37,6 +37,35 @@ const { casesFor, setCase } = require('./scoring_cases');
         }
         return main.namespace.computeResults().instrumentResults;
     }
+    const newAnxietyForms = [
+        ['hama', 14, 56, 'clinician'], ['pswq', 16, 80, 'self-report'], ['bai', 21, 63, 'self-report'],
+        ['pdss_sr', 7, null, 'self-report'], ['mia', 55, null, 'self-report'],
+        ['lsas', 48, null, 'self-report'], ['bfne', 12, 60, 'self-report'], ['hads', 14, null, 'self-report']
+    ];
+    for (const [id, n, max, role] of newAnxietyForms) {
+        const form = data.scales[id];
+        assert.ok(form, id + ' is loaded');
+        assert.equal(form.administeredBy, role, id + ' administration role');
+        assert.equal(form.parts.flatMap(part => part.questions).length, n, id + ' item count');
+        const rows = report('anxiety', id, () => id === 'mia' ? 0 : 1);
+        assert.ok(rows.length > 0, id + ' returns score rows');
+        if (max) assert.equal(rows[0].score, (id === 'hama' ? 14 : id === 'pswq' ? 36 : id === 'bfne' ? 28 : 21) + '/' + max, id + ' score range/scoring');
+        if (id === 'pdss_sr') assert.equal(rows[0].score, '1.00/4');
+        if (id === 'hads') assert.deepEqual(Array.from(rows, row => row.score), ['7/21', '7/21']);
+        if (id === 'lsas') assert.deepEqual(Array.from(rows, row => row.score), ['24/72', '24/72', '48/144']);
+        if (id === 'mia') assert.ok(rows.every(row => row.severity === 'No applicable situations rated'));
+    }
+    assert.equal(data.scales.ies_r.parts.flatMap(part => part.questions).length, 22);
+    const iesRows = report('trauma', 'ies_r', () => 2);
+    assert.deepEqual(Array.from(iesRows, row => row.score), ['44/88', '2.00/4', '2.00/4', '2.00/4']);
+    assert.equal(data.scales.asds.parts.flatMap(part => part.questions).length, 20);
+    assert.equal(report('trauma', 'asds', () => 1)[0].score, '20/100');
+    assert.equal(data.scales.panss.administeredBy, 'clinician');
+    assert.equal(data.scales.panss.parts.flatMap(part => part.questions).length, 30);
+    assert.deepEqual(Array.from(report('psychosis', 'panss', () => 1), row => row.score),
+        ['7/49', '7/49', '16/112', '30/210']);
+    assert.deepEqual(Array.from(report('psychosis', 'panss', () => 7), row => row.score),
+        ['49/49', '49/49', '112/112', '210/210']);
     assert.deepEqual(Array.from(report('gender', 'ugds_gs', q =>
         ['u1', 'u3', 'u4', 'u5'].includes(q.id) ? 5 : 1), r => r.score), ['5.00/5', '1.00/5']);
     assert.equal(report('trauma', 'itq', () => 2)[0].severity, 'CPTSD screening pattern');

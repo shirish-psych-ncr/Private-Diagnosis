@@ -1,0 +1,1113 @@
+{
+  "id": "caps5",
+  "name": "Clinician-Administered PTSD Scale for DSM-5 (CAPS-5), Past Month",
+  "directions": "For qualified interviewers with formal structured-interview training only. Use the attached official CAPS-5 prompts, scoring conventions, and index-event inquiry. Enter each clinician severity rating after considering frequency and intensity; do not read rating anchors to the respondent. Trauma-relatedness is required for items 9 and 11–20. The results are an algorithmic criteria tally for clinician review, not a diagnosis.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Absent"
+    },
+    {
+      "v": 1,
+      "label": "1 - Mild / subthreshold"
+    },
+    {
+      "v": 2,
+      "label": "2 - Moderate / threshold"
+    },
+    {
+      "v": 3,
+      "label": "3 - Severe / markedly elevated"
+    },
+    {
+      "v": 4,
+      "label": "4 - Extreme / incapacitating"
+    }
+  ],
+  "contextFields": [
+    {
+      "id": "index_event",
+      "label": "Index traumatic event (record only what is needed for this assessment)"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Criterion A and PTSD symptom severities",
+      "questions": [
+        {
+          "id": "caps5_1",
+          "itemNumber": 1,
+          "text": "Intrusive memories",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_2",
+          "itemNumber": 2,
+          "text": "Distressing dreams",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_3",
+          "itemNumber": 3,
+          "text": "Dissociative reactions or flashbacks",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_4",
+          "itemNumber": 4,
+          "text": "Psychological distress at reminders",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_5",
+          "itemNumber": 5,
+          "text": "Physiological reactions to reminders",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_6",
+          "itemNumber": 6,
+          "text": "Avoidance of memories, thoughts, or feelings",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_7",
+          "itemNumber": 7,
+          "text": "Avoidance of external reminders",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_8",
+          "itemNumber": 8,
+          "text": "Inability to recall an important aspect",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_9",
+          "itemNumber": 9,
+          "text": "Exaggerated negative beliefs or expectations",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_10",
+          "itemNumber": 10,
+          "text": "Distorted cognitions leading to blame",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_11",
+          "itemNumber": 11,
+          "text": "Persistent negative emotional state",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_12",
+          "itemNumber": 12,
+          "text": "Diminished interest or participation",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_13",
+          "itemNumber": 13,
+          "text": "Detachment or estrangement from others",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_14",
+          "itemNumber": 14,
+          "text": "Persistent inability to experience positive emotions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_15",
+          "itemNumber": 15,
+          "text": "Irritable behavior and angry outbursts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_16",
+          "itemNumber": 16,
+          "text": "Reckless or self-destructive behavior",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_17",
+          "itemNumber": 17,
+          "text": "Hypervigilance",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_18",
+          "itemNumber": 18,
+          "text": "Exaggerated startle response",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_19",
+          "itemNumber": 19,
+          "text": "Problems with concentration",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_20",
+          "itemNumber": 20,
+          "text": "Sleep disturbance",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trauma-relatedness ratings",
+      "questions": [
+        {
+          "id": "caps5_tr_9",
+          "itemName": "Item 9: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_11",
+          "itemName": "Item 11: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_12",
+          "itemName": "Item 12: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_13",
+          "itemName": "Item 13: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_14",
+          "itemName": "Item 14: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_15",
+          "itemName": "Item 15: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_16",
+          "itemName": "Item 16: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_17",
+          "itemName": "Item 17: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_18",
+          "itemName": "Item 18: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_19",
+          "itemName": "Item 19: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_20",
+          "itemName": "Item 20: trauma-relatedness",
+          "text": "Rate the relationship of this symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Criteria, functioning, and global ratings",
+      "questions": [
+        {
+          "id": "caps5_a",
+          "itemName": "Criterion A",
+          "text": "Exposure to actual or threatened death, serious injury, or sexual violence established by the clinician?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No"
+            },
+            {
+              "v": 1,
+              "label": "1 - Yes"
+            }
+          ]
+        },
+        {
+          "id": "caps5_21",
+          "itemNumber": 21,
+          "text": "Delayed onset: did full diagnostic criteria first occur more than six months after the event?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No"
+            },
+            {
+              "v": 1,
+              "label": "1 - Yes"
+            }
+          ]
+        },
+        {
+          "id": "caps5_22",
+          "itemNumber": 22,
+          "text": "Has the disturbance lasted more than one month?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No"
+            },
+            {
+              "v": 1,
+              "label": "1 - Yes"
+            }
+          ]
+        },
+        {
+          "id": "caps5_23",
+          "itemNumber": 23,
+          "text": "Subjective distress associated with symptoms",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No adverse impact"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild impact"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate impact"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe impact"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme impact"
+            }
+          ]
+        },
+        {
+          "id": "caps5_24",
+          "itemNumber": 24,
+          "text": "Impairment in social functioning",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No adverse impact"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild impact"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate impact"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe impact"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme impact"
+            }
+          ]
+        },
+        {
+          "id": "caps5_25",
+          "itemNumber": 25,
+          "text": "Impairment in occupational or another important area",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No adverse impact"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild impact"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate impact"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe impact"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme impact"
+            }
+          ]
+        },
+        {
+          "id": "caps5_26",
+          "itemNumber": 26,
+          "text": "Global validity of responses",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Excellent validity"
+            },
+            {
+              "v": 1,
+              "label": "1 - Good validity"
+            },
+            {
+              "v": 2,
+              "label": "2 - Fair validity"
+            },
+            {
+              "v": 3,
+              "label": "3 - Poor validity"
+            },
+            {
+              "v": 4,
+              "label": "4 - Invalid responses"
+            }
+          ]
+        },
+        {
+          "id": "caps5_27",
+          "itemNumber": 27,
+          "text": "Global severity of PTSD symptoms",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No clinically significant symptoms"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme"
+            }
+          ]
+        },
+        {
+          "id": "caps5_28",
+          "itemNumber": 28,
+          "text": "Global improvement since previous rating",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Asymptomatic"
+            },
+            {
+              "v": 1,
+              "label": "1 - Considerable improvement"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate improvement"
+            },
+            {
+              "v": 3,
+              "label": "3 - Slight improvement"
+            },
+            {
+              "v": 4,
+              "label": "4 - No improvement"
+            },
+            {
+              "v": 5,
+              "label": "5 - Insufficient information"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dissociative symptoms",
+      "questions": [
+        {
+          "id": "caps5_29",
+          "itemNumber": 29,
+          "text": "Depersonalization",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_29",
+          "itemName": "Item 29: trauma-relatedness",
+          "text": "Rate the relationship of this dissociative symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        },
+        {
+          "id": "caps5_30",
+          "itemNumber": 30,
+          "text": "Derealization",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild / subthreshold"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate / threshold"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe / markedly elevated"
+            },
+            {
+              "v": 4,
+              "label": "4 - Extreme / incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "caps5_tr_30",
+          "itemName": "Item 30: trauma-relatedness",
+          "text": "Rate the relationship of this dissociative symptom to the index trauma.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Definite"
+            },
+            {
+              "v": 1,
+              "label": "Probable"
+            },
+            {
+              "v": 2,
+              "label": "Unlikely"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "CAPS-5 Past Month, user-provided authorized material. Clinician administration and independent clinical judgment required."
+}

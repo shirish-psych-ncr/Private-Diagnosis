@@ -1,0 +1,23 @@
+{
+  "id":"hads","name":"Hospital Anxiety and Depression Scale (HADS)",
+  "directions":"Self-report about how you have felt during the past week. For each statement choose the one response closest to your experience. Each subscale has seven items; use the supplied scoring guide and clinical context.",
+  "ageGroups":["adult","older"],"administeredBy":"self-report",
+  "matrixOptions":[{"v":0,"label":"0"},{"v":1,"label":"1"},{"v":2,"label":"2"},{"v":3,"label":"3"}],
+  "parts":[{"name":"HADS items","questions":[
+    {"id":"hads_1","text":"I feel tense or wound up","definition":"0 Not at all; 1 From time to time; 2 A lot of the time; 3 Most of the time.","subscale":"anxiety"},
+    {"id":"hads_2","text":"I still enjoy the things I used to enjoy","definition":"0 Definitely as much; 1 Not quite so much; 2 Only a little; 3 Hardly at all.","subscale":"depression"},
+    {"id":"hads_3","text":"I get a frightened feeling as if something awful is about to happen","definition":"0 Not at all; 1 A little, doesn't worry me; 2 Yes, but not too badly; 3 Very definitely and quite badly.","subscale":"anxiety"},
+    {"id":"hads_4","text":"I can laugh and see the funny side of things","definition":"0 As much as always; 1 Not quite so much; 2 Definitely not so much; 3 Not at all.","subscale":"depression"},
+    {"id":"hads_5","text":"Worrying thoughts go through my mind","definition":"0 Only occasionally; 1 From time to time; 2 A lot of the time; 3 A great deal of the time.","subscale":"anxiety"},
+    {"id":"hads_6","text":"I feel cheerful","definition":"0 Most of the time; 1 Sometimes; 2 Not often; 3 Not at all.","subscale":"depression"},
+    {"id":"hads_7","text":"I can sit at ease and feel relaxed","definition":"0 Definitely; 1 Usually; 2 Not often; 3 Not at all.","subscale":"anxiety"},
+    {"id":"hads_8","text":"I feel as if I am slowed down","definition":"0 Not at all; 1 Sometimes; 2 Very often; 3 Nearly all the time.","subscale":"depression"},
+    {"id":"hads_9","text":"I get a frightened feeling like butterflies in the stomach","definition":"0 Not at all; 1 Occasionally; 2 Quite often; 3 Very often.","subscale":"anxiety"},
+    {"id":"hads_10","text":"I have lost interest in my appearance","definition":"0 Take just as much care as ever; 1 May not take quite as much care; 2 Don't take as much care as I should; 3 Definitely.","subscale":"depression"},
+    {"id":"hads_11","text":"I feel restless as if I have to be on the move","definition":"0 Not at all; 1 Not very much; 2 Quite a lot; 3 Very much indeed.","subscale":"anxiety"},
+    {"id":"hads_12","text":"I look forward with enjoyment to things","definition":"0 As much as ever; 1 Rather less; 2 Definitely less; 3 Hardly at all.","subscale":"depression"},
+    {"id":"hads_13","text":"I get sudden feelings of panic","definition":"0 Not at all; 1 Not very often; 2 Quite often; 3 Very often indeed.","subscale":"anxiety"},
+    {"id":"hads_14","text":"I can enjoy a good book, radio or TV programme","definition":"0 Often; 1 Sometimes; 2 Not often; 3 Very seldom.","subscale":"depression"}
+  ]}],
+  "attribution":"Zigmond AS, Snaith RP. The Hospital Anxiety and Depression Scale. Acta Psychiatr Scand. 1983;67:361–370."
+}

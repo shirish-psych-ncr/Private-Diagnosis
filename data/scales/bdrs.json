@@ -1,0 +1,14 @@
+{
+  "id":"bdrs","name":"Bipolar Depression Rating Scale (BDRS)",
+  "directions":"Clinician-rated for current symptoms or the last few days. For sleep and appetite, rate either the decrease or increase direction as instructed by the source form. This scale includes a suicide item; endorsement opens the safety support pathway. It is not diagnostic.",
+  "ageGroups":["adult","older"],"administeredBy":"clinician",
+  "matrixOptions":[{"v":0,"label":"0 — Nil"},{"v":1,"label":"1 — Mild"},{"v":2,"label":"2 — Moderate"},{"v":3,"label":"3 — Severe"}],
+  "parts":[{"name":"BDRS clinician ratings","clinicianRated":true,"questions":[
+    {"id":"bdrs_1","text":"Depressed mood","scoreMax":3,"definition":"Rate observed or reported gloom, sadness, pessimism, hopelessness or helplessness."},
+    {"id":"bdrs_2","text":"Sleep disturbance — insomnia OR hypersomnia","scoreMax":3,"definition":"Select one direction. Insomnia: reduction in total sleep time (mild up to 2 h; moderate 2–4 h; severe over 4 h). Hypersomnia: increase in total sleep time including daytime sleep (mild under 2 h/non-restorative; moderate over 2 h; severe over 4 h)."},
+    {"id":"bdrs_3","text":"Appetite disturbance — loss OR increase","scoreMax":3,"definition":"Select one direction. Loss: from pushing oneself to eat to marked reduction. Increase: from increased hunger to marked increase/cravings."},
+    {"id":"bdrs_4","text":"Reduced social engagement","scoreMax":3},{"id":"bdrs_5","text":"Reduced energy and activity","scoreMax":3},{"id":"bdrs_6","text":"Reduced motivation","scoreMax":3},{"id":"bdrs_7","text":"Impaired concentration and memory","scoreMax":3},{"id":"bdrs_8","text":"Anxiety","scoreMax":3},{"id":"bdrs_9","text":"Anhedonia","scoreMax":3},{"id":"bdrs_10","text":"Affective flattening","scoreMax":3},{"id":"bdrs_11","text":"Worthlessness","scoreMax":3},{"id":"bdrs_12","text":"Helplessness and hopelessness","scoreMax":3},
+    {"id":"bdrs_13","text":"Suicidal ideation","scoreMax":3,"safety":true,"safetyMin":1,"definition":"0 nil; 1 life not worthwhile/meaningless; 2 thoughts of death without active suicide thoughts or plans; 3 thoughts or plans of suicide."},
+    {"id":"bdrs_14","text":"Guilt","scoreMax":3},{"id":"bdrs_15","text":"Psychotic symptoms","scoreMax":3},{"id":"bdrs_16","text":"Irritability","scoreMax":3},{"id":"bdrs_17","text":"Lability","scoreMax":3},{"id":"bdrs_18","text":"Increased motor drive","scoreMax":3},{"id":"bdrs_19","text":"Increased speech","scoreMax":3},{"id":"bdrs_20","text":"Agitation","scoreMax":3}
+  ]}],"attribution":"Bipolar Depression Rating Scale (BDRS); use and score according to the supplied authorized form and manual."
+}

@@ -322,6 +322,94 @@ function check(name, cond) { console.log((cond ? 'PASS' : 'FAIL') + ' - ' + name
   check('chosen PHQ-15 alone can finish', document.getElementById('stage-4').classList.contains('active'));
   check('report excludes unselected form', !/FAC22/i.test(document.getElementById('report-content').textContent));
 
+  // K10 is an optional wellbeing form and must complete through the same journey.
+  resetApp();
+  await ready; await sleep(60);
+  document.getElementById('consent-check').checked = true;
+  document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
+  document.getElementById('consent-btn').click();
+  document.getElementById('age-group').value = 'adult';
+  document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+  await ready; await sleep(50);
+  check('wellbeing domain available for K10', pickDomain('wellbeing'));
+  {
+    const select = document.querySelector('input[value="wellbeing"]').closest('div').querySelector('select');
+    select.value = 'k10';
+    select.dispatchEvent(new window.Event('change', { bubbles: true }));
+  }
+  document.getElementById('domains-next').click();
+  await ready; await sleep(70);
+  check('K10 selection loads ten prompts', document.querySelectorAll('#scale-container input[name^="k10:"]').length === 50);
+  Array.from(document.querySelectorAll('#scale-container input[name^="k10:"][value="3"]'))
+    .forEach(r => { r.checked = true; r.dispatchEvent(new window.Event('change', { bubbles: true })); });
+  document.getElementById('scales-finish').click();
+  await ready; await sleep(100);
+  const k10Report = document.getElementById('report-content').textContent;
+  check('K10 results show descriptive 30/50 total', /Kessler Psychological Distress Scale \(K10\)[\s\S]{0,180}?30\s*\/\s*50/.test(k10Report));
+  check('K10 report includes attribution and non-diagnostic language', /Kessler et al\. \(2003\)/.test(k10Report) && /does not establish a diagnosis/i.test(k10Report));
+
+  resetApp();
+  await ready; await sleep(60);
+  document.getElementById('consent-check').checked = true;
+  document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
+  document.getElementById('consent-btn').click();
+  document.getElementById('age-group').value = 'adult';
+  document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+  await ready; await sleep(50);
+  pickDomain('mood');
+  {
+    const select = document.querySelector('input[value="mood"]').closest('div').querySelector('select');
+    select.value = 'hcl32';
+    select.dispatchEvent(new window.Event('change', { bubbles: true }));
+  }
+  document.getElementById('domains-next').click();
+  await ready; await sleep(70);
+  check('HCL-32 selection loads 32 yes/no prompts', document.querySelectorAll('#scale-container input[name^="hcl32:"]').length === 64);
+  Array.from(document.querySelectorAll('#scale-container input[name^="hcl32:"][value="1"]'))
+    .forEach(r => { r.checked = true; r.dispatchEvent(new window.Event('change', { bubbles: true })); });
+  document.getElementById('scales-finish').click();
+  await ready; await sleep(100);
+  const hclReport = document.getElementById('report-content').textContent;
+  check('HCL-32 results show descriptive 32/32 total', /Hypomania Checklist \(HCL-32-R1\)[\s\S]{0,180}?32\s*\/\s*32/.test(hclReport));
+  check('HCL-32 result remains non-diagnostic', /does not establish a bipolar-spectrum diagnosis/i.test(hclReport));
+
+  for (const [id, count, max, role] of [
+    ['hdrs17',17,52,'Clinician-rated'], ['madrs',10,60,'Clinician-rated'],
+    ['ymrs',11,60,'Clinician-rated'], ['bdrs',20,60,'Clinician-rated'],
+    ['bdi_ii',21,63,'Self-report']
+  ]) {
+    resetApp();
+    await ready; await sleep(40);
+    document.getElementById('consent-check').checked = true;
+    document.getElementById('consent-check').dispatchEvent(new window.Event('change', { bubbles: true }));
+    document.getElementById('consent-btn').click();
+    document.getElementById('age-group').value = 'adult';
+    document.getElementById('context-form').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+    await ready; await sleep(40);
+    pickDomain('mood');
+    const choice = document.querySelector('input[value="mood"]').closest('div').querySelector('select');
+    choice.value = id; choice.dispatchEvent(new window.Event('change', { bubbles: true }));
+    document.getElementById('domains-next').click();
+    await ready; await sleep(60);
+    const promptCount = new Set(Array.from(document.querySelectorAll('#scale-container input[name^="' + id + ':"]')).map(input => input.name)).size;
+    check(id + ' loads all prompts with role shown', promptCount === count && document.getElementById('scale-container').textContent.includes(role));
+    for (const name of new Set(Array.from(document.querySelectorAll('#scale-container input[name^="' + id + ':"]')).map(input => input.name))) {
+      const input = document.querySelector('#scale-container input[name="' + name + '"][value="0"]');
+      if (input) { input.checked = true; input.dispatchEvent(new window.Event('change', { bubbles: true })); }
+    }
+    if (id === 'bdi_ii') {
+      const safety = document.querySelector('#scale-container input[name="bdi_ii:bdi2_9"][value="1"]');
+      safety.checked = true; safety.dispatchEvent(new window.Event('change', { bubbles: true }));
+      check('BDI-II self-harm endorsement opens safety support', !document.getElementById('safety-modal').classList.contains('hidden'));
+      document.getElementById('safety-close').click();
+      const none = document.querySelector('#scale-container input[name="bdi_ii:bdi2_9"][value="0"]');
+      none.checked = true; none.dispatchEvent(new window.Event('change', { bubbles: true }));
+    }
+    document.getElementById('scales-finish').click();
+    await ready; await sleep(70);
+    check(id + ' scoring uses the correct maximum', new RegExp('0\\s*/\\s*' + max).test(document.getElementById('report-content').textContent));
+  }
+
   console.log('\n' + (failures === 0 ? 'ALL TESTS PASSED' : failures + ' FAILURES'));
   process.exit(failures === 0 ? 0 : 1);
 })().catch(e => { console.error('TEST HARNESS ERROR:', e); process.exit(2); });

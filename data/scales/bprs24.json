@@ -1,0 +1,991 @@
+{
+  "id": "bprs24",
+  "name": "Expanded Brief Psychiatric Rating Scale (BPRS-24)",
+  "directions": "Clinician-rated present condition using the supplied interview and observation manual. Mark 0 when an item was not assessed; 1–7 are the severity anchors. Scores summarize rated symptoms and do not diagnose.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Not assessed"
+    },
+    {
+      "v": 1,
+      "label": "1 - Not present"
+    },
+    {
+      "v": 2,
+      "label": "2 - Very mild"
+    },
+    {
+      "v": 3,
+      "label": "3 - Mild"
+    },
+    {
+      "v": 4,
+      "label": "4 - Moderate"
+    },
+    {
+      "v": 5,
+      "label": "5 - Moderately severe"
+    },
+    {
+      "v": 6,
+      "label": "6 - Severe"
+    },
+    {
+      "v": 7,
+      "label": "7 - Extremely severe"
+    }
+  ],
+  "parts": [
+    {
+      "name": "24 symptom constructs",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "bprs24_1",
+          "itemNumber": 1,
+          "text": "Somatic concern",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_2",
+          "itemNumber": 2,
+          "text": "Anxiety",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_3",
+          "itemNumber": 3,
+          "text": "Depression",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_4",
+          "itemNumber": 4,
+          "text": "Suicidality",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ],
+          "safety": true,
+          "safetyMin": 4
+        },
+        {
+          "id": "bprs24_5",
+          "itemNumber": 5,
+          "text": "Guilt",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_6",
+          "itemNumber": 6,
+          "text": "Hostility",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_7",
+          "itemNumber": 7,
+          "text": "Elated mood",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_8",
+          "itemNumber": 8,
+          "text": "Grandiosity",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_9",
+          "itemNumber": 9,
+          "text": "Suspiciousness",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_10",
+          "itemNumber": 10,
+          "text": "Hallucinations",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_11",
+          "itemNumber": 11,
+          "text": "Unusual thought content",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_12",
+          "itemNumber": 12,
+          "text": "Bizarre behaviour",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_13",
+          "itemNumber": 13,
+          "text": "Self-neglect",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_14",
+          "itemNumber": 14,
+          "text": "Disorientation",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_15",
+          "itemNumber": 15,
+          "text": "Conceptual disorganisation",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_16",
+          "itemNumber": 16,
+          "text": "Blunted affect",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_17",
+          "itemNumber": 17,
+          "text": "Emotional withdrawal",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_18",
+          "itemNumber": 18,
+          "text": "Motor retardation",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_19",
+          "itemNumber": 19,
+          "text": "Tension",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_20",
+          "itemNumber": 20,
+          "text": "Uncooperativeness",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_21",
+          "itemNumber": 21,
+          "text": "Excitement",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_22",
+          "itemNumber": 22,
+          "text": "Distractibility",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_23",
+          "itemNumber": 23,
+          "text": "Motor hyperactivity",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        },
+        {
+          "id": "bprs24_24",
+          "itemNumber": 24,
+          "text": "Mannerisms and posturing",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not assessed"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not present"
+            },
+            {
+              "v": 2,
+              "label": "2 - Very mild"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extremely severe"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "BPRS-24 source text supplied by the user; use the matching clinician manual and version."
+}

@@ -52,8 +52,9 @@ function syncAssessmentProgress() {
     const progress = document.getElementById('assessment-progress');
     if (!progress) return;
     const groups = new Map();
-    document.querySelectorAll('#scale-container input[type="radio"]').forEach(input => {
-        groups.set(input.name, (groups.get(input.name) || false) || input.checked);
+    document.querySelectorAll('#scale-container input[type="radio"], #scale-container input[type="number"], #scale-container input[type="time"]').forEach(input => {
+        const key = input.name || input.id;
+        groups.set(key, (groups.get(key) || false) || (input.type === 'radio' ? input.checked : input.value !== ''));
     });
     const answered = [...groups.values()].filter(Boolean).length;
     progress.textContent = t('scales.progress').replace('{answered}', String(answered)).replace('{total}', String(groups.size));

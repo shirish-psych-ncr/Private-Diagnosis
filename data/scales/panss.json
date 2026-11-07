@@ -1,0 +1,18 @@
+{
+  "id":"panss","name":"Positive and Negative Syndrome Scale (PANSS)",
+  "directions":"Clinician-rated for the past week. Use the authorized PANSS item definitions and rating anchors; assessment requires trained clinical judgment. Scores are symptom severity ratings, not a diagnosis.",
+  "ageGroups":["adult","older"],"administeredBy":"clinician",
+  "matrixOptions":[{"v":1,"label":"1 — Absent"},{"v":2,"label":"2 — Minimal"},{"v":3,"label":"3 — Mild"},{"v":4,"label":"4 — Moderate"},{"v":5,"label":"5 — Moderate-severe"},{"v":6,"label":"6 — Severe"},{"v":7,"label":"7 — Extreme"}],
+  "parts":[
+    {"name":"Positive symptoms (P)","clinicianRated":true,"questions":[
+      {"id":"panss_p1","text":"P1. Delusions","subscale":"positive"},{"id":"panss_p2","text":"P2. Conceptual disorganization","subscale":"positive"},{"id":"panss_p3","text":"P3. Hallucinatory behavior","subscale":"positive"},{"id":"panss_p4","text":"P4. Excitement","subscale":"positive"},{"id":"panss_p5","text":"P5. Grandiosity","subscale":"positive"},{"id":"panss_p6","text":"P6. Suspiciousness/persecution","subscale":"positive"},{"id":"panss_p7","text":"P7. Hostility","subscale":"positive"}
+    ]},
+    {"name":"Negative symptoms (N)","clinicianRated":true,"questions":[
+      {"id":"panss_n1","text":"N1. Blunted affect","subscale":"negative"},{"id":"panss_n2","text":"N2. Emotional withdrawal","subscale":"negative"},{"id":"panss_n3","text":"N3. Poor rapport","subscale":"negative"},{"id":"panss_n4","text":"N4. Passive/apathetic social withdrawal","subscale":"negative"},{"id":"panss_n5","text":"N5. Difficulty in abstract thinking","subscale":"negative"},{"id":"panss_n6","text":"N6. Lack of spontaneity and flow of conversation","subscale":"negative"},{"id":"panss_n7","text":"N7. Stereotyped thinking","subscale":"negative"}
+    ]},
+    {"name":"General psychopathology (G)","clinicianRated":true,"questions":[
+      {"id":"panss_g1","text":"G1. Somatic concern","subscale":"general"},{"id":"panss_g2","text":"G2. Anxiety","subscale":"general"},{"id":"panss_g3","text":"G3. Guilt feelings","subscale":"general"},{"id":"panss_g4","text":"G4. Tension","subscale":"general"},{"id":"panss_g5","text":"G5. Mannerisms and posturing","subscale":"general"},{"id":"panss_g6","text":"G6. Depression","subscale":"general"},{"id":"panss_g7","text":"G7. Motor retardation","subscale":"general"},{"id":"panss_g8","text":"G8. Uncooperativeness","subscale":"general"},{"id":"panss_g9","text":"G9. Unusual thought content","subscale":"general"},{"id":"panss_g10","text":"G10. Disorientation","subscale":"general"},{"id":"panss_g11","text":"G11. Poor attention","subscale":"general"},{"id":"panss_g12","text":"G12. Lack of judgment and insight","subscale":"general"},{"id":"panss_g13","text":"G13. Disturbance of volition","subscale":"general"},{"id":"panss_g14","text":"G14. Poor impulse control","subscale":"general"},{"id":"panss_g15","text":"G15. Preoccupation","subscale":"general"},{"id":"panss_g16","text":"G16. Active social avoidance","subscale":"general"}
+    ]}
+  ],
+  "attribution":"Positive and Negative Syndrome Scale (PANSS). User-provided text and online redistribution rights. Follow the authorized manual and item anchors."
+}

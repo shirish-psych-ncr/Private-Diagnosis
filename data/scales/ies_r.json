@@ -1,0 +1,31 @@
+{
+  "id":"ies_r","name":"Impact of Event Scale–Revised (IES-R)",
+  "directions":"Thinking about the specified stressful event, rate how distressing each difficulty has been during the past seven days: 0 not at all, 1 a little bit, 2 moderately, 3 quite a bit, 4 extremely. This is a symptom measure, not a diagnosis.",
+  "ageGroups":["adult","older"],"administeredBy":"self-report",
+  "matrixOptions":[{"v":0,"label":"0 — Not at all"},{"v":1,"label":"1 — A little bit"},{"v":2,"label":"2 — Moderately"},{"v":3,"label":"3 — Quite a bit"},{"v":4,"label":"4 — Extremely"}],
+  "parts":[{"name":"IES-R items","questions":[
+    {"id":"iesr_1","text":"Any reminder brought back feelings about it.","subscale":"intrusion"},
+    {"id":"iesr_2","text":"I had trouble staying asleep.","subscale":"intrusion"},
+    {"id":"iesr_3","text":"Other things kept making me think about it.","subscale":"intrusion"},
+    {"id":"iesr_4","text":"I felt irritable and angry.","subscale":"hyperarousal"},
+    {"id":"iesr_5","text":"I avoided letting myself get upset when I thought about it or was reminded of it.","subscale":"avoidance"},
+    {"id":"iesr_6","text":"I thought about it when I did not mean to.","subscale":"intrusion"},
+    {"id":"iesr_7","text":"I felt as if it had not happened or was not real.","subscale":"avoidance"},
+    {"id":"iesr_8","text":"I stayed away from reminders of it.","subscale":"avoidance"},
+    {"id":"iesr_9","text":"Pictures about it popped into my mind.","subscale":"intrusion"},
+    {"id":"iesr_10","text":"I was jumpy and easily startled.","subscale":"hyperarousal"},
+    {"id":"iesr_11","text":"I tried not to think about it.","subscale":"avoidance"},
+    {"id":"iesr_12","text":"I was aware I still had a lot of feelings about it, but I did not deal with them.","subscale":"avoidance"},
+    {"id":"iesr_13","text":"My feelings about it were kind of numb.","subscale":"avoidance"},
+    {"id":"iesr_14","text":"I found myself acting or feeling like I was back at that time.","subscale":"intrusion"},
+    {"id":"iesr_15","text":"I had trouble falling asleep.","subscale":"hyperarousal"},
+    {"id":"iesr_16","text":"I had waves of strong feelings about it.","subscale":"intrusion"},
+    {"id":"iesr_17","text":"I tried to remove it from my memory.","subscale":"avoidance"},
+    {"id":"iesr_18","text":"I had trouble concentrating.","subscale":"hyperarousal"},
+    {"id":"iesr_19","text":"Reminders caused physical reactions such as sweating, trouble breathing, nausea or a pounding heart.","subscale":"hyperarousal"},
+    {"id":"iesr_20","text":"I had dreams about it.","subscale":"intrusion"},
+    {"id":"iesr_21","text":"I felt watchful and on-guard.","subscale":"hyperarousal"},
+    {"id":"iesr_22","text":"I tried not to talk about it.","subscale":"avoidance"}
+  ]}],
+  "attribution":"Impact of Event Scale–Revised (IES-R). User-provided version and online redistribution rights. Subscale definitions follow the supplied packet."
+}

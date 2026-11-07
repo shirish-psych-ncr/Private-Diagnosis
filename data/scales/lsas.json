@@ -1,0 +1,324 @@
+{
+  "id": "lsas",
+  "name": "Liebowitz Social Anxiety Scale (LSAS)",
+  "directions": "Self-report about the past week. Rate fear and avoidance separately for each situation. Fear: 0 none, 1 mild, 2 moderate, 3 severe. Avoidance: 0 never, 1 occasionally, 2 often, 3 usually.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "self-report",
+  "matrixOptions": [
+    {
+      "label": "0",
+      "v": 0
+    },
+    {
+      "label": "1",
+      "v": 1
+    },
+    {
+      "label": "2",
+      "v": 2
+    },
+    {
+      "label": "3",
+      "v": 3
+    }
+  ],
+  "parts": [
+    {
+      "questions": [
+        {
+          "id": "lsas_1_fear",
+          "text": "Using a telephone in public — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_1_avoid",
+          "text": "Using a telephone in public — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_2_fear",
+          "text": "Participating in a small group activity — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_2_avoid",
+          "text": "Participating in a small group activity — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_3_fear",
+          "text": "Eating in public — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_3_avoid",
+          "text": "Eating in public — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_4_fear",
+          "text": "Drinking with others — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_4_avoid",
+          "text": "Drinking with others — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_5_fear",
+          "text": "Talking to someone in authority — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_5_avoid",
+          "text": "Talking to someone in authority — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_6_fear",
+          "text": "Acting, performing, or speaking in front of an audience — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_6_avoid",
+          "text": "Acting, performing, or speaking in front of an audience — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_7_fear",
+          "text": "Going to a party — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_7_avoid",
+          "text": "Going to a party — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_8_fear",
+          "text": "Working while being observed — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_8_avoid",
+          "text": "Working while being observed — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_9_fear",
+          "text": "Writing while being observed — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_9_avoid",
+          "text": "Writing while being observed — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_10_fear",
+          "text": "Calling someone not known very well — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_10_avoid",
+          "text": "Calling someone not known very well — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_11_fear",
+          "text": "Talking face-to-face with someone not known very well — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_11_avoid",
+          "text": "Talking face-to-face with someone not known very well — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_12_fear",
+          "text": "Meeting strangers — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_12_avoid",
+          "text": "Meeting strangers — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_13_fear",
+          "text": "Urinating in a public bathroom — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_13_avoid",
+          "text": "Urinating in a public bathroom — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_14_fear",
+          "text": "Entering a room when others are already seated — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_14_avoid",
+          "text": "Entering a room when others are already seated — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_15_fear",
+          "text": "Being the centre of attention — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_15_avoid",
+          "text": "Being the centre of attention — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_16_fear",
+          "text": "Speaking up at a meeting — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_16_avoid",
+          "text": "Speaking up at a meeting — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_17_fear",
+          "text": "Taking a test of your ability, skill, or knowledge — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_17_avoid",
+          "text": "Taking a test of your ability, skill, or knowledge — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_18_fear",
+          "text": "Expressing disagreement or disapproval to someone not known very well — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_18_avoid",
+          "text": "Expressing disagreement or disapproval to someone not known very well — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_19_fear",
+          "text": "Looking someone not known very well straight in the eyes — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_19_avoid",
+          "text": "Looking someone not known very well straight in the eyes — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_20_fear",
+          "text": "Giving a prepared oral talk to a group — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_20_avoid",
+          "text": "Giving a prepared oral talk to a group — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_21_fear",
+          "text": "Trying to make an acquaintance for a romantic or sexual relationship — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_21_avoid",
+          "text": "Trying to make an acquaintance for a romantic or sexual relationship — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_22_fear",
+          "text": "Returning goods to a store for a refund — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_22_avoid",
+          "text": "Returning goods to a store for a refund — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_23_fear",
+          "text": "Giving a party — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_23_avoid",
+          "text": "Giving a party — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        },
+        {
+          "id": "lsas_24_fear",
+          "text": "Resisting a high-pressure salesperson — fear",
+          "scoreMax": 3,
+          "subscale": "fear"
+        },
+        {
+          "id": "lsas_24_avoid",
+          "text": "Resisting a high-pressure salesperson — avoidance",
+          "scoreMax": 3,
+          "subscale": "avoidance"
+        }
+      ],
+      "name": "LSAS fear and avoidance ratings"
+    }
+  ],
+  "attribution": "Liebowitz MR. Source form supplied by user."
+}

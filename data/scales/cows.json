@@ -1,0 +1,283 @@
+{
+  "id": "cows",
+  "name": "Clinical Opiate Withdrawal Scale (COWS)",
+  "directions": "Clinician-rated signs and symptoms attributed to opiate withdrawal. Consider other causes before scoring. Rate all eleven items using the item-specific anchors. Total is the sum of item scores.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - 80 or below"
+    },
+    {
+      "v": 1,
+      "label": "1 - 81–100"
+    },
+    {
+      "v": 2,
+      "label": "2 - 101–120"
+    },
+    {
+      "v": 4,
+      "label": "4 - Above 120"
+    }
+  ],
+  "parts": [
+    {
+      "name": "11 withdrawal signs and symptoms",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "cows_pulse",
+          "text": "Resting pulse rate after sitting or lying for one minute",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - 80 or below"
+            },
+            {
+              "v": 1,
+              "label": "1 - 81–100"
+            },
+            {
+              "v": 2,
+              "label": "2 - 101–120"
+            },
+            {
+              "v": 4,
+              "label": "4 - Above 120"
+            }
+          ]
+        },
+        {
+          "id": "cows_sweating",
+          "text": "Sweating over the last half hour, not accounted for by room temperature or activity",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No chills or flushing reported"
+            },
+            {
+              "v": 1,
+              "label": "1 - Subjective chills or flushing"
+            },
+            {
+              "v": 2,
+              "label": "2 - Flushed or observable facial moistness"
+            },
+            {
+              "v": 3,
+              "label": "3 - Beads of sweat on brow or face"
+            },
+            {
+              "v": 4,
+              "label": "4 - Sweat streaming off face"
+            }
+          ]
+        },
+        {
+          "id": "cows_restlessness",
+          "text": "Restlessness observed during assessment",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Able to sit still"
+            },
+            {
+              "v": 1,
+              "label": "1 - Reports difficulty but can sit still"
+            },
+            {
+              "v": 3,
+              "label": "3 - Frequent shifting or extraneous limb movements"
+            },
+            {
+              "v": 5,
+              "label": "5 - Unable to sit still for more than a few seconds"
+            }
+          ]
+        },
+        {
+          "id": "cows_pupils",
+          "text": "Pupil size",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Pinned or normal for room light"
+            },
+            {
+              "v": 1,
+              "label": "1 - Possibly larger than normal"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderately dilated"
+            },
+            {
+              "v": 5,
+              "label": "5 - So dilated that only the iris rim is visible"
+            }
+          ]
+        },
+        {
+          "id": "cows_aches",
+          "text": "Bone or joint aches attributable to withdrawal",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not present"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild diffuse discomfort"
+            },
+            {
+              "v": 2,
+              "label": "2 - Reports severe diffuse aching"
+            },
+            {
+              "v": 4,
+              "label": "4 - Rubbing joints or muscles; unable to sit still because of discomfort"
+            }
+          ]
+        },
+        {
+          "id": "cows_runny_nose",
+          "text": "Runny nose or tearing not accounted for by cold or allergies",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not present"
+            },
+            {
+              "v": 1,
+              "label": "1 - Nasal stuffiness or unusually moist eyes"
+            },
+            {
+              "v": 2,
+              "label": "2 - Nose running or tearing"
+            },
+            {
+              "v": 4,
+              "label": "4 - Nose constantly running or tears streaming"
+            }
+          ]
+        },
+        {
+          "id": "cows_gi",
+          "text": "Gastrointestinal upset over the last half hour",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No GI symptoms"
+            },
+            {
+              "v": 1,
+              "label": "1 - Stomach cramps"
+            },
+            {
+              "v": 2,
+              "label": "2 - Nausea or loose stool"
+            },
+            {
+              "v": 3,
+              "label": "3 - Vomiting or diarrhea"
+            },
+            {
+              "v": 5,
+              "label": "5 - Multiple episodes of diarrhea or vomiting"
+            }
+          ]
+        },
+        {
+          "id": "cows_tremor",
+          "text": "Tremor with outstretched hands",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No tremor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Felt but not observed"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slight tremor observable"
+            },
+            {
+              "v": 4,
+              "label": "4 - Gross tremor or muscle twitching"
+            }
+          ]
+        },
+        {
+          "id": "cows_yawning",
+          "text": "Yawning observed during assessment",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Once or twice"
+            },
+            {
+              "v": 2,
+              "label": "2 - Three or more times"
+            },
+            {
+              "v": 4,
+              "label": "4 - Several times per minute"
+            }
+          ]
+        },
+        {
+          "id": "cows_anxiety",
+          "text": "Anxiety or irritability",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Reports increasing irritability or anxiousness"
+            },
+            {
+              "v": 2,
+              "label": "2 - Obviously irritable or anxious"
+            },
+            {
+              "v": 4,
+              "label": "4 - So irritable or anxious participation is difficult"
+            }
+          ]
+        },
+        {
+          "id": "cows_gooseflesh",
+          "text": "Gooseflesh skin",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Skin is smooth"
+            },
+            {
+              "v": 3,
+              "label": "3 - Piloerection can be felt or hairs standing on arms"
+            },
+            {
+              "v": 5,
+              "label": "5 - Prominent piloerection"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "Clinical Opiate Withdrawal Scale (COWS), user-provided instrument and scoring bands."
+}

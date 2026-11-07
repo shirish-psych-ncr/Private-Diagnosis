@@ -1,0 +1,23 @@
+{
+  "id":"hama","name":"Hamilton Anxiety Rating Scale (HAM-A)",
+  "directions":"Clinician-rated. Select one severity for each of 14 items based on the clinical interview. 0 not present, 1 mild, 2 moderate, 3 severe, 4 very severe.",
+  "ageGroups":["adult","older"],"administeredBy":"clinician",
+  "matrixOptions":[{"v":0,"label":"0 — Not present"},{"v":1,"label":"1 — Mild"},{"v":2,"label":"2 — Moderate"},{"v":3,"label":"3 — Severe"},{"v":4,"label":"4 — Very severe"}],
+  "parts":[{"name":"HAM-A clinician ratings","clinicianRated":true,"questions":[
+    {"id":"hama_1","text":"Anxious mood","definition":"Worries, anticipation of the worst, fearful anticipation, irritability."},
+    {"id":"hama_2","text":"Tension","definition":"Tension, fatigability, startle response, trembling, restlessness or inability to relax."},
+    {"id":"hama_3","text":"Fears","definition":"Fear of dark, strangers, being left alone, animals, traffic or crowds."},
+    {"id":"hama_4","text":"Insomnia","definition":"Difficulty falling asleep, broken/unsatisfying sleep, fatigue on waking, dreams or nightmares."},
+    {"id":"hama_5","text":"Intellectual symptoms","definition":"Difficulty concentrating or poor memory."},
+    {"id":"hama_6","text":"Depressed mood","definition":"Loss of interest or pleasure, depression, early waking or diurnal swing."},
+    {"id":"hama_7","text":"Somatic symptoms: muscular","definition":"Pains, aches, twitching, stiffness, jerks, teeth grinding or increased muscle tone."},
+    {"id":"hama_8","text":"Somatic symptoms: sensory","definition":"Tinnitus, blurred vision, hot/cold flushes, weakness or prickling sensations."},
+    {"id":"hama_9","text":"Cardiovascular symptoms","definition":"Tachycardia, palpitations, chest pain, throbbing vessels or fainting feelings."},
+    {"id":"hama_10","text":"Respiratory symptoms","definition":"Chest pressure, choking feelings, sighing or dyspnoea."},
+    {"id":"hama_11","text":"Gastrointestinal symptoms","definition":"Swallowing difficulty, abdominal symptoms, nausea, vomiting or bowel changes."},
+    {"id":"hama_12","text":"Genitourinary symptoms","definition":"Urinary frequency/urgency or reproductive/sexual symptoms described in the source form."},
+    {"id":"hama_13","text":"Autonomic symptoms","definition":"Dry mouth, flushing, pallor, sweating, giddiness or tension headache."},
+    {"id":"hama_14","text":"Behaviour at interview","definition":"Fidgeting, pacing, hand tremor, furrowed brow, sighing or rapid respiration."}
+  ]}],
+  "attribution":"Hamilton M. The assessment of anxiety states by rating. Br J Med Psychol. 1959;32:50–55. Supplied text identifies HAM-A as public domain."
+}

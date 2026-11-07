@@ -1,0 +1,140 @@
+{
+  "id": "psyrats",
+  "name": "Psychotic Symptom Rating Scales (PSYRATS)",
+  "directions": "Clinician-rated dimensions of auditory hallucinations and delusions. Rate each item using the provided 0–4 anchors and the relevant interview guidance.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Absent / none"
+    },
+    {
+      "v": 1,
+      "label": "1 - Mild"
+    },
+    {
+      "v": 2,
+      "label": "2 - Moderate"
+    },
+    {
+      "v": 3,
+      "label": "3 - Severe"
+    },
+    {
+      "v": 4,
+      "label": "4 - Extreme"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Auditory hallucinations",
+      "questions": [
+        {
+          "id": "psyrats_a_1",
+          "text": "Frequency of auditory hallucinations"
+        },
+        {
+          "id": "psyrats_a_2",
+          "text": "Duration of auditory hallucinations"
+        },
+        {
+          "id": "psyrats_a_3",
+          "text": "Location of voices"
+        },
+        {
+          "id": "psyrats_a_4",
+          "text": "Loudness of voices"
+        },
+        {
+          "id": "psyrats_a_5",
+          "text": "Beliefs about the origin of voices"
+        },
+        {
+          "id": "psyrats_a_6",
+          "text": "Amount of negative content"
+        },
+        {
+          "id": "psyrats_a_7",
+          "text": "Degree of negative content"
+        },
+        {
+          "id": "psyrats_a_8",
+          "text": "Amount of distress"
+        },
+        {
+          "id": "psyrats_a_9",
+          "text": "Intensity of distress"
+        },
+        {
+          "id": "psyrats_a_10",
+          "text": "Disruption to life caused by voices"
+        },
+        {
+          "id": "psyrats_a_11",
+          "text": "Controllability of voices"
+        }
+      ]
+    },
+    {
+      "name": "Delusions",
+      "questions": [
+        {
+          "id": "psyrats_d_1",
+          "text": "Amount of preoccupation with delusions"
+        },
+        {
+          "id": "psyrats_d_2",
+          "text": "Duration of preoccupation with delusions"
+        },
+        {
+          "id": "psyrats_d_3",
+          "text": "Conviction in delusional beliefs"
+        },
+        {
+          "id": "psyrats_d_4",
+          "text": "Amount of distress caused by delusions"
+        },
+        {
+          "id": "psyrats_d_5",
+          "text": "Intensity of distress caused by delusions"
+        },
+        {
+          "id": "psyrats_d_6",
+          "text": "Disruption to life caused by delusions"
+        }
+      ]
+    }
+  ],
+  "attribution": "Source: user-provided instrument text. Use with the correct administration instructions and clinical context.",
+  "sumScores": {
+    "groups": {
+      "Auditory hallucinations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "Delusions": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "total": true,
+    "multiplier": 1
+  }
+}

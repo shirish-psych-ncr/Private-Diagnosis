@@ -21,7 +21,11 @@
   ],
   "forms": [
     "rgpts",
-    "asi"
+    "asi",
+    "panss",
+    "psyrats",
+    "bprs24",
+    "panss6"
   ],
   "originalLabel": "CAARMS"
 }

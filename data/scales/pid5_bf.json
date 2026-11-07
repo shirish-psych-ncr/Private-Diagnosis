@@ -1,0 +1,198 @@
+{
+  "id": "pid5_bf",
+  "name": "Personality Inventory for DSM-5 - Brief Form (PID-5-BF), Adult",
+  "directions": "For adults 18+. Describe yourself generally; choose one response for each statement. Review responses clinically. The source permits prorating only within stated missing-item limits; this app requires all 25 responses before calculating scores. Higher raw and average scores indicate greater trait expression, not a diagnosis.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "self-report",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Very false or often false"
+    },
+    {
+      "v": 1,
+      "label": "1 - Sometimes or somewhat false"
+    },
+    {
+      "v": 2,
+      "label": "2 - Sometimes or somewhat true"
+    },
+    {
+      "v": 3,
+      "label": "3 - Very true or often true"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Personality trait statements",
+      "questions": [
+        {
+          "id": "pid5bf_1",
+          "itemNumber": 1,
+          "text": "People would describe me as reckless."
+        },
+        {
+          "id": "pid5bf_2",
+          "itemNumber": 2,
+          "text": "I feel like I act totally on impulse."
+        },
+        {
+          "id": "pid5bf_3",
+          "itemNumber": 3,
+          "text": "Even though I know better, I can’t stop making rash decisions."
+        },
+        {
+          "id": "pid5bf_4",
+          "itemNumber": 4,
+          "text": "I often feel like nothing I do really matters."
+        },
+        {
+          "id": "pid5bf_5",
+          "itemNumber": 5,
+          "text": "Others see me as irresponsible."
+        },
+        {
+          "id": "pid5bf_6",
+          "itemNumber": 6,
+          "text": "I’m not good at planning ahead."
+        },
+        {
+          "id": "pid5bf_7",
+          "itemNumber": 7,
+          "text": "My thoughts often don’t make sense to others."
+        },
+        {
+          "id": "pid5bf_8",
+          "itemNumber": 8,
+          "text": "I worry about almost everything."
+        },
+        {
+          "id": "pid5bf_9",
+          "itemNumber": 9,
+          "text": "I get emotional easily, often for very little reason."
+        },
+        {
+          "id": "pid5bf_10",
+          "itemNumber": 10,
+          "text": "I fear being alone in life more than anything else."
+        },
+        {
+          "id": "pid5bf_11",
+          "itemNumber": 11,
+          "text": "I get stuck on one way of doing things, even when it’s clear it won’t work."
+        },
+        {
+          "id": "pid5bf_12",
+          "itemNumber": 12,
+          "text": "I have seen things that weren’t really there."
+        },
+        {
+          "id": "pid5bf_13",
+          "itemNumber": 13,
+          "text": "I steer clear of romantic relationships."
+        },
+        {
+          "id": "pid5bf_14",
+          "itemNumber": 14,
+          "text": "I’m not interested in making friends."
+        },
+        {
+          "id": "pid5bf_15",
+          "itemNumber": 15,
+          "text": "I get irritated easily by all sorts of things."
+        },
+        {
+          "id": "pid5bf_16",
+          "itemNumber": 16,
+          "text": "I don’t like to get too close to people."
+        },
+        {
+          "id": "pid5bf_17",
+          "itemNumber": 17,
+          "text": "It’s no big deal if I hurt other people’s feelings."
+        },
+        {
+          "id": "pid5bf_18",
+          "itemNumber": 18,
+          "text": "I rarely get enthusiastic about anything."
+        },
+        {
+          "id": "pid5bf_19",
+          "itemNumber": 19,
+          "text": "I crave attention."
+        },
+        {
+          "id": "pid5bf_20",
+          "itemNumber": 20,
+          "text": "I often have to deal with people who are less important than me."
+        },
+        {
+          "id": "pid5bf_21",
+          "itemNumber": 21,
+          "text": "I often have thoughts that make sense to me but that other people say are strange."
+        },
+        {
+          "id": "pid5bf_22",
+          "itemNumber": 22,
+          "text": "I use people to get what I want."
+        },
+        {
+          "id": "pid5bf_23",
+          "itemNumber": 23,
+          "text": "I often “zone out” and then suddenly come to and realize that a lot of time has passed."
+        },
+        {
+          "id": "pid5bf_24",
+          "itemNumber": 24,
+          "text": "Things around me often feel unreal, or more real than usual."
+        },
+        {
+          "id": "pid5bf_25",
+          "itemNumber": 25,
+          "text": "It is easy for me to take advantage of others."
+        }
+      ]
+    }
+  ],
+  "traitGroups": {
+    "Negative affect": [
+      8,
+      9,
+      10,
+      11,
+      15
+    ],
+    "Detachment": [
+      4,
+      13,
+      14,
+      16,
+      18
+    ],
+    "Antagonism": [
+      17,
+      19,
+      20,
+      22,
+      25
+    ],
+    "Disinhibition": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "Psychoticism": [
+      7,
+      12,
+      21,
+      23,
+      24
+    ]
+  },
+  "attribution": "PID-5-BF adult, user-provided material. Copyright and permitted clinical use as stated in the supplied form."
+}

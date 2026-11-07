@@ -22,7 +22,9 @@
   "forms": [
     "dmqr",
     "aase_temptation",
-    "aase_confidence"
+    "aase_confidence",
+    "cows",
+    "ciwa_ar"
   ],
   "originalLabel": "AUDITC"
 }

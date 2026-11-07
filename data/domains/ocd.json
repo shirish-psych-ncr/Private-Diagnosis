@@ -1,0 +1,18 @@
+{
+  "id": "ocd",
+  "name": {
+    "en": "Obsessions and compulsions",
+    "hi": "Obsessions and compulsions"
+  },
+  "questions": [],
+  "forms": [
+    "oci_r",
+    "docs",
+    "ybocs",
+    "ybocs2",
+    "cybocs",
+    "cois_rc",
+    "bdd_ybocs"
+  ],
+  "defaultForm": "oci_r"
+}

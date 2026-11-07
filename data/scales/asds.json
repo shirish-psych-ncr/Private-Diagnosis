@@ -1,0 +1,29 @@
+{
+  "id":"asds","name":"Acute Stress Disorder Scale — supplied COVID-19 version",
+  "directions":"The supplied form asks about recent feelings related to COVID-19. Rate each item from 1 (not at all) to 5 (very much). This COVID-19-framed version is not presented as the original validated ASDS or as a diagnosis.",
+  "ageGroups":["adult","older"],"administeredBy":"self-report",
+  "matrixOptions":[{"v":1,"label":"1 — Not at all"},{"v":2,"label":"2 — Mildly"},{"v":3,"label":"3 — Medium"},{"v":4,"label":"4 — Quite a bit"},{"v":5,"label":"5 — Very much"}],
+  "parts":[{"name":"Recent stress reactions","questions":[
+    {"id":"asds_1","text":"Have you felt numb or distant from your emotions?"},
+    {"id":"asds_2","text":"Have you ever felt in a daze?"},
+    {"id":"asds_3","text":"Have things around you ever felt unreal or dreamlike?"},
+    {"id":"asds_4","text":"Have you ever felt distant from your normal self, as if watching it happen from outside?"},
+    {"id":"asds_5","text":"Have you been unable to recall important aspects of things that happened?"},
+    {"id":"asds_6","text":"Have memories of things that happened kept entering your mind?"},
+    {"id":"asds_7","text":"Have you had bad dreams or nightmares?"},
+    {"id":"asds_8","text":"Have you felt as if you were reliving things that happened?"},
+    {"id":"asds_9","text":"Do you feel very upset when reminded of things that happened?"},
+    {"id":"asds_10","text":"Have you tried not to think about it?"},
+    {"id":"asds_11","text":"Have you tried not to talk about it?"},
+    {"id":"asds_12","text":"Have you tried to avoid situations or people that remind you of it?"},
+    {"id":"asds_13","text":"Have you tried not to feel upset or distressed about it?"},
+    {"id":"asds_14","text":"Have you had trouble sleeping?"},
+    {"id":"asds_15","text":"Have you felt more irritable?"},
+    {"id":"asds_16","text":"Have you had difficulty concentrating?"},
+    {"id":"asds_17","text":"Have you become more alert to danger?"},
+    {"id":"asds_18","text":"Have you become jumpy?"},
+    {"id":"asds_19","text":"When you think about it, do you sweat or tremble or does your heart beat fast?"},
+    {"id":"asds_20","text":"Thinking about all these reactions together, how much are they bothering you or getting in the way of work, relationships or other parts of life?"}
+  ]}],
+  "attribution":"Supplied source cites Bryant R, Moulds M, Guthrie R. Acute Stress Disorder Scale: a self-report measure of acute stress disorder. Psychol Assess. 2000;12(1):61–68. This supplied form is COVID-19-framed."
+}

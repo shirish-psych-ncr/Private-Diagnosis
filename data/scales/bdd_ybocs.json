@@ -1,0 +1,107 @@
+{
+  "id": "bdd_ybocs",
+  "name": "Body Dysmorphic Disorder Modification of the Y-BOCS (BDD-YBOCS), Adult",
+  "directions": "Clinician-administered for the past week. Use the attached item-specific anchors and inquiry prompts. Items 1–5 assess thoughts, 6–10 assess related activities, and items 11–12 assess insight and avoidance. Scores are descriptive and do not diagnose.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Use item-specific BDD-YBOCS anchor"
+    },
+    {
+      "v": 1,
+      "label": "1 - Use item-specific BDD-YBOCS anchor"
+    },
+    {
+      "v": 2,
+      "label": "2 - Use item-specific BDD-YBOCS anchor"
+    },
+    {
+      "v": 3,
+      "label": "3 - Use item-specific BDD-YBOCS anchor"
+    },
+    {
+      "v": 4,
+      "label": "4 - Use item-specific BDD-YBOCS anchor"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Thoughts about body defects",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "bddybocs_1",
+          "itemNumber": 1,
+          "text": "Time occupied by thoughts about body defect"
+        },
+        {
+          "id": "bddybocs_2",
+          "itemNumber": 2,
+          "text": "Interference due to thoughts about body defect"
+        },
+        {
+          "id": "bddybocs_3",
+          "itemNumber": 3,
+          "text": "Distress associated with thoughts about body defect"
+        },
+        {
+          "id": "bddybocs_4",
+          "itemNumber": 4,
+          "text": "Resistance against thoughts of body defect"
+        },
+        {
+          "id": "bddybocs_5",
+          "itemNumber": 5,
+          "text": "Degree of control over thoughts about body defect"
+        }
+      ]
+    },
+    {
+      "name": "Activities, insight, and avoidance",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "bddybocs_6",
+          "itemNumber": 6,
+          "text": "Time spent in activities related to body defect"
+        },
+        {
+          "id": "bddybocs_7",
+          "itemNumber": 7,
+          "text": "Interference due to activities related to body defect"
+        },
+        {
+          "id": "bddybocs_8",
+          "itemNumber": 8,
+          "text": "Distress associated with activities related to body defect"
+        },
+        {
+          "id": "bddybocs_9",
+          "itemNumber": 9,
+          "text": "Resistance against compulsive activities"
+        },
+        {
+          "id": "bddybocs_10",
+          "itemNumber": 10,
+          "text": "Degree of control over compulsive behavior"
+        },
+        {
+          "id": "bddybocs_11",
+          "itemNumber": 11,
+          "text": "Insight"
+        },
+        {
+          "id": "bddybocs_12",
+          "itemNumber": 12,
+          "text": "Avoidance"
+        }
+      ]
+    }
+  ],
+  "attribution": "BDD-YBOCS adult version supplied by the user; administer with its clinician prompts and scoring instructions."
+}

@@ -1,0 +1,10 @@
+{
+  "id":"bai","name":"Beck Anxiety Inventory (BAI)",
+  "directions":"Self-report. Indicate how much each symptom bothered you during the past month, including today. 0 not at all; 1 mildly; 2 moderately; 3 severely.",
+  "ageGroups":["adult","older"],"administeredBy":"self-report",
+  "matrixOptions":[{"v":0,"label":"0 — Not at all"},{"v":1,"label":"1 — Mildly"},{"v":2,"label":"2 — Moderately"},{"v":3,"label":"3 — Severely"}],
+  "parts":[{"name":"BAI items","questions":[
+    {"id":"bai_1","text":"Numbness or tingling"},{"id":"bai_2","text":"Feeling hot"},{"id":"bai_3","text":"Wobbliness in legs"},{"id":"bai_4","text":"Unable to relax"},{"id":"bai_5","text":"Fear of the worst happening"},{"id":"bai_6","text":"Dizzy or lightheaded"},{"id":"bai_7","text":"Heart pounding or racing"},{"id":"bai_8","text":"Unsteady"},{"id":"bai_9","text":"Terrified or afraid"},{"id":"bai_10","text":"Nervous"},{"id":"bai_11","text":"Feeling of choking"},{"id":"bai_12","text":"Hands trembling"},{"id":"bai_13","text":"Shaky or unsteady"},{"id":"bai_14","text":"Fear of losing control"},{"id":"bai_15","text":"Difficulty breathing"},{"id":"bai_16","text":"Fear of dying"},{"id":"bai_17","text":"Scared"},{"id":"bai_18","text":"Indigestion"},{"id":"bai_19","text":"Faint or lightheaded"},{"id":"bai_20","text":"Face flushed"},{"id":"bai_21","text":"Hot or cold sweats"}
+  ]}],
+  "attribution":"Beck AT, Epstein N, Brown G, Steer RA. An inventory for measuring clinical anxiety: psychometric properties. J Consult Clin Psychol. 1988;56:893–897."
+}

@@ -1,0 +1,259 @@
+{
+  "id": "panss6",
+  "name": "Positive and Negative Syndrome Scale - 6 Item (PANSS-6)",
+  "directions": "Clinician-rated severity over the past week. Use the PANSS 1–7 anchors and interpret change in clinical context; no absolute severity cutoff is established.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "1 - Absent"
+    },
+    {
+      "v": 2,
+      "label": "2 - Minimal"
+    },
+    {
+      "v": 3,
+      "label": "3 - Mild"
+    },
+    {
+      "v": 4,
+      "label": "4 - Moderate"
+    },
+    {
+      "v": 5,
+      "label": "5 - Moderately severe"
+    },
+    {
+      "v": 6,
+      "label": "6 - Severe"
+    },
+    {
+      "v": 7,
+      "label": "7 - Extreme"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Six core symptom ratings",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "panss6_N1",
+          "itemNumber": "N1",
+          "text": "N1. Blunted affect",
+          "scale": [
+            {
+              "v": 1,
+              "label": "1 - Absent"
+            },
+            {
+              "v": 2,
+              "label": "2 - Minimal"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extreme"
+            }
+          ]
+        },
+        {
+          "id": "panss6_P1",
+          "itemNumber": "P1",
+          "text": "P1. Delusions",
+          "scale": [
+            {
+              "v": 1,
+              "label": "1 - Absent"
+            },
+            {
+              "v": 2,
+              "label": "2 - Minimal"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extreme"
+            }
+          ]
+        },
+        {
+          "id": "panss6_N4",
+          "itemNumber": "N4",
+          "text": "N4. Passive/apathetic social withdrawal",
+          "scale": [
+            {
+              "v": 1,
+              "label": "1 - Absent"
+            },
+            {
+              "v": 2,
+              "label": "2 - Minimal"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extreme"
+            }
+          ]
+        },
+        {
+          "id": "panss6_P2",
+          "itemNumber": "P2",
+          "text": "P2. Conceptual disorganization",
+          "scale": [
+            {
+              "v": 1,
+              "label": "1 - Absent"
+            },
+            {
+              "v": 2,
+              "label": "2 - Minimal"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extreme"
+            }
+          ]
+        },
+        {
+          "id": "panss6_N6",
+          "itemNumber": "N6",
+          "text": "N6. Lack of spontaneity and flow of conversation",
+          "scale": [
+            {
+              "v": 1,
+              "label": "1 - Absent"
+            },
+            {
+              "v": 2,
+              "label": "2 - Minimal"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extreme"
+            }
+          ]
+        },
+        {
+          "id": "panss6_P3",
+          "itemNumber": "P3",
+          "text": "P3. Hallucinatory behavior",
+          "scale": [
+            {
+              "v": 1,
+              "label": "1 - Absent"
+            },
+            {
+              "v": 2,
+              "label": "2 - Minimal"
+            },
+            {
+              "v": 3,
+              "label": "3 - Mild"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderate"
+            },
+            {
+              "v": 5,
+              "label": "5 - Moderately severe"
+            },
+            {
+              "v": 6,
+              "label": "6 - Severe"
+            },
+            {
+              "v": 7,
+              "label": "7 - Extreme"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "PANSS-6 item set and scoring description supplied by the user."
+}

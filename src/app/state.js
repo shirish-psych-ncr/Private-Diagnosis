@@ -41,7 +41,7 @@ export function selectedDomainForms() {
             const questions = form.parts.flatMap(part => part.questions
                 .filter(q => !q.requires || state.responses[choice + ':' + q.requires] === 1)
                 .map((q, i) => ({ ...q, scale: q.scale ?? form.matrixOptions, section: i === 0 ? part.name : null })));
-            return { id: choice, directForm: true, name: form.name, timeframe: form.directions, contextFields: form.contextFields, durationOptions: form.durationOptions, questions };
+            return { id: choice, directForm: true, name: form.name, timeframe: form.directions, contextFields: form.contextFields, durationOptions: form.durationOptions, attribution: form.attribution, questions };
         }
         if (!choice || choice === 'all') return domain;
         return { ...domain, questions: domain.questions.filter(q => !q.scaleId || q.scaleId === choice) };

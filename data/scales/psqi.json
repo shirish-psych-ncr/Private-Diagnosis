@@ -1,0 +1,394 @@
+{
+  "id": "psqi",
+  "name": "Pittsburgh Sleep Quality Index (PSQI)",
+  "directions": "Think about your usual sleep habits during the past month. Answer for the majority of days and nights. Enter usual bed and rise times and estimated actual sleep duration.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "self-report",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Not during the past month"
+    },
+    {
+      "v": 1,
+      "label": "1 - Less than once a week"
+    },
+    {
+      "v": 2,
+      "label": "2 - Once or twice a week"
+    },
+    {
+      "v": 3,
+      "label": "3 - Three or more times a week"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Past-month sleep habits",
+      "questions": [
+        {
+          "id": "psqi_1",
+          "itemNumber": 1,
+          "text": "When have you usually gone to bed?",
+          "inputType": "time"
+        },
+        {
+          "id": "psqi_2",
+          "itemNumber": 2,
+          "text": "How long (in minutes) has it usually taken you to fall asleep each night?",
+          "inputType": "number",
+          "min": 0,
+          "max": 1440,
+          "step": 1
+        },
+        {
+          "id": "psqi_3",
+          "itemNumber": 3,
+          "text": "When have you usually gotten up in the morning?",
+          "inputType": "time"
+        },
+        {
+          "id": "psqi_4",
+          "itemNumber": 4,
+          "text": "How many hours of actual sleep do you get at night?",
+          "inputType": "number",
+          "min": 0,
+          "max": 24,
+          "step": 0.1
+        },
+        {
+          "id": "psqi_5`",
+          "itemNumber": "5a",
+          "text": "During the past month, how often have you had trouble sleeping because you: cannot get to sleep within 30 minutes?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5a",
+          "itemNumber": "5b",
+          "text": "During the past month, how often have you had trouble sleeping because you: wake up in the middle of the night or early morning?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5b",
+          "itemNumber": "5c",
+          "text": "During the past month, how often have you had trouble sleeping because you: have to get up to use the bathroom?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5c",
+          "itemNumber": "5d",
+          "text": "During the past month, how often have you had trouble sleeping because you: cannot breathe comfortably?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5d",
+          "itemNumber": "5e",
+          "text": "During the past month, how often have you had trouble sleeping because you: cough or snore loudly?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5e",
+          "itemNumber": "5f",
+          "text": "During the past month, how often have you had trouble sleeping because you: feel too cold?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5f",
+          "itemNumber": "5g",
+          "text": "During the past month, how often have you had trouble sleeping because you: feel too hot?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5g",
+          "itemNumber": "5h",
+          "text": "During the past month, how often have you had trouble sleeping because you: have bad dreams?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5h",
+          "itemNumber": "5i",
+          "text": "During the past month, how often have you had trouble sleeping because you: have pain?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_5i",
+          "itemNumber": "5j",
+          "text": "During the past month, how often have you had trouble sleeping because you: other reason?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_6",
+          "itemNumber": 6,
+          "text": "During the past month, how often have you taken medicine (prescribed or over the counter) to help you sleep?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_7",
+          "itemNumber": 7,
+          "text": "During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not during the past month"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than once a week"
+            },
+            {
+              "v": 2,
+              "label": "2 - Once or twice a week"
+            },
+            {
+              "v": 3,
+              "label": "3 - Three or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "psqi_8",
+          "itemNumber": 8,
+          "text": "During the past month, how much of a problem has it been for you to keep up enthusiasm to get things done?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No problem"
+            },
+            {
+              "v": 1,
+              "label": "1 - Very slight problem"
+            },
+            {
+              "v": 2,
+              "label": "2 - Somewhat of a problem"
+            },
+            {
+              "v": 3,
+              "label": "3 - A very big problem"
+            }
+          ]
+        },
+        {
+          "id": "psqi_9",
+          "itemNumber": 9,
+          "text": "During the past month, how would you rate your sleep quality overall?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Very good"
+            },
+            {
+              "v": 1,
+              "label": "1 - Fairly good"
+            },
+            {
+              "v": 2,
+              "label": "2 - Fairly bad"
+            },
+            {
+              "v": 3,
+              "label": "3 - Very bad"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contextFields": [
+    {
+      "id": "other_sleep_reason",
+      "label": "If you selected “Other reason” for item 5j, describe the reason."
+    }
+  ],
+  "attribution": "Pittsburgh Sleep Quality Index, source and component scoring supplied by the user. Score is descriptive and not diagnostic."
+}

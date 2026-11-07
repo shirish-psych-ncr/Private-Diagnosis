@@ -1,0 +1,915 @@
+{
+  "id": "edeq",
+  "name": "Eating Disorder Examination Questionnaire (EDE-Q 6.0)",
+  "directions": "Answer based on the past 28 days. For items 13–18, enter the number of times; item 15 asks for number of days. Other items use the response anchors shown. Frequency items are not part of the global score.",
+  "ageGroups": [
+    "adolescent",
+    "adult",
+    "older"
+  ],
+  "administeredBy": "self-report",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - No days"
+    },
+    {
+      "v": 1,
+      "label": "1 - 1–5 days"
+    },
+    {
+      "v": 2,
+      "label": "2 - 6–12 days"
+    },
+    {
+      "v": 3,
+      "label": "3 - 13–15 days"
+    },
+    {
+      "v": 4,
+      "label": "4 - 16–22 days"
+    },
+    {
+      "v": 5,
+      "label": "5 - 23–27 days"
+    },
+    {
+      "v": 6,
+      "label": "6 - Every day"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Past 28 days",
+      "questions": [
+        {
+          "id": "edeq_1",
+          "itemNumber": 1,
+          "text": "Have you been deliberately trying to limit the amount of food you eat to influence your shape or weight (whether or not you have succeeded)?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_2",
+          "itemNumber": 2,
+          "text": "Have you gone for long periods (8 waking hours or more) without eating anything to influence your shape or weight?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_3",
+          "itemNumber": 3,
+          "text": "Have you tried to exclude foods you like from your diet to influence your shape or weight?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_4",
+          "itemNumber": 4,
+          "text": "Have you tried to follow definite rules regarding your eating (for example, a calorie limit) to influence your shape or weight?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_5",
+          "itemNumber": 5,
+          "text": "Have you had a definite desire to have an empty stomach with the aim of influencing your shape or weight?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_6",
+          "itemNumber": 6,
+          "text": "Have you had a definite desire to have a totally flat stomach?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_7",
+          "itemNumber": 7,
+          "text": "Has thinking about food, eating, or calories made it very difficult to concentrate on things you are interested in?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_8",
+          "itemNumber": 8,
+          "text": "Has thinking about shape or weight made it very difficult to concentrate on things you are interested in?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_9",
+          "itemNumber": 9,
+          "text": "Have you had a definite fear of losing control over eating?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_10",
+          "itemNumber": 10,
+          "text": "Have you had a definite fear that you might gain weight?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_11",
+          "itemNumber": 11,
+          "text": "Have you felt fat?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_12",
+          "itemNumber": 12,
+          "text": "Have you had a strong desire to lose weight?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_13",
+          "itemNumber": 13,
+          "text": "How many times have you eaten what other people would regard as an unusually large amount of food (given the circumstances)?",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "edeq_14",
+          "itemNumber": 14,
+          "text": "On how many of these times did you have a sense of having lost control over your eating?",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "edeq_15",
+          "itemNumber": 15,
+          "text": "On how many days did episodes of overeating with loss of control occur?",
+          "inputType": "number",
+          "min": 0,
+          "max": 28
+        },
+        {
+          "id": "edeq_16",
+          "itemNumber": 16,
+          "text": "How many times have you made yourself sick (vomited) to control your shape or weight?",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "edeq_17",
+          "itemNumber": 17,
+          "text": "How many times have you taken laxatives to control your shape or weight?",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "edeq_18",
+          "itemNumber": 18,
+          "text": "How many times have you exercised in a driven or compulsive way to control your weight, shape, or amount of fat, or to burn calories?",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "edeq_19",
+          "itemNumber": 19,
+          "text": "On how many days have you eaten in secret? Do not count episodes of binge eating.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No days"
+            },
+            {
+              "v": 1,
+              "label": "1 - 1–5 days"
+            },
+            {
+              "v": 2,
+              "label": "2 - 6–12 days"
+            },
+            {
+              "v": 3,
+              "label": "3 - 13–15 days"
+            },
+            {
+              "v": 4,
+              "label": "4 - 16–22 days"
+            },
+            {
+              "v": 5,
+              "label": "5 - 23–27 days"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every day"
+            }
+          ]
+        },
+        {
+          "id": "edeq_20",
+          "itemNumber": 20,
+          "text": "On what proportion of the times you have eaten have you felt guilty because of its effect on your shape or weight? Do not count episodes of binge eating.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None of the times"
+            },
+            {
+              "v": 1,
+              "label": "1 - A few of the times"
+            },
+            {
+              "v": 2,
+              "label": "2 - Less than half"
+            },
+            {
+              "v": 3,
+              "label": "3 - Half of the times"
+            },
+            {
+              "v": 4,
+              "label": "4 - More than half"
+            },
+            {
+              "v": 5,
+              "label": "5 - Most of the time"
+            },
+            {
+              "v": 6,
+              "label": "6 - Every time"
+            }
+          ]
+        },
+        {
+          "id": "edeq_21",
+          "itemNumber": 21,
+          "text": "How concerned have you been about other people seeing you eat? Do not count episodes of binge eating.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        },
+        {
+          "id": "edeq_22",
+          "itemNumber": 22,
+          "text": "Has your weight influenced how you think about (judge) yourself as a person?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        },
+        {
+          "id": "edeq_23",
+          "itemNumber": 23,
+          "text": "Has your shape influenced how you think about (judge) yourself as a person?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        },
+        {
+          "id": "edeq_24",
+          "itemNumber": 24,
+          "text": "How upset would you have been if asked to weigh yourself once a week for the next four weeks?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        },
+        {
+          "id": "edeq_25",
+          "itemNumber": 25,
+          "text": "How dissatisfied have you been with your weight?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        },
+        {
+          "id": "edeq_26",
+          "itemNumber": 26,
+          "text": "How dissatisfied have you been with your shape?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        },
+        {
+          "id": "edeq_27",
+          "itemNumber": 27,
+          "text": "How uncomfortable have you felt seeing your body (for example, in a mirror, reflection, while undressing or bathing)?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        },
+        {
+          "id": "edeq_28",
+          "itemNumber": 28,
+          "text": "How uncomfortable have you felt about others seeing your shape or figure (for example, in communal changing rooms, swimming, or tight clothes)?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Not at all"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slightly"
+            },
+            {
+              "v": 2,
+              "label": "2 - Slightly"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderately"
+            },
+            {
+              "v": 4,
+              "label": "4 - Moderately"
+            },
+            {
+              "v": 5,
+              "label": "5 - Markedly"
+            },
+            {
+              "v": 6,
+              "label": "6 - Markedly"
+            }
+          ],
+          "definition": "The form labels the verbal anchors as Not at all, Slightly, Moderately, and Markedly across the 0–6 response range."
+        }
+      ]
+    }
+  ],
+  "meanScores": {
+    "groups": {
+      "Restraint": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Eating concern": [
+        7,
+        9,
+        19,
+        20,
+        21
+      ],
+      "Shape concern": [
+        6,
+        8,
+        10,
+        11,
+        23,
+        26,
+        27,
+        28
+      ],
+      "Weight concern": [
+        8,
+        12,
+        22,
+        24,
+        25
+      ]
+    },
+    "reverse": [],
+    "overall": "subscales"
+  },
+  "attribution": "Eating Disorder Examination Questionnaire, user-provided text. Scores summarize reported symptoms; they do not establish a diagnosis.",
+  "frequencyItems": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ]
+}

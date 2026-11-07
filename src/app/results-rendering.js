@@ -89,6 +89,12 @@ function renderResults() {
     });
     tbl.appendChild(tbody);
     rc.appendChild(tbl);
+    r.instrumentResults.filter(x => x.sourceNote).forEach(result => {
+        const note = document.createElement('p');
+        note.className = 'rating-register-note';
+        note.textContent = result.sourceNote;
+        rc.appendChild(note);
+    });
 
     // Clinician-rated rating tables (MINI optional assessments A & B)
     r.instrumentResults.filter(x => x.ratingRegister && x.ratingRegister.length).forEach(reg => {

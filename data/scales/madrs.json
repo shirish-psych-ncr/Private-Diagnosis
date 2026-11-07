@@ -1,0 +1,18 @@
+{
+  "id":"madrs","name":"Montgomery–Åsberg Depression Rating Scale (MADRS)",
+  "directions":"Clinician-rated from a clinical interview. Rate the stated interval and record it in the assessment notes. Choose one score from 0 to 6 for each item using the authorized item anchors. This is a severity measure, not a diagnosis or safety assessment.",
+  "ageGroups":["adult","older"],"administeredBy":"clinician",
+  "matrixOptions":[{"v":0,"label":"0"},{"v":1,"label":"1"},{"v":2,"label":"2"},{"v":3,"label":"3"},{"v":4,"label":"4"},{"v":5,"label":"5"},{"v":6,"label":"6"}],
+  "parts":[{"name":"MADRS clinician ratings","clinicianRated":true,"questions":[
+    {"id":"madrs_1","text":"Apparent sadness","scoreMax":6,"definition":"0 No sadness; 2 looks dispirited but brightens readily; 4 appears sad and unhappy most of the time; 6 miserable and extremely despondent."},
+    {"id":"madrs_2","text":"Reported sadness","scoreMax":6,"definition":"0 occasional, circumstance-appropriate sadness; 2 sad or low but brightens readily; 4 pervasive sadness still influenced by circumstances; 6 continuous misery or despondency."},
+    {"id":"madrs_3","text":"Inner tension","scoreMax":6,"definition":"0 placid, fleeting tension; 2 occasional edginess; 4 continuous tension or intermittent panic with difficulty mastering it; 6 overwhelming dread or anguish."},
+    {"id":"madrs_4","text":"Reduced sleep","scoreMax":6,"definition":"0 usual sleep; 2 slight difficulty or slightly reduced/fitful sleep; 4 sleep reduced or broken by at least two hours; 6 less than two or three hours."},
+    {"id":"madrs_5","text":"Reduced appetite","scoreMax":6,"definition":"0 normal or increased; 2 slightly reduced; 4 no appetite or food tasteless; 6 needs persuasion to eat."},
+    {"id":"madrs_6","text":"Concentration difficulties","scoreMax":6,"definition":"0 none; 2 occasional difficulty collecting thoughts; 4 difficulty sustaining thought that limits reading or conversation; 6 unable to read or converse without great difficulty."},
+    {"id":"madrs_7","text":"Lassitude","scoreMax":6,"definition":"0 hardly any difficulty starting; 2 difficulty starting activities; 4 simple routine activities require effort; 6 unable to do anything without help."},
+    {"id":"madrs_8","text":"Inability to feel","scoreMax":6,"definition":"0 normal interest and emotional response; 2 reduced ability to enjoy usual interests; 4 loss of interest/feelings; 6 emotionally paralysed or painful failure to feel for close others."},
+    {"id":"madrs_9","text":"Pessimistic thoughts","scoreMax":6,"definition":"0 none; 2 fluctuating failure/self-reproach ideas; 4 persistent self-accusation or rational guilt and increasing pessimism; 6 delusions of ruin/remorse or absurd, unshakable self-accusation."},
+    {"id":"madrs_10","text":"Suicidal thoughts","scoreMax":6,"safety":true,"safetyMin":2,"definition":"0 enjoys life; 2 weary of life or fleeting suicidal thoughts; 4 suicidal thoughts common and considered as a solution without specific plans/intention; 6 explicit plans and active preparation."}
+  ]}],"attribution":"Montgomery SA, Åsberg M. A new depression scale designed to be sensitive to change. Br J Psychiatry. 1979;134:382–389."
+}

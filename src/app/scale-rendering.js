@@ -49,15 +49,16 @@ function renderScales() {
     });
 
     deployed.forEach(({ domain, scaleId, instrumentLabel, ratingTable }) => {
-        const scDef = ratingTable && CLINICAL_DATA.scales[scaleId];
+        const scDef = (ratingTable || domain.directForm) && CLINICAL_DATA.scales[scaleId || domain.id];
         // The badge describes who completes the form (administeredBy), not
         // which scoring algorithm applies: keyed T/F screens such as FAC22-SR
         // are patient-completed even though they score like the IPDE/PDQ block.
         const isSelfReport = !!(scDef && scDef.administeredBy === 'self-report');
+        const isClinicianForm = !!(scDef && scDef.administeredBy === 'clinician');
         const section = document.createElement('section');
         section.className = 'scale-section' + (ratingTable
             ? (isSelfReport ? ' anger-rating-table' : ' clinician-rating-table')
-            : '');
+            : (isClinicianForm ? ' clinician-rating-table' : ''));
         const secKey = ratingTable ? domain.id + ':' + scaleId : domain.id;
         section.setAttribute('aria-labelledby', 'scale-h-' + secKey);
 
@@ -65,7 +66,7 @@ function renderScales() {
         h.id = 'scale-h-' + secKey;
         h.className = 'scale-heading';
         h.textContent = (scDef ? L(scDef.name) : L(domain.name) + (instrumentLabel ? ' — ' + instrumentLabel : ''));
-        if (ratingTable) {
+        if (ratingTable || scDef?.administeredBy) {
             const badge = document.createElement('span');
             badge.className = 'scale-admin-badge';
             const roles = {
@@ -137,8 +138,8 @@ function renderScales() {
             section.appendChild(group);
         }
 
-        if (scaleId && CLINICAL_DATA.scales[scaleId]) {
-            const scale = CLINICAL_DATA.scales[scaleId];
+        if ((scaleId || domain.directForm) && CLINICAL_DATA.scales[scaleId || domain.id]) {
+            const scale = CLINICAL_DATA.scales[scaleId || domain.id];
             if (scale.directions) {
                 const dir = document.createElement('p');
                 dir.className = 'scale-directions';
@@ -150,7 +151,7 @@ function renderScales() {
                 details.append(summary, dir);
                 section.appendChild(details);
             }
-            renderMatrix(section, scale, scaleId);
+            renderMatrix(section, scale, scaleId || domain.id);
         } else {
             renderList(section, domain);
         }

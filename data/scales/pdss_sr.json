@@ -1,0 +1,16 @@
+{
+  "id":"pdss_sr","name":"Panic Disorder Severity Scale — Self-Report (PDSS-SR)",
+  "directions":"Self-report about the past week. Rate each area from 0 to 4 using the descriptions. The source form defines the composite as the mean of seven items; raw total is also shown for transparency.",
+  "ageGroups":["adult","older"],"administeredBy":"self-report",
+  "matrixOptions":[{"v":0,"label":"0"},{"v":1,"label":"1"},{"v":2,"label":"2"},{"v":3,"label":"3"},{"v":4,"label":"4"}],
+  "parts":[{"name":"PDSS-SR items","questions":[
+    {"id":"pdss_1","text":"Panic attacks and limited-symptom attacks during the past week","definition":"0 none; 1 mild, no full attack and no more than one limited attack/day; 2 moderate, 1–2 full attacks and/or multiple limited attacks/day; 3 severe, more than 2 full attacks but no more than 1/day on average; 4 extreme, full attacks more than once a day on most days."},
+    {"id":"pdss_2","text":"Distress during panic or limited-symptom attacks","definition":"0 none; 1 mild; 2 moderate but manageable; 3 severe; 4 extreme distress during all attacks."},
+    {"id":"pdss_3","text":"Anticipatory anxiety about future attacks or their consequences","definition":"0 not at all; 1 occasionally/mildly; 2 frequently/moderately; 3 very often or disturbing; 4 nearly constantly and disabling."},
+    {"id":"pdss_4","text":"Fear or avoidance of situations because of panic attacks","definition":"0 none; 1 mild, little lifestyle change; 2 moderate, some avoidance but manageable; 3 severe, extensive avoidance and lifestyle change; 4 pervasive, disabling avoidance."},
+    {"id":"pdss_5","text":"Fear or avoidance of activities that cause panic-like physical sensations","definition":"0 none; 1 mild, little lifestyle change; 2 moderate, limited change; 3 severe, substantial interference; 4 pervasive, disabling avoidance."},
+    {"id":"pdss_6","text":"Interference with work or home responsibilities","definition":"0 none; 1 slight; 2 significant but manageable; 3 substantial impairment; 4 incapacitating."},
+    {"id":"pdss_7","text":"Interference with social life","definition":"0 none; 1 slight; 2 significant but manageable; 3 substantial impairment; 4 incapacitating."}
+  ]}],
+  "attribution":"Shear MK et al. Multicenter collaborative Panic Disorder Severity Scale. Am J Psychiatry. 1997;154:1571–1575. User supplied online redistribution rights."
+}

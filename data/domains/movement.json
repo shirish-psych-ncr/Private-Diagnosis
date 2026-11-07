@@ -1,0 +1,12 @@
+{
+  "id": "movement",
+  "name": {
+    "en": "Movement symptoms",
+    "hi": "Movement symptoms"
+  },
+  "questions": [],
+  "forms": [
+    "bars"
+  ],
+  "defaultForm": "bars"
+}

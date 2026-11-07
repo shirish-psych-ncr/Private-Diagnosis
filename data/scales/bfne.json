@@ -1,0 +1,21 @@
+{
+  "id":"bfne","name":"Brief Fear of Negative Evaluation Scale (BFNE)",
+  "directions":"Self-report. Rate how characteristic each statement is of you: 1 not at all, 2 slightly, 3 moderately, 4 very, 5 extremely. Items 2, 4, 7 and 10 are reverse-scored.",
+  "ageGroups":["adult","older"],"administeredBy":"self-report",
+  "matrixOptions":[{"v":1,"label":"1 — Not at all characteristic"},{"v":2,"label":"2 — Slightly characteristic"},{"v":3,"label":"3 — Moderately characteristic"},{"v":4,"label":"4 — Very characteristic"},{"v":5,"label":"5 — Extremely characteristic"}],
+  "parts":[{"name":"BFNE items","questions":[
+    {"id":"bfne_1","text":"I worry about what other people will think of me even when I know it doesn't make any difference."},
+    {"id":"bfne_2","text":"I am unconcerned even if I know people are forming an unfavourable impression of me.","reverseScored":true},
+    {"id":"bfne_3","text":"I am frequently afraid of other people noticing my shortcomings."},
+    {"id":"bfne_4","text":"I rarely worry about what kind of impression I am making on someone.","reverseScored":true},
+    {"id":"bfne_5","text":"I am afraid others will not approve of me."},
+    {"id":"bfne_6","text":"I am afraid that people will find fault with me."},
+    {"id":"bfne_7","text":"Other people's opinions of me do not bother me.","reverseScored":true},
+    {"id":"bfne_8","text":"When talking with someone, I worry about what they may be thinking about me."},
+    {"id":"bfne_9","text":"I am usually worried about what kind of impression I make."},
+    {"id":"bfne_10","text":"If I know someone is judging me, it has little effect on me.","reverseScored":true},
+    {"id":"bfne_11","text":"Sometimes I think I am too concerned with what other people think of me."},
+    {"id":"bfne_12","text":"I often worry that I will say or do the wrong things."}
+  ]}],
+  "attribution":"Leary MR. A brief version of the Fear of Negative Evaluation Scale. Pers Soc Psychol Bull. 1983;9:371–376."
+}

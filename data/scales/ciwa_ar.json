@@ -1,0 +1,455 @@
+{
+  "id": "ciwa_ar",
+  "name": "Clinical Institute Withdrawal Assessment for Alcohol, Revised (CIWA-Ar)",
+  "directions": "Clinician-rated alcohol withdrawal assessment. Use item-specific anchors and observation/inquiry prompts. The maximum total is 67. The supplied source notes that scores below 10 do not usually require additional medication; use clinical judgment and local protocols.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Use item-specific CIWA-Ar anchor"
+    },
+    {
+      "v": 1,
+      "label": "1 - Use item-specific CIWA-Ar anchor"
+    },
+    {
+      "v": 2,
+      "label": "2 - Use item-specific CIWA-Ar anchor"
+    },
+    {
+      "v": 3,
+      "label": "3 - Use item-specific CIWA-Ar anchor"
+    },
+    {
+      "v": 4,
+      "label": "4 - Use item-specific CIWA-Ar anchor"
+    },
+    {
+      "v": 5,
+      "label": "5 - Use item-specific CIWA-Ar anchor"
+    },
+    {
+      "v": 6,
+      "label": "6 - Use item-specific CIWA-Ar anchor"
+    },
+    {
+      "v": 7,
+      "label": "7 - Use item-specific CIWA-Ar anchor"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Ten alcohol-withdrawal ratings",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "ciwa_1",
+          "itemNumber": 1,
+          "text": "Nausea and vomiting",
+          "definition": "Ask about stomach sickness and vomiting; observe.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_2",
+          "itemNumber": 2,
+          "text": "Tremor",
+          "definition": "Observe with arms extended and fingers spread.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_3",
+          "itemNumber": 3,
+          "text": "Paroxysmal sweats",
+          "definition": "Observe sweating.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_4",
+          "itemNumber": 4,
+          "text": "Anxiety",
+          "definition": "Ask whether the person feels nervous.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_5",
+          "itemNumber": 5,
+          "text": "Agitation",
+          "definition": "Observe activity and restlessness.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_6",
+          "itemNumber": 6,
+          "text": "Tactile disturbances",
+          "definition": "Ask about itching, pins and needles, burning, numbness, or crawling sensations.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_7",
+          "itemNumber": 7,
+          "text": "Auditory disturbances",
+          "definition": "Ask about sound sensitivity or disturbing sounds.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_8",
+          "itemNumber": 8,
+          "text": "Visual disturbances",
+          "definition": "Ask about light sensitivity or visual disturbances.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_9",
+          "itemNumber": 9,
+          "text": "Headache or fullness in head",
+          "definition": "Ask about headache or fullness; do not rate dizziness or lightheadedness.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 6,
+              "label": "6 - Use item-specific CIWA-Ar anchor"
+            },
+            {
+              "v": 7,
+              "label": "7 - Use item-specific CIWA-Ar anchor"
+            }
+          ]
+        },
+        {
+          "id": "ciwa_10",
+          "itemNumber": 10,
+          "text": "Orientation and clouding of sensorium",
+          "definition": "Ask the date, location, and who the assessor is; assess orientation and serial additions.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Oriented; can do serial additions"
+            },
+            {
+              "v": 1,
+              "label": "1 - Cannot do serial additions or uncertain about date"
+            },
+            {
+              "v": 2,
+              "label": "2 - Disoriented by no more than two calendar days"
+            },
+            {
+              "v": 3,
+              "label": "3 - Disoriented by more than two calendar days"
+            },
+            {
+              "v": 4,
+              "label": "4 - Disoriented for place or person"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contextFields": [
+    {
+      "id": "pulse",
+      "label": "Pulse / heart rate (one-minute count)"
+    },
+    {
+      "id": "blood_pressure",
+      "label": "Blood pressure"
+    },
+    {
+      "id": "assessment_time",
+      "label": "Assessment time (24-hour clock)"
+    }
+  ],
+  "attribution": "CIWA-Ar revised form supplied by the user; the source states it may be reproduced for clinical use."
+}

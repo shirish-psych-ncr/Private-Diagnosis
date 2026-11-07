@@ -1,0 +1,325 @@
+{
+  "id": "ybocs",
+  "name": "Yale-Brown Obsessive Compulsive Scale (Y-BOCS)",
+  "directions": "Clinician-administered severity interview. Rate all ten items using their item-specific anchors. Complete the symptom checklist and full interview using the authorized source. The app totals the ten severity ratings and reports the two five-item subscales; it does not diagnose.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - None / complete control"
+    },
+    {
+      "v": 1,
+      "label": "1 - Mild"
+    },
+    {
+      "v": 2,
+      "label": "2 - Moderate"
+    },
+    {
+      "v": 3,
+      "label": "3 - Severe"
+    },
+    {
+      "v": 4,
+      "label": "4 - Extreme / no control"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Obsessions",
+      "questions": [
+        {
+          "id": "ybocs_1",
+          "text": "Time occupied by obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than 1 hr/day or occasional"
+            },
+            {
+              "v": 2,
+              "label": "2 - 1 to 3 hrs/day or frequent"
+            },
+            {
+              "v": 3,
+              "label": "3 - Greater than 3 and up to 8 hrs/day or very frequent"
+            },
+            {
+              "v": 4,
+              "label": "4 - Greater than 8 hrs/day or nearly constant"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_2",
+          "text": "Interference due to obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slight interference; performance not impaired"
+            },
+            {
+              "v": 2,
+              "label": "2 - Definite but manageable interference"
+            },
+            {
+              "v": 3,
+              "label": "3 - Substantial impairment"
+            },
+            {
+              "v": 4,
+              "label": "4 - Incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_3",
+          "text": "Distress associated with obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Not too disturbing"
+            },
+            {
+              "v": 2,
+              "label": "2 - Disturbing but manageable"
+            },
+            {
+              "v": 3,
+              "label": "3 - Very disturbing"
+            },
+            {
+              "v": 4,
+              "label": "4 - Near-constant, disabling distress"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_4",
+          "text": "Resistance against obsessions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Try to resist all the time"
+            },
+            {
+              "v": 1,
+              "label": "1 - Try to resist most of the time"
+            },
+            {
+              "v": 2,
+              "label": "2 - Make some effort to resist"
+            },
+            {
+              "v": 3,
+              "label": "3 - Yield without attempting control, with some reluctance"
+            },
+            {
+              "v": 4,
+              "label": "4 - Completely and willingly yield"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_5",
+          "text": "Degree of control over obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Complete control"
+            },
+            {
+              "v": 1,
+              "label": "1 - Usually able to stop or divert with effort"
+            },
+            {
+              "v": 2,
+              "label": "2 - Sometimes able to stop or divert"
+            },
+            {
+              "v": 3,
+              "label": "3 - Rarely successful; divert with difficulty"
+            },
+            {
+              "v": 4,
+              "label": "4 - Completely involuntary; rarely able to alter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compulsions",
+      "questions": [
+        {
+          "id": "ybocs_1",
+          "text": "Time spent performing compulsive behaviors",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Less than 1 hr/day or occasional"
+            },
+            {
+              "v": 2,
+              "label": "2 - 1 to 3 hrs/day or frequent"
+            },
+            {
+              "v": 3,
+              "label": "3 - More than 3 and up to 8 hrs/day or very frequent"
+            },
+            {
+              "v": 4,
+              "label": "4 - More than 8 hrs/day or near constant"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_2",
+          "text": "Interference due to compulsive behaviors",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Slight interference; performance not impaired"
+            },
+            {
+              "v": 2,
+              "label": "2 - Definite but manageable interference"
+            },
+            {
+              "v": 3,
+              "label": "3 - Substantial impairment"
+            },
+            {
+              "v": 4,
+              "label": "4 - Incapacitating"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_3",
+          "text": "Distress associated with compulsive behaviors",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - None"
+            },
+            {
+              "v": 1,
+              "label": "1 - Only slightly anxious if prevented"
+            },
+            {
+              "v": 2,
+              "label": "2 - Anxiety rises but remains manageable"
+            },
+            {
+              "v": 3,
+              "label": "3 - Prominent, very disturbing anxiety"
+            },
+            {
+              "v": 4,
+              "label": "4 - Incapacitating anxiety"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_4",
+          "text": "Resistance against compulsions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Always try to resist"
+            },
+            {
+              "v": 1,
+              "label": "1 - Try to resist most of the time"
+            },
+            {
+              "v": 2,
+              "label": "2 - Make some effort to resist"
+            },
+            {
+              "v": 3,
+              "label": "3 - Yield to almost all, with reluctance"
+            },
+            {
+              "v": 4,
+              "label": "4 - Completely and willingly yield"
+            }
+          ]
+        },
+        {
+          "id": "ybocs_5",
+          "text": "Degree of control over compulsions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Complete control"
+            },
+            {
+              "v": 1,
+              "label": "1 - Pressure, usually voluntary control"
+            },
+            {
+              "v": 2,
+              "label": "2 - Strong pressure; control with difficulty"
+            },
+            {
+              "v": 3,
+              "label": "3 - Very strong drive; delay with difficulty"
+            },
+            {
+              "v": 4,
+              "label": "4 - Involuntary, overpowering drive"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "Source: user-provided instrument text. Use with the correct administration instructions and clinical context.",
+  "sumScores": {
+    "groups": {
+      "Obsessions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Compulsions": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "total": true,
+    "multiplier": 1
+  }
+}

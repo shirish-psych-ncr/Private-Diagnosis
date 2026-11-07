@@ -67,6 +67,11 @@
   "forms": [
     "msibpd",
     "ffoci_sf",
-    "ipip120"
-  ]
+    "ipip120",
+    "scid5pd_summary",
+    "pid5_bf"
+  ],
+  "help": {
+    "en": "The IPDE and PDQ-4+ here are brief screens only; they do not diagnose a personality disorder. A clinician may follow up with an authorized structured interview such as the SCID-5-PD. The SCID-5-PD source supplied for this project states that use requires publisher permission or a license. This app does not reproduce its interview questions, criteria, or scoring materials."
+  }
 }

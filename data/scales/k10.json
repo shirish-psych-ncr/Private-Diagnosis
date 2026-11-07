@@ -1,0 +1,31 @@
+{
+  "id": "k10",
+  "name": "Kessler Psychological Distress Scale (K10)",
+  "directions": "Thinking about the past 30 days, choose how often you felt each way. The K10 is a broad distress measure; it does not identify a specific disorder or assess immediate safety.",
+  "ageGroups": ["adult", "older"],
+  "matrixOptions": [
+    {"v": 1, "label": "None of the time"},
+    {"v": 2, "label": "A little of the time"},
+    {"v": 3, "label": "Some of the time"},
+    {"v": 4, "label": "Most of the time"},
+    {"v": 5, "label": "All of the time"}
+  ],
+  "parts": [
+    {
+      "name": "Kessler Psychological Distress Scale (K10)",
+      "questions": [
+        {"id": "k10_1", "text": "During the last 30 days, about how often did you feel tired out for no good reason?"},
+        {"id": "k10_2", "text": "During the last 30 days, about how often did you feel nervous?"},
+        {"id": "k10_3", "text": "During the last 30 days, about how often did you feel so nervous that nothing could calm you down?"},
+        {"id": "k10_4", "text": "During the last 30 days, about how often did you feel hopeless?"},
+        {"id": "k10_5", "text": "During the last 30 days, about how often did you feel restless or fidgety?"},
+        {"id": "k10_6", "text": "During the last 30 days, about how often did you feel so restless you could not sit still?"},
+        {"id": "k10_7", "text": "During the last 30 days, about how often did you feel depressed?"},
+        {"id": "k10_8", "text": "During the last 30 days, about how often did you feel that everything was an effort?"},
+        {"id": "k10_9", "text": "During the last 30 days, about how often did you feel so sad that nothing could cheer you up?"},
+        {"id": "k10_10", "text": "During the last 30 days, about how often did you feel worthless?"}
+      ]
+    }
+  ],
+  "attribution": "Copyright © Ronald C. Kessler, PhD. K10 use is free; acknowledge copyright and cite Kessler et al. (2003), Screening for serious mental illness in the general population, Archives of General Psychiatry, 60(2), 184–189. This score is descriptive and does not establish a diagnosis."
+}

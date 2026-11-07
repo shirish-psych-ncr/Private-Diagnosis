@@ -6,7 +6,8 @@ import { onAnswer } from './answers.js';
 function renderMatrix(section, scale, scaleId) {
     scaleId = scaleId || scale.id;
     const cols = scale.matrixOptions || CLINICAL_DATA.sharedScales.nrsota;
-    renderAnchorLegend(section, scale, cols);
+    if (!scale.parts.some(part => part.questions.some(question => question.scale)))
+        renderAnchorLegend(section, scale, cols);
     scale.parts.forEach(part => {
         const partTitle = document.createElement('h4');
         partTitle.className = 'matrix-part-title';
@@ -57,7 +58,12 @@ function renderMatrix(section, scale, scaleId) {
         thItem.className = 'sticky-col';
         thItem.textContent = state.lang === 'hi' ? 'लक्षण' : 'Item';
         thead.appendChild(thItem);
-        cols.forEach(c => {
+        const customRows = part.questions.some(q => q.scale);
+        const maxColumns = Math.max(cols.length, ...part.questions.map(q => q.scale?.length || 0));
+        const headerCols = customRows
+            ? Array.from({ length: maxColumns }, (_, i) => ({ v: i, label: String(i) }))
+            : cols;
+        headerCols.forEach(c => {
             const th = document.createElement('th');
             th.scope = 'col';
             th.className = 'matrix-col-header';
@@ -130,7 +136,39 @@ function renderMatrix(section, scale, scaleId) {
             }
             rowHead.id = 'mrow-' + q.id;
             tr.appendChild(rowHead);
-            cols.forEach(c => {
+            if (q.inputType === 'number' || q.inputType === 'time') {
+                const td = document.createElement('td');
+                td.colSpan = headerCols.length;
+                const input = document.createElement('input');
+                input.type = q.inputType;
+                if (q.inputType === 'number') {
+                    input.min = String(q.min ?? 0);
+                    if (q.max != null) input.max = String(q.max);
+                    input.step = String(q.step ?? 1);
+                    input.inputMode = 'decimal';
+                }
+                input.id = scaleId + ':' + q.id;
+                const stored = state.responses[input.id];
+                input.value = q.inputType === 'time' && Number.isFinite(stored)
+                    ? String(Math.floor(stored / 60)).padStart(2, '0') + ':' + String(stored % 60).padStart(2, '0')
+                    : stored ?? '';
+                input.setAttribute('aria-labelledby', 'mrow-' + q.id);
+                input.addEventListener('input', () => {
+                    if (input.value === '') delete state.responses[input.id];
+                    else {
+                        const value = q.inputType === 'time'
+                            ? Number(input.value.slice(0, 2)) * 60 + Number(input.value.slice(3, 5))
+                            : Number(input.value);
+                        onAnswer(input.id, value, { id: q.id }, { id: scaleId });
+                    }
+                });
+                td.appendChild(input);
+                tr.appendChild(td);
+                body.appendChild(tr);
+                return;
+            }
+            const rowCols = q.scale || cols;
+            rowCols.forEach(c => {
                 const td = document.createElement('td');
                 td.className = 'matrix-cell';
                 const key = scaleId + ':' + q.id;
@@ -141,7 +179,8 @@ function renderMatrix(section, scale, scaleId) {
                 input.id = key + '_' + c.v;
                 input.setAttribute('aria-label', L(q.itemName || q.text) + ' — ' + L(c.label));
                 if (state.responses[key] === c.v) input.checked = true;
-                input.addEventListener('change', () => onAnswer(key, c.v, { id: q.id, safety: !!q.safety }, { id: scaleId }));
+                input.addEventListener('change', () => onAnswer(key, c.v,
+                    { id: q.id, safety: !!q.safety, safetyMin: q.safetyMin }, { id: scaleId }));
                 const label = document.createElement('label');
                 label.className = 'matrix-answer';
                 const caption = document.createElement('span');
@@ -150,6 +189,12 @@ function renderMatrix(section, scale, scaleId) {
                 td.appendChild(label);
                 tr.appendChild(td);
             });
+            for (let i = rowCols.length; i < headerCols.length; i++) {
+                const spacer = document.createElement('td');
+                spacer.className = 'matrix-cell empty-option-cell';
+                spacer.setAttribute('aria-hidden', 'true');
+                tr.appendChild(spacer);
+            }
             if (q.probes && q.probes.length) {
                 const td = document.createElement('td');
                 td.colSpan = cols.length;

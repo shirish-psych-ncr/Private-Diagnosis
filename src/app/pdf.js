@@ -38,6 +38,17 @@ function generatePDF() {
         styles: { fontSize: 9 }
     });
     y = doc.lastAutoTable.finalY + 10;
+    r.instrumentResults.filter(x => x.sourceNote).forEach(result => {
+        doc.setFontSize(8);
+        doc.setTextColor(100);
+        for (const line of doc.splitTextToSize(result.sourceNote, 180)) {
+            if (y > 277) { doc.addPage(); y = 20; }
+            doc.text(line, 14, y);
+            y += 4;
+        }
+        doc.setTextColor(0);
+        y += 3;
+    });
 
     // Vanderbilt "For Office Use Only" totals (mirrors the NICHQ scoring sheet)
     const vadrsResult = r.instrumentResults.find(x => x.name === 'VADRS');

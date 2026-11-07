@@ -1,0 +1,1859 @@
+{
+  "id": "mia",
+  "name": "Mobility Inventory for Agoraphobia (MIA)",
+  "directions": "Self-report. Rate avoidance from 1 (never) to 5 (always) separately when accompanied and alone. Select Not applicable when a situation does not apply. The five most concerning situations and panic history are recorded separately; this form reports descriptive means.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "self-report",
+  "matrixOptions": [
+    {
+      "label": "Not applicable",
+      "v": 0
+    },
+    {
+      "label": "1 — Never avoid",
+      "v": 1
+    },
+    {
+      "label": "2 — Rarely",
+      "v": 2
+    },
+    {
+      "label": "3 — About half the time",
+      "v": 3
+    },
+    {
+      "label": "4 — Most of the time",
+      "v": 4
+    },
+    {
+      "label": "5 — Always avoid",
+      "v": 5
+    }
+  ],
+  "parts": [
+    {
+      "name": "Avoidance when accompanied and alone",
+      "questions": [
+        {
+          "id": "mia_1_accompanied",
+          "text": "Outside (fields, wide streets, courtyards) — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_1_alone",
+          "text": "Outside (fields, wide streets, courtyards) — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_2_accompanied",
+          "text": "Inside (large rooms, lobbies) — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_2_alone",
+          "text": "Inside (large rooms, lobbies) — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_3_accompanied",
+          "text": "Buses — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_3_alone",
+          "text": "Buses — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_4_accompanied",
+          "text": "Trains — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_4_alone",
+          "text": "Trains — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_5_accompanied",
+          "text": "Subways — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_5_alone",
+          "text": "Subways — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_6_accompanied",
+          "text": "Airplanes — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_6_alone",
+          "text": "Airplanes — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_7_accompanied",
+          "text": "Boats — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_7_alone",
+          "text": "Boats — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_8_accompanied",
+          "text": "Theaters — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_8_alone",
+          "text": "Theaters — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_9_accompanied",
+          "text": "Supermarkets — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_9_alone",
+          "text": "Supermarkets — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_10_accompanied",
+          "text": "Shopping malls — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_10_alone",
+          "text": "Shopping malls — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_11_accompanied",
+          "text": "Classrooms — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_11_alone",
+          "text": "Classrooms — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_12_accompanied",
+          "text": "Department stores — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_12_alone",
+          "text": "Department stores — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_13_accompanied",
+          "text": "Restaurants — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_13_alone",
+          "text": "Restaurants — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_14_accompanied",
+          "text": "Museums — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_14_alone",
+          "text": "Museums — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_15_accompanied",
+          "text": "Elevators — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_15_alone",
+          "text": "Elevators — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_16_accompanied",
+          "text": "Auditoriums or stadiums — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_16_alone",
+          "text": "Auditoriums or stadiums — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_17_accompanied",
+          "text": "Garages — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_17_alone",
+          "text": "Garages — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_18_accompanied",
+          "text": "High places — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_18_alone",
+          "text": "High places — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_19_accompanied",
+          "text": "Enclosed spaces — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_19_alone",
+          "text": "Enclosed spaces — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_20_accompanied",
+          "text": "Driving or riding in a car at any time — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_20_alone",
+          "text": "Driving or riding in a car at any time — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_21_accompanied",
+          "text": "Driving or riding in a car on expressways — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_21_alone",
+          "text": "Driving or riding in a car on expressways — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_22_accompanied",
+          "text": "Standing in lines — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_22_alone",
+          "text": "Standing in lines — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_23_accompanied",
+          "text": "Crossing bridges — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_23_alone",
+          "text": "Crossing bridges — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_24_accompanied",
+          "text": "Parties or social gatherings — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_24_alone",
+          "text": "Parties or social gatherings — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_25_accompanied",
+          "text": "Walking on the street — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_25_alone",
+          "text": "Walking on the street — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_26_alone",
+          "text": "Staying home alone — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_27_accompanied",
+          "text": "Being far away from home — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_27_alone",
+          "text": "Being far away from home — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_28_accompanied",
+          "text": "Other (specify) — when accompanied",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "accompanied",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        },
+        {
+          "id": "mia_28_alone",
+          "text": "Other (specify) — when alone",
+          "scoreMin": 0,
+          "scoreMax": 5,
+          "subscale": "alone",
+          "scale": [
+            {
+              "label": "Not applicable",
+              "v": 0
+            },
+            {
+              "label": "1",
+              "v": 1
+            },
+            {
+              "label": "2",
+              "v": 2
+            },
+            {
+              "label": "3",
+              "v": 3
+            },
+            {
+              "label": "4",
+              "v": 4
+            },
+            {
+              "label": "5",
+              "v": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "Chambless DL. Mobility Inventory for Agoraphobia. Copyright 1984 Dianne L. Chambless. User supplied online redistribution rights."
+}

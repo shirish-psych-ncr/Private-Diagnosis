@@ -1,0 +1,155 @@
+{
+  "id": "bars",
+  "name": "Barnes Akathisia Rating Scale (BARS)",
+  "directions": "Clinician observes the person seated and standing for at least two minutes in each position, then elicits subjective symptoms. Score objective, awareness, and distress items separately (0–9 total); record the global clinical assessment separately.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Normal, occasional fidgety movements"
+    },
+    {
+      "v": 1,
+      "label": "1 - Characteristic restless movements for less than half the observation"
+    },
+    {
+      "v": 2,
+      "label": "2 - Characteristic restless movements for at least half the observation"
+    },
+    {
+      "v": 3,
+      "label": "3 - Constant restless movements / cannot remain seated or standing"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Objective observation",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "bars_objective",
+          "itemNumber": 1,
+          "text": "Objective akathisia",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Normal, occasional fidgety movements"
+            },
+            {
+              "v": 1,
+              "label": "1 - Characteristic restless movements for less than half the observation"
+            },
+            {
+              "v": 2,
+              "label": "2 - Characteristic restless movements for at least half the observation"
+            },
+            {
+              "v": 3,
+              "label": "3 - Constant restless movements / cannot remain seated or standing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Subjective awareness",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "bars_awareness",
+          "itemNumber": 2,
+          "text": "Awareness of restlessness",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No inner restlessness"
+            },
+            {
+              "v": 1,
+              "label": "1 - Non-specific inner restlessness"
+            },
+            {
+              "v": 2,
+              "label": "2 - Aware of inability to keep legs still or desire to move"
+            },
+            {
+              "v": 3,
+              "label": "3 - Intense compulsion to move most of the time"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Subjective distress",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "bars_distress",
+          "itemNumber": 3,
+          "text": "Distress related to restlessness",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - No distress"
+            },
+            {
+              "v": 1,
+              "label": "1 - Mild distress"
+            },
+            {
+              "v": 2,
+              "label": "2 - Moderate distress"
+            },
+            {
+              "v": 3,
+              "label": "3 - Severe distress"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Global clinical assessment",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "bars_global",
+          "itemNumber": 4,
+          "text": "Global clinical assessment of akathisia",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Absent"
+            },
+            {
+              "v": 1,
+              "label": "1 - Questionable"
+            },
+            {
+              "v": 2,
+              "label": "2 - Mild akathisia"
+            },
+            {
+              "v": 3,
+              "label": "3 - Moderate akathisia"
+            },
+            {
+              "v": 4,
+              "label": "4 - Marked akathisia"
+            },
+            {
+              "v": 5,
+              "label": "5 - Severe akathisia"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "Barnes Akathisia Rating Scale, user-provided instructions and scoring."
+}

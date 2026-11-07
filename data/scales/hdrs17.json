@@ -1,0 +1,10 @@
+{
+  "id":"hdrs17","name":"Hamilton Depression Rating Scale (HDRS-17 / HAM-D-17)",
+  "directions":"Clinician-rated after a structured clinical interview. Rate the past week using the authorized HDRS-17 anchors. Item 16 is rated using either the patient report or weekly measurements method. This is a severity measure, not a diagnosis or safety assessment.",
+  "ageGroups":["adult","older"],"administeredBy":"clinician",
+  "matrixOptions":[{"v":0,"label":"0"},{"v":1,"label":"1"},{"v":2,"label":"2"},{"v":3,"label":"3"},{"v":4,"label":"4"}],
+  "parts":[{"name":"HDRS-17 clinician ratings","clinicianRated":true,"questions":[
+    {"id":"hdrs17_1","text":"Depressed mood","scoreMax":4},{"id":"hdrs17_2","text":"Feelings of guilt","scoreMax":4},{"id":"hdrs17_3","text":"Suicide","scoreMax":4,"safety":true,"safetyMin":1},{"id":"hdrs17_4","text":"Insomnia: early in the night","scoreMax":2},{"id":"hdrs17_5","text":"Insomnia: middle of the night","scoreMax":2},{"id":"hdrs17_6","text":"Insomnia: early hours of the morning","scoreMax":2},{"id":"hdrs17_7","text":"Work and activities","scoreMax":4},{"id":"hdrs17_8","text":"Retardation","scoreMax":4},{"id":"hdrs17_9","text":"Agitation","scoreMax":4},{"id":"hdrs17_10","text":"Anxiety: psychic","scoreMax":4},{"id":"hdrs17_11","text":"Anxiety: somatic","scoreMax":4},{"id":"hdrs17_12","text":"Somatic symptoms: gastrointestinal","scoreMax":2},{"id":"hdrs17_13","text":"General somatic symptoms","scoreMax":2},{"id":"hdrs17_14","text":"Genital symptoms","scoreMax":2},{"id":"hdrs17_15","text":"Hypochondriasis","scoreMax":4},{"id":"hdrs17_16","text":"Loss of weight (patient report or weekly measurements)","scoreMax":2},{"id":"hdrs17_17","text":"Insight","scoreMax":2}
+  ]}],
+  "attribution":"Hamilton M. A rating scale for depression. J Neurol Neurosurg Psychiatry. 1960;23:56–62. The supplied text identifies the HDRS as public domain. HDRS-17 selected; other versions are not interchangeable."
+}

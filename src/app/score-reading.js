@@ -39,6 +39,14 @@ function position(score, low, high) {
 
 export function scoreReading(row) {
     const { name, score, severity } = row;
+    if (name === 'Kessler Psychological Distress Scale (K10)')
+        return 'Higher totals indicate more nonspecific psychological distress. This screening result is not a diagnosis; interpretation and any thresholds depend on the setting and population.';
+    if (name === 'Hypomania Checklist (HCL-32-R1)')
+        return 'This is a self-report checklist of experiences during higher-energy periods. The total is descriptive and does not establish a bipolar-spectrum diagnosis.';
+    if (/^(Hamilton Depression Rating Scale|Montgomery–Åsberg Depression Rating Scale|Young Mania Rating Scale|Bipolar Depression Rating Scale|Beck Depression Inventory)/.test(name))
+        return 'This total supports symptom description and monitoring. It is not a diagnosis; interpret it with the correct version, administration method and clinical context.';
+    if (/^(Hamilton Anxiety Rating Scale|Penn State Worry Questionnaire|Beck Anxiety Inventory|Panic Disorder Severity Scale|MIA —|LSAS —|Liebowitz Social Anxiety Scale|Brief Fear of Negative Evaluation|HADS)/.test(name))
+        return 'This score describes the symptoms or experiences covered by the selected form. It is not a diagnosis; interpret with the correct administration method and clinical context.';
     if (name === 'QIDS-SR16') {
         // https://ids-qids.org/interpretation.html
         const n = parseInt(score, 10);

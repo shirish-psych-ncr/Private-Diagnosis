@@ -1,0 +1,317 @@
+{
+  "id": "cybocs",
+  "name": "Children’s Yale-Brown Obsessive Compulsive Scale (CY-BOCS) Severity Ratings",
+  "directions": "Clinician-administered for children and adolescents. Administer the symptom checklist separately, then rate severity during the past week using the age-appropriate item-specific anchors from the supplied form. The app calculates obsession, compulsion, and total scores; scores are not a diagnosis.",
+  "ageGroups": [
+    "schoolage",
+    "adolescent"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Use age-appropriate item anchor"
+    },
+    {
+      "v": 1,
+      "label": "1 - Use age-appropriate item anchor"
+    },
+    {
+      "v": 2,
+      "label": "2 - Use age-appropriate item anchor"
+    },
+    {
+      "v": 3,
+      "label": "3 - Use age-appropriate item anchor"
+    },
+    {
+      "v": 4,
+      "label": "4 - Use age-appropriate item anchor"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Obsessions (items 1–5)",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "cybocs_1",
+          "itemNumber": 1,
+          "text": "Time occupied by obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_2",
+          "itemNumber": 2,
+          "text": "Interference due to obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_3",
+          "itemNumber": 3,
+          "text": "Distress associated with obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_4",
+          "itemNumber": 4,
+          "text": "Resistance against obsessions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_5",
+          "itemNumber": 5,
+          "text": "Degree of control over obsessive thoughts",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compulsions (items 6–10)",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "cybocs_6",
+          "itemNumber": 6,
+          "text": "Time spent performing compulsive behaviors",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_7",
+          "itemNumber": 7,
+          "text": "Interference due to compulsive behaviors",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_8",
+          "itemNumber": 8,
+          "text": "Distress associated with compulsive behaviors",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_9",
+          "itemNumber": 9,
+          "text": "Resistance against compulsions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        },
+        {
+          "id": "cybocs_10",
+          "itemNumber": 10,
+          "text": "Degree of control over compulsive behaviors",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use age-appropriate item anchor"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use age-appropriate item anchor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "CY-BOCS severity-rating section, user-provided material. Symptom checklist is a separate step."
+}

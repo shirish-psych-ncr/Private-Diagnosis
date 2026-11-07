@@ -1,0 +1,30 @@
+{
+  "id":"bdi_ii","name":"Beck Depression Inventory–II (BDI-II)",
+  "directions":"Self-report, past two weeks including today. Choose the one statement in each group that best describes you; when more than one applies, select the highest number. For sleep and appetite select only one direction. Endorsement of item 9 activates the safety support pathway. Not a diagnosis or crisis assessment.",
+  "ageGroups":["adult","older"],"administeredBy":"self-report",
+  "matrixOptions":[{"v":0,"label":"0"},{"v":1,"label":"1"},{"v":2,"label":"2"},{"v":3,"label":"3"}],
+  "parts":[{"name":"BDI-II items","questions":[
+    {"id":"bdi2_1","text":"Sadness","definition":"0 not sad; 1 sad much of the time; 2 sad all the time; 3 so sad or unhappy I can't stand it."},
+    {"id":"bdi2_2","text":"Pessimism","definition":"0 not discouraged about future; 1 more discouraged than before; 2 don't expect things to work out; 3 future hopeless and will only get worse."},
+    {"id":"bdi2_3","text":"Past failure","definition":"0 don't feel like a failure; 1 failed more than I should; 2 see many failures looking back; 3 total failure as a person."},
+    {"id":"bdi2_4","text":"Loss of pleasure","definition":"0 as much pleasure as ever; 1 enjoy things less; 2 very little pleasure; 3 no pleasure from things I used to enjoy."},
+    {"id":"bdi2_5","text":"Guilty feelings","definition":"0 not particularly guilty; 1 guilty over many things; 2 quite guilty most of the time; 3 guilty all the time."},
+    {"id":"bdi2_6","text":"Punishment feelings","definition":"0 don't feel punished; 1 may be punished; 2 expect to be punished; 3 feel punished."},
+    {"id":"bdi2_7","text":"Self-dislike","definition":"0 feel the same about myself; 1 lost confidence; 2 disappointed in myself; 3 dislike myself."},
+    {"id":"bdi2_8","text":"Self-criticalness","definition":"0 no more self-critical than usual; 1 more critical; 2 criticize myself for all faults; 3 blame myself for everything bad."},
+    {"id":"bdi2_9","text":"Suicidal thoughts or wishes","safety":true,"safetyMin":1,"definition":"0 no thoughts of killing myself; 1 thoughts but would not carry them out; 2 would like to kill myself; 3 would kill myself if I had the chance."},
+    {"id":"bdi2_10","text":"Crying","definition":"0 no more than usual; 1 cry more; 2 cry over every little thing; 3 feel like crying but can't."},
+    {"id":"bdi2_11","text":"Agitation","definition":"0 no more restless or wound up than usual; 1 more restless; 2 hard to stay still; 3 have to keep moving or doing something."},
+    {"id":"bdi2_12","text":"Loss of interest","definition":"0 no loss of interest in people or activities; 1 less interested; 2 lost most interest; 3 hard to get interested in anything."},
+    {"id":"bdi2_13","text":"Indecisiveness","definition":"0 decide as well as ever; 1 more difficult; 2 much greater difficulty; 3 trouble making any decisions."},
+    {"id":"bdi2_14","text":"Worthlessness","definition":"0 don't feel worthless; 1 less worthwhile/useful than before; 2 more worthless than others; 3 utterly worthless."},
+    {"id":"bdi2_15","text":"Loss of energy","definition":"0 as much energy as ever; 1 less energy; 2 not enough energy to do very much; 3 not enough energy to do anything."},
+    {"id":"bdi2_16","text":"Changes in sleeping pattern","definition":"0 no change; 1a somewhat more / 1b somewhat less; 2a a lot more / 2b a lot less; 3a sleep most of day / 3b wake 1–2 hours early and cannot return to sleep."},
+    {"id":"bdi2_17","text":"Irritability","definition":"0 not more irritable; 1 more irritable; 2 much more irritable; 3 irritable all the time."},
+    {"id":"bdi2_18","text":"Changes in appetite","definition":"0 no change; 1a somewhat less / 1b somewhat greater; 2a much less / 2b much greater; 3a no appetite / 3b crave food all the time."},
+    {"id":"bdi2_19","text":"Concentration difficulty","definition":"0 concentrate as well as ever; 1 not as well; 2 hard to keep mind on anything long; 3 cannot concentrate on anything."},
+    {"id":"bdi2_20","text":"Tiredness or fatigue","definition":"0 no more tired than usual; 1 tire more easily; 2 too tired for many usual activities; 3 too tired for most usual activities."},
+    {"id":"bdi2_21","text":"Loss of interest in sex","definition":"0 no recent change; 1 less interested; 2 much less interested; 3 lost interest completely."}
+  ]}],
+  "attribution":"Beck Depression Inventory–II. Copyright © 1996 Aaron T. Beck. User supplied online redistribution rights; preserve attribution and authorized scoring instructions."
+}

@@ -25,9 +25,52 @@ import { score as scoreCSSRS } from './scales/cssrs.js';
 
 import { score as scoreQids } from './scales/qids_sr16.js';
 import { score as scoreMoodMdq } from './scales/mood_mdq.js';
+import { score as scoreK10 } from './scales/k10.js';
+import { scoreRating } from './scales/rating_sum.js';
+import { score as scorePdssSr } from './scales/pdss_sr.js';
+import { score as scoreHads } from './scales/hads.js';
+import { score as scoreLsas } from './scales/lsas.js';
+import { score as scoreMia } from './scales/mia.js';
+import { score as scoreIesR } from './scales/ies_r.js';
+import { score as scorePanss } from './scales/panss.js';
+import { score as scoreOciR } from './scales/oci_r.js';
+import { score as scoreEdeq } from './scales/edeq.js';
+import { score as scoreCaps5 } from './scales/caps5.js';
+import { score as scoreScid5PdSummary } from './scales/scid5pd_summary.js';
+import { score as scorePsqi } from './scales/psqi.js';
+import { score as scoreBprs24 } from './scales/bprs24.js';
+import { score as scoreBars } from './scales/bars.js';
+import { score as scoreCows } from './scales/cows.js';
+import { score as scorePid5Bf } from './scales/pid5_bf.js';
+import { score as scoreYbocs2 } from './scales/ybocs2.js';
+import { score as scoreCybocs } from './scales/cybocs.js';
+import { score as scoreBddYbocs } from './scales/bdd_ybocs.js';
+import { score as scoreCiwaAr } from './scales/ciwa_ar.js';
 import { scoreMeans } from './scoring/item-means.js';
 
-const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS };
+const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS, k10: scoreK10,
+    hdrs17: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.hdrs17),
+    madrs: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.madrs),
+    ymrs: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.ymrs),
+    bdrs: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.bdrs),
+    bdi_ii: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.bdi_ii),
+    hama: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.hama),
+    pswq: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.pswq),
+    bai: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.bai),
+    pdss_sr: scorePdssSr,
+    bfne: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.bfne),
+    hads: scoreHads,
+    lsas: scoreLsas,
+    mia: scoreMia,
+    ies_r: scoreIesR,
+    asds: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.asds),
+    panss: scorePanss, oci_r: scoreOciR, edeq: scoreEdeq, caps5: scoreCaps5,
+    scid5pd_summary: scoreScid5PdSummary, psqi: scorePsqi,
+    bprs24: scoreBprs24, bars: scoreBars,
+    panss6: (values, questions, form) => scoreRating(values, questions, form), cows: scoreCows,
+    pid5_bf: scorePid5Bf, ybocs2: scoreYbocs2, cybocs: scoreCybocs,
+    cois_rc: (values, questions, form) => scoreRating(values, questions, form), bdd_ybocs: scoreBddYbocs,
+    ciwa_ar: scoreCiwaAr };
 
 function computeResults() {
     const instrumentResults = [];
@@ -47,16 +90,20 @@ function computeResults() {
             if (values.every(Number.isFinite)) {
                 const form = CLINICAL_DATA.scales[domain.id];
                 let rows;
-                if (form.sumScores) rows = scoreItemSums(values, form);
+                if (directScorers[form.id]) rows = directScorers[form.id](values, domain.questions, form);
+                else if (form.sumScores) rows = scoreItemSums(values, form);
                 else if (form.meanScores) rows = scoreMeans(values, form);
-                else rows = directScorers[domain.id](values, domain.questions);
+                else rows = directScorers[domain.id](values, domain.questions, form);
+                if (form.attribution) rows.forEach(row => { row.sourceNote = form.attribution; });
                 instrumentResults.push(...rows);
-                if (form.durationOptions) {
+                if (form.contextFields) {
                     for (const field of form.contextFields) {
                         const value = state.formContext[form.id + ':' + field.id];
-                        if (value?.length) instrumentResults.push({ name: form.name, score: field.id === 'events' ? 'Stressors' : 'Index event',
-                            severity: Array.isArray(value) ? value.join(', ') : value });
+                        if (value?.length) instrumentResults.push({ name: field.label || form.name,
+                            score: Array.isArray(value) ? value.join(', ') : value, severity: 'Clinician-entered context' });
                     }
+                }
+                if (form.durationOptions) {
                     const durations = domain.questions.flatMap((q, i) => {
                         const duration = state.formContext[domain.id + ':' + q.id];
                         return values[i] > 1 && duration ? ['Item ' + (i + 1) + ': ' + duration] : [];

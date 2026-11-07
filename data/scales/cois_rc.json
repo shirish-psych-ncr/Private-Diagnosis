@@ -1,0 +1,201 @@
+{
+  "id": "cois_rc",
+  "name": "Child Obsessive-Compulsive Impact Scale - Revised (COIS-RC)",
+  "directions": "Child self-report. Rate how much obsessive-compulsive symptoms caused difficulty in each area during the past month. If an item does not apply, choose “Not at all.”",
+  "ageGroups": [
+    "schoolage",
+    "adolescent"
+  ],
+  "administeredBy": "self-report",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Not at all"
+    },
+    {
+      "v": 1,
+      "label": "1 - Just a little"
+    },
+    {
+      "v": 2,
+      "label": "2 - Pretty much"
+    },
+    {
+      "v": 3,
+      "label": "3 - Very much"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Past-month impact",
+      "questions": [
+        {
+          "id": "coisrc_1",
+          "itemNumber": 1,
+          "text": "Taking tests or exams"
+        },
+        {
+          "id": "coisrc_2",
+          "itemNumber": 2,
+          "text": "Being with a group of strangers"
+        },
+        {
+          "id": "coisrc_3",
+          "itemNumber": 3,
+          "text": "Being absent from school"
+        },
+        {
+          "id": "coisrc_4",
+          "itemNumber": 4,
+          "text": "Going shopping or trying on clothes"
+        },
+        {
+          "id": "coisrc_5",
+          "itemNumber": 5,
+          "text": "Making new friends"
+        },
+        {
+          "id": "coisrc_6",
+          "itemNumber": 6,
+          "text": "Going to a friend’s house during the day"
+        },
+        {
+          "id": "coisrc_7",
+          "itemNumber": 7,
+          "text": "Writing in class"
+        },
+        {
+          "id": "coisrc_8",
+          "itemNumber": 8,
+          "text": "Eating in public other than a restaurant, such as on a picnic, in a park, or at a friend’s house"
+        },
+        {
+          "id": "coisrc_9",
+          "itemNumber": 9,
+          "text": "Eating meals at home"
+        },
+        {
+          "id": "coisrc_10",
+          "itemNumber": 10,
+          "text": "Getting to school on time in the morning"
+        },
+        {
+          "id": "coisrc_11",
+          "itemNumber": 11,
+          "text": "Going on a date"
+        },
+        {
+          "id": "coisrc_12",
+          "itemNumber": 12,
+          "text": "Visiting relatives"
+        },
+        {
+          "id": "coisrc_13",
+          "itemNumber": 13,
+          "text": "Going to the bathroom"
+        },
+        {
+          "id": "coisrc_14",
+          "itemNumber": 14,
+          "text": "Watching television or listening to music"
+        },
+        {
+          "id": "coisrc_15",
+          "itemNumber": 15,
+          "text": "Reading books or magazines for fun"
+        },
+        {
+          "id": "coisrc_16",
+          "itemNumber": 16,
+          "text": "Being with a group of people you know"
+        },
+        {
+          "id": "coisrc_17",
+          "itemNumber": 17,
+          "text": "Going on a family vacation"
+        },
+        {
+          "id": "coisrc_18",
+          "itemNumber": 18,
+          "text": "Having relatives visit"
+        },
+        {
+          "id": "coisrc_19",
+          "itemNumber": 19,
+          "text": "Having a friend come to your house during the day"
+        },
+        {
+          "id": "coisrc_20",
+          "itemNumber": 20,
+          "text": "Concentrating on your work"
+        },
+        {
+          "id": "coisrc_21",
+          "itemNumber": 21,
+          "text": "Going to a restaurant or fast-food place"
+        },
+        {
+          "id": "coisrc_22",
+          "itemNumber": 22,
+          "text": "Having a boyfriend or girlfriend"
+        },
+        {
+          "id": "coisrc_23",
+          "itemNumber": 23,
+          "text": "Going to the movies"
+        },
+        {
+          "id": "coisrc_24",
+          "itemNumber": 24,
+          "text": "Getting to classes on time during the day"
+        },
+        {
+          "id": "coisrc_25",
+          "itemNumber": 25,
+          "text": "Keeping friends you already have"
+        },
+        {
+          "id": "coisrc_26",
+          "itemNumber": 26,
+          "text": "Eating lunch with other kids"
+        },
+        {
+          "id": "coisrc_27",
+          "itemNumber": 27,
+          "text": "Having someone spend the night at your house"
+        },
+        {
+          "id": "coisrc_28",
+          "itemNumber": 28,
+          "text": "Being prepared for class (books, paper, or pencils ready when needed)"
+        },
+        {
+          "id": "coisrc_29",
+          "itemNumber": 29,
+          "text": "Talking on the phone"
+        },
+        {
+          "id": "coisrc_30",
+          "itemNumber": 30,
+          "text": "Bathroom or grooming (brushing teeth or combing hair) in the morning"
+        },
+        {
+          "id": "coisrc_31",
+          "itemNumber": 31,
+          "text": "Completing assignments in class"
+        },
+        {
+          "id": "coisrc_32",
+          "itemNumber": 32,
+          "text": "Doing homework"
+        },
+        {
+          "id": "coisrc_33",
+          "itemNumber": 33,
+          "text": "Getting good grades"
+        }
+      ]
+    }
+  ],
+  "attribution": "COIS-RC child self-report, user-provided text. Total is descriptive and has no diagnostic cutoff in the supplied material."
+}

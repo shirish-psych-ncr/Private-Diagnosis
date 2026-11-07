@@ -1,0 +1,420 @@
+{
+  "id": "scid5pd_summary",
+  "name": "SCID-5-PD Summary Score Sheet (Clinician Worksheet)",
+  "directions": "This interactive worksheet records the summary score sheet after the full SCID-5-PD has been administered by a qualified clinician using the authorized interview. Enter item threshold counts and dimensional sums from the completed interview; complete applicable Criterion B and antisocial conduct checks. It does not replace the SCID interview, apply general diagnostic criteria automatically, or make a diagnosis.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "No"
+    },
+    {
+      "v": 1,
+      "label": "Yes"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Personality disorder dimensional and categorical summaries",
+      "questions": [
+        {
+          "id": "scid_avoidant_count",
+          "text": "Avoidant: number of criteria rated threshold (0–7)",
+          "inputType": "number",
+          "min": 0,
+          "max": 7
+        },
+        {
+          "id": "scid_avoidant_sum",
+          "text": "Avoidant: dimensional profile sum of item ratings (0–14)",
+          "inputType": "number",
+          "min": 0,
+          "max": 14
+        },
+        {
+          "id": "scid_avoidant_features",
+          "text": "Avoidant: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_dependent_count",
+          "text": "Dependent: number of criteria rated threshold (0–8)",
+          "inputType": "number",
+          "min": 0,
+          "max": 8
+        },
+        {
+          "id": "scid_dependent_sum",
+          "text": "Dependent: dimensional profile sum of item ratings (0–16)",
+          "inputType": "number",
+          "min": 0,
+          "max": 16
+        },
+        {
+          "id": "scid_dependent_features",
+          "text": "Dependent: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_ocpd_count",
+          "text": "Obsessive-compulsive: number of criteria rated threshold (0–8)",
+          "inputType": "number",
+          "min": 0,
+          "max": 8
+        },
+        {
+          "id": "scid_ocpd_sum",
+          "text": "Obsessive-compulsive: dimensional profile sum of item ratings (0–16)",
+          "inputType": "number",
+          "min": 0,
+          "max": 16
+        },
+        {
+          "id": "scid_ocpd_features",
+          "text": "Obsessive-compulsive: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_paranoid_count",
+          "text": "Paranoid: number of criteria rated threshold (0–7)",
+          "inputType": "number",
+          "min": 0,
+          "max": 7
+        },
+        {
+          "id": "scid_paranoid_sum",
+          "text": "Paranoid: dimensional profile sum of item ratings (0–14)",
+          "inputType": "number",
+          "min": 0,
+          "max": 14
+        },
+        {
+          "id": "scid_paranoid_features",
+          "text": "Paranoid: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_paranoid_b",
+          "text": "Paranoid: Criterion B exclusion does not apply (pattern is not exclusively during psychosis, mood disorder with psychotic features, another psychotic disorder, or autism spectrum disorder)?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_schizotypal_count",
+          "text": "Schizotypal: number of criteria rated threshold (0–9)",
+          "inputType": "number",
+          "min": 0,
+          "max": 9
+        },
+        {
+          "id": "scid_schizotypal_sum",
+          "text": "Schizotypal: dimensional profile sum of item ratings (0–18)",
+          "inputType": "number",
+          "min": 0,
+          "max": 18
+        },
+        {
+          "id": "scid_schizotypal_features",
+          "text": "Schizotypal: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_schizotypal_b",
+          "text": "Schizotypal: Criterion B exclusion does not apply (pattern is not exclusively during psychosis, mood disorder with psychotic features, another psychotic disorder, or autism spectrum disorder)?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_schizoid_count",
+          "text": "Schizoid: number of criteria rated threshold (0–7)",
+          "inputType": "number",
+          "min": 0,
+          "max": 7
+        },
+        {
+          "id": "scid_schizoid_sum",
+          "text": "Schizoid: dimensional profile sum of item ratings (0–14)",
+          "inputType": "number",
+          "min": 0,
+          "max": 14
+        },
+        {
+          "id": "scid_schizoid_features",
+          "text": "Schizoid: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_schizoid_b",
+          "text": "Schizoid: Criterion B exclusion does not apply (pattern is not exclusively during psychosis, mood disorder with psychotic features, another psychotic disorder, or autism spectrum disorder)?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_histrionic_count",
+          "text": "Histrionic: number of criteria rated threshold (0–9)",
+          "inputType": "number",
+          "min": 0,
+          "max": 9
+        },
+        {
+          "id": "scid_histrionic_sum",
+          "text": "Histrionic: dimensional profile sum of item ratings (0–18)",
+          "inputType": "number",
+          "min": 0,
+          "max": 18
+        },
+        {
+          "id": "scid_histrionic_features",
+          "text": "Histrionic: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_narcissistic_count",
+          "text": "Narcissistic: number of criteria rated threshold (0–9)",
+          "inputType": "number",
+          "min": 0,
+          "max": 9
+        },
+        {
+          "id": "scid_narcissistic_sum",
+          "text": "Narcissistic: dimensional profile sum of item ratings (0–18)",
+          "inputType": "number",
+          "min": 0,
+          "max": 18
+        },
+        {
+          "id": "scid_narcissistic_features",
+          "text": "Narcissistic: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_borderline_count",
+          "text": "Borderline: number of criteria rated threshold (0–9)",
+          "inputType": "number",
+          "min": 0,
+          "max": 9
+        },
+        {
+          "id": "scid_borderline_sum",
+          "text": "Borderline: dimensional profile sum of item ratings (0–18)",
+          "inputType": "number",
+          "min": 0,
+          "max": 18
+        },
+        {
+          "id": "scid_borderline_features",
+          "text": "Borderline: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_antisocial_count",
+          "text": "Antisocial: number of criteria rated threshold (0–7)",
+          "inputType": "number",
+          "min": 0,
+          "max": 7
+        },
+        {
+          "id": "scid_antisocial_sum",
+          "text": "Antisocial: dimensional profile sum of item ratings (0–14)",
+          "inputType": "number",
+          "min": 0,
+          "max": 14
+        },
+        {
+          "id": "scid_antisocial_features",
+          "text": "Antisocial: if categorical criteria are not met, are clinically significant features present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_antisocial_conduct",
+          "text": "Antisocial: number of childhood conduct-disorder symptoms meeting the form’s threshold (0–15)",
+          "inputType": "number",
+          "min": 0,
+          "max": 15
+        },
+        {
+          "id": "scid_antisocial_general",
+          "text": "Antisocial general criteria A, B, and C are all coded 3 on the interview form?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_other_specified",
+          "text": "Other specified personality disorder: clinically significant distress or impairment present?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 1,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "scid_quality",
+          "text": "Overall quality and completeness of interview information",
+          "scale": [
+            {
+              "v": 1,
+              "label": "1 - Poor"
+            },
+            {
+              "v": 2,
+              "label": "2 - Fair"
+            },
+            {
+              "v": 3,
+              "label": "3 - Good"
+            },
+            {
+              "v": 4,
+              "label": "4 - Excellent"
+            }
+          ]
+        },
+        {
+          "id": "scid_duration",
+          "text": "Interview duration in minutes",
+          "inputType": "number",
+          "min": 0,
+          "max": 999
+        }
+      ]
+    }
+  ],
+  "contextFields": [
+    {
+      "id": "principal_diagnosis",
+      "label": "Clinician-selected principal personality disorder and rationale"
+    }
+  ],
+  "attribution": "SCID-5-PD clinician worksheet based on the user-provided summary score sheet. Use only with authorized interview materials and clinical judgment."
+}

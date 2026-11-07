@@ -1,0 +1,388 @@
+{
+  "id": "ybocs2",
+  "name": "Yale-Brown Obsessive Compulsive Scale - II (Y-BOCS-II)",
+  "directions": "Clinician-rated severity. Use the item-specific verbal anchors printed on the source form; the numbered choices here record those ratings. The severity total is the sum of items 1–10; report insight item 11 separately.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "clinician",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - Use item-specific anchor from the form"
+    },
+    {
+      "v": 1,
+      "label": "1 - Use item-specific anchor from the form"
+    },
+    {
+      "v": 2,
+      "label": "2 - Use item-specific anchor from the form"
+    },
+    {
+      "v": 3,
+      "label": "3 - Use item-specific anchor from the form"
+    },
+    {
+      "v": 4,
+      "label": "4 - Use item-specific anchor from the form"
+    },
+    {
+      "v": 5,
+      "label": "5 - Use item-specific anchor from the form"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Obsessions",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "ybocs2_1",
+          "itemNumber": 1,
+          "text": "Time spent on obsessions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_2",
+          "itemNumber": 2,
+          "text": "Obsession-free interval",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_3",
+          "itemNumber": 3,
+          "text": "Control over obsessions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_4",
+          "itemNumber": 4,
+          "text": "Distress of obsessions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_5",
+          "itemNumber": 5,
+          "text": "Interference from obsessions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Compulsions and insight",
+      "clinicianRated": true,
+      "questions": [
+        {
+          "id": "ybocs2_6",
+          "itemNumber": 6,
+          "text": "Time spent on compulsions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_7",
+          "itemNumber": 7,
+          "text": "Resistance to compulsions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_8",
+          "itemNumber": 8,
+          "text": "Control over compulsions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_9",
+          "itemNumber": 9,
+          "text": "Distress if compulsions prevented",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_10",
+          "itemNumber": 10,
+          "text": "Interference from compulsions",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific anchor from the form"
+            },
+            {
+              "v": 5,
+              "label": "5 - Use item-specific anchor from the form"
+            }
+          ]
+        },
+        {
+          "id": "ybocs2_11",
+          "itemNumber": 11,
+          "text": "Insight",
+          "scale": [
+            {
+              "v": 0,
+              "label": "0 - Use item-specific insight anchor from the form"
+            },
+            {
+              "v": 1,
+              "label": "1 - Use item-specific insight anchor from the form"
+            },
+            {
+              "v": 2,
+              "label": "2 - Use item-specific insight anchor from the form"
+            },
+            {
+              "v": 3,
+              "label": "3 - Use item-specific insight anchor from the form"
+            },
+            {
+              "v": 4,
+              "label": "4 - Use item-specific insight anchor from the form"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attribution": "Y-BOCS-II source material supplied by the user; use the item-specific clinician anchors."
+}

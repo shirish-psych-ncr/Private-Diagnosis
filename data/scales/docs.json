@@ -1,0 +1,169 @@
+{
+  "id": "docs",
+  "name": "Dimensional Obsessive-Compulsive Scale (DOCS)",
+  "directions": "Think about the past month. Rate each concern from 0 (no symptoms) to 4 (extreme symptoms).",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "administeredBy": "self-report",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0 - No symptoms"
+    },
+    {
+      "v": 1,
+      "label": "1 - Mild"
+    },
+    {
+      "v": 2,
+      "label": "2 - Moderate"
+    },
+    {
+      "v": 3,
+      "label": "3 - Severe"
+    },
+    {
+      "v": 4,
+      "label": "4 - Extreme"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Contamination",
+      "questions": [
+        {
+          "id": "docs_1",
+          "text": "How much time is occupied by contamination thoughts and washing or cleaning behaviors?"
+        },
+        {
+          "id": "docs_2",
+          "text": "How much do you avoid situations to prevent contamination concerns or having to wash or clean?"
+        },
+        {
+          "id": "docs_3",
+          "text": "If you had contamination thoughts but could not wash, clean, or remove the contamination, how distressed or anxious would you become?"
+        },
+        {
+          "id": "docs_4",
+          "text": "How much do contamination concerns interfere with your daily routine, work, school, self-care, or social life?"
+        },
+        {
+          "id": "docs_5",
+          "text": "How difficult is it to disregard contamination thoughts and refrain from washing, cleaning, or other rituals?"
+        }
+      ]
+    },
+    {
+      "name": "Responsibility for harm",
+      "questions": [
+        {
+          "id": "docs_6",
+          "text": "How much time is occupied by thoughts about possible harm or disasters and checking or other rituals?"
+        },
+        {
+          "id": "docs_7",
+          "text": "How much do you avoid situations to avoid checking for danger or worrying about possible harm?"
+        },
+        {
+          "id": "docs_8",
+          "text": "When you think about possible harm or cannot check or get reassurance, how distressed or anxious do you become?"
+        },
+        {
+          "id": "docs_9",
+          "text": "How much do harm concerns disrupt your daily routine, work, school, self-care, or social life?"
+        },
+        {
+          "id": "docs_10",
+          "text": "How difficult is it to disregard possible-harm thoughts and refrain from checking or reassurance seeking?"
+        }
+      ]
+    },
+    {
+      "name": "Unacceptable thoughts",
+      "questions": [
+        {
+          "id": "docs_11",
+          "text": "How much time is occupied by unwanted unpleasant thoughts and behavioral or mental rituals?"
+        },
+        {
+          "id": "docs_12",
+          "text": "How much do you avoid situations, places, objects, or reminders that bring these thoughts to mind?"
+        },
+        {
+          "id": "docs_13",
+          "text": "When unwanted thoughts come to mind against your will, how distressed or anxious do you become?"
+        },
+        {
+          "id": "docs_14",
+          "text": "How much do unwanted thoughts disrupt your daily routine, work, school, self-care, or social life?"
+        },
+        {
+          "id": "docs_15",
+          "text": "How difficult is it to disregard unwanted thoughts and refrain from behavioral or mental rituals?"
+        }
+      ]
+    },
+    {
+      "name": "Symmetry and “just right”",
+      "questions": [
+        {
+          "id": "docs_16",
+          "text": "How much time is occupied by thoughts about symmetry, order, or balance and arranging or repeating behaviors?"
+        },
+        {
+          "id": "docs_17",
+          "text": "How much do you avoid situations or objects associated with things feeling not quite right?"
+        },
+        {
+          "id": "docs_18",
+          "text": "When things feel not quite right, how distressed or anxious do you become?"
+        },
+        {
+          "id": "docs_19",
+          "text": "How much do these concerns disrupt your daily routine, work, school, self-care, or social life?"
+        },
+        {
+          "id": "docs_20",
+          "text": "How difficult is it to disregard symmetry or order thoughts and refrain from arranging or repeating?"
+        }
+      ]
+    }
+  ],
+  "attribution": "Source: user-provided instrument text. Use with the correct administration instructions and clinical context.",
+  "sumScores": {
+    "groups": {
+      "Contamination": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Responsibility for harm": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "Unacceptable thoughts": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "Symmetry and “just right”": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "total": true,
+    "multiplier": 1
+  }
+}
