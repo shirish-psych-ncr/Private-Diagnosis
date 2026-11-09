@@ -1,0 +1,222 @@
+[
+  {
+    "id": "mipsy_111",
+    "itemNumber": 111,
+    "text": "I was easily distracted by little things."
+  },
+  {
+    "id": "mipsy_112",
+    "itemNumber": 112,
+    "text": "I found it difficult to resume a task after being interrupted."
+  },
+  {
+    "id": "mipsy_113",
+    "itemNumber": 113,
+    "text": "I avoided or disliked tasks that needed sustained mental effort (e.g., completing forms or reading lengthy documents)."
+  },
+  {
+    "id": "mipsy_114",
+    "itemNumber": 114,
+    "text": "I had trouble changing how I was doing something, even when it wasn't working."
+  },
+  {
+    "id": "mipsy_115",
+    "itemNumber": 115,
+    "text": "I had trouble staying awake during the day even after getting enough sleep the night before."
+  },
+  {
+    "id": "mipsy_116",
+    "itemNumber": 116,
+    "text": "I found it hard to remember things."
+  },
+  {
+    "id": "mipsy_117",
+    "itemNumber": 117,
+    "text": "I needed help from others to take care of myself or my home (e.g., I found it difficult to shop, clean, or cook independently)."
+  },
+  {
+    "id": "mipsy_118",
+    "itemNumber": 118,
+    "text": "I found it difficult to recall recent events."
+  },
+  {
+    "id": "mipsy_119",
+    "itemNumber": 119,
+    "text": "It got harder for me to do familiar things (e.g., using tools or driving a car)."
+  },
+  {
+    "id": "mipsy_120",
+    "itemNumber": 120,
+    "text": "I had a hard time finding my way around even in familiar environments."
+  },
+  {
+    "id": "mipsy_121",
+    "itemNumber": 121,
+    "text": "I couldn't use the living areas of my home because they were cluttered with my things."
+  },
+  {
+    "id": "mipsy_122",
+    "itemNumber": 122,
+    "text": "I found it hard to part with my possessions, regardless of their actual value."
+  },
+  {
+    "id": "mipsy_123",
+    "itemNumber": 123,
+    "text": "I lost things that I needed for tasks or activities (e.g., phone, wallet, keys, glasses, documents)."
+  },
+  {
+    "id": "mipsy_124",
+    "itemNumber": 124,
+    "text": "I found it difficult to understand and use facial expressions, gestures, tone of voice, eye contact, or body language."
+  },
+  {
+    "id": "mipsy_125",
+    "itemNumber": 125,
+    "text": "I found it hard to adjust my behaviour to suit different social contexts."
+  },
+  {
+    "id": "mipsy_126",
+    "itemNumber": 126,
+    "text": "I had difficulty understanding what others were trying to say."
+  },
+  {
+    "id": "mipsy_127",
+    "itemNumber": 127,
+    "text": "I was unable to have normal back-and-forth conversations (e.g., I did not give other people a turn to speak or provide enough background information for others to follow)."
+  },
+  {
+    "id": "mipsy_128",
+    "itemNumber": 128,
+    "text": "I did not respond when someone tried to interact with me."
+  },
+  {
+    "id": "mipsy_129",
+    "itemNumber": 129,
+    "text": "I talked too much (e.g., talked at inappropriate times, interrupted or talked over other people, or took over conversations)."
+  },
+  {
+    "id": "mipsy_130",
+    "itemNumber": 130,
+    "text": "I spoke quickly without stopping, changing topics a lot."
+  },
+  {
+    "id": "mipsy_131",
+    "itemNumber": 131,
+    "text": "I felt \"on the go\" and was unable to sit still for any length of time (e.g., in a meeting or when having dinner at a restaurant)."
+  },
+  {
+    "id": "mipsy_132",
+    "itemNumber": 132,
+    "text": "I fidgeted a lot."
+  },
+  {
+    "id": "mipsy_133",
+    "itemNumber": 133,
+    "text": "I felt internal pressure to keep talking."
+  },
+  {
+    "id": "mipsy_134",
+    "itemNumber": 134,
+    "text": "I only talked about one topic even when others were not interested or said they wanted to talk about something else."
+  },
+  {
+    "id": "mipsy_135",
+    "itemNumber": 135,
+    "text": "I had intense interests in specific objects or topics."
+  },
+  {
+    "id": "mipsy_136",
+    "itemNumber": 136,
+    "text": "I was very sensitive to specific sights, sounds, smells, tastes or textures."
+  },
+  {
+    "id": "mipsy_137",
+    "itemNumber": 137,
+    "text": "I insisted that things had to be done in exactly the same way (e.g., I was very distressed by small changes)."
+  },
+  {
+    "id": "mipsy_138",
+    "itemNumber": 138,
+    "text": "I insisted on perfection in everything I did."
+  },
+  {
+    "id": "mipsy_139",
+    "itemNumber": 139,
+    "text": "I felt like I was short of breath."
+  },
+  {
+    "id": "mipsy_140",
+    "itemNumber": 140,
+    "text": "It felt like my heart was fluttering or skipping beats."
+  },
+  {
+    "id": "mipsy_141",
+    "itemNumber": 141,
+    "text": "I had muscle tension (e.g., aches and pains or tightness in my shoulders, back, neck, or jaws)."
+  },
+  {
+    "id": "mipsy_142",
+    "itemNumber": 142,
+    "text": "I experienced substantial pain in one or more areas of my body."
+  },
+  {
+    "id": "mipsy_143",
+    "itemNumber": 143,
+    "text": "I had a feeling of heat spreading through me (e.g., in my head and neck)."
+  },
+  {
+    "id": "mipsy_144",
+    "itemNumber": 144,
+    "text": "I ate large amounts of food when I didn't feel hungry."
+  },
+  {
+    "id": "mipsy_145",
+    "itemNumber": 145,
+    "text": "I felt disgusted, depressed, or very guilty about eating a lot in a short period of time."
+  },
+  {
+    "id": "mipsy_146",
+    "itemNumber": 146,
+    "text": "My body weight or shape had a lot of influence on how I felt about myself."
+  },
+  {
+    "id": "mipsy_147",
+    "itemNumber": 147,
+    "text": "I feared gaining weight."
+  },
+  {
+    "id": "mipsy_148",
+    "itemNumber": 148,
+    "text": "I fasted (i.e., avoided eating) to control my weight."
+  },
+  {
+    "id": "mipsy_149",
+    "itemNumber": 149,
+    "text": "I was more extroverted than usual (i.e., sociable, talkative, and excitable)."
+  },
+  {
+    "id": "mipsy_150",
+    "itemNumber": 150,
+    "text": "I had a strong feeling of well-being or were overly happy (i.e., \"felt euphoric\" or \"on top of the world\")."
+  },
+  {
+    "id": "mipsy_151",
+    "itemNumber": 151,
+    "text": "I was unrestrained in expressing my feelings (e.g., overly enthusiastic or overly friendly)."
+  },
+  {
+    "id": "mipsy_152",
+    "itemNumber": 152,
+    "text": "I kept my emotions to myself."
+  },
+  {
+    "id": "mipsy_153",
+    "itemNumber": 153,
+    "text": "I preferred to keep romance out of my life."
+  },
+  {
+    "id": "mipsy_154",
+    "itemNumber": 154,
+    "text": "I was not interested in having sexual relationships."
+  }
+]

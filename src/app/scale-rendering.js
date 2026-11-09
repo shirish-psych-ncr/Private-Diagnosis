@@ -12,17 +12,17 @@ function renderScales() {
     const answered = new Set();
     const total = new Set();
     deployed.forEach(({ domain, scaleId, ratingTable }) => {
-        const scale = ratingTable && CLINICAL_DATA.scales[scaleId];
+        const scale = (ratingTable || domain.directForm) && CLINICAL_DATA.scales[scaleId || domain.id];
         const questions = scale ? scale.parts.flatMap(part => part.questions)
             .filter(question => !question.requires || state.responses[scaleId + ':' + question.requires] === 1)
             : domain.questions.filter(question => !question.scaleId);
         questions.forEach(question => {
             if (question.nonScored || question.tickBox) return;
-            const key = (scale ? scaleId : domain.id) + ':' + question.id;
+            const key = (scale ? (scaleId || domain.id) : domain.id) + ':' + question.id;
             total.add(key);
             if (state.responses[key] !== undefined) answered.add(key);
         });
-        if (!ratingTable) domain.questions.filter(question => question.scaleId).forEach(question => {
+        if (!ratingTable && !domain.directForm) domain.questions.filter(question => question.scaleId).forEach(question => {
             const key = domain.id + ':' + question.id;
             total.add(key);
             if (state.responses[key] !== undefined) answered.add(key);

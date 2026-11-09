@@ -1,0 +1,374 @@
+[
+  {
+    "id": "cds_1_frequency",
+    "itemNumber": 1,
+    "text": "Out of the blue, I feel strange, as if I were not real or as if I were cut off from the world. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_1_duration",
+    "itemNumber": 1,
+    "text": "Out of the blue, I feel strange, as if I were not real or as if I were cut off from the world. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_2_frequency",
+    "itemNumber": 2,
+    "text": "What I see looks flat or lifeless, as if I were looking at a picture. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_2_duration",
+    "itemNumber": 2,
+    "text": "What I see looks flat or lifeless, as if I were looking at a picture. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_3_frequency",
+    "itemNumber": 3,
+    "text": "Parts of my body feel as if they did not belong to me. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_3_duration",
+    "itemNumber": 3,
+    "text": "Parts of my body feel as if they did not belong to me. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_4_frequency",
+    "itemNumber": 4,
+    "text": "I have found myself not being frightened at all in situations which normally I would find frightening or distressing. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_4_duration",
+    "itemNumber": 4,
+    "text": "I have found myself not being frightened at all in situations which normally I would find frightening or distressing. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_5_frequency",
+    "itemNumber": 5,
+    "text": "My favourite activities are no longer enjoyable. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_5_duration",
+    "itemNumber": 5,
+    "text": "My favourite activities are no longer enjoyable. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_6_frequency",
+    "itemNumber": 6,
+    "text": "Whilst doing something I have the feeling of being a detached observer of myself. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_6_duration",
+    "itemNumber": 6,
+    "text": "Whilst doing something I have the feeling of being a detached observer of myself. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  }
+]

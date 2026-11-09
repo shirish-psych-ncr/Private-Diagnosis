@@ -1,0 +1,20 @@
+{
+  "id": "cambridge_dep",
+  "name": "Cambridge Depersonalisation Scale (CDS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Cambridge Depersonalisation Scale (Sierra & Berrios, 2000; user-supplied text)",
+  "targetAge": [
+    "adult"
+  ],
+  "directions": "For each experience, rate how often it occurred over the last six months and its average duration. If unsure, give your best estimate.",
+  "timeframe": "Past six months",
+  "parts": {
+    "$file": "data/scales/cambridge_dep/parts.json"
+  },
+  "interpretationNote": "Frequency and duration ratings are recorded separately. Do not treat their combined raw sum as a validated total: the supplied material does not define the item-level multiplication/scoring procedure. No diagnostic cutoff is applied.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

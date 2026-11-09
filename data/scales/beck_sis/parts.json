@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Suicide intent interview",
+    "clinicianRated": true,
+    "questions": {
+      "$concat": [
+        "data/scales/beck_sis/questions-001-001.json",
+        "data/scales/beck_sis/questions-001-002.json"
+      ]
+    }
+  }
+]

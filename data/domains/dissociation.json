@@ -39,5 +39,12 @@
         "unspecified_dissociative_disorder"
       ]
     }
+  ],
+  "forms": [
+    "cambridge_dep"
+  ],
+  "defaultScales": [
+    "desii",
+    "mid60"
   ]
 }

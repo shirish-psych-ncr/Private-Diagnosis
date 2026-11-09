@@ -1,0 +1,374 @@
+[
+  {
+    "id": "cds_13_frequency",
+    "itemNumber": 13,
+    "text": "My surroundings feel detached or unreal, as if there were a veil between me and the outside world. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_13_duration",
+    "itemNumber": 13,
+    "text": "My surroundings feel detached or unreal, as if there were a veil between me and the outside world. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_14_frequency",
+    "itemNumber": 14,
+    "text": "It seems as if things that I have recently done had taken place a long time ago. For example, anything which I have done this morning feels as if it were done weeks ago. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_14_duration",
+    "itemNumber": 14,
+    "text": "It seems as if things that I have recently done had taken place a long time ago. For example, anything which I have done this morning feels as if it were done weeks ago. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_15_frequency",
+    "itemNumber": 15,
+    "text": "Whilst fully awake I have visions in which I can see myself outside, as if I were looking at my image in a mirror. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_15_duration",
+    "itemNumber": 15,
+    "text": "Whilst fully awake I have visions in which I can see myself outside, as if I were looking at my image in a mirror. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_16_frequency",
+    "itemNumber": 16,
+    "text": "I feel detached from memories of things that have happened to me — as if I had not been involved in them. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_16_duration",
+    "itemNumber": 16,
+    "text": "I feel detached from memories of things that have happened to me — as if I had not been involved in them. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_17_frequency",
+    "itemNumber": 17,
+    "text": "When in a new situation, it feels as if I have been through it before. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_17_duration",
+    "itemNumber": 17,
+    "text": "When in a new situation, it feels as if I have been through it before. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_18_frequency",
+    "itemNumber": 18,
+    "text": "Out of the blue, I find myself not feeling any affection towards my family and close friends. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_18_duration",
+    "itemNumber": 18,
+    "text": "Out of the blue, I find myself not feeling any affection towards my family and close friends. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  }
+]

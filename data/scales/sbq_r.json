@@ -1,0 +1,154 @@
+{
+  "id": "sbq_r",
+  "name": "Suicide Behaviors Questionnaire-Revised (SBQ-R)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Select one response for each item. The questions ask about past and current suicidal thoughts and behavior.",
+  "matrixOptions": [],
+  "parts": [
+    {
+      "name": "Suicide Behaviors Questionnaire-Revised (SBQ-R)",
+      "questions": [
+        {
+          "id": "sbqr_1",
+          "itemNumber": 1,
+          "text": "Have you ever thought about or attempted to kill yourself?",
+          "safety": true,
+          "scale": [
+            {
+              "v": 1,
+              "label": "Never"
+            },
+            {
+              "v": 2,
+              "label": "It was just a brief passing thought"
+            },
+            {
+              "v": 3,
+              "label": "I have had a plan at least once to kill myself but did not try to do it"
+            },
+            {
+              "v": 4,
+              "label": "I have had a plan at least once to kill myself and really wanted to die"
+            },
+            {
+              "v": 5,
+              "label": "I have attempted to kill myself, but did not want to die"
+            },
+            {
+              "v": 6,
+              "label": "I have attempted to kill myself, and really hoped to die"
+            }
+          ],
+          "safetyMin": 2
+        },
+        {
+          "id": "sbqr_2",
+          "itemNumber": 2,
+          "text": "How often have you thought about killing yourself in the past year?",
+          "safety": true,
+          "scale": [
+            {
+              "v": 1,
+              "label": "Never"
+            },
+            {
+              "v": 2,
+              "label": "Rarely (1 time)"
+            },
+            {
+              "v": 3,
+              "label": "Sometimes (2 times)"
+            },
+            {
+              "v": 4,
+              "label": "Often (3–4 times)"
+            },
+            {
+              "v": 5,
+              "label": "Very often (5 or more times)"
+            }
+          ],
+          "safetyMin": 2
+        },
+        {
+          "id": "sbqr_3",
+          "itemNumber": 3,
+          "text": "Have you ever told someone that you were going to commit suicide, or that you might do it?",
+          "safety": true,
+          "scale": [
+            {
+              "v": 1,
+              "label": "No"
+            },
+            {
+              "v": 2,
+              "label": "Yes, at one time, but did not really want to die"
+            },
+            {
+              "v": 3,
+              "label": "Yes, at one time, and really wanted to die"
+            },
+            {
+              "v": 4,
+              "label": "Yes, more than once, but did not want to do it"
+            },
+            {
+              "v": 5,
+              "label": "Yes, more than once, and really wanted to do it"
+            }
+          ],
+          "safetyMin": 2
+        },
+        {
+          "id": "sbqr_4",
+          "itemNumber": 4,
+          "text": "How likely is it that you will attempt suicide someday?",
+          "safety": true,
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "No chance at all"
+            },
+            {
+              "v": 2,
+              "label": "Rather unlikely"
+            },
+            {
+              "v": 3,
+              "label": "Unlikely"
+            },
+            {
+              "v": 4,
+              "label": "Likely"
+            },
+            {
+              "v": 5,
+              "label": "Rather likely"
+            },
+            {
+              "v": 6,
+              "label": "Very likely"
+            }
+          ],
+          "safetyMin": 4
+        }
+      ]
+    }
+  ],
+  "timeframe": "Lifetime and past year",
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  },
+  "interpretationNote": "A score is not a diagnosis or a substitute for direct safety assessment. Any current suicidal thoughts or immediate danger require prompt human support.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

@@ -1,0 +1,374 @@
+[
+  {
+    "id": "cds_19_frequency",
+    "itemNumber": 19,
+    "text": "Objects around me seem to look smaller or further away. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_19_duration",
+    "itemNumber": 19,
+    "text": "Objects around me seem to look smaller or further away. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_20_frequency",
+    "itemNumber": 20,
+    "text": "I cannot feel properly the objects that I touch with my hands for it feels as if it were not me who were touching it. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_20_duration",
+    "itemNumber": 20,
+    "text": "I cannot feel properly the objects that I touch with my hands for it feels as if it were not me who were touching it. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_21_frequency",
+    "itemNumber": 21,
+    "text": "I do not seem able to picture things in my mind, for example, the face of a close friend or a familiar place. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_21_duration",
+    "itemNumber": 21,
+    "text": "I do not seem able to picture things in my mind, for example, the face of a close friend or a familiar place. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_22_frequency",
+    "itemNumber": 22,
+    "text": "When a part of my body hurts, I feel so detached from the pain that it feels as if it were somebody else's pain. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_22_duration",
+    "itemNumber": 22,
+    "text": "When a part of my body hurts, I feel so detached from the pain that it feels as if it were somebody else's pain. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_23_frequency",
+    "itemNumber": 23,
+    "text": "I have the feeling of being outside my body. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_23_duration",
+    "itemNumber": 23,
+    "text": "I have the feeling of being outside my body. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_24_frequency",
+    "itemNumber": 24,
+    "text": "When I move it doesn't feel as if I were in charge of the movements, so that I feel automatic and mechanical as if I were a robot. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_24_duration",
+    "itemNumber": 24,
+    "text": "When I move it doesn't feel as if I were in charge of the movements, so that I feel automatic and mechanical as if I were a robot. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  }
+]

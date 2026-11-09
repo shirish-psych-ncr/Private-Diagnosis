@@ -1,0 +1,79 @@
+{
+  "id": "mipsy_substance_history",
+  "name": "MiPsy — Substance Use History",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "MiPsy self-report (user-supplied text)",
+  "targetAge": [
+    "adult"
+  ],
+  "timeframe": "Past year",
+  "directions": "Select each substance category used in the past year. Select “None of the above” only if no listed substance was used.",
+  "parts": [
+    {
+      "name": "Substance use history",
+      "questions": [
+        {
+          "id": "mipsy_substance_1",
+          "itemNumber": 1,
+          "text": "Alcohol",
+          "tickBox": true,
+          "nonScored": true
+        },
+        {
+          "id": "mipsy_substance_2",
+          "itemNumber": 2,
+          "text": "Sedatives or hypnotics (e.g., benzodiazepines or “benzos” such as alprazolam/Xanax and diazepam/Valium, Z-drugs, or sleeping pills)",
+          "tickBox": true,
+          "nonScored": true
+        },
+        {
+          "id": "mipsy_substance_3",
+          "itemNumber": 3,
+          "text": "Cannabis (weed or marijuana)",
+          "tickBox": true,
+          "nonScored": true
+        },
+        {
+          "id": "mipsy_substance_4",
+          "itemNumber": 4,
+          "text": "Stimulants (e.g., methamphetamine or cocaine)",
+          "tickBox": true,
+          "nonScored": true
+        },
+        {
+          "id": "mipsy_substance_5",
+          "itemNumber": 5,
+          "text": "Hallucinogens or psychedelics (e.g., LSD, psilocybin or magic mushrooms, ketamine, PCP)",
+          "tickBox": true,
+          "nonScored": true
+        },
+        {
+          "id": "mipsy_substance_6",
+          "itemNumber": 6,
+          "text": "Opioids (e.g., heroin)",
+          "tickBox": true,
+          "nonScored": true
+        },
+        {
+          "id": "mipsy_substance_7",
+          "itemNumber": 7,
+          "text": "Inhalants (e.g., glue, paint thinners, spray paints, nitrous oxide or “nos”)",
+          "tickBox": true,
+          "nonScored": true
+        },
+        {
+          "id": "mipsy_substance_8",
+          "itemNumber": 8,
+          "text": "None of the above",
+          "tickBox": true,
+          "nonScored": true
+        }
+      ]
+    }
+  ],
+  "interpretationNote": "Descriptive history only. This checklist is not scored and does not diagnose a substance use disorder.",
+  "ageGroups": [
+    "adult"
+  ]
+}

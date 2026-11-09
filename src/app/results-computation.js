@@ -2,6 +2,7 @@ import { scoreItemSums } from './scoring/item-sums.js';
 import { score as scoreDisability } from './scales/mini_disability.js';
 import { score as scoreCrossCutting } from './scales/mini_cross_cutting.js';
 import { scoreDomain } from './scoring/domain-registry.js';
+import { OPTIONAL_TABLE_ROUTES } from './routing.js';
 
 import { scoreBiss } from './scales/biss.js';
 import { scoreCas } from './scales/clinical_anger_scale.js';
@@ -49,6 +50,8 @@ import { score as scoreCiwaAr } from './scales/ciwa_ar.js';
 import { scoreMeans } from './scoring/item-means.js';
 
 const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS, k10: scoreK10,
+    desii: (_values, _questions, form) => [scoreDesII(form)],
+    mid60: (_values, _questions, form) => [scoreMid60(form)],
     hdrs17: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.hdrs17),
     madrs: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.madrs),
     ymrs: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.ymrs),
@@ -72,6 +75,22 @@ const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: s
     cois_rc: (values, questions, form) => scoreRating(values, questions, form), bdd_ybocs: scoreBddYbocs,
     ciwa_ar: scoreCiwaAr };
 
+function appendFormResults(id, instrumentResults) {
+    const form = CLINICAL_DATA.scales[id];
+    if (!form) return;
+    const questions = form.parts.flatMap(part => part.questions)
+        .filter(q => !q.requires || state.responses[id + ':' + q.requires] === 1);
+    const values = questions.map(q => state.responses[id + ':' + q.id]);
+    if (!values.length || !values.every(Number.isFinite)) return;
+    let rows;
+    if (directScorers[id]) rows = directScorers[id](values, questions, form);
+    else if (form.sumScores) rows = scoreItemSums(values, form);
+    else if (form.meanScores) rows = scoreMeans(values, form);
+    else return;
+    if (form.attribution) rows.forEach(row => { row.sourceNote = form.attribution; });
+    instrumentResults.push(...rows);
+}
+
 function computeResults() {
     const instrumentResults = [];
     const flaggedDisorders = new Map(); // disorderKey -> {sources:Set, bestScore}
@@ -85,37 +104,16 @@ function computeResults() {
     setFlagSink(addFlag);
 
     selectedDomainForms().forEach(domain => {
-        if (domain.selectedForms?.includes('base') && domain.baseInstrument && domain.instrument !== 'auto:bipolartable') {
+        if (domain.selectedForms?.includes('base') && domain.baseInstrument && !domain.forms?.length && domain.instrument !== 'auto:bipolartable') {
             const questions = domain.questions.filter(q => !q.scaleId);
             const values = questions.map(q => state.responses[domain.id + ':' + q.id]);
             if (values.every(Number.isFinite)) instrumentResults.push(...scoreDomain({ ...domain, questions }, addFlag));
         }
-        if (domain.forms?.length) {
-            selectedFormsForDomain(domain).filter(id => domain.forms.includes(id)).forEach(id => {
-                const form = CLINICAL_DATA.scales[id];
-                const questions = form.parts.flatMap(part => part.questions);
-                const values = questions.map(q => state.responses[id + ':' + q.id]);
-                if (!values.every(Number.isFinite)) return;
-                let rows;
-                if (directScorers[id]) rows = directScorers[id](values, questions, form);
-                else if (form.sumScores) rows = scoreItemSums(values, form);
-                else if (form.meanScores) rows = scoreMeans(values, form);
-                else return;
-                if (form.attribution) rows.forEach(row => { row.sourceNote = form.attribution; });
-                instrumentResults.push(...rows);
-            });
-        }
         if (domain.directForm) {
             const values = domain.questions.map(q => state.responses[domain.id + ':' + q.id]);
-            if (values.every(Number.isFinite)) {
+            if (values.length && values.every(Number.isFinite)) {
                 const form = CLINICAL_DATA.scales[domain.id];
-                let rows;
-                if (directScorers[form.id]) rows = directScorers[form.id](values, domain.questions, form);
-                else if (form.sumScores) rows = scoreItemSums(values, form);
-                else if (form.meanScores) rows = scoreMeans(values, form);
-                else rows = directScorers[domain.id](values, domain.questions, form);
-                if (form.attribution) rows.forEach(row => { row.sourceNote = form.attribution; });
-                instrumentResults.push(...rows);
+                appendFormResults(domain.id, instrumentResults);
                 if (form.contextFields) {
                     for (const field of form.contextFields) {
                         const value = state.formContext[form.id + ':' + field.id];
@@ -135,30 +133,27 @@ function computeResults() {
         }
 
         if (domain.forms?.length) {
-            if (domain.baseInstrument && domain.selectedForms?.includes('base')) {
-                const baseQuestions = domain.questions.filter(q => !q.scaleId);
-                const values = baseQuestions.map(q => state.responses[domain.id + ':' + q.id]);
-                if (values.every(Number.isFinite)) instrumentResults.push(scoreDomain({ ...domain, questions: baseQuestions }, addFlag));
-            }
             const chosen = domain.selectedForms || [];
-            if (chosen.includes('base') && domain.baseInstrument) {
-                const baseQuestions = domain.questions.filter(q => !q.scaleId);
-                const values = baseQuestions.map(q => state.responses[domain.id + ':' + q.id]);
-                if (values.every(Number.isFinite)) instrumentResults.push(scoreDomain({ ...domain, questions: baseQuestions }, addFlag));
+            if (domain.instrument === 'auto:adhd') {
+                const peds = ['pediatric', 'schoolage', 'adolescent'].includes(state.context.ageGroup);
+                if (chosen.includes('base')) {
+                    if (peds) instrumentResults.push(scoreVadrs(addFlag));
+                    else {
+                        const baseQuestions = domain.questions.filter(q => !q.scaleId);
+                        if (baseQuestions.length && baseQuestions.every(q => Number.isFinite(state.responses[domain.id + ':' + q.id])))
+                            instrumentResults.push(...scoreDomain({ ...domain, questions: baseQuestions }, addFlag));
+                    }
+                }
+                chosen.filter(id => domain.forms.includes(id)).forEach(id => appendFormResults(id, instrumentResults));
+                return;
             }
-            chosen.filter(id => domain.forms.includes(id)).forEach(id => {
-                const form = CLINICAL_DATA.scales[id];
-                const questions = form.parts.flatMap(part => part.questions);
-                const values = questions.map(q => state.responses[id + ':' + q.id]);
-                if (!values.every(Number.isFinite)) return;
-                let rows;
-                if (directScorers[id]) rows = directScorers[id](values, questions, form);
-                else if (form.sumScores) rows = scoreItemSums(values, form);
-                else if (form.meanScores) rows = scoreMeans(values, form);
-                else return;
-                instrumentResults.push(...rows);
-            });
-            return;
+            if (domain.baseInstrument && chosen.includes('base') && !OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) {
+                const baseQuestions = domain.questions.filter(q => !q.scaleId);
+                if (baseQuestions.length && baseQuestions.every(q => Number.isFinite(state.responses[domain.id + ':' + q.id])))
+                    instrumentResults.push(...scoreDomain({ ...domain, questions: baseQuestions }, addFlag));
+            }
+            chosen.filter(id => domain.forms.includes(id)).forEach(id => appendFormResults(id, instrumentResults));
+            if (!OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) return;
         }
 
         // Deployed VADRS matrix (pediatric ADHD routing)
@@ -254,14 +249,22 @@ function computeResults() {
         // Bipolar signs & symptoms (BISS) on the mood domain: the nine PHQ-9
         // items keep their usual raw-sum scoring, and every BISS attached to an
         // endorsed screen-in item is scored as a dimensional severity profile.
-        if (domain.instrument === 'auto:bipolartable' && domain.baseInstrument) {
-            // Same always-deployed rule as the other optional tables: the BISS
-            // appears on screen as soon as the mood domain is selected, so it
-            // must be scored regardless of how its screen-in items were answered.
+        if (domain.instrument === 'auto:bipolartable' && domain.baseInstrument && !Array.isArray(state.scaleChoices.get(domain.id))) {
             deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
                 if (scale.id === 'biss') instrumentResults.push(scoreBiss(scale, addFlag));
             });
-            // fall through to the generic raw-sum block below for the PHQ-9 items
+            instrumentResults.push(scoreDomain(domain, addFlag));
+            return;
+        }
+        if (domain.instrument === 'auto:bipolartable' && domain.baseInstrument) {
+            const chosen = domain.selectedForms || [];
+            if (chosen.includes('biss')) deployedScreenInstruments(domain, scale => scale.id === 'biss')
+                .forEach(({ scale }) => instrumentResults.push(scoreBiss(scale, addFlag)));
+            if (chosen.includes('base') || !state.scaleChoices.has(domain.id)) {
+                const baseQuestions = domain.questions.filter(q => !q.scaleId);
+                if (baseQuestions.length) instrumentResults.push(...[scoreDomain({ ...domain, questions: baseQuestions }, addFlag)]);
+            }
+            return;
         }
 
         instrumentResults.push(scoreDomain(domain, addFlag));

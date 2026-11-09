@@ -1,0 +1,93 @@
+{
+  "id": "gse",
+  "name": "General Self-Efficacy Scale (GSE)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "For each statement, indicate how true it is for you.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Not at all true"
+    },
+    {
+      "v": 2,
+      "label": "Hardly true"
+    },
+    {
+      "v": 3,
+      "label": "Moderately true"
+    },
+    {
+      "v": 4,
+      "label": "Exactly true"
+    }
+  ],
+  "parts": [
+    {
+      "name": "General Self-Efficacy Scale (GSE)",
+      "questions": [
+        {
+          "id": "gse_1",
+          "itemNumber": 1,
+          "text": "I can always manage to solve difficult problems if I try hard enough."
+        },
+        {
+          "id": "gse_2",
+          "itemNumber": 2,
+          "text": "If someone opposes me, I can find the means and ways to get what I want."
+        },
+        {
+          "id": "gse_3",
+          "itemNumber": 3,
+          "text": "I am certain that I can accomplish my goals."
+        },
+        {
+          "id": "gse_4",
+          "itemNumber": 4,
+          "text": "I am confident that I could deal efficiently with unexpected events."
+        },
+        {
+          "id": "gse_5",
+          "itemNumber": 5,
+          "text": "Thanks to my resourcefulness, I can handle unforeseen situations."
+        },
+        {
+          "id": "gse_6",
+          "itemNumber": 6,
+          "text": "I can solve most problems if I invest the necessary effort."
+        },
+        {
+          "id": "gse_7",
+          "itemNumber": 7,
+          "text": "I can remain calm when facing difficulties because I can rely on my coping abilities."
+        },
+        {
+          "id": "gse_8",
+          "itemNumber": 8,
+          "text": "When I am confronted with a problem, I can find several solutions."
+        },
+        {
+          "id": "gse_9",
+          "itemNumber": 9,
+          "text": "If I am in trouble, I can think of a good solution."
+        },
+        {
+          "id": "gse_10",
+          "itemNumber": 10,
+          "text": "I can handle whatever comes my way."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  },
+  "interpretationNote": "Higher summed scores indicate greater self-efficacy; possible range 10–40.",
+  "ageGroups": [
+    "adolescent",
+    "adult",
+    "older"
+  ]
+}

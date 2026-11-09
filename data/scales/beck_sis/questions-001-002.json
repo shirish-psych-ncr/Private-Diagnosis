@@ -1,0 +1,21 @@
+[
+  {
+    "id": "sis_20",
+    "itemNumber": 20,
+    "text": "Relationship between drug intake and attempt (not included in total)",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Some drug intake before but not related to attempt; reportedly not enough to impair judgment or reality testing"
+      },
+      {
+        "v": 1,
+        "label": "Enough drug intake to impair judgment or reality testing and diminish responsibility or impulse control"
+      },
+      {
+        "v": 2,
+        "label": "Intentional drug intake to facilitate implementation of suicide attempt"
+      }
+    ]
+  }
+]

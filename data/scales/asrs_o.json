@@ -1,0 +1,166 @@
+{
+  "id": "asrs_o",
+  "name": "Adult ADHD Self-Report Scale — Observer Report (ASRS-O)",
+  "administeredBy": "informant",
+  "optionalAssessment": true,
+  "sourceInstrument": "ASRS-O (user-supplied text)",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "directions": "Rate the person based on your observations over the past six months.",
+  "timeframe": "Past six months",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Never"
+    },
+    {
+      "v": 1,
+      "label": "Rarely"
+    },
+    {
+      "v": 2,
+      "label": "Sometimes"
+    },
+    {
+      "v": 3,
+      "label": "Often"
+    },
+    {
+      "v": 4,
+      "label": "Very often"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Part A — Criterion",
+      "questions": [
+        {
+          "id": "asrs_o_1",
+          "itemNumber": 1,
+          "text": "How often does this person have trouble wrapping up the final details of a project, once the challenging parts have been done?"
+        },
+        {
+          "id": "asrs_o_2",
+          "itemNumber": 2,
+          "text": "How often does this person have difficulty getting things in order when they have to do a task that requires organization?"
+        },
+        {
+          "id": "asrs_o_3",
+          "itemNumber": 3,
+          "text": "How often does this person have problems remembering appointments or obligations?"
+        },
+        {
+          "id": "asrs_o_4",
+          "itemNumber": 4,
+          "text": "When this person has a task that requires a lot of thought, how often do they avoid or delay getting started?"
+        },
+        {
+          "id": "asrs_o_5",
+          "itemNumber": 5,
+          "text": "How often does this person fidget or squirm with their hands or feet when they have to sit down for a long time?"
+        },
+        {
+          "id": "asrs_o_6",
+          "itemNumber": 6,
+          "text": "How often does this person seem overly active and compelled to do things, as if driven by a motor?"
+        }
+      ]
+    },
+    {
+      "name": "Part B — Additional symptoms",
+      "questions": [
+        {
+          "id": "asrs_o_7",
+          "itemNumber": 7,
+          "text": "How often does this person make careless mistakes when they have to work on a boring or difficult project?"
+        },
+        {
+          "id": "asrs_o_8",
+          "itemNumber": 8,
+          "text": "How often does this person have difficulty keeping their attention when they are doing boring or repetitive work?"
+        },
+        {
+          "id": "asrs_o_9",
+          "itemNumber": 9,
+          "text": "How often does this person have difficulty concentrating on what people are saying, even when they are speaking to this person directly?"
+        },
+        {
+          "id": "asrs_o_10",
+          "itemNumber": 10,
+          "text": "How often does this person misplace or have difficulty finding things at home or at work?"
+        },
+        {
+          "id": "asrs_o_11",
+          "itemNumber": 11,
+          "text": "How often is this person distracted by activity or noise around them?"
+        },
+        {
+          "id": "asrs_o_12",
+          "itemNumber": 12,
+          "text": "How often does this person leave their seat in meetings or other situations in which they are expected to remain seated?"
+        },
+        {
+          "id": "asrs_o_13",
+          "itemNumber": 13,
+          "text": "How often does this person appear restless or fidgety?"
+        },
+        {
+          "id": "asrs_o_14",
+          "itemNumber": 14,
+          "text": "How often does this person have difficulty unwinding and relaxing when they have time to themselves?"
+        },
+        {
+          "id": "asrs_o_15",
+          "itemNumber": 15,
+          "text": "How often does this person talk too much when they are in social situations?"
+        },
+        {
+          "id": "asrs_o_16",
+          "itemNumber": 16,
+          "text": "When this person is in a conversation, how often do they finish the sentences of the people they are talking to before they can finish them themselves?"
+        },
+        {
+          "id": "asrs_o_17",
+          "itemNumber": 17,
+          "text": "How often does this person have difficulty waiting their turn in situations when turn taking is required?"
+        },
+        {
+          "id": "asrs_o_18",
+          "itemNumber": 18,
+          "text": "How often does this person interrupt others?"
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Part A — Criterion": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Part B — Additional symptoms": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "multiplier": 1
+  },
+  "interpretationNote": "Observer ratings provide collateral information. The supplied scoring notes state that observer cutoffs were borrowed from self-report research and have not been validated for observer ratings; no cutoff or diagnosis is applied here. The symptom-counting subscales described in the source are not calculated by this app."
+}

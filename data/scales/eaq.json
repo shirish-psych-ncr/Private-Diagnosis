@@ -1,0 +1,148 @@
+{
+  "id": "eaq",
+  "name": "Entitlement Attitudes Questionnaire (EAQ)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Rate each statement on the agreement scale.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3"
+    },
+    {
+      "v": 4,
+      "label": "4"
+    },
+    {
+      "v": 5,
+      "label": "5"
+    },
+    {
+      "v": 6,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Entitlement Attitudes Questionnaire (EAQ)",
+      "questions": [
+        {
+          "id": "eaq_1",
+          "itemNumber": 1,
+          "text": "It is necessary to claim what you deserve"
+        },
+        {
+          "id": "eaq_2",
+          "itemNumber": 2,
+          "text": "People should always demand what they deserve"
+        },
+        {
+          "id": "eaq_3",
+          "itemNumber": 3,
+          "text": "I often demand to be treated properly"
+        },
+        {
+          "id": "eaq_4",
+          "itemNumber": 4,
+          "text": "I deserve the best"
+        },
+        {
+          "id": "eaq_5",
+          "itemNumber": 5,
+          "text": "If I get less than I deserve, I speak out about it"
+        },
+        {
+          "id": "eaq_6",
+          "itemNumber": 6,
+          "text": "Everybody has the right to expect help from the state when in need"
+        },
+        {
+          "id": "eaq_7",
+          "itemNumber": 7,
+          "text": "Disadvantaged persons deserve institutional help"
+        },
+        {
+          "id": "eaq_8",
+          "itemNumber": 8,
+          "text": "The state should take care of the livelihood of the poorest"
+        },
+        {
+          "id": "eaq_9",
+          "itemNumber": 9,
+          "text": "The government has a duty to ensure decent living conditions for people"
+        },
+        {
+          "id": "eaq_10",
+          "itemNumber": 10,
+          "text": "It is the duty of the state to care for all citizens"
+        },
+        {
+          "id": "eaq_11",
+          "itemNumber": 11,
+          "text": "I have difficulty forgiving harm done to me"
+        },
+        {
+          "id": "eaq_12",
+          "itemNumber": 12,
+          "text": "I don't forgive the wrongs I have suffered"
+        },
+        {
+          "id": "eaq_13",
+          "itemNumber": 13,
+          "text": "Someone who hurts me cannot count on my sympathy"
+        },
+        {
+          "id": "eaq_14",
+          "itemNumber": 14,
+          "text": "I remember harm that has been done to me for a long time"
+        },
+        {
+          "id": "eaq_15",
+          "itemNumber": 15,
+          "text": "An eye for an eye, a tooth for a tooth is a fair rule"
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Active Entitlement": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Passive Entitlement": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "Revenge Entitlement": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "multiplier": 1
+  },
+  "interpretationNote": "The supplied scoring description calls for means by subscale and total. This app reports raw sums; interpret descriptively and calculate means by dividing each sum by its number of items.",
+  "ageGroups": [
+    "adolescent",
+    "adult",
+    "older"
+  ]
+}

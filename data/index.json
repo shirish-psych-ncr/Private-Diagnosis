@@ -104,6 +104,19 @@
     "cybocs",
     "cois_rc",
     "bdd_ybocs",
-    "ciwa_ar"
+    "ciwa_ar",
+    "cambridge_dep",
+    "mipsy",
+    "ess",
+    "sbq_r",
+    "gse",
+    "eaq",
+    "tcs",
+    "gidyq_aa_mab",
+    "gidyq_aa_fab",
+    "sci",
+    "beck_sis",
+    "mipsy_substance_history",
+    "asrs_o"
   ]
 }

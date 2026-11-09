@@ -1,0 +1,126 @@
+{
+  "id": "tcs",
+  "name": "Transgender Congruence Scale (TCS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Indicate how strongly you agree or disagree with each statement.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Somewhat disagree"
+    },
+    {
+      "v": 3,
+      "label": "Neither agree nor disagree"
+    },
+    {
+      "v": 4,
+      "label": "Somewhat agree"
+    },
+    {
+      "v": 5,
+      "label": "Strongly agree"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Transgender Congruence Scale (TCS)",
+      "questions": [
+        {
+          "id": "tcs_1",
+          "itemNumber": 1,
+          "text": "My outward appearance represents my gender identity."
+        },
+        {
+          "id": "tcs_2",
+          "itemNumber": 2,
+          "text": "I experience a sense of unity between my gender identity and my body."
+        },
+        {
+          "id": "tcs_3",
+          "itemNumber": 3,
+          "text": "My physical appearance adequately expresses my gender identity."
+        },
+        {
+          "id": "tcs_4",
+          "itemNumber": 4,
+          "text": "I am generally comfortable with how others perceive my gender identity when they look at me."
+        },
+        {
+          "id": "tcs_5",
+          "itemNumber": 5,
+          "text": "My physical body represents my gender identity."
+        },
+        {
+          "id": "tcs_6",
+          "itemNumber": 6,
+          "text": "The way my body currently looks does not represent my gender identity.",
+          "reverse": true
+        },
+        {
+          "id": "tcs_7",
+          "itemNumber": 7,
+          "text": "I am happy with the way my appearance expresses my gender identity."
+        },
+        {
+          "id": "tcs_8",
+          "itemNumber": 8,
+          "text": "I do not feel that my appearance reflects my gender identity.",
+          "reverse": true
+        },
+        {
+          "id": "tcs_9",
+          "itemNumber": 9,
+          "text": "I feel that my mind and body are consistent with one another."
+        },
+        {
+          "id": "tcs_10",
+          "itemNumber": 10,
+          "text": "I am not proud of my gender identity.",
+          "reverse": true
+        },
+        {
+          "id": "tcs_11",
+          "itemNumber": 11,
+          "text": "I am happy that I have the gender identity that I do."
+        },
+        {
+          "id": "tcs_12",
+          "itemNumber": 12,
+          "text": "I have accepted my gender identity."
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {
+      "Appearance Congruence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "Gender Identity Acceptance": [
+        10,
+        11,
+        12
+      ]
+    },
+    "multiplier": 1
+  },
+  "interpretationNote": "The original procedure averages items; scores here are sums. Reverse-coded items are marked. Higher means indicate greater congruence/acceptance.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

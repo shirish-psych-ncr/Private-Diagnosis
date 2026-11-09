@@ -1,0 +1,312 @@
+[
+  {
+    "id": "cds_25_frequency",
+    "itemNumber": 25,
+    "text": "The smell of things no longer gives me a feeling of pleasure or dislike. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_25_duration",
+    "itemNumber": 25,
+    "text": "The smell of things no longer gives me a feeling of pleasure or dislike. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_26_frequency",
+    "itemNumber": 26,
+    "text": "I feel so detached from my thoughts that they seem to have a life of their own. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_26_duration",
+    "itemNumber": 26,
+    "text": "I feel so detached from my thoughts that they seem to have a life of their own. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_27_frequency",
+    "itemNumber": 27,
+    "text": "I have to touch myself to make sure that I have a body or a real existence. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_27_duration",
+    "itemNumber": 27,
+    "text": "I have to touch myself to make sure that I have a body or a real existence. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_28_frequency",
+    "itemNumber": 28,
+    "text": "I seem to have lost some bodily sensations (e.g. of hunger and thirst) so that when I eat or drink, it feels an automatic routine. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_28_duration",
+    "itemNumber": 28,
+    "text": "I seem to have lost some bodily sensations (e.g. of hunger and thirst) so that when I eat or drink, it feels an automatic routine. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  },
+  {
+    "id": "cds_29_frequency",
+    "itemNumber": 29,
+    "text": "Previously familiar places look unfamiliar, as if I had never seen them before. — frequency over the past six months",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Never"
+      },
+      {
+        "v": 1,
+        "label": "Rarely"
+      },
+      {
+        "v": 2,
+        "label": "Often"
+      },
+      {
+        "v": 3,
+        "label": "Very often"
+      },
+      {
+        "v": 4,
+        "label": "All the time"
+      }
+    ]
+  },
+  {
+    "id": "cds_29_duration",
+    "itemNumber": 29,
+    "text": "Previously familiar places look unfamiliar, as if I had never seen them before. — average duration when experienced",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not applicable / never"
+      },
+      {
+        "v": 1,
+        "label": "A few seconds"
+      },
+      {
+        "v": 2,
+        "label": "A few minutes"
+      },
+      {
+        "v": 3,
+        "label": "A few hours"
+      },
+      {
+        "v": 4,
+        "label": "About a day"
+      },
+      {
+        "v": 5,
+        "label": "More than a day"
+      },
+      {
+        "v": 6,
+        "label": "More than a week"
+      }
+    ]
+  }
+]

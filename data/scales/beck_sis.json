@@ -1,0 +1,33 @@
+{
+  "id": "beck_sis",
+  "name": "Beck Suicide Intent Scale (SIS)",
+  "administeredBy": "clinician",
+  "optionalAssessment": true,
+  "sourceInstrument": "Beck Suicide Intent Scale (user-supplied text)",
+  "targetAge": [
+    "adult"
+  ],
+  "directions": "Clinician interview about the patient’s most recent suicide attempt, covering objective circumstances and the patient’s perceptions. Items 1–15 contribute to the total. Code not applicable responses as −8 and exclude them from the total. Items 16–20 are additional aspects and are not included in the total.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0"
+    },
+    {
+      "v": 1,
+      "label": "1"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    }
+  ],
+  "parts": {
+    "$file": "data/scales/beck_sis/parts.json"
+  },
+  "interpretationNote": "The supplied text says the total is the sum of items 1–15, excluding items coded −8. The application records responses but does not calculate a total because the −8 missing/not-applicable handling is not supported by the generic scorer. Use only as a clinician interview aid, not as a stand-alone risk determination.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

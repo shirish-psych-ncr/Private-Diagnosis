@@ -16,7 +16,10 @@
     "vq",
     "cfi",
     "dts",
-    "k10"
+    "k10",
+    "mipsy",
+    "gse",
+    "eaq"
   ],
   "defaultForm": "ryff"
 }

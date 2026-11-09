@@ -1,0 +1,83 @@
+{
+  "id": "ess",
+  "name": "Epworth Sleepiness Scale (ESS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "How likely are you to doze or fall asleep in each situation, in contrast to feeling just tired? Think about your usual way of life in recent times. If you have not done an activity recently, estimate how it would affect you.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Would never doze"
+    },
+    {
+      "v": 1,
+      "label": "Slight chance of dozing"
+    },
+    {
+      "v": 2,
+      "label": "Moderate chance of dozing"
+    },
+    {
+      "v": 3,
+      "label": "High chance of dozing"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Epworth Sleepiness Scale (ESS)",
+      "questions": [
+        {
+          "id": "ess_1",
+          "itemNumber": 1,
+          "text": "Sitting and reading"
+        },
+        {
+          "id": "ess_2",
+          "itemNumber": 2,
+          "text": "Watching TV"
+        },
+        {
+          "id": "ess_3",
+          "itemNumber": 3,
+          "text": "Sitting, inactive, in a public place (e.g., in a meeting, theater, or dinner event)"
+        },
+        {
+          "id": "ess_4",
+          "itemNumber": 4,
+          "text": "As a passenger in a car for an hour or more without stopping for a break"
+        },
+        {
+          "id": "ess_5",
+          "itemNumber": 5,
+          "text": "Lying down to rest when circumstances permit"
+        },
+        {
+          "id": "ess_6",
+          "itemNumber": 6,
+          "text": "Sitting and talking to someone"
+        },
+        {
+          "id": "ess_7",
+          "itemNumber": 7,
+          "text": "Sitting quietly after a meal without alcohol"
+        },
+        {
+          "id": "ess_8",
+          "itemNumber": 8,
+          "text": "In a car, while stopped for a few minutes in traffic or at a light"
+        }
+      ]
+    }
+  ],
+  "timeframe": "Usual recent way of life",
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  },
+  "interpretationNote": "The supplied text identifies a score of 10 or greater as raising concern about sleepiness. This is not diagnostic.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

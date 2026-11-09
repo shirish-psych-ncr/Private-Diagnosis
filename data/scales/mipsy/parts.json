@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Self-report statements",
+    "questions": {
+      "$concat": [
+        "data/scales/mipsy/questions-001-001.json",
+        "data/scales/mipsy/questions-001-002.json",
+        "data/scales/mipsy/questions-001-003.json"
+      ]
+    }
+  }
+]

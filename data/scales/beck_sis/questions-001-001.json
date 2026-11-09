@@ -1,0 +1,363 @@
+[
+  {
+    "id": "sis_1",
+    "itemNumber": 1,
+    "text": "Isolation",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Somebody present"
+      },
+      {
+        "v": 1,
+        "label": "Somebody nearby, or in visual or vocal contact"
+      },
+      {
+        "v": 2,
+        "label": "No one nearby or in visual or vocal contact"
+      }
+    ]
+  },
+  {
+    "id": "sis_2",
+    "itemNumber": 2,
+    "text": "Timing",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Intervention is probable"
+      },
+      {
+        "v": 1,
+        "label": "Intervention is not likely"
+      },
+      {
+        "v": 2,
+        "label": "Intervention is highly unlikely"
+      }
+    ]
+  },
+  {
+    "id": "sis_3",
+    "itemNumber": 3,
+    "text": "Precautions against discovery/intervention",
+    "scale": [
+      {
+        "v": 0,
+        "label": "No precautions"
+      },
+      {
+        "v": 1,
+        "label": "Passive precautions (avoiding others but doing nothing to prevent intervention; alone in room with unlocked door)"
+      },
+      {
+        "v": 2,
+        "label": "Active precautions (locked door)"
+      }
+    ]
+  },
+  {
+    "id": "sis_4",
+    "itemNumber": 4,
+    "text": "Acting to get help during/after attempt",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Notified potential helper regarding attempt"
+      },
+      {
+        "v": 1,
+        "label": "Contacted but did not specifically notify potential helper regarding attempt"
+      },
+      {
+        "v": 2,
+        "label": "Did not contact or notify potential helper"
+      }
+    ]
+  },
+  {
+    "id": "sis_5",
+    "itemNumber": 5,
+    "text": "Final acts in anticipation of death (e.g., will, gifts, insurance)",
+    "scale": [
+      {
+        "v": 0,
+        "label": "None"
+      },
+      {
+        "v": 1,
+        "label": "Thought about or made some arrangements"
+      },
+      {
+        "v": 2,
+        "label": "Made definite plans or completed arrangements"
+      }
+    ]
+  },
+  {
+    "id": "sis_6",
+    "itemNumber": 6,
+    "text": "Active preparation for attempt",
+    "scale": [
+      {
+        "v": 0,
+        "label": "None"
+      },
+      {
+        "v": 1,
+        "label": "Minimal to moderate"
+      },
+      {
+        "v": 2,
+        "label": "Extensive"
+      }
+    ]
+  },
+  {
+    "id": "sis_7",
+    "itemNumber": 7,
+    "text": "Suicide note",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Absence of note"
+      },
+      {
+        "v": 1,
+        "label": "Note written but torn up; note thought about"
+      },
+      {
+        "v": 2,
+        "label": "Presence of note"
+      }
+    ]
+  },
+  {
+    "id": "sis_8",
+    "itemNumber": 8,
+    "text": "Overt communication of intent before the attempt",
+    "scale": [
+      {
+        "v": 0,
+        "label": "None"
+      },
+      {
+        "v": 1,
+        "label": "Equivocal communication"
+      },
+      {
+        "v": 2,
+        "label": "Unequivocal communication"
+      }
+    ]
+  },
+  {
+    "id": "sis_9",
+    "itemNumber": 9,
+    "text": "Alleged purpose of attempt",
+    "scale": [
+      {
+        "v": 0,
+        "label": "To manipulate environment, get attention, or seek revenge"
+      },
+      {
+        "v": 1,
+        "label": "Components of responses 0 and 2"
+      },
+      {
+        "v": 2,
+        "label": "To escape, find surcease, or solve problems"
+      }
+    ]
+  },
+  {
+    "id": "sis_10",
+    "itemNumber": 10,
+    "text": "Expectations of fatality",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Thought that death was unlikely"
+      },
+      {
+        "v": 1,
+        "label": "Thought that death was possible but not probable"
+      },
+      {
+        "v": 2,
+        "label": "Thought that death was probable or certain"
+      }
+    ]
+  },
+  {
+    "id": "sis_11",
+    "itemNumber": 11,
+    "text": "Conception of method's lethality",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Did less to self than believed would be lethal"
+      },
+      {
+        "v": 1,
+        "label": "Was not sure whether the act would be lethal"
+      },
+      {
+        "v": 2,
+        "label": "Equaled or exceeded what was believed would be lethal"
+      }
+    ]
+  },
+  {
+    "id": "sis_12",
+    "itemNumber": 12,
+    "text": "Seriousness of attempt",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Did not seriously attempt to end life"
+      },
+      {
+        "v": 1,
+        "label": "Uncertain about seriousness of intent to end life"
+      },
+      {
+        "v": 2,
+        "label": "Seriously attempted to end life"
+      }
+    ]
+  },
+  {
+    "id": "sis_13",
+    "itemNumber": 13,
+    "text": "Attitude toward living/dying",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Did not want to die"
+      },
+      {
+        "v": 1,
+        "label": "Components of responses 0 and 2"
+      },
+      {
+        "v": 2,
+        "label": "Wanted to die"
+      }
+    ]
+  },
+  {
+    "id": "sis_14",
+    "itemNumber": 14,
+    "text": "Conception of medical rescuability",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Thought death would be unlikely with medical attention"
+      },
+      {
+        "v": 1,
+        "label": "Uncertain whether medical attention could avert death"
+      },
+      {
+        "v": 2,
+        "label": "Certain of death even with medical attention"
+      }
+    ]
+  },
+  {
+    "id": "sis_15",
+    "itemNumber": 15,
+    "text": "Degree of premeditation",
+    "scale": [
+      {
+        "v": 0,
+        "label": "None; impulsive"
+      },
+      {
+        "v": 1,
+        "label": "Suicide contemplated for three hours or less before attempt"
+      },
+      {
+        "v": 2,
+        "label": "Suicide contemplated for more than three hours before attempt"
+      }
+    ]
+  },
+  {
+    "id": "sis_16",
+    "itemNumber": 16,
+    "text": "Reaction to attempt (not included in total)",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Sorry about attempt; feels foolish or ashamed"
+      },
+      {
+        "v": 1,
+        "label": "Accepts both attempt and its failure"
+      },
+      {
+        "v": 2,
+        "label": "Regrets failure of attempt"
+      }
+    ]
+  },
+  {
+    "id": "sis_17",
+    "itemNumber": 17,
+    "text": "Visualization of death (not included in total)",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Life after death; reunion with deceased"
+      },
+      {
+        "v": 1,
+        "label": "Never-ending sleep, darkness, end of things"
+      },
+      {
+        "v": 2,
+        "label": "No conceptions of, or thoughts about, death"
+      }
+    ]
+  },
+  {
+    "id": "sis_18",
+    "itemNumber": 18,
+    "text": "Number of previous attempts (not included in total)",
+    "scale": [
+      {
+        "v": 0,
+        "label": "None"
+      },
+      {
+        "v": 1,
+        "label": "One or two"
+      },
+      {
+        "v": 2,
+        "label": "Three or more"
+      }
+    ]
+  },
+  {
+    "id": "sis_19",
+    "itemNumber": 19,
+    "text": "Relationship between alcohol intake and attempt (not included in total)",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Some alcohol intake before but not related to attempt; reportedly not enough to impair judgment or reality testing"
+      },
+      {
+        "v": 1,
+        "label": "Enough alcohol to impair judgment, reality testing, and diminish responsibility or impulse control"
+      },
+      {
+        "v": 2,
+        "label": "Intentional alcohol intake to facilitate implementation of suicide attempt"
+      }
+    ]
+  }
+]

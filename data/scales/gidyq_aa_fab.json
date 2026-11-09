@@ -1,0 +1,188 @@
+{
+  "id": "gidyq_aa_fab",
+  "name": "Gender Identity/Gender Dysphoria Questionnaire for Adolescents (GIDYQ-AA) — Female Assigned at Birth — Adolescent",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "GIDYQ-AA adolescent form (user-supplied text)",
+  "targetAge": [
+    "adolescent"
+  ],
+  "timeframe": "Past 12 months",
+  "directions": "Answer each item based on how you have felt over the past 12 months. For the dreams item, the supplied form instructs respondents who did not have dreams or were not present in their dreams to skip that item.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Always"
+    },
+    {
+      "v": 2,
+      "label": "Often"
+    },
+    {
+      "v": 3,
+      "label": "Sometimes"
+    },
+    {
+      "v": 4,
+      "label": "Rarely"
+    },
+    {
+      "v": 5,
+      "label": "Never"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Gender identity and experience",
+      "questions": [
+        {
+          "id": "gidyq_aa_fab_1",
+          "itemNumber": 1,
+          "text": "In the past 12 months, have you felt satisfied being a girl?",
+          "reverse": true
+        },
+        {
+          "id": "gidyq_aa_fab_2",
+          "itemNumber": 2,
+          "text": "In the past 12 months, have you felt uncertain about your gender, that is, feeling somewhere in between a boy and a girl?"
+        },
+        {
+          "id": "gidyq_aa_fab_3",
+          "itemNumber": 3,
+          "text": "In the past 12 months, have you felt pressured by others to be a girl, although you don't really feel like one?"
+        },
+        {
+          "id": "gidyq_aa_fab_4",
+          "itemNumber": 4,
+          "text": "In the past 12 months, have you felt, unlike most girls, that you have to work at being a girl?"
+        },
+        {
+          "id": "gidyq_aa_fab_5",
+          "itemNumber": 5,
+          "text": "In the past 12 months, have you felt that you were not a real girl?"
+        },
+        {
+          "id": "gidyq_aa_fab_6",
+          "itemNumber": 6,
+          "text": "In the past 12 months, have you felt, given who you really are (e.g., what you like to do, how you act with other people), that it would be better for you to live as a boy rather than as a girl?"
+        },
+        {
+          "id": "gidyq_aa_fab_7",
+          "itemNumber": 7,
+          "text": "In the past 12 months, have you had dreams in which you were a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_8",
+          "itemNumber": 8,
+          "text": "In the past 12 months, have you felt unhappy about being a girl?"
+        },
+        {
+          "id": "gidyq_aa_fab_9",
+          "itemNumber": 9,
+          "text": "In the past 12 months, have you felt uncertain about yourself, at times feeling more like a boy and at times feeling more like a girl?"
+        },
+        {
+          "id": "gidyq_aa_fab_10",
+          "itemNumber": 10,
+          "text": "In the past 12 months, have you felt more like a boy than like a girl?"
+        },
+        {
+          "id": "gidyq_aa_fab_11",
+          "itemNumber": 11,
+          "text": "In the past 12 months, have you felt that you did not have anything in common with either girls or boys?"
+        },
+        {
+          "id": "gidyq_aa_fab_12",
+          "itemNumber": 12,
+          "text": "In the past 12 months, have you been bothered by seeing yourself identified as female or having to check the box for female on official forms (e.g., employment applications, driver’s license, passport)?"
+        },
+        {
+          "id": "gidyq_aa_fab_13",
+          "itemNumber": 13,
+          "text": "In the past 12 months, have you felt comfortable when using women restrooms in public places?",
+          "reverse": true
+        },
+        {
+          "id": "gidyq_aa_fab_14",
+          "itemNumber": 14,
+          "text": "In the past 12 months, have strangers treated you as a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_15",
+          "itemNumber": 15,
+          "text": "In the past 12 months, at home, have people you know, such as friends or relatives, treated you as a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_16",
+          "itemNumber": 16,
+          "text": "In the past 12 months, have you had the wish or desire to be a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_17",
+          "itemNumber": 17,
+          "text": "In the past 12 months, at home, have you dressed and acted as a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_18",
+          "itemNumber": 18,
+          "text": "In the past 12 months, at parties or at other social gatherings, have you presented yourself as a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_19",
+          "itemNumber": 19,
+          "text": "In the past 12 months, at work or at school, have you presented yourself as a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_20",
+          "itemNumber": 20,
+          "text": "In the past 12 months, have you disliked your body because it is female (e.g., having breasts or having a vagina)?"
+        },
+        {
+          "id": "gidyq_aa_fab_21",
+          "itemNumber": 21,
+          "text": "In the past 12 months, have you wished to have hormone treatment to change your body into a boy's?"
+        },
+        {
+          "id": "gidyq_aa_fab_22",
+          "itemNumber": 22,
+          "text": "In the past 12 months, have you wished to have an operation to change your body into a boy's?"
+        },
+        {
+          "id": "gidyq_aa_fab_23",
+          "itemNumber": 23,
+          "text": "In the past 12 months, have you made an effort to change your legal sex (e.g., on a driver's licence or credit card)?"
+        },
+        {
+          "id": "gidyq_aa_fab_24",
+          "itemNumber": 24,
+          "text": "In the past 12 months, have you thought of yourself as an intersex person rather than as a girl or boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_25",
+          "itemNumber": 25,
+          "text": "In the past 12 months, have you thought of yourself as a transgender person?"
+        },
+        {
+          "id": "gidyq_aa_fab_26",
+          "itemNumber": 26,
+          "text": "In the past 12 months, have you thought of yourself as a boy?"
+        },
+        {
+          "id": "gidyq_aa_fab_27",
+          "itemNumber": 27,
+          "text": "In the past 12 months, have you thought of yourself as a girl?",
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  },
+  "interpretationNote": "Items 1, 13, and 27 are reverse scored. The supplied form defines a scaled score as the mean of answered items. This app displays a raw sum; divide by the number answered for the mean. Results describe responses and do not establish a diagnosis. The attachment included adolescent versions only.",
+  "ageGroups": [
+    "adolescent"
+  ]
+}

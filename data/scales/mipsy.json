@@ -1,0 +1,41 @@
+{
+  "id": "mipsy",
+  "name": "Multilevel Assessment of Psychopathology (MiPsy) — Self-Report",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "MiPsy Self-Report (user-supplied text)",
+  "targetAge": [
+    "adult"
+  ],
+  "directions": "For each statement, choose how true or common it was for you during the past year. Consider the full variety of your experiences and select the best fit.",
+  "timeframe": "Past year",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Not at all true / Never"
+    },
+    {
+      "v": 2,
+      "label": "A little true / Rarely"
+    },
+    {
+      "v": 3,
+      "label": "Somewhat true / Sometimes"
+    },
+    {
+      "v": 4,
+      "label": "Very true / Often"
+    },
+    {
+      "v": 5,
+      "label": "Perfectly true / Always"
+    }
+  ],
+  "parts": {
+    "$file": "data/scales/mipsy/parts.json"
+  },
+  "interpretationNote": "No validated cutoff or diagnostic interpretation is supplied here. Review item responses and total descriptively; this is not a diagnosis.",
+  "ageGroups": [
+    "adult"
+  ]
+}

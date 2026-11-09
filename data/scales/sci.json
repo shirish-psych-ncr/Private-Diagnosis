@@ -1,0 +1,267 @@
+{
+  "id": "sci",
+  "name": "Sleep Condition Indicator (SCI)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Sleep Condition Indicator (user-supplied text)",
+  "targetAge": [
+    "adult"
+  ],
+  "timeframe": "Past month (items 1–7); duration of sleep problem (item 8)",
+  "directions": "Think about a typical night in the last month and answer each item.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "0"
+    },
+    {
+      "v": 1,
+      "label": "1"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3"
+    },
+    {
+      "v": 4,
+      "label": "4"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Sleep Condition Indicator",
+      "questions": [
+        {
+          "id": "sci_1",
+          "itemNumber": 1,
+          "text": "Thinking about a typical night in the last month, how long does it take you to fall asleep?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "61 minutes or more"
+            },
+            {
+              "v": 1,
+              "label": "46–60 minutes"
+            },
+            {
+              "v": 2,
+              "label": "31–45 minutes"
+            },
+            {
+              "v": 3,
+              "label": "16–30 minutes"
+            },
+            {
+              "v": 4,
+              "label": "0–15 minutes"
+            }
+          ]
+        },
+        {
+          "id": "sci_2",
+          "itemNumber": 2,
+          "text": "If you wake up during the night, how long are you awake in total (add all the awakenings together)?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "61 minutes or more"
+            },
+            {
+              "v": 1,
+              "label": "46–60 minutes"
+            },
+            {
+              "v": 2,
+              "label": "31–45 minutes"
+            },
+            {
+              "v": 3,
+              "label": "16–30 minutes"
+            },
+            {
+              "v": 4,
+              "label": "0–15 minutes"
+            }
+          ]
+        },
+        {
+          "id": "sci_3",
+          "itemNumber": 3,
+          "text": "How many nights a week do you have a problem with your sleep?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "5–7 nights"
+            },
+            {
+              "v": 1,
+              "label": "4 nights"
+            },
+            {
+              "v": 2,
+              "label": "3 nights"
+            },
+            {
+              "v": 3,
+              "label": "2 nights"
+            },
+            {
+              "v": 4,
+              "label": "0–1 night"
+            }
+          ]
+        },
+        {
+          "id": "sci_4",
+          "itemNumber": 4,
+          "text": "How would you rate your sleep quality?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Very poor"
+            },
+            {
+              "v": 1,
+              "label": "Poor"
+            },
+            {
+              "v": 2,
+              "label": "Average"
+            },
+            {
+              "v": 3,
+              "label": "Good"
+            },
+            {
+              "v": 4,
+              "label": "Very good"
+            }
+          ]
+        },
+        {
+          "id": "sci_5",
+          "itemNumber": 5,
+          "text": "Thinking about the past month, to what extent has poor sleep affected your mood, energy, or relationships?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Very much"
+            },
+            {
+              "v": 1,
+              "label": "Much"
+            },
+            {
+              "v": 2,
+              "label": "Somewhat"
+            },
+            {
+              "v": 3,
+              "label": "A little"
+            },
+            {
+              "v": 4,
+              "label": "Not at all"
+            }
+          ]
+        },
+        {
+          "id": "sci_6",
+          "itemNumber": 6,
+          "text": "Thinking about the past month, to what extent has poor sleep affected your concentration, productivity, or ability to stay awake?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Very much"
+            },
+            {
+              "v": 1,
+              "label": "Much"
+            },
+            {
+              "v": 2,
+              "label": "Somewhat"
+            },
+            {
+              "v": 3,
+              "label": "A little"
+            },
+            {
+              "v": 4,
+              "label": "Not at all"
+            }
+          ]
+        },
+        {
+          "id": "sci_7",
+          "itemNumber": 7,
+          "text": "Thinking about the past month, to what extent has poor sleep troubled you in general?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Very much"
+            },
+            {
+              "v": 1,
+              "label": "Much"
+            },
+            {
+              "v": 2,
+              "label": "Somewhat"
+            },
+            {
+              "v": 3,
+              "label": "A little"
+            },
+            {
+              "v": 4,
+              "label": "Not at all"
+            }
+          ]
+        },
+        {
+          "id": "sci_8",
+          "itemNumber": 8,
+          "text": "How long have you had a problem with your sleep?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "More than 1 year"
+            },
+            {
+              "v": 1,
+              "label": "7–12 months"
+            },
+            {
+              "v": 2,
+              "label": "3–6 months"
+            },
+            {
+              "v": 3,
+              "label": "1–2 months"
+            },
+            {
+              "v": 4,
+              "label": "I do not have a problem / less than 1 month"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sumScores": {
+    "total": true,
+    "groups": {},
+    "multiplier": 1
+  },
+  "interpretationNote": "The supplied source states a total range of 0–32, higher scores indicate better sleep, and a conversion to a 0–10 scale is total/3.2. No threshold interpretation is added here.",
+  "ageGroups": [
+    "adult",
+    "older"
+  ]
+}

@@ -18,10 +18,17 @@ function routeInstruments() {
         const instName = domain.instrument || null;
         if (instName === 'auto:adhd') {
             const peds = ['pediatric', 'schoolage', 'adolescent'].includes(state.context.ageGroup);
-            deployed.push({
+            const chosen = domain.selectedForms || [];
+            const includeBase = !domain.forms?.length || chosen.includes('base');
+            if (includeBase) deployed.push({
                 domain,
                 scaleId: peds ? 'vadrs' : null,
                 instrumentLabel: peds ? 'VADRS' : 'ASRS-v1.1'
+            });
+            if (!peds && chosen.includes('asrs_o')) deployed.push({
+                domain: { ...domain, id: 'neurodevelopmental', directForm: true },
+                scaleId: 'asrs_o',
+                instrumentLabel: null
             });
         } else if (OPTIONAL_TABLE_ROUTES.includes(instName)) {
             if (instName === 'auto:bipolartable' && domain.baseInstrument && (domain.selectedForms || []).includes('base')) {
@@ -43,6 +50,11 @@ function routeInstruments() {
             });
             if (instName === 'auto:bipolartable' && (domain.selectedForms || []).includes('base') && !deployed.some(entry => entry.domain === domain && !entry.scaleId))
                 deployed.push({ domain, scaleId: null, instrumentLabel: domain.baseInstrument });
+            const chosenForms = (domain.selectedForms || []).filter(id => (domain.forms || []).includes(id));
+            chosenForms.forEach(id => {
+                if (deployed.some(entry => entry.scaleId === id && entry.domain.id === id)) return;
+                deployed.push({ domain: { ...domain, id, directForm: true }, scaleId: id, instrumentLabel: null });
+            });
         } else {
             const chosen = domain.selectedForms || [];
             if (!chosen.length && domain.forms?.length) return;

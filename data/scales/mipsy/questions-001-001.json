@@ -1,0 +1,292 @@
+[
+  {
+    "id": "mipsy_1",
+    "itemNumber": 1,
+    "text": "I was easily irritated."
+  },
+  {
+    "id": "mipsy_2",
+    "itemNumber": 2,
+    "text": "I felt resentful."
+  },
+  {
+    "id": "mipsy_3",
+    "itemNumber": 3,
+    "text": "It felt like I was treated unfairly by others."
+  },
+  {
+    "id": "mipsy_4",
+    "itemNumber": 4,
+    "text": "I got emotional easily, or over little things."
+  },
+  {
+    "id": "mipsy_5",
+    "itemNumber": 5,
+    "text": "My emotions were unpredictable or varied a lot."
+  },
+  {
+    "id": "mipsy_6",
+    "itemNumber": 6,
+    "text": "I did things that were self-destructive."
+  },
+  {
+    "id": "mipsy_7",
+    "itemNumber": 7,
+    "text": "I felt out of control."
+  },
+  {
+    "id": "mipsy_8",
+    "itemNumber": 8,
+    "text": "I did not enjoy life."
+  },
+  {
+    "id": "mipsy_9",
+    "itemNumber": 9,
+    "text": "I felt hopeless."
+  },
+  {
+    "id": "mipsy_10",
+    "itemNumber": 10,
+    "text": "It felt like everything was pointless."
+  },
+  {
+    "id": "mipsy_11",
+    "itemNumber": 11,
+    "text": "I experienced less pleasure from life than usual."
+  },
+  {
+    "id": "mipsy_12",
+    "itemNumber": 12,
+    "text": "I felt worthless."
+  },
+  {
+    "id": "mipsy_13",
+    "itemNumber": 13,
+    "text": "I lost interest in things that I usually enjoy."
+  },
+  {
+    "id": "mipsy_14",
+    "itemNumber": 14,
+    "text": "I stopped doing activities that were important to me."
+  },
+  {
+    "id": "mipsy_15",
+    "itemNumber": 15,
+    "text": "I felt detached or disconnected from others."
+  },
+  {
+    "id": "mipsy_16",
+    "itemNumber": 16,
+    "text": "I had strong negative beliefs about myself (e.g., \"I am bad\" or \"I am dangerous\")."
+  },
+  {
+    "id": "mipsy_17",
+    "itemNumber": 17,
+    "text": "I thought that the world would be better off if I were dead."
+  },
+  {
+    "id": "mipsy_18",
+    "itemNumber": 18,
+    "text": "I thought about killing myself."
+  },
+  {
+    "id": "mipsy_19",
+    "itemNumber": 19,
+    "text": "I had a specific plan for killing myself."
+  },
+  {
+    "id": "mipsy_20",
+    "itemNumber": 20,
+    "text": "I attempted suicide."
+  },
+  {
+    "id": "mipsy_21",
+    "itemNumber": 21,
+    "text": "I had strong negative beliefs about others (e.g., \"No one can be trusted\")."
+  },
+  {
+    "id": "mipsy_22",
+    "itemNumber": 22,
+    "text": "I felt guilty about something small or when I hadn't done anything wrong."
+  },
+  {
+    "id": "mipsy_23",
+    "itemNumber": 23,
+    "text": "I feared that I would act in a way that would make others think badly of me (e.g., I would be humiliated or embarrassed)."
+  },
+  {
+    "id": "mipsy_24",
+    "itemNumber": 24,
+    "text": "I reacted strongly when I thought someone was rejecting me (e.g., I thought they might not want to be with me)."
+  },
+  {
+    "id": "mipsy_25",
+    "itemNumber": 25,
+    "text": "I felt like I would have done just about anything to keep someone from abandoning me."
+  },
+  {
+    "id": "mipsy_26",
+    "itemNumber": 26,
+    "text": "I felt detached from myself, or like I was an outside observer of my thoughts, feelings, bodily sensations or actions."
+  },
+  {
+    "id": "mipsy_27",
+    "itemNumber": 27,
+    "text": "I felt restless."
+  },
+  {
+    "id": "mipsy_28",
+    "itemNumber": 28,
+    "text": "I felt that my thoughts were racing."
+  },
+  {
+    "id": "mipsy_29",
+    "itemNumber": 29,
+    "text": "I had thoughts, urges, or images in my mind that were intrusive or unwanted."
+  },
+  {
+    "id": "mipsy_30",
+    "itemNumber": 30,
+    "text": "I was concerned about flaws in my appearance that others could not see, or thought were minor."
+  },
+  {
+    "id": "mipsy_31",
+    "itemNumber": 31,
+    "text": "I perceived my body weight or shape differently from other people."
+  },
+  {
+    "id": "mipsy_32",
+    "itemNumber": 32,
+    "text": "I was worried I might be suddenly overwhelmed by fear, and that this might make me lose control, have a heart attack, or \"go crazy\"."
+  },
+  {
+    "id": "mipsy_33",
+    "itemNumber": 33,
+    "text": "I found it difficult to control my worrying."
+  },
+  {
+    "id": "mipsy_34",
+    "itemNumber": 34,
+    "text": "I was worried or anxious about a lot of different events or activities."
+  },
+  {
+    "id": "mipsy_35",
+    "itemNumber": 35,
+    "text": "I had an unexpected surge of intense and overwhelming fear or discomfort."
+  },
+  {
+    "id": "mipsy_36",
+    "itemNumber": 36,
+    "text": "I disliked spending time with others."
+  },
+  {
+    "id": "mipsy_37",
+    "itemNumber": 37,
+    "text": "I was not interested in my peers or making friends."
+  },
+  {
+    "id": "mipsy_38",
+    "itemNumber": 38,
+    "text": "I avoided being in social situations."
+  },
+  {
+    "id": "mipsy_39",
+    "itemNumber": 39,
+    "text": "I felt anxious about being away from my home."
+  },
+  {
+    "id": "mipsy_40",
+    "itemNumber": 40,
+    "text": "I felt anxious about being in a crowd."
+  },
+  {
+    "id": "mipsy_41",
+    "itemNumber": 41,
+    "text": "I avoided situations where I might have been unable to escape or get help (e.g., being in a crowd or far from home)."
+  },
+  {
+    "id": "mipsy_42",
+    "itemNumber": 42,
+    "text": "I felt anxious about being in open public spaces."
+  },
+  {
+    "id": "mipsy_43",
+    "itemNumber": 43,
+    "text": "I felt anxious about being in enclosed public spaces."
+  },
+  {
+    "id": "mipsy_44",
+    "itemNumber": 44,
+    "text": "I felt fear or anxiety about social situations like having a conversation, meeting new or unfamiliar people, or being observed eating, drinking, or speaking in front of others."
+  },
+  {
+    "id": "mipsy_45",
+    "itemNumber": 45,
+    "text": "I was afraid of dying."
+  },
+  {
+    "id": "mipsy_46",
+    "itemNumber": 46,
+    "text": "I felt fear or anxiety about a specific object or situation (e.g., flying, heights, animals, getting an injection, seeing blood, spiders, insects, dogs, storms, water, or elevators)."
+  },
+  {
+    "id": "mipsy_47",
+    "itemNumber": 47,
+    "text": "I was very anxious about my physical health or signs and symptoms of illness."
+  },
+  {
+    "id": "mipsy_48",
+    "itemNumber": 48,
+    "text": "I was hypervigilant (i.e., I was more alert, and constantly on the lookout for danger)."
+  },
+  {
+    "id": "mipsy_49",
+    "itemNumber": 49,
+    "text": "I avoided situations that might cause me to feel panicked or like I might die (e.g., exercise or unfamiliar situations that were otherwise safe)."
+  },
+  {
+    "id": "mipsy_50",
+    "itemNumber": 50,
+    "text": "I had trouble falling asleep, staying asleep, or getting back to sleep."
+  },
+  {
+    "id": "mipsy_51",
+    "itemNumber": 51,
+    "text": "I was distressed when reminded of a traumatic event I experienced."
+  },
+  {
+    "id": "mipsy_52",
+    "itemNumber": 52,
+    "text": "I tried to avoid people, places, or situations that might remind me of a traumatic event I experienced."
+  },
+  {
+    "id": "mipsy_53",
+    "itemNumber": 53,
+    "text": "I made reckless decisions even though I knew better."
+  },
+  {
+    "id": "mipsy_54",
+    "itemNumber": 54,
+    "text": "I did things without thinking about their consequences."
+  },
+  {
+    "id": "mipsy_55",
+    "itemNumber": 55,
+    "text": "I did things that others would consider risky."
+  },
+  {
+    "id": "mipsy_56",
+    "itemNumber": 56,
+    "text": "Others said I was acting differently, but I didn't think so."
+  },
+  {
+    "id": "mipsy_57",
+    "itemNumber": 57,
+    "text": "My behaviour was inappropriate or socially unacceptable."
+  },
+  {
+    "id": "mipsy_58",
+    "itemNumber": 58,
+    "text": "I was careless with my own and other people's things."
+  }
+]

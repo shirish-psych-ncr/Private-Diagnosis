@@ -71,5 +71,6 @@
     "ymrs",
     "bdrs",
     "bdi_ii"
-  ]
+  ],
+  "defaultScales": ["base", "biss"]
 }
