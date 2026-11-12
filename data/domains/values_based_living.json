@@ -1,0 +1,10 @@
+{
+  "id": "values_based_living",
+  "name": {
+    "en": "Values-based living",
+    "hi": "मूल्य-आधारित जीवन"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["vq"]
+}

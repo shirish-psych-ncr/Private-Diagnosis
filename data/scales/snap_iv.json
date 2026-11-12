@@ -1,0 +1,171 @@
+{
+  "id": "snap_iv",
+  "name": "SNAP-IV ADHD Rating Scale (18 items)",
+  "administeredBy": "informant",
+  "optionalAssessment": true,
+  "sourceInstrument": "Swanson, Nolan and Pelham Rating Scale (user-supplied reproduction text)",
+  "ageGroups": [
+    "pediatric",
+    "schoolage",
+    "adolescent"
+  ],
+  "directions": "For each item, select the option that best describes the child.",
+  "timeframe": "For each item, select the option that best describes the child.",
+  "responseMin": 0,
+  "responseMax": 3,
+  "parts": [
+    {
+      "name": "Inattention",
+      "questions": [
+        {
+          "id": "snap_iv_1",
+          "itemNumber": "1",
+          "text": "Often fails to give close attention to details or makes careless mistakes in schoolwork or tasks"
+        },
+        {
+          "id": "snap_iv_2",
+          "itemNumber": "2",
+          "text": "Often has difficulty sustaining attention in tasks or play activities"
+        },
+        {
+          "id": "snap_iv_3",
+          "itemNumber": "3",
+          "text": "Often does not seem to listen when spoken to directly"
+        },
+        {
+          "id": "snap_iv_4",
+          "itemNumber": "4",
+          "text": "Often does not follow through on instructions and fails to finish schoolwork, chores, or duties"
+        },
+        {
+          "id": "snap_iv_5",
+          "itemNumber": "5",
+          "text": "Often has difficulty organizing tasks and activities"
+        },
+        {
+          "id": "snap_iv_6",
+          "itemNumber": "6",
+          "text": "Often avoids, dislikes, or reluctantly engages in tasks requiring sustained mental effort"
+        },
+        {
+          "id": "snap_iv_7",
+          "itemNumber": "7",
+          "text": "Often loses things necessary for activities (e.g., toys, school assignments, pencils, or books)"
+        },
+        {
+          "id": "snap_iv_8",
+          "itemNumber": "8",
+          "text": "Often is distracted by extraneous stimuli"
+        },
+        {
+          "id": "snap_iv_9",
+          "itemNumber": "9",
+          "text": "Often is forgetful in daily activities"
+        }
+      ]
+    },
+    {
+      "name": "Hyperactivity / Impulsivity",
+      "questions": [
+        {
+          "id": "snap_iv_10",
+          "itemNumber": "10",
+          "text": "Often fidgets with hands or feet or squirms in seat"
+        },
+        {
+          "id": "snap_iv_11",
+          "itemNumber": "11",
+          "text": "Often leaves seat in classroom or in other situations in which remaining seated is expected"
+        },
+        {
+          "id": "snap_iv_12",
+          "itemNumber": "12",
+          "text": "Often runs about or climbs excessively in situations in which it is inappropriate"
+        },
+        {
+          "id": "snap_iv_13",
+          "itemNumber": "13",
+          "text": "Often has difficulty playing or engaging in leisure activities quietly"
+        },
+        {
+          "id": "snap_iv_14",
+          "itemNumber": "14",
+          "text": "Often is “on the go” or often acts as if “driven by a motor”"
+        },
+        {
+          "id": "snap_iv_15",
+          "itemNumber": "15",
+          "text": "Often talks excessively"
+        },
+        {
+          "id": "snap_iv_16",
+          "itemNumber": "16",
+          "text": "Often blurts out answers before questions have been completed"
+        },
+        {
+          "id": "snap_iv_17",
+          "itemNumber": "17",
+          "text": "Often has difficulty awaiting turn"
+        },
+        {
+          "id": "snap_iv_18",
+          "itemNumber": "18",
+          "text": "Often interrupts or intrudes on others (e.g., butts into conversations/games)"
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "Inattention (items 1–9)",
+        "ids": [
+          "snap_iv_1",
+          "snap_iv_2",
+          "snap_iv_3",
+          "snap_iv_4",
+          "snap_iv_5",
+          "snap_iv_6",
+          "snap_iv_7",
+          "snap_iv_8",
+          "snap_iv_9"
+        ],
+        "max": 27
+      },
+      {
+        "name": "Hyperactivity/Impulsivity (items 10–18)",
+        "ids": [
+          "snap_iv_10",
+          "snap_iv_11",
+          "snap_iv_12",
+          "snap_iv_13",
+          "snap_iv_14",
+          "snap_iv_15",
+          "snap_iv_16",
+          "snap_iv_17",
+          "snap_iv_18"
+        ],
+        "max": 27
+      }
+    ]
+  },
+  "interpretationNote": "This 18-item form records the ADHD symptom domains. Results are descriptive screening information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Not at all"
+    },
+    {
+      "v": 1,
+      "label": "Just a little"
+    },
+    {
+      "v": 2,
+      "label": "Quite a bit"
+    },
+    {
+      "v": 3,
+      "label": "Very much"
+    }
+  ]
+}

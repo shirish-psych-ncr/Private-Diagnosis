@@ -1,13 +1,13 @@
 {
   "id": "functional_impairment",
   "name": {
-    "en": "Functioning & cross-cutting symptoms",
-    "hi": "कार्यात्मकता एवं क्रॉस-कटिंग लक्षण"
+    "en": "Functional impairment",
+    "hi": "कार्यात्मक हानि"
   },
   "tier": 5,
   "description": {
-    "en": "Optional MINI 7.0.2 clinician-rated rating tables (user-scripted version pp. 36-37): A - Cross-Cutting Measures (Severity of Symptom) and B - Disability / Functional Impairment (Severity of Disability / Impairment).",
-    "hi": "MINI 7.0.2 के वैकल्पिक चिकित्सक-रेटित रेटिंग-तालिकाएँ (उपयोगकर्ता-स्क्रिप्टेड संस्करण पृ. 36-37): A - क्रॉस-कटिंग माप (लक्षणों की तीव्रता) और B - अक्षमता/कार्यात्मक हानि (अक्षमता/हानि की तीव्रता)।"
+    "en": "Optional MINI disability / functional impairment table plus the Work and Social Adjustment Scale (WSAS).",
+    "hi": "वैकल्पिक MINI अक्षमता / कार्यात्मक हानि तालिका तथा कार्य एवं सामाजिक समायोजन मापनी (WSAS)।"
   },
   "timeframe": {
     "en": "Rate each row independently from 0 (not present) to 10 (extreme) in the score column.",
@@ -22,15 +22,6 @@
   "cutoff": null,
   "questions": [
     {
-      "id": "fi_1",
-      "text": {
-        "en": "Are there symptoms to rate on the Cross-Cutting Measures (Severity of Symptom) table?",
-        "hi": "क्या क्रॉस-कटिंग माप (लक्षणों की तीव्रता) तालिका पर रेट करने हेतु लक्षण उपस्थित हैं?"
-      },
-      "sharedScale": "yesno",
-      "scaleId": "mini_cross_cutting"
-    },
-    {
       "id": "fi_2",
       "text": {
         "en": "Have your symptoms disrupted your ability to function in any area of your life?",
@@ -39,5 +30,8 @@
       "sharedScale": "yesno",
       "scaleId": "mini_disability"
     }
+  ],
+  "forms": [
+    "wsas"
   ]
 }

@@ -11,8 +11,6 @@
     "ybocs",
     "ybocs2",
     "cybocs",
-    "cois_rc",
-    "bdd_ybocs"
-  ],
-  "defaultForm": "oci_r"
+    "cois_rc"
+  ]
 }

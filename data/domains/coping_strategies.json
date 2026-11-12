@@ -1,0 +1,10 @@
+{
+  "id": "coping_strategies",
+  "name": {
+    "en": "Emotional coping strategies",
+    "hi": "भावनात्मक सामना करने की रणनीतियाँ"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["eaq"]
+}

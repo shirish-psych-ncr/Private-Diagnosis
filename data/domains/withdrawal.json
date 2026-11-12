@@ -1,0 +1,13 @@
+{
+  "id": "withdrawal",
+  "name": {
+    "en": "Substance withdrawal monitoring",
+    "hi": "पदार्थ-वापसी निगरानी"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "cows",
+    "ciwa_ar"
+  ]
+}

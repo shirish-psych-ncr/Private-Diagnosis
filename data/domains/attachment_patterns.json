@@ -1,0 +1,12 @@
+{
+  "id": "attachment_patterns",
+  "name": {
+    "en": "Attachment patterns",
+    "hi": "लगाव के प्रतिरूप"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "asq_sf"
+  ]
+}

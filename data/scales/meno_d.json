@@ -1,0 +1,88 @@
+{
+  "id": "meno_d",
+  "name": "Menopause Depression Rating Scale (MENO-D)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Menopause Depression Rating Scale (user-supplied reproduction text)",
+  "ageGroups": [
+    "midlife",
+    "older"
+  ],
+  "directions": "Rate changes over the last two weeks against the person’s pre-menopausal level or state. This measure does not establish cause or diagnosis.",
+  "timeframe": "Rate changes over the last two weeks against the person’s pre-menopausal level or state. This measure does not establish cause or diagnosis.",
+  "responseMin": 0,
+  "responseMax": 4,
+  "parts": {
+    "$file": "data/scales/meno_d/parts.json"
+  },
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "MENO-D total",
+        "ids": [
+          "meno_d_a",
+          "meno_d_b",
+          "meno_d_c",
+          "meno_d_d",
+          "meno_d_e",
+          "meno_d_f",
+          "meno_d_g",
+          "meno_d_h",
+          "meno_d_i",
+          "meno_d_j",
+          "meno_d_k",
+          "meno_d_l"
+        ],
+        "max": 48
+      },
+      {
+        "name": "Self (mean)",
+        "ids": [
+          "meno_d_b",
+          "meno_d_d",
+          "meno_d_e",
+          "meno_d_f"
+        ],
+        "average": true,
+        "max": 4
+      },
+      {
+        "name": "Sexual (mean)",
+        "ids": [
+          "meno_d_a",
+          "meno_d_j"
+        ],
+        "average": true,
+        "max": 4
+      },
+      {
+        "name": "Somatic (mean)",
+        "ids": [
+          "meno_d_g",
+          "meno_d_i"
+        ],
+        "average": true,
+        "max": 4
+      },
+      {
+        "name": "Cognitive (mean)",
+        "ids": [
+          "meno_d_k",
+          "meno_d_l"
+        ],
+        "average": true,
+        "max": 4
+      },
+      {
+        "name": "Sleep (mean)",
+        "ids": [
+          "meno_d_c",
+          "meno_d_h"
+        ],
+        "average": true,
+        "max": 4
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis."
+}

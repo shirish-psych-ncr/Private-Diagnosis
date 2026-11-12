@@ -1,0 +1,331 @@
+[
+  {
+    "name": "Questionnaire",
+    "questions": [
+      {
+        "id": "meno_d_a",
+        "itemNumber": 1,
+        "text": "Low Energy: Over the last 2 weeks have you noticed reduced energy levels?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No change; feel active all day"
+          },
+          {
+            "v": 1,
+            "label": "More tired after activity than previously"
+          },
+          {
+            "v": 2,
+            "label": "Decreased activity because of tiredness"
+          },
+          {
+            "v": 3,
+            "label": "Feel tired most of the time despite resting; decreased activity"
+          },
+          {
+            "v": 4,
+            "label": "Continually feeling exhausted; even small tasks such as brushing hair feels draining"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_b",
+        "itemNumber": 2,
+        "text": "Paranoid Thinking: Over the last 2 weeks have you experienced paranoid thinking?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No paranoid thinking"
+          },
+          {
+            "v": 1,
+            "label": "Increasing worry that others think badly of you"
+          },
+          {
+            "v": 2,
+            "label": "Suspicious that people at work or home think badly of you"
+          },
+          {
+            "v": 3,
+            "label": "Convinced that others have a low opinion of you and are trying to replace you"
+          },
+          {
+            "v": 4,
+            "label": "Convinced that others are actively planning to hurt you in many ways"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_c",
+        "itemNumber": 3,
+        "text": "Irritability: Over the last 2 weeks have you felt more irritable?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No irritability"
+          },
+          {
+            "v": 1,
+            "label": "Mild irritability"
+          },
+          {
+            "v": 2,
+            "label": "Increased irritable response to minor incidents"
+          },
+          {
+            "v": 3,
+            "label": "Anger expressed by 'snapping', verbal outbursts over minor incidents"
+          },
+          {
+            "v": 4,
+            "label": "Rage, major verbal outbursts over minor incidents"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_d",
+        "itemNumber": 4,
+        "text": "Self Esteem: Over the last 2 weeks has your self-esteem been lowered?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "Good self-esteem or no change"
+          },
+          {
+            "v": 1,
+            "label": "Slight decrease in self-esteem"
+          },
+          {
+            "v": 2,
+            "label": "Poor self esteem with no reality base"
+          },
+          {
+            "v": 3,
+            "label": "Very poor self-esteem in all life-domains"
+          },
+          {
+            "v": 4,
+            "label": "No self-worth at all to the point of believing that the world would be better off without you"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_e",
+        "itemNumber": 5,
+        "text": "Isolation: Over the last 2 weeks have you withdrawn socially?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "Socialise normally"
+          },
+          {
+            "v": 1,
+            "label": "Decreased socialising"
+          },
+          {
+            "v": 2,
+            "label": "Disinterested in socialising"
+          },
+          {
+            "v": 3,
+            "label": "Social and occupational withdrawal"
+          },
+          {
+            "v": 4,
+            "label": "Feeling isolated, 'in a bubble' even when with others"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_f",
+        "itemNumber": 6,
+        "text": "Anxiety: Over the last 2 weeks have you experienced heightened levels of anxiety?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No new anxiety"
+          },
+          {
+            "v": 1,
+            "label": "Increased anxiety when in public"
+          },
+          {
+            "v": 2,
+            "label": "Highly anxious when doing new tasks"
+          },
+          {
+            "v": 3,
+            "label": "Heightened anxiety when doing routine and familiar tasks"
+          },
+          {
+            "v": 4,
+            "label": "Panic attacks, highly anxious when doing ordinary and familiar tasks"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_g",
+        "itemNumber": 7,
+        "text": "Somatic Symptoms: Over the last 2 weeks have you experienced physical symptoms?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No physical symptoms"
+          },
+          {
+            "v": 1,
+            "label": "Increased muscle aches, joint pains on exercise"
+          },
+          {
+            "v": 2,
+            "label": "Increased back, leg and joint pains with little exertion"
+          },
+          {
+            "v": 3,
+            "label": "Frequent headaches, muscle and/or joint pains limiting activity"
+          },
+          {
+            "v": 4,
+            "label": "Severe aches and pains requiring pain relief and preventing activity"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_h",
+        "itemNumber": 8,
+        "text": "Sleep Disturbance: Over the last 2 weeks have you experienced sleep disturbance?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No sleep problems"
+          },
+          {
+            "v": 1,
+            "label": "Sleep broken by brief waking once or twice a night, but easily fall back to sleep"
+          },
+          {
+            "v": 2,
+            "label": "Sleep broken by waking several times a night, but easily fall back to sleep"
+          },
+          {
+            "v": 3,
+            "label": "Waking up three or more times per night due to hot flashes/sweating, plus difficulty returning to sleep"
+          },
+          {
+            "v": 4,
+            "label": "Sleeping two or less hours per night consistently; sweating/hot flashes interrupting sleep all night"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_i",
+        "itemNumber": 9,
+        "text": "Weight: Have you gained weight (in comparison to pre-menopause weight)?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No change in weight"
+          },
+          {
+            "v": 1,
+            "label": "Mild weight gain (1-2kg)"
+          },
+          {
+            "v": 2,
+            "label": "Moderate weight gain despite no change in diet or exercise (3-6kg)"
+          },
+          {
+            "v": 3,
+            "label": "Continuing weight gain and abdominal fat deposition, despite dietary restriction and increasing exercise"
+          },
+          {
+            "v": 4,
+            "label": "Major weight gain (>6kg) with abdominal, breast, hip and thigh fat deposition"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_j",
+        "itemNumber": 10,
+        "text": "Sexual Interest: Over the last 2 weeks have you experienced a reduced libido?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No change in libido"
+          },
+          {
+            "v": 1,
+            "label": "Mild decrease in libido"
+          },
+          {
+            "v": 2,
+            "label": "Diminished libido"
+          },
+          {
+            "v": 3,
+            "label": "Decreased libido and discomfort with sexual activity"
+          },
+          {
+            "v": 4,
+            "label": "Loss of interest in all sexual activity"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_k",
+        "itemNumber": 11,
+        "text": "Memory: Over the last 2 weeks have you noticed any memory-related difficulties?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No memory problems"
+          },
+          {
+            "v": 1,
+            "label": "Mild problems remembering names and numbers"
+          },
+          {
+            "v": 2,
+            "label": "Need to make lists to function at work and/or home"
+          },
+          {
+            "v": 3,
+            "label": "Impaired memory leading to dysfunction"
+          },
+          {
+            "v": 4,
+            "label": "Severe loss of memory leading to inability to function"
+          }
+        ]
+      },
+      {
+        "id": "meno_d_l",
+        "itemNumber": 12,
+        "text": "Concentration: Over the last 2 weeks have you experienced problems concentrating?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No concentration difficulties"
+          },
+          {
+            "v": 1,
+            "label": "Mild problems with concentrating on reading"
+          },
+          {
+            "v": 2,
+            "label": "Mild problems with concentrating on reading and watching TV/Films"
+          },
+          {
+            "v": 3,
+            "label": "Marked problems with concentrating on reading and watching TV/Films"
+          },
+          {
+            "v": 4,
+            "label": "Unable to focus on any tasks"
+          }
+        ]
+      }
+    ]
+  }
+]

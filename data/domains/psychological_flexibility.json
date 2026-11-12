@@ -1,0 +1,10 @@
+{
+  "id": "psychological_flexibility",
+  "name": {
+    "en": "Acceptance and psychological flexibility",
+    "hi": "स्वीकार्यता एवं मनोवैज्ञानिक लचीलापन"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["cfi", "aaq2"]
+}

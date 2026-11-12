@@ -1,13 +1,13 @@
 import { renderDomainGrid } from './domain-grid.js';
 import { firstUnanswered } from './completion.js';
-import { applyLanguage } from './i18n.js';
+import { applyLanguage, t } from './i18n.js';
 import { revealStage, continueTo } from './navigation.js';
 import { generatePDF } from './pdf.js';
 import { computeResults } from './results-computation.js';
 import { renderResults } from './results-rendering.js';
 import { closeSafetyModal } from './safety.js';
 import { renderScales } from './scale-rendering.js';
-import { state } from './state.js';
+import { state, selectedDomainForms } from './state.js';
 
 /* ------------------------------------------------------------------ *
  * 11. EVENT WIRING
@@ -15,6 +15,7 @@ import { state } from './state.js';
 function bindStaticUI() {
     document.getElementById('lang-en').addEventListener('click', () => applyLanguage('en'));
     document.getElementById('lang-hi').addEventListener('click', () => applyLanguage('hi'));
+    document.getElementById('domain-search').addEventListener('input', renderDomainGrid);
 
     document.querySelectorAll('[data-back]').forEach(button => {
         button.addEventListener('click', () => revealStage(Number(button.dataset.back)));
@@ -52,7 +53,10 @@ function bindStaticUI() {
     // scale content is rendered only after the gate passes.
     const domainsError = document.getElementById('domains-error');
     const validateDomains = () => {
-        const ok = state.selectedDomains.size > 0;
+        const chosen = selectedDomainForms();
+        const ok = state.selectedDomains.size > 0 && chosen.some(domain => (domain.selectedForms || []).length > 0);
+        domainsError.textContent = state.selectedDomains.size === 0
+            ? t('domains.error') : t('domains.error.scales');
         domainsError.classList.toggle('hidden', ok);
         return ok;
     };

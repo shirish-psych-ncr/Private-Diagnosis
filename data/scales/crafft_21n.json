@@ -1,0 +1,229 @@
+{
+  "id": "crafft_21n",
+  "name": "CRAFFT 2.1+N",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "CRAFFT Substance Use Assessment (user-supplied reproduction text); the extra quit item in the supplied text is retained as an unscored supplement, not counted as one of the standard six CRAFFT items.",
+  "ageGroups": [
+    "adolescent",
+    "youngadult"
+  ],
+  "directions": "Past 12 months for frequency items; lifetime for the CAR question; past month for nicotine items. Intended for ages 12–21.",
+  "timeframe": "Past 12 months for frequency items; lifetime for the CAR question; past month for nicotine items. Intended for ages 12–21.",
+  "responseMin": 0,
+  "responseMax": 1,
+  "parts": [
+    {
+      "name": "Part A · past-year frequency",
+      "questions": [
+        {
+          "id": "crafft_21n_1",
+          "itemNumber": "1",
+          "text": "Drink more than a few sips of beer, wine, or any drink containing alcohol?",
+          "inputType": "number",
+          "min": 0,
+          "max": 365,
+          "step": 1,
+          "nonScored": true
+        },
+        {
+          "id": "crafft_21n_2",
+          "itemNumber": "2",
+          "text": "Use any marijuana (cannabis, weed, oil, wax, or hash by smoking, vaping, dabbing, or in edibles) or \"synthetic marijuana\" (like \"K2,\" \"Spice\")?",
+          "inputType": "number",
+          "min": 0,
+          "max": 365,
+          "step": 1,
+          "nonScored": true
+        },
+        {
+          "id": "crafft_21n_3",
+          "itemNumber": "3",
+          "text": "Use anything else to get high (like other illegal drugs, pills, prescription or over-the-counter medications, and things that you sniff, huff, vape, or inject)?",
+          "inputType": "number",
+          "min": 0,
+          "max": 365,
+          "step": 1,
+          "nonScored": true
+        },
+        {
+          "id": "crafft_21n_4",
+          "itemNumber": "4",
+          "text": "Use a vaping device\\ containing nicotine and/or flavors, or use any tobacco products?",
+          "inputType": "number",
+          "min": 0,
+          "max": 365,
+          "step": 1,
+          "nonScored": true
+        }
+      ]
+    },
+    {
+      "name": "Part B · CRAFFT questions",
+      "questions": [
+        {
+          "id": "crafft_21n_5",
+          "itemNumber": "5",
+          "text": "Have you ever ridden in a CAR driven by someone (including yourself) who was \"high\" or had been using alcohol or drugs?"
+        },
+        {
+          "id": "crafft_21n_6",
+          "itemNumber": "6",
+          "text": "Do you ever use alcohol or drugs to RELAX, feel better about yourself, or fit in?"
+        },
+        {
+          "id": "crafft_21n_7",
+          "itemNumber": "7",
+          "text": "Do you ever use alcohol or drugs while you are by yourself, or ALONE?"
+        },
+        {
+          "id": "crafft_21n_8",
+          "itemNumber": "8",
+          "text": "Do you ever FORGET things you did while using alcohol or drugs?"
+        },
+        {
+          "id": "crafft_21n_9",
+          "itemNumber": "9",
+          "text": "Do your FAMILY or FRIENDS ever tell you that you should cut down on your drinking or drug use?"
+        },
+        {
+          "id": "crafft_21n_10",
+          "itemNumber": "10",
+          "text": "Have you ever gotten into TROUBLE while you were using alcohol or drugs?"
+        }
+      ]
+    },
+    {
+      "name": "Additional user-supplied item · not part of CRAFFT score",
+      "questions": [
+        {
+          "id": "crafft_21n_11",
+          "itemNumber": "11",
+          "text": "Have you ever tried to quit using, but couldn't?",
+          "nonScored": true,
+          "criterionNote": "Additional item in supplied text; excluded from the validated CRAFFT 6-item score."
+        }
+      ]
+    },
+    {
+      "name": "Part C · HONC nicotine checklist",
+      "questions": [
+        {
+          "id": "crafft_21n_12",
+          "itemNumber": "12",
+          "text": "Do you vape or use tobacco now because it is really hard to quit?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_13",
+          "itemNumber": "13",
+          "text": "Have you ever felt like you were addicted to vaping or tobacco?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_14",
+          "itemNumber": "14",
+          "text": "Do you ever have strong cravings to vape or use tobacco?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_15",
+          "itemNumber": "15",
+          "text": "Have you ever felt like you really needed to vape or use tobacco?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_16",
+          "itemNumber": "16",
+          "text": "Is it hard to keep from vaping or using tobacco in places where you are not supposed to, like school?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_17",
+          "itemNumber": "17",
+          "text": "When you haven't vaped or used tobacco in a while (or when you tried to stop using), did you find it hard to concentrate because you couldn't vape or use tobacco?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_18",
+          "itemNumber": "18",
+          "text": "When you haven't vaped or used tobacco in a while (or when you tried to stop using), did you feel more irritable because you couldn't vape or use tobacco?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_19",
+          "itemNumber": "19",
+          "text": "When you haven't vaped or used tobacco in a while (or when you tried to stop using), did you feel a strong need or urge to vape or use tobacco?",
+          "requires": "4",
+          "requiresPositive": true
+        },
+        {
+          "id": "crafft_21n_20",
+          "itemNumber": "20",
+          "text": "When you haven't vaped or used tobacco in a while (or when you tried to stop using), did you feel nervous, restless, or anxious because you couldn't vape or use tobacco?",
+          "requires": "4",
+          "requiresPositive": true
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "itemRegister": [
+      "crafft_21n_1",
+      "crafft_21n_2",
+      "crafft_21n_3",
+      "crafft_21n_4"
+    ],
+    "contextRegister": ["crafft_21n_11"],
+    "groups": [
+      {
+        "name": "CRAFFT 6-item score",
+        "ids": [
+          "crafft_21n_5",
+          "crafft_21n_6",
+          "crafft_21n_7",
+          "crafft_21n_8",
+          "crafft_21n_9",
+          "crafft_21n_10"
+        ],
+        "max": 6,
+        "cutoff": 2,
+        "positiveLabel": "Screen positive; brief assessment and intervention are indicated.",
+        "negativeLabel": "Below the usual screening threshold."
+      },
+      {
+        "name": "HONC nicotine-dependence checklist",
+        "ids": [
+          "crafft_21n_12",
+          "crafft_21n_13",
+          "crafft_21n_14",
+          "crafft_21n_15",
+          "crafft_21n_16",
+          "crafft_21n_17",
+          "crafft_21n_18",
+          "crafft_21n_19",
+          "crafft_21n_20"
+        ],
+        "max": 9
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "No"
+    },
+    {
+      "v": 1,
+      "label": "Yes"
+    }
+  ]
+}

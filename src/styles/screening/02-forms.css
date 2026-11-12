@@ -96,6 +96,15 @@ h2 {
     gap: .65rem;
     margin: 1rem 0;
 }
+.domain-search {
+    width: 100%;
+    min-height: 2.8rem;
+    margin-top: .75rem;
+    padding: .6rem .8rem;
+    border: 1px solid var(--border);
+    border-radius: .4rem;
+    font: inherit;
+}
 .domain-option {
     display: flex;
     align-items: center;

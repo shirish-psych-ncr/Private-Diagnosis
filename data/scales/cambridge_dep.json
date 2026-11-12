@@ -12,7 +12,7 @@
   "parts": {
     "$file": "data/scales/cambridge_dep/parts.json"
   },
-  "interpretationNote": "Frequency and duration ratings are recorded separately. Do not treat their combined raw sum as a validated total: the supplied material does not define the item-level multiplication/scoring procedure. No diagnostic cutoff is applied.",
+  "interpretationNote": "The standard total adds each item's frequency and duration ratings (range 0–290); duration is not rated when frequency is zero. The total and averages are descriptive and have no diagnostic cutoff.",
   "ageGroups": [
     "adult",
     "older"

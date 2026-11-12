@@ -1,0 +1,148 @@
+{
+  "id": "fas",
+  "name": "Fatigue Assessment Scale (FAS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Fatigue Assessment Scale (user-supplied reproduction text)",
+  "ageGroups": [
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Rate how you usually feel.",
+  "timeframe": "Rate how you usually feel.",
+  "responseMin": 1,
+  "responseMax": 5,
+  "parts": [
+    {
+      "name": "Fatigue",
+      "questions": [
+        {
+          "id": "fas_1",
+          "itemNumber": "1",
+          "text": "I am bothered by fatigue"
+        },
+        {
+          "id": "fas_2",
+          "itemNumber": "2",
+          "text": "I get tired very quickly"
+        },
+        {
+          "id": "fas_3",
+          "itemNumber": "3",
+          "text": "I don't do much during the day"
+        },
+        {
+          "id": "fas_4",
+          "itemNumber": "4",
+          "text": "I have enough energy for everyday life (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "fas_5",
+          "itemNumber": "5",
+          "text": "Physically, I feel exhausted"
+        },
+        {
+          "id": "fas_6",
+          "itemNumber": "6",
+          "text": "I have problems starting things"
+        },
+        {
+          "id": "fas_7",
+          "itemNumber": "7",
+          "text": "I have problems thinking clearly"
+        },
+        {
+          "id": "fas_8",
+          "itemNumber": "8",
+          "text": "I feel no desire to do anything"
+        },
+        {
+          "id": "fas_9",
+          "itemNumber": "9",
+          "text": "Mentally, I feel exhausted"
+        },
+        {
+          "id": "fas_10",
+          "itemNumber": "10",
+          "text": "When I am doing something, I can concentrate quite well (Reverse Scored)",
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "FAS total",
+        "ids": [
+          "fas_1",
+          "fas_2",
+          "fas_3",
+          "fas_4",
+          "fas_5",
+          "fas_6",
+          "fas_7",
+          "fas_8",
+          "fas_9",
+          "fas_10"
+        ],
+        "reverse": [
+          "fas_4",
+          "fas_10"
+        ],
+        "max": 50
+      },
+      {
+        "name": "Physical fatigue",
+        "ids": [
+          "fas_1",
+          "fas_2",
+          "fas_4",
+          "fas_5",
+          "fas_10"
+        ],
+        "reverse": [
+          "fas_4",
+          "fas_10"
+        ],
+        "max": 25
+      },
+      {
+        "name": "Mental fatigue",
+        "ids": [
+          "fas_3",
+          "fas_6",
+          "fas_7",
+          "fas_8",
+          "fas_9"
+        ],
+        "max": 25
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Never"
+    },
+    {
+      "v": 2,
+      "label": "Sometimes"
+    },
+    {
+      "v": 3,
+      "label": "Regularly"
+    },
+    {
+      "v": 4,
+      "label": "Often"
+    },
+    {
+      "v": 5,
+      "label": "Always"
+    }
+  ]
+}

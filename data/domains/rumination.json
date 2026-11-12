@@ -1,0 +1,12 @@
+{
+  "id": "rumination",
+  "name": {
+    "en": "Rumination",
+    "hi": "चिंतन-चक्र"
+  },
+  "tier": 1,
+  "questions": [],
+  "forms": [
+    "rrs22"
+  ]
+}

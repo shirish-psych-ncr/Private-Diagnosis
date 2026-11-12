@@ -7,19 +7,6 @@
   "questions": [],
   "forms": [
     "ryff",
-    "maas",
-    "ders",
-    "ees",
-    "sseit",
-    "aaq2",
-    "flourishing",
-    "vq",
-    "cfi",
-    "dts",
-    "k10",
-    "mipsy",
-    "gse",
-    "eaq"
-  ],
-  "defaultForm": "ryff"
+    "flourishing"
+  ]
 }

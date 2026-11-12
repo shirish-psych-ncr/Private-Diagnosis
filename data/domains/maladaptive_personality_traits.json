@@ -1,0 +1,14 @@
+{
+  "id": "maladaptive_personality_traits",
+  "name": {
+    "en": "Maladaptive personality traits",
+    "hi": "असमायोजी व्यक्तित्व विशेषताएँ"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["pid5_bf"],
+  "description": {
+    "en": "Dimensional trait information for clinical formulation; scores are not diagnoses.",
+    "hi": "नैदानिक सूत्रीकरण हेतु विमात्मक विशेषता-सूचना; स्कोर रोग-निर्णय नहीं हैं।"
+  }
+}

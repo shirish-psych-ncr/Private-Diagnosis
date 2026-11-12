@@ -1,0 +1,10 @@
+{
+  "id": "emotional_intelligence",
+  "name": {
+    "en": "Emotional intelligence",
+    "hi": "भावनात्मक बुद्धिमत्ता"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["sseit"]
+}

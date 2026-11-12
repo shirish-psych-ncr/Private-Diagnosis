@@ -1,5 +1,5 @@
 import { L } from './i18n.js';
-import { state, CLINICAL_DATA } from './state.js';
+import { state, CLINICAL_DATA, questionIsApplicable } from './state.js';
 import { renderAnchorLegend } from './anchor-legend.js';
 import { onAnswer } from './answers.js';
 
@@ -59,7 +59,8 @@ function renderMatrix(section, scale, scaleId) {
         thItem.textContent = state.lang === 'hi' ? 'लक्षण' : 'Item';
         thead.appendChild(thItem);
         const customRows = part.questions.some(q => q.scale);
-        const maxColumns = Math.max(cols.length, ...part.questions.map(q => q.scale?.length || 0));
+        const activeQuestions = part.questions.filter(question => questionIsApplicable(question, scaleId));
+        const maxColumns = Math.max(cols.length, ...activeQuestions.map(q => q.scale?.length || 0));
         const headerCols = customRows
             ? Array.from({ length: maxColumns }, (_, i) => ({ v: i, label: String(i) }))
             : cols;
@@ -73,7 +74,7 @@ function renderMatrix(section, scale, scaleId) {
         table.createTHead().appendChild(thead);
         const body = table.createTBody();
 
-        part.questions.forEach((q, idx) => {
+        activeQuestions.forEach((q, idx) => {
             // Non-scored single tick-box note printed on the form (e.g. the GCLS
             // "already had genital surgery" box). Recorded as a clinical note; it
             // contributes to no total, so it is stored as 1/0 rather than a rating.
@@ -136,7 +137,7 @@ function renderMatrix(section, scale, scaleId) {
             }
             rowHead.id = 'mrow-' + q.id;
             tr.appendChild(rowHead);
-            if (q.inputType === 'number' || q.inputType === 'time') {
+            if (q.inputType === 'number' || q.inputType === 'time' || q.inputType === 'text') {
                 const td = document.createElement('td');
                 td.colSpan = headerCols.length;
                 const input = document.createElement('input');
@@ -155,6 +156,7 @@ function renderMatrix(section, scale, scaleId) {
                 input.setAttribute('aria-labelledby', 'mrow-' + q.id);
                 input.addEventListener('input', () => {
                     if (input.value === '') delete state.responses[input.id];
+                    else if (q.inputType === 'text') onAnswer(input.id, input.value, { id: q.id }, { id: scaleId });
                     else {
                         const value = q.inputType === 'time'
                             ? Number(input.value.slice(0, 2)) * 60 + Number(input.value.slice(3, 5))
@@ -178,14 +180,15 @@ function renderMatrix(section, scale, scaleId) {
                 input.name = key;
                 input.value = c.v;
                 input.id = key + '_' + c.v;
-                input.setAttribute('aria-label', L(q.itemName || q.text) + ' — ' + L(c.label));
+                const optionLabel = L(c.label) || String(c.v);
+                input.setAttribute('aria-label', L(q.itemName || q.text) + ' — ' + optionLabel);
                 if (state.responses[key] === c.v) input.checked = true;
                 input.addEventListener('change', () => onAnswer(key, c.v,
                     { id: q.id, safety: !!q.safety, safetyMin: q.safetyMin }, { id: responseScaleId }));
                 const label = document.createElement('label');
                 label.className = 'matrix-answer';
                 const caption = document.createElement('span');
-                caption.textContent = L(c.label);
+                caption.textContent = optionLabel;
                 label.append(input, caption);
                 td.appendChild(label);
                 tr.appendChild(td);

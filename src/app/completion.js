@@ -1,5 +1,5 @@
 import { OPTIONAL_TABLE_ROUTES } from './routing.js';
-import { selectedDomainForms, selectedFormsForDomain, state, CLINICAL_DATA } from './state.js';
+import { selectedDomainForms, selectedFormsForDomain, state, CLINICAL_DATA, questionIsApplicable } from './state.js';
 
 function firstUnanswered() {
     for (const domain of selectedDomainForms()) {
@@ -17,7 +17,7 @@ function firstUnanswered() {
                     for (const q of domain.questions.filter(q => !q.scaleId))
                         if (state.responses[domain.id + ':' + q.id] === undefined) return domain.id + ':' + q.id;
                 }
-            } else if (domain.baseInstrument && chosen.includes('base')) {
+            } else if ((domain.baseInstrument || domain.originalLabel) && chosen.includes('base')) {
                 for (const q of domain.questions.filter(q => !q.scaleId))
                     if (state.responses[domain.id + ':' + q.id] === undefined) return domain.id + ':' + q.id;
             }
@@ -27,13 +27,14 @@ function firstUnanswered() {
                 for (const part of form.parts) {
                     if (part.clinicianRated) continue;
                     for (const q of part.questions) {
-                        if ((q.requires && state.responses[id + ':' + q.requires] !== 1) || q.nonScored || q.tickBox) continue;
+                        if (!questionIsApplicable(q, id) || q.nonScored || q.tickBox) continue;
                         if (state.responses[id + ':' + q.id] === undefined) return id + ':' + q.id;
                     }
                 }
             }
 
-            if (OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) {
+            if (OPTIONAL_TABLE_ROUTES.includes(domain.instrument) ||
+                domain.questions.some(q => q.scaleId && chosen.includes(q.scaleId))) {
                 const selectedIds = new Set(chosen.filter(id => id !== 'base'));
                 for (const q of domain.questions) {
                     if (q.scaleId && selectedIds.has(q.scaleId) &&
@@ -49,7 +50,7 @@ function firstUnanswered() {
                     for (const part of form.parts) {
                         if (part.clinicianRated) continue;
                         for (const item of part.questions) {
-                            if ((item.requires && state.responses[form.id + ':' + item.requires] !== 1) || item.nonScored || item.tickBox) continue;
+                            if (!questionIsApplicable(item, form.id) || item.nonScored || item.tickBox) continue;
                             if (state.responses[form.id + ':' + item.id] === undefined)
                                 return form.id + ':' + item.id;
                         }
@@ -77,7 +78,7 @@ function firstUnanswered() {
                 for (const part of form.parts) {
                     if (part.clinicianRated) continue;
                     for (const item of part.questions) {
-                        if ((item.requires && state.responses[form.id + ':' + item.requires] !== 1) || item.nonScored || item.tickBox) continue;
+                        if (!questionIsApplicable(item, form.id) || item.nonScored || item.tickBox) continue;
                         if (state.responses[form.id + ':' + item.id] === undefined) return form.id + ':' + item.id;
                     }
                 }

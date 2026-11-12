@@ -1,0 +1,100 @@
+{
+  "id": "eda8",
+  "name": "Extreme Demand Avoidance – 8 (EDA-8)",
+  "administeredBy": "informant",
+  "optionalAssessment": true,
+  "sourceInstrument": "Extreme Demand Avoidance – 8 (user-supplied reproduction text)",
+  "ageGroups": [
+    "pediatric",
+    "schoolage",
+    "adolescent"
+  ],
+  "directions": "Caregiver report of the child’s behaviour during the last six months. No diagnostic cutoff is applied.",
+  "timeframe": "Caregiver report of the child’s behaviour during the last six months. No diagnostic cutoff is applied.",
+  "responseMin": 0,
+  "responseMax": 3,
+  "parts": [
+    {
+      "name": "Caregiver report",
+      "questions": [
+        {
+          "id": "eda8_1",
+          "itemNumber": "1",
+          "text": "Obsessively resists and avoids ordinary demands and requests"
+        },
+        {
+          "id": "eda8_2",
+          "itemNumber": "2",
+          "text": "Is driven by the need to be in charge"
+        },
+        {
+          "id": "eda8_3",
+          "itemNumber": "3",
+          "text": "Tells other children how they should behave, but does not feel these rules apply to themselves"
+        },
+        {
+          "id": "eda8_4",
+          "itemNumber": "4",
+          "text": "Has difficulty complying with demands unless they are carefully presented"
+        },
+        {
+          "id": "eda8_5",
+          "itemNumber": "5",
+          "text": "Seems unaware of the differences between themselves and authority figures (e.g., parents, teachers, police)"
+        },
+        {
+          "id": "eda8_6",
+          "itemNumber": "6",
+          "text": "Mood changes very rapidly (e.g., switches from affectionate to angry in an instant)"
+        },
+        {
+          "id": "eda8_7",
+          "itemNumber": "7",
+          "text": "Uses outrageous or shocking behaviour to get out of doing something"
+        },
+        {
+          "id": "eda8_8",
+          "itemNumber": "8",
+          "text": "Has bouts of extreme emotional responses to small events (e.g., crying/giggling, becoming furious)"
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "EDA-8 total",
+        "ids": [
+          "eda8_1",
+          "eda8_2",
+          "eda8_3",
+          "eda8_4",
+          "eda8_5",
+          "eda8_6",
+          "eda8_7",
+          "eda8_8"
+        ],
+        "max": 24
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Not true"
+    },
+    {
+      "v": 1,
+      "label": "Somewhat true"
+    },
+    {
+      "v": 2,
+      "label": "Mostly true"
+    },
+    {
+      "v": 3,
+      "label": "Very true"
+    }
+  ]
+}

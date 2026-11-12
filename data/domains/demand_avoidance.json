@@ -1,0 +1,17 @@
+{
+  "id": "demand_avoidance",
+  "name": {
+    "en": "Demand-avoidance traits",
+    "hi": "माँग-परिहार विशेषताएँ"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "eda_qa",
+    "eda8"
+  ],
+  "description": {
+    "en": "Self- or caregiver-reported traits for descriptive formulation; no measure in this set establishes a diagnosis.",
+    "hi": "Self- or caregiver-reported traits for descriptive formulation; no measure in this set establishes a diagnosis."
+  }
+}

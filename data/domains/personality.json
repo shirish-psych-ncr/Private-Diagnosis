@@ -37,39 +37,10 @@
         "other_specified_personality_disorder",
         "unspecified_personality_disorder"
       ]
-    },
-    {
-      "id": "per_hexaco_1",
-      "text": {
-        "en": "Is an informant-rated personality profile needed — to corroborate or challenge the person's own account, or because self-report alone is insufficient for the referral question?",
-        "hi": "क्या किसी निकट informants (परिवार/साथी/सहकर्मी) द्वारा व्यक्ति-ता-प्रोफाइल की पर्यवेक्षक-रेटिंग आवश्यक है — आत्म-रिपोर्ट की सीमाओं को आंकने या नैदानिक-सूचना हेतु?"
-      },
-      "scale": [
-        {
-          "v": 0,
-          "label": {
-            "en": "No",
-            "hi": "नहीं"
-          }
-        },
-        {
-          "v": 1,
-          "label": {
-            "en": "Yes",
-            "hi": "हाँ"
-          }
-        }
-      ],
-      "scaleId": "hexaco_pi_r_observer",
-      "disorders": []
     }
   ],
   "forms": [
-    "msibpd",
-    "ffoci_sf",
-    "ipip120",
-    "scid5pd_summary",
-    "pid5_bf"
+    "scid5pd_summary"
   ],
   "help": {
     "en": "The IPDE and PDQ-4+ here are brief screens only; they do not diagnose a personality disorder. A clinician may follow up with an authorized structured interview such as the SCID-5-PD. The SCID-5-PD source supplied for this project states that use requires publisher permission or a license. This app does not reproduce its interview questions, criteria, or scoring materials."

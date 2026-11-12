@@ -1,0 +1,15 @@
+{
+  "id": "substance_recovery",
+  "name": {
+    "en": "Substance-use recovery monitoring",
+    "hi": "पदार्थ-उपयोग पुनर्प्राप्ति निगरानी"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "aase_temptation",
+    "aase_confidence",
+    "bam_c",
+    "pacs"
+  ]
+}

@@ -1,5 +1,5 @@
 import { renderScales } from './scale-rendering.js';
-import { state } from './state.js';
+import { state, CLINICAL_DATA, questionIsApplicable, requiredQuestionId } from './state.js';
 import { syncAssessmentProgress } from './navigation.js';
 import { openSafetyModal } from './safety.js';
 
@@ -12,6 +12,17 @@ function onAnswer(key, value, question, domain) {
     const first = document.getElementsByName(key)[0];
     first?.removeAttribute('aria-describedby');
     first?.closest('fieldset, tr')?.classList.remove('needs-answer');
+    const form = CLINICAL_DATA?.scales[domain.id];
+    const dependents = form?.parts.flatMap(part => part.questions)
+        .filter(item => requiredQuestionId(item, domain.id) === question.id) || [];
+    if (dependents.length) {
+        for (const item of dependents) {
+            if (!questionIsApplicable(item, domain.id)) delete state.responses[domain.id + ':' + item.id];
+        }
+        renderScales();
+        syncAssessmentProgress();
+        document.getElementById(key + '_' + value)?.focus({ preventScroll: true });
+    }
     if (key === 'cssrs:s2') {
         if (value === 0) {
             for (const id of ['s3', 's4', 's5']) delete state.responses['cssrs:' + id];

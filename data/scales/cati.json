@@ -1,0 +1,412 @@
+{
+  "id": "cati",
+  "name": "Comprehensive Autistic Trait Inventory (CATI)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Comprehensive Autistic Trait Inventory (user-supplied reproduction text)",
+  "ageGroups": [
+    "adolescent",
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Self-report of autistic traits. Scores describe traits and are not a diagnosis.",
+  "timeframe": "Self-report of autistic traits. Scores describe traits and are not a diagnosis.",
+  "responseMin": 1,
+  "responseMax": 5,
+  "parts": [
+    {
+      "name": "Comprehensive autistic traits",
+      "questions": [
+        {
+          "id": "cati_1",
+          "itemNumber": "1",
+          "text": "I often find myself fiddling or playing repetitively with objects (e.g. clicking pens)"
+        },
+        {
+          "id": "cati_2",
+          "itemNumber": "2",
+          "text": "I like to stick to certain routines for every-day tasks"
+        },
+        {
+          "id": "cati_3",
+          "itemNumber": "3",
+          "text": "I expend a lot of mental energy trying to fit in with others"
+        },
+        {
+          "id": "cati_4",
+          "itemNumber": "4",
+          "text": "I am very sensitive to bright lighting"
+        },
+        {
+          "id": "cati_5",
+          "itemNumber": "5",
+          "text": "There are certain activities that I always choose to do the same way, every time"
+        },
+        {
+          "id": "cati_6",
+          "itemNumber": "6",
+          "text": "Sometimes I watch people interacting and try to copy them when I need to socialise"
+        },
+        {
+          "id": "cati_7",
+          "itemNumber": "7",
+          "text": "I often rock when sitting in a chair"
+        },
+        {
+          "id": "cati_8",
+          "itemNumber": "8",
+          "text": "I generally enjoy social events (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "cati_9",
+          "itemNumber": "9",
+          "text": "I look for strategies and ways to appear more sociable"
+        },
+        {
+          "id": "cati_10",
+          "itemNumber": "10",
+          "text": "In social situations, I try to avoid interactions with other people"
+        },
+        {
+          "id": "cati_11",
+          "itemNumber": "11",
+          "text": "There are times when I feel that my senses are overloaded"
+        },
+        {
+          "id": "cati_12",
+          "itemNumber": "12",
+          "text": "There are certain objects that I fiddle or play with that can help me calm down or collect my thoughts"
+        },
+        {
+          "id": "cati_13",
+          "itemNumber": "13",
+          "text": "Reading non-verbal cues (e.g. facial expressions, body language) is difficult for me"
+        },
+        {
+          "id": "cati_14",
+          "itemNumber": "14",
+          "text": "I like my belongings to be sorted in certain ways and will spend time making sure they are that way"
+        },
+        {
+          "id": "cati_15",
+          "itemNumber": "15",
+          "text": "Social interaction is easy for me (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "cati_16",
+          "itemNumber": "16",
+          "text": "When interacting with other people, I spend a lot of effort monitoring how I am coming across"
+        },
+        {
+          "id": "cati_17",
+          "itemNumber": "17",
+          "text": "I find social interactions stressful"
+        },
+        {
+          "id": "cati_18",
+          "itemNumber": "18",
+          "text": "I am very sensitive to touch"
+        },
+        {
+          "id": "cati_19",
+          "itemNumber": "19",
+          "text": "I can tell how people feel from their facial expressions (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "cati_20",
+          "itemNumber": "20",
+          "text": "I have a tendency to pace or move around in a repetitive path"
+        },
+        {
+          "id": "cati_21",
+          "itemNumber": "21",
+          "text": "I feel discomfort when prevented from completing a particular routine"
+        },
+        {
+          "id": "cati_22",
+          "itemNumber": "22",
+          "text": "I rely on a set of scripts when I talk with people"
+        },
+        {
+          "id": "cati_23",
+          "itemNumber": "23",
+          "text": "I find it easy to sense what someone else is feeling (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "cati_24",
+          "itemNumber": "24",
+          "text": "I am very sensitive to particular tastes (e.g. salty, sour, spicy, or sweet)"
+        },
+        {
+          "id": "cati_25",
+          "itemNumber": "25",
+          "text": "I engage in certain repetitive actions when I feel stressed"
+        },
+        {
+          "id": "cati_26",
+          "itemNumber": "26",
+          "text": "I rarely use non-verbal cues in my interactions with others"
+        },
+        {
+          "id": "cati_27",
+          "itemNumber": "27",
+          "text": "I often insist on doing things in a certain way, or re-doing things until they are 'just right'"
+        },
+        {
+          "id": "cati_28",
+          "itemNumber": "28",
+          "text": "I feel confident or capable when meeting new people (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "cati_29",
+          "itemNumber": "29",
+          "text": "Before engaging in a social situation, I will create a script to follow where possible"
+        },
+        {
+          "id": "cati_30",
+          "itemNumber": "30",
+          "text": "Social occasions are often challenging for me"
+        },
+        {
+          "id": "cati_31",
+          "itemNumber": "31",
+          "text": "Sometimes the presence of a smell makes it hard for me to focus on anything else"
+        },
+        {
+          "id": "cati_32",
+          "itemNumber": "32",
+          "text": "There are certain repetitive actions that others consider to be 'characteristic' of me (e.g. stroking my hair)"
+        },
+        {
+          "id": "cati_33",
+          "itemNumber": "33",
+          "text": "Metaphors or 'figures of speech' often confuse me"
+        },
+        {
+          "id": "cati_34",
+          "itemNumber": "34",
+          "text": "It annoys me when plans I have made are changed"
+        },
+        {
+          "id": "cati_35",
+          "itemNumber": "35",
+          "text": "I find it difficult to make new friends"
+        },
+        {
+          "id": "cati_36",
+          "itemNumber": "36",
+          "text": "I react strongly to unexpected loud noises"
+        },
+        {
+          "id": "cati_37",
+          "itemNumber": "37",
+          "text": "I have difficulty understanding someone else's point-of-view"
+        },
+        {
+          "id": "cati_38",
+          "itemNumber": "38",
+          "text": "I like to arrange items in rows or patterns"
+        },
+        {
+          "id": "cati_39",
+          "itemNumber": "39",
+          "text": "I try to follow certain 'rules' in order to get by in social situations"
+        },
+        {
+          "id": "cati_40",
+          "itemNumber": "40",
+          "text": "I am sensitive to flickering lights"
+        },
+        {
+          "id": "cati_41",
+          "itemNumber": "41",
+          "text": "I have certain habits that I find difficult to stop (e.g. biting/tearing nails, pulling strands of hair)"
+        },
+        {
+          "id": "cati_42",
+          "itemNumber": "42",
+          "text": "I have difficulty understanding the 'unspoken rules' of social situations"
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "CATI total",
+        "ids": [
+          "cati_1",
+          "cati_2",
+          "cati_3",
+          "cati_4",
+          "cati_5",
+          "cati_6",
+          "cati_7",
+          "cati_8",
+          "cati_9",
+          "cati_10",
+          "cati_11",
+          "cati_12",
+          "cati_13",
+          "cati_14",
+          "cati_15",
+          "cati_16",
+          "cati_17",
+          "cati_18",
+          "cati_19",
+          "cati_20",
+          "cati_21",
+          "cati_22",
+          "cati_23",
+          "cati_24",
+          "cati_25",
+          "cati_26",
+          "cati_27",
+          "cati_28",
+          "cati_29",
+          "cati_30",
+          "cati_31",
+          "cati_32",
+          "cati_33",
+          "cati_34",
+          "cati_35",
+          "cati_36",
+          "cati_37",
+          "cati_38",
+          "cati_39",
+          "cati_40",
+          "cati_41",
+          "cati_42"
+        ],
+        "reverse": [
+          "cati_8",
+          "cati_15",
+          "cati_19",
+          "cati_23",
+          "cati_28"
+        ],
+        "max": 210
+      },
+      {
+        "name": "Social interactions",
+        "ids": [
+          "cati_8",
+          "cati_10",
+          "cati_15",
+          "cati_17",
+          "cati_28",
+          "cati_30",
+          "cati_35"
+        ],
+        "reverse": [
+          "cati_8",
+          "cati_15",
+          "cati_28"
+        ],
+        "max": 35
+      },
+      {
+        "name": "Communication",
+        "ids": [
+          "cati_13",
+          "cati_19",
+          "cati_23",
+          "cati_26",
+          "cati_33",
+          "cati_37",
+          "cati_42"
+        ],
+        "reverse": [
+          "cati_19",
+          "cati_23"
+        ],
+        "max": 35
+      },
+      {
+        "name": "Social camouflage",
+        "ids": [
+          "cati_3",
+          "cati_6",
+          "cati_9",
+          "cati_16",
+          "cati_22",
+          "cati_29",
+          "cati_39"
+        ],
+        "reverse": [],
+        "max": 35
+      },
+      {
+        "name": "Self-regulatory behaviours",
+        "ids": [
+          "cati_1",
+          "cati_7",
+          "cati_12",
+          "cati_20",
+          "cati_25",
+          "cati_32",
+          "cati_41"
+        ],
+        "reverse": [],
+        "max": 35
+      },
+      {
+        "name": "Cognitive inflexibility",
+        "ids": [
+          "cati_2",
+          "cati_5",
+          "cati_14",
+          "cati_21",
+          "cati_27",
+          "cati_34",
+          "cati_38"
+        ],
+        "reverse": [],
+        "max": 35
+      },
+      {
+        "name": "Sensory sensitivity",
+        "ids": [
+          "cati_4",
+          "cati_11",
+          "cati_18",
+          "cati_24",
+          "cati_31",
+          "cati_36",
+          "cati_40"
+        ],
+        "reverse": [],
+        "max": 35
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Definitely disagree"
+    },
+    {
+      "v": 2,
+      "label": "Somewhat disagree"
+    },
+    {
+      "v": 3,
+      "label": "Neither agree nor disagree"
+    },
+    {
+      "v": 4,
+      "label": "Somewhat agree"
+    },
+    {
+      "v": 5,
+      "label": "Definitely agree"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "mindfulness",
+  "name": {
+    "en": "Mindfulness and present-moment attention",
+    "hi": "सचेतनता एवं वर्तमान-क्षण पर ध्यान"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["maas"]
+}

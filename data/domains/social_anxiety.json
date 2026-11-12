@@ -1,0 +1,14 @@
+{
+  "id": "social_anxiety",
+  "name": {
+    "en": "Social anxiety",
+    "hi": "सामाजिक चिंता"
+  },
+  "tier": 1,
+  "questions": [],
+  "forms": [
+    "lsas",
+    "spin",
+    "bfne"
+  ]
+}

@@ -22,21 +22,21 @@ function deployedPdScreens(domain) {
  */
 function deployedScreenInstruments(domain, accept) {
     const out = [];
+    const seen = new Set();
     if (!domain || !domain.questions) return out;
-    // Tables are shown as soon as the domain is selected (see routeInstruments),
-    // so scoring must follow the same rule — otherwise an instrument can be on
-    // screen yet silently skipped because its screen-in item was answered "No".
-    // Optional rating-table routes therefore score every attached instrument;
-    // other routes keep the original endorse-first behaviour.
-    const alwaysDeployed = OPTIONAL_TABLE_ROUTES.includes(domain.instrument) &&
-        // A hybrid route (mood / auto:bipolartable) still sums its own primary
-        // item set, so the usual endorse-first rule keeps applying there.
-        !(domain.instrument === 'auto:bipolartable' && domain.baseInstrument);
+    // Only scales explicitly chosen by the user are present in domain.questions.
+    // For these table routes, that choice is the deployment decision; the
+    // accompanying Yes/No answer supplies context without silently removing
+    // the selected instrument. Other routes retain endorse-first behaviour.
+    const alwaysDeployed = OPTIONAL_TABLE_ROUTES.includes(domain.instrument);
     domain.questions.forEach(q => {
         if (!q.scaleId) return;
         if (!alwaysDeployed && (state.responses[domain.id + ':' + q.id] || 0) < 1) return;
         const s = CLINICAL_DATA.scales[q.scaleId];
-        if (s && accept(s)) out.push({ question: q, scale: s });
+        if (s && !seen.has(s.id) && accept(s)) {
+            seen.add(s.id);
+            out.push({ question: q, scale: s });
+        }
     });
     return out;
 }

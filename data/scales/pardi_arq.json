@@ -1,0 +1,132 @@
+{
+  "id": "pardi_arq",
+  "name": "PARDI-AR-Q Informant (ages 4+)",
+  "administeredBy": "informant",
+  "optionalAssessment": true,
+  "sourceInstrument": "Pica, ARFID, and Rumination Disorder Interview – ARFID Questionnaire (user-supplied reproduction text); the possible-ARFID rule is the supplied rule and requires clinical confirmation.",
+  "ageGroups": [
+    "pediatric",
+    "schoolage",
+    "adolescent"
+  ],
+  "directions": "Caregiver report for a child; items refer to current status, the past month, or past three months as stated.",
+  "timeframe": "Caregiver report for a child; items refer to current status, the past month, or past three months as stated.",
+  "responseMin": 0,
+  "responseMax": 6,
+  "parts": {
+    "$file": "data/scales/pardi_arq/parts.json"
+  },
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "Severity of impact (mean)",
+        "ids": [
+          "pardi_arq_19",
+          "pardi_arq_20"
+        ],
+        "average": true,
+        "max": 6
+      },
+      {
+        "name": "Sensory-based avoidance (mean)",
+        "ids": [
+          "pardi_arq_21",
+          "pardi_arq_22",
+          "pardi_arq_23"
+        ],
+        "average": true,
+        "max": 6
+      },
+      {
+        "name": "Low interest in eating/food (mean)",
+        "ids": [
+          "pardi_arq_24",
+          "pardi_arq_25",
+          "pardi_arq_26"
+        ],
+        "average": true,
+        "max": 6
+      },
+      {
+        "name": "Concern about aversive consequences (mean)",
+        "ids": [
+          "pardi_arq_27",
+          "pardi_arq_28",
+          "pardi_arq_29"
+        ],
+        "average": true,
+        "max": 6
+      }
+    ],
+    "screening": {
+      "name": "Supplied possible-ARFID screen rule",
+      "recognizedAny": [
+        "pardi_arq_3",
+        "pardi_arq_4"
+      ],
+      "consequenceAny": [
+        "pardi_arq_5",
+        "pardi_arq_6",
+        "pardi_arq_8",
+        "pardi_arq_9",
+        "pardi_arq_10",
+        "pardi_arq_11",
+        "pardi_arq_12",
+        "pardi_arq_14",
+        "pardi_arq_16",
+        "pardi_arq_18"
+      ]
+    },
+    "contextRegister": [
+      "pardi_arq_1",
+      "pardi_arq_2",
+      "pardi_arq_7",
+      "pardi_arq_13",
+      "pardi_arq_15",
+      "pardi_arq_17"
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "contextFields": [
+    {
+      "id": "height_unit",
+      "label": "Height unit",
+      "options": [
+        "Centimetres",
+        "Feet and inches"
+      ]
+    },
+    {
+      "id": "weight_unit",
+      "label": "Weight unit",
+      "options": [
+        "Kilograms",
+        "Pounds",
+        "Stones"
+      ]
+    },
+    {
+      "id": "growth_status",
+      "label": {
+        "en": "Growth status (not scored)",
+        "hi": "वृद्धि की स्थिति (अंकित नहीं)"
+      },
+      "options": [
+        {
+          "v": "still_growing",
+          "label": {
+            "en": "Still growing",
+            "hi": "अभी वृद्धि जारी है"
+          }
+        },
+        {
+          "v": "finished_growing",
+          "label": {
+            "en": "Finished growing",
+            "hi": "वृद्धि पूरी हो चुकी है"
+          }
+        }
+      ]
+    }
+  ]
+}

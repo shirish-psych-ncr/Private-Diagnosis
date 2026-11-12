@@ -1,0 +1,16 @@
+{
+  "id": "perimenopause",
+  "name": {
+    "en": "Perimenopausal mood symptoms",
+    "hi": "परिमेनोपॉज़ल मनोदशा लक्षण"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "meno_d"
+  ],
+  "description": {
+    "en": "A context-specific symptom profile. Interpret alongside medical and clinical assessment.",
+    "hi": "A context-specific symptom profile. Interpret alongside medical and clinical assessment."
+  }
+}

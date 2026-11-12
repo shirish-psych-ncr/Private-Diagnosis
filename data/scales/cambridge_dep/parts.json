@@ -1,14 +1,5 @@
 [
   {
-    "name": "Depersonalisation and derealisation experiences",
-    "questions": {
-      "$concat": [
-        "data/scales/cambridge_dep/questions-001-001.json",
-        "data/scales/cambridge_dep/questions-001-002.json",
-        "data/scales/cambridge_dep/questions-001-003.json",
-        "data/scales/cambridge_dep/questions-001-004.json",
-        "data/scales/cambridge_dep/questions-001-005.json"
-      ]
-    }
+    "$file": "data/scales/cambridge_dep/parts/001-1.json"
   }
 ]

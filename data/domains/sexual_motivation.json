@@ -1,0 +1,12 @@
+{
+  "id": "sexual_motivation",
+  "name": {
+    "en": "Sexual motivations",
+    "hi": "यौन प्रेरणाएँ"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "ysex_sf"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "self_efficacy",
+  "name": {
+    "en": "General self-efficacy",
+    "hi": "सामान्य आत्म-प्रभावकारिता"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["gse"]
+}

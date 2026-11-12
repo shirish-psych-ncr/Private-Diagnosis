@@ -1,0 +1,403 @@
+{
+  "id": "bam_c",
+  "name": "Brief Addiction Monitor – Continuous (BAM-C)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Brief Addiction Monitor – Continuous (user-supplied reproduction text)",
+  "ageGroups": [
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Past 30 days unless an item specifies otherwise. Responses are retained item by item for monitoring; no aggregate total is calculated.",
+  "timeframe": "Past 30 days unless an item specifies otherwise. Responses are retained item by item for monitoring; no aggregate total is calculated.",
+  "responseMin": 0,
+  "responseMax": 30,
+  "parts": [
+    {
+      "name": "Part A · General health and substance use (past 30 days)",
+      "questions": [
+        {
+          "id": "bam_c_1",
+          "itemNumber": "1",
+          "text": "In the past 30 days, how would you say your physical health has been?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Extremely poor"
+            },
+            {
+              "v": 8,
+              "label": "Very poor"
+            },
+            {
+              "v": 15,
+              "label": "Moderate"
+            },
+            {
+              "v": 22,
+              "label": "Good"
+            },
+            {
+              "v": 30,
+              "label": "Excellent"
+            }
+          ]
+        },
+        {
+          "id": "bam_c_2",
+          "itemNumber": "2",
+          "text": "In the past 30 days, how many nights did you have trouble falling asleep or staying asleep?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_3",
+          "itemNumber": "3",
+          "text": "In the past 30 days, how many days have you felt depressed, anxious, angry or very upset throughout most of the day?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_4",
+          "itemNumber": "4",
+          "text": "In the past 30 days, how many days did you drink ANY alcohol?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_5",
+          "itemNumber": "5",
+          "text": "In the past 30 days, how many days did you have at least 5 drinks (if you are a man) or at least 4 drinks (if you are a woman)? (One drink = 1.5 oz hard liquor, 12 oz beer, or 5 oz wine)",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_6",
+          "itemNumber": "6",
+          "text": "In the past 30 days, how many days did you use any illegal or street drugs or misuse any prescription medications?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "name": "Part B · Specific substance use (past 30 days)",
+      "questions": [
+        {
+          "id": "bam_c_7a",
+          "itemNumber": 7,
+          "itemName": "7A",
+          "text": "Marijuana (cannabis, pot, weed)?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "requires": "6",
+          "requiresPositive": true
+        },
+        {
+          "id": "bam_c_7b",
+          "itemNumber": 7,
+          "itemName": "7B",
+          "text": "Sedatives and/or Tranquilizers (benzos, Valium, Xanax, Ativan, Ambien, barbs, Phenobarbital, downers, etc.)?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "requires": "6",
+          "requiresPositive": true
+        },
+        {
+          "id": "bam_c_7c",
+          "itemNumber": 7,
+          "itemName": "7C",
+          "text": "Cocaine and/or Crack?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "requires": "6",
+          "requiresPositive": true
+        },
+        {
+          "id": "bam_c_7d",
+          "itemNumber": 7,
+          "itemName": "7D",
+          "text": "Other Stimulants (amphetamine, methamphetamine, Dexedrine, Ritalin, Adderall, speed, crystal meth, ice, etc.)?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "requires": "6",
+          "requiresPositive": true
+        },
+        {
+          "id": "bam_c_7e",
+          "itemNumber": 7,
+          "itemName": "7E",
+          "text": "Opiates (Heroin, Morphine, Dilaudid, Demerol, Oxycotin, oxy, codeine (Tylenol 2,3,4), Percocet, Vicodin, Fentanyl, etc.)?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "requires": "6",
+          "requiresPositive": true
+        },
+        {
+          "id": "bam_c_7f",
+          "itemNumber": 7,
+          "itemName": "7F",
+          "text": "Inhalants (glues, adhesives, nail polish remover, paint thinner, etc.)?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "requires": "6",
+          "requiresPositive": true
+        },
+        {
+          "id": "bam_c_7g",
+          "itemNumber": 7,
+          "itemName": "7G",
+          "text": "Other drugs (steroids, non-prescription sleep and diet pills, Benadryl, Ephedra, other over-the-counter or unknown medications)?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "requires": "6",
+          "requiresPositive": true
+        }
+      ]
+    },
+    {
+      "name": "Part C · Recovery factors and functioning",
+      "questions": [
+        {
+          "id": "bam_c_8",
+          "itemNumber": "8",
+          "text": "In the past 30 days, how much were you bothered by cravings or urges to drink alcohol or use drugs?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all"
+            },
+            {
+              "v": 8,
+              "label": "Slightly"
+            },
+            {
+              "v": 15,
+              "label": "Moderately"
+            },
+            {
+              "v": 22,
+              "label": "Considerably"
+            },
+            {
+              "v": 30,
+              "label": "Extremely"
+            }
+          ]
+        },
+        {
+          "id": "bam_c_9",
+          "itemNumber": "9",
+          "text": "How confident are you that you will NOT use alcohol and drugs in the next 30 days?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all"
+            },
+            {
+              "v": 8,
+              "label": "Slightly"
+            },
+            {
+              "v": 15,
+              "label": "Moderately"
+            },
+            {
+              "v": 22,
+              "label": "Considerably"
+            },
+            {
+              "v": 30,
+              "label": "Extremely"
+            }
+          ]
+        },
+        {
+          "id": "bam_c_10",
+          "itemNumber": "10",
+          "text": "In the past 30 days, how many days did you attend self-help meetings like AA or NA to support your recovery?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_11",
+          "itemNumber": "11",
+          "text": "In the past 30 days, how many days were you in any situations or with any people that might put you at an increased risk for using alcohol or drugs (i.e., around risky \"people, places or things\")?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_12",
+          "itemNumber": "12",
+          "text": "Does your religion or spirituality help support your recovery?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all"
+            },
+            {
+              "v": 8,
+              "label": "Slightly"
+            },
+            {
+              "v": 15,
+              "label": "Moderately"
+            },
+            {
+              "v": 22,
+              "label": "Considerably"
+            },
+            {
+              "v": 30,
+              "label": "Extremely"
+            }
+          ]
+        },
+        {
+          "id": "bam_c_13",
+          "itemNumber": "13",
+          "text": "In the past 30 days, how many days did you spend much of the time at work, school, or doing volunteer work?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_14",
+          "itemNumber": "14",
+          "text": "Do you have enough income (from legal sources) to pay for necessities such as housing, transportation, food and clothing for yourself and your dependents?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No"
+            },
+            {
+              "v": 30,
+              "label": "Yes"
+            }
+          ]
+        },
+        {
+          "id": "bam_c_15",
+          "itemNumber": "15",
+          "text": "In the past 30 days, how much have you been bothered by arguments or problems getting along with any family members or friends?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all"
+            },
+            {
+              "v": 8,
+              "label": "Slightly"
+            },
+            {
+              "v": 15,
+              "label": "Moderately"
+            },
+            {
+              "v": 22,
+              "label": "Considerably"
+            },
+            {
+              "v": 30,
+              "label": "Extremely"
+            }
+          ]
+        },
+        {
+          "id": "bam_c_16",
+          "itemNumber": "16",
+          "text": "In the past 30 days, how many days did you contact or spend time with any family members or friends who are supportive of your recovery?",
+          "inputType": "number",
+          "min": 0,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "id": "bam_c_17",
+          "itemNumber": "17",
+          "text": "How satisfied are you with your progress toward achieving your recovery goals?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all"
+            },
+            {
+              "v": 8,
+              "label": "Slightly"
+            },
+            {
+              "v": 15,
+              "label": "Moderately"
+            },
+            {
+              "v": 22,
+              "label": "Considerably"
+            },
+            {
+              "v": 30,
+              "label": "Extremely"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "itemRegister": [
+      "bam_c_1",
+      "bam_c_2",
+      "bam_c_3",
+      "bam_c_4",
+      "bam_c_5",
+      "bam_c_6",
+      "bam_c_7a",
+      "bam_c_7b",
+      "bam_c_7c",
+      "bam_c_7d",
+      "bam_c_7e",
+      "bam_c_7f",
+      "bam_c_7g",
+      "bam_c_8",
+      "bam_c_9",
+      "bam_c_10",
+      "bam_c_11",
+      "bam_c_12",
+      "bam_c_13",
+      "bam_c_14",
+      "bam_c_15",
+      "bam_c_16",
+      "bam_c_17"
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis."
+}

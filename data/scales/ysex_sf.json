@@ -1,0 +1,302 @@
+{
+  "id": "ysex_sf",
+  "name": "Why Have Sex? Questionnaire – Short Form (YSEX-SF)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Why Have Sex? Questionnaire – Short Form (user-supplied reproduction text)",
+  "ageGroups": [
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Rate how frequently each reason has led to sexual intercourse; if inexperienced, rate anticipated likelihood.",
+  "timeframe": "Rate how frequently each reason has led to sexual intercourse; if inexperienced, rate anticipated likelihood.",
+  "responseMin": 1,
+  "responseMax": 5,
+  "parts": [
+    {
+      "name": "Reasons for sex",
+      "questions": [
+        {
+          "id": "ysex_sf_1",
+          "itemNumber": "1",
+          "text": "I was frustrated and needed relief."
+        },
+        {
+          "id": "ysex_sf_2",
+          "itemNumber": "2",
+          "text": "It felt good."
+        },
+        {
+          "id": "ysex_sf_3",
+          "itemNumber": "3",
+          "text": "The person had an attractive face."
+        },
+        {
+          "id": "ysex_sf_4",
+          "itemNumber": "4",
+          "text": "I wanted the experience."
+        },
+        {
+          "id": "ysex_sf_5",
+          "itemNumber": "5",
+          "text": "I wanted something in exchange for sex (e.g., money, a job, a raise, drugs, etc.)."
+        },
+        {
+          "id": "ysex_sf_6",
+          "itemNumber": "6",
+          "text": "I wanted to have a child."
+        },
+        {
+          "id": "ysex_sf_7",
+          "itemNumber": "7",
+          "text": "I wanted to enhance my reputation."
+        },
+        {
+          "id": "ysex_sf_8",
+          "itemNumber": "8",
+          "text": "I wanted to get back at my partner."
+        },
+        {
+          "id": "ysex_sf_9",
+          "itemNumber": "9",
+          "text": "I wanted the physical benefits (e.g., burn calories, sleep, pain relief, etc.)."
+        },
+        {
+          "id": "ysex_sf_10",
+          "itemNumber": "10",
+          "text": "I wanted to feel connected to the person."
+        },
+        {
+          "id": "ysex_sf_11",
+          "itemNumber": "11",
+          "text": "I wanted to welcome someone home or say goodbye."
+        },
+        {
+          "id": "ysex_sf_12",
+          "itemNumber": "12",
+          "text": "I wanted to boost my self-esteem."
+        },
+        {
+          "id": "ysex_sf_13",
+          "itemNumber": "13",
+          "text": "I was pressured into doing it."
+        },
+        {
+          "id": "ysex_sf_14",
+          "itemNumber": "14",
+          "text": "I wanted to keep my partner from straying."
+        },
+        {
+          "id": "ysex_sf_15",
+          "itemNumber": "15",
+          "text": "I wanted to release anxiety/stress."
+        },
+        {
+          "id": "ysex_sf_16",
+          "itemNumber": "16",
+          "text": "I was \"horny.\""
+        },
+        {
+          "id": "ysex_sf_17",
+          "itemNumber": "17",
+          "text": "The person had a desirable body."
+        },
+        {
+          "id": "ysex_sf_18",
+          "itemNumber": "18",
+          "text": "I wanted the adventure/excitement."
+        },
+        {
+          "id": "ysex_sf_19",
+          "itemNumber": "19",
+          "text": "I wanted a favor from someone."
+        },
+        {
+          "id": "ysex_sf_20",
+          "itemNumber": "20",
+          "text": "I wanted to reproduce."
+        },
+        {
+          "id": "ysex_sf_21",
+          "itemNumber": "21",
+          "text": "I thought it would boost my status."
+        },
+        {
+          "id": "ysex_sf_22",
+          "itemNumber": "22",
+          "text": "I wanted to get even with someone."
+        },
+        {
+          "id": "ysex_sf_23",
+          "itemNumber": "23",
+          "text": "I wanted the emotional benefits."
+        },
+        {
+          "id": "ysex_sf_24",
+          "itemNumber": "24",
+          "text": "I wanted to express my love for the person."
+        },
+        {
+          "id": "ysex_sf_25",
+          "itemNumber": "25",
+          "text": "I wanted to celebrate a birthday or anniversary or special occasion."
+        },
+        {
+          "id": "ysex_sf_26",
+          "itemNumber": "26",
+          "text": "I wanted to feel better about myself."
+        },
+        {
+          "id": "ysex_sf_27",
+          "itemNumber": "27",
+          "text": "I felt obligated to."
+        },
+        {
+          "id": "ysex_sf_28",
+          "itemNumber": "28",
+          "text": "I wanted to get my partner to stay with me."
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "Stress reduction",
+        "ids": [
+          "ysex_sf_1",
+          "ysex_sf_15"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Pleasure",
+        "ids": [
+          "ysex_sf_2",
+          "ysex_sf_16"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Physical desirability",
+        "ids": [
+          "ysex_sf_3",
+          "ysex_sf_17"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Experience seeking",
+        "ids": [
+          "ysex_sf_4",
+          "ysex_sf_18"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Resources",
+        "ids": [
+          "ysex_sf_5",
+          "ysex_sf_19"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Reproduction",
+        "ids": [
+          "ysex_sf_6",
+          "ysex_sf_20"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Social status",
+        "ids": [
+          "ysex_sf_7",
+          "ysex_sf_21"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Revenge",
+        "ids": [
+          "ysex_sf_8",
+          "ysex_sf_22"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Practical reasons",
+        "ids": [
+          "ysex_sf_9",
+          "ysex_sf_23"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Love / relationship expression",
+        "ids": [
+          "ysex_sf_10",
+          "ysex_sf_24"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Celebration",
+        "ids": [
+          "ysex_sf_11",
+          "ysex_sf_25"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Self-esteem",
+        "ids": [
+          "ysex_sf_12",
+          "ysex_sf_26"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Duty / pressure",
+        "ids": [
+          "ysex_sf_13",
+          "ysex_sf_27"
+        ],
+        "max": 10
+      },
+      {
+        "name": "Mate retention",
+        "ids": [
+          "ysex_sf_14",
+          "ysex_sf_28"
+        ],
+        "max": 10
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "None of my sexual experiences"
+    },
+    {
+      "v": 2,
+      "label": "A few of my sexual experiences"
+    },
+    {
+      "v": 3,
+      "label": "Some of my sexual experiences"
+    },
+    {
+      "v": 4,
+      "label": "Many of my sexual experiences"
+    },
+    {
+      "v": 5,
+      "label": "All of my sexual experiences"
+    }
+  ]
+}

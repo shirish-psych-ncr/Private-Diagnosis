@@ -1,0 +1,39 @@
+{
+  "id": "personality_traits",
+  "name": {
+    "en": "Normal-range personality traits",
+    "hi": "सामान्य-सीमा व्यक्तित्व विशेषताएँ"
+  },
+  "tier": 2,
+  "questions": [
+    {
+      "id": "per_hexaco_1",
+      "text": {
+        "en": "Is an informant-rated personality profile needed — to corroborate or challenge the person's own account, or because self-report alone is insufficient for the referral question?",
+        "hi": "क्या किसी निकट informants (परिवार/साथी/सहकर्मी) द्वारा व्यक्ति-ता-प्रोफाइल की पर्यवेक्षक-रेटिंग आवश्यक है — आत्म-रिपोर्ट की सीमाओं को आंकने या नैदानिक-सूचना हेतु?"
+      },
+      "scale": [
+        {
+          "v": 0,
+          "label": {
+            "en": "No",
+            "hi": "नहीं"
+          }
+        },
+        {
+          "v": 1,
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ"
+          }
+        }
+      ],
+      "scaleId": "hexaco_pi_r_observer",
+      "disorders": []
+    }
+  ],
+  "forms": [
+    "ffoci_sf",
+    "ipip120"
+  ]
+}

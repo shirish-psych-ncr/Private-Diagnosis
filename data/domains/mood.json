@@ -5,42 +5,14 @@
     "hi": "मूड"
   },
   "tier": 1,
-  "questions": [
-    {
-      "id": "mood_biss_1",
-      "text": {
-        "en": "Has the person had a distinct period of abnormally elevated, expansive or irritable mood, or is there a clear history of hypomanic/manic episodes? (Deploys the BISS 7-day severity profile below.)",
-        "hi": "क्या व्यक्ति का कोई सुस्पष्ट काल अत्युच्च/प्रसारित/कोपमय मूड का रहा है, या हाइपोमैनिक/मैनिक अवस्थाओं का स्पष्ट इतिहास है? (नीचे दी BISS 7-दिवसीय तीव्रता-मापनी लागू होती है।)"
-      },
-      "sharedScale": "yesno",
-      "scaleId": "biss",
-      "disorders": [
-        "bipolar_i_disorder",
-        "bipolar_ii_disorder",
-        "other_specified_bipolar"
-      ]
-    },
-    {
-      "id": "mood_biss_2",
-      "text": {
-        "en": "Is a clinician-rated 7-day profile of depressive AND manic symptoms needed to stage the current episode or monitor treatment response?",
-        "hi": "क्या वर्तमान अवस्था के चरण-निर्धारण या चिकित्सा-प्रतिक्रिया निगरानी हेतु चिकित्सक-रेटित अवसादी एवं उन्मादी लक्षणों का 7-दिवसीय प्रोफाइल आवश्यक है?"
-      },
-      "sharedScale": "yesno",
-      "scaleId": "biss",
-      "disorders": [
-        "bipolar_depressive",
-        "other_specified_bipolar"
-      ]
-    }
-  ],
+  "questions": [],
   "cutoff": 10,
   "instruments": [
     "PHQ-9",
     "MDQ",
     "BDI-II"
   ],
-  "instrument": "auto:bipolartable",
+  "instrument": "phq9",
   "baseInstrument": "phq9",
   "help": {
     "en": "The domain's nine PHQ-9 items are scored as usual. In addition, selecting this domain deploys the Bipolar Inventory of Signs and Symptoms Scale (BISS): 44 items rated 0-4 by the clinician over the most recent 7 days, using self-report plus family and interview observation. Section I covers depressive signs (items 1-20), section II manic signs (items 21-44). The BISS is dimensional - it quantifies severity and change; it carries no diagnostic cutoff and never by itself establishes bipolar disorder.",
@@ -56,21 +28,13 @@
     "mood_6",
     "mood_7",
     "mood_8",
-    "mood_9",
-    "mood_biss_1",
-    "mood_biss_2"
+    "mood_9"
   ],
   "forms": [
-    "dass21",
-    "asrm",
     "qids_sr16",
-    "mood_mdq",
-    "hcl32",
     "hdrs17",
     "madrs",
-    "ymrs",
     "bdrs",
     "bdi_ii"
-  ],
-  "defaultScales": ["base", "biss"]
+  ]
 }

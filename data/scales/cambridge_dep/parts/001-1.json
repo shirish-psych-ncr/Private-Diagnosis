@@ -1,0 +1,6 @@
+{
+  "name": "Depersonalisation and derealisation experiences",
+  "questions": {
+    "$file": "data/scales/cambridge_dep/parts/001-1/questions.json"
+  }
+}

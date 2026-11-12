@@ -1,0 +1,254 @@
+{
+  "id": "wsas",
+  "name": "Work and Social Adjustment Scale (WSAS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Work and Social Adjustment Scale (user-supplied reproduction text)",
+  "ageGroups": [
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Rate impairment attributable to the difficulty being assessed.",
+  "timeframe": "Rate impairment attributable to the difficulty being assessed.",
+  "responseMin": 0,
+  "responseMax": 8,
+  "parts": [
+    {
+      "name": "Questionnaire",
+      "questions": [
+        {
+          "id": "wsas_1",
+          "itemNumber": "1",
+          "text": "Because of my difficulties, my ability to work is impaired. / (Note: If \"Not working for reasons unrelated to my difficulties,\" score as 0)",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all impaired"
+            },
+            {
+              "v": 1,
+              "label": ""
+            },
+            {
+              "v": 2,
+              "label": ""
+            },
+            {
+              "v": 3,
+              "label": ""
+            },
+            {
+              "v": 4,
+              "label": ""
+            },
+            {
+              "v": 5,
+              "label": ""
+            },
+            {
+              "v": 6,
+              "label": ""
+            },
+            {
+              "v": 7,
+              "label": ""
+            },
+            {
+              "v": 8,
+              "label": "Very severely impaired"
+            }
+          ]
+        },
+        {
+          "id": "wsas_2",
+          "itemNumber": "2",
+          "text": "Because of my difficulties, my home management (cleaning, tidying, shopping, cooking, looking after home or children, paying bills) is impaired.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all impaired"
+            },
+            {
+              "v": 1,
+              "label": ""
+            },
+            {
+              "v": 2,
+              "label": ""
+            },
+            {
+              "v": 3,
+              "label": ""
+            },
+            {
+              "v": 4,
+              "label": ""
+            },
+            {
+              "v": 5,
+              "label": ""
+            },
+            {
+              "v": 6,
+              "label": ""
+            },
+            {
+              "v": 7,
+              "label": ""
+            },
+            {
+              "v": 8,
+              "label": "Very severely impaired"
+            }
+          ]
+        },
+        {
+          "id": "wsas_3",
+          "itemNumber": "3",
+          "text": "Because of my difficulties, my social leisure activities (with other people, such as parties, bars, clubs, outings, visits, dating, home entertainment) are impaired.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all impaired"
+            },
+            {
+              "v": 1,
+              "label": ""
+            },
+            {
+              "v": 2,
+              "label": ""
+            },
+            {
+              "v": 3,
+              "label": ""
+            },
+            {
+              "v": 4,
+              "label": ""
+            },
+            {
+              "v": 5,
+              "label": ""
+            },
+            {
+              "v": 6,
+              "label": ""
+            },
+            {
+              "v": 7,
+              "label": ""
+            },
+            {
+              "v": 8,
+              "label": "Very severely impaired"
+            }
+          ]
+        },
+        {
+          "id": "wsas_4",
+          "itemNumber": "4",
+          "text": "Because of my difficulties, my private leisure activities (done alone, such as reading, gardening, collecting, sewing, walking alone) are impaired.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all impaired"
+            },
+            {
+              "v": 1,
+              "label": ""
+            },
+            {
+              "v": 2,
+              "label": ""
+            },
+            {
+              "v": 3,
+              "label": ""
+            },
+            {
+              "v": 4,
+              "label": ""
+            },
+            {
+              "v": 5,
+              "label": ""
+            },
+            {
+              "v": 6,
+              "label": ""
+            },
+            {
+              "v": 7,
+              "label": ""
+            },
+            {
+              "v": 8,
+              "label": "Very severely impaired"
+            }
+          ]
+        },
+        {
+          "id": "wsas_5",
+          "itemNumber": "5",
+          "text": "Because of my difficulties, my ability to form and maintain close relationships with others, including those I live with, is impaired.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not at all impaired"
+            },
+            {
+              "v": 1,
+              "label": ""
+            },
+            {
+              "v": 2,
+              "label": ""
+            },
+            {
+              "v": 3,
+              "label": ""
+            },
+            {
+              "v": 4,
+              "label": ""
+            },
+            {
+              "v": 5,
+              "label": ""
+            },
+            {
+              "v": 6,
+              "label": ""
+            },
+            {
+              "v": 7,
+              "label": ""
+            },
+            {
+              "v": 8,
+              "label": "Very severely impaired"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "WSAS total",
+        "ids": [
+          "wsas_1",
+          "wsas_2",
+          "wsas_3",
+          "wsas_4",
+          "wsas_5"
+        ],
+        "max": 40
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis."
+}

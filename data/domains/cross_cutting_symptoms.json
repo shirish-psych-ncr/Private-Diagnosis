@@ -1,0 +1,32 @@
+{
+  "id": "cross_cutting_symptoms",
+  "name": {
+    "en": "Cross-cutting symptom severity",
+    "hi": "विभिन्न क्षेत्रों में लक्षणों की तीव्रता"
+  },
+  "tier": 5,
+  "description": {
+    "en": "Optional MINI 7.0.2 clinician-rated cross-cutting symptom severity table.",
+    "hi": "वैकल्पिक MINI 7.0.2 चिकित्सक-रेटित विभिन्न लक्षणों की तीव्रता तालिका।"
+  },
+  "timeframe": {
+    "en": "Rate each row independently from 0 (not present) to 10 (extreme) in the score column.",
+    "hi": "प्रत्येक पंक्ति को स्वतंत्र रूप से 0 (अनुपस्थित) से 10 (अत्यधिक) तक रेट करें।"
+  },
+  "instrument": "auto:minioptional",
+  "instruments": ["MINI 7.0.2"],
+  "optionalAssessment": true,
+  "administeredBy": "clinician",
+  "cutoff": null,
+  "questions": [
+    {
+      "id": "fi_1",
+      "text": {
+        "en": "Are there symptoms to rate on the Cross-Cutting Measures (Severity of Symptom) table?",
+        "hi": "क्या क्रॉस-कटिंग माप (लक्षणों की तीव्रता) तालिका पर रेट करने हेतु लक्षण उपस्थित हैं?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "mini_cross_cutting"
+    }
+  ]
+}

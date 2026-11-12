@@ -1,0 +1,250 @@
+{
+  "id": "ais",
+  "name": "Athens Insomnia Scale (AIS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Athens Insomnia Scale (AIS) (user-supplied reproduction text)",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "directions": "For each difficulty, rate what occurred at least three times a week during the past month.",
+  "timeframe": "For each difficulty, rate what occurred at least three times a week during the past month.",
+  "responseMin": 0,
+  "responseMax": 3,
+  "parts": [
+    {
+      "name": "Questionnaire",
+      "questions": [
+        {
+          "id": "ais_1",
+          "itemNumber": "1",
+          "text": "Sleep induction (time it takes you to fall asleep after turning off the lights)",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No problem"
+            },
+            {
+              "v": 1,
+              "label": "Slightly delayed"
+            },
+            {
+              "v": 2,
+              "label": "Markedly delayed"
+            },
+            {
+              "v": 3,
+              "label": "Very delayed or did not sleep at all"
+            }
+          ]
+        },
+        {
+          "id": "ais_2",
+          "itemNumber": "2",
+          "text": "Awakenings during the night",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No problem"
+            },
+            {
+              "v": 1,
+              "label": "Minor problem"
+            },
+            {
+              "v": 2,
+              "label": "Considerable problem"
+            },
+            {
+              "v": 3,
+              "label": "Serious problem or did not sleep at all"
+            }
+          ]
+        },
+        {
+          "id": "ais_3",
+          "itemNumber": "3",
+          "text": "Final awakening earlier than desired",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not earlier"
+            },
+            {
+              "v": 1,
+              "label": "A little earlier"
+            },
+            {
+              "v": 2,
+              "label": "Markedly earlier"
+            },
+            {
+              "v": 3,
+              "label": "Much earlier or did not sleep at all"
+            }
+          ]
+        },
+        {
+          "id": "ais_4",
+          "itemNumber": "4",
+          "text": "Total sleep duration",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Sufficient"
+            },
+            {
+              "v": 1,
+              "label": "Slightly insufficient"
+            },
+            {
+              "v": 2,
+              "label": "Markedly insufficient"
+            },
+            {
+              "v": 3,
+              "label": "Very insufficient or did not sleep at all"
+            }
+          ]
+        },
+        {
+          "id": "ais_5",
+          "itemNumber": "5",
+          "text": "Overall quality of sleep (no matter how long you slept)",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Satisfactory"
+            },
+            {
+              "v": 1,
+              "label": "Slightly unsatisfactory"
+            },
+            {
+              "v": 2,
+              "label": "Markedly unsatisfactory"
+            },
+            {
+              "v": 3,
+              "label": "Very unsatisfactory or did not sleep at all"
+            }
+          ]
+        },
+        {
+          "id": "ais_6",
+          "itemNumber": "6",
+          "text": "Sense of well-being during the day",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Normal"
+            },
+            {
+              "v": 1,
+              "label": "Slightly decreased"
+            },
+            {
+              "v": 2,
+              "label": "Markedly decreased"
+            },
+            {
+              "v": 3,
+              "label": "Very decreased"
+            }
+          ]
+        },
+        {
+          "id": "ais_7",
+          "itemNumber": "7",
+          "text": "Functioning (physical and mental) during the day",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Normal"
+            },
+            {
+              "v": 1,
+              "label": "Slightly decreased"
+            },
+            {
+              "v": 2,
+              "label": "Markedly decreased"
+            },
+            {
+              "v": 3,
+              "label": "Very decreased"
+            }
+          ]
+        },
+        {
+          "id": "ais_8",
+          "itemNumber": "8",
+          "text": "Sleepiness during the day",
+          "scale": [
+            {
+              "v": 0,
+              "label": "None"
+            },
+            {
+              "v": 1,
+              "label": "Mild"
+            },
+            {
+              "v": 2,
+              "label": "Considerable"
+            },
+            {
+              "v": 3,
+              "label": "Intense"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "AIS total",
+        "ids": [
+          "ais_1",
+          "ais_2",
+          "ais_3",
+          "ais_4",
+          "ais_5",
+          "ais_6",
+          "ais_7",
+          "ais_8"
+        ],
+        "max": 24,
+        "cutoff": 6,
+        "positiveLabel": "Screening threshold met; further assessment is indicated.",
+        "negativeLabel": "Below screening threshold."
+      },
+      {
+        "name": "Night-time sleep difficulty (mean)",
+        "ids": [
+          "ais_1",
+          "ais_2",
+          "ais_3",
+          "ais_4",
+          "ais_5"
+        ],
+        "average": true,
+        "max": 3
+      },
+      {
+        "name": "Daytime consequences (mean)",
+        "ids": [
+          "ais_6",
+          "ais_7",
+          "ais_8"
+        ],
+        "average": true,
+        "max": 3
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis."
+}

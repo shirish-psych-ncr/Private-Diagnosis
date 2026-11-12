@@ -3,7 +3,7 @@ import { renderMatrix } from './matrix-rendering.js';
 import { onAnswer } from './answers.js';
 import { routeInstruments } from './routing.js';
 import { optionsForQuestion, renderDomainScreenIns } from './screen-in.js';
-import { state, CLINICAL_DATA } from './state.js';
+import { state, CLINICAL_DATA, questionIsApplicable } from './state.js';
 
 function renderScales() {
     const container = document.getElementById('scale-container');
@@ -14,7 +14,7 @@ function renderScales() {
     deployed.forEach(({ domain, scaleId, ratingTable }) => {
         const scale = (ratingTable || domain.directForm) && CLINICAL_DATA.scales[scaleId || domain.id];
         const questions = scale ? scale.parts.flatMap(part => part.questions)
-            .filter(question => !question.requires || state.responses[scaleId + ':' + question.requires] === 1)
+            .filter(question => questionIsApplicable(question, scaleId || domain.id))
             : domain.questions.filter(question => !question.scaleId);
         questions.forEach(question => {
             if (question.nonScored || question.tickBox) return;
@@ -33,13 +33,10 @@ function renderScales() {
     if (estimate) estimate.textContent = t('scales.timeEstimate').replace('{count}', String(total.size));
     if (progress) progress.textContent = t('scales.progress').replace('{answered}', String(answered.size)).replace('{total}', String(total.size));
 
-    // Screen-in questions for the optional rating-table routes are rendered
-    // first, as one compact block per domain. Those instruments are always
-    // deployed once their domain is selected (gating a table behind its own
-    // screen-in item would be circular — both live on the same page), so the
-    // Yes/No gate needs its own home above the tables. Endorsing an item tells
-    // the clinician which domain narrative to read the table within; it never
-    // adds or removes a table.
+    // Screen-in questions for explicitly selected rating-table routes are
+    // rendered first, as one compact block per domain. The table is chosen by
+    // the user; the Yes/No responses provide context and do not change scale
+    // selection.
     const seenScreenIns = new Set();
     deployed.forEach(({ domain, ratingTable }) => {
         if (!ratingTable || !domain.questions.some(q => q.scaleId)) return;
@@ -121,11 +118,11 @@ function renderScales() {
             help.append(summary, text);
             section.appendChild(help);
         }
-        for (const field of domain.contextFields || []) {
+        for (const field of scDef?.contextFields || domain.contextFields || []) {
             const group = document.createElement('div');
             group.className = 'form-group';
             const label = document.createElement('label');
-            const key = domain.id + ':' + field.id;
+            const key = (scaleId || domain.id) + ':' + field.id;
             if (field.multiple) {
                 const choices = document.createElement('fieldset');
                 const legend = document.createElement('legend');
@@ -150,12 +147,16 @@ function renderScales() {
                 continue;
             }
             label.htmlFor = key;
-            label.textContent = field.label;
+            label.textContent = L(field.label);
             const control = document.createElement(field.options ? 'select' : 'textarea');
             control.id = key;
             if (field.options) {
-                control.add(new Option('Choose…', ''));
-                for (const option of field.options) control.add(new Option(option, option));
+                control.add(new Option(t('context.select'), ''));
+                for (const option of field.options) {
+                    const value = typeof option === 'object' ? option.v : option;
+                    const text = typeof option === 'object' ? L(option.label) : option;
+                    control.add(new Option(text, value));
+                }
             }
             control.value = state.formContext[key] || '';
             control.addEventListener('input', () => { state.formContext[key] = control.value; });

@@ -1,0 +1,13 @@
+{
+  "id": "child_anxiety",
+  "name": {
+    "en": "Childhood anxiety",
+    "hi": "बाल्यावस्था की चिंता"
+  },
+  "tier": 1,
+  "questions": [],
+  "forms": [
+    "scared_child",
+    "scared_parent"
+  ]
+}

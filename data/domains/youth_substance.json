@@ -1,0 +1,16 @@
+{
+  "id": "youth_substance",
+  "name": {
+    "en": "Youth substance-use screening",
+    "hi": "युवा पदार्थ-उपयोग स्क्रीनिंग"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "crafft_21n"
+  ],
+  "description": {
+    "en": "Youth substance-use, driving-risk and nicotine screening; use the age-appropriate self-report version.",
+    "hi": "Youth substance-use, driving-risk and nicotine screening; use the age-appropriate self-report version."
+  }
+}

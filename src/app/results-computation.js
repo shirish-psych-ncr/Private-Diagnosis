@@ -1,4 +1,5 @@
 import { scoreItemSums } from './scoring/item-sums.js';
+import { L } from './i18n.js';
 import { score as scoreDisability } from './scales/mini_disability.js';
 import { score as scoreCrossCutting } from './scales/mini_cross_cutting.js';
 import { scoreDomain } from './scoring/domain-registry.js';
@@ -16,7 +17,7 @@ import { scorePhq15 } from './scales/phq15.js';
 import { scoreStaxi } from './scales/staxi_ca.js';
 import { scoreVadrs } from './scales/vadrs.js';
 import { deployedScreenInstruments } from './scoring/shared.js';
-import { selectedDomainForms, selectedFormsForDomain, state, CLINICAL_DATA, setFlagSink } from './state.js';
+import { selectedDomainForms, selectedFormsForDomain, state, CLINICAL_DATA, setFlagSink, questionIsApplicable } from './state.js';
 
 import { score as scoreUGDS } from './scales/ugds_gs.js';
 import { score as scoreITQ } from './scales/itq.js';
@@ -47,9 +48,13 @@ import { score as scoreYbocs2 } from './scales/ybocs2.js';
 import { score as scoreCybocs } from './scales/cybocs.js';
 import { score as scoreBddYbocs } from './scales/bdd_ybocs.js';
 import { score as scoreCiwaAr } from './scales/ciwa_ar.js';
+import { scoreCambridge } from './scales/cambridge_dep.js';
 import { scoreMeans } from './scoring/item-means.js';
+import { scoreSuppliedProfile } from './scales/supplied-profile.js';
+import { scoreHexacoObserver } from './scales/hexaco_observer.js';
 
 const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS, k10: scoreK10,
+    hexaco_pi_r_observer: (_values, _questions, form) => scoreHexacoObserver(form),
     desii: (_values, _questions, form) => [scoreDesII(form)],
     mid60: (_values, _questions, form) => [scoreMid60(form)],
     hdrs17: (values, questions) => scoreRating(values, questions, CLINICAL_DATA.scales.hdrs17),
@@ -73,22 +78,37 @@ const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: s
     panss6: (values, questions, form) => scoreRating(values, questions, form), cows: scoreCows,
     pid5_bf: scorePid5Bf, ybocs2: scoreYbocs2, cybocs: scoreCybocs,
     cois_rc: (values, questions, form) => scoreRating(values, questions, form), bdd_ybocs: scoreBddYbocs,
-    ciwa_ar: scoreCiwaAr };
+    ciwa_ar: scoreCiwaAr,
+    cambridge_dep: (_values, _questions, form) => scoreCambridge(form, state) };
 
 function appendFormResults(id, instrumentResults) {
     const form = CLINICAL_DATA.scales[id];
     if (!form) return;
+    const appendContext = () => {
+        for (const field of form.contextFields || []) {
+            const value = state.formContext[id + ':' + field.id];
+            if (Array.isArray(value) ? !value.length : value == null || value === '') continue;
+            instrumentResults.push({ name: L(field.label) || L(form.name),
+                score: Array.isArray(value) ? value.join(', ') : value,
+                severity: 'Context information', sourceNote: form.interpretationNote || form.attribution });
+        }
+    };
     const questions = form.parts.flatMap(part => part.questions)
-        .filter(q => !q.requires || state.responses[id + ':' + q.requires] === 1);
+        .filter(q => questionIsApplicable(q, id) && !q.nonScored && !q.tickBox);
     const values = questions.map(q => state.responses[id + ':' + q.id]);
-    if (!values.length || !values.every(Number.isFinite)) return;
+    if (!values.length || !values.every(Number.isFinite)) {
+        appendContext();
+        return;
+    }
     let rows;
     if (directScorers[id]) rows = directScorers[id](values, questions, form);
     else if (form.sumScores) rows = scoreItemSums(values, form);
     else if (form.meanScores) rows = scoreMeans(values, form);
-    else return;
+    else if (form.scoringProfile) rows = scoreSuppliedProfile(form);
+    else rows = [];
     if (form.attribution) rows.forEach(row => { row.sourceNote = form.attribution; });
     instrumentResults.push(...rows);
+    appendContext();
 }
 
 function computeResults() {
@@ -104,31 +124,13 @@ function computeResults() {
     setFlagSink(addFlag);
 
     selectedDomainForms().forEach(domain => {
-        if (domain.selectedForms?.includes('base') && domain.baseInstrument && !domain.forms?.length && domain.instrument !== 'auto:bipolartable') {
+        if (domain.selectedForms?.includes('base') && (domain.baseInstrument || domain.originalLabel) && !domain.forms?.length && domain.instrument !== 'auto:bipolartable') {
             const questions = domain.questions.filter(q => !q.scaleId);
             const values = questions.map(q => state.responses[domain.id + ':' + q.id]);
             if (values.every(Number.isFinite)) instrumentResults.push(...scoreDomain({ ...domain, questions }, addFlag));
         }
         if (domain.directForm) {
-            const values = domain.questions.map(q => state.responses[domain.id + ':' + q.id]);
-            if (values.length && values.every(Number.isFinite)) {
-                const form = CLINICAL_DATA.scales[domain.id];
-                appendFormResults(domain.id, instrumentResults);
-                if (form.contextFields) {
-                    for (const field of form.contextFields) {
-                        const value = state.formContext[form.id + ':' + field.id];
-                        if (value?.length) instrumentResults.push({ name: field.label || form.name,
-                            score: Array.isArray(value) ? value.join(', ') : value, severity: 'Clinician-entered context' });
-                    }
-                }
-                if (form.durationOptions) {
-                    const durations = domain.questions.flatMap((q, i) => {
-                        const duration = state.formContext[domain.id + ':' + q.id];
-                        return values[i] > 1 && duration ? ['Item ' + (i + 1) + ': ' + duration] : [];
-                    });
-                    if (durations.length) instrumentResults.push({ name: form.name, score: 'Duration', severity: durations.join('; ') });
-                }
-            }
+            appendFormResults(domain.id, instrumentResults);
             return;
         }
 
@@ -147,12 +149,16 @@ function computeResults() {
                 chosen.filter(id => domain.forms.includes(id)).forEach(id => appendFormResults(id, instrumentResults));
                 return;
             }
-            if (domain.baseInstrument && chosen.includes('base') && !OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) {
+            if ((domain.baseInstrument || domain.originalLabel) && chosen.includes('base') && !OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) {
                 const baseQuestions = domain.questions.filter(q => !q.scaleId);
                 if (baseQuestions.length && baseQuestions.every(q => Number.isFinite(state.responses[domain.id + ':' + q.id])))
                     instrumentResults.push(...scoreDomain({ ...domain, questions: baseQuestions }, addFlag));
             }
             chosen.filter(id => domain.forms.includes(id)).forEach(id => appendFormResults(id, instrumentResults));
+            if (!OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) {
+                chosen.filter(id => !domain.forms.includes(id) && domain.questions.some(q => q.scaleId === id))
+                    .forEach(id => appendFormResults(id, instrumentResults));
+            }
             if (!OPTIONAL_TABLE_ROUTES.includes(domain.instrument)) return;
         }
 
@@ -168,7 +174,6 @@ function computeResults() {
         if (domain.instrument === 'auto:minioptional') {
             domain.questions.forEach(q => {
                 if (!q.scaleId) return;
-                if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
                 const s = CLINICAL_DATA.scales[q.scaleId];
                 if (!s) return;
                 instrumentResults.push((s.id === 'mini_disability' ? scoreDisability : scoreCrossCutting)(s));
@@ -182,7 +187,6 @@ function computeResults() {
         if (domain.instrument === 'auto:pdscreen') {
             domain.questions.forEach(q => {
                 if (!q.scaleId) return;
-                if ((state.responses[domain.id + ':' + q.id] || 0) < 1) return;
                 const s = CLINICAL_DATA.scales[q.scaleId];
                 if (!s || !s.keyedScoring) return;
                 if (s.keying === 'ipde') instrumentResults.push(scoreIpde(s, addFlag));
@@ -246,24 +250,12 @@ function computeResults() {
             return;
         }
 
-        // Bipolar signs & symptoms (BISS) on the mood domain: the nine PHQ-9
-        // items keep their usual raw-sum scoring, and every BISS attached to an
-        // endorsed screen-in item is scored as a dimensional severity profile.
-        if (domain.instrument === 'auto:bipolartable' && domain.baseInstrument && !Array.isArray(state.scaleChoices.get(domain.id))) {
-            deployedScreenInstruments(domain, () => true).forEach(({ scale }) => {
-                if (scale.id === 'biss') instrumentResults.push(scoreBiss(scale, addFlag));
-            });
-            instrumentResults.push(scoreDomain(domain, addFlag));
-            return;
-        }
-        if (domain.instrument === 'auto:bipolartable' && domain.baseInstrument) {
-            const chosen = domain.selectedForms || [];
-            if (chosen.includes('biss')) deployedScreenInstruments(domain, scale => scale.id === 'biss')
-                .forEach(({ scale }) => instrumentResults.push(scoreBiss(scale, addFlag)));
-            if (chosen.includes('base') || !state.scaleChoices.has(domain.id)) {
-                const baseQuestions = domain.questions.filter(q => !q.scaleId);
-                if (baseQuestions.length) instrumentResults.push(...[scoreDomain({ ...domain, questions: baseQuestions }, addFlag)]);
-            }
+        // Bipolar symptom tables are opt-in. Score BISS once when it is among
+        // the explicitly selected scales for this topic.
+        if (domain.instrument === 'auto:bipolartable') {
+            if ((domain.selectedForms || []).includes('biss'))
+                deployedScreenInstruments(domain, scale => scale.id === 'biss')
+                    .forEach(({ scale }) => instrumentResults.push(scoreBiss(scale, addFlag)));
             return;
         }
 

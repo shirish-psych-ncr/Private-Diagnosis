@@ -1,0 +1,14 @@
+{
+  "id": "general_distress",
+  "name": {
+    "en": "General emotional distress",
+    "hi": "सामान्य भावनात्मक कष्ट"
+  },
+  "tier": 1,
+  "questions": [],
+  "forms": [
+    "dass21",
+    "hads",
+    "k10"
+  ]
+}

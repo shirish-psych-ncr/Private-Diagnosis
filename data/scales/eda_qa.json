@@ -1,0 +1,214 @@
+{
+  "id": "eda_qa",
+  "name": "Extreme Demand Avoidance Questionnaire – Adult (EDA-QA)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Extreme Demand Avoidance Questionnaire – Adult (user-supplied reproduction text)",
+  "ageGroups": [
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Rate behaviour during the last six months. Scores are descriptive and not diagnostic.",
+  "timeframe": "Rate behaviour during the last six months. Scores are descriptive and not diagnostic.",
+  "responseMin": 1,
+  "responseMax": 4,
+  "parts": [
+    {
+      "name": "Adult demand-avoidance traits",
+      "questions": [
+        {
+          "id": "eda_qa_1",
+          "itemNumber": "1",
+          "text": "I obsessively resist and avoid ordinary demands and requests"
+        },
+        {
+          "id": "eda_qa_2",
+          "itemNumber": "2",
+          "text": "I complain about illness or physical incapacity to avoid a request or demand"
+        },
+        {
+          "id": "eda_qa_3",
+          "itemNumber": "3",
+          "text": "I am driven by the need to be in charge"
+        },
+        {
+          "id": "eda_qa_4",
+          "itemNumber": "4",
+          "text": "I find everyday pressures (e.g., having to go on a routine trip/visit dentist) intolerably stressful"
+        },
+        {
+          "id": "eda_qa_5",
+          "itemNumber": "5",
+          "text": "I tell other people how they should behave, but do not feel these rules apply to me"
+        },
+        {
+          "id": "eda_qa_6",
+          "itemNumber": "6",
+          "text": "I mimic other people's mannerisms and styles (e.g., use phrases adopted from other people to express myself to others)"
+        },
+        {
+          "id": "eda_qa_7",
+          "itemNumber": "7",
+          "text": "I have difficulty complying with demands and requests from others unless they are carefully presented"
+        },
+        {
+          "id": "eda_qa_8",
+          "itemNumber": "8",
+          "text": "I take on roles or characters (from TV/real life) and 'act them out'"
+        },
+        {
+          "id": "eda_qa_9",
+          "itemNumber": "9",
+          "text": "I show little shame or embarrassment (e.g., I might throw a tantrum in public and not be embarrassed)"
+        },
+        {
+          "id": "eda_qa_10",
+          "itemNumber": "10",
+          "text": "I invent fantasy worlds or games and act them out"
+        },
+        {
+          "id": "eda_qa_11",
+          "itemNumber": "11",
+          "text": "I am good at getting round others and making them do as I want"
+        },
+        {
+          "id": "eda_qa_12",
+          "itemNumber": "12",
+          "text": "I am unaware or indifferent to the differences between myself and figures of authority (e.g., parents, teachers, and police)"
+        },
+        {
+          "id": "eda_qa_13",
+          "itemNumber": "13",
+          "text": "I will still sometimes have a 'meltdown' (e.g., scream, tantrum, hit, or kick) if I feel pressurised to do something"
+        },
+        {
+          "id": "eda_qa_14",
+          "itemNumber": "14",
+          "text": "I like to be told I have done a good job (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "eda_qa_15",
+          "itemNumber": "15",
+          "text": "I have a very rapidly changing mood (e.g., I can switch from affectionate to angry in an instant)"
+        },
+        {
+          "id": "eda_qa_16",
+          "itemNumber": "16",
+          "text": "I know what to do or say to upset particular people"
+        },
+        {
+          "id": "eda_qa_17",
+          "itemNumber": "17",
+          "text": "I blame or target a particular person/persons"
+        },
+        {
+          "id": "eda_qa_18",
+          "itemNumber": "18",
+          "text": "I deny things I have done, even if I am caught \"red handed\""
+        },
+        {
+          "id": "eda_qa_19",
+          "itemNumber": "19",
+          "text": "I can be distracted (preoccupied) 'from within' (i.e., absorbed in my own world)"
+        },
+        {
+          "id": "eda_qa_20",
+          "itemNumber": "20",
+          "text": "I make an effort to maintain my reputation with other people (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "eda_qa_21",
+          "itemNumber": "21",
+          "text": "I sometimes use outrageous or shocking behaviour to get out of doing something"
+        },
+        {
+          "id": "eda_qa_22",
+          "itemNumber": "22",
+          "text": "I have periods when I have extremely emotional responses (e.g., crying/giggling, becoming furious) to what others would think small events"
+        },
+        {
+          "id": "eda_qa_23",
+          "itemNumber": "23",
+          "text": "I ensure any social interaction is on my own terms"
+        },
+        {
+          "id": "eda_qa_24",
+          "itemNumber": "24",
+          "text": "I prefer to interact with others in an adopted role, or communicate through props or objects"
+        },
+        {
+          "id": "eda_qa_25",
+          "itemNumber": "25",
+          "text": "I seek to quibble and change rules set by others"
+        },
+        {
+          "id": "eda_qa_26",
+          "itemNumber": "26",
+          "text": "I can be passive and difficult to engage"
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "EDA-QA total",
+        "ids": [
+          "eda_qa_1",
+          "eda_qa_2",
+          "eda_qa_3",
+          "eda_qa_4",
+          "eda_qa_5",
+          "eda_qa_6",
+          "eda_qa_7",
+          "eda_qa_8",
+          "eda_qa_9",
+          "eda_qa_10",
+          "eda_qa_11",
+          "eda_qa_12",
+          "eda_qa_13",
+          "eda_qa_14",
+          "eda_qa_15",
+          "eda_qa_16",
+          "eda_qa_17",
+          "eda_qa_18",
+          "eda_qa_19",
+          "eda_qa_20",
+          "eda_qa_21",
+          "eda_qa_22",
+          "eda_qa_23",
+          "eda_qa_24",
+          "eda_qa_25",
+          "eda_qa_26"
+        ],
+        "reverse": [
+          "eda_qa_14",
+          "eda_qa_20"
+        ],
+        "max": 104
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Not true"
+    },
+    {
+      "v": 2,
+      "label": "Somewhat true"
+    },
+    {
+      "v": 3,
+      "label": "Mostly true"
+    },
+    {
+      "v": 4,
+      "label": "Very true"
+    }
+  ]
+}

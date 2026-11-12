@@ -1,0 +1,13 @@
+{
+  "id": "panic",
+  "name": {
+    "en": "Panic and agoraphobic symptoms",
+    "hi": "पैनिक एवं एगोराफोबिक लक्षण"
+  },
+  "tier": 1,
+  "questions": [],
+  "forms": [
+    "pdss_sr",
+    "mia"
+  ]
+}

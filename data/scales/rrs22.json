@@ -1,0 +1,208 @@
+{
+  "id": "rrs22",
+  "name": "Ruminative Responses Scale (RRS-22)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Ruminative Responses Scale (user-supplied reproduction text)",
+  "ageGroups": [
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "When feeling down, sad, or depressed, rate how often each response generally occurs.",
+  "timeframe": "When feeling down, sad, or depressed, rate how often each response generally occurs.",
+  "responseMin": 1,
+  "responseMax": 4,
+  "parts": [
+    {
+      "name": "Responses when feeling down",
+      "questions": [
+        {
+          "id": "rrs22_1",
+          "itemNumber": "1",
+          "text": "Think about how alone you feel"
+        },
+        {
+          "id": "rrs22_2",
+          "itemNumber": "2",
+          "text": "Think \"I won't be able to do my job if I don't snap out of this\""
+        },
+        {
+          "id": "rrs22_3",
+          "itemNumber": "3",
+          "text": "Think about your feelings of fatigue and achiness"
+        },
+        {
+          "id": "rrs22_4",
+          "itemNumber": "4",
+          "text": "Think about how hard it is to concentrate"
+        },
+        {
+          "id": "rrs22_5",
+          "itemNumber": "5",
+          "text": "Think \"What am I doing to deserve this?\" (Brooding)"
+        },
+        {
+          "id": "rrs22_6",
+          "itemNumber": "6",
+          "text": "Think about how passive and unmotivated you feel"
+        },
+        {
+          "id": "rrs22_7",
+          "itemNumber": "7",
+          "text": "Analyze recent events to try to understand why you are depressed (Reflection)"
+        },
+        {
+          "id": "rrs22_8",
+          "itemNumber": "8",
+          "text": "Think about how you don't seem to feel anything anymore"
+        },
+        {
+          "id": "rrs22_9",
+          "itemNumber": "9",
+          "text": "Think \"Why can't I get going?\""
+        },
+        {
+          "id": "rrs22_10",
+          "itemNumber": "10",
+          "text": "Think \"Why do I always react this way?\" (Brooding)"
+        },
+        {
+          "id": "rrs22_11",
+          "itemNumber": "11",
+          "text": "Go away by yourself and think about why you feel this way (Reflection)"
+        },
+        {
+          "id": "rrs22_12",
+          "itemNumber": "12",
+          "text": "Write down what you are thinking about and analyze it (Reflection)"
+        },
+        {
+          "id": "rrs22_13",
+          "itemNumber": "13",
+          "text": "Think about a recent situation, wishing it had gone better (Brooding)"
+        },
+        {
+          "id": "rrs22_14",
+          "itemNumber": "14",
+          "text": "Think \"I won't be able to concentrate if I keep feeling this way.\""
+        },
+        {
+          "id": "rrs22_15",
+          "itemNumber": "15",
+          "text": "Think \"Why do I have problems other people don't have?\" (Brooding)"
+        },
+        {
+          "id": "rrs22_16",
+          "itemNumber": "16",
+          "text": "Think \"Why can't I handle things better?\" (Brooding)"
+        },
+        {
+          "id": "rrs22_17",
+          "itemNumber": "17",
+          "text": "Think about how sad you feel"
+        },
+        {
+          "id": "rrs22_18",
+          "itemNumber": "18",
+          "text": "Think about all your shortcomings, failings, faults, mistakes"
+        },
+        {
+          "id": "rrs22_19",
+          "itemNumber": "19",
+          "text": "Think about how you don't feel up to doing anything"
+        },
+        {
+          "id": "rrs22_20",
+          "itemNumber": "20",
+          "text": "Analyze your personality to try to understand why you are depressed (Reflection)"
+        },
+        {
+          "id": "rrs22_21",
+          "itemNumber": "21",
+          "text": "Go someplace alone to think about your feelings (Reflection)"
+        },
+        {
+          "id": "rrs22_22",
+          "itemNumber": "22",
+          "text": "Think about how angry you are with yourself"
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "RRS total",
+        "ids": [
+          "rrs22_1",
+          "rrs22_2",
+          "rrs22_3",
+          "rrs22_4",
+          "rrs22_5",
+          "rrs22_6",
+          "rrs22_7",
+          "rrs22_8",
+          "rrs22_9",
+          "rrs22_10",
+          "rrs22_11",
+          "rrs22_12",
+          "rrs22_13",
+          "rrs22_14",
+          "rrs22_15",
+          "rrs22_16",
+          "rrs22_17",
+          "rrs22_18",
+          "rrs22_19",
+          "rrs22_20",
+          "rrs22_21",
+          "rrs22_22"
+        ],
+        "max": 88
+      },
+      {
+        "name": "Brooding (mean)",
+        "ids": [
+          "rrs22_5",
+          "rrs22_10",
+          "rrs22_13",
+          "rrs22_15",
+          "rrs22_16"
+        ],
+        "average": true,
+        "max": 4
+      },
+      {
+        "name": "Reflection (mean)",
+        "ids": [
+          "rrs22_7",
+          "rrs22_11",
+          "rrs22_12",
+          "rrs22_20",
+          "rrs22_21"
+        ],
+        "average": true,
+        "max": 4
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Almost never"
+    },
+    {
+      "v": 2,
+      "label": "Sometimes"
+    },
+    {
+      "v": 3,
+      "label": "Often"
+    },
+    {
+      "v": 4,
+      "label": "Almost always"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "self_injury",
+  "name": {
+    "en": "Self-injury urges",
+    "hi": "स्व-चोट के आवेग"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "abusi"
+  ],
+  "description": {
+    "en": "A focused measure of non-suicidal self-injury urges. Assess suicidal intent separately when clinically indicated.",
+    "hi": "A focused measure of non-suicidal self-injury urges. Assess suicidal intent separately when clinically indicated."
+  }
+}

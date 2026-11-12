@@ -1,0 +1,17 @@
+{
+  "id": "feeding",
+  "name": {
+    "en": "Restrictive eating / ARFID concerns",
+    "hi": "सीमित आहार / ARFID चिंताएँ"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "pardi_arq",
+    "pardi_arq_self"
+  ],
+  "description": {
+    "en": "Choose the informant form for children aged 4+ or the self-report form for respondents aged 14+. A positive screen indicates possible ARFID and requires clinical assessment.",
+    "hi": "4 वर्ष और उससे अधिक आयु के बच्चों के लिए सूचनादाता फ़ॉर्म या 14 वर्ष और उससे अधिक आयु के उत्तरदाताओं के लिए स्व-रिपोर्ट फ़ॉर्म चुनें। सकारात्मक स्क्रीन संभावित ARFID दर्शाती है और नैदानिक मूल्यांकन आवश्यक है।"
+  }
+}

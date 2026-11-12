@@ -27,6 +27,9 @@ function applyLanguage(lang) {
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
     });
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+        el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria-label')));
+    });
     const progressCaption = document.getElementById('progress-caption');
     if (progressCaption) {
         const stageKeys = ['stage.consent', 'stage.context', 'stage.domains', 'stage.scales', 'stage.results'];

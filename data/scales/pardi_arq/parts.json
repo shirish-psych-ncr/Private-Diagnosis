@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Anthropometric information",
+    "questions": [
+      {
+        "id": "pardi_arq_1",
+        "itemNumber": "1",
+        "text": "Child's height (enter the value in the selected unit; for feet and inches, include both values).",
+        "inputType": "text",
+        "nonScored": true,
+        "criterionNote": "Enter the height in the selected unit (for example, 5 ft 5 in)."
+      },
+      {
+        "id": "pardi_arq_2",
+        "itemNumber": "2",
+        "text": "Child weight (enter the value in the selected unit).",
+        "inputType": "number",
+        "min": 0,
+        "max": 300,
+        "step": 0.1,
+        "nonScored": true,
+        "criterionNote": "Enter the weight in the selected unit."
+      }
+    ]
+  },
+  {
+    "name": "ARFID screen and clinical follow-up",
+    "questions": [
+      {
+        "id": "pardi_arq_3",
+        "itemNumber": "3",
+        "text": "Do you think your child has a problem with eating, involving avoidance or restriction of foods or their eating overall?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_4",
+        "itemNumber": "4",
+        "text": "Have other people (for example, doctors, family members, significant others) said that your child has a problem with eating, involving avoidance or restriction of foods or their eating overall?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_5",
+        "itemNumber": "5",
+        "text": "Have your child's eating habits led to difficulty maintaining a sufficient weight or, if they are still growing, difficulty gaining enough weight to keep pace with their growth?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_6",
+        "itemNumber": "6",
+        "text": "Have your child's eating habits led to them losing weight (in other words, if they have lost weight, this is because of avoidance or restriction and not because of a medical illness, or other reason)?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_7",
+        "itemNumber": "7",
+        "text": "If yes to Q6: How much weight have they lost in the past 3 months?",
+        "inputType": "number",
+        "min": 0,
+        "max": 300,
+        "step": 0.1,
+        "nonScored": true,
+        "requires": "6",
+        "requiresPositive": true
+      },
+      {
+        "id": "pardi_arq_8",
+        "itemNumber": "8",
+        "text": "Have others (for example, doctors, family members) been concerned about your child's weight loss, or been concerned that they are having difficulty gaining enough weight to grow, or having difficulty maintaining their weight due to their eating habits?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_9",
+        "itemNumber": "9",
+        "text": "Have others (for example, doctors, family members) been concerned that your child is not growing taller as they should due to their eating habits?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ],
+        "criterionNote": "If the child has finished growing, record that in the Growth status field above."
+      },
+      {
+        "id": "pardi_arq_10",
+        "itemNumber": "10",
+        "text": "Have you ever been told by any health professional that due to their eating habits your child is not growing as expected, or that their height was less than it should be?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_11",
+        "itemNumber": "11",
+        "text": "Over the past month, has any health professional said that your child has a nutritional deficiency due to their eating habits (for example, low iron, low vitamin B12, low vitamin C)?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_12",
+        "itemNumber": "12",
+        "text": "Over the past month, has a healthcare professional prescribed special supplements (for example, pills, capsules, powders, or drinks containing vitamins and/or minerals and other micronutrients) specifically to help with your child's nutrition?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_13",
+        "itemNumber": "13",
+        "text": "If yes to Q12: What has been prescribed and how much does your child take each day?",
+        "inputType": "text",
+        "nonScored": true,
+        "requires": "12",
+        "requiresPositive": false
+      },
+      {
+        "id": "pardi_arq_14",
+        "itemNumber": "14",
+        "text": "Over the past month, has a healthcare professional prescribed special supplements (for example, high-calorie drinks or 'shots', or dessert-style high-calorie supplements) specifically to help your child maintain or gain weight?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_15",
+        "itemNumber": "15",
+        "text": "If yes to Q14: What has been prescribed and how much does your child take each day?",
+        "inputType": "text",
+        "nonScored": true,
+        "requires": "14",
+        "requiresPositive": false
+      },
+      {
+        "id": "pardi_arq_16",
+        "itemNumber": "16",
+        "text": "Is your child currently receiving any tube feeding (receiving food or fluid via a tube in their nose or into their stomach)?",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pardi_arq_17",
+        "itemNumber": "17",
+        "text": "If yes to Q16: What is the name of the food or fluid product taken via the tube and how much does your child take each day?",
+        "inputType": "text",
+        "nonScored": true,
+        "requires": "16",
+        "requiresPositive": false
+      },
+      {
+        "id": "pardi_arq_18",
+        "itemNumber": "18",
+        "text": "Does your child's eating cause them difficulties in daily functioning - that is, in how they are able to go about things each day? This might be at school/college/work or when at home.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$file": "data/scales/pardi_arq/parts/003-3.json"
+  }
+]

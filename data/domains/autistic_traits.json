@@ -1,0 +1,16 @@
+{
+  "id": "autistic_traits",
+  "name": {
+    "en": "Autistic traits",
+    "hi": "ऑटिस्टिक विशेषताएँ"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "cati"
+  ],
+  "description": {
+    "en": "A self-report profile of autistic traits. It is not a diagnostic assessment.",
+    "hi": "A self-report profile of autistic traits. It is not a diagnostic assessment."
+  }
+}

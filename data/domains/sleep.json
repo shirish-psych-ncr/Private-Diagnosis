@@ -21,7 +21,8 @@
   "forms": [
     "psqi",
     "ess",
-    "sci"
+    "sci",
+    "ais"
   ],
   "baseInstrument": "Insomnia Severity Index (ISI)"
 }

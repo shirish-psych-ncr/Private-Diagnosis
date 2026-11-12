@@ -1,0 +1,12 @@
+{
+  "id": "body_dysmorphic",
+  "name": {
+    "en": "Body dysmorphic symptoms",
+    "hi": "शारीरिक छवि संबंधी लक्षण"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "bdd_ybocs"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "worry",
+  "name": {
+    "en": "Worry and uncertainty",
+    "hi": "चिंता एवं अनिश्चितता"
+  },
+  "tier": 1,
+  "questions": [],
+  "forms": [
+    "pswq",
+    "mcq30",
+    "tcq",
+    "ius"
+  ]
+}

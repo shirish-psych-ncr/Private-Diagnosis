@@ -71,7 +71,9 @@
                                 <option value="pediatric" data-i18n="context.age.pediatric">Child (under 8)</option>
                                 <option value="schoolage" data-i18n="context.age.schoolage">Child (8–11)</option>
                                 <option value="adolescent" data-i18n="context.age.adolescent">Adolescent (12-17)</option>
-                                <option value="adult" data-i18n="context.age.adult">Adult (18-64)</option>
+                                <option value="youngadult" data-i18n="context.age.youngadult">Young adult (18-21)</option>
+                                <option value="adult" data-i18n="context.age.adult">Adult (22-39)</option>
+                                <option value="midlife" data-i18n="context.age.midlife">Midlife adult (40-64)</option>
                                 <option value="older" data-i18n="context.age.older">Older Adult (65+)</option>
                             </select>
                             <p id="context-age-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="context.age.error">Choose an age group.</p>
@@ -98,6 +100,7 @@
                 <section id="stage-2" class="stage" aria-labelledby="domains-heading">
                     <h2 id="domains-heading" data-i18n="domains.title">Choose your topics</h2>
                     <p class="subtitle" data-i18n="domains.subtitle">Select all that apply.</p>
+                    <input id="domain-search" type="search" class="domain-search" data-i18n-placeholder="domains.search" data-i18n-aria-label="domains.search" autocomplete="off">
                     <fieldset id="domain-list" aria-labelledby="domains-heading" class="domain-grid"></fieldset>
                     <p id="domains-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="domains.error">Choose at least one topic.</p>
                     <button class="btn-secondary" type="button" data-back="1" data-i18n="nav.back">Back</button>

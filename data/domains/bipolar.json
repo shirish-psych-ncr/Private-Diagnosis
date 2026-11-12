@@ -1,0 +1,48 @@
+{
+  "id": "bipolar",
+  "name": {
+    "en": "Bipolar symptoms and episode monitoring",
+    "hi": "लक्षण एवं प्रकरण निगरानी"
+  },
+  "tier": 2,
+  "questions": [
+    {
+      "id": "mood_biss_1",
+      "text": {
+        "en": "Has the person had a distinct period of abnormally elevated, expansive or irritable mood, or is there a clear history of hypomanic/manic episodes? (Deploys the BISS 7-day severity profile below.)",
+        "hi": "क्या व्यक्ति का कोई सुस्पष्ट काल अत्युच्च/प्रसारित/कोपमय मूड का रहा है, या हाइपोमैनिक/मैनिक अवस्थाओं का स्पष्ट इतिहास है? (नीचे दी BISS 7-दिवसीय तीव्रता-मापनी लागू होती है।)"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "biss",
+      "disorders": [
+        "bipolar_i_disorder",
+        "bipolar_ii_disorder",
+        "other_specified_bipolar"
+      ]
+    },
+    {
+      "id": "mood_biss_2",
+      "text": {
+        "en": "Is a clinician-rated 7-day profile of depressive AND manic symptoms needed to stage the current episode or monitor treatment response?",
+        "hi": "क्या वर्तमान अवस्था के चरण-निर्धारण या चिकित्सा-प्रतिक्रिया निगरानी हेतु चिकित्सक-रेटित अवसादी एवं उन्मादी लक्षणों का 7-दिवसीय प्रोफाइल आवश्यक है?"
+      },
+      "sharedScale": "yesno",
+      "scaleId": "biss",
+      "disorders": [
+        "bipolar_depressive",
+        "other_specified_bipolar"
+      ]
+    }
+  ],
+  "forms": [
+    "mood_mdq",
+    "asrm",
+    "hcl32",
+    "ymrs"
+  ],
+  "description": {
+    "en": "Bipolar screening and episode-severity measures. Choose each measure explicitly; a positive screen is not a diagnosis.",
+    "hi": "Bipolar screening and episode-severity measures. Choose each measure explicitly; a positive screen is not a diagnosis."
+  },
+  "instrument": "auto:bipolartable"
+}

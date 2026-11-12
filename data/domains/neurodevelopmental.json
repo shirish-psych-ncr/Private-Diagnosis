@@ -24,7 +24,7 @@
   ],
   "baseInstrument": "ASRS-v1.1 Self-Report",
   "forms": [
-    "asrs_o"
-  ],
-  "defaultForm": "base"
+    "asrs_o",
+    "snap_iv"
+  ]
 }

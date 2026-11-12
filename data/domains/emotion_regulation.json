@@ -1,0 +1,10 @@
+{
+  "id": "emotion_regulation",
+  "name": {
+    "en": "Emotion regulation and distress tolerance",
+    "hi": "भावना-नियमन एवं तनाव-सहनशीलता"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": ["ders", "ees", "dts"]
+}

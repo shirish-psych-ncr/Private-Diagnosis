@@ -1,0 +1,215 @@
+{
+  "id": "abusi",
+  "name": "Alexian Brothers Urge to Self-Injure Scale (ABUSI)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Alexian Brothers Urge to Self-Injure Scale (user-supplied reproduction text)",
+  "ageGroups": [
+    "adolescent",
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Past week. This measure concerns urges to self-injure and does not determine suicidal intent.",
+  "timeframe": "Past week. This measure concerns urges to self-injure and does not determine suicidal intent.",
+  "responseMin": 0,
+  "responseMax": 6,
+  "parts": [
+    {
+      "name": "Urges to self-injure",
+      "questions": [
+        {
+          "id": "abusi_1",
+          "itemNumber": "1",
+          "text": "How often have you thought about injuring yourself or about how you want to injure yourself?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never / 0 times in the last week"
+            },
+            {
+              "v": 1,
+              "label": "Rarely / 1–2 times in the last week"
+            },
+            {
+              "v": 2,
+              "label": "Occasionally / 3–4 times in the last week"
+            },
+            {
+              "v": 3,
+              "label": "Sometimes / 5–10 times in the last week, OR 1–2 times a day"
+            },
+            {
+              "v": 4,
+              "label": "Often / 11–20 times in the last week, OR 2–3 times a day"
+            },
+            {
+              "v": 5,
+              "label": "Most of the time / 20–40 times in the last week, OR 3–5 times a day"
+            },
+            {
+              "v": 6,
+              "label": "Nearly all of the time / More than 40 times in the last week, OR more than 6 times a day"
+            }
+          ]
+        },
+        {
+          "id": "abusi_2",
+          "itemNumber": "2",
+          "text": "At the most severe point, how strong was your urge to self-injure in the last week?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "None at all"
+            },
+            {
+              "v": 1,
+              "label": "Slight, that is, a very mild urge"
+            },
+            {
+              "v": 2,
+              "label": "Mild urge"
+            },
+            {
+              "v": 3,
+              "label": "Moderate urge"
+            },
+            {
+              "v": 4,
+              "label": "Strong urge, but easily controlled"
+            },
+            {
+              "v": 5,
+              "label": "Strong urge, but difficult to control"
+            },
+            {
+              "v": 6,
+              "label": "Strong urge and would have self-injured if able to"
+            }
+          ]
+        },
+        {
+          "id": "abusi_3",
+          "itemNumber": "3",
+          "text": "How much time have you spent thinking about injuring yourself or about how you want to injure yourself?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "None"
+            },
+            {
+              "v": 1,
+              "label": "Less than 20 min"
+            },
+            {
+              "v": 2,
+              "label": "21–45 min"
+            },
+            {
+              "v": 3,
+              "label": "46–90 min"
+            },
+            {
+              "v": 4,
+              "label": "90 min to 3 hrs"
+            },
+            {
+              "v": 5,
+              "label": "3–6 hrs"
+            },
+            {
+              "v": 6,
+              "label": "More than 6 hrs"
+            }
+          ]
+        },
+        {
+          "id": "abusi_4",
+          "itemNumber": "4",
+          "text": "How difficult was it to resist injuring yourself in the last week?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Not difficult at all"
+            },
+            {
+              "v": 1,
+              "label": "Very mildly difficult"
+            },
+            {
+              "v": 2,
+              "label": "Mildly difficult"
+            },
+            {
+              "v": 3,
+              "label": "Moderately difficult"
+            },
+            {
+              "v": 4,
+              "label": "Very difficult"
+            },
+            {
+              "v": 5,
+              "label": "Extremely difficult"
+            },
+            {
+              "v": 6,
+              "label": "Was not able to resist"
+            }
+          ]
+        },
+        {
+          "id": "abusi_5",
+          "itemNumber": "5",
+          "text": "Keeping in mind your responses to the previous questions, please rate your overall average urge or desire to injure yourself in the last week.",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never thought about it and never had the urge to self-injure"
+            },
+            {
+              "v": 1,
+              "label": "Rarely thought about it and rarely had the urge to self-injure"
+            },
+            {
+              "v": 2,
+              "label": "Occasionally thought about it and occasionally had the urge to self-injure"
+            },
+            {
+              "v": 3,
+              "label": "Sometimes thought about it and sometimes had the urge to self-injure"
+            },
+            {
+              "v": 4,
+              "label": "Often thought about it and often had the urge to self-injure"
+            },
+            {
+              "v": 5,
+              "label": "Thought about self-injury most of the time and had the urge to do it most of the time"
+            },
+            {
+              "v": 6,
+              "label": "Thought about self-injury nearly all the time and had the urge to do it nearly all the time"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "ABUSI total",
+        "ids": [
+          "abusi_1",
+          "abusi_2",
+          "abusi_3",
+          "abusi_4",
+          "abusi_5"
+        ],
+        "max": 30
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis."
+}

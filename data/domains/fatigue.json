@@ -1,0 +1,12 @@
+{
+  "id": "fatigue",
+  "name": {
+    "en": "Fatigue",
+    "hi": "थकान"
+  },
+  "tier": 2,
+  "questions": [],
+  "forms": [
+    "fas"
+  ]
+}

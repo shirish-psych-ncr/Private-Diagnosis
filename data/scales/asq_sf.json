@@ -1,0 +1,272 @@
+{
+  "id": "asq_sf",
+  "name": "Attachment Style Questionnaire – Short Form (ASQ-SF)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "sourceInstrument": "Attachment Style Questionnaire – Short Form (user-supplied reproduction text)",
+  "ageGroups": [
+    "adolescent",
+    "youngadult",
+    "adult",
+    "older"
+  ],
+  "directions": "Rate how much each statement reflects how you personally think or feel.",
+  "timeframe": "Rate how much each statement reflects how you personally think or feel.",
+  "responseMin": 1,
+  "responseMax": 6,
+  "parts": [
+    {
+      "name": "Attachment patterns",
+      "questions": [
+        {
+          "id": "asq_sf_1",
+          "itemNumber": "1",
+          "text": "I feel confident that other people will be there for me when I need them"
+        },
+        {
+          "id": "asq_sf_2",
+          "itemNumber": "2",
+          "text": "I prefer to depend on myself rather than other people"
+        },
+        {
+          "id": "asq_sf_3",
+          "itemNumber": "3",
+          "text": "I prefer to keep to myself"
+        },
+        {
+          "id": "asq_sf_4",
+          "itemNumber": "4",
+          "text": "Achieving things is more important than building relationships"
+        },
+        {
+          "id": "asq_sf_5",
+          "itemNumber": "5",
+          "text": "Doing your best is more important than getting on with others"
+        },
+        {
+          "id": "asq_sf_6",
+          "itemNumber": "6",
+          "text": "If you've got a job to do, you should do it no matter who gets hurt"
+        },
+        {
+          "id": "asq_sf_7",
+          "itemNumber": "7",
+          "text": "It's important to me that others like me"
+        },
+        {
+          "id": "asq_sf_8",
+          "itemNumber": "8",
+          "text": "I find it hard to make a decision unless I know what other people think"
+        },
+        {
+          "id": "asq_sf_9",
+          "itemNumber": "9",
+          "text": "My relationships with others are generally superficial"
+        },
+        {
+          "id": "asq_sf_10",
+          "itemNumber": "10",
+          "text": "Sometimes I think I am no good at all"
+        },
+        {
+          "id": "asq_sf_11",
+          "itemNumber": "11",
+          "text": "I find it hard to trust other people"
+        },
+        {
+          "id": "asq_sf_12",
+          "itemNumber": "12",
+          "text": "I find it difficult to depend on others"
+        },
+        {
+          "id": "asq_sf_13",
+          "itemNumber": "13",
+          "text": "I find that others are reluctant to get as close as I would like"
+        },
+        {
+          "id": "asq_sf_14",
+          "itemNumber": "14",
+          "text": "I find it relatively easy to get close to other people"
+        },
+        {
+          "id": "asq_sf_15",
+          "itemNumber": "15",
+          "text": "I find it easy to trust others (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "asq_sf_16",
+          "itemNumber": "16",
+          "text": "I feel comfortable depending on other people (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "asq_sf_17",
+          "itemNumber": "17",
+          "text": "I worry that others won't care about me as much as I care about them"
+        },
+        {
+          "id": "asq_sf_18",
+          "itemNumber": "18",
+          "text": "I worry about people getting too close"
+        },
+        {
+          "id": "asq_sf_19",
+          "itemNumber": "19",
+          "text": "I worry that I won't measure up to other people"
+        },
+        {
+          "id": "asq_sf_20",
+          "itemNumber": "20",
+          "text": "I have mixed feelings about being close to others"
+        },
+        {
+          "id": "asq_sf_21",
+          "itemNumber": "21",
+          "text": "I wonder why people would want to be involved with me"
+        },
+        {
+          "id": "asq_sf_22",
+          "itemNumber": "22",
+          "text": "I worry a lot about my relationships"
+        },
+        {
+          "id": "asq_sf_23",
+          "itemNumber": "23",
+          "text": "I wonder how I would cope without someone to love me"
+        },
+        {
+          "id": "asq_sf_24",
+          "itemNumber": "24",
+          "text": "I feel confident about relating to others"
+        },
+        {
+          "id": "asq_sf_25",
+          "itemNumber": "25",
+          "text": "I often feel left out or alone"
+        },
+        {
+          "id": "asq_sf_26",
+          "itemNumber": "26",
+          "text": "I often worry that I do not really fit in with other people (Reverse Scored)",
+          "reverse": true
+        },
+        {
+          "id": "asq_sf_27",
+          "itemNumber": "27",
+          "text": "Other people have their own problems, so I don't bother them with mine"
+        },
+        {
+          "id": "asq_sf_28",
+          "itemNumber": "28",
+          "text": "If something is bothering me, others are generally aware and concerned"
+        },
+        {
+          "id": "asq_sf_29",
+          "itemNumber": "29",
+          "text": "I am confident that other people will like and respect me"
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "Discomfort with closeness",
+        "ids": [
+          "asq_sf_2",
+          "asq_sf_3",
+          "asq_sf_11",
+          "asq_sf_12",
+          "asq_sf_15",
+          "asq_sf_16",
+          "asq_sf_18",
+          "asq_sf_20",
+          "asq_sf_27"
+        ],
+        "reverse": [
+          "asq_sf_15",
+          "asq_sf_16"
+        ],
+        "max": 54
+      },
+      {
+        "name": "Relationships as secondary",
+        "ids": [
+          "asq_sf_4",
+          "asq_sf_5",
+          "asq_sf_6",
+          "asq_sf_9"
+        ],
+        "reverse": [],
+        "max": 24
+      },
+      {
+        "name": "Preoccupation with relationships",
+        "ids": [
+          "asq_sf_13",
+          "asq_sf_17",
+          "asq_sf_22",
+          "asq_sf_23",
+          "asq_sf_25"
+        ],
+        "reverse": [],
+        "max": 30
+      },
+      {
+        "name": "Need for approval",
+        "ids": [
+          "asq_sf_7",
+          "asq_sf_8",
+          "asq_sf_10",
+          "asq_sf_19",
+          "asq_sf_21"
+        ],
+        "reverse": [],
+        "max": 30
+      },
+      {
+        "name": "Confidence in interpersonal interactions",
+        "ids": [
+          "asq_sf_1",
+          "asq_sf_14",
+          "asq_sf_24",
+          "asq_sf_26",
+          "asq_sf_28",
+          "asq_sf_29"
+        ],
+        "reverse": [
+          "asq_sf_26"
+        ],
+        "max": 36
+      }
+    ]
+  },
+  "interpretationNote": "This form and scoring profile were entered from user-supplied material. Results are screening or descriptive information only and do not establish a diagnosis.",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "v": 2,
+      "label": "Disagree"
+    },
+    {
+      "v": 3,
+      "label": "Slightly disagree"
+    },
+    {
+      "v": 4,
+      "label": "Slightly agree"
+    },
+    {
+      "v": 5,
+      "label": "Agree"
+    },
+    {
+      "v": 6,
+      "label": "Strongly agree"
+    }
+  ]
+}

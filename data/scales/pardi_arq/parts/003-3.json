@@ -1,0 +1,390 @@
+{
+  "name": "Severity and symptom profile",
+  "questions": [
+    {
+      "id": "pardi_arq_19",
+      "itemNumber": "19",
+      "text": "Does your child's eating cause them difficulties in interactions with other people (e.g., disagreements, arguments, difficulty making/sustaining friendships)? (0 = no difficulty, 6 = extremely difficult)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "No difficulty"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Extreme difficulty"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_20",
+      "itemNumber": "20",
+      "text": "Does your child's eating cause them difficulties in social situations (e.g., going out with friends, eating at school, staying away from home)? (0 = no difficulty, 6 = extreme difficulties/avoid all)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "No difficulty"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Extreme difficulty"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_21",
+      "itemNumber": "21",
+      "text": "Over the past month, sensitivity to taste variation putting child off eating/trying new foods? (0 = no negative effect/no sensitivity, 6 = extremely negative effect/refusal/limited foods)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "No effect"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Extreme effect"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_22",
+      "itemNumber": "22",
+      "text": "Over the past month, sensitivity to texture/consistency putting child off eating/trying new foods? (0 = no negative effect/no sensitivity, 6 = extremely negative effect/refusal/limited foods)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "No effect"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Extreme effect"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_23",
+      "itemNumber": "23",
+      "text": "Over the past month, sensitivity to appearance of food putting child off eating/trying new foods? (0 = no negative effect/no sensitivity, 6 = extremely negative effect/refusal/limited foods)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "No effect"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Extreme effect"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_24",
+      "itemNumber": "24",
+      "text": "Over the past month, how often has child forgotten to eat or found it difficult to make time to eat? (0 = never, 6 = always)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "Never"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Always"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_25",
+      "itemNumber": "25",
+      "text": "Over the past month, how often has child appeared to lack enjoyment in food or eating? (0 = never, 6 = always)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "Never"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Always"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_26",
+      "itemNumber": "26",
+      "text": "Over the past month, how often has child indicated fullness before meal finished or stopped eating sooner than others? (0 = never, 6 = always)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "Never"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Always"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_27",
+      "itemNumber": "27",
+      "text": "Over the past month, avoiding/restricting food because afraid something bad might happen (sick, choking, allergic reaction, pain)? (0 = never, 6 = always)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "Never"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Always"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_28",
+      "itemNumber": "28",
+      "text": "Over the past month, avoided eating situations because worried something bad might happen (sick, choking, allergic reaction, pain)? (0 = never, 6 = always)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "Never"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Always"
+        }
+      ]
+    },
+    {
+      "id": "pardi_arq_29",
+      "itemNumber": "29",
+      "text": "Over the past month, expressed physical feelings of panic/anxiety (racing heart, sweaty palms, nausea) when seeing something triggering fear of aversive consequence? (0 = never, 6 = always)",
+      "scale": [
+        {
+          "v": 0,
+          "label": "Never"
+        },
+        {
+          "v": 1,
+          "label": ""
+        },
+        {
+          "v": 2,
+          "label": ""
+        },
+        {
+          "v": 3,
+          "label": ""
+        },
+        {
+          "v": 4,
+          "label": ""
+        },
+        {
+          "v": 5,
+          "label": ""
+        },
+        {
+          "v": 6,
+          "label": "Always"
+        }
+      ]
+    }
+  ]
+}

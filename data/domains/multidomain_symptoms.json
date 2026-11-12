@@ -1,0 +1,14 @@
+{
+  "id": "multidomain_symptoms",
+  "name": {
+    "en": "Comprehensive symptom profile",
+    "hi": "व्यापक लक्षण प्रोफ़ाइल"
+  },
+  "tier": 3,
+  "questions": [],
+  "forms": ["mipsy"],
+  "description": {
+    "en": "Broad self-report profile covering multiple areas. Use when a multidomain overview is indicated; interpret item-level findings in context.",
+    "hi": "अनेक क्षेत्रों को समेटने वाली व्यापक स्व-रिपोर्ट प्रोफ़ाइल। आवश्यकता होने पर उपयोग करें और मदों के निष्कर्षों की संदर्भ में व्याख्या करें।"
+  }
+}
