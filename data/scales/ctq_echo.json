@@ -1,0 +1,51 @@
+{
+  "id": "ctq_echo",
+  "name": "ECHO-wide Childhood Trauma Questionnaire (event history)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "For each item, answer about events before age 18. This ECHO-wide form records event history and is not the scored Childhood Trauma Questionnaire (CTQ). Follow the skip instructions on the source form.",
+  "parts": {
+    "$file": "data/scales/ctq_echo/parts.json"
+  },
+  "version": "ECHO-wide Cohort Version 01.20 (2018-11-30)",
+  "sourceInstrument": "ECHO-wide Cohort Version 01.20, Form CTQ",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "timeframe": "Before age 18",
+  "responseMin": 0,
+  "responseMax": 1,
+  "scoringProfile": {
+    "contextRegister": [
+      "ctq_echo_1_age",
+      "ctq_echo_1_trauma",
+      "ctq_echo_1_confide",
+      "ctq_echo_2_age",
+      "ctq_echo_2_trauma",
+      "ctq_echo_2_confide",
+      "ctq_echo_3_age",
+      "ctq_echo_3_trauma",
+      "ctq_echo_3_confide",
+      "ctq_echo_4_age",
+      "ctq_echo_4_trauma",
+      "ctq_echo_4_confide",
+      "ctq_echo_5_age",
+      "ctq_echo_5_trauma",
+      "ctq_echo_5_confide",
+      "ctq_echo_6_age",
+      "ctq_echo_6_trauma",
+      "ctq_echo_6_confide"
+    ],
+    "itemRegister": [
+      "ctq_echo_1",
+      "ctq_echo_2",
+      "ctq_echo_3",
+      "ctq_echo_4",
+      "ctq_echo_5",
+      "ctq_echo_6"
+    ]
+  },
+  "interpretationNote": "Descriptive event history; no total score or diagnosis is produced.",
+  "attribution": "ECHO-wide Cohort Version 01.20, Childhood Trauma Questionnaire (Form CTQ). Pennebaker & Susman (1988)."
+}

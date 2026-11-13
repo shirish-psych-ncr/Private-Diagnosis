@@ -1,0 +1,6 @@
+{
+  "name": "Past two weeks",
+  "questions": {
+    "$file": "data/scales/whoqol_bref/parts/001-1/questions.json"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "cognitive_screening",
+  "name": {
+    "en": "Cognitive screening",
+    "hi": "संज्ञानात्मक स्क्रीनिंग"
+  },
+  "tier": 3,
+  "description": {
+    "en": "Clinician-administered cognitive screening. Choose and administer an instrument according to language, education, history, and clinical need.",
+    "hi": "चिकित्सक द्वारा संज्ञानात्मक स्क्रीनिंग। भाषा, शिक्षा, इतिहास और नैदानिक आवश्यकता के अनुसार मापनी चुनें और प्रशासित करें।"
+  },
+  "questions": [],
+  "forms": [
+    "ace_iii_indian_english"
+  ]
+}

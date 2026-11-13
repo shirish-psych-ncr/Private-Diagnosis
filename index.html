@@ -62,8 +62,6 @@
                     <p class="subtitle" data-i18n="context.note">Only age group is required. Leave out names and contact details.</p>
                     <p class="privacy-reminder" data-i18n="context.privacy">Only the age group is needed to choose suitable forms. Other details are optional and remain on this device.</p>
                     <form id="context-form">
-                        <details class="optional-context">
-                        <summary data-i18n="context.optional">Add optional notes for your visit</summary>
                         <div class="form-group">
                             <label for="age-group" data-i18n="context.age">Age group</label>
                             <select id="age-group" required>
@@ -78,33 +76,39 @@
                             </select>
                             <p id="context-age-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="context.age.error">Choose an age group.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="visit-reason" data-i18n="context.reason">Reason for visit (optional)</label>
-                            <textarea id="visit-reason" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="medications" data-i18n="context.medications">Current Medications (optional)</label>
-                            <textarea id="medications" rows="2"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="prior-diagnoses" data-i18n="context.prior">Prior Diagnoses (optional)</label>
-                            <textarea id="prior-diagnoses" rows="2"></textarea>
-                        </div>
+                        <details class="optional-context">
+                            <summary data-i18n="context.optional">Add optional notes for your visit</summary>
+                            <div class="form-group">
+                                <label for="visit-reason" data-i18n="context.reason">Reason for visit (optional)</label>
+                                <textarea id="visit-reason" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="medications" data-i18n="context.medications">Current Medications (optional)</label>
+                                <textarea id="medications" rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="prior-diagnoses" data-i18n="context.prior">Prior Diagnoses (optional)</label>
+                                <textarea id="prior-diagnoses" rows="2"></textarea>
+                            </div>
                         </details>
-                        <button class="btn-secondary" type="button" data-back="0" data-i18n="nav.back">Back</button>
-                        <button type="submit" class="btn-primary" data-i18n="context.continue">Continue</button>
+                        <div class="action-buttons">
+                            <button class="btn-secondary" type="button" data-back="0" data-i18n="nav.back">Back</button>
+                            <button type="submit" class="btn-primary" data-i18n="context.continue">Continue</button>
+                        </div>
                     </form>
                 </section>
 
                 <!-- Stage 2: Symptom Clustering -->
                 <section id="stage-2" class="stage" aria-labelledby="domains-heading">
                     <h2 id="domains-heading" data-i18n="domains.title">Choose your topics</h2>
-                    <p class="subtitle" data-i18n="domains.subtitle">Select all that apply.</p>
+                    <p class="subtitle" data-i18n="domains.subtitle">Choose one or more topics, then choose any scales you want under each one.</p>
                     <input id="domain-search" type="search" class="domain-search" data-i18n-placeholder="domains.search" data-i18n-aria-label="domains.search" autocomplete="off">
                     <fieldset id="domain-list" aria-labelledby="domains-heading" class="domain-grid"></fieldset>
                     <p id="domains-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="domains.error">Choose at least one topic.</p>
-                    <button class="btn-secondary" type="button" data-back="1" data-i18n="nav.back">Back</button>
+                    <div class="action-buttons">
+                        <button class="btn-secondary" type="button" data-back="1" data-i18n="nav.back">Back</button>
                         <button id="domains-next" class="btn-primary" type="button" data-i18n="domains.continue">Start questions</button>
+                    </div>
                 </section>
 
                 <!-- Stage 3: Clinical Assessments -->
@@ -117,8 +121,10 @@
                     </div>
                     <div id="scale-container"></div>
                     <p id="scales-error" class="field-error hidden" role="alert" tabindex="-1" data-i18n="scales.incomplete">Answer the remaining required questions.</p>
-                    <button class="btn-secondary" type="button" data-back="2" data-i18n="nav.back">Back</button>
+                    <div class="action-buttons">
+                        <button class="btn-secondary" type="button" data-back="2" data-i18n="nav.back">Back</button>
                         <button id="scales-finish" class="btn-primary" type="button" data-i18n="scales.finish">View summary</button>
+                    </div>
                 </section>
 
                 <!-- Stage 4: Results -->

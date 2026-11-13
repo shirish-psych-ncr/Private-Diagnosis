@@ -1,0 +1,42 @@
+{
+  "id": "whiteley_index",
+  "name": "Whiteley Index (14-item version)",
+  "type": "screening",
+  "sourceInstrument": "Whiteley Index",
+  "version": "14-item dichotomous version in supplied text",
+  "administeredBy": "self-report",
+  "ageGroups": ["adult", "older"],
+  "directions": "Answer Yes or No to each question.",
+  "matrixOptions": [
+    { "v": 0, "label": "No" },
+    { "v": 1, "label": "Yes" }
+  ],
+  "parts": [
+    {
+      "name": "Health concerns",
+      "questions": [
+        { "id": "WI1", "itemNumber": 1, "text": "Do you often worry about the possibility of having a serious illness?" },
+        { "id": "WI2", "itemNumber": 2, "text": "Do you suffer from various aches and pains?" },
+        { "id": "WI3", "itemNumber": 3, "text": "Do you often notice different symptoms occurring in your body?" },
+        { "id": "WI4", "itemNumber": 4, "text": "Are you very worried about your health?" },
+        { "id": "WI5", "itemNumber": 5, "text": "How often do you have symptoms of very serious illnesses?" },
+        { "id": "WI6", "itemNumber": 6, "text": "When you hear about a disease (through the radio, TV, newspapers, or someone you know), does it worry you that you might have it?" },
+        { "id": "WI7", "itemNumber": 7, "reverse": true, "text": "When you are sick, do you get annoyed if someone tells you that you look better?" },
+        { "id": "WI8", "itemNumber": 8, "text": "Do you feel unwell due to many different symptoms?" },
+        { "id": "WI9", "itemNumber": 9, "text": "Do you find it easy to forget about yourself and think about other things?" },
+        { "id": "WI10", "itemNumber": 10, "text": "Is it hard for you to believe the doctor when they tell you there is no reason to worry?" },
+        { "id": "WI11", "itemNumber": 11, "text": "Do you get the feeling that people are not taking your illness seriously enough?" },
+        { "id": "WI12", "itemNumber": 12, "text": "Do you think you care about your health more than most people?" },
+        { "id": "WI13", "itemNumber": 13, "text": "Do you think there is something seriously wrong with your body?" },
+        { "id": "WI14", "itemNumber": 14, "text": "Are you afraid of illness?" }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "method": "yes_count_with_reverse_item",
+    "reverseItems": [7],
+    "sourceReference": "The supplied document assigns one point for Yes responses except item 7, which is assigned to No.",
+    "referenceThreshold": 8
+  },
+  "interpretationNote": "The supplied text describes a score of 8 as consistent with probable hypochondriasis and a reason for further assessment. This result is a screen only, not a diagnosis. The response key follows the supplied version's item-7 reverse instruction; other Whiteley Index versions use different scoring conventions."
+}

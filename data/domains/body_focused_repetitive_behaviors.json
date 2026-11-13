@@ -1,0 +1,11 @@
+{
+  "id": "body_focused_repetitive_behaviors",
+  "name": {
+    "en": "Hair pulling and body-focused repetitive behaviors",
+    "hi": "बाल खींचना और शरीर-केंद्रित दोहराव वाले व्यवहार"
+  },
+  "tier": 2,
+  "description": "A descriptive measure of hair-pulling urges, behavior, control, and distress. It does not diagnose trichotillomania.",
+  "questions": [],
+  "forms": ["mgh_hairpulling"]
+}

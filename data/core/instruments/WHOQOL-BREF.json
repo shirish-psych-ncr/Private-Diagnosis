@@ -1,0 +1,10 @@
+{
+  "name": "WHOQOL-BREF",
+  "description": {
+    "en": "26-item quality-of-life measure across four domains."
+  },
+  "domains": [
+    "quality_of_life"
+  ],
+  "scaleId": "whoqol_bref"
+}

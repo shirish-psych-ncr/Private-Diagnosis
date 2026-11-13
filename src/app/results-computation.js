@@ -24,6 +24,14 @@ import { score as scoreITQ } from './scales/itq.js';
 import { score as scoreRyff } from './scales/ryff.js';
 import { score as scoreMAAS } from './scales/maas.js';
 import { score as scoreCSSRS } from './scales/cssrs.js';
+import { score as scoreMiniScreen5 } from './scales/mini_screen_5.js';
+import { score as scoreLec5 } from './scales/lec5.js';
+import { score as scoreSiRModified } from './scales/si_r_modified.js';
+import { score as scoreMghHairpulling } from './scales/mgh_hairpulling.js';
+import { score as scoreWhodas36 } from './scales/whodas_36.js';
+import { score as scoreWhiteley } from './scales/whiteley_index.js';
+import { score as scoreAceIIIIndianEnglish } from './scales/ace_iii_indian_english.js';
+import { score as scoreCtqEcho } from './scales/ctq_echo.js';
 
 import { score as scoreQids } from './scales/qids_sr16.js';
 import { score as scoreMoodMdq } from './scales/mood_mdq.js';
@@ -53,7 +61,7 @@ import { scoreMeans } from './scoring/item-means.js';
 import { scoreSuppliedProfile } from './scales/supplied-profile.js';
 import { scoreHexacoObserver } from './scales/hexaco_observer.js';
 
-const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS, k10: scoreK10,
+const directScorers = { qids_sr16: scoreQids, mood_mdq: scoreMoodMdq, ugds_gs: scoreUGDS, itq: scoreITQ, ryff: scoreRyff, maas: scoreMAAS, cssrs: scoreCSSRS, mini_screen_5: scoreMiniScreen5, lec5: scoreLec5, si_r_modified: scoreSiRModified, mgh_hairpulling: scoreMghHairpulling, whodas_36: scoreWhodas36, whiteley_index: scoreWhiteley, ace_iii_indian_english: scoreAceIIIIndianEnglish, ctq_echo: scoreCtqEcho, k10: scoreK10,
     hexaco_pi_r_observer: (_values, _questions, form) => scoreHexacoObserver(form),
     desii: (_values, _questions, form) => [scoreDesII(form)],
     mid60: (_values, _questions, form) => [scoreMid60(form)],
@@ -96,7 +104,7 @@ function appendFormResults(id, instrumentResults) {
     const questions = form.parts.flatMap(part => part.questions)
         .filter(q => questionIsApplicable(q, id) && !q.nonScored && !q.tickBox);
     const values = questions.map(q => state.responses[id + ':' + q.id]);
-    if (!values.length || !values.every(Number.isFinite)) {
+    if (!values.length || !values.every(value => Number.isFinite(value) || Array.isArray(value))) {
         appendContext();
         return;
     }

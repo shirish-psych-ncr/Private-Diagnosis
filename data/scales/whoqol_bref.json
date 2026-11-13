@@ -1,0 +1,102 @@
+{
+  "id": "whoqol_bref",
+  "name": "WHOQOL-BREF",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Think about your life during the last two weeks. Read each question and select the response that best describes your experience. Items 3, 4, and 26 are reverse-scored for domain summaries.",
+  "parts": {
+    "$file": "data/scales/whoqol_bref/parts.json"
+  },
+  "sourceInstrument": "WHOQOL-BREF",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "timeframe": "Past two weeks",
+  "matrixOptions": [
+    {
+      "v": 1,
+      "label": "1"
+    },
+    {
+      "v": 2,
+      "label": "2"
+    },
+    {
+      "v": 3,
+      "label": "3"
+    },
+    {
+      "v": 4,
+      "label": "4"
+    },
+    {
+      "v": 5,
+      "label": "5"
+    }
+  ],
+  "responseMin": 1,
+  "responseMax": 5,
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "WHOQOL-BREF · Physical health",
+        "ids": [
+          "whoqol_3",
+          "whoqol_4",
+          "whoqol_10",
+          "whoqol_15",
+          "whoqol_16",
+          "whoqol_17",
+          "whoqol_18"
+        ],
+        "average": true,
+        "max": 5,
+        "severity": "Descriptive domain mean"
+      },
+      {
+        "name": "WHOQOL-BREF · Psychological health",
+        "ids": [
+          "whoqol_5",
+          "whoqol_6",
+          "whoqol_7",
+          "whoqol_11",
+          "whoqol_19",
+          "whoqol_26"
+        ],
+        "average": true,
+        "max": 5,
+        "severity": "Descriptive domain mean"
+      },
+      {
+        "name": "WHOQOL-BREF · Social relationships",
+        "ids": [
+          "whoqol_20",
+          "whoqol_21",
+          "whoqol_22"
+        ],
+        "average": true,
+        "max": 5,
+        "severity": "Descriptive domain mean"
+      },
+      {
+        "name": "WHOQOL-BREF · Environment",
+        "ids": [
+          "whoqol_8",
+          "whoqol_9",
+          "whoqol_12",
+          "whoqol_13",
+          "whoqol_14",
+          "whoqol_23",
+          "whoqol_24",
+          "whoqol_25"
+        ],
+        "average": true,
+        "max": 5,
+        "severity": "Descriptive domain mean"
+      }
+    ]
+  },
+  "attribution": "World Health Organization Quality of Life-BREF (WHOQOL-BREF), user-provided form.",
+  "interpretationNote": "Domain means are descriptive and are not transformed WHOQOL-BREF scores. Follow the WHOQOL-BREF scoring manual for official domain scoring and interpretation."
+}

@@ -1,0 +1,161 @@
+{
+  "id": "J2k1",
+  "text": {
+    "en": "When you cut down on heavy or prolonged use of the drug did you have any of the following withdrawal symptoms? (If yes to the required number for the class, code J2k1 as Yes. This criterion is coded No if the medication is prescribed and used under appropriate medical supervision.)",
+    "hi": "अत्यधिक/दीर्घ सेवन घटाने पर निम्न विषमुक्ति-लक्षण हुए? (वर्ग हेतु अपेक्षित संख्या पर 'हाँ' हो तो J2k1 'हाँ' कोड। यदि दवा उचित चिकित्सीय निगरानी में पर्ची-अनुसार है तो यह 'नहीं' कोड होता है।)"
+  },
+  "classChecklists": [
+    {
+      "class": {
+        "en": "Sedatives, hypnotics or anxiolytics (2 or more withdrawal symptoms)",
+        "hi": "शांतक/निद्राकारक/आतंक-नाशक (2+ लक्षण)"
+      },
+      "minChecks": 2,
+      "items": [
+        {
+          "en": "Increased sweating or increased heart rate",
+          "hi": "अधिक पसीना या बढ़ी हृदय-गति"
+        },
+        {
+          "en": "Hand tremor or 'the shakes'",
+          "hi": "हाथों का कंपन"
+        },
+        {
+          "en": "Trouble sleeping",
+          "hi": "नींद में कठिनाई"
+        },
+        {
+          "en": "Nausea or vomiting",
+          "hi": "जी मिचलाना/उल्टी"
+        },
+        {
+          "en": "Hearing or seeing things other people could not see or hear, or having sensations in your skin for no apparent reason",
+          "hi": "दूसरों को न दिखने/सुनने वाली चीज़ें देखना/सुनना, या बिना कारण त्वचा में अनुभूति"
+        },
+        {
+          "en": "Agitation",
+          "hi": "अधि-चंचलता (एजिटेशन)"
+        },
+        {
+          "en": "Anxiety",
+          "hi": "आतंक/चिंता"
+        },
+        {
+          "en": "Seizures",
+          "hi": "आपात (मिर्गी-जैसे दौरे)"
+        }
+      ]
+    },
+    {
+      "class": {
+        "en": "Opiates (3 or more withdrawal symptoms)",
+        "hi": "ओपिएट (3+ लक्षण)"
+      },
+      "minChecks": 3,
+      "items": [
+        {
+          "en": "Feeling depressed",
+          "hi": "उदासी"
+        },
+        {
+          "en": "Nausea or vomiting",
+          "hi": "जी मिचलाना/उल्टी"
+        },
+        {
+          "en": "Muscle aches",
+          "hi": "मांसपेशियों में दर्द"
+        },
+        {
+          "en": "Runny nose or teary eyes",
+          "hi": "बहती नाक/आँसू"
+        },
+        {
+          "en": "Dilated pupils, goose bumps or hair standing on end or sweating",
+          "hi": "पुतली फैलना, रोमांच, पसीना"
+        },
+        {
+          "en": "Diarrhea",
+          "hi": "दस्त"
+        },
+        {
+          "en": "Yawning",
+          "hi": "जांबई"
+        },
+        {
+          "en": "Hot flashes",
+          "hi": "गर्मी की लहरें"
+        },
+        {
+          "en": "Trouble sleeping",
+          "hi": "नींद में कठिनाई"
+        }
+      ]
+    },
+    {
+      "class": {
+        "en": "Stimulants and cocaine (2 or more withdrawal symptoms)",
+        "hi": "उत्तेजक/कोकीन (2+ लक्षण)"
+      },
+      "minChecks": 2,
+      "items": [
+        {
+          "en": "Fatigue",
+          "hi": "थकान"
+        },
+        {
+          "en": "Vivid or unpleasant dreams",
+          "hi": "तीव्र/अप्रिय सपने"
+        },
+        {
+          "en": "Difficulty sleeping or sleeping too much",
+          "hi": "अनिद्रा/अति-निद्रा"
+        },
+        {
+          "en": "Increased appetite",
+          "hi": "बढ़ी भूख"
+        },
+        {
+          "en": "Feeling or looking physically or mentally slowed down",
+          "hi": "शारीरिक/मानसिक मंदता"
+        }
+      ]
+    },
+    {
+      "class": {
+        "en": "Cannabis (3 or more withdrawal symptoms)",
+        "hi": "कैंनाबिस (3+ लक्षण)"
+      },
+      "minChecks": 3,
+      "items": [
+        {
+          "en": "Irritability, anger or aggression",
+          "hi": "चिड़चिड़ापन/क्रोध/आक्रामकता"
+        },
+        {
+          "en": "Nervousness or anxiety",
+          "hi": "घबराहट/आतंक"
+        },
+        {
+          "en": "Trouble sleeping",
+          "hi": "नींद में कठिनाई"
+        },
+        {
+          "en": "Appetite or weight loss",
+          "hi": "भूख/वज़न हानि"
+        },
+        {
+          "en": "Restlessness",
+          "hi": "अस्थिरता"
+        },
+        {
+          "en": "Feeling depressed",
+          "hi": "उदासी"
+        },
+        {
+          "en": "Significant discomfort from: stomach pain, tremors or 'shakes', sweating, hot flashes, chills, headaches",
+          "hi": "पेट दर्द, कंपन, पसीना, गर्मी/ठंड की लहरें, सिरदर्द से महत्वपूर्ण कष्ट"
+        }
+      ]
+    }
+  ]
+}

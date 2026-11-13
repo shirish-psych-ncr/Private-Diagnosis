@@ -1,0 +1,6 @@
+{
+  "$concat": [
+    "data/scales/isas/parts/002-2/questions/questions-001.json",
+    "data/scales/isas/parts/002-2/questions/questions-002.json"
+  ]
+}

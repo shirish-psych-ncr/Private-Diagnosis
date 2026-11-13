@@ -1,0 +1,10 @@
+{
+  "name": "EPDS",
+  "description": {
+    "en": "10-item perinatal mood screen for the past 7 days; review item 10 directly."
+  },
+  "domains": [
+    "perinatal_wellbeing"
+  ],
+  "scaleId": "epds"
+}

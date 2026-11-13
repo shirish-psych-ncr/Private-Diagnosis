@@ -1,0 +1,6 @@
+{
+  "$concat": [
+    "data/interviews/mini/K/symptoms/questions-001.json",
+    "data/interviews/mini/K/symptoms/questions-002.json"
+  ]
+}

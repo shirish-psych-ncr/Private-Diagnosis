@@ -1,0 +1,10 @@
+{
+  "name": "BES",
+  "description": {
+    "en": "Binge-eating symptom profile; supplied transcription is incomplete at items 6 and 16."
+  },
+  "domains": [
+    "eating"
+  ],
+  "scaleId": "bes"
+}

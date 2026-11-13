@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Section I · Behaviors and context",
+    "questions": [
+      {
+        "id": "isas_beh_1",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Cutting",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_2",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Biting",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_3",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Burning",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_4",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Carving",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_5",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Pinching",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_6",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Severe scratching",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_7",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Banging or hitting self",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_8",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Interfering with wound healing (for example, picking scabs)",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_9",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Rubbing skin against a rough surface",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_10",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Sticking self with needles",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_11",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Pulling hair",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_12",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Swallowing dangerous substances",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      },
+      {
+        "id": "isas_beh_13",
+        "text": "Estimated lifetime number of intentional non-suicidal self-injury episodes: Other self-injury behavior",
+        "inputType": "number",
+        "min": 0,
+        "max": 1000000,
+        "nonScored": true
+      }
+    ]
+  },
+  {
+    "$file": "data/scales/isas/parts/002-2.json"
+  }
+]

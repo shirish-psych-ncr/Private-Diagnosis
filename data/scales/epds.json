@@ -1,0 +1,297 @@
+{
+  "id": "epds",
+  "name": "Edinburgh Postnatal Depression Scale (EPDS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "As you are pregnant or have recently had a baby, select the answer closest to how you have felt in the past 7 days. Complete privately where possible. Review item 10 directly; any endorsement warrants a timely, supportive safety conversation.",
+  "parts": [
+    {
+      "name": "Past 7 days",
+      "questions": [
+        {
+          "id": "epds_1",
+          "text": "I have been able to laugh and see the funny side of things",
+          "scale": [
+            {
+              "v": 0,
+              "label": "As much as I always could"
+            },
+            {
+              "v": 1,
+              "label": "Not quite so much now"
+            },
+            {
+              "v": 2,
+              "label": "Definitely not so much now"
+            },
+            {
+              "v": 3,
+              "label": "Not at all"
+            }
+          ],
+          "reverse": false
+        },
+        {
+          "id": "epds_2",
+          "text": "I have looked forward with enjoyment to things",
+          "scale": [
+            {
+              "v": 0,
+              "label": "As much as I ever did"
+            },
+            {
+              "v": 1,
+              "label": "Rather less than I used to"
+            },
+            {
+              "v": 2,
+              "label": "Definitely less than I used to"
+            },
+            {
+              "v": 3,
+              "label": "Hardly at all"
+            }
+          ],
+          "reverse": false
+        },
+        {
+          "id": "epds_3",
+          "text": "I have blamed myself unnecessarily when things went wrong",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Yes, most of the time"
+            },
+            {
+              "v": 1,
+              "label": "Yes, some of the time"
+            },
+            {
+              "v": 2,
+              "label": "Not very often"
+            },
+            {
+              "v": 3,
+              "label": "No, never"
+            }
+          ],
+          "reverse": true
+        },
+        {
+          "id": "epds_4",
+          "text": "I have been anxious or worried for no good reason",
+          "scale": [
+            {
+              "v": 0,
+              "label": "No, not at all"
+            },
+            {
+              "v": 1,
+              "label": "Hardly ever"
+            },
+            {
+              "v": 2,
+              "label": "Yes, sometimes"
+            },
+            {
+              "v": 3,
+              "label": "Yes, very often"
+            }
+          ],
+          "reverse": false
+        },
+        {
+          "id": "epds_5",
+          "text": "I have felt scared or panicky for no very good reason",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Yes, quite a lot"
+            },
+            {
+              "v": 1,
+              "label": "Yes, sometimes"
+            },
+            {
+              "v": 2,
+              "label": "No, not much"
+            },
+            {
+              "v": 3,
+              "label": "No, not at all"
+            }
+          ],
+          "reverse": true
+        },
+        {
+          "id": "epds_6",
+          "text": "Things have been getting on top of me",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Yes, most of the time I haven't been able to cope at all"
+            },
+            {
+              "v": 1,
+              "label": "Yes, sometimes I haven't been coping as well as usual"
+            },
+            {
+              "v": 2,
+              "label": "No, most of the time I have coped quite well"
+            },
+            {
+              "v": 3,
+              "label": "No, I have been coping as well as ever"
+            }
+          ],
+          "reverse": true
+        },
+        {
+          "id": "epds_7",
+          "text": "I have been so unhappy that I have had difficulty sleeping",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Yes, most of the time"
+            },
+            {
+              "v": 1,
+              "label": "Yes, sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Not very often"
+            },
+            {
+              "v": 3,
+              "label": "No, not at all"
+            }
+          ],
+          "reverse": true
+        },
+        {
+          "id": "epds_8",
+          "text": "I have felt sad or miserable",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Yes, most of the time"
+            },
+            {
+              "v": 1,
+              "label": "Yes, quite often"
+            },
+            {
+              "v": 2,
+              "label": "Not very often"
+            },
+            {
+              "v": 3,
+              "label": "No, not at all"
+            }
+          ],
+          "reverse": true
+        },
+        {
+          "id": "epds_9",
+          "text": "I have been so unhappy that I have been crying",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Yes, most of the time"
+            },
+            {
+              "v": 1,
+              "label": "Yes, quite often"
+            },
+            {
+              "v": 2,
+              "label": "Only occasionally"
+            },
+            {
+              "v": 3,
+              "label": "No, never"
+            }
+          ],
+          "reverse": true
+        },
+        {
+          "id": "epds_10",
+          "text": "The thought of harming myself has occurred to me",
+          "safety": true,
+          "safetyMax": 2,
+          "scale": [
+            {
+              "v": 0,
+              "label": "Yes, quite often"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Hardly ever"
+            },
+            {
+              "v": 3,
+              "label": "Never"
+            }
+          ],
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "version": "10-item EPDS",
+  "sourceInstrument": "Edinburgh Postnatal Depression Scale",
+  "ageGroups": [
+    "adult"
+  ],
+  "timeframe": "Past 7 days",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Response 1"
+    },
+    {
+      "v": 1,
+      "label": "Response 2"
+    },
+    {
+      "v": 2,
+      "label": "Response 3"
+    },
+    {
+      "v": 3,
+      "label": "Response 4"
+    }
+  ],
+  "responseMin": 0,
+  "responseMax": 3,
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "EPDS total",
+        "ids": [
+          "epds_1",
+          "epds_2",
+          "epds_3",
+          "epds_4",
+          "epds_5",
+          "epds_6",
+          "epds_7",
+          "epds_8",
+          "epds_9",
+          "epds_10"
+        ],
+        "max": 30,
+        "cutoff": 10,
+        "positiveLabel": "Possible depression screen; assess clinically",
+        "negativeLabel": "Below the supplied screening threshold"
+      }
+    ]
+  },
+  "attribution": "Cox, J.L., Holden, J.M., & Sagovsky, R. (1987). Detection of postnatal depression: Development of the 10-item Edinburgh Postnatal Depression Scale. British Journal of Psychiatry, 150, 782–786.",
+  "interpretationNote": "Screening measure only; a score does not diagnose depression. Review the self-harm item regardless of total score."
+}

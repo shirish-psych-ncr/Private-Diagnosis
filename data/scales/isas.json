@@ -1,0 +1,169 @@
+{
+  "id": "isas",
+  "name": "Inventory of Statements About Self-Injury (ISAS)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Section I records intentional self-injury without suicidal intent; answer only for behaviors performed on purpose and without suicidal intent. If one or more behaviors are endorsed, complete the additional context and function items. Assess current suicidal thoughts and intent separately when indicated.",
+  "parts": {
+    "$file": "data/scales/isas/parts.json"
+  },
+  "sourceInstrument": "Inventory of Statements About Self-Injury (ISAS)",
+  "ageGroups": [
+    "adolescent",
+    "adult",
+    "older"
+  ],
+  "responseMin": 0,
+  "responseMax": 2,
+  "scoringProfile": {
+    "itemRegister": [
+      "isas_beh_1",
+      "isas_beh_2",
+      "isas_beh_3",
+      "isas_beh_4",
+      "isas_beh_5",
+      "isas_beh_6",
+      "isas_beh_7",
+      "isas_beh_8",
+      "isas_beh_9",
+      "isas_beh_10",
+      "isas_beh_11",
+      "isas_beh_12",
+      "isas_beh_13"
+    ],
+    "groups": [
+      {
+        "name": "ISAS · Affect regulation",
+        "ids": [
+          "isas_fn_1",
+          "isas_fn_14",
+          "isas_fn_27"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Interpersonal boundaries",
+        "ids": [
+          "isas_fn_2",
+          "isas_fn_15",
+          "isas_fn_28"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Self-punishment",
+        "ids": [
+          "isas_fn_3",
+          "isas_fn_16",
+          "isas_fn_29"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Self-care",
+        "ids": [
+          "isas_fn_4",
+          "isas_fn_17",
+          "isas_fn_30"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Anti-dissociation / feeling generation",
+        "ids": [
+          "isas_fn_5",
+          "isas_fn_18",
+          "isas_fn_31"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Anti-suicide",
+        "ids": [
+          "isas_fn_6",
+          "isas_fn_19",
+          "isas_fn_32"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Sensation seeking",
+        "ids": [
+          "isas_fn_7",
+          "isas_fn_20",
+          "isas_fn_33"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Peer bonding",
+        "ids": [
+          "isas_fn_8",
+          "isas_fn_21",
+          "isas_fn_34"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Interpersonal influence",
+        "ids": [
+          "isas_fn_9",
+          "isas_fn_22",
+          "isas_fn_35"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Toughness",
+        "ids": [
+          "isas_fn_10",
+          "isas_fn_23",
+          "isas_fn_36"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Marking distress",
+        "ids": [
+          "isas_fn_11",
+          "isas_fn_24",
+          "isas_fn_37"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Revenge",
+        "ids": [
+          "isas_fn_12",
+          "isas_fn_25",
+          "isas_fn_38"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      },
+      {
+        "name": "ISAS · Autonomy",
+        "ids": [
+          "isas_fn_13",
+          "isas_fn_26",
+          "isas_fn_39"
+        ],
+        "max": 6,
+        "severity": "Function profile; not diagnostic"
+      }
+    ]
+  },
+  "attribution": "Inventory of Statements About Self-Injury (ISAS), Sections I and II. Klonsky & Olino (2008); Klonsky & Glenn (2009).",
+  "interpretationNote": "The behaviors section explicitly excludes suicidal intent; it does not substitute for a separate suicide risk assessment. Function subscales describe reported functions and do not diagnose."
+}

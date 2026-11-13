@@ -1,0 +1,95 @@
+{
+  "id": "si_r_modified",
+  "name": "Saving Inventory–Revised (Modified Format)",
+  "type": "questionnaire",
+  "sourceInstrument": "Saving Inventory–Revised (Modified Format)",
+  "timeframe": "Past week",
+  "administeredBy": "self-report",
+  "ageGroups": ["adult", "older"],
+  "directions": "For each item, select the response that best describes your experience during the past week.",
+  "matrixOptions": [
+    { "v": 0, "label": "0 — None / Not at all / Never" },
+    { "v": 1, "label": "1 — A little / Mild / Rarely" },
+    { "v": 2, "label": "2 — A moderate amount / Moderate / Sometimes" },
+    { "v": 3, "label": "3 — Most / Much / Considerable / Frequently" },
+    { "v": 4, "label": "4 — Almost all / Complete / Extreme / Very often" }
+  ],
+  "parts": [
+    {
+      "name": "Items 1–5",
+      "options": [
+        { "v": 0, "label": "0 — None" },
+        { "v": 1, "label": "1 — A little" },
+        { "v": 2, "label": "2 — A moderate amount" },
+        { "v": 3, "label": "3 — Most / Much" },
+        { "v": 4, "label": "4 — Almost all / Complete" }
+      ],
+      "questions": [
+        { "id": "SIR1", "itemNumber": 1, "text": "How much of the living area in your home is cluttered with possessions? Consider the kitchen, living room, dining room, hallways, bedrooms, bathrooms, and other rooms." },
+        { "id": "SIR2", "itemNumber": 2, "reverse": true, "text": "How much control do you have over your urges to acquire possessions?" },
+        { "id": "SIR3", "itemNumber": 3, "text": "How much of your home does clutter prevent you from using?" },
+        { "id": "SIR4", "itemNumber": 4, "reverse": true, "text": "How much control do you have over your urges to save possessions?" },
+        { "id": "SIR5", "itemNumber": 5, "text": "How much of your home is difficult to walk through because of clutter?" }
+      ]
+    },
+    {
+      "name": "Items 6–16",
+      "options": [
+        { "v": 0, "label": "0 — Not at all" },
+        { "v": 1, "label": "1 — Mild" },
+        { "v": 2, "label": "2 — Moderate" },
+        { "v": 3, "label": "3 — Considerable / Severe" },
+        { "v": 4, "label": "4 — Extreme" }
+      ],
+      "questions": [
+        { "id": "SIR6", "itemNumber": 6, "text": "To what extent do you have difficulty throwing things away?" },
+        { "id": "SIR7", "itemNumber": 7, "text": "How distressing do you find the task of throwing things away?" },
+        { "id": "SIR8", "itemNumber": 8, "text": "To what extent do you have so many things that your rooms are cluttered?" },
+        { "id": "SIR9", "itemNumber": 9, "text": "How distressed or uncomfortable would you feel if you could not acquire something you wanted?" },
+        { "id": "SIR10", "itemNumber": 10, "text": "How much does clutter in your home interfere with your social, work, or everyday functioning? Think about things you do not do because of clutter." },
+        { "id": "SIR11", "itemNumber": 11, "text": "How strong is your urge to buy or acquire free things for which you have no immediate use?" },
+        { "id": "SIR12", "itemNumber": 12, "text": "To what extent does clutter in your home cause you distress?" },
+        { "id": "SIR13", "itemNumber": 13, "text": "How strong is your urge to save something you know you may never use?" },
+        { "id": "SIR14", "itemNumber": 14, "text": "How upset or distressed do you feel about your acquiring habits?" },
+        { "id": "SIR15", "itemNumber": 15, "text": "To what extent do you feel unable to control the clutter in your home?" },
+        { "id": "SIR16", "itemNumber": 16, "text": "To what extent has your saving or compulsive buying resulted in financial difficulties for you?" }
+      ]
+    },
+    {
+      "name": "Items 17–23",
+      "options": [
+        { "v": 0, "label": "0 — Never" },
+        { "v": 1, "label": "1 — Rarely" },
+        { "v": 2, "label": "2 — Sometimes / Occasionally" },
+        { "v": 3, "label": "3 — Frequently / Often" },
+        { "v": 4, "label": "4 — Very often" }
+      ],
+      "questions": [
+        { "id": "SIR17", "itemNumber": 17, "text": "How often do you avoid trying to discard possessions because it is too stressful or time-consuming?" },
+        { "id": "SIR18", "itemNumber": 18, "text": "How often do you feel compelled to acquire something you see, such as while shopping or when offered free things?" },
+        { "id": "SIR19", "itemNumber": 19, "text": "How often do you decide to keep things you do not need and have little space for?" },
+        { "id": "SIR20", "itemNumber": 20, "text": "How frequently does clutter in your home prevent you from inviting people to visit?" },
+        { "id": "SIR21", "itemNumber": 21, "text": "How often do you actually buy or acquire for free things for which you have no immediate use or need?" },
+        { "id": "SIR22", "itemNumber": 22, "text": "To what extent does clutter prevent you from using parts of your home for their intended purpose, such as cooking, using furniture, washing dishes, or cleaning?" },
+        { "id": "SIR23", "itemNumber": 23, "text": "How often are you unable to discard a possession you would like to get rid of?" }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "method": "reverse_items_2_and_4_then_sum",
+    "groups": {
+      "Clutter": [1, 3, 5, 8, 10, 12, 15, 20, 22],
+      "Difficulty discarding / saving": [4, 6, 7, 13, 17, 19, 23],
+      "Acquisition": [2, 9, 11, 14, 16, 18, 21]
+    },
+    "reverseItems": [2, 4],
+    "totalRange": "0-92",
+    "referenceValues": {
+      "clutter": ">15",
+      "difficultyDiscarding": ">13",
+      "acquisition": ">13",
+      "total": ">40"
+    }
+  },
+  "interpretationNote": "The supplied modified-format scoring lists items 2 and 4 as reverse-scored. Reference values are described as typical scores among people with hoarding problems; they are not diagnostic cutoffs."
+}

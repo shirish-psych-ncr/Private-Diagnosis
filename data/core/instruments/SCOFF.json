@@ -1,0 +1,10 @@
+{
+  "name": "SCOFF",
+  "description": {
+    "en": "Five-item eating-disorder screen."
+  },
+  "domains": [
+    "eating"
+  ],
+  "scaleId": "scoff"
+}

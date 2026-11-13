@@ -176,15 +176,26 @@ function renderMatrix(section, scale, scaleId) {
                 const responseScaleId = q.__scaleId || scaleId;
                 const key = responseScaleId + ':' + q.id;
                 const input = document.createElement('input');
-                input.type = 'radio';
-                input.name = key;
+                input.type = q.multipleChoice ? 'checkbox' : 'radio';
+                input.name = q.multipleChoice ? key + '_' + c.v : key;
                 input.value = c.v;
                 input.id = key + '_' + c.v;
                 const optionLabel = L(c.label) || String(c.v);
                 input.setAttribute('aria-label', L(q.itemName || q.text) + ' — ' + optionLabel);
-                if (state.responses[key] === c.v) input.checked = true;
-                input.addEventListener('change', () => onAnswer(key, c.v,
-                    { id: q.id, safety: !!q.safety, safetyMin: q.safetyMin }, { id: responseScaleId }));
+                if (q.multipleChoice) input.checked = (state.responses[key] || []).includes(c.v);
+                else if (state.responses[key] === c.v) input.checked = true;
+                input.addEventListener('change', () => {
+                    if (q.multipleChoice) {
+                        const selected = new Set(state.responses[key] || []);
+                        if (input.checked) selected.add(c.v); else selected.delete(c.v);
+                        if (selected.size) onAnswer(key, [...selected], { id: q.id }, { id: responseScaleId });
+                        else {
+                            delete state.responses[key];
+                            onAnswer(key, [], { id: q.id }, { id: responseScaleId });
+                        }
+                    } else onAnswer(key, c.v,
+                        { id: q.id, safety: !!q.safety, safetyMin: q.safetyMin }, { id: responseScaleId });
+                });
                 const label = document.createElement('label');
                 label.className = 'matrix-answer';
                 const caption = document.createElement('span');

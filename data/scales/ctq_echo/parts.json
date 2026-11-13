@@ -1,0 +1,559 @@
+[
+  {
+    "name": "Events before age 18",
+    "questions": [
+      {
+        "id": "ctq_echo_1",
+        "text": "Before age 18: Death of a very close friend or family member",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ctq_echo_1_age",
+        "text": "If yes, age in years",
+        "inputType": "number",
+        "min": 0,
+        "max": 17,
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_1_trauma",
+        "text": "If yes, how traumatic was this? (1 = not at all; 7 = extremely)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_1_confide",
+        "text": "If yes, how much did you confide in others at the time? (1 = not at all; 7 = a great deal)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_2",
+        "text": "Before age 18: Major upheaval between parents (for example, divorce or separation)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ctq_echo_2_age",
+        "text": "If yes, age in years",
+        "inputType": "number",
+        "min": 0,
+        "max": 17,
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_2_trauma",
+        "text": "If yes, how traumatic was this? (1 = not at all; 7 = extremely)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_2_confide",
+        "text": "If yes, how much did you confide in others at the time? (1 = not at all; 7 = a great deal)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_3",
+        "text": "Before age 18: Traumatic sexual experience (for example, rape or molestation)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ctq_echo_3_age",
+        "text": "If yes, age in years",
+        "inputType": "number",
+        "min": 0,
+        "max": 17,
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_3_trauma",
+        "text": "If yes, how traumatic was this? (1 = not at all; 7 = extremely)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_3_confide",
+        "text": "If yes, how much did you confide in others at the time? (1 = not at all; 7 = a great deal)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_4",
+        "text": "Before age 18: Victim of violence other than sexual violence (for example, child abuse, mugging, or assault)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ctq_echo_4_age",
+        "text": "If yes, age in years",
+        "inputType": "number",
+        "min": 0,
+        "max": 17,
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_4_trauma",
+        "text": "If yes, how traumatic was this? (1 = not at all; 7 = extremely)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_4_confide",
+        "text": "If yes, how much did you confide in others at the time? (1 = not at all; 7 = a great deal)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_5",
+        "text": "Before age 18: Extremely ill or injured",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ctq_echo_5_age",
+        "text": "If yes, age in years",
+        "inputType": "number",
+        "min": 0,
+        "max": 17,
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_5_trauma",
+        "text": "If yes, how traumatic was this? (1 = not at all; 7 = extremely)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_5_confide",
+        "text": "If yes, how much did you confide in others at the time? (1 = not at all; 7 = a great deal)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_6",
+        "text": "Before age 18: Other major upheaval that may have significantly shaped life or personality",
+        "scale": [
+          {
+            "v": 0,
+            "label": "No"
+          },
+          {
+            "v": 1,
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ctq_echo_6_age",
+        "text": "If yes, age in years",
+        "inputType": "number",
+        "min": 0,
+        "max": 17,
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_6_trauma",
+        "text": "If yes, how traumatic was this? (1 = not at all; 7 = extremely)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      },
+      {
+        "id": "ctq_echo_6_confide",
+        "text": "If yes, how much did you confide in others at the time? (1 = not at all; 7 = a great deal)",
+        "scale": [
+          {
+            "v": 0,
+            "label": "1"
+          },
+          {
+            "v": 1,
+            "label": "2"
+          },
+          {
+            "v": 2,
+            "label": "3"
+          },
+          {
+            "v": 3,
+            "label": "4"
+          },
+          {
+            "v": 4,
+            "label": "5"
+          },
+          {
+            "v": 5,
+            "label": "6"
+          },
+          {
+            "v": 6,
+            "label": "7"
+          }
+        ],
+        "nonScored": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "name": "Whiteley Index (14-item version)",
+  "description": {
+    "en": "14-item dichotomous health-concern screen. The pasted item set specifies a reverse-keyed item and a reference threshold of 8; versions and scoring keys vary.",
+    "hi": "स्वास्थ्य-संबंधी चिंताओं की 14-आइटम द्विआधारी स्क्रीन। दिए गए आइटम-समूह में एक उलटा-अंकित आइटम और 8 का संदर्भ कटऑफ है; संस्करण और स्कोरिंग कुंजी भिन्न हो सकते हैं।"
+  },
+  "domains": ["somatic"],
+  "scaleId": "whiteley_index"
+}

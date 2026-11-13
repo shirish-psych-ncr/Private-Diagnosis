@@ -1,0 +1,146 @@
+{
+  "id": "MB",
+  "name": {
+    "en": "Module MB — Binge Eating Disorder",
+    "hi": "माड्यूल MB — बिंज-ईटिंग (अतिभक्षण) विकार"
+  },
+  "gateRules": [
+    {
+      "rule": "IF MB1 Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+      "id": "MB1",
+      "text": {
+        "en": "Do the patient's symptoms meet criteria for Anorexia Nervosa?",
+        "hi": "क्या रोगी के लक्षण एनोरेक्सिया नर्वोसा के मानदंड पूरे करते हैं?"
+      }
+    },
+    {
+      "rule": "IF MB2 Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+      "id": "MB2",
+      "text": {
+        "en": "Do the patient's symptoms meet criteria for Bulimia Nervosa?",
+        "hi": "क्या रोगी के लक्षण बुलिमिया नर्वोसा के मानदंड पूरे करते हैं?"
+      }
+    },
+    {
+      "rule": "IF MB3 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+      "id": "MB3",
+      "text": {
+        "en": "Is M2 coded Yes? (During binges, eating felt out of control.)",
+        "hi": "क्या M2 'हाँ' कोडित है? (प्रपात के दौरान भोजन नियंत्रण-बाहर लगा।)"
+      }
+    },
+    {
+      "rule": "IF MB4 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+      "id": "MB4",
+      "text": {
+        "en": "Is M3 coded Yes? (Binges at least once a week.)",
+        "hi": "क्या M3 'हाँ' कोडित है? (सप्ताह में कम से कम एक बार प्रपात।)"
+      }
+    },
+    {
+      "rule": "IF MB5 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+      "id": "MB5",
+      "text": {
+        "en": "Is M4 coded Yes? If M4 was bypassed in Module M (Bulimia Nervosa), ask M4 now to code MB5.",
+        "hi": "क्या M4 'हाँ' कोडित है? यदि माड्यूल M (बुलिमिया नर्वोसा) में M4 छोड़ा गया था, तो MB5 कोड हेतु अब M4 पूछें।"
+      }
+    }
+  ],
+  "mb6Intro": {
+    "en": "In the last 3 months during the binging did you:",
+    "hi": "पिछले 3 माह में प्रपात के दौरान क्या आप:"
+  },
+  "mb6": [
+    {
+      "id": "MB6a",
+      "text": {
+        "en": "Eat more rapidly than normal?",
+        "hi": "क्या सामान्य से तेज़ खाते थे?"
+      }
+    },
+    {
+      "id": "MB6b",
+      "text": {
+        "en": "Eat until you felt uncomfortably full?",
+        "hi": "क्या अप्रिय ढंग से भरपूर महसूस करने तक खाते थे?"
+      }
+    },
+    {
+      "id": "MB6c",
+      "text": {
+        "en": "Eat large amounts of food when you were not hungry?",
+        "hi": "क्या भूख न होने पर भी अधिक भोजन खाते थे?"
+      }
+    },
+    {
+      "id": "MB6d",
+      "text": {
+        "en": "Eat alone because you felt embarrassed about how much you were eating?",
+        "hi": "क्या खाने की मात्रा से शर्मिंदगी के कारण अकेले खाते थे?"
+      }
+    },
+    {
+      "id": "MB6e",
+      "text": {
+        "en": "Feel guilty, depressed or disgusted with yourself after binging?",
+        "hi": "क्या प्रपात के बाद स्वयं के प्रति अपराधबोध, उदासी या घृणा महसूस हुई?"
+      }
+    }
+  ],
+  "mb6Gate": {
+    "rule": "IF <3 of MB6 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "Are 3 or more MB6 questions coded Yes?",
+      "hi": "क्या MB6 के 3 या अधिक प्रश्न 'हाँ' कोडित हैं?"
+    }
+  },
+  "mb7": {
+    "id": "MB7",
+    "text": {
+      "en": "Does your binging distress you a lot?",
+      "hi": "क्या आपका प्रपात आपको बहुत कष्ट देता है?"
+    }
+  },
+  "mb8Episodes": {
+    "id": "MB8a",
+    "numeric": true,
+    "max": 99,
+    "text": {
+      "en": "Number of binge eating episodes per week?",
+      "hi": "प्रति सप्ताह अतिभक्षण एपिसोड की संख्या?"
+    }
+  },
+  "mb8Days": {
+    "id": "MB8b",
+    "numeric": true,
+    "max": 7,
+    "text": {
+      "en": "Number of binge eating days per week?",
+      "hi": "प्रति सप्ताह अतिभक्षण दिनों की संख्या?"
+    }
+  },
+  "specifierNote": {
+    "en": "Specifiers of eating disorder: MILD = 1-3 episodes of binge eating per week; MODERATE = 4-7; SEVERE = 8-13; EXTREME = 14 or more.",
+    "hi": "भोजन-विकार विशेषण: मृदु = प्रति सप्ताह 1-3 प्रपात एपिसोड; मध्यम = 4-7; गंभीर = 8-13; अत्यंत गंभीर = 14 या अधिक।"
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "MB_diag",
+      "label": {
+        "en": "Binge-Eating Disorder — Current",
+        "hi": "बिंज-ईटिंग (अतिभक्षण) विकार — वर्तमान"
+      },
+      "rule": "MB1 No AND MB2 No AND MB3 Yes AND MB4 Yes AND MB5 No AND >=3 of MB6 Yes AND MB7 Yes. Severity by weekly binge-eating episodes (1-3 mild, 4-7 moderate, 8-13 severe, 14+ extreme).",
+      "flags": [
+        "CURRENT",
+        "MILD",
+        "MODERATE",
+        "SEVERE",
+        "EXTREME"
+      ],
+      "disordersOnPositive": [
+        "eating_binge_eating"
+      ]
+    }
+  ]
+}

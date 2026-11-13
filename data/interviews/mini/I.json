@@ -1,0 +1,216 @@
+{
+  "id": "I",
+  "name": {
+    "en": "Module I — Alcohol Use Disorder",
+    "hi": "माड्यूल I — मद्य-सेवन विकार"
+  },
+  "screen": {
+    "intro": {
+      "en": "Screen-in question (past 12 months)",
+      "hi": "स्क्रीन-इन प्रश्न (पिछले 12 माह)"
+    },
+    "questions": [
+      {
+        "id": "I1",
+        "text": {
+          "en": "In the past 12 months, have you had 3 or more alcoholic drinks, within a 3-hour period, on 3 or more occasions?",
+          "hi": "पिछले 12 माह में, क्या 3-घंटे की अवधि में 3 या अधिक पेय, 3 या अधिक अवसरों पर लिए?"
+        }
+      }
+    ],
+    "gateRule": "IF I1 No -> GO TO DIAGNOSTIC BOX, CIRCLE NO AND MOVE TO THE NEXT MODULE.",
+    "gateNote": {
+      "en": "If I1 is No, Module I terminates (Alcohol Use Disorder coded No).",
+      "hi": "यदि I1 'नहीं', माड्यूल I समाप्त (मद्य-सेवन विकार 'नहीं' कोड)।"
+    }
+  },
+  "criteriaIntro": {
+    "en": "In the past 12 months:",
+    "hi": "पिछले 12 माह में:"
+  },
+  "criteria": [
+    {
+      "id": "I2a",
+      "text": {
+        "en": "During the times when you used alcohol, did you end up using more than you planned when you started?",
+        "hi": "जब भी आप शराब का सेवन करते, क्या शुरू में योजना से अधिक का सेवन हो जाता?"
+      }
+    },
+    {
+      "id": "I2b",
+      "text": {
+        "en": "Did you repeatedly want to reduce or control your use? Did you try to cut down or control your use, but failed? (If yes to either, code Yes.)",
+        "hi": "क्या बार-बार कम करने/नियंत्रण की इच्छा हुई? क्या घटाने/नियंत्रण का प्रयास कर विफल रहे? (किसी भी पर 'हाँ' कोड करें।)"
+      }
+    },
+    {
+      "id": "I2c",
+      "text": {
+        "en": "On the days that you used alcohol, did you spend substantial time obtaining it, using it, or recovering from its effects?",
+        "hi": "जिन दिनों शराब का सेवन किया, क्या पर्याप्त समय इसे प्राप्त करने/सेवन/प्रभाव से उबरने में लगा?"
+      }
+    },
+    {
+      "id": "I2d",
+      "text": {
+        "en": "Did you crave or have a strong desire or urge to use alcohol?",
+        "hi": "क्या शराब के लिए लालसा/तीव्र इच्छा/वेग हुआ?"
+      }
+    },
+    {
+      "id": "I2e",
+      "text": {
+        "en": "Did you spend less time meeting your responsibilities at work, at school, or at home, because of your repeated use?",
+        "hi": "क्या बार-बार सेवन के कारण कार्य/विद्यालय/घर की ज़िम्मेदारियों में कम समय देने लगे?"
+      }
+    },
+    {
+      "id": "I2f",
+      "text": {
+        "en": "If your use caused problems with your family or other people, did you still keep on using?",
+        "hi": "यदि सेवन से परिवार/अन्य लोगों में समस्या हुई, तब भी सेवन जारी रखा?"
+      }
+    },
+    {
+      "id": "I2g",
+      "text": {
+        "en": "Did you use more than once in any situation where you or others were physically at risk, for example, driving a car, riding a motorbike, using machinery, boating, etc.?",
+        "hi": "क्या एक से अधिक बार ऐसी स्थिति में सेवन किया जहाँ आप/दूसरे शारीरिक रूप से जोखिम में थे — जैसे कार/बाइक चलाना, मशीनरी, नाव आदि?"
+      }
+    },
+    {
+      "id": "I2h",
+      "text": {
+        "en": "Did you continue to use, even though it was clear that it had caused or worsened psychological or physical problems?",
+        "hi": "क्या सेवन जारी रखा, यद्यपि स्पष्ट था कि इससे मानसिक/शारीरिक समस्याएँ उत्पन्न/बढ़ी हैं?"
+      }
+    },
+    {
+      "id": "I2i",
+      "text": {
+        "en": "Did you reduce or give up important work, social or recreational activities because of your use?",
+        "hi": "क्या सेवन के कारण महत्वपूर्ण कार्य/सामाजिक/मनोरंजन गतिविधियाँ घटाईं/छोड़ीं?"
+      }
+    },
+    {
+      "id": "I2j",
+      "text": {
+        "en": "Did you need to use a lot more in order to get the same effect that you got when you first started using, or did you get much less effect with continued use of the same amount?",
+        "hi": "क्या प्रारंभिक-समान असर हेतु बहुत अधिक सेवन आवश्यक हुआ, या समान मात्रा से असर बहुत कम होने लगा?"
+      }
+    }
+  ],
+  "k1": {
+    "id": "I2k1",
+    "text": {
+      "en": "When you cut down on heavy or prolonged drinking did you have any of the following: (If yes to 2 or more of the 8, code k1 as Yes.)",
+      "hi": "अत्यधिक/दीर्घ सेवन घटाने पर निम्नलिखित में से कोई हुआ: (8 में से 2+ 'हाँ' हो तो k1 'हाँ' कोड करें।)"
+    },
+    "checklist": [
+      {
+        "v": "w1",
+        "label": {
+          "en": "Increased sweating or increased heart rate",
+          "hi": "अधिक पसीना या बढ़ी हृदय-गति"
+        }
+      },
+      {
+        "v": "w2",
+        "label": {
+          "en": "Hand tremor or 'the shakes'",
+          "hi": "हाथों का कंपन"
+        }
+      },
+      {
+        "v": "w3",
+        "label": {
+          "en": "Trouble sleeping",
+          "hi": "नींद में कठिनाई"
+        }
+      },
+      {
+        "v": "w4",
+        "label": {
+          "en": "Nausea or vomiting",
+          "hi": "जी मिचलाना/उल्टी"
+        }
+      },
+      {
+        "v": "w5",
+        "label": {
+          "en": "Hearing or seeing things other people could not see or hear, or having sensations in your skin for no apparent reason",
+          "hi": "दूसरों को न दिखने/सुनने वाली चीज़ें देखना/सुनना, या बिना कारण त्वचा में अनुभूति"
+        }
+      },
+      {
+        "v": "w6",
+        "label": {
+          "en": "Agitation",
+          "hi": "अधि-चंचलता (एजिटेशन)"
+        }
+      },
+      {
+        "v": "w7",
+        "label": {
+          "en": "Anxiety",
+          "hi": "आतंक/चिंता"
+        }
+      },
+      {
+        "v": "w8",
+        "label": {
+          "en": "Seizures",
+          "hi": "आपात (मिर्गी-जैसे दौरे)"
+        }
+      }
+    ],
+    "minChecks": 2
+  },
+  "k2": {
+    "id": "I2k2",
+    "text": {
+      "en": "Did you drink alcohol to reduce or avoid withdrawal symptoms or to avoid being hung-over?",
+      "hi": "क्या विषमुक्ति-लक्षण घटाने/टालने या हैंगओवर बचने हेतु शराब पी?"
+    }
+  },
+  "kSummary": {
+    "id": "I2k_summary",
+    "rule": "IF YES TO I2k1 OR I2k2, CODE YES. (I2k1 and I2k2 together count as one among the I2 criteria.)",
+    "text": {
+      "en": "I2k SUMMARY: If yes to I2k1 or I2k2, code Yes.",
+      "hi": "I2k सारांश: यदि I2k1 या I2k2 'हाँ' तो 'हाँ' कोड।"
+    }
+  },
+  "gate": {
+    "rule": "IF <2 of I2a-I2k SUMMARY coded Yes -> Alcohol Use Disorder NO.",
+    "text": {
+      "en": "Are 2 or more I2 answers from I2a through I2k SUMMARY coded Yes? (I2k1 and I2k2 together count as one among these choices.)",
+      "hi": "क्या I2a से I2k सारांश तक के 2 या अधिक उत्तर 'हाँ' कोडित हैं? (I2k1 व I2k2 संयुक्त रूप से एक गिने जाते हैं।)"
+    }
+  },
+  "specifierNote": {
+    "en": "Specifiers: MILD = 2-3 of the I2 symptoms; MODERATE = 4-5; SEVERE = 6 or more. IN EARLY REMISSION = criteria not met for between 3 & 12 months; IN SUSTAINED REMISSION = criteria not met for 12 months or more (both with the exception of criterion d [craving]); IN A CONTROLLED ENVIRONMENT = where alcohol access is restricted.",
+    "hi": "विशेषण: मृदु = I2 के 2-3 लक्षण; मध्यम = 4-5; गंभीर = 6+। प्रारंभिक-मिटी = 3-12 माह मानदंड पूरे नहीं; दीर्घ-मिटी = 12+ माह मानदंड पूरे नहीं (दोनों में मानदंड d [लालसा] अपवाद); नियंत्रित-वातावरण = जहाँ शराब-प्राप्ति सीमित हो।"
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "I_diag",
+      "label": {
+        "en": "Alcohol Use Disorder — Past 12 Months",
+        "hi": "मद्य-सेवन विकार — पिछले 12 माह"
+      },
+      "rule": "I1 Yes AND >=2 of I2a-I2k SUMMARY Yes. Severity by symptom count (2-3 mild, 4-5 moderate, 6+ severe).",
+      "flags": [
+        "MILD",
+        "MODERATE",
+        "SEVERE",
+        "IN EARLY REMISSION",
+        "IN SUSTAINED REMISSION",
+        "IN A CONTROLLED ENVIRONMENT"
+      ],
+      "disordersOnPositive": [
+        "alcohol_use_disorder"
+      ]
+    }
+  ]
+}

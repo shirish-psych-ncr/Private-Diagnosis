@@ -1,0 +1,232 @@
+{
+  "id": "L",
+  "name": {
+    "en": "Module L — Anorexia Nervosa",
+    "hi": "माड्यूल L — एनोरेक्सिया नर्वोसा"
+  },
+  "screen": {
+    "intro": {
+      "en": "L1 — Height and lowest weight in the past 3 months",
+      "hi": "L1 — ऊँचाई और पिछले 3 माह का न्यूनतम वज़न"
+    },
+    "questions": [
+      {
+        "id": "L1a",
+        "text": {
+          "en": "How tall are you? (feet/inches or centimetres)",
+          "hi": "आपकी ऊँचाई कितनी है? (फ़ीट/इंच या सेंटीमीटर)"
+        },
+        "nonScoring": true,
+        "measurement": "height"
+      },
+      {
+        "id": "L1b",
+        "text": {
+          "en": "What was your lowest weight in the past 3 months? (pounds or kilograms)",
+          "hi": "पिछले 3 माह में आपका सबसे कम वज़न क्या था? (पाउंड या किलोग्राम)"
+        },
+        "nonScoring": true,
+        "measurement": "weight"
+      }
+    ],
+    "gateRule": "IF L1c No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "gateNote": {
+      "en": "If the patient's weight is above the threshold for his/her height, Module L terminates (Anorexia Nervosa coded No).",
+      "hi": "यदि रोगी का वज़न उसकी ऊँचाई की सीमा से अधिक है, तो माड्यूल L समाप्त (एनोरेक्सिया नर्वोसा 'नहीं' कोड)।"
+    }
+  },
+  "l1c": {
+    "id": "L1c",
+    "text": {
+      "en": "Is patient's weight equal to or below the threshold corresponding to his/her height? (See the height/weight table below.)",
+      "hi": "क्या रोगी का वज़न उसकी ऊँचाई संगत सीमा के बराबर या उससे कम है? (नीचे ऊँचाई/वज़न सारणी देखें।)"
+    },
+    "thresholdTable": {
+      "bmiThreshold": 17.0,
+      "columns": [
+        {
+          "ftin": "4'9\"",
+          "cm": 145,
+          "lb": 79,
+          "kg": 36
+        },
+        {
+          "ftin": "4'10\"",
+          "cm": 147,
+          "lb": 82,
+          "kg": 37
+        },
+        {
+          "ftin": "4'11\"",
+          "cm": 150,
+          "lb": 84,
+          "kg": 38.5
+        },
+        {
+          "ftin": "5'0\"",
+          "cm": 152,
+          "lb": 87,
+          "kg": 39.5
+        },
+        {
+          "ftin": "5'1\"",
+          "cm": 155,
+          "lb": 90,
+          "kg": 41
+        },
+        {
+          "ftin": "5'2\"",
+          "cm": 158,
+          "lb": 93,
+          "kg": 42.5
+        },
+        {
+          "ftin": "5'3\"",
+          "cm": 160,
+          "lb": 96,
+          "kg": 43.5
+        },
+        {
+          "ftin": "5'4\"",
+          "cm": 163,
+          "lb": 99,
+          "kg": 45.5
+        },
+        {
+          "ftin": "5'5\"",
+          "cm": 165,
+          "lb": 102,
+          "kg": 46.5
+        },
+        {
+          "ftin": "5'6\"",
+          "cm": 168,
+          "lb": 106,
+          "kg": 48
+        },
+        {
+          "ftin": "5'7\"",
+          "cm": 170,
+          "lb": 109,
+          "kg": 49
+        },
+        {
+          "ftin": "5'8\"",
+          "cm": 173,
+          "lb": 112,
+          "kg": 51
+        },
+        {
+          "ftin": "5'9\"",
+          "cm": 175,
+          "lb": 115,
+          "kg": 52
+        },
+        {
+          "ftin": "5'10\"",
+          "cm": 178,
+          "lb": 119,
+          "kg": 54
+        },
+        {
+          "ftin": "5'11\"",
+          "cm": 180,
+          "lb": 122,
+          "kg": 55
+        },
+        {
+          "ftin": "6'0\"",
+          "cm": 183,
+          "lb": 125,
+          "kg": 57
+        },
+        {
+          "ftin": "6'1\"",
+          "cm": 185,
+          "lb": 129,
+          "kg": 58.5
+        },
+        {
+          "ftin": "6'2\"",
+          "cm": 188,
+          "lb": 133,
+          "kg": 60
+        },
+        {
+          "ftin": "6'3\"",
+          "cm": 191,
+          "lb": 136,
+          "kg": 62
+        }
+      ],
+      "note": {
+        "en": "The weight thresholds above are calculated using a body mass index (BMI) equal to or below 17.0 kg/m2 for the patient's height using the Center of Disease Control & Prevention BMI Calculator. This is the threshold guideline below which a person is deemed underweight by the DSM-5 for Anorexia Nervosa.",
+        "hi": "उपरोक्त भार-सीमाएँ रोगी की ऊँचाई हेतु CDC BMI कैलकुलेटर का उपयोग कर BMI 17.0 किग्रा/मी² या उससे कम पर गणना की गई हैं। यह वह सीमा-निर्देश है जिसके नीचे व्यक्ति को DSM-5 द्वारा एनोरेक्सिया नर्वोसा हेतु अल्पभारी माना जाता है।"
+      }
+    }
+  },
+  "pastThreeMonthsIntro": {
+    "en": "In the past 3 months:",
+    "hi": "पिछले 3 माह में:"
+  },
+  "l2": {
+    "id": "L2",
+    "text": {
+      "en": "In spite of this low weight, have you tried not to gain weight or to restrict your food intake?",
+      "hi": "इतने कम वज़न के बावजूद, क्या आपने वज़न बढ़ने से रोकने या भोजन-सेवन सीमित करने का प्रयास किया?"
+    }
+  },
+  "l3": {
+    "id": "L3",
+    "text": {
+      "en": "Have you intensely feared gaining weight or becoming fat, even though you were underweight?",
+      "hi": "क्या आपको अल्पभारी होने के बावजूद वज़न बढ़ने या मोटे होने का तीव्र भय रहा?"
+    }
+  },
+  "l4": [
+    {
+      "id": "L4a",
+      "text": {
+        "en": "Have you considered yourself too big/fat or that part of your body was too big/fat?",
+        "hi": "क्या आपने स्वयं को अधिक बड़ा/मोटा या शरीर का कोई भाग अधिक बड़ा/मोटा समझा?"
+      }
+    },
+    {
+      "id": "L4b",
+      "text": {
+        "en": "Has your body weight or shape greatly influenced how you felt about yourself?",
+        "hi": "क्या आपके शारीरिक वज़न/आकार ने स्वयं के प्रति आपकी भावना को बहुत प्रभावित किया?"
+      }
+    },
+    {
+      "id": "L4c",
+      "text": {
+        "en": "Have you thought that your current low body weight was normal or excessive?",
+        "hi": "क्या आपने वर्तमान कम शारीरिक वज़न को सामान्य या अधिक माना?"
+      }
+    }
+  ],
+  "l5Gate": {
+    "rule": "IF 0 of L4 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "L5: Are 1 or more items from L4 coded Yes?",
+      "hi": "L5: क्या L4 के 1 या अधिक मद 'हाँ' कोडित हैं?"
+    }
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "L_diag",
+      "label": {
+        "en": "Anorexia Nervosa — Current",
+        "hi": "एनोरेक्सिया नर्वोसा — वर्तमान"
+      },
+      "rule": "L1c Yes AND L2 Yes AND L3 Yes AND L5 Yes (1+ of L4). Restricting vs Binge-Eating/Purging type is decided in Module M (M7/M8).",
+      "flags": [
+        "CURRENT"
+      ],
+      "disordersOnPositive": [
+        "eating_anorexia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Saving Inventory–Revised (Modified Format)",
+  "description": {
+    "en": "23-item self-report measure of clutter, difficulty discarding, and acquisition during the past week.",
+    "hi": "गत सप्ताह के दौरान अव्यवस्था, वस्तुएँ त्यागने में कठिनाई और वस्तुएँ प्राप्त करने का 23-आइटम स्व-रिपोर्ट माप।"
+  },
+  "domains": ["hoarding"],
+  "scaleId": "si_r_modified"
+}

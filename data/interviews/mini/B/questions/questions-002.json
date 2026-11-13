@@ -1,0 +1,194 @@
+[
+  {
+    "id": "B12",
+    "points": 8,
+    "text": {
+      "en": "Feel the need or impulse to kill yourself or to plan to kill yourself sooner rather than later?",
+      "hi": "क्या जल्द से जल्द आत्महत्या या उसकी योजना बनाने की जरूरत/आवेग महसूस हुआ?"
+    },
+    "subChecks": [
+      {
+        "id": "B12kill",
+        "label": {
+          "en": "To kill yourself",
+          "hi": "खुद को मारने का"
+        }
+      },
+      {
+        "id": "B12plan",
+        "label": {
+          "en": "To plan to kill yourself",
+          "hi": "योजना बनाने का"
+        }
+      },
+      {
+        "id": "B12unprovoked",
+        "label": {
+          "en": "Largely unprovoked",
+          "hi": "बिना स्पष्ट कारण"
+        }
+      },
+      {
+        "id": "B12provoked",
+        "label": {
+          "en": "Provoked",
+          "hi": "किसी कारण से"
+        }
+      }
+    ],
+    "note": {
+      "en": "If No to B12, skip to B14. Probe: '5 minutes before this impulse, could you have predicted it would occur at that time?'",
+      "hi": "यदि B12 'नहीं', तो B14 पर जाएँ। जाँच: 'इस आवेग से 5 मिनट पूर्व, क्या आप अनुमान लगा सकते थे कि यह होगा?'"
+    }
+  },
+  {
+    "id": "B13",
+    "points": 8,
+    "visibleWhen": "B12 == 1",
+    "text": {
+      "en": "Have difficulty resisting these impulses?",
+      "hi": "क्या इन आवेगों का विरोध करने में कठिनाई हुई?"
+    }
+  },
+  {
+    "id": "B14",
+    "points": null,
+    "nonScoring": true,
+    "text": {
+      "en": "Take any active steps to prepare for a suicide attempt in which you expected or intended to die (include anything done or purposely not done that put you closer to making a suicide attempt)? This includes times when you were going to kill yourself, but were interrupted or stopped yourself, before harming yourself.",
+      "hi": "क्या आत्महत्या के प्रयास की तैयारी में कोई सक्रिय कदम उठाए जिनमें आपने मरने की अपेक्षा/इच्छा रखी? उन बारों में भी जब आपने खुद रोका या कोई रोक लिया।"
+    }
+  },
+  {
+    "id": "B14a",
+    "points": 9,
+    "visibleWhen": "B14 == 1",
+    "text": {
+      "en": "Took active steps to prepare to kill yourself, but did not start the attempt?",
+      "hi": "तैयारी के सक्रिय कदम उठाए, पर प्रयास शुरू नहीं किया?"
+    }
+  },
+  {
+    "id": "B14b",
+    "points": 10,
+    "visibleWhen": "B14 == 1",
+    "text": {
+      "en": "Took active steps to prepare to kill yourself, but then you stopped yourself just before harming yourself (“aborted”)?",
+      "hi": "सक्रिय कदम उठाए, पर नुकसान से ठीक पहले आपने खुद को रोका (“अटकाया”)?"
+    }
+  },
+  {
+    "id": "B14c",
+    "points": 11,
+    "visibleWhen": "B14 == 1",
+    "text": {
+      "en": "Took active steps to prepare to kill yourself, but then someone or something stopped you just before harming yourself (“interrupted”)?",
+      "hi": "सक्रिय कदम उठाए, पर नुकसान से ठीक पहले किसी/कुछ ने रोका (“बाधा”)?"
+    }
+  },
+  {
+    "id": "B15",
+    "points": 0,
+    "text": {
+      "en": "Injure yourself on purpose without intending to kill yourself?",
+      "hi": "क्या बिना मरने के इरादे जानबूझकर खुद को चोट पहुँचाई?"
+    },
+    "note": {
+      "en": "B15 is NOT counted as suicidal behavior.",
+      "hi": "B15 को आत्मघाती व्यवहार नहीं गिना जाता।"
+    }
+  },
+  {
+    "id": "B16",
+    "points": null,
+    "nonScoring": true,
+    "text": {
+      "en": "Attempt suicide (to kill yourself)?",
+      "hi": "क्या आत्महत्या का प्रयास किया?"
+    }
+  },
+  {
+    "id": "B16a",
+    "points": 12,
+    "visibleWhen": "B16 == 1",
+    "text": {
+      "en": "Started a suicide attempt, but decided to stop and did not finish?",
+      "hi": "प्रयास शुरू किया, पर रोक दिया और पूरा नहीं किया?"
+    }
+  },
+  {
+    "id": "B16b",
+    "points": 13,
+    "visibleWhen": "B16 == 1",
+    "text": {
+      "en": "Started a suicide attempt, but were interrupted and did not finish?",
+      "hi": "प्रयास शुरू किया, पर किसी ने रोका और पूरा नहीं हुआ?"
+    }
+  },
+  {
+    "id": "B16c",
+    "points": 14,
+    "visibleWhen": "B16 == 1",
+    "text": {
+      "en": "Went through with a suicide attempt completely as you meant to? (A suicide attempt means you did something where you could possibly be injured, with at least a slight intent to die.)",
+      "hi": "प्रयास पूरी तरह जैसे चाहते वैसा किया? (आत्महत्या प्रयास का अर्थ: ऐसा कार्य जिसमें चोट की संभावना हो, कम से कम थोड़े मरने के इरादे के साथ।)"
+    },
+    "subChecks": [
+      {
+        "id": "B16crescue",
+        "label": {
+          "en": "Hope to be rescued / survive",
+          "hi": "बचाए जाने/बचने की उम्मीद"
+        }
+      },
+      {
+        "id": "B16cdie",
+        "label": {
+          "en": "Expected / intended to die",
+          "hi": "मरने की अपेक्षा/इच्छा"
+        }
+      }
+    ]
+  },
+  {
+    "id": "B17",
+    "points": null,
+    "nonScoring": true,
+    "freeText": true,
+    "text": {
+      "en": "Time spent per day with any suicidal impulses, thoughts or actions (usual / least / most, hours and minutes).",
+      "hi": "प्रतिदिन आत्मघाती आवेगों/विचारों/कृत्यों में बिताया समय (सामान्य / न्यूनतम / अधिकतम, घंटे और मिनट)।"
+    }
+  },
+  {
+    "id": "B18",
+    "points": 4,
+    "text": {
+      "en": "In your lifetime: did you ever make a suicide attempt (try to kill yourself)?",
+      "hi": "जीवनभर: क्या कभी आत्महत्या का प्रयास किया?"
+    },
+    "timingOptions": [
+      {
+        "v": "current",
+        "label": {
+          "en": "Current: within the past 12 months",
+          "hi": "वर्तमान: पिछले 12 माह में"
+        }
+      },
+      {
+        "v": "earlyremission",
+        "label": {
+          "en": "In early remission: between 12 and 24 months ago",
+          "hi": "प्रारंभिक शमन: 12–24 माह पूर्व"
+        }
+      },
+      {
+        "v": "remission",
+        "label": {
+          "en": "In remission: more than 24 months ago",
+          "hi": "शमन: 24 माह से अधिक पूर्व"
+        }
+      }
+    ]
+  }
+]

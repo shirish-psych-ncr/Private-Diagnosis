@@ -1,0 +1,152 @@
+{
+  "id": "M",
+  "name": {
+    "en": "Module M — Bulimia Nervosa",
+    "hi": "माड्यूल M — बुलिमिया नर्वोसा"
+  },
+  "screen": {
+    "intro": {
+      "en": "Screen-in question (past three months)",
+      "hi": "स्क्रीन-इन प्रश्न (पिछले तीन माह)"
+    },
+    "questions": [
+      {
+        "id": "M1",
+        "text": {
+          "en": "In the past three months, did you have eating binges or times when you ate a very large amount of food within a 2-hour period?",
+          "hi": "पिछले तीन माह में, क्या आपको भोजन-प्रपात (binge) हुए या ऐसे समय जब आपने 2-घंटे की अवधि में बहुत अधिक मात्रा में भोजन किया?"
+        }
+      }
+    ],
+    "gateRule": "IF M1 No -> GO TO THE DIAGNOSTIC BOXES, CIRCLE NO IN THE BULIMIA NERVOSA AND IN THE ANOREXIA NERVOSA BINGE EATING/PURGING TYPE DIAGNOSTIC BOXES. BUT IF ANOREXIA NERVOSA (MODULE L) IS CODED YES, CONTINUE WITH THE QUESTIONS TO BE ABLE TO PROPERLY CODE ANOREXIA NERVOSA RESTRICTING TYPE.",
+    "gateNote": {
+      "en": "If M1 is No, circle No in both the Bulimia Nervosa box and the Anorexia Nervosa Binge-Eating/Purging Type box; if Anorexia Nervosa (Module L) was coded Yes, continue with the questions to properly code Anorexia Nervosa Restricting Type.",
+      "hi": "यदि M1 'नहीं', तो बुलिमिया नर्वोसा एवं एनोरेक्सिया नर्वोसा बिंज-ईटिंग/पर्जिंग-टाइप दोनों बक्सेस में 'नहीं' घेरें; यदि एनोरेक्सिया नर्वोसा (माड्यूल L) 'हाँ' कोडित है, तो रेस्ट्रिक्टिंग-टाइप सही ढंग से कोड करने हेतु प्रश्न जारी रखें।"
+    }
+  },
+  "m2": {
+    "id": "M2",
+    "text": {
+      "en": "During these binges, did you feel that your eating was out of control?",
+      "hi": "इन प्रपातों के दौरान, क्या आपको लगा कि आपका भोजन नियंत्रण से बाहर था?"
+    }
+  },
+  "pastThreeMonthsIntro": {
+    "en": "In the past 3 months:",
+    "hi": "पिछले 3 माह में:"
+  },
+  "m3": {
+    "id": "M3",
+    "text": {
+      "en": "Did you have eating binges as often as once a week?",
+      "hi": "क्या आपको सप्ताह में कम से कम एक बार भोजन-प्रपात हुए?"
+    }
+  },
+  "m4": {
+    "id": "M4",
+    "text": {
+      "en": "Did you do anything to compensate for, or to prevent a weight gain, like vomiting, fasting, exercising or taking laxatives, enemas, diuretics (fluid pills), or other medications? Did you do this as often as once a week?",
+      "hi": "क्या आपने वज़न बढ़ने से रोकने/क्षतिपूर्ति हेतु कुछ किया — जैसे उल्टी, उपवास, व्यायाम, या लैक्सेटिव, एनिमा, डाययूरेटिक (फ्लुइड पिल्स) अथवा अन्य दवाएँ लेना? क्या यह सप्ताह में कम से कम एक बार किया?"
+    }
+  },
+  "m4a": {
+    "id": "M4a",
+    "numeric": true,
+    "max": 99,
+    "text": {
+      "en": "M4a — number recorded here refers to the frequency of inappropriate compensatory behaviours (episodes per week); see M6.",
+      "hi": "M4a — यहाँ अंकित संख्या अनुचित क्षतिपूर्ति-व्यवहारों की आवृत्ति (सप्ताह में एपिसोड) दर्शाती है; M6 देखें।"
+    }
+  },
+  "m5": {
+    "id": "M5",
+    "text": {
+      "en": "Did your body weight or shape greatly influence how you felt about yourself?",
+      "hi": "क्या आपके शारीरिक वज़न/आकार ने स्वयं के प्रति आपकी भावना को बहुत प्रभावित किया?"
+    }
+  },
+  "m6Episodes": {
+    "id": "M6a",
+    "numeric": true,
+    "max": 99,
+    "text": {
+      "en": "Number of episodes of inappropriate compensatory behaviors per week?",
+      "hi": "प्रति सप्ताह अनुचित क्षतिपूर्ति-व्यवहारों के एपिसोड की संख्या?"
+    }
+  },
+  "m6Days": {
+    "id": "M6b",
+    "numeric": true,
+    "max": 7,
+    "text": {
+      "en": "Number of days of inappropriate compensatory behaviors per week?",
+      "hi": "प्रति सप्ताह अनुचित क्षतिपूर्ति-व्यवहारों वाले दिनों की संख्या?"
+    }
+  },
+  "m7": {
+    "id": "M7",
+    "text": {
+      "en": "Did these binges occur only when you were under the threshold weight (write in the threshold weight for this patient's height from the height/weight table in the Anorexia Nervosa module)?",
+      "hi": "क्या ये प्रपात केवल तभी हुए जब आप सीमा-वज़न (माड्यूल L की ऊँचाई/वज़न सारणी से इस रोगी की ऊँचाई हेतु सीमा-वज़न यहाँ लिखें) से कम पर थे?"
+    }
+  },
+  "m8Gate": {
+    "rule": "IF NOT (M5 Yes AND (M6 No OR M7 No)) -> Bulimia Nervosa NO.",
+    "text": {
+      "en": "Is M5 coded Yes AND is either M6 or M7 coded No?",
+      "hi": "क्या M5 'हाँ' कोडित है और क्या M6 या M7 में से कोई भी 'नहीं' कोडित है?"
+    }
+  },
+  "specifierNote": {
+    "en": "Specifiers of eating disorder: MILD = 1-3 episodes of inappropriate compensatory behaviors; MODERATE = 4-7; SEVERE = 8-13; EXTREME = 14 or more.",
+    "hi": "भोजन-विकार विशेषण: मृदु = अनुचित क्षतिपूर्ति-व्यवहारों के 1-3 एपिसोड; मध्यम = 4-7; गंभीर = 8-13; अत्यंत गंभीर = 14 या अधिक।"
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "M_diag",
+      "label": {
+        "en": "Bulimia Nervosa — Current",
+        "hi": "बुलिमिया नर्वोसा — वर्तमान"
+      },
+      "rule": "M1 Yes AND M2 Yes AND M8 gate Yes (M5 Yes AND either M6 or M7 No). Severity by weekly episodes of inappropriate compensatory behaviors (1-3 mild, 4-7 moderate, 8-13 severe, 14+ extreme).",
+      "flags": [
+        "CURRENT",
+        "MILD",
+        "MODERATE",
+        "SEVERE",
+        "EXTREME"
+      ],
+      "disordersOnPositive": [
+        "eating_bulimia"
+      ]
+    },
+    {
+      "id": "M_an_bept_diag",
+      "label": {
+        "en": "Anorexia Nervosa, Binge Eating/Purging Type — Current",
+        "hi": "एनोरेक्सिया नर्वोसा, बिंज-ईटिंग/पर्जिंग प्रकार — वर्तमान"
+      },
+      "rule": "Asked only if Module L (Anorexia Nervosa) was coded Yes: M7 Yes (binges occurred only while underweight) -> Binge-Eating/Purging Type; otherwise continue to code Restricting Type.",
+      "flags": [
+        "CURRENT"
+      ],
+      "disordersOnPositive": [
+        "eating_anorexia"
+      ]
+    },
+    {
+      "id": "M_an_restrict_diag",
+      "label": {
+        "en": "Anorexia Nervosa, Restricting Type — Current",
+        "hi": "एनोरेक्सिया नर्वोसा, रेस्ट्रिक्टिंग प्रकार — वर्तमान"
+      },
+      "rule": "Do the patient's symptoms meet criteria for Anorexia Nervosa? AND is M2 or M4 coded No? (Patient has not been regularly bingeing or purging.)",
+      "flags": [
+        "CURRENT"
+      ],
+      "disordersOnPositive": [
+        "eating_anorexia"
+      ]
+    }
+  ]
+}

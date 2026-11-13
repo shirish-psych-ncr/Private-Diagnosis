@@ -1,0 +1,141 @@
+{
+  "id": "ftnd",
+  "name": "Fagerström Test for Nicotine Dependence (FTND)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Choose one answer for each item. Add the displayed item scores (maximum 10). This measure supports tobacco-dependence assessment; it does not prescribe treatment.",
+  "parts": [
+    {
+      "name": "Tobacco use",
+      "questions": [
+        {
+          "id": "ftnd_1",
+          "text": "How soon after waking do you smoke your first cigarette?",
+          "scale": [
+            {
+              "v": 3,
+              "label": "Within 5 minutes"
+            },
+            {
+              "v": 2,
+              "label": "5–30 minutes"
+            },
+            {
+              "v": 1,
+              "label": "31–60 minutes"
+            },
+            {
+              "v": 0,
+              "label": "After 60 minutes"
+            }
+          ]
+        },
+        {
+          "id": "ftnd_2",
+          "text": "Do you find it difficult to refrain from smoking in places where it is forbidden?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "ftnd_3",
+          "text": "Which cigarette would you hate most to give up?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "The first in the morning"
+            },
+            {
+              "v": 0,
+              "label": "Any other"
+            }
+          ]
+        },
+        {
+          "id": "ftnd_4",
+          "text": "How many cigarettes a day do you smoke?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "10 or fewer"
+            },
+            {
+              "v": 1,
+              "label": "11–20"
+            },
+            {
+              "v": 2,
+              "label": "21–30"
+            },
+            {
+              "v": 3,
+              "label": "31 or more"
+            }
+          ]
+        },
+        {
+          "id": "ftnd_5",
+          "text": "Do you smoke more frequently in the morning?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "ftnd_6",
+          "text": "Do you smoke even if you are so ill that you are in bed most of the day?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceInstrument": "Fagerström Test for Nicotine Dependence",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "timeframe": "Current smoking pattern",
+  "responseMin": 0,
+  "responseMax": 3,
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "FTND total",
+        "ids": [
+          "ftnd_1",
+          "ftnd_2",
+          "ftnd_3",
+          "ftnd_4",
+          "ftnd_5",
+          "ftnd_6"
+        ],
+        "max": 10,
+        "severity": "Dependence score; interpret clinically"
+      }
+    ]
+  },
+  "attribution": "Fagerström Test for Nicotine Dependence, supplied form.",
+  "interpretationNote": "Score ranges and treatment decisions should be interpreted by a clinician; this form does not generate a medication recommendation."
+}

@@ -12,7 +12,7 @@
     "hi": "पिछले कई माह के शारीरिक लक्षण एवं चिकित्सा-संपर्क।"
   },
   "help": {
-    "en": "Endorse either question to open the corresponding rating instrument: the PHQ-15 somatic severity index and/or the FAC22-SR factitious-disorder screen. Both are screening/severity measures and never establish a diagnosis by themselves.",
+    "en": "The PHQ-15 and FAC22-SR are opened by their screen-in prompts. You may also choose the Whiteley Index to record health-related concerns. These measures do not establish a diagnosis.",
     "hi": "किसी भी प्रश्न को स्वीकार करने पर संगत मापनी खुलेगी: PHQ-15 शारीरिक तीव्रता सूचकांक एवं/अथवा FAC22-SR भत्रुण-रोग स्क्रीन। दोनों स्क्रीन/तीव्रता माप हैं; स्वयं रोग-निर्णय नहीं करते।"
   },
   "questions": [
@@ -42,5 +42,6 @@
         "somatic_symptom_disorder"
       ]
     }
-  ]
+  ],
+  "forms": ["whiteley_index"]
 }

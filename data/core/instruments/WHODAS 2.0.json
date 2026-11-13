@@ -1,0 +1,10 @@
+{
+  "name": "WHO Disability Assessment Schedule 2.0 — Self-Report (36-item)",
+  "description": {
+    "en": "36-item, past-30-day self-report measure of functioning across six domains. This implementation reports simple summed scores and does not use the WHO IRT conversion.",
+    "hi": "छह क्षेत्रों में कार्यक्षमता का 36-आइटम, गत-30-दिन स्व-रिपोर्ट माप। यह सरल योग स्कोर देता है और WHO IRT रूपांतरण का उपयोग नहीं करता।"
+  },
+  "domains": ["functional_impairment"],
+  "duration": "About 20 minutes",
+  "scaleId": "whodas_36"
+}

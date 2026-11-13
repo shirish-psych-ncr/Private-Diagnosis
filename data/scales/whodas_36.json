@@ -1,0 +1,92 @@
+{
+  "id": "whodas_36",
+  "name": "WHO Disability Assessment Schedule 2.0 — Self-Report (36-item)",
+  "type": "questionnaire",
+  "sourceInstrument": "WHODAS 2.0 Self-Report",
+  "version": "WHODAS 2.0, 36-item",
+  "timeframe": "Past 30 days",
+  "administeredBy": "self-report",
+  "ageGroups": ["adult", "older"],
+  "directions": "Consider difficulties due to health conditions, including illnesses, injuries, mental or emotional problems, and problems with alcohol or drugs. Rate each activity over the past 30 days. Use the simple summed scoring method; no IRT conversion is applied.",
+  "matrixOptions": [
+    { "v": 0, "label": "0 — None" },
+    { "v": 1, "label": "1 — Mild" },
+    { "v": 2, "label": "2 — Moderate" },
+    { "v": 3, "label": "3 — Severe" },
+    { "v": 4, "label": "4 — Extreme or cannot do" }
+  ],
+  "parts": [
+    { "id": "cognition", "name": "Domain 1 — Cognition", "questions": [
+      { "id": "WH1", "itemNumber": 1, "text": "Concentrating on doing something for ten minutes?" },
+      { "id": "WH2", "itemNumber": 2, "text": "Remembering to do important things?" },
+      { "id": "WH3", "itemNumber": 3, "text": "Analysing and finding solutions to problems in day-to-day life?" },
+      { "id": "WH4", "itemNumber": 4, "text": "Learning a new task, for example, learning how to get to a new place?" },
+      { "id": "WH5", "itemNumber": 5, "text": "Generally understanding what people say?" },
+      { "id": "WH6", "itemNumber": 6, "text": "Starting and maintaining a conversation?" }
+    ]},
+    { "id": "mobility", "name": "Domain 2 — Mobility", "questions": [
+      { "id": "WH7", "itemNumber": 7, "text": "Standing for long periods such as 30 minutes?" },
+      { "id": "WH8", "itemNumber": 8, "text": "Standing up from sitting down?" },
+      { "id": "WH9", "itemNumber": 9, "text": "Moving around inside your home?" },
+      { "id": "WH10", "itemNumber": 10, "text": "Getting out of your home?" },
+      { "id": "WH11", "itemNumber": 11, "text": "Walking a long distance such as a kilometre (or equivalent)?" }
+    ]},
+    { "id": "selfcare", "name": "Domain 3 — Self-care", "questions": [
+      { "id": "WH12", "itemNumber": 12, "text": "Washing your whole body?" },
+      { "id": "WH13", "itemNumber": 13, "text": "Getting dressed?" },
+      { "id": "WH14", "itemNumber": 14, "text": "Eating?" },
+      { "id": "WH15", "itemNumber": 15, "text": "Staying by yourself for a few days?" }
+    ]},
+    { "id": "getting_along", "name": "Domain 4 — Getting along", "questions": [
+      { "id": "WH16", "itemNumber": 16, "text": "Dealing with people you do not know?" },
+      { "id": "WH17", "itemNumber": 17, "text": "Maintaining a friendship?" },
+      { "id": "WH18", "itemNumber": 18, "text": "Getting along with people who are close to you?" },
+      { "id": "WH19", "itemNumber": 19, "text": "Making new friends?" },
+      { "id": "WH20", "itemNumber": 20, "text": "Sexual activities?" }
+    ]},
+    { "id": "life_household", "name": "Domain 5 — Life activities: household", "questions": [
+      { "id": "WH21", "itemNumber": 21, "text": "Taking care of your household responsibilities?" },
+      { "id": "WH22", "itemNumber": 22, "text": "Doing your most important household tasks well?" },
+      { "id": "WH23", "itemNumber": 23, "text": "Getting all the household work done that you needed to do?" },
+      { "id": "WH24", "itemNumber": 24, "text": "Getting your household work done as quickly as needed?" }
+    ]},
+    { "id": "work_gate", "name": "Work or school items", "options": [
+      { "v": 0, "label": "No" }, { "v": 1, "label": "Yes" }
+    ], "questions": [
+      { "id": "WH_WORK", "text": "Do you work (paid, unpaid, or self-employed) or go to school?" }
+    ]},
+    { "id": "life_work", "name": "Domain 5 — Life activities: work / school", "questions": [
+      { "id": "WH25", "itemNumber": 25, "requires": "WH_WORK", "requiresPositive": true, "text": "Because of your health condition, how much difficulty did you have with your day-to-day work or school?" },
+      { "id": "WH26", "itemNumber": 26, "requires": "WH_WORK", "requiresPositive": true, "text": "Because of your health condition, how much difficulty did you have doing your most important work or school tasks well?" },
+      { "id": "WH27", "itemNumber": 27, "requires": "WH_WORK", "requiresPositive": true, "text": "Because of your health condition, how much difficulty did you have getting all the work done that you needed to do?" },
+      { "id": "WH28", "itemNumber": 28, "requires": "WH_WORK", "requiresPositive": true, "text": "Because of your health condition, how much difficulty did you have getting your work done as quickly as needed?" }
+    ]},
+    { "id": "participation", "name": "Domain 6 — Participation", "questions": [
+      { "id": "WH29", "itemNumber": 29, "text": "How much of a problem did you have joining in community activities (for example, festivities, religious or other activities) in the same way as anyone else can?" },
+      { "id": "WH30", "itemNumber": 30, "text": "How much of a problem did you have because of barriers or hindrances in the world around you?" },
+      { "id": "WH31", "itemNumber": 31, "text": "How much of a problem did you have living with dignity because of the attitudes and actions of others?" },
+      { "id": "WH32", "itemNumber": 32, "text": "How much time did you spend on your health condition or its consequences?" },
+      { "id": "WH33", "itemNumber": 33, "text": "How much were you emotionally affected by your health condition?" },
+      { "id": "WH34", "itemNumber": 34, "text": "How much has your health condition been a drain on the financial resources of you or your family?" },
+      { "id": "WH35", "itemNumber": 35, "text": "How much of a problem did your family have because of your health problems?" },
+      { "id": "WH36", "itemNumber": 36, "text": "How much of a problem did you have doing things by yourself for relaxation or pleasure?" }
+    ]},
+    { "id": "days", "name": "Days affected", "questions": [
+      { "id": "WH37", "itemNumber": 37, "inputType": "number", "min": 0, "max": 30, "text": "Overall, in the past 30 days, how many days were these difficulties present?" },
+      { "id": "WH38", "itemNumber": 38, "inputType": "number", "min": 0, "max": 30, "text": "For how many days were you totally unable to carry out your usual activities or work because of any health condition?" },
+      { "id": "WH39", "itemNumber": 39, "inputType": "number", "min": 0, "max": 30, "text": "Not counting days you were totally unable, for how many days did you cut back or reduce your usual activities or work because of any health condition?" }
+    ]}
+  ],
+  "scoringProfile": {
+    "method": "simple_sum",
+    "note": "The simple score sums the 0-4 responses without item weighting. For respondents not working or attending school, items 25-28 are skipped. The day-count items are descriptive and are not part of the 36-item score. The IRT-based score is not calculated.",
+    "domains": {
+      "Cognition": [1, 2, 3, 4, 5, 6],
+      "Mobility": [7, 8, 9, 10, 11],
+      "Self-care": [12, 13, 14, 15],
+      "Getting along": [16, 17, 18, 19, 20],
+      "Life activities": [21, 22, 23, 24, 25, 26, 27, 28],
+      "Participation": [29, 30, 31, 32, 33, 34, 35, 36]
+    }
+  }
+}

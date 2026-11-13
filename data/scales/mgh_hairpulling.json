@@ -1,0 +1,36 @@
+{
+  "id": "mgh_hairpulling",
+  "name": "Massachusetts General Hospital (MGH) Hairpulling Scale",
+  "type": "questionnaire",
+  "sourceInstrument": "MGH Hairpulling Scale",
+  "timeframe": "Past week",
+  "administeredBy": "self-report",
+  "ageGroups": ["adult", "older"],
+  "directions": "For each question, choose the one statement that best describes your behaviors or feelings over the past week. If they varied, estimate an average and read every response option before choosing.",
+  "matrixOptions": [
+    { "v": 0, "label": "0" },
+    { "v": 1, "label": "1" },
+    { "v": 2, "label": "2" },
+    { "v": 3, "label": "3" },
+    { "v": 4, "label": "4" }
+  ],
+  "parts": [
+    {
+      "name": "Urges, hair pulling, and distress",
+      "questions": [
+        { "id": "MGH1", "itemNumber": 1, "text": "Frequency of urges: On an average day, how often did you feel the urge to pull your hair?", "scale": [{ "v": 0, "label": "No urges" }, { "v": 1, "label": "Occasional urge" }, { "v": 2, "label": "Often" }, { "v": 3, "label": "Very often" }, { "v": 4, "label": "Near-constant urges" }] },
+        { "id": "MGH2", "itemNumber": 2, "text": "Intensity of urges: On an average day, how intense or strong were the urges to pull your hair?", "scale": [{ "v": 0, "label": "No urges" }, { "v": 1, "label": "Mild" }, { "v": 2, "label": "Moderate" }, { "v": 3, "label": "Severe" }, { "v": 4, "label": "Extreme" }] },
+        { "id": "MGH3", "itemNumber": 3, "text": "Ability to control urges: On an average day, how much control did you have over the urges to pull your hair?", "scale": [{ "v": 0, "label": "Always controlled them, or had no urges" }, { "v": 1, "label": "Could distract myself most of the time" }, { "v": 2, "label": "Could distract myself some of the time" }, { "v": 3, "label": "Could rarely distract myself" }, { "v": 4, "label": "Could never distract myself" }] },
+        { "id": "MGH4", "itemNumber": 4, "text": "Frequency of hair pulling: On an average day, how often did you actually pull your hair?", "scale": [{ "v": 0, "label": "Did not pull hair" }, { "v": 1, "label": "Occasionally" }, { "v": 2, "label": "Often" }, { "v": 3, "label": "Very often" }, { "v": 4, "label": "So often it felt almost constant" }] },
+        { "id": "MGH5", "itemNumber": 5, "text": "Attempts to resist: On an average day, how often did you try to stop yourself from actually pulling your hair?", "scale": [{ "v": 0, "label": "No urges" }, { "v": 1, "label": "Tried to resist almost all of the time" }, { "v": 2, "label": "Tried to resist some of the time" }, { "v": 3, "label": "Tried to resist rarely" }, { "v": 4, "label": "Never tried to resist" }] },
+        { "id": "MGH6", "itemNumber": 6, "text": "Control over hair pulling: On an average day, how often were you successful at stopping yourself from pulling your hair?", "scale": [{ "v": 0, "label": "Did not pull hair" }, { "v": 1, "label": "Resisted almost all of the time" }, { "v": 2, "label": "Resisted most of the time" }, { "v": 3, "label": "Resisted some of the time" }, { "v": 4, "label": "Rarely able to resist" }] },
+        { "id": "MGH7", "itemNumber": 7, "text": "Associated distress: During the past week, how uncomfortable did your hair pulling make you feel?", "scale": [{ "v": 0, "label": "Not uncomfortable" }, { "v": 1, "label": "Vaguely uncomfortable" }, { "v": 2, "label": "Noticeably uncomfortable" }, { "v": 3, "label": "Significantly uncomfortable" }, { "v": 4, "label": "Intensely uncomfortable" }] }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "method": "sum_items",
+    "range": "0-28",
+    "note": "The supplied form contains seven 0-4 items. No diagnostic cutoff is supplied."
+  }
+}

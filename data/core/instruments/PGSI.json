@@ -1,0 +1,10 @@
+{
+  "name": "PGSI",
+  "description": {
+    "en": "Nine-item gambling-related harms screen referring to the past 12 months."
+  },
+  "domains": [
+    "gambling"
+  ],
+  "scaleId": "pgsi"
+}

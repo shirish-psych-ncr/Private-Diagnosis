@@ -1,0 +1,226 @@
+[
+  {
+    "id": "B1",
+    "points": 0,
+    "text": {
+      "en": "Have any accident? This includes taking too much of your medication accidentally.",
+      "hi": "क्या कोई दुर्घटना हुई? इसमें दवा की अधिक मात्रा संयोगवश लेना भी शामिल है।"
+    },
+    "note": {
+      "en": "If No to B1, skip to B2.",
+      "hi": "यदि B1 'नहीं', तो B2 पर जाएँ।"
+    }
+  },
+  {
+    "id": "B1a",
+    "points": 0,
+    "visibleWhen": "B1 == 1",
+    "text": {
+      "en": "Plan or intend to hurt yourself in any accident, either by not avoiding a risk or by causing the accident on purpose?",
+      "hi": "क्या किसी दुर्घटना में खुद को चोट पहुँचाने की योजना या इच्छा थी — जोखिम न टालकर या जानबूझकर दुर्घटना करके?"
+    }
+  },
+  {
+    "id": "B1b",
+    "points": 0,
+    "visibleWhen": "B1a == 1",
+    "text": {
+      "en": "Intend to die as a result of any accident?",
+      "hi": "क्या किसी दुर्घटना के परिणामस्वरूप मरने का इरादा था?"
+    }
+  },
+  {
+    "id": "B2",
+    "points": 1,
+    "text": {
+      "en": "Think (even momentarily) that you would be better off dead or wish you were dead or needed to be dead?",
+      "hi": "क्या (क्षण भर के लिए भी) सोचा कि मर जाना बेहतर होता, या काश आप मर चुके होते, या आपको मरना चाहिए?"
+    }
+  },
+  {
+    "id": "B3",
+    "points": 6,
+    "text": {
+      "en": "Think (even momentarily) about harming or hurting or injuring yourself — with at least some intent or awareness that you might die as a result — or think about suicide (i.e., about killing yourself)?",
+      "hi": "क्या (क्षण भर के लिए भी) खुद को नुकसान/चोट पहुँचाने के बारे में सोचा — कम से कम कुछ इरादे या मरने की संभावना की जानकारी के साथ — या आत्महत्या के बारे में सोचा?"
+    }
+  },
+  {
+    "id": "Bfreq",
+    "points": null,
+    "nonScoring": true,
+    "visibleWhen": "B2 == 1 OR B3 == 1",
+    "text": {
+      "en": "How often? (Frequency of suicidal thoughts/behaviors)",
+      "hi": "कितनी बार? (आत्मघाती विचार/व्यवहार की आवृत्ति)"
+    },
+    "options": [
+      {
+        "v": "occasionally",
+        "label": {
+          "en": "Occasionally",
+          "hi": "कभी-कभी"
+        }
+      },
+      {
+        "v": "often",
+        "label": {
+          "en": "Often",
+          "hi": "अक्सर"
+        }
+      },
+      {
+        "v": "veryoften",
+        "label": {
+          "en": "Very often",
+          "hi": "बहुत अक्सर"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Bint",
+    "points": null,
+    "nonScoring": true,
+    "visibleWhen": "B2 == 1 OR B3 == 1",
+    "text": {
+      "en": "How intense?",
+      "hi": "कितनी तीव्र?"
+    },
+    "options": [
+      {
+        "v": "mild",
+        "label": {
+          "en": "Mild",
+          "hi": "हल्की"
+        }
+      },
+      {
+        "v": "moderate",
+        "label": {
+          "en": "Moderate",
+          "hi": "मध्यम"
+        }
+      },
+      {
+        "v": "severe",
+        "label": {
+          "en": "Severe",
+          "hi": "गंभीर"
+        }
+      }
+    ]
+  },
+  {
+    "id": "B4",
+    "points": 4,
+    "text": {
+      "en": "Hear a voice or voices telling you to kill yourself, or have a dream with any suicidal content?",
+      "hi": "क्या आवाज़ सुनी जो कहती थी खुद को मार डालो, या कोई सपना जिसमें आत्मघाती सामग्री थी?"
+    },
+    "subChecks": [
+      {
+        "id": "B4voice",
+        "label": {
+          "en": "It was a voice or voices",
+          "hi": "यह आवाज़ थी"
+        }
+      },
+      {
+        "id": "B4dream",
+        "label": {
+          "en": "It was a dream",
+          "hi": "यह सपना था"
+        }
+      }
+    ]
+  },
+  {
+    "id": "B5",
+    "points": 8,
+    "text": {
+      "en": "Have a suicide method in mind (i.e., how)?",
+      "hi": "क्या तरीका तय है (कैसे)?"
+    }
+  },
+  {
+    "id": "B6",
+    "points": 8,
+    "text": {
+      "en": "Have a suicide means in mind (i.e., with what)?",
+      "hi": "क्या साधन तय है (किससे)?"
+    }
+  },
+  {
+    "id": "B7",
+    "points": 8,
+    "text": {
+      "en": "Have any place in mind to attempt suicide (i.e., where)?",
+      "hi": "क्या स्थान तय है (कहाँ)?"
+    }
+  },
+  {
+    "id": "B8",
+    "points": 8,
+    "text": {
+      "en": "Have any date/timeframe in mind to attempt suicide (i.e., when)?",
+      "hi": "क्या समय तय है (कब)?"
+    }
+  },
+  {
+    "id": "B9",
+    "points": 8,
+    "text": {
+      "en": "Think about any task you would like to complete before trying to kill yourself (e.g., writing a suicide note)?",
+      "hi": "क्या आत्महत्या से पहले पूरा करना चाहने वाला कोई कार्य सोचा (जैसे आत्महत्या पत्र लिखना)?"
+    }
+  },
+  {
+    "id": "B10",
+    "points": 8,
+    "text": {
+      "en": "Intend to act on thoughts of killing yourself?",
+      "hi": "क्या आत्महत्या के विचारों पर अमल का इरादा है?"
+    },
+    "subChecks": [
+      {
+        "id": "B10now",
+        "label": {
+          "en": "Intended to act at the time",
+          "hi": "उस समय अमल का इरादा"
+        }
+      },
+      {
+        "id": "B10future",
+        "label": {
+          "en": "Intended to act some time in the future",
+          "hi": "भविष्य में अमल का इरादा"
+        }
+      }
+    ]
+  },
+  {
+    "id": "B11",
+    "points": 8,
+    "text": {
+      "en": "Intend to die as a result of a suicidal act?",
+      "hi": "क्या आत्मघाती कृत्य से मरने का इरादा था?"
+    },
+    "subChecks": [
+      {
+        "id": "B11now",
+        "label": {
+          "en": "Intended to die at the time",
+          "hi": "उस समय मरने का इरादा"
+        }
+      },
+      {
+        "id": "B11future",
+        "label": {
+          "en": "Intended to die some time in the future",
+          "hi": "भविष्य में मरने का इरादा"
+        }
+      }
+    ]
+  }
+]

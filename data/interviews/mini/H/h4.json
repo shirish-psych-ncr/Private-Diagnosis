@@ -1,0 +1,51 @@
+[
+  {
+    "id": "H4a",
+    "text": {
+      "en": "Did you have trouble recalling some important part of the trauma? (but not because of or related to head trauma, alcohol or drugs).",
+      "hi": "क्या आघात के किसी महत्वपूर्ण भाग को याद करने में कठिनाई हुई? (शिर-आघात/शराब/नशे से संबंधित कारण नहीं)।"
+    }
+  },
+  {
+    "id": "H4b",
+    "text": {
+      "en": "Were you constantly and unreasonably negative about yourself or others or the world?",
+      "hi": "क्या आप सतत और अनुचित रूप से स्वयं/दूसरों/संसार के प्रति नकारात्मक रहे?"
+    }
+  },
+  {
+    "id": "H4c",
+    "text": {
+      "en": "Did you constantly blame yourself or others in unreasonable ways for the trauma?",
+      "hi": "क्या आप सतत अनुचित ढंग से आघात हेतु स्वयं/दूसरों को दोष देते रहे?"
+    }
+  },
+  {
+    "id": "H4d",
+    "text": {
+      "en": "Were your feelings always negative (such as fear, horror, anger, guilt or shame)?",
+      "hi": "क्या भावनाएँ सदैव नकारात्मक रहीं (भय, आतंक, क्रोध, अपराधबोध, शर्म)?"
+    }
+  },
+  {
+    "id": "H4e",
+    "text": {
+      "en": "Have you become much less interested in participating in activities that were meaningful to you before?",
+      "hi": "क्या पहले अर्थपूर्ण रही गतिविधियों में भाग लेने की रुचि बहुत कम हो गई?"
+    }
+  },
+  {
+    "id": "H4f",
+    "text": {
+      "en": "Did you feel detached or estranged from others?",
+      "hi": "क्या दूसरों से विपृक्त/परभासित महसूस किया?"
+    }
+  },
+  {
+    "id": "H4g",
+    "text": {
+      "en": "Were you unable to experience any good feelings (such as happiness, satisfaction or loving feelings)?",
+      "hi": "क्या कोई सकारात्मक भावनाएँ (सुख, संतोष, प्रेम) अनुभव करना संभव नहीं रहा?"
+    }
+  }
+]

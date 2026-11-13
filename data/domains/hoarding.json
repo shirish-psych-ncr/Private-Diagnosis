@@ -1,0 +1,11 @@
+{
+  "id": "hoarding",
+  "name": {
+    "en": "Hoarding and difficulty discarding",
+    "hi": "वस्तुएँ जमा करना और त्यागने में कठिनाई"
+  },
+  "tier": 2,
+  "description": "Self-report measure of clutter, difficulty discarding, and acquisition during the past week.",
+  "questions": [],
+  "forms": ["si_r_modified"]
+}

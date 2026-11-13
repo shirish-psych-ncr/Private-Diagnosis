@@ -124,6 +124,26 @@ function renderResults() {
         rc.appendChild(note);
     });
 
+    r.instrumentResults.filter(x => x.eventRegister && x.eventRegister.length).forEach(reg => {
+        const h = document.createElement('h4');
+        h.textContent = reg.name;
+        rc.appendChild(h);
+        const t = document.createElement('table');
+        t.className = 'clinician-table rating-register';
+        const trh = document.createElement('tr');
+        ['Event', 'Response recorded'].forEach(label => {
+            const th = document.createElement('th'); th.textContent = label; trh.appendChild(th);
+        });
+        t.appendChild(trh);
+        reg.eventRegister.forEach(row => {
+            const tr = document.createElement('tr');
+            const td1 = document.createElement('td'); td1.textContent = row.label;
+            const td2 = document.createElement('td'); td2.textContent = row.value;
+            tr.append(td1, td2); t.appendChild(tr);
+        });
+        rc.appendChild(t);
+    });
+
     // Personality-screen registers (IPDE modules / PDQ-4+ profile)
     r.instrumentResults.filter(x => x.pdRegister && x.pdRegister.rows.length).forEach(reg => {
         const h = document.createElement('h4');

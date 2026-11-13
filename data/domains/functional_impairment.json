@@ -6,12 +6,8 @@
   },
   "tier": 5,
   "description": {
-    "en": "Optional MINI disability / functional impairment table plus the Work and Social Adjustment Scale (WSAS).",
-    "hi": "वैकल्पिक MINI अक्षमता / कार्यात्मक हानि तालिका तथा कार्य एवं सामाजिक समायोजन मापनी (WSAS)।"
-  },
-  "timeframe": {
-    "en": "Rate each row independently from 0 (not present) to 10 (extreme) in the score column.",
-    "hi": "प्रत्येक पंक्ति को स्वतंत्र रूप से 0 (अनुपस्थित) से 10 (अत्यधिक) तक स्कोर कॉलम में रेट करें।"
+    "en": "Choose a measure of day-to-day functioning: the optional MINI clinician rating, the Work and Social Adjustment Scale (WSAS), or the WHO Disability Assessment Schedule (WHODAS 2.0). Each form uses its own rating scale and timeframe.",
+    "hi": "दैनिक कार्यक्षमता हेतु मापनी चुनें: वैकल्पिक MINI चिकित्सक रेटिंग, WSAS, या WHO Disability Assessment Schedule (WHODAS 2.0)। प्रत्येक फ़ॉर्म का अलग रेटिंग पैमाना और समय-सीमा है।"
   },
   "instrument": "auto:minioptional",
   "instruments": [
@@ -32,6 +28,7 @@
     }
   ],
   "forms": [
-    "wsas"
+    "wsas",
+    "whodas_36"
   ]
 }

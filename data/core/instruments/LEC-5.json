@@ -1,0 +1,10 @@
+{
+  "name": "Life Events Checklist for DSM-5 (LEC-5)",
+  "description": {
+    "en": "Lifetime event-exposure history. Respondents can select multiple exposure types for each event. No total score is produced.",
+    "hi": "जीवनभर की घटना-अनावरण जानकारी। प्रत्येक घटना के लिए एक से अधिक प्रकार चुने जा सकते हैं। कोई कुल स्कोर नहीं बनता।"
+  },
+  "domains": ["trauma"],
+  "duration": "5-10 minutes",
+  "scaleId": "lec5"
+}

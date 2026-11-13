@@ -1,0 +1,10 @@
+{
+  "name": "Fagerström Test for Nicotine Dependence",
+  "description": {
+    "en": "Six-item tobacco-dependence measure."
+  },
+  "domains": [
+    "substance"
+  ],
+  "scaleId": "ftnd"
+}

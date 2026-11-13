@@ -1,0 +1,416 @@
+[
+  {
+    "id": "isas_fn_1",
+    "text": "When I self-harm, I am … Calming myself down",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_2",
+    "text": "When I self-harm, I am … Creating a boundary between myself and others",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_3",
+    "text": "When I self-harm, I am … Punishing myself",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_4",
+    "text": "When I self-harm, I am … Giving myself a way to care for myself by attending to the wound",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_5",
+    "text": "When I self-harm, I am … Causing pain so I will stop feeling numb",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_6",
+    "text": "When I self-harm, I am … Avoiding the impulse to attempt suicide",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_7",
+    "text": "When I self-harm, I am … Doing something to generate excitement or exhilaration",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_8",
+    "text": "When I self-harm, I am … Bonding with peers",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_9",
+    "text": "When I self-harm, I am … Letting others know the extent of my emotional pain",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_10",
+    "text": "When I self-harm, I am … Seeing if I can stand the pain",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_11",
+    "text": "When I self-harm, I am … Creating a physical sign that I feel awful",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_12",
+    "text": "When I self-harm, I am … Getting back at someone",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_13",
+    "text": "When I self-harm, I am … Ensuring that I am self-sufficient",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_14",
+    "text": "When I self-harm, I am … Releasing emotional pressure that has built up inside of me",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_15",
+    "text": "When I self-harm, I am … Demonstrating that I am separate from other people",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_16",
+    "text": "When I self-harm, I am … Expressing anger toward myself for being worthless or stupid",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_17",
+    "text": "When I self-harm, I am … Creating a physical injury that is easier to care for than my emotional distress",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_18",
+    "text": "When I self-harm, I am … Trying to feel something (as opposed to nothing), even if it is physical pain",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_19",
+    "text": "When I self-harm, I am … Responding to suicidal thoughts without actually attempting suicide",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_20",
+    "text": "When I self-harm, I am … Entertaining myself or others by doing something extreme",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_21",
+    "text": "When I self-harm, I am … Fitting in with others",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_22",
+    "text": "When I self-harm, I am … Seeking care or help from others",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_23",
+    "text": "When I self-harm, I am … Demonstrating I am tough or strong",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  }
+]

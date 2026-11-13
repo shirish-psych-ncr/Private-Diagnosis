@@ -1,0 +1,228 @@
+{
+  "id": "C",
+  "name": {
+    "en": "Module C — Manic and Hypomanic Episodes",
+    "hi": "माड्यूल C — मैैनिक और हाइपोमैैनिक एपिसोड"
+  },
+  "familyHistoryProbe": {
+    "id": "C0",
+    "nonScoring": true,
+    "text": {
+      "en": "Do you have any family history of manic-depressive illness or bipolar disorder, or any family member who had mood swings treated with a medication like lithium, sodium valproate (Depakote) or lamotrigine (Lamictal)? (Not a criterion; asked to increase vigilance.)",
+      "hi": "क्या परिवार में मैैनिक-डिप्रेसिव बीमारी या बाइपोलर विकार का इतिहास है, या कोई सदस्य जिसके मूड स्विंग लिथियम, सोडियम वैप्रोएट या लैामोट्रिजिन से उपचारित हुए? (यह मानदंड नहीं; सतर्कता हेतु।)"
+    }
+  },
+  "screen": {
+    "$file": "data/interviews/mini/C/screen.json"
+  },
+  "exploreNote": {
+    "en": "If C1b or C2b = Yes: explore the CURRENT episode first, then the most symptomatic PAST episode. Otherwise explore only the most symptomatic PAST episode.",
+    "hi": "यदि C1b या C2b = हाँ: पहले वर्तमान, फिर सबसे लक्षण-प्रधान अतीत की जाँच करें। अन्यथा केवल सबसे लक्षण-प्रधान अतीत की।"
+  },
+  "timeframes": [
+    {
+      "id": "current",
+      "label": {
+        "en": "Current Episode",
+        "hi": "वर्तमान एपिसोड"
+      }
+    },
+    {
+      "id": "past",
+      "label": {
+        "en": "Past Episode",
+        "hi": "अतीत का एपिसोड"
+      }
+    }
+  ],
+  "symptomsIntro": {
+    "en": "During that period, when you felt high and full of energy or irritable, did you:",
+    "hi": "उस अवधि में, जब आप हाई, ऊर्जावान या चिड़चिड़े थे, क्या आप:"
+  },
+  "criteria": [
+    {
+      "id": "C3a",
+      "text": {
+        "en": "Feel that you could do things others couldn't do, or that you were an especially important person? (If yes, ask for examples; look for delusional ideas.)",
+        "hi": "क्या लगा कि दूसरों वाले काम आप कर सकते हैं, या आप विशेष रूप से महत्वपूर्ण व्यक्ति हैं? (हाँ पर उदाहरण पूछें; भ्रामक विचार खोजें।)"
+      }
+    },
+    {
+      "id": "C3b",
+      "text": {
+        "en": "Need less sleep (for example, feel rested after only a few hours sleep)?",
+        "hi": "सामान्य से कम नींद चाहिए थी (जैसे कुछ घंटे सोने पर भी सुस्तापन)?"
+      }
+    },
+    {
+      "id": "C3c",
+      "text": {
+        "en": "Talk too much without stopping, or felt a pressure to keep talking?",
+        "hi": "बिना रुके अधिक बोलते थे, या बोलने का दबाव महसूस किया?"
+      }
+    },
+    {
+      "id": "C3d",
+      "text": {
+        "en": "Notice your thoughts going very fast or running together or racing or moving very quickly from one subject to another?",
+        "hi": "विचार बहुत तेज़, एक-दूसरे में मिलते, दौड़ते, या विषय से विषय को तेज़ी से बदलते दिखे?"
+      }
+    },
+    {
+      "id": "C3e",
+      "text": {
+        "en": "Become easily distracted so that any little interruption could distract you?",
+        "hi": "थोड़ी सी रुकावट से भी ध्यान भटक जाता था?"
+      }
+    },
+    {
+      "id": "C3f",
+      "text": {
+        "en": "Have a significant increase in your activity or drive, at work, at school, socially or sexually, or did you become physically or mentally restless? This increase in activity may be with or without a purpose.",
+        "hi": "कार्य, विद्यालय, सामाजिक या यौन गतिविधि में महत्वपूर्ण वृद्धि, या शारीरिक/मानसिक बेचैनी? यह वृद्धि उद्देश्य के साथ या बिना हो सकती है।"
+      }
+    },
+    {
+      "id": "C3g",
+      "text": {
+        "en": "Want so much to engage in pleasurable activities that you ignored the risks or consequences (for example, spending sprees, reckless driving, or sexual indiscretions)?",
+        "hi": "सुखद कार्यों में इतना संलग्न होना चाहा कि जोखिम/परिणाम नज़रअंदाज़ हुए (अत्यधिक खर्च, लापरवाह ड्राइविंग, यौन अनुचित व्यवहार)?"
+      }
+    }
+  ],
+  "summaryRule": {
+    "en": "Elation/expansiveness requires 3+ of C3 (including C3f); irritable mood alone requires 4+ of C3 (including C3f). Symptoms must occur during the same time period.",
+    "hi": "उत्फुल्लता/विस्तारवादिता हेतु C3 (C3f सहित) के 3+ लक्षण आवश्यक; केवल चिड़चिड़े मूड हेतु 4+ लक्षण आवश्यक। सभी लक्षण एक ही समय-अवधि में घटित होने चाहिए।"
+  },
+  "duration": {
+    "id": "C4",
+    "perTimeframe": true,
+    "text": {
+      "en": "What is the longest time these symptoms lasted (most of the day, nearly every day)? Assess from the very start to the very end of symptoms, not just the peak.",
+      "hi": "ये लक्षण अधिकतम कितने समय तक रहे (दिन के अधिकतर समय, लगभग हर दिन)? शुरुआत से अंत तक मापें, केवल चरम नहीं।"
+    },
+    "options": [
+      {
+        "v": "a",
+        "label": {
+          "en": "3 consecutive days or less",
+          "hi": "3 लगातार दिन या कम"
+        }
+      },
+      {
+        "v": "b",
+        "label": {
+          "en": "4, 5 or 6 consecutive days",
+          "hi": "4, 5 या 6 लगातार दिन"
+        }
+      },
+      {
+        "v": "c",
+        "label": {
+          "en": "7 consecutive days or more",
+          "hi": "7 लगातार दिन या अधिक"
+        }
+      }
+    ]
+  },
+  "hospitalized": {
+    "id": "C5",
+    "perTimeframe": true,
+    "text": {
+      "en": "Were you hospitalized for these problems? (If Yes, code MANIC EPISODE Yes for that timeframe and go to C7.)",
+      "hi": "क्या इन्हीं समस्याओं हेतु अस्पताल में भर्ती होना पड़ा? (हाँ पर उस समय-सीमा हेतु मैैनिक एपिसोड 'हाँ' कोड करें और C7 पर जाएँ।)"
+    }
+  },
+  "impairment": {
+    "id": "C6",
+    "perTimeframe": true,
+    "text": {
+      "en": "Did these symptoms cause significant problems at home, at work, socially, in your relationships, at school or in some other important way?",
+      "hi": "क्या इन लक्षणों से घर, कार्य, सामाजिक, संबंधों, विद्यालय या अन्य महत्वपूर्ण क्षेत्र में महत्वपूर्ण समस्याएं हुईं?"
+    }
+  },
+  "changeOfFunction": {
+    "id": "C7",
+    "perTimeframe": true,
+    "text": {
+      "en": "Were these symptoms associated with a clear change in the way that you previously functioned and that was different from the way that you usually are?",
+      "hi": "क्या इन लक्षणों से पूर्व कार्यशैली में स्पष्ट परिवर्तन हुआ जो आपकी सामान्य प्रकृति से भिन्न था?"
+    }
+  },
+  "psychoticFeaturesRef": {
+    "en": "Any psychotic features in Module K (K1-K8) also satisfy the Manic Episode alternatives.",
+    "hi": "माड्यूल K (K1-K8) के किसी भ्रामक लक्षण भी मैैनिक एपिसोड के विकल्प पूर्ण करते हैं।"
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "C_diag_manic",
+      "label": {
+        "en": "Manic Episode",
+        "hi": "मैैनिक एपिसोड"
+      },
+      "rule": "C3 SUMMARY AND C7 AND (C4c OR C5 OR C6 OR any psychotic feature K1-K8) coded Yes; AND organic cause ruled out (O2 summary). Specify CURRENT and/or PAST.",
+      "flags": [
+        "CURRENT",
+        "PAST"
+      ],
+      "disordersOnPositive": [
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "C_diag_hypomanic",
+      "label": {
+        "en": "Hypomanic Episode",
+        "hi": "हाइपोमैैनिक एपिसोड"
+      },
+      "rule": "C3 SUMMARY Yes AND C5 No AND C6 No AND C7 Yes AND (C4b OR C4c) Yes; AND organic cause ruled out; AND all psychotic features K1-K8 No. If CURRENT Manic Yes -> CURRENT Hypomanic No; if PAST Manic Yes -> PAST Hypomanic Not Explored.",
+      "flags": [
+        "CURRENT",
+        "PAST",
+        "NOT EXPLORED"
+      ],
+      "disordersOnPositive": [
+        "bipolar_depressive"
+      ]
+    },
+    {
+      "id": "C_diag_hypomanic_symptoms",
+      "label": {
+        "en": "Hypomanic Symptoms",
+        "hi": "हाइपोमैैनिक लक्षण"
+      },
+      "rule": "C3 SUMMARY Yes AND C4a Yes AND C5 No. If current Manic/Hypomanic Yes -> current Hypomanic Symptoms No; if past Manic/Hypomanic Yes -> past Not Explored.",
+      "flags": [
+        "CURRENT",
+        "PAST",
+        "NOT EXPLORED"
+      ]
+    }
+  ],
+  "bipolarFollowUps": [
+    {
+      "id": "C8a",
+      "visibleWhen": "MANIC EPISODE positive (current or past)",
+      "text": {
+        "en": "Did you have 2 or more of these (manic) episodes lasting 7 days or more (C4c) in your lifetime (including the current episode if present)?",
+        "hi": "क्या जीवनभर में ऐसे 2+ मैैनिक एपिसोड हुए जो 7+ दिन रहे (C4c) (वर्तमान सहित)?"
+      }
+    },
+    {
+      "id": "C8b",
+      "visibleWhen": "MANIC or HYPOMANIC EPISODE positive (current or past)",
+      "text": {
+        "en": "Did you have 2 or more of these (hypomanic) episodes lasting 4 days or more (C4b) in your lifetime (including the current episode)?",
+        "hi": "क्या जीवनभर में ऐसे 2+ हाइपोमैैनिक एपिसोड हुए जो 4+ दिन रहे (C4b) (वर्तमान सहित)?"
+      }
+    },
+    {
+      "id": "C8c",
+      "visibleWhen": "past HYPOMANIC SYMPTOMS positive",
+      "text": {
+        "en": "Did you have these hypomanic symptoms lasting only 1 to 3 days (C4a) 2 or more times in your lifetime (including the current episode if present)?",
+        "hi": "क्या ये हाइपोमैैनिक लक्षण केवल 1–3 दिन (C4a) रहकर जीवनभर में 2+ बार हुए (वर्तमान सहित)?"
+      }
+    }
+  ]
+}

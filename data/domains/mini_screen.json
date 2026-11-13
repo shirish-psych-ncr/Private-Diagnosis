@@ -1,0 +1,10 @@
+{
+  "id": "mini_screen",
+  "name": "MINI Screen 5.0.0 (DSM-IV)",
+  "tier": 1,
+  "description": "English interviewer-administered screen. Positive answers suggest a corresponding topic for follow-up; they do not establish a diagnosis.",
+  "administeredBy": "clinician",
+  "instruments": ["MINI Screen 5.0.0"],
+  "questions": [],
+  "forms": ["mini_screen_5"]
+}

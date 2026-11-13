@@ -1,0 +1,148 @@
+{
+  "id": "OPT-B",
+  "optionalAssessment": true,
+  "name": {
+    "en": "Additional Optional Assessment B — Disability / Functional Impairment: Severity of Disability / Impairment",
+    "hi": "अतिरिक्त वैकल्पिक मूल्यांकन B — अक्षमता/कार्यात्मक हानि: अक्षमता/हानि की तीव्रता"
+  },
+  "intro": {
+    "en": "Use this scale to rate in the score column of the table below, how much your symptoms have disrupted your ability to function in the following areas of your life: Assessment of Impairment of Functioning/Disability.",
+    "hi": "इस पैमाने का उपयोग नीचे दी गई तालिका के स्कोर कॉलम में रेट करने हेतु करें कि आपके लक्षणों ने आपके जीवन के निम्न क्षेत्रों में कार्य करने की क्षमता को कितना बाधित किया है: कार्यात्मक हानि/अक्षमता का मूल्यांकन।"
+  },
+  "tableHeading": {
+    "en": "Domain Name / Score",
+    "hi": "क्षेत्र का नाम / स्कोर"
+  },
+  "items": [
+    {
+      "id": "DIS1",
+      "text": {
+        "en": "Work or school work",
+        "hi": "कार्य या विद्यालय-कार्य"
+      }
+    },
+    {
+      "id": "DIS2",
+      "text": {
+        "en": "Social life or leisure activities (like hobbies or things you do for enjoyment)",
+        "hi": "सामाजिक जीवन या अवकाश गतिविधियाँ (शौक या मनोरंजन हेतु की जाने वाली चीज़ें)"
+      }
+    },
+    {
+      "id": "DIS3",
+      "text": {
+        "en": "Family life and/or home responsibilities",
+        "hi": "पारिवारिक जीवन और/या घरेलू ज़िम्मेदारियाँ"
+      }
+    },
+    {
+      "id": "DIS4",
+      "text": {
+        "en": "Ability to get along with people",
+        "hi": "लोगों के साथ मिलकर चलने की क्षमता"
+      }
+    },
+    {
+      "id": "DIS5",
+      "text": {
+        "en": "Personal and social relationships",
+        "hi": "व्यक्तिगत एवं सामाजिक संबंध"
+      }
+    },
+    {
+      "id": "DIS6",
+      "text": {
+        "en": "Ability to understand and to communicate with others",
+        "hi": "अन्य को समझने एवं उनसे संवाद करने की क्षमता"
+      }
+    },
+    {
+      "id": "DIS7",
+      "text": {
+        "en": "Ability to take care of yourself (washing, showering, bathing, dressing properly, brushing teeth, laundry, combing/brushing hair, eating regularly)",
+        "hi": "स्वयं की देखभाल की क्षमता (धुलाई, स्नान, उचित वस्त्र, दाँत साफ करना, कपड़े धोना, बाल सुलझाना, नियमित भोजन)"
+      }
+    },
+    {
+      "id": "DIS8",
+      "text": {
+        "en": "Made you disruptive or aggressive towards others",
+        "hi": "आपको दूसरों प्रति अव्यवस्थाकारी या आक्रामक बनाना"
+      }
+    },
+    {
+      "id": "DIS9",
+      "text": {
+        "en": "Financially (ability to manage your money)",
+        "hi": "आर्थिक (धन प्रबंधन की क्षमता)"
+      }
+    },
+    {
+      "id": "DIS10",
+      "text": {
+        "en": "Ability to get around physically",
+        "hi": "भौतिक रूप से इधर-उधर चलने की क्षमता"
+      }
+    },
+    {
+      "id": "DIS11",
+      "text": {
+        "en": "Spiritual or religious life",
+        "hi": "आध्यात्मिक या धार्मिक जीवन"
+      }
+    },
+    {
+      "id": "DIS12",
+      "text": {
+        "en": "How much did your condition have an impact on other people in your family?",
+        "hi": "आपकी स्थिति का आपके परिवार के अन्य लोगों पर कितना प्रभाव पड़ा?"
+      }
+    }
+  ],
+  "ratingScale": {
+    "min": 0,
+    "max": 10,
+    "type": "clinician_rating",
+    "anchors": [
+      {
+        "v": 0,
+        "label": {
+          "en": "Not present",
+          "hi": "उपस्थित नहीं"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "Mild",
+          "hi": "हल्का"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "Moderate",
+          "hi": "मध्यम"
+        }
+      },
+      {
+        "v": 6,
+        "label": {
+          "en": "Severe",
+          "hi": "गंभीर"
+        }
+      },
+      {
+        "v": 10,
+        "label": {
+          "en": "Extreme",
+          "hi": "अत्यधिक"
+        }
+      }
+    ]
+  },
+  "note": {
+    "en": "Clinician-rated 0-10 disruption for each functional domain; independent of the Module A-P branching logic and does not gate any diagnostic box.",
+    "hi": "प्रत्येक कार्यात्मक क्षेत्र हेतु चिकित्सक-रेटित 0-10 बाधा; माड्यूल A-P की शाखा-विभाजन पद्धति से स्वतंत्र तथा किसी निदान-बक्से को नियंत्रित नहीं करता।"
+  }
+}

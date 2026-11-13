@@ -1,0 +1,290 @@
+[
+  {
+    "id": "isas_fn_24",
+    "text": "When I self-harm, I am … Proving to myself that my emotional pain is real",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_25",
+    "text": "When I self-harm, I am … Getting revenge against others",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_26",
+    "text": "When I self-harm, I am … Demonstrating that I do not need to rely on others for help",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_27",
+    "text": "When I self-harm, I am … Reducing anxiety, frustration, anger, or other overwhelming emotions",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_28",
+    "text": "When I self-harm, I am … Establishing a barrier between myself and others",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_29",
+    "text": "When I self-harm, I am … Reacting to feeling unhappy with or disgusted by myself",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_30",
+    "text": "When I self-harm, I am … Focusing on treating the injury, which can be gratifying or satisfying",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_31",
+    "text": "When I self-harm, I am … Making sure I am still alive when I don't feel real",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_32",
+    "text": "When I self-harm, I am … Putting a stop to suicidal thoughts",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_33",
+    "text": "When I self-harm, I am … Pushing my limits like skydiving or other extreme activities",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_34",
+    "text": "When I self-harm, I am … Creating a sign of friendship or kinship with friends or loved ones",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_35",
+    "text": "When I self-harm, I am … Keeping a loved one from leaving or abandoning me",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_36",
+    "text": "When I self-harm, I am … Proving I can take physical pain",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_37",
+    "text": "When I self-harm, I am … Signifying the emotional distress I am experiencing",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_38",
+    "text": "When I self-harm, I am … Trying to hurt someone close to me",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  },
+  {
+    "id": "isas_fn_39",
+    "text": "When I self-harm, I am … Establishing that I am autonomous or independent",
+    "scale": [
+      {
+        "v": 0,
+        "label": "Not relevant"
+      },
+      {
+        "v": 1,
+        "label": "Somewhat relevant"
+      },
+      {
+        "v": 2,
+        "label": "Very relevant"
+      }
+    ]
+  }
+]

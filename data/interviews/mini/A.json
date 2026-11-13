@@ -1,0 +1,202 @@
+{
+  "id": "A",
+  "name": {
+    "en": "Module A — Major Depressive Episode",
+    "hi": "माड्यूल A — प्रमुख अवसादी एपिसोड"
+  },
+  "screen": {
+    "intro": {
+      "en": "Screen-in questions (ever in your life)",
+      "hi": "स्क्रीन-इन प्रश्न (जीवनभर में कभी)"
+    },
+    "questions": [
+      {
+        "id": "A1a",
+        "text": {
+          "en": "Were you ever depressed or down, or did you feel sad, empty or hopeless, most of the day, nearly every day, for two weeks?",
+          "hi": "क्या आप कभी उदास या विषण्ण रहे, या दो सप्ताह तक दिन के अधिकतर समय, लगभग हर दिन, दुख, खालीपन या निराशा महसूस किए?"
+        }
+      },
+      {
+        "id": "A2a",
+        "text": {
+          "en": "Were you ever much less interested in most things or much less able to enjoy the things you used to enjoy most of the time, for two weeks?",
+          "hi": "क्या आप कभी दो सप्ताह तक अधिकतर चीज़ों में बहुत कम रुचि रखते थे, या जिन चीज़ों का पहले आनंद लेते थे उनसे बहुत कम आनंद ले पाते थे?"
+        }
+      }
+    ],
+    "gateNote": {
+      "en": "If A1a is No, A1b is coded No automatically. If A2a is No, A2b is coded No automatically.",
+      "hi": "यदि A1a 'नहीं' है, तो A1b स्वतः 'नहीं' माना जाएगा। यदि A2a 'नहीं' है, तो A2b स्वतः 'नहीं' माना जाएगा।"
+    }
+  },
+  "followups": {
+    "intro": {
+      "en": "In the past two weeks...",
+      "hi": "पिछले दो सप्ताह में..."
+    },
+    "visibleWhen": "A1a == 1 OR A2a == 1",
+    "questions": [
+      {
+        "id": "A1b",
+        "text": {
+          "en": "For the past two weeks, were you depressed or down, or did you feel sad, empty or hopeless, most of the day, nearly every day?",
+          "hi": "पिछले दो सप्ताह में, क्या आप उदास या विषण्ण रहे, या दिन के अधिकतर समय, लगभग हर दिन दुख, खालीपन या निराशा महसूस किए?"
+        }
+      },
+      {
+        "id": "A2b",
+        "text": {
+          "en": "In the past two weeks, were you much less interested in most things or much less able to enjoy the things you used to enjoy, most of the time?",
+          "hi": "पिछले दो सप्ताह में, क्या आप अधिकतर चीज़ों में बहुत कम रुचि रखते थे, या अधिकतर समय बहुत कम आनंद ले पाते थे?"
+        }
+      }
+    ]
+  },
+  "symptomGate": {
+    "rule": "A1b OR A2b must be Yes to explore symptoms",
+    "note": {
+      "en": "If either current question is Yes, both the current (past 2 weeks) and the most symptomatic past episode are explored; otherwise only the most symptomatic past episode.",
+      "hi": "यदि कोई भी वर्तमान प्रश्न 'हाँ' है, तो वर्तमान (पिछले 2 सप्ताह) और सबसे लक्षण-प्रधान अतीत दोनों की जाँच होती है; अन्यथा केवल सबसे लक्षण-प्रधान अतीत की।"
+    }
+  },
+  "timeframes": [
+    {
+      "id": "current",
+      "label": {
+        "en": "Past 2 Weeks",
+        "hi": "पिछले 2 सप्ताह"
+      }
+    },
+    {
+      "id": "past",
+      "label": {
+        "en": "Past Episode",
+        "hi": "अतीत का एपिसोड"
+      }
+    }
+  ],
+  "symptomsIntro": {
+    "en": "Over that two-week period, when you felt depressed or uninterested:",
+    "hi": "उस दो-सप्ताह की अवधि में, जब आप उदास या बेरुचि महसूस करते थे:"
+  },
+  "symptoms": [
+    {
+      "id": "A3a",
+      "text": {
+        "en": "Was your appetite decreased or increased nearly every day? Did your weight decrease or increase without trying intentionally (i.e., by ±5% of body weight, or ±8 lb / ±3.5 kg for a 160 lb / 70 kg person, in a month)?",
+        "hi": "क्या आपकी भूख लगभग हर दिन कम या अधिक हो गई? क्या बिना जानबूझकर वज़न कम या अधिक हुआ (माह में शरीर भार का ±5%, या 70 किग्रा व्यक्ति में ±3.5 किग्रा)?"
+      }
+    },
+    {
+      "id": "A3b",
+      "text": {
+        "en": "Did you have trouble sleeping nearly every night (difficulty falling asleep, waking up in the middle of the night, early morning wakening or sleeping excessively)?",
+        "hi": "क्या लगभग हर रात सोने में कठिनाई हुई (सोने में कठिनाई, बीच में उठना, सुबह जल्द उठना या अधिक सोना)?"
+      }
+    },
+    {
+      "id": "A3c",
+      "text": {
+        "en": "Did you talk or move more slowly than normal or were you fidgety, restless or having trouble sitting still almost every day? Did anyone notice this?",
+        "hi": "क्या आप सामान्य से धीमे बोले या चले, या लगभग हर दिन बेचैन, अस्थिर या स्थिर बैठने में कठिनाई थी? क्या किसी ने यह देखा?"
+      }
+    },
+    {
+      "id": "A3d",
+      "text": {
+        "en": "Did you feel tired or without energy almost every day?",
+        "hi": "क्या आपको लगभग हर दिन थकान या ऊर्जा की कमी महसूस हुई?"
+      }
+    },
+    {
+      "id": "A3e",
+      "text": {
+        "en": "Did you feel worthless or guilty almost every day?",
+        "hi": "क्या आप लगभग हर दिन बेकार या अपराधी महसूस किए?"
+      },
+      "delusionProbe": {
+        "en": "Look for delusions of failure, inadequacy, ruin or guilt, or of needing punishment, or delusions of disease or death or nihilistic/somatic delusions.",
+        "hi": "असफलता, अक्षमता, बर्बादी या अपराध के भ्रम, दंड पाने की आवश्यकता, या रोग/मृत्यु के भ्रम या शून्यतावादी/कायिक भ्रम पर ध्यान दें।"
+      }
+    },
+    {
+      "id": "A3f",
+      "text": {
+        "en": "Did you have difficulty concentrating, thinking or making decisions almost every day?",
+        "hi": "क्या लगभग हर दिन ध्यान केंद्रित करने, सोचने या निर्णय लेने में कठिनाई हुई?"
+      }
+    },
+    {
+      "id": "A3g",
+      "text": {
+        "en": "Did you repeatedly think about death (fear of dying does not count here), or have any thoughts of killing yourself, or any intent or plan to kill yourself? Did you attempt suicide?",
+        "hi": "क्या आप बार-बार मृत्यु के बारे में सोचे (मरने का डर यहाँ नहीं गिना जाएगा), या आत्महत्या के विचार, इरादे या योजना आए? क्या आपने आत्महत्या का प्रयास किया?"
+      },
+      "safety": true
+    }
+  ],
+  "impairment": {
+    "id": "A4",
+    "perTimeframe": true,
+    "text": {
+      "en": "Did these symptoms cause significant distress or problems at home, at work, at school, socially, in your relationships, or in some other important way, and are they a change from your previous functioning?",
+      "hi": "क्या इन लक्षणों से घर, कार्य, विद्यालय, सामाजिक, संबंधों या अन्य महत्वपूर्ण क्षेत्र में महत्वपूर्ण परेशानी हुई, और क्या यह पूर्व कार्यशैली से परिवर्तन है?"
+    }
+  },
+  "recurrence": {
+    "id": "A5",
+    "text": {
+      "en": "In between 2 episodes of depression, did you ever have an interval of at least 2 months, without any significant depression or any significant loss of interest?",
+      "hi": "दो अवसादी एपिसोड के बीच, क्या आपको कम से कम 2 माह का अंतराल कभी मिला जब कोई महत्वपूर्ण अवसाद या रुचि की हानि नहीं थी?"
+    },
+    "options": [
+      {
+        "v": "na",
+        "label": {
+          "en": "N/A",
+          "hi": "लागू नहीं"
+        }
+      },
+      {
+        "v": "no",
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "v": "yes",
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      }
+    ]
+  },
+  "episodeCount": {
+    "id": "A6a",
+    "numeric": true,
+    "max": 99,
+    "text": {
+      "en": "How many episodes of depression did you have in your lifetime? (Between each episode there must be at least 2 months without any significant depression.)",
+      "hi": "जीवनभर में आपको कितने अवसादी एपिसोड हुए? (प्रत्येक एपिसोड के बीच कम से कम 2 माह बिना महत्वपूर्ण अवसाद के होने चाहिए।)"
+    }
+  },
+  "diagnosticBox": {
+    "id": "A_diag",
+    "label": {
+      "en": "Major Depressive Episode",
+      "hi": "प्रमुख अवसादी एपिसोड"
+    },
+    "rule": "(>=5 of A1-A3 coded Yes within a timeframe) AND A4 Yes for that timeframe AND organic cause ruled out (O2 summary). A5 Yes => RECURRENT.",
+    "flags": [
+      "CURRENT",
+      "PAST",
+      "RECURRENT"
+    ],
+    "disordersOnPositive": [
+      "depression_mdd"
+    ]
+  }
+}

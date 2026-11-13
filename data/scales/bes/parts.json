@@ -1,0 +1,351 @@
+[
+  {
+    "name": "Eating behaviour",
+    "questions": [
+      {
+        "id": "bes_1",
+        "text": "Question 1: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I don't feel self-conscious about my weight or body size when I'm with others."
+          },
+          {
+            "v": 1,
+            "label": "I feel concerned about how I look to others, but it normally does not make me feel disappointed with myself."
+          },
+          {
+            "v": 2,
+            "label": "I do get self-conscious about my appearance and weight, which makes me feel disappointed in myself."
+          },
+          {
+            "v": 3,
+            "label": "I feel very self-conscious about my weight and frequently feel intense shame and disgust for myself; I try to avoid social contacts because of my self-consciousness."
+          }
+        ]
+      },
+      {
+        "id": "bes_2",
+        "text": "Question 2: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I don't have difficulty eating slowly in the proper manner."
+          },
+          {
+            "v": 1,
+            "label": "Although I seem to gobble down foods, I don't end up feeling stuffed because of eating too much."
+          },
+          {
+            "v": 2,
+            "label": "At times, I tend to eat quickly and then feel uncomfortably full afterwards."
+          },
+          {
+            "v": 3,
+            "label": "I bolt down my food without really chewing it and usually feel uncomfortably stuffed."
+          }
+        ]
+      },
+      {
+        "id": "bes_3",
+        "text": "Question 3: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I feel capable of controlling my eating urges when I want to."
+          },
+          {
+            "v": 1,
+            "label": "I feel I have failed to control my eating more than the average person."
+          },
+          {
+            "v": 2,
+            "label": "I feel utterly helpless about controlling my eating urges."
+          },
+          {
+            "v": 3,
+            "label": "Because I feel helpless about controlling my eating, I have become very desperate about trying to get in control."
+          }
+        ]
+      },
+      {
+        "id": "bes_4",
+        "text": "Question 4: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I don't have a habit of eating when I'm bored."
+          },
+          {
+            "v": 1,
+            "label": "I sometimes eat when bored, but can often get busy and take my mind off food."
+          },
+          {
+            "v": 2,
+            "label": "I regularly eat when bored, but occasionally can use another activity to take my mind off eating."
+          },
+          {
+            "v": 3,
+            "label": "I have a strong habit of eating when bored; nothing seems to help me break it."
+          }
+        ]
+      },
+      {
+        "id": "bes_5",
+        "text": "Question 5: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I'm usually physically hungry when I eat something."
+          },
+          {
+            "v": 1,
+            "label": "Occasionally, I eat on impulse even though I am not hungry."
+          },
+          {
+            "v": 2,
+            "label": "I regularly eat foods I may not enjoy to satisfy a hungry feeling even though physically I don't need food."
+          },
+          {
+            "v": 3,
+            "label": "Even when not physically hungry, I get a hunger feeling in my mouth that seems satisfied only by eating; sometimes I spit out the food to avoid gaining weight."
+          }
+        ]
+      },
+      {
+        "id": "bes_6",
+        "text": "Question 6: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I don't feel guilt or self-hate after I overeat."
+          },
+          {
+            "v": 1,
+            "label": "After I overeat, I occasionally feel guilt or self-hate."
+          },
+          {
+            "v": 3,
+            "label": "Almost all the time I experience strong guilt or self-hate after I overeat."
+          }
+        ]
+      },
+      {
+        "id": "bes_7",
+        "text": "Question 7: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I don't lose total control of my eating when dieting, even after periods when I overeat."
+          },
+          {
+            "v": 1,
+            "label": "Sometimes when I eat a forbidden food on a diet, I feel I have blown it and eat even more."
+          },
+          {
+            "v": 2,
+            "label": "I frequently tell myself I have blown it and eat even more."
+          },
+          {
+            "v": 3,
+            "label": "I regularly start strict diets but break them by binge eating; my life seems to be feast or famine."
+          }
+        ]
+      },
+      {
+        "id": "bes_8",
+        "text": "Question 8: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I rarely eat so much that I feel uncomfortably stuffed afterwards."
+          },
+          {
+            "v": 1,
+            "label": "Usually about once a month, I eat such a quantity that I feel very stuffed."
+          },
+          {
+            "v": 2,
+            "label": "I regularly have periods when I eat large amounts at meals or snacks."
+          },
+          {
+            "v": 3,
+            "label": "I eat so much that I regularly feel quite uncomfortable and sometimes nauseous."
+          }
+        ]
+      },
+      {
+        "id": "bes_9",
+        "text": "Question 9: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "My calorie intake does not regularly go very high or very low."
+          },
+          {
+            "v": 1,
+            "label": "Sometimes after overeating, I try to reduce my calorie intake almost to nothing."
+          },
+          {
+            "v": 2,
+            "label": "I regularly overeat at night and am not hungry in the morning."
+          },
+          {
+            "v": 3,
+            "label": "In adulthood, I have had week-long periods of near-starvation following periods of overeating; it seems like feast or famine."
+          }
+        ]
+      },
+      {
+        "id": "bes_10",
+        "text": "Question 10: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I can usually stop eating when I want to; I know when enough is enough."
+          },
+          {
+            "v": 1,
+            "label": "Every so often, I feel a compulsion to eat that I can't seem to control."
+          },
+          {
+            "v": 2,
+            "label": "I frequently experience strong urges to eat that I seem unable to control, though at other times I can control them."
+          },
+          {
+            "v": 3,
+            "label": "I feel incapable of controlling urges to eat and fear not being able to stop voluntarily."
+          }
+        ]
+      },
+      {
+        "id": "bes_11",
+        "text": "Question 11: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I have no problem stopping when I feel full."
+          },
+          {
+            "v": 1,
+            "label": "I usually stop when full but occasionally overeat and feel uncomfortably stuffed."
+          },
+          {
+            "v": 2,
+            "label": "I have a problem stopping once I start and usually feel uncomfortably stuffed after a meal."
+          },
+          {
+            "v": 3,
+            "label": "Because I have trouble stopping, I sometimes induce vomiting to relieve a stuffed feeling."
+          }
+        ]
+      },
+      {
+        "id": "bes_12",
+        "text": "Question 12: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I eat just as much with others as when by myself."
+          },
+          {
+            "v": 1,
+            "label": "Sometimes I eat less with others because I am self-conscious."
+          },
+          {
+            "v": 2,
+            "label": "I frequently eat only a small amount around others because I am embarrassed."
+          },
+          {
+            "v": 3,
+            "label": "I feel so ashamed about overeating that I choose times when no one will see me; I feel like a closet eater."
+          }
+        ]
+      },
+      {
+        "id": "bes_13",
+        "text": "Question 13: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I eat three meals a day with only an occasional snack."
+          },
+          {
+            "v": 1,
+            "label": "I eat three meals a day and normally snack between meals."
+          },
+          {
+            "v": 2,
+            "label": "When snacking heavily, I get in the habit of skipping regular meals."
+          },
+          {
+            "v": 3,
+            "label": "There are regular periods when I seem to eat continually, with no planned meals."
+          }
+        ]
+      },
+      {
+        "id": "bes_14",
+        "text": "Question 14: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I don't think much about controlling unwanted eating urges."
+          },
+          {
+            "v": 1,
+            "label": "Sometimes I feel preoccupied with trying to control my eating urges."
+          },
+          {
+            "v": 2,
+            "label": "I frequently spend much time thinking about how much I ate or trying not to eat more."
+          },
+          {
+            "v": 3,
+            "label": "Most waking hours are preoccupied with thoughts about eating or not eating; I constantly struggle not to eat."
+          }
+        ]
+      },
+      {
+        "id": "bes_15",
+        "text": "Question 15: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I don't think about food a great deal."
+          },
+          {
+            "v": 1,
+            "label": "I have strong food cravings, but they last only briefly."
+          },
+          {
+            "v": 2,
+            "label": "I have days when I can't seem to think about anything else but food."
+          },
+          {
+            "v": 3,
+            "label": "Most days seem preoccupied with thoughts about food; I feel like I live to eat."
+          }
+        ]
+      },
+      {
+        "id": "bes_16",
+        "text": "Question 16: select the one statement that best describes you.",
+        "scale": [
+          {
+            "v": 0,
+            "label": "I usually know whether or not I'm physically hungry. I take the right portion of food to satisfy me."
+          },
+          {
+            "v": 1,
+            "label": "Occasionally, I feel uncertain about knowing whether or not I'm physically hungry. At these times it is hard to know how much food I should take to satisfy me."
+          },
+          {
+            "v": 2,
+            "label": "Even though I might know how many calories I should eat, I do not have any idea what is a normal amount of food for me."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "CUDIT-R",
+  "description": {
+    "en": "Eight-item cannabis-use screen referring to the past 6 months."
+  },
+  "domains": [
+    "substance"
+  ],
+  "scaleId": "cudit_r"
+}

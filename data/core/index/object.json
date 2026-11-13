@@ -175,6 +175,12 @@
           }
         ],
         [
+          "LEC-5",
+          {
+            "source": "data/core/instruments/LEC-5.json"
+          }
+        ],
+        [
           "PSQI",
           {
             "source": "data/core/instruments/PSQI.json"
@@ -235,6 +241,12 @@
           }
         ],
         [
+          "MINI Screen 5.0.0",
+          {
+            "source": "data/core/instruments/MINI Screen 5.0.0.json"
+          }
+        ],
+        [
           "VADRS",
           {
             "source": "data/core/instruments/VADRS.json"
@@ -289,6 +301,30 @@
           }
         ],
         [
+          "Saving Inventory–Revised (Modified Format)",
+          {
+            "source": "data/core/instruments/Saving Inventory–Revised (Modified Format).json"
+          }
+        ],
+        [
+          "MGH Hairpulling Scale",
+          {
+            "source": "data/core/instruments/MGH Hairpulling Scale.json"
+          }
+        ],
+        [
+          "WHODAS 2.0",
+          {
+            "source": "data/core/instruments/WHODAS 2.0.json"
+          }
+        ],
+        [
+          "Whiteley Index",
+          {
+            "source": "data/core/instruments/Whiteley Index.json"
+          }
+        ],
+        [
           "GCLS",
           {
             "source": "data/core/instruments/GCLS.json"
@@ -304,6 +340,66 @@
           "HEXACO-PI-R (Observer)",
           {
             "source": "data/core/instruments/HEXACO-PI-R (Observer).json"
+          }
+        ],
+        [
+          "ACE-III Indian English",
+          {
+            "source": "data/core/instruments/ACE-III Indian English.json"
+          }
+        ],
+        [
+          "ECHO-wide CTQ (event history)",
+          {
+            "source": "data/core/instruments/ECHO-wide CTQ (event history).json"
+          }
+        ],
+        [
+          "EPDS",
+          {
+            "source": "data/core/instruments/EPDS.json"
+          }
+        ],
+        [
+          "Fagerström Test for Nicotine Dependence",
+          {
+            "source": "data/core/instruments/Fagerström Test for Nicotine Dependence.json"
+          }
+        ],
+        [
+          "CUDIT-R",
+          {
+            "source": "data/core/instruments/CUDIT-R.json"
+          }
+        ],
+        [
+          "PGSI",
+          {
+            "source": "data/core/instruments/PGSI.json"
+          }
+        ],
+        [
+          "BES",
+          {
+            "source": "data/core/instruments/BES.json"
+          }
+        ],
+        [
+          "SCOFF",
+          {
+            "source": "data/core/instruments/SCOFF.json"
+          }
+        ],
+        [
+          "ISAS",
+          {
+            "source": "data/core/instruments/ISAS.json"
+          }
+        ],
+        [
+          "WHOQOL-BREF",
+          {
+            "source": "data/core/instruments/WHOQOL-BREF.json"
           }
         ]
       ]

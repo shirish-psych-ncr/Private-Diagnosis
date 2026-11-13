@@ -1,0 +1,10 @@
+{
+  "name": "ACE-III Indian English",
+  "description": {
+    "en": "Clinician-administered cognitive screening; five domain subtotals, total 100. Use the version-specific Indian English guide."
+  },
+  "domains": [
+    "cognitive_screening"
+  ],
+  "scaleId": "ace_iii_indian_english"
+}

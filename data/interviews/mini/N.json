@@ -1,0 +1,130 @@
+{
+  "id": "N",
+  "name": {
+    "en": "Module N — Generalized Anxiety Disorder",
+    "hi": "माड्यूल N — सामान्यीकृत चिंता विकार"
+  },
+  "screen": {
+    "intro": {
+      "en": "Screen-in questions (past 6 months)",
+      "hi": "स्क्रीन-इन प्रश्न (पिछले 6 माह)"
+    },
+    "probe": {
+      "en": "IN ENGLISH, if the patient is unclear about what you mean, probe by asking (Do others think that you are a worrier or a 'worry wart'?) and get examples.",
+      "hi": "यदि रोगी को प्रश्न का अर्थ स्पष्ट न हो तो पूछकर जाँचें (क्या दूसरे लोग आपको चिंता-प्रवण व्यक्ति समझते हैं?) और उदाहरण प्राप्त करें।"
+    },
+    "questions": [
+      {
+        "id": "N1a",
+        "text": {
+          "en": "Were you excessively anxious or worried about several routine things, over the past 6 months?",
+          "hi": "पिछले 6 माह में क्या आप अत्यधिक चिंतित/चिंताग्रस्त रहे — कई सामान्य/रोज़मर्रा की बातों को लेकर?"
+        }
+      },
+      {
+        "id": "N1b",
+        "text": {
+          "en": "Are these anxieties and worries present most days?",
+          "hi": "क्या ये आतंक/चिंताएँ अधिकतर दिनों में विद्यमान रहीं?"
+        }
+      }
+    ],
+    "gateRule": "IF N1a OR N1b No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "gateNote": {
+      "en": "If either screen-in is No, Module N terminates (Generalized Anxiety Disorder coded No).",
+      "hi": "यदि कोई भी स्क्रीन-इन 'नहीं', माड्यूल N समाप्त (सामान्यीकृत चिंता विकार 'नहीं' कोड)।"
+    }
+  },
+  "notBetterExplainedGate": {
+    "rule": "IF Yes (anxieties restricted to / better explained by a prior disorder) -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "Are the patient's anxiety and worries restricted exclusively to, or better explained by, any disorder prior to this point?",
+      "hi": "क्या रोगी की चिंता/आतंक अनन्य रूप से यहाँ तक के किसी पूर्व विकार तक सीमित हैं, या उससे बेहतर ढंग से व्याख्यायित होती हैं?"
+    }
+  },
+  "n2": {
+    "id": "N2",
+    "text": {
+      "en": "Do you find it difficult to control the worries?",
+      "hi": "क्या आपको चिंताओं को नियंत्रित करना कठिन लगता है?"
+    }
+  },
+  "n3Intro": {
+    "en": "When you were anxious over the past 6 months, did you, most of the time: (Code No if the symptoms are confined to features of any disorder explored prior to this point.)",
+    "hi": "पिछले 6 माह में जब आप चिंतित थे, तब अधिकतर समय क्या आप: (यदि लक्षण यहाँ तक जाँचे गए किसी विकार की विशेषताओं तक सीमित हों तो 'नहीं' कोड करें।)"
+  },
+  "n3": [
+    {
+      "id": "N3a",
+      "text": {
+        "en": "Feel restless, keyed up or on edge?",
+        "hi": "बेचैन, उत्तेजित या सतर्क भाव?"
+      }
+    },
+    {
+      "id": "N3b",
+      "text": {
+        "en": "Have muscle tension?",
+        "hi": "मांसपेशियों में तनाव?"
+      }
+    },
+    {
+      "id": "N3c",
+      "text": {
+        "en": "Feel tired, weak or exhausted easily?",
+        "hi": "जल्दी थकान, दुर्बलता या शून्यता?"
+      }
+    },
+    {
+      "id": "N3d",
+      "text": {
+        "en": "Have difficulty concentrating or find your mind going blank?",
+        "hi": "ध्यान केंद्रित करने में कठिनाई या मन खाली हो जाना?"
+      }
+    },
+    {
+      "id": "N3e",
+      "text": {
+        "en": "Feel irritable?",
+        "hi": "चिड़चिड़ापन?"
+      }
+    },
+    {
+      "id": "N3f",
+      "text": {
+        "en": "Have difficulty sleeping (difficulty falling asleep, waking up in the middle of the night, early morning wakening or sleeping excessively)?",
+        "hi": "नींद में कठिनाई (सोने में कठिनाई, बीच में उठना, सुबह जल्द उठना या अधिक सोना)?"
+      }
+    }
+  ],
+  "n3Gate": {
+    "rule": "IF <3 of N3 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "Are 3 or more N3 answers coded Yes?",
+      "hi": "क्या N3 के 3 या अधिक उत्तर 'हाँ' कोडित हैं?"
+    }
+  },
+  "n4": {
+    "id": "N4",
+    "text": {
+      "en": "Do these anxieties and worries significantly disrupt your ability to work, to function socially or in your relationships or in other important areas of your life or cause you significant distress?",
+      "hi": "क्या ये आतंक/चिंताएँ कार्य, सामाजिक/संबंध-कार्यक्षमता या जीवन के अन्य महत्वपूर्ण क्षेत्रों को महत्वपूर्ण रूप से बाधित करती हैं, या आपको महत्वपूर्ण कष्ट देती हैं?"
+    }
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "N_diag",
+      "label": {
+        "en": "Generalized Anxiety Disorder — Current",
+        "hi": "सामान्यीकृत चिंता विकार — वर्तमान"
+      },
+      "rule": "N1a AND N1b AND not-better-explained gate No AND N2 AND N3-gate (>=3) AND N4 all Yes AND organic cause ruled out (O2 summary).",
+      "flags": [
+        "CURRENT"
+      ],
+      "disordersOnPositive": [
+        "gad"
+      ]
+    }
+  ]
+}

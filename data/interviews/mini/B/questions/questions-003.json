@@ -1,0 +1,13 @@
+[
+  {
+    "id": "B19",
+    "points": 13,
+    "numeric": true,
+    "max": 100,
+    "text": {
+      "en": "How likely are you to try to kill yourself within the next 3 months (0-100%)?",
+      "hi": "अगले 3 माह में आत्महत्या का प्रयास करने की कितनी संभावना (0-100%)?"
+    },
+    "rule": "ANY LIKELIHOOD > 0% ON B19 IS CODED YES."
+  }
+]

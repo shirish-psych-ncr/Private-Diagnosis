@@ -1,0 +1,144 @@
+{
+  "id": "P",
+  "name": {
+    "en": "Module P — Antisocial Personality Disorder",
+    "hi": "माड्यूल P — प्रतिसामाजिक व्यक्तित्व विकार"
+  },
+  "p1Intro": {
+    "en": "Before you were 15 years old, did you:",
+    "hi": "15 वर्ष की आयु से पूर्व, क्या आप:"
+  },
+  "p1": [
+    {
+      "id": "P1a",
+      "text": {
+        "en": "Repeatedly skip school or run away from home overnight or stayed out at night against your parent's rules?",
+        "hi": "बार-बार विद्यालय छोड़ना, रात को घर से भागना, या माता-पिता के नियमों के विरुद्ध रात बाहर रहना?"
+      }
+    },
+    {
+      "id": "P1b",
+      "text": {
+        "en": "Repeatedly lie, cheat, 'con' others, or steal or break into someone's house or car?",
+        "hi": "बार-बार झूठ, छल, दूसरों को ठगना, चोरी, या किसी के घर/गाड़ी में जबरन प्रवेश?"
+      }
+    },
+    {
+      "id": "P1c",
+      "text": {
+        "en": "Start fights or bully, threaten, or intimidate others?",
+        "hi": "झगड़े शुरू करना, या दूसरों को बुलिंग, धमकी या भयभीत करना?"
+      }
+    },
+    {
+      "id": "P1d",
+      "text": {
+        "en": "Deliberately destroy things or start fires?",
+        "hi": "जानबूझकर चीज़ें नष्ट करना या आग लगाना?"
+      }
+    },
+    {
+      "id": "P1e",
+      "text": {
+        "en": "Deliberately hurt animals or people?",
+        "hi": "जानबूझकर पशुओं या लोगों को कष्ट पहुँचाना?"
+      }
+    },
+    {
+      "id": "P1f",
+      "text": {
+        "en": "Force someone into sexual activity?",
+        "hi": "किसी को यौन क्रिया हेतु विवश करना?"
+      }
+    }
+  ],
+  "p1Gate": {
+    "rule": "IF <2 of P1 answers Yes -> SKIP ALL THE P2 QUESTIONS, GO TO THE DIAGNOSTIC BOX AND CIRCLE NO.",
+    "text": {
+      "en": "Are 2 or more P1 answers coded Yes?",
+      "hi": "क्या P1 के 2 या अधिक उत्तर 'हाँ' कोडित हैं?"
+    }
+  },
+  "p2Note": {
+    "en": "Do not code Yes to the behaviors below if they are exclusively politically or religiously motivated.",
+    "hi": "निम्न व्यवहारों पर 'हाँ' कोड न करें यदि वे अनन्य रूप से राजनीतिक या धार्मिक प्रेरित हैं।"
+  },
+  "p2Intro": {
+    "en": "Since you were 15 years old, have you:",
+    "hi": "15 वर्ष की आयु के बाद से, क्या आप:"
+  },
+  "p2": [
+    {
+      "id": "P2a",
+      "text": {
+        "en": "Done things that are illegal or would be grounds to get arrested, even if you didn't get caught (for example destroying property, shoplifting, stealing, selling drugs, or committing a felony)?",
+        "hi": "ऐसे कार्य किए जो अवैध हैं या गिरफ़्तारी का आधार बन सकते, चाहे पकड़े गए या नहीं (जैसे संपत्ति नष्ट, दुकान-चोरी, चोरी, दवा-बेचना, गंभीर अपराध)?"
+      }
+    },
+    {
+      "id": "P2b",
+      "text": {
+        "en": "Often lied or 'conned' other people to get money or pleasure, or lied just for fun?",
+        "hi": "धन/सुख हेतु बार-बार झूठ बोला या लोगों को ठगा, या केवल मनोरंजन हेतु झूठ बोला?"
+      }
+    },
+    {
+      "id": "P2c",
+      "text": {
+        "en": "Been impulsive and didn't care about planning ahead?",
+        "hi": "अववेगी रहे और पूर्व-योजना की चिंता नहीं की?"
+      }
+    },
+    {
+      "id": "P2d",
+      "text": {
+        "en": "Been in physical fights repeatedly or assaulted others (including physical fights with your spouse or children)?",
+        "hi": "बार-बार शारीरिक झगड़े या दूसरों पर हमला (पत्नी/संतान से शारीरिक झगड़े सहित)?"
+      }
+    },
+    {
+      "id": "P2e",
+      "text": {
+        "en": "Exposed others or yourself to danger without caring?",
+        "hi": "बेपरवाही से दूसरों/स्वयं को खतरे में डाला?"
+      }
+    },
+    {
+      "id": "P2f",
+      "text": {
+        "en": "Repeatedly behaved in a way that others would consider irresponsible, like failing to pay for things you owed, deliberately being impulsive or deliberately not working to support yourself?",
+        "hi": "बार-बार ऐसी व्यवहार जो दूसरे लापरवाही मानें — जैसे उधार चुकाना नहीं, जानबूझकर अववेगता, या स्वयं को पोषण हेतु काम न करना?"
+      }
+    },
+    {
+      "id": "P2g",
+      "text": {
+        "en": "Felt no guilt after hurting, mistreating, lying to, or stealing from others, or after damaging property?",
+        "hi": "दूसरों को कष्ट/दुरुपयोग/झूठ/चोरी के बाद या संपत्ति नष्ट करने के बाद कोई अपराधबोध न हुआ?"
+      }
+    }
+  ],
+  "p2Gate": {
+    "rule": "IF <3 of P2 answers Yes -> Antisocial Personality Disorder NO.",
+    "text": {
+      "en": "Are 3 or more P2 questions coded Yes?",
+      "hi": "क्या P2 के 3 या अधिक प्रश्न 'हाँ' कोडित हैं?"
+    }
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "P_diag",
+      "label": {
+        "en": "Antisocial Personality Disorder — Lifetime",
+        "hi": "प्रतिसामाजिक व्यक्तित्व विकार — जीवनभर"
+      },
+      "rule": ">=2 of P1a-P1f Yes AND >=3 of P2a-P2g Yes (behaviors not exclusively politically or religiously motivated).",
+      "flags": [
+        "LIFETIME"
+      ],
+      "disordersOnPositive": [
+        "antisocial_personality_disorder"
+      ]
+    }
+  ]
+}

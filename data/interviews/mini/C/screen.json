@@ -1,0 +1,45 @@
+{
+  "intro": {
+    "en": "Screen-in questions",
+    "hi": "स्क्रीन-इन प्रश्न"
+  },
+  "clarification": {
+    "en": "By 'up'/'high'/'hyper' I mean: elated mood; increased energy or activity; needing less sleep; rapid thoughts; full of ideas; increased productivity, motivation, creativity or impulsive behavior; phoning or working excessively or spending more money.",
+    "hi": "'अच्छा/हाई/हाइपर' का अर्थ: उन्मुक्त मूड; ऊर्जा/गतिविधि में वृद्धि; कम नींद; तेज़ विचार; विचारों से भरा; उत्पादकता/ेरक/सृजनशीलता/अववेगी व्यवहार में वृद्धि; अत्यधिक फ़ोन/कार्य/खर्च।"
+  },
+  "questions": [
+    {
+      "id": "C1a",
+      "text": {
+        "en": "Have you ever had a period of time when you were feeling 'up' or 'high' or 'hyper' and so active or full of energy or full of yourself that you got into trouble, or that other people thought you were not your usual self? (Do not consider times when you were intoxicated on drugs or alcohol.)",
+        "hi": "क्या कभी कोई अवधि रही जब आप 'अच्छा', 'हाई' या 'हाइपर' महसूस कर रहे थे, इतने सक्रिय/ऊर्जावान कि मुसीबत हुई, या लोगों ने महसूस किया कि आप हमेशा जैसे नहीं हैं? (नशे की स्थितियाँ छोड़ें।)"
+      }
+    },
+    {
+      "id": "C1b",
+      "text": {
+        "en": "Are you currently feeling 'up' or 'high' or 'hyper' or full of energy?",
+        "hi": "क्या आप वर्तमान में 'अच्छा', 'हाई', 'हाइपर' या ऊर्जा से भरपूर महसूस कर रहे हैं?"
+      }
+    },
+    {
+      "id": "C2a",
+      "text": {
+        "en": "Have you ever been persistently irritable, for several days, so that you had arguments or verbal or physical fights, or shouted at people outside your family? Have you or others noticed that you have been more irritable or overreacted, compared to other people, even in situations that you felt were justified?",
+        "hi": "क्या कई दिनों तक लगातार चिड़चिड़े रहे, जिससे बहस/झगड़े हुए, या परिवार बाहर लोगों पर चिल्लाए? क्या आपको या दूसरों ने देखा कि आप दूसरों से अधिक चिड़चिड़े/अतिप्रतिक्रियाशील थे?"
+      }
+    },
+    {
+      "id": "C2b",
+      "text": {
+        "en": "Are you currently feeling persistently irritable?",
+        "hi": "क्या वर्तमान में लगातार चिड़चिड़े महसूस कर रहे हैं?"
+      }
+    }
+  ],
+  "gateRule": "IF C1a AND C2a BOTH coded No -> MODULE C TERMINATES (all diagnostic boxes coded No).",
+  "gateNote": {
+    "en": "If both ever screen-ins are No, Module C terminates. Current positives (C1b/C2b) only affect which timeframe is explored.",
+    "hi": "यदि दोनों 'कभी' स्क्रीन-इन 'नहीं' हैं, तो माड्यूल C समाप्त। वर्तमान सकारात्मक (C1b/C2b) केवल समय-सीमा चयन प्रभावित करते हैं।"
+  }
+}

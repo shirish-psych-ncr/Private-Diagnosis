@@ -1,94 +1,221 @@
 import { L, t } from './i18n.js';
 import { state, CLINICAL_DATA, choicesForDomain, defaultChoicesForDomain, selectedDomainForms } from './state.js';
 
-/* ------------------------------------------------------------------ *
- * 5. STAGE 2 — SYMPTOM CLUSTERING GRID
- * ------------------------------------------------------------------ */
 function renderDomainGrid() {
     const list = document.getElementById('domain-list');
-    if (!CLINICAL_DATA) return;
-    const frag = document.createDocumentFragment();
-    const clearErrorWhenSelectionIsValid = () => {
-        const hasScale = selectedDomainForms().some(selected => selected.selectedForms?.length);
-        if (state.selectedDomains.size && hasScale)
-            document.getElementById('domains-error')?.classList.add('hidden');
-    };
+    if (!CLINICAL_DATA || !list) return;
+
     const query = (document.getElementById('domain-search')?.value || '').trim().toLocaleLowerCase();
-    CLINICAL_DATA.domains.forEach(domain => {
+    const domains = CLINICAL_DATA.domains.map(domain => {
         const topic = t('topic.' + domain.id, L(domain.name));
-        const label = document.createElement('label');
-        label.className = 'domain-option' + (state.selectedDomains.has(domain.id) ? ' selected' : '');
-        const cb = document.createElement('input');
-        cb.type = 'checkbox';
-        cb.value = domain.id;
-        cb.checked = state.selectedDomains.has(domain.id);
-        const choices = document.createElement('div');
         const available = choicesForDomain(domain);
-        const hasConfiguredChoices = Boolean(domain.forms?.length || domain.baseInstrument || domain.originalLabel ||
-            domain.questions?.some(question => question.scaleId));
-        if (hasConfiguredChoices && !available.length) {
-            state.selectedDomains.delete(domain.id);
-            state.scaleChoices.delete(domain.id);
-            return;
-        }
-        const searchable = [topic, ...available.map(id => id === 'base'
+        const names = available.map(id => id === 'base'
             ? (domain.baseInstrument || domain.originalLabel || '')
-            : L(CLINICAL_DATA.scales[id]?.name))].join(' ').toLocaleLowerCase();
-        if (query && !searchable.includes(query)) return;
-        const hasChoices = available.length > 0;
-        if (hasChoices) {
-            choices.className = 'scale-choice';
-            choices.hidden = !cb.checked;
-            const hasSavedChoice = state.scaleChoices.has(domain.id);
-            const savedChoice = state.scaleChoices.get(domain.id);
-            const selected = new Set(hasSavedChoice
-                ? (Array.isArray(savedChoice) ? savedChoice : [savedChoice]).filter(id => available.includes(id))
-                : defaultChoicesForDomain(domain));
-            const choicesLabel = document.createElement('span');
-            choicesLabel.textContent = state.lang === 'hi' ? 'प्रश्नावलियाँ चुनें' : 'Choose scales';
-            choices.append(choicesLabel);
-            available.forEach(id => {
-                const scale = id === 'base' ? null : CLINICAL_DATA.scales[id];
-                const name = id === 'base' ? (domain.baseInstrument || domain.originalLabel)
-                    : L(CLINICAL_DATA.scales[id].name);
-                const label = document.createElement('label');
-                const input = document.createElement('input');
-                input.type = 'checkbox';
-                input.value = id;
-                input.checked = selected.has(id);
-                input.addEventListener('change', () => {
-                    if (input.checked) selected.add(id); else selected.delete(id);
-                    state.scaleChoices.set(domain.id, [...selected]);
-                    clearErrorWhenSelectionIsValid();
-                });
-                const count = scale ? scale.parts.flatMap(part => part.questions).length : null;
-                label.append(input, document.createTextNode(' ' + name + (count == null ? '' : ' (' + count + (state.lang === 'hi' ? ' प्रश्न' : ' items') + ')')));
-                choices.append(label);
-            });
+            : L(CLINICAL_DATA.scales[id]?.name));
+        return { domain, topic, available, names, searchable: [topic, ...names].join(' ').toLocaleLowerCase() };
+    }).filter(item => {
+        const configured = Boolean(item.domain.forms?.length || item.domain.baseInstrument ||
+            item.domain.originalLabel || item.domain.questions?.some(question => question.scaleId));
+        if (configured && !item.available.length) {
+            state.selectedDomains.delete(item.domain.id);
+            state.scaleChoices.delete(item.domain.id);
+            return false;
         }
-        cb.addEventListener('change', () => {
-            if (cb.checked) state.selectedDomains.add(domain.id);
-            else state.selectedDomains.delete(domain.id);
-            choices.hidden = !cb.checked;
-            label.classList.toggle('selected', cb.checked);
+        return !query || item.searchable.includes(query);
+    });
+
+    const fragment = document.createDocumentFragment();
+    const pills = document.createElement('div');
+    pills.className = 'domain-pills';
+    pills.setAttribute('role', 'group');
+    pills.setAttribute('aria-label', state.lang === 'hi' ? 'विषय चुनें' : 'Choose topics');
+
+    const clearErrorWhenSelectionIsValid = () => {
+        const error = document.getElementById('domains-error');
+        if (!error || error.classList.contains('hidden')) return;
+        const hasUnchosenScaleList = selectedDomainForms().some(selected =>
+            choicesForDomain(selected).length && !(selected.selectedForms || []).length);
+        if (!state.selectedDomains.size) error.textContent = t('domains.error');
+        else if (hasUnchosenScaleList) error.textContent = t('domains.error.scales');
+        else error.classList.add('hidden');
+    };
+
+    const updatePillCount = (domainId, selectedCount) => {
+        const pill = document.getElementById('topic-pill-' + domainId);
+        if (!pill) return;
+        pill.querySelector('.topic-pill-count')?.remove();
+        if (!selectedCount) return;
+        const badge = document.createElement('span');
+        badge.className = 'topic-pill-count';
+        badge.textContent = String(selectedCount);
+        badge.setAttribute('aria-label', `${selectedCount} ${state.lang === 'hi' ? 'मापनियाँ चुनी गईं' : 'scales selected'}`);
+        pill.append(badge);
+    };
+
+    domains.forEach(({ domain, topic }) => {
+        const selected = state.selectedDomains.has(domain.id);
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.id = 'topic-pill-' + domain.id;
+        button.className = 'topic-pill' + (selected ? ' selected' : '');
+        button.setAttribute('aria-pressed', String(selected));
+        button.setAttribute('aria-controls', 'selected-topic-scales');
+        const name = document.createElement('span');
+        name.textContent = topic;
+        button.append(name);
+        const saved = state.scaleChoices.get(domain.id);
+        const count = Array.isArray(saved) ? saved.length : saved ? 1 : 0;
+        if (count) {
+            const badge = document.createElement('span');
+            badge.className = 'topic-pill-count';
+            badge.textContent = String(count);
+            badge.setAttribute('aria-label', `${count} ${state.lang === 'hi' ? 'मापनियाँ चुनी गईं' : 'scales selected'}`);
+            button.append(badge);
+        }
+        button.addEventListener('click', () => {
+            if (selected) {
+                state.selectedDomains.delete(domain.id);
+                state.scaleChoices.delete(domain.id);
+            } else {
+                state.selectedDomains.add(domain.id);
+            }
+            renderDomainGrid();
+            document.getElementById(button.id)?.focus({ preventScroll: true });
             clearErrorWhenSelectionIsValid();
         });
-        const span = document.createElement('span');
-        span.className = 'domain-name';
-        span.textContent = topic;
-        label.append(cb, span);
-        const group = document.createElement('div');
-        group.append(label);
-        if (hasChoices) group.append(choices);
-        frag.append(group);
+        pills.append(button);
     });
-    if (query && !frag.childElementCount) {
+
+    if (query && !domains.length) {
         const empty = document.createElement('p');
         empty.className = 'domain-search-empty';
         empty.textContent = t('domains.search.empty');
-        frag.append(empty);
+        pills.append(empty);
     }
-    list.replaceChildren(frag);
+    fragment.append(pills);
+
+    const summary = document.createElement('p');
+    summary.className = 'topic-selection-summary';
+    summary.setAttribute('role', 'status');
+    summary.setAttribute('aria-live', 'polite');
+    const updateSelectionSummary = () => {
+        const topicCount = state.selectedDomains.size;
+        const scaleCount = selectedDomainForms()
+            .reduce((total, domain) => total + (domain.selectedForms || []).length, 0);
+        summary.textContent = t('domains.selection.summary')
+            .replace('{topics}', String(topicCount))
+            .replace('{scales}', String(scaleCount));
+    };
+    updateSelectionSummary();
+    fragment.append(summary);
+
+    const selectedList = document.createElement('div');
+    selectedList.className = 'topic-scale-shortlists';
+    selectedList.id = 'selected-topic-scales';
+
+    const selected = CLINICAL_DATA.domains
+        .filter(domain => state.selectedDomains.has(domain.id))
+        .map(domain => {
+            const topic = t('topic.' + domain.id, L(domain.name));
+            const available = choicesForDomain(domain);
+            const names = available.map(id => id === 'base'
+                ? (domain.baseInstrument || domain.originalLabel || '')
+                : L(CLINICAL_DATA.scales[id]?.name));
+            return { domain, topic, available, names };
+        })
+        .filter(item => !query || item.topic.toLocaleLowerCase().includes(query) ||
+            item.names.some(name => name.toLocaleLowerCase().includes(query)));
+
+    selected.forEach(({ domain, topic, available, names }) => {
+        const section = document.createElement('section');
+        section.className = 'topic-scale-shortlist';
+        const heading = document.createElement('h3');
+        heading.id = 'topic-scales-' + domain.id;
+        heading.textContent = (state.lang === 'hi' ? 'मापनियाँ · ' : 'Scales · ') + topic;
+        section.setAttribute('aria-labelledby', heading.id);
+        section.append(heading);
+
+        if (!available.length) {
+            const note = document.createElement('p');
+            note.className = 'scale-shortlist-prompt';
+            note.textContent = t('domains.builtin.note');
+            section.append(note);
+            selectedList.append(section);
+            return;
+        }
+
+        const saved = state.scaleChoices.get(domain.id);
+        const chosen = new Set(Array.isArray(saved)
+            ? saved.filter(id => available.includes(id))
+            : saved && available.includes(saved) ? [saved]
+                : defaultChoicesForDomain(domain));
+        const options = document.createElement('div');
+        options.className = 'scale-choice-list';
+        options.setAttribute('role', 'group');
+        options.setAttribute('aria-labelledby', heading.id);
+        const domainMatches = query && topic.toLocaleLowerCase().includes(query);
+
+        if (!chosen.size) {
+            const required = document.createElement('p');
+            required.className = 'scale-selection-needed';
+            required.textContent = t('domains.scale.required');
+            section.append(required);
+        }
+
+        available.forEach((id, index) => {
+            const name = names[index];
+            if (query && !domainMatches && !name.toLocaleLowerCase().includes(query)) return;
+            const scale = id === 'base' ? null : CLINICAL_DATA.scales[id];
+            const label = document.createElement('label');
+            label.className = 'scale-choice-option';
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = id;
+            checkbox.checked = chosen.has(id);
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) chosen.add(id);
+                else chosen.delete(id);
+                state.scaleChoices.set(domain.id, [...chosen]);
+                updatePillCount(domain.id, chosen.size);
+                updateSelectionSummary();
+                clearErrorWhenSelectionIsValid();
+            });
+            const scaleName = document.createElement('span');
+            scaleName.className = 'scale-choice-name';
+            scaleName.textContent = name;
+            label.append(checkbox, scaleName);
+            if (scale) {
+                const meta = document.createElement('span');
+                meta.className = 'scale-choice-meta';
+                const itemCount = (scale.parts || []).reduce((total, part) =>
+                    total + (part.questions || []).length, 0);
+                if (itemCount) {
+                    meta.textContent = `${itemCount} ${state.lang === 'hi' ? 'प्रश्न' : 'items'}`;
+                    label.append(meta);
+                }
+            }
+            options.append(label);
+        });
+        if (!options.childElementCount) {
+            const empty = document.createElement('p');
+            empty.className = 'domain-search-empty';
+            empty.textContent = t('domains.search.empty');
+            section.append(empty);
+        } else section.append(options);
+        selectedList.append(section);
+    });
+
+    if (!selected.length) {
+        const prompt = document.createElement('p');
+        prompt.className = 'scale-shortlist-prompt';
+        const key = state.selectedDomains.size
+            ? 'domains.selection.searchEmpty'
+            : query ? 'domains.selection.searchPrompt' : 'domains.selection.prompt';
+        prompt.textContent = t(key);
+        selectedList.append(prompt);
+    }
+    fragment.append(selectedList);
+    list.replaceChildren(fragment);
 }
 
 export { renderDomainGrid };

@@ -1,0 +1,80 @@
+{
+  "id": "mini",
+  "name": {
+    "en": "Mini International Neuropsychiatric Interview (MINI), English Version 7.0.2, for DSM-5",
+    "hi": "मिनी इंटरनैशनल न्यूरोसाइकिएट्रिक इंटरव्यू (MINI), अंग्रेज़ी संस्करण 7.0.2, DSM-5 हेतु"
+  },
+  "type": "mini_branching",
+  "source": {
+    "framework": "DSM-5",
+    "version": "7.0.2",
+    "date": "August 8, 2016",
+    "modulesImplemented": [
+      "A - Major Depressive Episode",
+      "B - Suicidality",
+      "C - Manic and Hypomanic Episodes",
+      "D - Panic Disorder",
+      "E - Agoraphobia",
+      "F - Social Anxiety Disorder",
+      "G - Obsessive-Compulsive Disorder",
+      "H - Posttraumatic Stress Disorder",
+      "I - Alcohol Use Disorder",
+      "J - Substance Use Disorder (Non-alcohol)",
+      "K - Psychotic Disorders and Mood Disorder With Psychotic Features",
+      "L - Anorexia Nervosa",
+      "M - Bulimia Nervosa",
+      "MB - Binge Eating Disorder",
+      "N - Generalized Anxiety Disorder",
+      "O - Rule Out Medical, Organic or Drug Causes For All Disorders",
+      "P - Antisocial Personality Disorder",
+      "Additional optional interview assessments (pages 36-37): A - Cross-Cutting Measures (Severity of Symptom), B - Disability/Functional Impairment (Severity of Disability/Impairment)",
+      "Mood Disorders Diagnostic Algorithm"
+    ],
+    "note": {
+      "en": "Structured interview modules adapted from the MINI 7.0.2 user-scripted version. This web implementation captures the screening logic only; it is not a substitute for trained interviewer administration. The organic-cause exclusion (Module O) is captured as an explicit clinician-rated No/Yes/Uncertain summary that gates every current-disorder diagnostic box.",
+      "hi": "MINI 7.0.2 के उपयोगकर्ता-स्क्रिप्टेड संस्करण से अनुकूलित संरचित साक्षात्कार माड्यूल। यह वेब कार्यान्वयन केवल स्क्रीनिंग तर्क ग्रहण करता है; प्रशिक्षित इंटरव्यूटर के प्रशासन का विकल्प नहीं है। जैविक-कारण बहिर्गमन (माड्यूल O) को चिकित्सक-रेटित नहीं/हाँ/अनिश्चित सारांश के रूप में ग्रहण किया गया है जो प्रत्येक वर्तमान-विकार निदान-बक्से को नियंत्रित करता है।"
+    }
+  },
+  "responseScale": [
+    {
+      "v": 0,
+      "label": {
+        "en": "No",
+        "hi": "नहीं"
+      }
+    },
+    {
+      "v": 1,
+      "label": {
+        "en": "Yes",
+        "hi": "हाँ"
+      }
+    }
+  ],
+  "directions": {
+    "en": "These questions follow the MINI 7.0.2 branching logic (Modules A-P plus the additional optional interview assessments: Cross-Cutting Measures, Disability/Functional Impairment, and the Mood Disorders Diagnostic Algorithm: Major Depressive Episode; Suicidality; Manic/Hypomanic Episodes; Panic Disorder; Agoraphobia; Social Anxiety; Obsessive-Compulsive Disorder; Posttraumatic Stress Disorder; Alcohol Use Disorder; Substance Use Disorder; Psychotic Disorders and Mood Disorder With Psychotic Features; Anorexia Nervosa; Bulimia Nervosa; Binge Eating Disorder; Generalized Anxiety Disorder; Rule Out Medical/Organic/Drug Causes; Antisocial Personality Disorder). Answer honestly; sections that do not apply are skipped automatically.",
+    "hi": "ये प्रश्न MINI 7.0.2 की शाखा-विभाजन पद्धति का पालन करते हैं (माड्यूल A-P एवं अतिरिक्त वैकल्पिक मूल्यांकन: क्रॉस-कटिंग माप, अक्षमता/कार्यात्मक हानि, तथा मूड-विकार निदान-एल्गोरिद्म: प्रमुख अवसादी एपिसोड; आत्मघातिता; मैैनिक/हाइपोमैैनिक एपिसोड; पैैनिक विकार; एगोराफोबिया; सामाजिक आतंक; O.C.D.; PTSD; मद्य-सेवन विकार; पदार्थ-सेवन विकार; मनर्विकार विकार एवं मनर्विकारी लक्षणों सहित मूड विकार; एनोरेक्सिया नर्वोसा; बुलिमिया नर्वोसा; बिंज-ईटिंग विकार; सामान्यीकृत चिंता विकार; चिकित्सकीय/जैविक/दवा-कारणों का बहिर्गमन; प्रतिसामाजिक व्यक्तित्व विकार)। ईमानदारी से उत्तर दें; लागू न होने वाले भाग स्वतः छोड़े जाएँगे।"
+  },
+  "modules": [
+    "A.json",
+    "B.json",
+    "C.json",
+    "D.json",
+    "E.json",
+    "F.json",
+    "G.json",
+    "H.json",
+    "I.json",
+    "J.json",
+    "K.json",
+    "L.json",
+    "M.json",
+    "MB.json",
+    "N.json",
+    "O.json",
+    "P.json",
+    "OPT-A.json",
+    "OPT-B.json",
+    "ALG-MOOD.json"
+  ]
+}

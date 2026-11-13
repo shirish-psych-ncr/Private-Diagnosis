@@ -1,0 +1,16 @@
+{
+  "id": "gambling",
+  "name": {
+    "en": "Gambling-related concerns",
+    "hi": "जुआ-संबंधी चिंताएँ"
+  },
+  "tier": 2,
+  "description": {
+    "en": "A focused screen for gambling-related harms; a result is not a diagnosis.",
+    "hi": "जुआ-संबंधी हानि की केंद्रित स्क्रीनिंग; परिणाम निदान नहीं है।"
+  },
+  "questions": [],
+  "forms": [
+    "pgsi"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "id": "H",
+  "name": {
+    "en": "Module H — Posttraumatic Stress Disorder",
+    "hi": "माड्यूल H — आघात-ोत्तर तनाव विकार (PTSD)"
+  },
+  "screen": {
+    "intro": {
+      "en": "Criterion A — trauma exposure",
+      "hi": "मानदंड A — आघात-संपर्क"
+    },
+    "examples": {
+      "en": "Examples of traumatic events include: serious accidents, sexual or physical assault, a terrorist attack, being held hostage, kidnapping, fire, discovering a body, war, or natural disaster, witnessing the violent or sudden death of someone close to you, or a life threatening illness.",
+      "hi": "आघातजनक घटनाओं के उदाहरण: गंभीर दुर्घटनाएँ, यौन/शारीरिक हमला, आतंकी हमला, बंधक बनना, अपहरण, आग, मृतदेह देखना, युद्ध, प्राकृतिक आपदा, निकट के किसी की हिंसक/अचानक मृत्यु का साक्षी होना, या जीवन-घातक बीमारी।"
+    },
+    "questions": [
+      {
+        "id": "H1",
+        "text": {
+          "en": "Have you ever experienced or witnessed or had to deal with an extremely traumatic event that included actual or threatened death or serious injury or sexual violence to you or someone else?",
+          "hi": "क्या आपने कभी अत्यंत आघातजनक घटना का अनुभव/साक्ष्य/प्रबंध किया जिसमें आपके या किसी और की वास्तविक/उपद्रुत मृत्यु, गंभीर चोट या यौन हिंसा शामिल थी?"
+        }
+      }
+    ],
+    "gateRule": "IF H1 No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "gateNote": {
+      "en": "If H1 is No, Module H terminates (PTSD coded No).",
+      "hi": "यदि H1 'नहीं', माड्यूल H समाप्त (PTSD 'नहीं' कोड)।"
+    }
+  },
+  "h2": {
+    "id": "H2",
+    "text": {
+      "en": "Starting after the traumatic event, did you repeatedly re-experience the event in an unwanted mentally distressing way (such as in recurrent dreams related to the event, intense recollections or memories, or flashbacks or as if the event was recurring) or did you have intense physical or psychological reactions when you were reminded about the event or exposed to a similar event?",
+      "hi": "आघात के बाद क्या आपने घटना को बार-बार अवांछित, मानसिक रूप से पीड़ादायक ढंग से पुनः-अनुभव किया (जैसे घटना-संबंधी बार-बार सपने, तीव्र स्मृतियाँ, फ्लैशबैक, या जैसे घटना दोहराई जा रही हो), या घटना की याद दिलाने पर/समान घटना में तीव्र शारीरिक/मानसिक प्रतिक्रियाएँ हुईं?"
+    }
+  },
+  "h3Intro": {
+    "en": "In the past month (persistent avoidance):",
+    "hi": "पिछले माह (लगातार परहेज़):"
+  },
+  "h3": [
+    {
+      "id": "H3a",
+      "text": {
+        "en": "Did you persistently try to avoid thinking about or remembering distressing details or feelings related to the event?",
+        "hi": "क्या आप लगातार घटना से जुड़े कष्टदायी विवरण/भावनाओं के बारे में सोचने या याद करने से बचते रहे?"
+      }
+    },
+    {
+      "id": "H3b",
+      "text": {
+        "en": "Did you persistently try to avoid people, conversations, places, situations, activities or things that bring back distressing recollections of the event?",
+        "hi": "क्या आप लगातार उन लोगों/बातचीत/स्थानों/स्थितियों/गतिविधियों/वस्तुओं से बचते रहे जो घटना की कष्टदायी स्मृतियाँ लौटाएँ?"
+      }
+    }
+  ],
+  "h3Gate": {
+    "rule": "IF 0 of H3 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "Are 1 or more H3 answers coded Yes?",
+      "hi": "क्या H3 के 1 या अधिक उत्तर 'हाँ' कोडित हैं?"
+    }
+  },
+  "h4Intro": {
+    "en": "In the past month (negative alterations in cognitions and mood):",
+    "hi": "पिछले माह (संज्ञाना एवं मूड में नकारात्मक परिवर्तन):"
+  },
+  "h4": {
+    "$file": "data/interviews/mini/H/h4.json"
+  },
+  "h4Gate": {
+    "rule": "IF <2 of H4 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "Are 2 or more H4 answers coded Yes?",
+      "hi": "क्या H4 के 2 या अधिक उत्तर 'हाँ' कोडित हैं?"
+    }
+  },
+  "h5Intro": {
+    "en": "In the past month (marked alterations in arousal and reactivity):",
+    "hi": "पिछले माह (उत्तेजना एवं अभिक्रिया में स्पष्ट परिवर्तन):"
+  },
+  "h5": [
+    {
+      "id": "H5a",
+      "text": {
+        "en": "Were you especially irritable or did you have outbursts of anger with little or no provocation?",
+        "hi": "क्या आप विशेष चिड़चिड़े रहे या अल्प/अनुत्तेजक क्रोध-विस्फोट हुए?"
+      }
+    },
+    {
+      "id": "H5b",
+      "text": {
+        "en": "Were you more reckless or more self-destructive?",
+        "hi": "क्या आप अधिक लापरवाह या आत्मविनाशी हुए?"
+      }
+    },
+    {
+      "id": "H5c",
+      "text": {
+        "en": "Were you more nervous or constantly on your guard?",
+        "hi": "क्या अधिक घबराहट या सतत सतर्कता रही?"
+      }
+    },
+    {
+      "id": "H5d",
+      "text": {
+        "en": "Were you more easily startled?",
+        "hi": "क्या आप अधिक आसानी से चौंकते/हड़बड़ाते थे?"
+      }
+    },
+    {
+      "id": "H5e",
+      "text": {
+        "en": "Did you have more difficulty concentrating?",
+        "hi": "क्या ध्यान केंद्रित करने में अधिक कठिनाई हुई?"
+      }
+    },
+    {
+      "id": "H5f",
+      "text": {
+        "en": "Did you have more difficulty sleeping?",
+        "hi": "क्या नींद में अधिक कठिनाई हुई?"
+      }
+    }
+  ],
+  "h5Gate": {
+    "rule": "IF <2 of H5 answers Yes -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO, AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "Are 2 or more H5 answers coded Yes?",
+      "hi": "क्या H5 के 2 या अधिक उत्तर 'हाँ' कोडित हैं?"
+    }
+  },
+  "h6": {
+    "id": "H6",
+    "text": {
+      "en": "Did all these problems start after the traumatic event and last for more than one month?",
+      "hi": "क्या ये सभी समस्याएँ आघात-ोत्तर शुरू हुईं और एक माह से अधिक जारी रहीं?"
+    }
+  },
+  "h7": {
+    "id": "H7",
+    "text": {
+      "en": "During the past month, did these problems cause significant distress, or interfere with your ability to function at home, at work, at school or socially or in your relationships or in some other important way?",
+      "hi": "पिछले माह में क्या इन समस्याओं ने महत्वपूर्ण कष्ट दिया, या घर/कार्य/विद्यालय/सामाजिक/संबंध/अन्य महत्वपूर्ण क्षेत्रों में कार्यक्षमता बाधित की?"
+    }
+  },
+  "specifierNote": {
+    "en": "Specify if the condition is associated with depersonalization, derealization or with delayed expression.",
+    "hi": "निर्दिष्ट करें: क्या यह विपृक्त-आत्मता (depersonalization), यथार्थ-विपृक्तता (derealization) या विलंबित-अभिव्यक्ति (delayed expression) से संबंधित है।"
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "H_diag",
+      "label": {
+        "en": "Posttraumatic Stress Disorder — Current",
+        "hi": "आघात-ोत्तर तनाव विकार — वर्तमान"
+      },
+      "rule": "H1 AND H2 AND H3-gate AND H4-gate AND H5-gate AND H6 AND H7 all Yes AND organic cause ruled out (O2 summary). Specifiers: WITH DEPERSONALIZATION / DEREALIZATION / DELAYED EXPRESSION.",
+      "flags": [
+        "CURRENT",
+        "WITH DEPERSONALIZATION",
+        "DEREALIZATION",
+        "DELAYED EXPRESSION"
+      ],
+      "disordersOnPositive": [
+        "ptsd"
+      ]
+    }
+  ]
+}

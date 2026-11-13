@@ -1,0 +1,16 @@
+{
+  "id": "perinatal_wellbeing",
+  "name": {
+    "en": "Perinatal mood and wellbeing",
+    "hi": "प्रसवकालीन मनोदशा और कल्याण"
+  },
+  "tier": 2,
+  "description": {
+    "en": "Perinatal mood screening with follow-up based on clinical assessment and safety needs.",
+    "hi": "नैदानिक मूल्यांकन और सुरक्षा आवश्यकताओं के आधार पर अनुवर्ती कार्रवाई सहित प्रसवकालीन मनोदशा स्क्रीनिंग।"
+  },
+  "questions": [],
+  "forms": [
+    "epds"
+  ]
+}

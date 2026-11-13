@@ -1,0 +1,49 @@
+{
+  "id": "lec5",
+  "name": "Life Events Checklist for DSM-5 (LEC-5)",
+  "type": "event_history",
+  "sourceInstrument": "LEC-5 Standard Self-Report",
+  "version": "LEC-5",
+  "framework": "DSM-5",
+  "administeredBy": "self-report",
+  "ageGroups": ["adult", "older"],
+  "directions": "For each event, select one or more response boxes to show how you were exposed. You may select more than one type of exposure for an event.",
+  "timeframe": "Lifetime",
+  "matrixOptions": [
+    { "v": 0, "label": "Happened to me" },
+    { "v": 1, "label": "Witnessed it" },
+    { "v": 2, "label": "Learned about it" },
+    { "v": 3, "label": "Part of my job" },
+    { "v": 4, "label": "Not sure" },
+    { "v": 5, "label": "Doesn't apply" }
+  ],
+  "parts": [
+    {
+      "name": "Potentially stressful events",
+      "questions": [
+        { "id": "LEC1", "itemNumber": 1, "multipleChoice": true, "text": "Natural disaster (for example, flood, hurricane, tornado, earthquake)" },
+        { "id": "LEC2", "itemNumber": 2, "multipleChoice": true, "text": "Fire or explosion" },
+        { "id": "LEC3", "itemNumber": 3, "multipleChoice": true, "text": "Transportation accident (for example, car accident, boat accident, train wreck, plane crash)" },
+        { "id": "LEC4", "itemNumber": 4, "multipleChoice": true, "text": "Serious accident at work, home, or during a recreational activity" },
+        { "id": "LEC5", "itemNumber": 5, "multipleChoice": true, "text": "Exposure to a toxic substance (for example, dangerous chemicals, radiation)" },
+        { "id": "LEC6", "itemNumber": 6, "multipleChoice": true, "text": "Physical assault (for example, being attacked, hit, slapped, kicked, beaten up)" },
+        { "id": "LEC7", "itemNumber": 7, "multipleChoice": true, "text": "Assault with a weapon (for example, being shot, stabbed, or threatened with a knife, gun, or bomb)" },
+        { "id": "LEC8", "itemNumber": 8, "multipleChoice": true, "text": "Sexual assault (rape, attempted rape, or being made to perform any type of sexual act through force or threat of harm)" },
+        { "id": "LEC9", "itemNumber": 9, "multipleChoice": true, "text": "Other unwanted or uncomfortable sexual experience" },
+        { "id": "LEC10", "itemNumber": 10, "multipleChoice": true, "text": "Combat or exposure to a war zone (in the military or as a civilian)" },
+        { "id": "LEC11", "itemNumber": 11, "multipleChoice": true, "text": "Captivity (for example, being kidnapped, abducted, held hostage, or a prisoner of war)" },
+        { "id": "LEC12", "itemNumber": 12, "multipleChoice": true, "text": "Life-threatening illness or injury" },
+        { "id": "LEC13", "itemNumber": 13, "multipleChoice": true, "text": "Severe human suffering" },
+        { "id": "LEC14", "itemNumber": 14, "multipleChoice": true, "text": "Sudden violent death (for example, homicide, suicide)" },
+        { "id": "LEC15", "itemNumber": 15, "multipleChoice": true, "text": "Sudden accidental death" },
+        { "id": "LEC16", "itemNumber": 16, "multipleChoice": true, "text": "Serious injury, harm, or death you caused to someone else" },
+        { "id": "LEC17", "itemNumber": 17, "multipleChoice": true, "text": "Any other very stressful event or experience" }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "method": "event_exposure_register_no_total",
+    "note": "The LEC-5 has no formal scoring protocol, total score, or composite score. It records reported exposure types for each event.",
+    "citation": "Weathers, F.W., Blake, D.D., Schnurr, P.P., Kaloupek, D.G., Marx, B.P., & Keane, T.M. (2013). The Life Events Checklist for DSM-5 (LEC-5)."
+  }
+}

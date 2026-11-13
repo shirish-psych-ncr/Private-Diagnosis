@@ -1,0 +1,10 @@
+{
+  "name": "ISAS",
+  "description": {
+    "en": "Non-suicidal self-injury behavior and function profile; assess suicidal intent separately."
+  },
+  "domains": [
+    "self_injury"
+  ],
+  "scaleId": "isas"
+}

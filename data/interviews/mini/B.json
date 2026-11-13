@@ -1,0 +1,133 @@
+{
+  "id": "B",
+  "name": {
+    "en": "Module B — Suicidality",
+    "hi": "माड्यूल B — आत्मघाती विचार/व्यवहार"
+  },
+  "timeframeNote": {
+    "en": "In the past month did you:",
+    "hi": "पिछले माह में क्या आप:"
+  },
+  "questions": {
+    "$file": "data/interviews/mini/B/questions.json"
+  },
+  "sbdProbes": [
+    {
+      "id": "B20",
+      "visibleWhen": "B18 == 1",
+      "text": {
+        "en": "Was the suicidal act started when you were NOT in a state of confusion or delirium?",
+        "hi": "क्या आत्मघाती कृत्य तब शुरू हुआ जब आप भ्रम या उन्माद की स्थिति में नहीं थे?"
+      }
+    },
+    {
+      "id": "B21",
+      "visibleWhen": "B18 == 1",
+      "text": {
+        "en": "Was the suicidal act done WITHOUT a political or religious purpose?",
+        "hi": "क्या आत्मघाती कृत्य बिना राजनीतिक या धार्मिक उद्देश्य से किया गया?"
+      }
+    }
+  ],
+  "scoring": {
+    "sumItems": [
+      "B1a",
+      "B1b",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B9",
+      "B10",
+      "B11",
+      "B12",
+      "B13",
+      "B14a",
+      "B14b",
+      "B14c",
+      "B16a",
+      "B16b",
+      "B16c",
+      "B18",
+      "B19"
+    ],
+    "excludeFromSum": [
+      "B1",
+      "B15"
+    ],
+    "bands": [
+      {
+        "min": 1,
+        "max": 8,
+        "severity": {
+          "en": "Low",
+          "hi": "निम्न"
+        }
+      },
+      {
+        "min": 9,
+        "max": 16,
+        "severity": {
+          "en": "Moderate",
+          "hi": "मध्यम"
+        }
+      },
+      {
+        "min": 17,
+        "max": 999,
+        "severity": {
+          "en": "High",
+          "hi": "उच्च"
+        }
+      }
+    ]
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "B_diag_suicidality",
+      "label": {
+        "en": "Suicidality",
+        "hi": "आत्मघातिता"
+      },
+      "rule": "At least 1 item coded Yes (except B1, B15). Sum points => Low 1-8 / Moderate 9-16 / High >17. CURRENT = any positive B1a-B16c (except B15) or any time in B17; LIFETIME ATTEMPT = B18 Yes; LIKELY IN NEAR FUTURE = B19 Yes.",
+      "flags": [
+        "LOW",
+        "MODERATE",
+        "HIGH",
+        "CURRENT",
+        "LIFETIME ATTEMPT",
+        "LIKELY IN NEAR FUTURE"
+      ]
+    },
+    {
+      "id": "B_diag_sbd",
+      "label": {
+        "en": "Suicidal Behavior Disorder",
+        "hi": "आत्मघाती व्यवहार विकार"
+      },
+      "rule": "B18 Yes AND B20 Yes (act started when not confused/delirious) AND B21 Yes (no political/religious purpose). Specify Current / In early remission / In remission.",
+      "flags": [
+        "CURRENT",
+        "IN EARLY REMISSION",
+        "IN REMISSION"
+      ]
+    }
+  ],
+  "safety": {
+    "triggerItems": [
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B10",
+      "B12",
+      "B16",
+      "B18",
+      "B19"
+    ],
+    "openCrisisModalWhen": "any trigger item == 1, or B19 > 0"
+  }
+}

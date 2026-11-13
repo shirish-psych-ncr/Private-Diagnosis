@@ -1,0 +1,461 @@
+[
+  {
+    "id": "whoqol_1",
+    "text": "How would you rate your quality of life?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very poor"
+      },
+      {
+        "v": 2,
+        "label": "Poor"
+      },
+      {
+        "v": 3,
+        "label": "Neither poor nor good"
+      },
+      {
+        "v": 4,
+        "label": "Good"
+      },
+      {
+        "v": 5,
+        "label": "Very good"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_2",
+    "text": "How satisfied are you with your health?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_3",
+    "text": "To what extent does physical pain prevent you from doing what you need to do?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "A moderate amount"
+      },
+      {
+        "v": 4,
+        "label": "Very much"
+      },
+      {
+        "v": 5,
+        "label": "An extreme amount"
+      }
+    ],
+    "reverse": true
+  },
+  {
+    "id": "whoqol_4",
+    "text": "How much do you need medical treatment to function in daily life?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "A moderate amount"
+      },
+      {
+        "v": 4,
+        "label": "Very much"
+      },
+      {
+        "v": 5,
+        "label": "An extreme amount"
+      }
+    ],
+    "reverse": true
+  },
+  {
+    "id": "whoqol_5",
+    "text": "How much do you enjoy life?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "A moderate amount"
+      },
+      {
+        "v": 4,
+        "label": "Very much"
+      },
+      {
+        "v": 5,
+        "label": "An extreme amount"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_6",
+    "text": "To what extent do you feel your life is meaningful?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "A moderate amount"
+      },
+      {
+        "v": 4,
+        "label": "Very much"
+      },
+      {
+        "v": 5,
+        "label": "An extreme amount"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_7",
+    "text": "How well are you able to concentrate?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "A moderate amount"
+      },
+      {
+        "v": 4,
+        "label": "Very much"
+      },
+      {
+        "v": 5,
+        "label": "Extremely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_8",
+    "text": "How safe do you feel in your daily life?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "A moderate amount"
+      },
+      {
+        "v": 4,
+        "label": "Very much"
+      },
+      {
+        "v": 5,
+        "label": "Extremely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_9",
+    "text": "How healthy is your physical environment?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "A moderate amount"
+      },
+      {
+        "v": 4,
+        "label": "Very much"
+      },
+      {
+        "v": 5,
+        "label": "Extremely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_10",
+    "text": "Do you have enough energy for everyday life?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "Moderately"
+      },
+      {
+        "v": 4,
+        "label": "Mostly"
+      },
+      {
+        "v": 5,
+        "label": "Completely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_11",
+    "text": "Are you able to accept your bodily appearance?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "Moderately"
+      },
+      {
+        "v": 4,
+        "label": "Mostly"
+      },
+      {
+        "v": 5,
+        "label": "Completely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_12",
+    "text": "Do you have enough money to meet your needs?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "Moderately"
+      },
+      {
+        "v": 4,
+        "label": "Mostly"
+      },
+      {
+        "v": 5,
+        "label": "Completely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_13",
+    "text": "How available to you is the information you need in day-to-day life?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "Moderately"
+      },
+      {
+        "v": 4,
+        "label": "Mostly"
+      },
+      {
+        "v": 5,
+        "label": "Completely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_14",
+    "text": "To what extent do you have the opportunity for leisure activities?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Not at all"
+      },
+      {
+        "v": 2,
+        "label": "A little"
+      },
+      {
+        "v": 3,
+        "label": "Moderately"
+      },
+      {
+        "v": 4,
+        "label": "Mostly"
+      },
+      {
+        "v": 5,
+        "label": "Completely"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_15",
+    "text": "How well are you able to get around?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very poor"
+      },
+      {
+        "v": 2,
+        "label": "Poor"
+      },
+      {
+        "v": 3,
+        "label": "Neither poor nor good"
+      },
+      {
+        "v": 4,
+        "label": "Good"
+      },
+      {
+        "v": 5,
+        "label": "Very good"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_16",
+    "text": "How satisfied are you with your sleep?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_17",
+    "text": "How satisfied are you with your ability to perform daily living activities?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  }
+]

@@ -7,7 +7,7 @@ import { computeResults } from './results-computation.js';
 import { renderResults } from './results-rendering.js';
 import { closeSafetyModal } from './safety.js';
 import { renderScales } from './scale-rendering.js';
-import { state, selectedDomainForms } from './state.js';
+import { state, selectedDomainForms, choicesForDomain } from './state.js';
 
 /* ------------------------------------------------------------------ *
  * 11. EVENT WIRING
@@ -49,14 +49,16 @@ function bindStaticUI() {
         });
     });
 
-    // Stage 2 -> 3 gate: at least one symptom domain must be selected; the
-    // scale content is rendered only after the gate passes.
+    // Stage 2 -> 3 gate: each selected topic with scale choices must include
+    // at least one manually selected scale before its questions are loaded.
     const domainsError = document.getElementById('domains-error');
     const validateDomains = () => {
         const chosen = selectedDomainForms();
-        const ok = state.selectedDomains.size > 0 && chosen.some(domain => (domain.selectedForms || []).length > 0);
+        const topicMissingScale = chosen.some(domain =>
+            choicesForDomain(domain).length > 0 && !(domain.selectedForms || []).length);
+        const ok = state.selectedDomains.size > 0 && !topicMissingScale;
         domainsError.textContent = state.selectedDomains.size === 0
-            ? t('domains.error') : t('domains.error.scales');
+            ? t('domains.error') : topicMissingScale ? t('domains.error.scales') : t('domains.error');
         domainsError.classList.toggle('hidden', ok);
         return ok;
     };

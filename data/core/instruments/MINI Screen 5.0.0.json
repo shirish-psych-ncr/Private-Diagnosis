@@ -1,0 +1,11 @@
+{
+  "name": "Mini International Neuropsychiatric Interview Screen, English Version 5.0.0, DSM-IV",
+  "version": "5.0.0",
+  "framework": "DSM-IV",
+  "administeredBy": "clinician",
+  "duration": "Brief screen; timing varies",
+  "description": "A 20-item interviewer-administered screen that routes positive responses to the corresponding MINI modules. It is kept separate from the DSM-5 MINI 7.0.2 interview.",
+  "scaleId": "mini_screen_5",
+  "domainId": "mini_screen",
+  "followUpTopicsAreManual": true
+}

@@ -1,0 +1,260 @@
+{
+  "id": "pgsi",
+  "name": "Problem Gambling Severity Index (PGSI)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Answer about your gambling behaviour over the past 12 months. Choose one response for each question.",
+  "parts": [
+    {
+      "name": "Past 12 months",
+      "questions": [
+        {
+          "id": "pgsi_1",
+          "text": "Have you bet more than you could really afford to lose?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_2",
+          "text": "Have you needed to gamble with larger amounts of money to get the same feeling of excitement?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_3",
+          "text": "Have you gone back on another day to try to win back the money you lost?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_4",
+          "text": "Have you borrowed money or sold anything to gamble?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_5",
+          "text": "Have you felt that you might have a problem with gambling?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_6",
+          "text": "Have people criticised your betting or told you that you had a gambling problem, whether or not you thought it was true?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_7",
+          "text": "Have you felt guilty about the way you gamble or what happens when you gamble?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_8",
+          "text": "Has gambling caused you any health problems, including stress or anxiety?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        },
+        {
+          "id": "pgsi_9",
+          "text": "Has your gambling caused any financial problems for you or your household?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Sometimes"
+            },
+            {
+              "v": 2,
+              "label": "Most of the time"
+            },
+            {
+              "v": 3,
+              "label": "Almost always"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceInstrument": "Problem Gambling Severity Index (PGSI)",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "timeframe": "Past 12 months",
+  "matrixOptions": [
+    {
+      "v": 0,
+      "label": "Never"
+    },
+    {
+      "v": 1,
+      "label": "Sometimes"
+    },
+    {
+      "v": 2,
+      "label": "Most of the time"
+    },
+    {
+      "v": 3,
+      "label": "Almost always"
+    }
+  ],
+  "responseMin": 0,
+  "responseMax": 3,
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "PGSI total",
+        "ids": [
+          "pgsi_1",
+          "pgsi_2",
+          "pgsi_3",
+          "pgsi_4",
+          "pgsi_5",
+          "pgsi_6",
+          "pgsi_7",
+          "pgsi_8",
+          "pgsi_9"
+        ],
+        "max": 27,
+        "severity": "Use the published PGSI risk categories with clinical context"
+      }
+    ]
+  },
+  "attribution": "Ferris, J., & Wynne, H. (2001). The Canadian Problem Gambling Index: Final Report.",
+  "interpretationNote": "Summed score is a screening measure, not a diagnosis. Use validated PGSI risk-category guidance and clinical context."
+}

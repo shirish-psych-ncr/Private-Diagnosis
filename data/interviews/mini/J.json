@@ -1,0 +1,168 @@
+{
+  "id": "J",
+  "name": {
+    "en": "Module J — Substance Use Disorder (Non-alcohol)",
+    "hi": "माड्यूल J — पदार्थ-सेवन विकार (गैर-मद्य)"
+  },
+  "intro": {
+    "en": "Now I am going to show you / read to you a list of street drugs or medicines.",
+    "hi": "अब मैं आपको सड़क-दवाइयों/औषधियों की सूची दिखाता/पढ़ता हूँ।"
+  },
+  "screen": {
+    "intro": {
+      "en": "Screen-in question (past 12 months)",
+      "hi": "स्क्रीन-इन प्रश्न (पिछले 12 माह)"
+    },
+    "questions": [
+      {
+        "id": "J1a",
+        "text": {
+          "en": "In the past 12 months, did you take any of these drugs more than once, to get high, to feel elated, to get 'a buzz' or to change your mood?",
+          "hi": "पिछले 12 माह में क्या इनमें से कोई दवा एक से अधिक बार — नशा/उन्माद/मूड-परिवर्तन हेतु — ली?"
+        }
+      }
+    ],
+    "gateRule": "IF J1a No -> GO TO THE DIAGNOSTIC BOX, CIRCLE NO AND MOVE TO THE NEXT MODULE.",
+    "gateNote": {
+      "en": "If J1a is No, Module J terminates (Substance Use Disorder coded No). Circle each drug taken; specify the most used drug(s) and which drug(s) cause the biggest problems. First explore the criteria for the drug class causing the biggest problems.",
+      "hi": "यदि J1a 'नहीं', माड्यूल J समाप्त (पदार्थ-सेवन विकार 'नहीं' कोड)। ली गई प्रत्येक दवा घेरें; सर्वाधिक-उपयोग एवं सर्वाधिक-समस्याजनक दवा निर्दिष्ट करें। प्रथम सर्वाधिक-समस्याजनक वर्ग के मानदंड जाँचें।"
+    }
+  },
+  "drugClasses": [
+    {
+      "label": {
+        "en": "Stimulants: amphetamines, 'speed', crystal meth, 'crank', Dexedrine, Ritalin, diet pills",
+        "hi": "उत्तेजक: एम्फ़ैटामाइन, स्पीड, क्रिस्टल मेथ, डेक्सेड्रीन, रिटालिन, डाइट पिल्स"
+      }
+    },
+    {
+      "label": {
+        "en": "Cocaine: snorting, IV, freebase, crack, 'speedball'",
+        "hi": "कोकीन: नाक से, IV, फ्रीबेस, क्रैक, स्पीडबॉल"
+      }
+    },
+    {
+      "label": {
+        "en": "Opiates: heroin, morphine, Dilaudid, opium, Demerol, methadone, Darvon, codeine, Percodan, Vicodin, OxyContin",
+        "hi": "ओपिएट: हेरोइन, मॉर्फीन, ओपियम, डीमेरॉल, मेथैडोन, कोडीन, Percodan, Vicodin, OxyContin"
+      }
+    },
+    {
+      "label": {
+        "en": "Hallucinogens: LSD ('acid'), mescaline, peyote, psilocybin, STP, 'mushrooms', 'ecstasy', MDA, MDMA",
+        "hi": "मूत्र्छाकारक: LSD (एसिड), मेस्कालीन, पेयोटे, साइलोसाइबिन, STP, मशरूम, ایکस्टसी, MDA, MDMA"
+      }
+    },
+    {
+      "label": {
+        "en": "Dissociative drugs: PCP ('Angel Dust', 'Peace Pill', 'Hog'), ketamine ('Special K')",
+        "hi": "वियोजक द्रव्य: PCP (एंजेल डस्ट, पीस पिल), केटामाइन (स्पेशल के)"
+      }
+    },
+    {
+      "label": {
+        "en": "Inhalants: 'glue', ethyl chloride, 'rush', nitrous oxide ('laughing gas'), amyl or butyl nitrate ('poppers')",
+        "hi": "श्वसन-द्रव्य: गोंद, एथिल क्लोराइड, rush, नाइट्रस ऑक्साइड (हँसी गैस), poppers"
+      }
+    },
+    {
+      "label": {
+        "en": "Cannabis: marijuana, hashish ('hash'), THC, 'pot', 'grass', 'weed', 'reefer'",
+        "hi": "कैंनाबिस: गाँजा, चरस, THC, pot, grass, weed"
+      }
+    },
+    {
+      "label": {
+        "en": "Sedatives, hypnotics or anxiolytics: Quaalude, Seconal ('reds'), Valium, Xanax, Librium, Ativan, Dalmane, Halcion, barbiturates, Miltown, GHB, Roofinol, 'Roofies'",
+        "hi": "शांतक/निद्राकारक/आतंक-नाशक: वैलियम, ज़ैनैक्स, लिब्रियम, एटिवैन, डालमैन, हाल्शियन, बारबिट्यूरेट, GHB, 'रूफीज़'"
+      }
+    },
+    {
+      "label": {
+        "en": "Miscellaneous: steroids, nonprescription sleep or diet pills, cough medicine, any others",
+        "hi": "विविध: स्टेरॉइड, बिना-पर्चे नींद/डाइट गोलियाँ, खाँसी की दवा, अन्य"
+      }
+    },
+    {
+      "label": {
+        "en": "Prescription medications taken to get high (not as prescribed)",
+        "hi": "पर्चे-विरोधी उद्देश्य से ली गई पर्ची-दवाइयाँ"
+      }
+    }
+  ],
+  "mostUsed": {
+    "id": "J_most_used",
+    "nonScoring": true,
+    "freeText": true,
+    "text": {
+      "en": "Specify the most used drug(s):",
+      "hi": "सर्वाधिक प्रयुक्त दवा निर्दिष्ट करें:"
+    }
+  },
+  "biggestProblems": {
+    "id": "J_biggest_problems",
+    "nonScoring": true,
+    "freeText": true,
+    "text": {
+      "en": "Which drug(s) cause the biggest problems?",
+      "hi": "कौन-सी दवा सर्वाधिक समस्या जनती है?"
+    }
+  },
+  "criteriaIntro": {
+    "en": "Considering your use of the selected drug/drug class, in the past 12 months:",
+    "hi": "चयनित दवा/दवा-वर्ग के सेवन के संदर्भ में, पिछले 12 माह में:"
+  },
+  "criteria": {
+    "$file": "data/interviews/mini/J/criteria.json"
+  },
+  "k1": {
+    "$file": "data/interviews/mini/J/k1.json"
+  },
+  "k2": {
+    "id": "J2k2",
+    "text": {
+      "en": "Did you use the drug to reduce or avoid withdrawal symptoms?",
+      "hi": "क्या विषमुक्ति-लक्षण घटाने/टालने हेतु दवा ली?"
+    }
+  },
+  "kSummary": {
+    "id": "J2k_summary",
+    "rule": "IF YES TO J2k1 OR J2k2, CODE YES. (J2k1 and J2k2 together count as one among the J2 criteria.)",
+    "text": {
+      "en": "J2k SUMMARY: If yes to J2k1 or J2k2, code Yes.",
+      "hi": "J2k सारांश: यदि J2k1 या J2k2 'हाँ' तो 'हाँ' कोड।"
+    }
+  },
+  "gate": {
+    "rule": "IF <2 of J2a-J2k SUMMARY coded Yes -> Substance Use Disorder NO.",
+    "text": {
+      "en": "Are 2 or more J2 answers from J2a through J2k SUMMARY coded Yes? (J2k1 and J2k2 together count as one among these choices.)",
+      "hi": "क्या J2a से J2k सारांश तक के 2 या अधिक उत्तर 'हाँ' कोडित हैं? (J2k1 व J2k2 संयुक्त रूप से एक गिने जाते हैं।)"
+    }
+  },
+  "specifierNote": {
+    "en": "Specifiers: MILD = 2-3 of the J2 symptoms; MODERATE = 4-5; SEVERE = 6 or more. IN EARLY REMISSION = criteria not met for between 3 & 12 months; IN SUSTAINED REMISSION = criteria not met for 12 months or more (both with the exception of criterion d [craving]); IN A CONTROLLED ENVIRONMENT = where substance/drug access is restricted.",
+    "hi": "विशेषण: मृदु = J2 के 2-3 लक्षण; मध्यम = 4-5; गंभीर = 6+। प्रारंभिक-मिटी = 3-12 माह मानदंड पूरे नहीं; दीर्घ-मिटी = 12+ माह मानदंड पूरे नहीं (दोनों में मानदंड d [लालसा] अपवाद); नियंत्रित-वातावरण = जहाँ पदार्थ-प्राप्ति सीमित हो।"
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "J_diag",
+      "label": {
+        "en": "Substance (Drug or Drug Class Name) Use Disorder — Past 12 Months",
+        "hi": "पदार्थ (दवा/दवा-वर्ग) सेवन विकार — पिछले 12 माह"
+      },
+      "rule": "J1a Yes AND >=2 of J2a-J2k SUMMARY Yes. Severity by symptom count (2-3 mild, 4-5 moderate, 6+ severe). Record the drug/drug-class name.",
+      "flags": [
+        "MILD",
+        "MODERATE",
+        "SEVERE",
+        "IN EARLY REMISSION",
+        "IN SUSTAINED REMISSION",
+        "IN A CONTROLLED ENVIRONMENT"
+      ],
+      "disordersOnPositive": [
+        "substance_use_disorder"
+      ]
+    }
+  ]
+}

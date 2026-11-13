@@ -1,7 +1,7 @@
 /* High-contrast mode (WCAG AAA toggle) */
 body.high-contrast{--primary-color:#003c8c;--bg-primary:#ffffff;--bg-secondary:#f2f2f2;--bg-tertiary:#e6e6e6;--text-primary:#000000;--text-secondary:#1a1a1a;--border-color:#000000}
 body.high-contrast{--primary:#003c8c;--primary-dark:#002e6b;--focus:#000;}
-body.high-contrast .domain-option,body.high-contrast .question-card{border-width:2px}
+body.high-contrast .topic-pill,body.high-contrast .scale-choice-option,body.high-contrast .question-card{border-width:2px}
 body.high-contrast a,body.high-contrast .btn-secondary{text-decoration:underline}
 
 @media (max-width:768px){
@@ -33,11 +33,14 @@ input[type=radio],input[type=checkbox]{accent-color:var(--primary)}
 .optional-context summary,.assessment-help summary,.assessment-directions summary,.coding-reference summary{cursor:pointer;color:var(--primary-dark);font-weight:650;padding:.2rem 0}
 .optional-context[open],.assessment-help[open],.assessment-directions[open]{padding-bottom:1rem}
 .progress-step{opacity:1}
-.domain-option{border:1px solid var(--border-color);border-radius:.75rem;background:#fff;min-height:3.5rem;transition:border-color .15s,background-color .15s,box-shadow .15s}
-.domain-option:hover,.domain-option.selected{border-color:var(--primary);background:var(--bg-secondary)}
-.domain-option.selected{box-shadow:inset 3px 0 var(--primary)}
-.scale-choice{margin-left:2.6rem;border-left:2px solid var(--border-color)}
-.scale-choice select,.form-group select,.form-group textarea,.form-group input[type="text"]{border-color:#c4d0c9;border-radius:.55rem;min-height:2.9rem}
+.topic-pill{border:1px solid var(--border-color);border-radius:999px;background:#fff;min-height:2.75rem;transition:border-color .15s,background-color .15s,box-shadow .15s}
+.topic-pill:hover,.topic-pill.selected,.topic-pill.active{border-color:var(--primary);background:var(--bg-secondary)}
+.topic-pill.active{box-shadow:0 0 0 2px var(--primary)}
+.topic-scale-shortlist{border:1px solid var(--border-color);border-radius:.75rem;background:#fff}
+.scale-choice-option{border-color:var(--border-color);background:#fff}
+.scale-choice-option:has(input:checked){border-color:var(--primary);background:var(--bg-secondary)}
+.scale-choice-option input{accent-color:var(--primary)}
+.form-group select,.form-group textarea,.form-group input[type="text"]{border-color:#c4d0c9;border-radius:.55rem;min-height:2.9rem}
 .btn-primary,.btn-secondary{border-radius:.6rem;min-height:2.9rem;padding:.7rem 1.2rem;font-weight:650;transition:background .16s,border-color .16s,transform .16s}
 .btn-primary{background:var(--primary)}.btn-primary:hover:not(:disabled){background:var(--primary-dark);transform:translateY(-1px)}
 .btn-secondary{color:var(--primary-dark);border:1px solid var(--primary);background:#fff}.btn-secondary:hover{background:var(--bg-secondary);color:var(--primary-dark)}
@@ -52,7 +55,7 @@ input[type=radio],input[type=checkbox]{accent-color:var(--primary)}
 .coding-options{padding-left:1.5rem}.coding-options li{padding:.65rem 0;border-bottom:1px solid var(--border-color)}.coding-options li:last-child{border:0}
 .coding-option-title{font-weight:650;margin-left:.45rem}.coding-option-context{margin:.35rem 0 0 1.8rem;font-size:.94rem;color:var(--text-secondary)}
 footer{background:#f2f5f2;color:var(--text-secondary);padding:1.25rem}
-@media(max-width:600px){main{padding:1rem}.header-content{align-items:flex-start}.header-controls{width:100%;justify-content:space-between}.progress-caption{font-size:.82rem}.action-buttons{display:grid}.action-buttons>*{width:100%}.domain-option{padding:.8rem}.scale-choice{margin-left:1.4rem}}
+@media(max-width:600px){main{padding:1rem}.header-content{align-items:flex-start}.header-controls{width:100%;justify-content:space-between}.progress-caption{font-size:.82rem}.action-buttons{display:grid}.action-buttons>*{width:100%}.topic-pill{padding:.45rem .75rem}.topic-scale-shortlist{padding:.8rem}.scale-choice-option{grid-template-columns:1.25rem minmax(0,1fr) auto}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 .radio-row label, .matrix-answer {

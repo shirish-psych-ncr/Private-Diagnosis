@@ -8,10 +8,6 @@
 .matrix-table { width: 100%; border-collapse: collapse; min-width: 600px; }
 .matrix-table .row-label { min-width: 250px; }
 .matrix-part-title { margin-top: 1rem; }
-.scale-choice:not([hidden]) { display: grid; gap: .35rem; }
-.scale-choice > span { font-weight: 600; }
-.scale-choice label { display: flex; align-items: flex-start; gap: .45rem; padding: .2rem 0; }
-.scale-choice input { flex: 0 0 auto; margin-top: .25rem; }
 .scale-section .matrix-table tbody tr { border-bottom: 1px solid var(--border); }
 .matrix-table th, .matrix-table td { padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--border); }
 .matrix-table th { background: #f0f4f8; font-weight: 600; font-size: 0.9rem; position: sticky; top: 0; }

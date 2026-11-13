@@ -1,0 +1,112 @@
+{
+  "id": "E",
+  "name": {
+    "en": "Module E — Agoraphobia",
+    "hi": "माड्यूल E — एगोराफोबिया (खुले स्थान का भय)"
+  },
+  "situationsIntro": {
+    "en": "Do you feel anxious or uneasy in places or situations where help might not be available or escape might be difficult if you had a panic attack or panic-like or embarrassing symptoms, like:",
+    "hi": "क्या ऐसी जगहों/स्थितियों में आप बेचैन या असहज महसूस करते हैं जहाँ मदद उपलब्ध न हो सके या भागना कठिन हो यदि पैैनिक/पैैनिक-जैसे या शर्मनाक लक्षण आ जाएँ, जैसे:"
+  },
+  "situations": [
+    {
+      "id": "E1a",
+      "label": {
+        "en": "Being in a crowd, or standing in a line (queue)",
+        "hi": "भीड़ में होना या क़तार में खड़ा होना"
+      }
+    },
+    {
+      "id": "E1b",
+      "label": {
+        "en": "Being in an open space or when crossing a bridge",
+        "hi": "खुले स्थान में होना या पुल पार करना"
+      }
+    },
+    {
+      "id": "E1c",
+      "label": {
+        "en": "Being in an enclosed space",
+        "hi": "बंद स्थान में होना"
+      }
+    },
+    {
+      "id": "E1d",
+      "label": {
+        "en": "When you are alone away from home, or alone at home",
+        "hi": "घर से बाहर अकेले होना, या घर पर अकेले होना"
+      }
+    },
+    {
+      "id": "E1e",
+      "label": {
+        "en": "Traveling in a bus, train or car or using public transportation",
+        "hi": "बस, ट्रेन या कार से यात्रा करना या सार्वजनिक परिवहन उपयोग करना"
+      }
+    }
+  ],
+  "situationGate": {
+    "rule": "IF <2 of the E1 situations coded Yes -> GO TO DIAGNOSTIC BOX, CIRCLE NO AND MOVE TO THE NEXT MODULE.",
+    "text": {
+      "en": "Are 2 or more of the above situations in E1 coded Yes?",
+      "hi": "क्या E1 की उपरोक्त स्थितियों में से 2 या अधिक 'हाँ' कोडित हैं?"
+    }
+  },
+  "questions": [
+    {
+      "id": "E2",
+      "text": {
+        "en": "Do these situations almost always bring on fear or anxiety?",
+        "hi": "क्या ये स्थितियाँ लगभग सदा भय या चिंता उत्पन्न करती हैं?"
+      }
+    },
+    {
+      "id": "E3",
+      "text": {
+        "en": "Do you fear these situations so much that you avoid them, or suffer through them, or need a companion to face them?",
+        "hi": "क्या आप इतना डरते हैं कि इनसे बचते हैं, या झेलते हैं, या इनका सामना हेतु साथी चाहिए?"
+      }
+    },
+    {
+      "id": "E4",
+      "text": {
+        "en": "Is this fear or anxiety excessive or out of proportion to the real danger in the situation?",
+        "hi": "क्या यह भय/चिंता अत्यधिक है या स्थिति की वास्तविक ख़तरे से असंतुलित?"
+      }
+    },
+    {
+      "id": "E5",
+      "text": {
+        "en": "Did this avoidance, fear or anxiety persist for at least 6 months?",
+        "hi": "क्या यह परहेज़/भय/चिंता कम से कम 6 माह जारी रही?"
+      }
+    },
+    {
+      "id": "E6",
+      "text": {
+        "en": "Did these symptoms cause significant distress or problems at home, at work, socially, at school or in some other important way?",
+        "hi": "क्या इन लक्षणों से घर, कार्य, सामाजिक, विद्यालय या अन्य महत्वपूर्ण क्षेत्र में महत्वपूर्ण परेशानी/समस्या हुई?"
+      }
+    }
+  ],
+  "terminateRules": {
+    "en": "Each of E2-E6: if No, go to the diagnostic box, circle No and move to the next module.",
+    "hi": "E2-E6 में से प्रत्येक: यदि 'नहीं', तो नैदानिक बॉक्स पर जाएँ, 'नहीं' घेरें और अगले माड्यूल पर बढ़ें।"
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "E_diag",
+      "label": {
+        "en": "Agoraphobia — Current",
+        "hi": "एगोराफोबिया — वर्तमान"
+      },
+      "rule": ">=2 E1 situations AND E2 AND E3 AND E4 AND E5 AND E6 all Yes.",
+      "flags": [
+        "CURRENT"
+      ],
+      "disordersOnPositive": [
+        "agoraphobia"
+      ]
+    }
+  ]
+}

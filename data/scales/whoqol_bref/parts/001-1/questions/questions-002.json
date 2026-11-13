@@ -1,0 +1,245 @@
+[
+  {
+    "id": "whoqol_18",
+    "text": "How satisfied are you with your capacity for work?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_19",
+    "text": "How satisfied are you with yourself?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_20",
+    "text": "How satisfied are you with your personal relationships?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_21",
+    "text": "How satisfied are you with your sex life?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_22",
+    "text": "How satisfied are you with the support you get from your friends?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_23",
+    "text": "How satisfied are you with the conditions of your living place?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_24",
+    "text": "How satisfied are you with your access to health services?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_25",
+    "text": "How satisfied are you with your transport?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Very dissatisfied"
+      },
+      {
+        "v": 2,
+        "label": "Dissatisfied"
+      },
+      {
+        "v": 3,
+        "label": "Neither satisfied nor dissatisfied"
+      },
+      {
+        "v": 4,
+        "label": "Satisfied"
+      },
+      {
+        "v": 5,
+        "label": "Very satisfied"
+      }
+    ],
+    "reverse": false
+  },
+  {
+    "id": "whoqol_26",
+    "text": "How often do you have negative feelings such as blue mood, despair, anxiety, or depression?",
+    "scale": [
+      {
+        "v": 1,
+        "label": "Never"
+      },
+      {
+        "v": 2,
+        "label": "Seldom"
+      },
+      {
+        "v": 3,
+        "label": "Quite often"
+      },
+      {
+        "v": 4,
+        "label": "Very often"
+      },
+      {
+        "v": 5,
+        "label": "Always"
+      }
+    ],
+    "reverse": true
+  }
+]

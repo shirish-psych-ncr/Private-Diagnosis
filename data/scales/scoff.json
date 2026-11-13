@@ -1,0 +1,112 @@
+{
+  "id": "scoff",
+  "name": "SCOFF Eating Disorder Screen",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Answer Yes or No to each question. Two or more Yes responses indicate a screen that warrants further assessment; this is not a diagnosis.",
+  "parts": [
+    {
+      "name": "Screening questions",
+      "questions": [
+        {
+          "id": "scoff_1",
+          "text": "Do you make yourself Sick because you feel uncomfortably full?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "scoff_2",
+          "text": "Do you worry you have lost Control over how much you eat?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "scoff_3",
+      "text": "Have you recently lost more than One stone in a 3-month period?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "scoff_4",
+          "text": "Do you believe yourself to be Fat when others say you are too thin?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "scoff_5",
+          "text": "Would you say that Food dominates your life?",
+          "scale": [
+            {
+              "v": 1,
+              "label": "Yes"
+            },
+            {
+              "v": 0,
+              "label": "No"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceInstrument": "SCOFF Questionnaire",
+  "ageGroups": [
+    "adolescent",
+    "adult",
+    "older"
+  ],
+  "responseMin": 0,
+  "responseMax": 1,
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "SCOFF total",
+        "ids": [
+          "scoff_1",
+          "scoff_2",
+          "scoff_3",
+          "scoff_4",
+          "scoff_5"
+        ],
+        "max": 5,
+        "cutoff": 2,
+        "positiveLabel": "Screen positive; further assessment indicated",
+        "negativeLabel": "Below the supplied screening threshold"
+      }
+    ]
+  },
+  "attribution": "Morgan, J.F., Reid, F., & Lacey, J.H. (1999). The SCOFF questionnaire: assessment of a new screening tool for eating disorders. BMJ, 319, 1467–1468.",
+  "interpretationNote": "A positive screen does not diagnose an eating disorder. A negative result does not rule one out when concerns persist."
+}

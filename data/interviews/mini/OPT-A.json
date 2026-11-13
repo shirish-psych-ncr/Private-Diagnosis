@@ -1,0 +1,155 @@
+{
+  "id": "OPT-A",
+  "optionalAssessment": true,
+  "name": {
+    "en": "Additional Optional Assessment A — Cross-Cutting Measures: Severity of Symptom",
+    "hi": "अतिरिक्त वैकल्पिक मूल्यांकन A — क्रॉस-कटिंग माप: लक्षणों की तीव्रता"
+  },
+  "intro": {
+    "en": "Use this scale to rate the severity of your symptom in the score column in the table below: Assessment of Symptoms That Cut Across Disorders.",
+    "hi": "इस पैमाने का उपयोग नीचे दी गई तालिका के स्कोर कॉलम में अपने लक्षण की तीव्रता रेट करने हेतु करें: विकारों-पार लक्षणों का मूल्यांकन।"
+  },
+  "tableHeading": {
+    "en": "Symptom Name / Score",
+    "hi": "लक्षण का नाम / स्कोर"
+  },
+  "items": [
+    {
+      "id": "CCS1",
+      "text": {
+        "en": "Depression",
+        "hi": "अवसाद"
+      }
+    },
+    {
+      "id": "CCS2",
+      "text": {
+        "en": "Anger",
+        "hi": "क्रोध"
+      }
+    },
+    {
+      "id": "CCS3",
+      "text": {
+        "en": "Mania (feeling up or high or hyper or full of energy with racing thoughts)",
+        "hi": "मैैनिया (उत्फुल्ल/हाई/अति-सक्रिय, दौड़ते विचारों के साथ)"
+      }
+    },
+    {
+      "id": "CCS4",
+      "text": {
+        "en": "Anxiety",
+        "hi": "आतंक/चिंता"
+      }
+    },
+    {
+      "id": "CCS5",
+      "text": {
+        "en": "Physical (somatic) symptoms",
+        "hi": "शारीरिक (देहज) लक्षण"
+      }
+    },
+    {
+      "id": "CCS6",
+      "text": {
+        "en": "Suicidal thoughts, impulses, plans, intent, (ANY thoughts of killing yourself), or any preparations to kill yourself or ANY attempt to kill yourself",
+        "hi": "आत्मघाती विचार, प्रेरणाएँ, योजनाएँ, अभिप्राय (स्वयं को मारने का कोई भी विचार), या आत्महत्या की कोई तैयारी अथवा कोई प्रयास"
+      }
+    },
+    {
+      "id": "CCS7",
+      "text": {
+        "en": "Hearing sounds or voices others can't hear or fearing someone can hear or read your thoughts or believing things others don't accept as true e.g. that people are spying on you or plotting against you or talking about you (Psychosis)",
+        "hi": "ऐसी ध्वनियाँ/आवाज़ें सुनना जो अन्य नहीं सुन सकते, भय कि कोई आपके विचार सुन/पढ़ सकता है, या ऐसी बातें मानना जिन्हें अन्य सत्य नहीं मानते — जैसे लोग आपकी जासूसी/साज़िश कर रहे हैं या आपके बारे में बात करते हैं (मनर्विकार)"
+      }
+    },
+    {
+      "id": "CCS8",
+      "text": {
+        "en": "Sleep problems",
+        "hi": "नींद की समस्याएँ"
+      }
+    },
+    {
+      "id": "CCS9",
+      "text": {
+        "en": "Memory problems",
+        "hi": "स्मृति समस्याएँ"
+      }
+    },
+    {
+      "id": "CCS10",
+      "text": {
+        "en": "Repetitive or obsessive thoughts or compulsive behaviors",
+        "hi": "पुनरावृत्त या विचारग्रस्त (obsessive) विचार या विवशतापूर्ण (compulsive) व्यवहार"
+      }
+    },
+    {
+      "id": "CCS11",
+      "text": {
+        "en": "Feeling things around you are strange, unreal, detached or unfamiliar, or feeling outside or detached from part or all of your body (Dissociation)",
+        "hi": "आसपास की चीज़ें अजीब/अवास्तविक/परिचित-नहीं लगना, या शरीर के कुछ/सभी भाग से विलग/बाहर महसूस करना (वियोजन/Dissociation)"
+      }
+    },
+    {
+      "id": "CCS12",
+      "text": {
+        "en": "Ability to function at work, at home, in your life, or in your relationships",
+        "hi": "कार्य, घर, जीवन या संबंधों में कार्य करने की क्षमता"
+      }
+    },
+    {
+      "id": "CCS13",
+      "text": {
+        "en": "Overusing alcohol or drugs",
+        "hi": "शराब या दवाओं का अत्यधिक सेवन"
+      }
+    }
+  ],
+  "ratingScale": {
+    "min": 0,
+    "max": 10,
+    "type": "clinician_rating",
+    "anchors": [
+      {
+        "v": 0,
+        "label": {
+          "en": "Not present",
+          "hi": "उपस्थित नहीं"
+        }
+      },
+      {
+        "v": 1,
+        "label": {
+          "en": "Mild",
+          "hi": "हल्का"
+        }
+      },
+      {
+        "v": 3,
+        "label": {
+          "en": "Moderate",
+          "hi": "मध्यम"
+        }
+      },
+      {
+        "v": 6,
+        "label": {
+          "en": "Severe",
+          "hi": "गंभीर"
+        }
+      },
+      {
+        "v": 10,
+        "label": {
+          "en": "Extreme",
+          "hi": "अत्यधिक"
+        }
+      }
+    ]
+  },
+  "note": {
+    "en": "Clinician-rated 0-10 severity for each cross-cutting symptom domain; independent of the Module A-P branching logic and does not gate any diagnostic box.",
+    "hi": "प्रत्येक क्रॉस-कटिंग लक्षण-क्षेत्र हेतु चिकित्सक-रेटित 0-10 तीव्रता; माड्यूल A-P की शाखा-विभाजन पद्धति से स्वतंत्र तथा किसी निदान-बक्से को नियंत्रित नहीं करता।"
+  }
+}

@@ -5,7 +5,8 @@ import { openSafetyModal } from './safety.js';
 
 /** Central answer handler with safety override check. */
 function onAnswer(key, value, question, domain) {
-    state.responses[key] = value;
+    if (Array.isArray(value) && value.length === 0) delete state.responses[key];
+    else state.responses[key] = value;
     state.touchedQuestions?.add(key);
     syncAssessmentProgress();
     document.getElementById('scales-error').classList.add('hidden');
@@ -32,7 +33,12 @@ function onAnswer(key, value, question, domain) {
         document.getElementById(key + '_' + value)?.focus({ preventScroll: true });
     }
     // Safety override: high-risk endorsement halts workflow -> crisis modal.
-    if (question.safety && Number(value) >= (question.safetyMin ?? 1)) {
+    const numericAnswer = Number(value);
+    const safetyTriggered = question.safety && Number.isFinite(numericAnswer) &&
+        (question.safetyMax != null
+            ? numericAnswer <= question.safetyMax
+            : numericAnswer >= (question.safetyMin ?? 1));
+    if (safetyTriggered) {
         if (!state.safetyFlags.some(flag => flag.key === key)) state.safetyFlags.push({ key, domainId: domain.id });
         openSafetyModal();
     }

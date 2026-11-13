@@ -1,0 +1,191 @@
+{
+  "id": "D",
+  "name": {
+    "en": "Module D — Panic Disorder",
+    "hi": "माड्यूल D — पैैनिक विकार"
+  },
+  "screen": {
+    "intro": {
+      "en": "Screen-in questions",
+      "hi": "स्क्रीन-इन प्रश्न"
+    },
+    "questions": [
+      {
+        "id": "D1a",
+        "text": {
+          "en": "Have you, on more than one occasion, had spells or attacks when you suddenly felt anxious, very frightened, uncomfortable or uneasy, even in situations where most people would not feel that way?",
+          "hi": "क्या एक से अधिक बार आपको ऐसे दौरे/आक्रमण आए जब आप अचानक बेचैन, बहुत भयभीत, असहज या व्याकुल महसूस करने लगे — ऐसी भी स्थितियों में जहाँ अधिकांश लोग ऐसा नहीं महसूस करते?"
+        }
+      },
+      {
+        "id": "D1b",
+        "text": {
+          "en": "Did the spells surge to a peak within 10 minutes of starting?",
+          "hi": "क्या ये दौरे शुरुआत के 10 मिनट के भीतर अपने चरम पर पहुँचे?"
+        }
+      },
+      {
+        "id": "D2",
+        "text": {
+          "en": "At any time in the past, did any of those spells or attacks come on unexpectedly or occur in an unpredictable or unprovoked manner?",
+          "hi": "क्या अतीत में कभी इनमें से कोई दौरा अप्रत्याशित रूप से या अनिश्चित/बे-कारण ढंग से आया?"
+        }
+      }
+    ],
+    "gateRule": "IF ANY OF D1a/D1b/D2 coded No -> GO TO DIAGNOSTIC BOX, CIRCLE NO AND MOVE TO THE NEXT MODULE.",
+    "gateNote": {
+      "en": "All three screen-ins must be Yes to continue; otherwise Panic Disorder is coded No.",
+      "hi": "जारी रखने हेतु तीनों स्क्रीन-इन 'हाँ' होने चाहिए; अन्यथा पैैनिक विकार 'नहीं' कोड होता है।"
+    }
+  },
+  "d3": {
+    "id": "D3",
+    "text": {
+      "en": "Have you ever had one such attack followed by a month or more of persistent concern about having another attack, or worries about the consequences of the attack — or did you make any significant change in your behavior because of the attacks (e.g., avoiding unfamiliar situations, or avoiding leaving your house or shopping alone, or doing things to avoid having a panic attack or visiting your doctor or the emergency room more frequently)?",
+      "hi": "क्या किसी ऐसे दौरे के बाद एक माह या अधिक तक दूसरे दौरे की लगातार चिंता रही, या परिणामों की फ़िक्र हुई — या दौरे के कारण व्यवहार में महत्वपूर्ण परिवर्तन किया (जैसे अपरिचित स्थितियाँ/अकेला घर से निकलना/अकेला खरीदारी करना टालना, या दौरा टालने के उपाय, या बार-बार डॉक्टर/इमरजेंसी रूम जाना)?"
+    }
+  },
+  "symptomsIntro": {
+    "en": "During the worst attack that you can remember:",
+    "hi": "जिस सबसे बुरे दौरे को आप याद कर सकते हैं, उस दौरान:"
+  },
+  "symptoms": [
+    {
+      "id": "D4a",
+      "text": {
+        "en": "Did you have skipping, racing or pounding of your heart?",
+        "hi": "क्या दिल ज़ोर से/तेज़/दौड़ता हुआ धड़का?"
+      }
+    },
+    {
+      "id": "D4b",
+      "text": {
+        "en": "Did you have sweating or clammy hands?",
+        "hi": "क्या पसीना आया या हाथ ठंडे/नम हो गए?"
+      }
+    },
+    {
+      "id": "D4c",
+      "text": {
+        "en": "Were you trembling or shaking?",
+        "hi": "क्या कांपना या कंपन हुआ?"
+      }
+    },
+    {
+      "id": "D4d",
+      "text": {
+        "en": "Did you have shortness of breath or difficulty breathing or a smothering sensation?",
+        "hi": "क्या सांस लेने में कठिनाई या घुटन जैसा अनुभव हुआ?"
+      }
+    },
+    {
+      "id": "D4e",
+      "text": {
+        "en": "Did you have a choking sensation or a lump in your throat?",
+        "hi": "क्या गला घुटने जैसा या गले में गोलठनुमा अहसास हुआ?"
+      }
+    },
+    {
+      "id": "D4f",
+      "text": {
+        "en": "Did you have chest pain, pressure or discomfort?",
+        "hi": "क्या छाती में दर्द, दबाव या बेचैनी हुई?"
+      }
+    },
+    {
+      "id": "D4g",
+      "text": {
+        "en": "Did you have nausea, stomach problems or sudden diarrhea?",
+        "hi": "क्या जी मिचलाना, पेट की तकलीफ़ या अचानक दस्त हुआ?"
+      }
+    },
+    {
+      "id": "D4h",
+      "text": {
+        "en": "Did you feel dizzy, unsteady, lightheaded or feel faint?",
+        "hi": "क्या चक्कर, लखलखाहट, हल्कापन या बेहोशी जैसा लगा?"
+      }
+    },
+    {
+      "id": "D4i",
+      "text": {
+        "en": "Did you have hot flushes or chills?",
+        "hi": "क्या गर्मी की लहरें या ठंड लगना (chills) जैसा हुआ?"
+      }
+    },
+    {
+      "id": "D4j",
+      "text": {
+        "en": "Did you have tingling or numbness in parts of your body?",
+        "hi": "क्या शरीर के कुछ हिस्सों में झनझनाहट या सुन्नपन हुआ?"
+      }
+    },
+    {
+      "id": "D4k",
+      "text": {
+        "en": "Did things around you feel strange, unreal, detached or unfamiliar, or did you feel outside of or detached from part or all of your body?",
+        "hi": "क्या आसपास की चीज़ें अजीब/अवास्तविक/विपृक्त/अपरिचित लगीं, या शरीर के किसी भाग/समूचे शरीर से बाहर/टूटे हुए जैसा लगा?"
+      }
+    },
+    {
+      "id": "D4l",
+      "text": {
+        "en": "Did you fear that you were losing control or going crazy?",
+        "hi": "क्या यह डर लगा कि आप नियंत्रण खो रहे हैं या पागल हो रहे हैं?"
+      }
+    },
+    {
+      "id": "D4m",
+      "text": {
+        "en": "Did you fear that you were dying?",
+        "hi": "क्या यह डर लगा कि आप मर रहे हैं?"
+      }
+    }
+  ],
+  "d5Gate": {
+    "rule": "IF D3 Yes AND >=4 of D4 answers Yes -> D5 YES (Lifetime Panic Disorder). Otherwise D5 NO.",
+    "text": {
+      "en": "Are both D3, and 4 or more D4 answers, coded Yes?",
+      "hi": "क्या D3 और D4 के 4 या अधिक उत्तर, दोनों 'हाँ' कोडित हैं?"
+    }
+  },
+  "diagnosticBoxes": [
+    {
+      "id": "D_diag_lifetime",
+      "label": {
+        "en": "Panic Disorder — Lifetime",
+        "hi": "पैैनिक विकार — जीवनभर"
+      },
+      "rule": "D5 Yes AND organic cause ruled out (O2 summary).",
+      "flags": [
+        "LIFETIME"
+      ],
+      "disordersOnPositive": [
+        "panic_disorder"
+      ]
+    }
+  ],
+  "d6": {
+    "id": "D6",
+    "visibleWhen": "D5 == 1",
+    "text": {
+      "en": "In the past month did you have persistent concern about having another attack, or worry about the consequences of the attacks, or did you change your behavior in any way because of the attacks?",
+      "hi": "पिछले माह में क्या दूसरे दौरे की लगातार चिंता थी, या परिणामों की फ़िक्र रही, या दौरे के कारण किसी तरह व्यवहार बदला?"
+    }
+  },
+  "currentBox": {
+    "id": "D_diag_current",
+    "label": {
+      "en": "Panic Disorder — Current",
+      "hi": "पैैनिक विकार — वर्तमान"
+    },
+    "rule": "(D5 OR D6) Yes AND organic cause ruled out (O2 summary). Specify CURRENT and/or LIFETIME.",
+    "flags": [
+      "CURRENT",
+      "LIFETIME"
+    ],
+    "disordersOnPositive": [
+      "panic_disorder"
+    ]
+  }
+}

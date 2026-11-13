@@ -1,0 +1,186 @@
+{
+  "id": "ace_iii_indian_english",
+  "name": "Addenbrooke's Cognitive Examination III (ACE-III) — Indian English",
+  "administeredBy": "clinician",
+  "optionalAssessment": true,
+  "directions": "Clinician-administered. Follow the official Indian English administration and scoring instructions. The form assesses orientation to time and place, word registration and recall, serial subtraction, retrograde memory, letter and animal fluency, language tasks, and visuospatial copying and perception. Record each of the five domain subtotals; they sum to 100. The supplied text does not include the picture, dot, letter, or drawing stimuli, so use the official stimulus materials and scoring guide for those tasks. Interpret results with education, language, history, and clinical assessment; a score alone is not a diagnosis.",
+  "parts": [
+    {
+      "name": "Administration record and domain scores",
+      "questions": [
+        {
+          "id": "ace_attention",
+          "text": "Attention subtotal (enter the score from the administered form)",
+          "inputType": "number",
+          "min": 0,
+          "max": 18,
+          "nonScored": false
+        },
+        {
+          "id": "ace_memory",
+          "text": "Memory subtotal (enter the score from the administered form)",
+          "inputType": "number",
+          "min": 0,
+          "max": 26,
+          "nonScored": false
+        },
+        {
+          "id": "ace_fluency",
+          "text": "Verbal fluency subtotal (enter the score from the administered form)",
+          "inputType": "number",
+          "min": 0,
+          "max": 14,
+          "nonScored": false
+        },
+        {
+          "id": "ace_language",
+          "text": "Language subtotal (enter the score from the administered form)",
+          "inputType": "number",
+          "min": 0,
+          "max": 26,
+          "nonScored": false
+        },
+        {
+          "id": "ace_visuospatial",
+          "text": "Visuospatial abilities subtotal (enter the score from the administered form)",
+          "inputType": "number",
+          "min": 0,
+          "max": 16,
+          "nonScored": false
+        },
+        {
+          "id": "ace_name",
+          "text": "Name",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_birth_date",
+          "text": "Date of birth",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_hospital_number",
+          "text": "Hospital number or address",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_languages",
+          "text": "Languages known",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_native_language",
+          "text": "Native language",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_test_date",
+          "text": "Date of testing",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_tester",
+          "text": "Tester's name",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_education",
+          "text": "Age at leaving full-time education",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_occupation",
+          "text": "Occupation",
+          "inputType": "text",
+          "nonScored": true
+        },
+        {
+          "id": "ace_handedness",
+          "text": "Handedness",
+          "inputType": "text",
+          "nonScored": true
+        }
+      ]
+    }
+  ],
+  "version": "Indian English, updated 07/03/2013",
+  "framework": "ACE-III",
+  "sourceInstrument": "ACE-III Indian English user-provided form",
+  "targetAge": [
+    "adult",
+    "older"
+  ],
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "timeframe": "At testing",
+  "responseMin": 0,
+  "responseMax": 26,
+  "attribution": "Addenbrooke's Cognitive Examination III (ACE-III), Indian English version. User-provided form; domain maximums: Attention 18, Memory 26, Fluency 14, Language 26, Visuospatial 16.",
+  "interpretationNote": "ACE-III supports cognitive screening and monitoring. Do not interpret the score alone as a diagnosis. The app records domain subtotals; administer and score the individual tasks using the supplied version-specific guide.",
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "Attention",
+        "ids": [
+          "ace_attention"
+        ],
+        "max": 18,
+        "severity": "Domain subtotal"
+      },
+      {
+        "name": "Memory",
+        "ids": [
+          "ace_memory"
+        ],
+        "max": 26,
+        "severity": "Domain subtotal"
+      },
+      {
+        "name": "Verbal fluency",
+        "ids": [
+          "ace_fluency"
+        ],
+        "max": 14,
+        "severity": "Domain subtotal"
+      },
+      {
+        "name": "Language",
+        "ids": [
+          "ace_language"
+        ],
+        "max": 26,
+        "severity": "Domain subtotal"
+      },
+      {
+        "name": "Visuospatial abilities",
+        "ids": [
+          "ace_visuospatial"
+        ],
+        "max": 16,
+        "severity": "Domain subtotal"
+      },
+      {
+        "name": "ACE-III total",
+        "ids": [
+          "ace_attention",
+          "ace_memory",
+          "ace_fluency",
+          "ace_language",
+          "ace_visuospatial"
+        ],
+        "max": 100,
+        "severity": "Screening score — interpret clinically"
+      }
+    ]
+  }
+}

@@ -7,7 +7,8 @@
   "tier": 2,
   "questions": [],
   "forms": [
-    "abusi"
+    "abusi",
+    "isas"
   ],
   "description": {
     "en": "A focused measure of non-suicidal self-injury urges. Assess suicidal intent separately when clinically indicated.",

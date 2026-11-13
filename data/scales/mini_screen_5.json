@@ -1,0 +1,62 @@
+{
+  "id": "mini_screen_5",
+  "name": "MINI Screen 5.0.0 (DSM-IV, English)",
+  "type": "screening",
+  "sourceInstrument": "MINI Screen 5.0.0",
+  "sourcePages": "MINI Screen 5.0.0, English version, DSM-IV screen (pp. 1-2)",
+  "sourceAttribution": "D. Sheehan, J. Janavs, R. Baker, Y. Lecrubier, T. Hergueta, E. Weiller and T. Proeschel; 2001-2004.",
+  "framework": "DSM-IV",
+  "version": "5.0.0",
+  "administeredBy": "clinician",
+  "ageGroups": ["adult", "older"],
+  "directions": "Use as an interviewer-administered screen. A Yes answer routes to the corresponding MINI module/topic for clinical follow-up. This screen does not establish a diagnosis. Follow-up scales remain a separate manual choice.",
+  "timeframe": "Use the timeframe written in each question.",
+  "matrixOptions": [
+    { "v": 0, "label": "No" },
+    { "v": 1, "label": "Yes" }
+  ],
+  "parts": [
+    {
+      "name": "MINI Screen",
+      "questions": [
+        { "id": "MS1", "itemNumber": 1, "text": "Have you been consistently depressed or down, most of the day, nearly every day, for the past two weeks?", "screenModule": "A" },
+        { "id": "MS2", "itemNumber": 2, "text": "In the past two weeks, have you been much less interested in most things or much less able to enjoy the things you used to enjoy, most of the time?", "screenModule": "A" },
+        { "id": "MS3", "itemNumber": 3, "text": "Have you felt sad, low or depressed most of the time for the last two years?", "screenModule": "B" },
+        { "id": "MS4", "itemNumber": 4, "text": "In the past month, did you think that you would be better off dead or wish you were dead?", "screenModule": "C", "safety": true },
+        { "id": "MS5", "itemNumber": 5, "text": "Have you ever had a period of time when you were feeling up or high, or so full of energy or full of yourself that you got into trouble, or other people thought you were not your usual self? Do not consider times when you were intoxicated on drugs or alcohol.", "screenModule": "D" },
+        { "id": "MS6", "itemNumber": 6, "text": "Have you ever been persistently irritable for several days, with arguments, verbal or physical fights, or shouting at people outside your family? Have you or others noticed that you were more irritable or overreacted compared with other people, even in situations you felt were justified?", "screenModule": "D" },
+        { "id": "MS7", "itemNumber": 7, "text": "On more than one occasion, have you had spells or attacks when you suddenly felt anxious, frightened, uncomfortable or uneasy, even in situations where most people would not? Did the spells peak within 10 minutes? Code Yes only if the spells peak within 10 minutes.", "screenModule": "E" },
+        { "id": "MS8", "itemNumber": 8, "text": "Do you feel anxious or uneasy in places or situations where you might have a panic attack or panic-like symptoms, where help might not be available, or where escape might be difficult, such as in a crowd, in a line, away from home, alone at home, crossing a bridge, or travelling by bus, train or car?", "screenModule": "F" },
+        { "id": "MS9", "itemNumber": 9, "text": "In the past month, were you fearful or embarrassed about being watched or being the focus of attention, or fearful of being humiliated? This includes speaking or eating in public, writing while someone watches, or other social situations.", "screenModule": "G" },
+        { "id": "MS10", "itemNumber": 10, "text": "In the past month, have you been bothered by recurrent thoughts, impulses or images that were unwanted, distasteful, inappropriate, intrusive or distressing? For example, thoughts of being dirty or contaminated, contaminating others, harming someone despite not wanting to, acting on an impulse, being responsible for things going wrong, sexual thoughts or images, hoarding, collecting, or religious obsessions.", "screenModule": "H" },
+        { "id": "MS11", "itemNumber": 11, "text": "In the past month, did you repeatedly do something you could not resist, such as excessive washing or cleaning, counting or checking, or repeating, collecting, arranging or other superstitious rituals?", "screenModule": "H" },
+        { "id": "MS12", "itemNumber": 12, "text": "Have you ever experienced, witnessed, or had to deal with an extremely traumatic event involving actual or threatened death or serious injury to you or someone else? Examples include a serious accident, assault, terrorist attack, hostage-taking, kidnapping, fire, discovering a body, sudden death of someone close, war or natural disaster.", "screenModule": "I" },
+        { "id": "MS13", "itemNumber": 13, "text": "Did you respond to the trauma with intense fear, helplessness or horror?", "screenModule": "I" },
+        { "id": "MS14", "itemNumber": 14, "text": "During the past month, have you re-experienced the event in a distressing way, such as through dreams, intense recollections, flashbacks or physical reactions?", "screenModule": "I" },
+        { "id": "MS15", "itemNumber": 15, "text": "In the past 12 months, have you had three or more alcoholic drinks within a three-hour period on three or more occasions?", "screenModule": "J" },
+        { "id": "MS16", "itemNumber": 16, "text": "In the past 12 months, did you take any of these drugs more than once to get high, feel better or change your mood? Amphetamines (speed, crystal meth, Dexedrine, Ritalin, diet pills); cocaine (crack, freebase); heroin, morphine, methadone, opium, Demerol, codeine, Percodan, OxyContin; LSD, mescaline, PCP, MDMA/ecstasy; inhalants (glue, ether), GHB, steroids; THC/marijuana, cannabis, hashish, grass; barbiturates, Valium, Xanax or Ativan.", "screenModule": "K" },
+        { "id": "MS17", "itemNumber": 17, "text": "Was your lowest weight in the past three months below the threshold for your height shown in the MINI Screen 5.0.0 height-and-weight table?", "hint": "The source table is sex-specific: females — 4 ft 10 in: 85 lb; 4 ft 11 in: 86 lb; 5 ft: 87 lb; 5 ft 1 in: 89 lb; 5 ft 3 in: 94 lb; 5 ft 4 in: 97 lb; 5 ft 5 in: 99 lb; 5 ft 6 in: 102 lb; 5 ft 7 in: 104 lb; 5 ft 8 in: 107 lb; 5 ft 9 in: 110 lb. Males — 5 ft 3 in: 108 lb; 5 ft 4 in: 110 lb; 5 ft 5 in: 111 lb; 5 ft 6 in: 113 lb; 5 ft 7 in: 115 lb; 5 ft 8 in: 115 lb; 5 ft 9 in: 118 lb; 5 ft 10 in: 120 lb; 5 ft 11 in: 122 lb; 6 ft: 125 lb; 6 ft 1 in: 127 lb. Refer to the original form for heights not listed.", "screenModule": "M" },
+        { "id": "MS18", "itemNumber": 18, "text": "In the past three months, did you have eating binges or times when you ate a very large amount of food within a two-hour period?", "screenModule": "N" },
+        { "id": "MS19", "itemNumber": 19, "text": "In the last three months, did you have eating binges as often as twice a week?", "screenModule": "N" },
+        { "id": "MS20", "itemNumber": 20, "text": "Have you worried excessively or been anxious about several things over the past six months?", "screenModule": "O" }
+      ]
+    }
+  ],
+  "screenRoutes": [
+    { "module": "A", "questions": ["MS1", "MS2"], "match": "any", "topicIds": ["mood"] },
+    { "module": "B", "questions": ["MS3"], "match": "any", "topicIds": ["mood"] },
+    { "module": "C", "questions": ["MS4"], "match": "any", "topicIds": ["suicide_followup"] },
+    { "module": "D", "questions": ["MS5", "MS6"], "match": "any", "topicIds": ["bipolar"] },
+    { "module": "E", "questions": ["MS7"], "match": "any", "topicIds": ["panic"] },
+    { "module": "F", "questions": ["MS8"], "match": "any", "topicIds": ["panic"] },
+    { "module": "G", "questions": ["MS9"], "match": "any", "topicIds": ["social_anxiety"] },
+    { "module": "H", "questions": ["MS10", "MS11"], "match": "any", "topicIds": ["ocd"] },
+    { "module": "I", "questions": ["MS12", "MS13", "MS14"], "match": "any", "topicIds": ["trauma"] },
+    { "module": "J", "questions": ["MS15"], "match": "any", "topicIds": ["substance"] },
+    { "module": "K", "questions": ["MS16"], "match": "any", "topicIds": ["substance"] },
+    { "module": "M", "questions": ["MS17"], "match": "any", "topicIds": ["eating"] },
+    { "module": "N", "questions": ["MS18", "MS19"], "match": "any", "topicIds": ["eating"] },
+    { "module": "O", "questions": ["MS20"], "match": "any", "topicIds": ["worry"] }
+  ],
+  "interpretationNote": "MINI Screen 5.0.0 is a DSM-IV screen. A positive route identifies a module/topic for clinician follow-up; it is not a diagnosis and does not select or score any follow-up scale. Do not apply DSM-5 MINI 7.0.2 diagnostic logic to these results."
+}

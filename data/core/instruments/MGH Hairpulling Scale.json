@@ -1,0 +1,9 @@
+{
+  "name": "Massachusetts General Hospital (MGH) Hairpulling Scale",
+  "description": {
+    "en": "Seven-item, past-week descriptive measure of hair-pulling urges, control, behavior, and distress. No diagnostic cutoff is supplied.",
+    "hi": "गत सप्ताह के बाल खींचने के आग्रह, नियंत्रण, व्यवहार और परेशानी का सात-आइटम वर्णनात्मक माप। कोई निदानात्मक कटऑफ उपलब्ध नहीं है।"
+  },
+  "domains": ["body_focused_repetitive_behaviors"],
+  "scaleId": "mgh_hairpulling"
+}

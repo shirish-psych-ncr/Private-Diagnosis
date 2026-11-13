@@ -1,0 +1,10 @@
+{
+  "name": "ECHO-wide CTQ (event history)",
+  "description": {
+    "en": "ECHO-wide history of selected events before age 18; no total score."
+  },
+  "domains": [
+    "trauma"
+  ],
+  "scaleId": "ctq_echo"
+}

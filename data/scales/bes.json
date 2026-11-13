@@ -1,0 +1,47 @@
+{
+  "id": "bes",
+  "name": "Binge Eating Scale (BES)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "For each group, select the one statement that best describes your experience of problems controlling eating. The user-supplied transcription is incomplete for items 6 and 16; consult the complete authorized form before administration.",
+  "parts": {
+    "$file": "data/scales/bes/parts.json"
+  },
+  "sourceInstrument": "Binge Eating Scale (BES)",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "timeframe": "As in source form",
+  "responseMin": 0,
+  "responseMax": 3,
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "BES total",
+        "ids": [
+          "bes_1",
+          "bes_2",
+          "bes_3",
+          "bes_4",
+          "bes_5",
+          "bes_6",
+          "bes_7",
+          "bes_8",
+          "bes_9",
+          "bes_10",
+          "bes_11",
+          "bes_12",
+          "bes_13",
+          "bes_14",
+          "bes_15",
+          "bes_16"
+        ],
+        "max": 46,
+        "severity": "Descriptive total; verify incomplete source items before use"
+      }
+    ]
+  },
+  "attribution": "Gormally, J., Black, S., Daston, S., & Rardin, D. (1982). The assessment of binge-eating severity among obese persons. Addictive Behaviors, 7(1), 47–55.",
+  "interpretationNote": "This imported transcription is incomplete at items 6 and 16 and should not be administered until checked against the complete authorized form."
+}

@@ -78,6 +78,7 @@ export function scoreReading(row) {
     if (name === 'Mood Disorder Questionnaire') return row.aboveCutoff ? 'The combination of symptoms, timing and impact meets the screening criteria for bipolar disorder. Discuss a diagnostic assessment.' : 'The reported symptoms, timing and impact do not meet the combined screening criteria for bipolar disorder.';
     if (name.startsWith('ITQ · ') && fraction) return severity + '. Higher totals indicate more symptoms in this area. The screening pattern also depends on impairment.';
     if (row.ratingRegister) return severity + '. The maximum is the highest individual rating. See the entries below for the affected areas.';
+    if (row.eventRegister) return 'Event history only. No diagnostic score is produced; review the recorded history with the clinician.';
     if (row.notDiagnostic && row.answered < row.total) return 'Incomplete. Interpret the answered items individually.';
     if (row.pdRegister) return severity + '. See the profile below for individual dimensions and their interpretation.';
     if (name === 'VADRS') return severity + '. The ADHD screen considers both symptom counts and difficulty functioning.';

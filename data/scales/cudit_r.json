@@ -1,0 +1,262 @@
+{
+  "id": "cudit_r",
+  "name": "Cannabis Use Disorders Identification Test — Revised (CUDIT-R)",
+  "administeredBy": "self-report",
+  "optionalAssessment": true,
+  "directions": "Answer items 1–7 about the past 6 months and item 8 as worded. If you have not used cannabis in the past 6 months, follow the form instructions. Scores are screening prompts, not diagnoses.",
+  "parts": [
+    {
+      "name": "Cannabis use",
+      "questions": [
+        {
+          "id": "cudit_1",
+          "text": "How often do you use cannabis?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Monthly or less"
+            },
+            {
+              "v": 2,
+              "label": "2–4 times a month"
+            },
+            {
+              "v": 3,
+              "label": "2–3 times a week"
+            },
+            {
+              "v": 4,
+              "label": "4 or more times a week"
+            }
+          ]
+        },
+        {
+          "id": "cudit_2",
+          "text": "How many hours were you stoned on a typical day when you had been using cannabis?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Less than 1 hour"
+            },
+            {
+              "v": 1,
+              "label": "1 or 2 hours"
+            },
+            {
+              "v": 2,
+              "label": "3 or 4 hours"
+            },
+            {
+              "v": 3,
+              "label": "5 or 6 hours"
+            },
+            {
+              "v": 4,
+              "label": "7 or more hours"
+            }
+          ]
+        },
+        {
+          "id": "cudit_3",
+          "text": "During the past 6 months, how often were you unable to stop using cannabis once you had started?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Less than monthly"
+            },
+            {
+              "v": 2,
+              "label": "Monthly"
+            },
+            {
+              "v": 3,
+              "label": "Weekly"
+            },
+            {
+              "v": 4,
+              "label": "Daily or almost daily"
+            }
+          ]
+        },
+        {
+          "id": "cudit_4",
+          "text": "During the past 6 months, how often did you fail to do what was normally expected of you because of cannabis use?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Less than monthly"
+            },
+            {
+              "v": 2,
+              "label": "Monthly"
+            },
+            {
+              "v": 3,
+              "label": "Weekly"
+            },
+            {
+              "v": 4,
+              "label": "Daily or almost daily"
+            }
+          ]
+        },
+        {
+          "id": "cudit_5",
+          "text": "During the past 6 months, how often did you devote a great deal of time to getting, using, or recovering from cannabis?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Less than monthly"
+            },
+            {
+              "v": 2,
+              "label": "Monthly"
+            },
+            {
+              "v": 3,
+              "label": "Weekly"
+            },
+            {
+              "v": 4,
+              "label": "Daily or almost daily"
+            }
+          ]
+        },
+        {
+          "id": "cudit_6",
+          "text": "During the past 6 months, how often did you have a problem with memory or concentration after using cannabis?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Less than monthly"
+            },
+            {
+              "v": 2,
+              "label": "Monthly"
+            },
+            {
+              "v": 3,
+              "label": "Weekly"
+            },
+            {
+              "v": 4,
+              "label": "Daily or almost daily"
+            }
+          ]
+        },
+        {
+          "id": "cudit_7",
+          "text": "How often do you use cannabis in situations that could be physically hazardous, such as driving, operating machinery, or caring for children?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 1,
+              "label": "Less than monthly"
+            },
+            {
+              "v": 2,
+              "label": "Monthly"
+            },
+            {
+              "v": 3,
+              "label": "Weekly"
+            },
+            {
+              "v": 4,
+              "label": "Daily or almost daily"
+            }
+          ]
+        },
+        {
+          "id": "cudit_8",
+          "text": "Have you ever thought about cutting down or stopping your cannabis use?",
+          "scale": [
+            {
+              "v": 0,
+              "label": "Never"
+            },
+            {
+              "v": 2,
+              "label": "Yes, but not in the past 6 months"
+            },
+            {
+              "v": 4,
+              "label": "Yes, during the past 6 months"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceInstrument": "CUDIT-R",
+  "ageGroups": [
+    "adult",
+    "older"
+  ],
+  "timeframe": "Past 6 months",
+  "responseMin": 0,
+  "responseMax": 4,
+  "scoringProfile": {
+    "groups": [
+      {
+        "name": "CUDIT-R total",
+        "ids": [
+          "cudit_1",
+          "cudit_2",
+          "cudit_3",
+          "cudit_4",
+          "cudit_5",
+          "cudit_6",
+          "cudit_7",
+          "cudit_8"
+        ],
+        "max": 32,
+        "cutoff": 8,
+        "positiveLabel": "Hazardous use screen; follow up",
+        "negativeLabel": "Below hazardous-use screen threshold"
+      },
+      {
+        "name": "Possible cannabis use disorder screen",
+        "ids": [
+          "cudit_1",
+          "cudit_2",
+          "cudit_3",
+          "cudit_4",
+          "cudit_5",
+          "cudit_6",
+          "cudit_7",
+          "cudit_8"
+        ],
+        "max": 32,
+        "cutoff": 12,
+        "positiveLabel": "Further assessment indicated; not a diagnosis",
+        "negativeLabel": "Below this screening threshold"
+      }
+    ]
+  },
+  "attribution": "Adamson, S.J. et al. (2010). An Improved Brief Measure of Cannabis Misuse: The CUDIT-R. Drug and Alcohol Dependence, 110, 137–143.",
+  "interpretationNote": "Supplied form states 8+ as hazardous cannabis use and 12+ as possible cannabis use disorder; both require clinical follow-up and neither is diagnostic."
+}

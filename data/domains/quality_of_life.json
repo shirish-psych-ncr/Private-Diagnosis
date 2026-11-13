@@ -1,0 +1,16 @@
+{
+  "id": "quality_of_life",
+  "name": {
+    "en": "Quality of life",
+    "hi": "जीवन की गुणवत्ता"
+  },
+  "tier": 5,
+  "description": {
+    "en": "Self-reported quality-of-life profile across physical, psychological, social, and environmental domains.",
+    "hi": "शारीरिक, मनोवैज्ञानिक, सामाजिक और पर्यावरणीय क्षेत्रों में स्वयं-रिपोर्ट जीवन-गुणवत्ता प्रोफ़ाइल।"
+  },
+  "questions": [],
+  "forms": [
+    "whoqol_bref"
+  ]
+}

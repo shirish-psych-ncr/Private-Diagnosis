@@ -107,6 +107,21 @@ function generatePDF() {
         y += 10;
     });
 
+    const eventTables = r.instrumentResults.filter(x => x.eventRegister && x.eventRegister.length);
+    eventTables.forEach(tbl => {
+        if (y > 230) { doc.addPage(); y = 20; }
+        doc.setFontSize(12);
+        doc.text(tbl.name, 14, y); y += 2;
+        doc.autoTable({
+            startY: y,
+            head: [['Event', 'Response recorded']],
+            body: tbl.eventRegister.map(row => [row.label, row.value]),
+            theme: 'grid',
+            styles: { fontSize: 8 }
+        });
+        y = doc.lastAutoTable.finalY + 8;
+    });
+
     // Personality-disorder screens: reproduce the IPDE scoring summary and the
     // PDQ-4+ profile sheet (scale, keyed count, status) as tables.
     const pdRegisters = r.instrumentResults.filter(x => x.pdRegister && x.pdRegister.rows.length);

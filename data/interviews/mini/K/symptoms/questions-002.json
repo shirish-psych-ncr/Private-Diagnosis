@@ -1,0 +1,118 @@
+[
+  {
+    "id": "K6",
+    "role": {
+      "en": "Auditory hallucinations",
+      "hi": "श्रवण-छलात्मक अनुभव"
+    },
+    "voiceNote": {
+      "en": "If yes to voice hallucination: Was the voice commenting on your thoughts or behavior, or did you hear two or more voices talking to each other?",
+      "hi": "यदि स्वर-छलाहन 'हाँ': क्या स्वर आपके विचार/व्यवहार पर टिप्पणी कर रहा था, या दो या अधिक स्वर एक-दूसरे से बात कर रहे थे?"
+    },
+    "a": {
+      "id": "K6a",
+      "text": {
+        "en": "Have you ever heard things other people couldn't hear, such as voices?",
+        "hi": "क्या आपने कभी ऐसी चीज़ें सुनी जो दूसरों को नहीं सुनाई दीं, जैसे स्वर/आवाज़ें?"
+      }
+    },
+    "b": {
+      "id": "K6b",
+      "text": {
+        "en": "If Yes to K6a: have you heard sounds/voices in the past month?",
+        "hi": "यदि K6a 'हाँ': क्या पिछले माह में आपको स्वर/आवाज़ें सुनाई दीं?"
+      }
+    }
+  },
+  {
+    "id": "K7",
+    "role": {
+      "en": "Visual hallucinations",
+      "hi": "दृश्य-छलात्मक अनुभव"
+    },
+    "note": {
+      "en": "CLINICIAN: Check to see if these are culturally inappropriate.",
+      "hi": "चिकित्सक: जाँचें कि ये सांस्कृतिक दृष्टि से अनुचित तो नहीं हैं।"
+    },
+    "a": {
+      "id": "K7a",
+      "text": {
+        "en": "Have you ever had visions when you were awake, or have you ever seen things other people couldn't see?",
+        "hi": "क्या आपको कभी जागती अवस्था में दृश्य-आभास (visions) हुए, या कभी ऐसी चीज़ें दिखाई दीं जो दूसरों को नहीं दिखीं?"
+      }
+    },
+    "b": {
+      "id": "K7b",
+      "text": {
+        "en": "If Yes: have you seen these things in the past month?",
+        "hi": "यदि 'हाँ': क्या पिछले माह में आपको ऐसी चीज़ें दिखाई दीं?"
+      }
+    }
+  },
+  {
+    "id": "K8",
+    "clinicianJudgment": true,
+    "role": {
+      "en": "Disorganized / incoherent speech",
+      "hi": "विशृंखल/असंगत वाक्"
+    },
+    "a": {
+      "id": "K8a",
+      "text": {
+        "en": "Clinician's judgment: Did the patient ever in the past exhibit disorganized, incoherent or derailed speech, or marked loosening of associations?",
+        "hi": "चिकित्सकीय निर्णय: क्या रोगी ने अतीत में कभी विशृंखल, असंगत या भ्रष्ट वाक् प्रदर्शित की, या सह-संबंधों का सुस्पष्ट शिथिलन (loosening of associations) देखा गया?"
+      }
+    },
+    "b": {
+      "id": "K8b",
+      "text": {
+        "en": "Clinician's judgment: Is the patient currently exhibiting incoherence, disorganized or derailed speech, or marked loosening of associations?",
+        "hi": "चिकित्सकीय निर्णय: क्या रोगी वर्तमान में असंगति, विशृंखल/भ्रष्ट वाक् या सह-संबंधों का सुस्पष्ट शिथिलन प्रदर्शित कर रहा है?"
+      }
+    }
+  },
+  {
+    "id": "K9",
+    "clinicianJudgment": true,
+    "role": {
+      "en": "Disorganized or catatonic behavior",
+      "hi": "विशृंखल या कटाटोनिक व्यवहार"
+    },
+    "a": {
+      "id": "K9a",
+      "text": {
+        "en": "Clinician's judgment: Did the patient ever in the past exhibit disorganized or catatonic behavior?",
+        "hi": "चिकित्सकीय निर्णय: क्या रोगी ने अतीत में कभी विशृंखल या कटाटोनिक व्यवहार प्रदर्शित किया?"
+      }
+    },
+    "b": {
+      "id": "K9b",
+      "text": {
+        "en": "Clinician's judgment: Is the patient currently exhibiting disorganized or catatonic behavior?",
+        "hi": "चिकित्सकीय निर्णय: क्या रोगी वर्तमान में विशृंखल या कटाटोनिक व्यवहार प्रदर्शित कर रहा है?"
+      }
+    }
+  },
+  {
+    "id": "K10",
+    "clinicianJudgment": true,
+    "role": {
+      "en": "Negative symptoms",
+      "hi": "नकारात्मक लक्षण"
+    },
+    "a": {
+      "id": "K10a",
+      "text": {
+        "en": "Clinician's judgment: Did the patient ever in the past have negative symptoms, e.g. significant reduction of emotional expression or affective flattening, poverty of speech (alogia) or an inability to initiate or persist in goal-directed activities (avolition)?",
+        "hi": "चिकित्सकीय निर्णय: क्या रोगी को अतीत में कभी नकारात्मक लक्षण रहे — यथा भावनात्मक अभिव्यक्ति का महत्वपूर्ण ह्रास/भाव-फ्लैटनेस, वाक्-दारिद्र्य (alogia), या लक्ष्य-संचालित गतिविधियाँ आरंभ करने/निर्vah करने में अक्षमता (avolition)?"
+      }
+    },
+    "b": {
+      "id": "K10b",
+      "text": {
+        "en": "Clinician's judgment: Are negative symptoms of schizophrenia, e.g. significant reduction of emotional expression or affective flattening, poverty of speech (alogia) or an inability to initiate or persist in goal-directed activities (avolition), prominent during the interview?",
+        "hi": "चिकित्सकीय निर्णय: क्या साक्षात्कार के दौरान स्क़िज़ोफ्रेनिया के नकारात्मक लक्षण — भावनात्मक अभिव्यक्ति का महत्वपूर्ण ह्रास/भाव-फ्लैटनेस, वाक्-दारिद्र्य (alogia), या लक्ष्य-संचालित गतिविधियों में अक्षमता (avolition) — सुस्पष्ट हैं?"
+      }
+    }
+  }
+]
