@@ -1,5 +1,6 @@
 import { L, t } from './i18n.js';
 import { state, CLINICAL_DATA, choicesForDomain, defaultChoicesForDomain, selectedDomainForms } from './state.js';
+import { DOMAIN_GROUPS } from './domain-groups.js';
 
 function renderDomainGrid() {
     const list = document.getElementById('domain-list');
@@ -26,9 +27,7 @@ function renderDomainGrid() {
 
     const fragment = document.createDocumentFragment();
     const pills = document.createElement('div');
-    pills.className = 'domain-pills';
-    pills.setAttribute('role', 'group');
-    pills.setAttribute('aria-label', state.lang === 'hi' ? 'विषय चुनें' : 'Choose topics');
+    pills.className = 'domain-groups';
 
     const clearErrorWhenSelectionIsValid = () => {
         const error = document.getElementById('domains-error');
@@ -52,38 +51,89 @@ function renderDomainGrid() {
         pill.append(badge);
     };
 
-    domains.forEach(({ domain, topic }) => {
-        const selected = state.selectedDomains.has(domain.id);
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.id = 'topic-pill-' + domain.id;
-        button.className = 'topic-pill' + (selected ? ' selected' : '');
-        button.setAttribute('aria-pressed', String(selected));
-        button.setAttribute('aria-controls', 'selected-topic-scales');
-        const name = document.createElement('span');
-        name.textContent = topic;
-        button.append(name);
-        const saved = state.scaleChoices.get(domain.id);
-        const count = Array.isArray(saved) ? saved.length : saved ? 1 : 0;
-        if (count) {
-            const badge = document.createElement('span');
-            badge.className = 'topic-pill-count';
-            badge.textContent = String(count);
-            badge.setAttribute('aria-label', `${count} ${state.lang === 'hi' ? 'मापनियाँ चुनी गईं' : 'scales selected'}`);
-            button.append(badge);
-        }
-        button.addEventListener('click', () => {
-            if (selected) {
-                state.selectedDomains.delete(domain.id);
-                state.scaleChoices.delete(domain.id);
-            } else {
-                state.selectedDomains.add(domain.id);
-            }
-            renderDomainGrid();
-            document.getElementById(button.id)?.focus({ preventScroll: true });
-            clearErrorWhenSelectionIsValid();
+    const domainById = new Map(domains.map(item => [item.domain.id, item]));
+    const assigned = new Set();
+    const groups = DOMAIN_GROUPS.map(group => {
+        const entries = group.domains.map(id => domainById.get(id)).filter(Boolean)
+            .sort((a, b) => a.topic.localeCompare(b.topic, state.lang));
+        entries.forEach(item => assigned.add(item.domain.id));
+        return { group, entries };
+    }).filter(group => group.entries.length);
+    const uncategorized = domains.filter(item => !assigned.has(item.domain.id));
+    if (uncategorized.length) {
+        groups.push({
+            group: { id: 'more_topics', label: 'domain-group.more' },
+            entries: uncategorized.sort((a, b) => a.topic.localeCompare(b.topic, state.lang))
         });
-        pills.append(button);
+    }
+
+    groups.forEach(({ group, entries }) => {
+        const details = document.createElement('details');
+        details.className = 'domain-group';
+        details.open = Boolean(query) || state.openDomainGroups.has(group.id);
+        details.addEventListener('toggle', () => {
+            if (query) return;
+            if (details.open) state.openDomainGroups.add(group.id);
+            else state.openDomainGroups.delete(group.id);
+        });
+
+        const summary = document.createElement('summary');
+        summary.className = 'domain-group-summary';
+        const label = document.createElement('span');
+        label.textContent = t(group.label);
+        const count = document.createElement('span');
+        count.className = 'domain-group-count';
+        count.textContent = t('domains.group.count').replace('{count}', String(entries.length));
+        summary.append(label, count);
+        const selectedInGroup = entries.filter(({ domain }) => state.selectedDomains.has(domain.id)).length;
+        if (selectedInGroup) {
+            const selectedCount = document.createElement('span');
+            selectedCount.className = 'domain-group-selected';
+            selectedCount.textContent = t('domains.group.selected').replace('{count}', String(selectedInGroup));
+            summary.append(selectedCount);
+        }
+        details.append(summary);
+
+        const groupPills = document.createElement('div');
+        groupPills.className = 'domain-pills';
+        groupPills.setAttribute('role', 'group');
+        groupPills.setAttribute('aria-label', t(group.label));
+
+        entries.forEach(({ domain, topic }) => {
+            const selected = state.selectedDomains.has(domain.id);
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.id = 'topic-pill-' + domain.id;
+            button.className = 'topic-pill' + (selected ? ' selected' : '');
+            button.setAttribute('aria-pressed', String(selected));
+            button.setAttribute('aria-controls', 'selected-topic-scales');
+            const name = document.createElement('span');
+            name.textContent = topic;
+            button.append(name);
+            const saved = state.scaleChoices.get(domain.id);
+            const selectedScaleCount = Array.isArray(saved) ? saved.length : saved ? 1 : 0;
+            if (selectedScaleCount) {
+                const badge = document.createElement('span');
+                badge.className = 'topic-pill-count';
+                badge.textContent = String(selectedScaleCount);
+                badge.setAttribute('aria-label', `${selectedScaleCount} ${state.lang === 'hi' ? 'मापनियाँ चुनी गईं' : 'scales selected'}`);
+                button.append(badge);
+            }
+            button.addEventListener('click', () => {
+                if (selected) {
+                    state.selectedDomains.delete(domain.id);
+                    state.scaleChoices.delete(domain.id);
+                } else {
+                    state.selectedDomains.add(domain.id);
+                }
+                renderDomainGrid();
+                document.getElementById(button.id)?.focus({ preventScroll: true });
+                clearErrorWhenSelectionIsValid();
+            });
+            groupPills.append(button);
+        });
+        details.append(groupPills);
+        pills.append(details);
     });
 
     if (query && !domains.length) {
@@ -100,11 +150,23 @@ function renderDomainGrid() {
     summary.setAttribute('aria-live', 'polite');
     const updateSelectionSummary = () => {
         const topicCount = state.selectedDomains.size;
-        const scaleCount = selectedDomainForms()
-            .reduce((total, domain) => total + (domain.selectedForms || []).length, 0);
+        const selectedDomains = selectedDomainForms();
+        const scaleCount = selectedDomains.reduce((total, domain) =>
+            total + (domain.selectedForms || []).length, 0);
+        const itemCount = selectedDomains.reduce((total, domain) => {
+            const selectedForms = domain.selectedForms || [];
+            if (!selectedForms.length) return total + (domain.questions || []).filter(question => !question.scaleId).length;
+            return total + selectedForms.reduce((formTotal, id) => {
+                if (id === 'base') return formTotal + (domain.questions || []).filter(question => !question.scaleId).length;
+                const form = CLINICAL_DATA.scales[id];
+                const questions = form?.parts?.flatMap(part => part.questions || []) || [];
+                return formTotal + questions.filter(question => !question.nonScored && !question.tickBox).length;
+            }, 0);
+        }, 0);
         summary.textContent = t('domains.selection.summary')
             .replace('{topics}', String(topicCount))
-            .replace('{scales}', String(scaleCount));
+            .replace('{scales}', String(scaleCount))
+            .replace('{items}', String(itemCount));
     };
     updateSelectionSummary();
     fragment.append(summary);
@@ -188,7 +250,7 @@ function renderDomainGrid() {
                 const meta = document.createElement('span');
                 meta.className = 'scale-choice-meta';
                 const itemCount = (scale.parts || []).reduce((total, part) =>
-                    total + (part.questions || []).length, 0);
+                    total + (part.questions || []).filter(question => !question.nonScored && !question.tickBox).length, 0);
                 if (itemCount) {
                     meta.textContent = `${itemCount} ${state.lang === 'hi' ? 'प्रश्न' : 'items'}`;
                     label.append(meta);

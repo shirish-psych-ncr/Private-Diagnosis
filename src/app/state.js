@@ -8,6 +8,7 @@ const state = {
     consent: false,
     context: { ageGroup: '', reason: '', medications: '', priorDiagnoses: '' },
     selectedDomains: new Set(),
+    openDomainGroups: new Set(['mood_energy']),
     scaleChoices: new Map(),
     responses: {},            // key: `${domainId}:${questionId}` or `vadrs:${id}` -> number
     formContext: {},
